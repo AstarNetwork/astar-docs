@@ -8,14 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Astar Docs',
   tagline: 'Your one-stop shop for everything Astar.',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://astarnetwork.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'AstarNetwork', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
-  deploymentBranch: 'main',
   trailingSlash: false,
 
   presets: [

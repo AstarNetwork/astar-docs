@@ -3,7 +3,7 @@ name: Test deployment
 on:
   pull_request:
     branches:
-      - master
+      - main
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
@@ -19,6 +19,6 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
       - name: Test build website
         run: yarn build
