@@ -9,7 +9,7 @@ const config = {
   title: 'Astar Docs',
   tagline: 'Your one-stop shop for everything Astar.',
   url: 'https://astarnetwork.github.io',
-  baseUrl: '/',
+  baseUrl: 'https://astarnetwork.github.io/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
