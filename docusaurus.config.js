@@ -9,13 +9,12 @@ const config = {
   title: 'Astar Docs',
   tagline: 'Your one-stop shop for everything Astar.',
   url: 'https://astarnetwork.github.io',
-  baseUrl: '/dfd/',
+  baseUrl: '/docs-test/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'AstarNetwork', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
-  trailingSlash: false,
+  projectName: 'docs-test', // Usually your repo name.
 
   presets: [
     [
