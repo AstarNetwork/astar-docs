@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/astar-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/fav.png',
   organizationName: 'AstarNetwork', // Usually your GitHub org/user name.
   projectName: 'astar-docs', // Usually your repo name.
 
@@ -43,19 +43,19 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Astar developers hub',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Astar',
+          src: 'img/ring.svg',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: 'https://medium.com/astar-network', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/AstarNetwork/docs',
             label: 'GitHub',
@@ -79,16 +79,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/mWGt9bH59s',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/AstarNetwork',
               },
             ],
           },
@@ -97,7 +93,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'https://medium.com/astar-network',
               },
               {
                 label: 'GitHub',
@@ -106,7 +102,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Astar Developers Hub.`,
       },
       prism: {
         theme: lightCodeTheme,
