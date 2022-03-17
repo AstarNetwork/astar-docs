@@ -43,7 +43,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Astar developers hub',
+        title: 'Astar Docs',
         logo: {
           alt: 'Astar',
           src: 'img/ring.svg',
@@ -51,13 +51,13 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'getting-started',
             position: 'left',
-            label: 'Documentation',
+            label: 'Docs',
           },
-          {to: 'https://medium.com/astar-network', label: 'Blog', position: 'left'},
+          {to: 'https://medium.com/astar-network', label: 'Medium', position: 'left'},
           {
-            href: 'https://github.com/AstarNetwork/docs',
+            href: 'https://github.com/AstarNetwork/astar-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -70,8 +70,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Get Started',
+                to: '/docs/getting-started',
               },
             ],
           },
