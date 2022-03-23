@@ -4,8 +4,8 @@ sidebar_position: 1
 
 # Precompiles
 
-A precompile just means a common functionality for smart contracts which has been compiled, so Ethereum nodes can run this efficiently. From a contract's perspective this is just a single command like an opcode.
-The Frontier EVM used in Astar provides several useful precompiled contracts. These contracts are implemented in the platform itself as a native implementations. The precompiled contracts from address `0x01` through` 0x08` are the same as those in Ethereum. Astar additionally implements precompiled contracts starting from `0x5001`, to support new Astar features.
+A precompile means a common functionality for smart contracts which has been compiled, so that Ethereum nodes can run this efficiently. From a contract's perspective, this is just a single command like an opcode.
+The Frontier EVM used in Astar provides several useful precompiled contracts. These contracts are implemented in our ecosystem as a native implementation. The precompiled contracts `0x01` through `0x08` are the same as those in Ethereum (see list below). Astar additionally implements precompiled contracts start from `0x5001`, and support new Astar features.
 
 ## Ethereum Native Precompiles
 | Precompile | Address |
@@ -25,10 +25,10 @@ The Frontier EVM used in Astar provides several useful precompiled contracts. Th
 | DappsStaking     | 0x0000000000000000000000000000000000005001     |
 | Sr25519     | 0x0000000000000000000000000000000000005002     |
 
-The interface descriptions for these precompiles can be found in the [astar-frame repo](https://github.com/AstarNetwork/astar-frame/) in the `precompiles` folder
+The interface descriptions for these precompiles can be found in the `precompiles` folder: [astar-frame repo](https://github.com/AstarNetwork/astar-frame/).
 
-### DappsStaking Precompile
-DappsStaking Precompile enables EVM smart contract to access `pallet-dapps-staking` functionality. 
+### dAppStaking Precompile
+dAppStaking Precompile enables EVM smart contract to access `pallet-dapps-staking` functionality. 
 Example use of this precompile from Contract A:
 ```
 contract A {
@@ -43,21 +43,21 @@ contract A {
 
 ```
 
-Let's now use this precompile to check `current era` and `total staked amount` in the `pallet-dapps-staking` for the Shiden network. For this excercise we will use Remix.
+Example use: check `current era` and `total staked amount` in the `pallet-dapps-staking` for Shiden Network. For this example we will use Remix.
 
-1. Copy `DappsStaking.sol` from [astar-frame repo](https://github.com/AstarNetwork/astar-frame/) and create new contract in the Remix
+1. Copy `DappsStaking.sol` from [astar-frame repo](https://github.com/AstarNetwork/astar-frame/) and create new contract in Remix:
 ![](https://i.imgur.com/mr0TcLq.png)
 
-2. Compile the DappsStaking contract
+2. Compile the dAppStaking contract:
 ![](https://i.imgur.com/6Wgg9rf.jpg)
 
 3. The precompile does not need to be deployed since it is already on the network, but you need to tell Remix where to find it. 
-After you connect your EVM wallet to Shiden network (same applies for Astar mainnet and for Shibuya testnet) follow these steps
+After you connect your EVM wallet to Shiden Network (same applies for Astar Network and for Shibuya Testnet) follow these steps:
     1. Go to Deploy tab
-    2. Use injected Web3 environment. It should point to Shiden Mainnet with id 336
-    3. Make sure you have selected DappsStaking contract
+    2. Use injected Web3 environment. It should point to Shiden Mainnet with `ChainId 336`
+    3. Make sure you have the selected dAppStaking contract
     4. Provide the address of the precompiled contract `0x0000000000000000000000000000000000005001`
-    5. The DAPPSSTAKING contract will appear under Deployed contracts
+    5. The dAppStaking contract will appear under Deployed contracts
     
 ![](https://i.imgur.com/6RnQlkb.jpg)
 
