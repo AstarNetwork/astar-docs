@@ -23,10 +23,10 @@ To help you start building in our ecosystem, you can get tokens from our faucet 
 <img src="https://i.imgur.com/Wj2vuwJ.png" alt="Wallet Selection" border="1"></img>
 </center>
 
-4. As soon wallet is loaded you can see your balance. The faucet button is now enabled to request the native token of your connected network. Click on faucet to open the request pop-up. 
+4. As soon wallet is loaded you can see your balance. The faucet button is now enabled to request the native token of your connected network. Click on the faucet button to open the request pop-up. 
 
 <center>
 <img src="https://i.imgur.com/Ffijw8J.png" alt="Grab your Tokens" border="1"></img>
 </center>
 
-5. When you click on confirm our faucet server will sent you the tokens for you to start with your deployment.
+5. When you click on confirm our faucet server will send you the tokens for you to start with your deployment.
