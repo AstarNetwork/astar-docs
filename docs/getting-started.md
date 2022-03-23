@@ -24,8 +24,3 @@ node URLs here!!
 ## WASM
 
 ## Block Explorers
-
-Test
-<p align="center">
-  <img width="460" height="300" src="https://i.imgur.com/rALI50E.png">
-</p>
