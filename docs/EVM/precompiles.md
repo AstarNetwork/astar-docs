@@ -27,20 +27,21 @@ The Frontier EVM used in Astar provides several useful precompiled contracts. Th
 
 The interface descriptions for these precompiles can be found in the `precompiles` folder: [astar-frame repo](https://github.com/AstarNetwork/astar-frame/).
 
-### dAppStaking Precompile
-dAppStaking Precompile enables EVM smart contract to access `pallet-dapps-staking` functionality. 
+The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.
+
+### DappsStaking Precompile
+DappsStaking Precompile enables EVM smart contract to access `pallet-dapps-staking` functionality. 
 Example use of this precompile from Contract A:
 ```
+import "./DappsStaking.sol";
 contract A {
-
     DappsStaking public constant DAPPS_STAKING = DappsStaking(0x0000000000000000000000000000000000005001);
 
     /// @notice Check current era
     function checkCurrentEra() public view {
-        uint128 stakedAmount = DAPPS_STAKING.read_current_era();
+        uint256 currentEra = DAPPS_STAKING.read_current_era();
     }
 }
-
 ```
 
 Example use: check `current era` and `total staked amount` in the `pallet-dapps-staking` for Shiden Network. For this example we will use Remix.
