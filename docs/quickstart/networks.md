@@ -21,6 +21,6 @@ Our mainnets have two types of endpoints available for developers/users to conne
 
 To help you start building in our ecosystem, you can get tokens from our faucet through the [portal](https://portal.astar.network). We provide a small amount of native tokens to help you with your smart contract deployment. Check out our documentation about how to use our faucet.
 
-## Substrate and EVM address
+## Astar account scheme
 
 Astar is the only smart-contract parachain in the Polkadot ecosystem that supports multi-virtual machines (WASM and EVM). It’s a challenge to have two different address schemes in one blockchain for our projects and users. Read more about [Astar account structure](https://astarnetwork.github.io/astar-docs/docs/quickstart/addresses) in our documentation.
