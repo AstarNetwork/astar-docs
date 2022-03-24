@@ -10,4 +10,4 @@ sidebar_position: 3
 
 ## Covalent
 
-## THe Graph
+## The Graph
