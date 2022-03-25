@@ -10,32 +10,31 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Wasm + EVM',
     image: require('@site/static/img/undraw_docusaurus_mountain.svg'),
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Focus on developing your dapps, and we&apos;ll handle the rest. Astar built with Substrate, a blazing fast and modular blockchain framework
+        built by Parity and written in Rust.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Multi-Chain',
     image: require('@site/static/img/undraw_docusaurus_tree.svg'),
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Astar is a Polkadot parachain, providing access to an advanced cross-chain protocol called XCMP.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Simplicity',
     image: require('@site/static/img/undraw_docusaurus_react.svg'),
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Astar was designed from the ground up to make it simple for developers to deploy
+        their dapps and interact with other chains.
       </>
     ),
   },
