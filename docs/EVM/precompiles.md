@@ -62,7 +62,7 @@ After you connect your EVM wallet to Shiden Network (same applies for Astar Netw
     
 ![](https://i.imgur.com/6RnQlkb.jpg)
 
-4. Interact with the contract. (TODO update after precompile is deployed on Shiden)
+4. Interact with the contract.
     1. Check the current era 
     2. Use the current era as input to check total staked amount on the network
 ![precompile-interact](https://user-images.githubusercontent.com/34627453/159696985-19f67e95-807e-4c20-b74c-c9f4944ada32.jpg)
