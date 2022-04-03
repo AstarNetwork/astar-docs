@@ -65,3 +65,8 @@ Make sure your server is only dedicated to the collator node
 - **CPU**: 8 physical cores
 - **Memory**: 16 GB
 - **Hard Disk**: 250 GB SSD NVMe (storage space will increase with time)
+
+:::tip
+Shibuya is the perfect network to test out your knowledge about running nodes in the Astar ecosystem. To join the collator set on Shibuya you need to apply for a 32k SBY fund.
+If you never operated a collator node, we strongly encourage you to spin up a **Shibuya collator** node to start before thinking about mainnet. A perfect start is our [beginners guide](https://astar.network).
+:::
