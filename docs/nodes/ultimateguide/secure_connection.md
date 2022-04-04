@@ -113,15 +113,9 @@ sudo usermod -a -G ssh-user <username>
 
 **Note**: you have to change `<username>` by the user, you use on your server.
 
-### Azure firewall
+### Firewall
 
-Before continuing, it is very important to open the newly configured SSH port in your firewall (4321 in our example). Go to the Azure portal and add this port:
-
-![](https://github.com/AstarNetwork/plasmdocs/tree/english-v2.0.0/.gitbook/assets08.png)
-
-![](https://github.com/AstarNetwork/plasmdocs/tree/english-v2.0.0/.gitbook/assets07.png)
-
-For the first tests, you should let port 22 open. Once you successfully connected to the new port, you can safely close port 22.
+Before continuing, it is very important to open the newly configured SSH port in your firewall settings of your server (4321 in our example). For the first tests, you should let port 22 open. Once you successfully connected to the new port, you can safely close port 22.
 
 ### Generate SSH keys
 
@@ -131,11 +125,15 @@ This guide is build around Azure and PuTTy, in case you want to use OpenSSH foll
 
 Open PUTTYGen GUI:
 
-![](https://miro.medium.com/max/479/1\*Zuxcp4UllMr\_z8\_tBdYQnA.png)
+<center>
+<img src="https://i.imgur.com/rkef1ah.png" border="1"></img>
+</center>
 
 Select the `Ed25519`key type and click on _Generate_:
 
-![](https://miro.medium.com/max/479/1\*\_8xQPCJI5-CAdO\_E-S8Xwg.png)
+<center>
+<img src="https://i.imgur.com/5kFNxJ6.png" border="1"></img>
+</center>
 
 Enter a strong passphrase and save both private and public key in a secure folder. Copy the public key from the text box.
 
@@ -167,11 +165,15 @@ systemctl status sshd
 
 Let’s load the private key in the Putty `Auth` section:
 
-![](<https://github.com/AstarNetwork/plasmdocs/tree/english-v2.0.0/.gitbook/assetsimage(15).png)
+<center>
+<img src="https://i.imgur.com/vTtWZ0B.png" border="1"></img>
+</center>
 
 Don’t forget to use your custom port, then connect:
 
-![](https://github.com/AstarNetwork/plasmdocs/tree/english-v2.0.0/.gitbook/assets/image(17).png)
+<center>
+<img src="https://i.imgur.com/nLgoXNu.png" border="1"></img>
+</center>
 
 Congratulation, y**our SSH connection is secure**!&#x20;
 
@@ -179,4 +181,3 @@ Congratulation, y**our SSH connection is secure**!&#x20;
 Don’t forget to remove port 22 from `sshd_config` file and firewall, and check that no other key is allowed in `authorized_keys` file.
 :::
 
-![](https://github.com/AstarNetwork/plasmdocs/tree/english-v2.0.0/.gitbook/assets/assets/09.png)
