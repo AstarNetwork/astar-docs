@@ -60,10 +60,10 @@ Make sure your server is only dedicated to the collator node
 
 **Minimum recommended configuration for a mainnet collator**
 
-- **System**: Ubuntu 20.04 (macOS possible)
+- **System**: Ubuntu 20.04
 - **Dedicated server**
-- **CPU**: 8 physical cores
-- **Memory**: 16 GB
+- **CPU**: 8 cores
+- **Memory**: 32 GB
 - **Hard Disk**: 250 GB SSD NVMe (storage space will increase with time)
 
 :::tip
