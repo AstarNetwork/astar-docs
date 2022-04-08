@@ -1,6 +1,6 @@
-# Node Operators
+# Ultimate Beginners Guide
 
-**Node SDK** is broken down into the following pages:
+**Beginners Guide** is broken down into the following pages:
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
