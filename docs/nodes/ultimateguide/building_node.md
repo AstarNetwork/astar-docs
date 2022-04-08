@@ -119,7 +119,18 @@ sudo chown astar:astar /var/lib/astar
 
 Let's first go to our binary directory and start the collator manually:
 
+```
+cd /usr/local/bin
 
+## Astar
+./astar-collator --validator --chain astar --parachain-id 2006 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+
+## Shiden
+./astar-collator --validator --chain shiden --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+
+## Shibuya
+./astar-collator --validator --chain shibuya --parachain-id 1000 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+```
 
 :::tips
 Type in the place of **${COLLATOR\_NAME}**, how you would like to call your node.
@@ -149,9 +160,32 @@ Create a service file
 sudo nano /etc/systemd/system/astar.service
 ```
 
-Add service parameters:
+Add service parameters (this example is for Astar Network):
+```
+[Unit]
+Description=Astar Collator
 
+[Service]
+User=astar
+Group=astar
+  
+ExecStart=/usr/local/bin/astar-collator \
+  --validator \
+  --rpc-cors all \
+  --name ${COLLATOR_NAME} \
+  --chain astar \
+  --parachain-id 2006 \
+  --base-path /var/lib/astar \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --execution wasm\
+  --state-cache-size 1
+  
+Restart=always
+RestartSec=120
 
+[Install]
+WantedBy=multi-user.target
+```
 
 Start the service:
 
