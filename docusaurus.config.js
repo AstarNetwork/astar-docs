@@ -46,7 +46,7 @@ const config = {
         title: 'Astar Docs',
         logo: {
           alt: 'Astar',
-          src: 'img/ring.svg',
+          src: 'img/logo.svg',
         },
         items: [
           {
