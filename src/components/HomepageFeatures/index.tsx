@@ -4,24 +4,24 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  image: string;
+  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Wasm + EVM',
-    image: require('@site/static/img/undraw_docusaurus_mountain.svg'),
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Focus on developing your dapps, and we&apos;ll handle the rest. Astar built with Substrate, a blazing fast and modular blockchain framework
+        Focus on developing your dapps, and well handle the rest. Astar built with Substrate, a blazing fast and modular blockchain framework
         built by Parity and written in Rust.
       </>
     ),
   },
   {
     title: 'Multi-Chain',
-    image: require('@site/static/img/undraw_docusaurus_tree.svg'),
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
         Astar is a Polkadot parachain, providing access to an advanced cross-chain protocol called XCMP.
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Simplicity',
-    image: require('@site/static/img/undraw_docusaurus_react.svg'),
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
         Astar was designed from the ground up to make it simple for developers to deploy
@@ -40,11 +40,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, image, description}: FeatureItem) {
+function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <img className={styles.featureSvg} alt={title} src={image} />
+        <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
