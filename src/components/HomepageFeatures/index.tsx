@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Wasm + EVM',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/wasm-evm.svg').default,
     description: (
       <>
         Focus on developing your dapps, and well handle the rest. Astar built with Substrate, a blazing fast and modular blockchain framework
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Multi-Chain',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/multichain.svg').default,
     description: (
       <>
         Astar is a Polkadot parachain, providing access to an advanced cross-chain protocol called XCMP.
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Simplicity',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/simple.svg').default,
     description: (
       <>
         Astar was designed from the ground up to make it simple for developers to deploy
