@@ -3,23 +3,23 @@ sidebar_position: 1
 title: Ledger EVM
 ---
 
-## Using Astar and Shiden EVM ledger apps with MetaMask
+## Using Astar and Shiden EVM Ledger apps with MetaMask
 
 ## Intro
 
-“Astar EVM” and “Shiden EVM” apps are now available on Ledger hardware wallet devices. This means that MetaMask users can now sign transactions for EVM accounts on those networks using Ledger nano S (plus) or Ledger X devices.
+**Astar EVM** and **Shiden EVM** apps are now available on Ledger hardware wallet devices. This means that MetaMask users can now sign transactions for EVM accounts on those networks using Ledger Nano S (plus) or Ledger X devices.
 
-This guide will show you how to set up Astar EVM and Shiden Evm on your Ledger hardware wallet and how to use it in combination with MetaMask.
+This guide will show you how to set up Astar EVM and Shiden EVM on your Ledger hardware wallet and how to use it in combination with MetaMask.
 
-### Note:
-
-Photos are taken using Nano S Plus device, and the example shows interaction with Astar EVM app, but the process is the same with Nano S and Nano X devices, as well as Shiden EVM app.
+> **Note:**
+>
+> Photos are taken using Nano S Plus device, and the example shows interaction with Astar EVM app, but the process is the same with Nano S and Nano X devices, as well as Shiden EVM app.
 
 ## Requirements
 
 ### Your Ledger device is ready for use
 
-- [Make sure you have set up your ledger device](https://support.ledger.com/hc/en-us/articles/360000613793?docs=true)
+- [Make sure you have set up your Ledger device](https://support.ledger.com/hc/en-us/articles/360000613793?docs=true)
 - Update your device to latest firmware
   - [Nano S](https://support.ledger.com/hc/en-us/articles/360002731113?docs=true)
   - [Nano S Plus](https://support.ledger.com/hc/en-us/articles/4445777839901?docs=true)
