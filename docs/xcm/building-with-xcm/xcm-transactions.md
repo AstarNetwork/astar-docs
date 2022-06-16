@@ -2,62 +2,53 @@
 sidebar_position: 1
 ---
 
-# XCM Transactions
+# Native Transactions
 
-## Overview
+Let’s look into how we can transfer native relay-chain assets (DOT or KSM) to our Astar or Shiden.
 
-XCM is a format for how message transfer should be performed in an interoperable network.  Cross-Consensus Messaging is between chains, smart contracts, pallets, bridges, and even sharded enclaves like Spree.
+This will be a more low-level demonstration since we’ll be using the Polkadot.js portal. Standard users will interact with this via our portal where all the complexity will be hidden, so don’t worry! 🙂
 
-The significance of XCM is attributed to the groundbreaking capability of DOT, Polkadot's native coin, to be traded, sent, and composed across all parachains on the Polkadot network, the same as KSM will be for Kusama.
+For this demonstration, we will use Shiden Network and **KSM** tokens.
 
-The instruction here will explain how you will be able to transfer DOT via XCM on the Astar Portal from Polkadot to Astar. The same instructions can be used for KSM on Shiden.
+## Initial State
 
-Also, HRMP is something that’s coming really soon. Currently, you have the ability to transfer DOT as the first asset but when HRMP becomes available in the next few weeks, it will be any token.
+Native relay chain asset is represented on Astar or Shiden via asset Id `0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF` or `340282366920938463463374607431768211455` in decimal.
 
-One of the biggest takeaways for you today is that XCM is a generic message format designed to be a language for communication between two systems. As the name suggests, it’s not necessarily only bound to Substrate-based or Dotsama chains - it can be adopted and used by any system using any consensus.
-
-## Instructions
-
-### XCM Transfer from Polkadot to Astar
-
-When you go to the [Assets](https://portal.astar.network/#/assets) page, you can see the XCM Assets panel.
-
-![Astar Asset Portal](img/1.png)
-
-> It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)!
-
-When you press the XCM button, the XCM popup appears as follows.
-
-![2](img/2.png)
-
-Here we would like to send DOT from Polkadot to Astar Network. There are two tabs, one to send to the Native account and the other to the EVM account. You can check the balance that can be sent from the relay chain (DOT).
-
-Enter the amount to send and press the confirm button. A popup will appear to sign the transaction.
-
-> Please note that the gas amount will be deducted from the amount entered. The transferred amount should be adjusted with the gas fee estimate.
-
-![3](img/3.png)
-
-Wait until the transaction is confirmed. After confirmation, you check the XCM assets again, and you can see that the DOT has been sent well to the XCM wallet.
-
-![4](img/4.png)
-
-When you click the transfer button, a popup will appear where you can transfer the asset to another wallet.
-
-## XCM Transfer from Polkadot to Astar EVM
-
-When you go to the [Assets](https://portal.astar.network/#/assets) page, you can see the XCM Assets panel.
+Initially, we have no KSM assets on Shiden.
 
 ![1](img/1.png)
 
-> It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)!
+Let’s now prepare and bring some assets from Kusama over to Shiden.
 
-When you press the XCM button, the XCM popup appears as follows. For this tutorial, we will use Deposit to EVM.
+This will be an example of VMP protocol usage or DMP to be more specific. We will make use of the `reserve_transfer_asset` functionality. This consists of moving an asset on one blockchain to another blockchain via an intermediary *Sovereign* account. Origin chain asset won’t be destroyed, instead, the *Sovereign* will hold it. The target chain will mint a wrapped asset and deposit it to the target address.
 
-![2](img/2.png)
+The *Sovereign* account ensures that the same assets cannot simultaneously be used on both chains. It also guarantees that the wrapped asset is interchangeable with the asset on the origin chain.
 
-Enter the EVM Address you want to receive, enter the amount you want to send, and press the confirm button. A popup will appear to sign the transaction.
+Alice wants to send some tokens to an account on Shiden Network so she prepares `reserve_transfer_asset` call on the relay chain. Parameters look like this:
 
-![5](img/5.png)
+![XCM message to send KSM from Kusama to Shiden via reserveAssetTransfer](img/2.png)
 
-Wait until the transaction is confirmed. After confirmation, you will be able to add the DOT tokens to your EVM wallet. Read more about how to add XC20 to your MetaMask in the next section.
+We specify:
+
+- Destination
+  - Using the MultiLocation notation, we describe the target chain, which is Shiden, as `/Parachain(2007)`. The notation resembles filesystem paths where the relay chain is considered to be root.
+- Beneficiary
+  - Once again using the *MultiLocation* notation, we describe the beneficiary of the asset transfer. Take note that this is the context of the destination chain. We’re transferring to an account whose address is `Zcvndjciib1X92KeyVBZMv4oUE99Ut1xRCA1e9xMdqXfP27` on Shiden. But instead of specifying the Shiden address, we’ll specify the account ID (or public key) associated with this address: `0xa2ee1f41b5bd08934f178a12e2b0169af05630a212e89d1bb644f67d2192f475`
+- Assets being transferred
+  - Finally, we describe the assets being transferred. Since we’re transferring native relay chain assets, we specify these are **Concrete assets** and their location is **Here** in the context of the relay chain. The asset is fungible, therefore we need to specify the amount being transferred, in this case, a total of **4200000000** tokens.
+
+After initiating the transfer, we can observe what happens on the relay chain:
+
+![Execution of an XCM message was attempted and funds were transferred from Alice to the Sovereign account.](img/3.jpeg)
+
+Execution of an XCM message was attempted and funds were transferred from Alice to the Sovereign account.
+
+On the Shiden side, we can observe the following:
+
+![4](img/4.jpeg)
+
+XCM message has been received and instructions executed. As a result, an asset with Id `340282366920938463463374607431768211455` has been minted, a total of **4196000000** tokens. These tokens have been deposited into the designation account.
+
+Note that that received amount is less than what was originally sent. This is because **4000000** has been used to pay the transaction fee on the destination chain.
+
+We’ve successfully transferred assets from Kusama over to Shiden!
