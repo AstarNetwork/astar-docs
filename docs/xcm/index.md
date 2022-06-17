@@ -3,6 +3,7 @@
 ## Astar's Vision
 
 [The Astar Vision Part 1: Interoperability and Multi-chain dApps](https://medium.com/astar-network/the-astar-vision-part-1-interoperability-and-multi-chain-dapps-30f014087831)
+
 [The Astar Vision Part 2: Asset Diversity Through XCM dApps and Smart Contracts](https://medium.com/astar-network/the-astar-vision-part-2-asset-diversity-through-xcm-dapps-and-smart-contracts-3a689dee5b77)
 
 ## Basic information
@@ -17,6 +18,7 @@ The two core parts of cross-chain communication are:
 XCM is just a generic message format, designed to be a language for communication between two systems. As the name suggests, it’s not necessarily only bound to Substrate-based or Dotsama chains - it can be adopted and used by any system using any consensus.
 
 Cross-Consensus Protocols specify how to pass and act on XCM messages. Polkadot provides two protocols at the moment which are supported by both Astar and Shiden Networks:
+
 - Vertical Message Passing (VMP)
 - Cross-Chain Message Passing (XCMP)
   - Currently, only XCMP-lite (HRMP) is supported

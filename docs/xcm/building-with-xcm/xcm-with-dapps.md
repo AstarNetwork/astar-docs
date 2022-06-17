@@ -8,7 +8,7 @@ So far we’ve successfully transferred assets from Kusama to Shiden and we’ve
 
 Here is the example staking contract we’ll be using for the demonstration (for DOT, you replace `ksm` by dot`):`
 
-```solidity
+```js
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
