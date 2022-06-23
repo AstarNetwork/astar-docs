@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# GAS PRICE API
+# Gas Price API
 
 ## Overview
 
@@ -14,9 +14,9 @@ Gas price api is a service that allows you to get the various gas prices of the 
 
 ## API
 
-- Shibuya: https://astar-gas-station.herokuapp.com/api/shibuya/gasnow
-- Shiden: https://astar-gas-station.herokuapp.com/api/shiden/gasnow
-- Astar: https://astar-gas-station.herokuapp.com/api/astar/gasnow
+- Shibuya: <https://astar-gas-station.herokuapp.com/api/shibuya/gasnow>
+- Shiden: <https://astar-gas-station.herokuapp.com/api/shiden/gasnow>
+- Astar: <https://astar-gas-station.herokuapp.com/api/astar/gasnow>
 
 ## Response
 
@@ -55,5 +55,5 @@ Priority Fee, which is optional, determined by the user, is a tip to validators,
 
 EIP-1559's purpose is essentially to make gas fees more transparent and predictable for users. Previously, to have your transaction processed, you essentially had to 'bid' with a high enough total fee to make sure the miner was incentivized to pick up your transaction reasonably soon. This meant the market price was constantly moving according to demand.
 
- - priorityFeePerGas: The variable part of the gas fee. Determined by the user.
- - baseFeePerGas: The fixed part of the gas fee. Determined by the network.
+- priorityFeePerGas: The variable part of the gas fee. Determined by the user.
+- baseFeePerGas: The fixed part of the gas fee. Determined by the network.
