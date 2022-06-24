@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Astar Docs',
   tagline: 'Your one-stop shop for everything Astar.',
-  url: 'https://astarnetwork.github.io',
-  baseUrl: '/astar-docs/',
+  url: 'https://staging.docs.astar.network',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/fav.png',
@@ -55,7 +55,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: 'https://medium.com/astar-network', label: 'Medium', position: 'left'},
+          { to: 'https://medium.com/astar-network', label: 'Medium', position: 'left' },
           {
             href: 'https://github.com/AstarNetwork/astar-docs',
             label: 'GitHub',
