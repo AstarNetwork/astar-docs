@@ -32,3 +32,12 @@ Readers and developers are encouraged to go over the official documentation to l
 - [XCM format](https://github.com/paritytech/xcm-format) (consult while reading the articles)
 - [Sub0 - Getting Started with XCM](https://www.youtube.com/watch?v=5cgq5jOZx9g)
 - [How to make a cross-chain transfer](https://www.youtube.com/watch?v=5cgq5jOZx9g)
+
+## Get Started
+
+```mdx-code-block
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+<DocCardList items={useCurrentSidebarCategory().items}/>
+```
