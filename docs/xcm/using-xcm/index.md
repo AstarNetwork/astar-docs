@@ -1,6 +1,6 @@
 # XCM
 
-Astar Network is a multi-virtual machine smart contract dApp hub that supports WebAssembly smart contracts and EVM smart contracts. We imagine various dApps within the Astar ecosystem utilizing XCM for their projects to leverage assets from other parachains and create a dApp that is XCM native, from both EVM and WASM.
+Astar Network is a multi-virtual machine smart contract dApp hub that supports WebAssembly smart contracts and EVM smart contracts. We imagine various dApps within the Astar ecosystem utilizing XCM for their projects to leverage assets from other parachains and create a dApp that is XCM native, from both EVM and Wasm.
 
 XCM is still under heavy development and not all features and possibilities have yet been enabled. The current version of XCM allows us to move assets between chains.
 

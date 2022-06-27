@@ -2,11 +2,11 @@
 
 ## Smart Contract Runtime Environment
 
-Astar & Shiden runtimes are based on Substrate. Both networks incorporate `pallet-contracts` to enable WASM smart-contract capabilities. The `pallet-contracts` is a sandbox environment to deploy and execute WebAssembly smart contracts. Any language that compiles to WASM can be used. But the code should be compatible with `pallet-contracts` API.
+Astar & Shiden runtimes are based on Substrate. Both networks incorporate `pallet-contracts` to enable Wasm smart-contract capabilities. The `pallet-contracts` is a sandbox environment to deploy and execute WebAssembly smart contracts. Any language that compiles to Wasm can be used. But the code should be compatible with `pallet-contracts` API.
 
 To avoid unnecessary complexity, and boilerplate code, the best way is to use an eDSL that specifically targets the `pallet-contracts` like `ink!` (based on Rust) or `ask!` (based on AssemblyScript). More supported language and eDSL will come as the ecosystem grows.
 
-The WASM blob is then deployed and stored on-chain.
+The Wasm blob is then deployed and stored on-chain.
 
 ### Gas Model
 

@@ -10,7 +10,7 @@ These standards go through several acceptance phases, and the engagement of the 
 
 ## PSP22 - Fungible Token Standard
 
-The [PSP22 Fungible Token standard][PSP22] is inspired by the ERC20 from Ethereum. It targets every parachain that integrates pallet-contract to enable WASM smart contracts. It is defined at ABI level, so it should be used for any language that compiles to WASM (and is not restricted to ink! specifically).
+The [PSP22 Fungible Token standard][PSP22] is inspired by the ERC20 from Ethereum. It targets every parachain that integrates pallet-contract to enable Wasm smart contracts. It is defined at ABI level, so it should be used for any language that compiles to Wasm (and is not restricted to ink! specifically).
 
 PSP22 will have a double impact:
 

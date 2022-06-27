@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Swanky CLI
 
-Swanky CLI aims to be a "all-in-one" tool for WASM smart contract developers within Polkadot / Kusama ecosystem. It is based on existing tools like Cargo Contract CLI but extending with many additional features such as generating a new smart contract environment based on example projects and packaging an instant finality node (Swanky node) which can be used for shortening the contract development lifecycle loop.
+Swanky CLI aims to be a "all-in-one" tool for Wasm smart contract developers within Polkadot / Kusama ecosystem. It is based on existing tools like Cargo Contract CLI but extending with many additional features such as generating a new smart contract environment based on example projects and packaging an instant finality node (Swanky node) which can be used for shortening the contract development lifecycle loop.
 
 Below is the user documentation for Swanky CLI which is meant to be used hand-in-hand with Swanky Node.
 
@@ -134,7 +134,7 @@ DESCRIPTION
 
 ## Swanky Node
 
-Swanky node is a Substrate based blockchain configured to enable `pallet-contracts` (a smart contract module) and more features to help WASM smart contract development locally.
+Swanky node is a Substrate based blockchain configured to enable `pallet-contracts` (a smart contract module) and more features to help Wasm smart contract development locally.
 
 ### Features
 
