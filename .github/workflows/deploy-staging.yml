@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Staging
 
 on:
   push:
@@ -27,6 +27,6 @@ jobs:
             git config --global user.name "gh-actions"
             yarn install --frozen-lockfile
             yarn build
-            echo 'staging2.docs.astar.network' > astar-docs/static/CNAME
+            echo 'staging2.docs.astar.network' > build/CNAME
             PUBLISHING=true PROJECT_NAME=astar-docs-staging yarn deploy
 
