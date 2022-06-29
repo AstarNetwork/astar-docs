@@ -28,7 +28,7 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "gh-actions"
           yarn install --frozen-lockfile
-          echo 'staging2.docs.astar.network' > static/CNAME
+          echo 'staging.docs.astar.network' > static/CNAME
           yarn build
           PUBLISHING=true PROJECT_NAME=astar-docs-staging yarn deploy
 
