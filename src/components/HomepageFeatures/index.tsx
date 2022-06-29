@@ -1,8 +1,10 @@
 import React from 'react';
 import '../../css/homepage-features.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
+  link: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
 };
@@ -10,6 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Start Building',
+    link: '/docs/quickstart/',
     Svg: require('@site/static/img/wrench.svg').default,
     description: (
       <>
@@ -20,6 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Use EVM',
+    link: '/docs/EVM/',
     Svg: require('@site/static/img/evm.svg').default,
     description: (
       <>
@@ -30,6 +34,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Use WebAssembly',
+    link: '/docs/wasm/',
     Svg: require('@site/static/img/wasm.svg').default,
     description: (
       <>
@@ -40,6 +45,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Run A Node',
+    link: '/docs/nodes/',
     Svg: require('@site/static/img/node.svg').default,
     description: (
       <>
@@ -50,6 +56,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Learn Cross Chain Message (XCM)',
+    link: '/docs/xcm/',
     Svg: require('@site/static/img/broadcast.svg').default,
     description: (
       <>
@@ -60,6 +67,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Integrate Toolings',
+    link: '/docs/integrations/',
     Svg: require('@site/static/img/tool.svg').default,
     description: (
       <>
@@ -70,9 +78,9 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, Svg, description, link }: FeatureItem) {
   return (
-    <div className="box">
+    <Link to={link} className="box">
       <div className="row--title">
         <Svg className="icon" role="img" />
         <span className="text--title">{title}</span>
@@ -80,7 +88,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
       <div className="row--description">
         <span className="text--description">{description}</span>
       </div>
-    </div>
+    </Link>
   );
 }
 
