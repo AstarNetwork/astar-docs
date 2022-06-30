@@ -13,10 +13,12 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - name: install and build
+
+      - name: Install and build
         run: |
           yarn install --frozen-lockfile
           yarn build
+          
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
