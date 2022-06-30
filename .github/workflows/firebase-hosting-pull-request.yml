@@ -8,15 +8,15 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
-       - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: yarn
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - uses: actions/checkout@v2
-      - run: yarn build
+      - name: install and build
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
