@@ -10,8 +10,13 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Install deps
-        run: yarn
+       - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
       - uses: actions/checkout@v2
       - run: yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
