@@ -1,4 +1,6 @@
 @import './custom.scss';
+@import 'animate.css';
+
 .section--front-page {
   width: 100%;
   padding: 54px 0;
@@ -26,8 +28,11 @@
   padding: 14px 24px;
   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
   border-radius: 8px;
+  transition: 0.3s;
   &:hover {
     text-decoration: none;
+    transform: scale(1.03);
+    transition: 0.3s;
   }
   @media (min-width: $md) {
     width: 100%;
