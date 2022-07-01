@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Astar Docs',
-  tagline: 'Your one-stop shop for everything Astar.',
+  tagline: 'Your one-stop shop for everything Astar',
   url: 'https://staging.docs.astar.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
