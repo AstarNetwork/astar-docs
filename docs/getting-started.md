@@ -14,6 +14,6 @@ testing, deploying, and interacting with smart contracts on the network.
 - [**Wasm**](wasm) provides an [overview of the Wasm stack on Astar](wasm/stack/),  Wasm [contract frameworks](wasm/stack/dsls), and their [developer tooling](wasm/sc-dev/tools/).
 - [**Nodes**](nodes) explains how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.
 - [**XCM**](xcm) explains how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.
-- [**Integrations**](integrations) provide relevant information about the wallets, indexers, and oracles that are integrated with the network
+- [**Integrations**](integrations) provide relevant information about the wallets, indexers, and oracles that are integrated with the network.
 
 [cbridge]:https://cbridge.celer.network/#/transfer
