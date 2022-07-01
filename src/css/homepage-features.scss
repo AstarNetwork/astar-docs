@@ -1,3 +1,4 @@
+@import './custom.scss';
 .section--front-page {
   width: 100%;
   padding: 54px 0;
@@ -8,17 +9,11 @@
   grid-template-columns: auto;
   justify-content: center;
   row-gap: 54px;
-}
-
-@media screen and (min-width: 1024px) {
-  .container--front-page {
+  @media (min-width: $lg) {
     grid-template-columns: auto auto;
     column-gap: 42px;
   }
-}
-
-@media screen and (min-width: 1420px) {
-  .container--front-page {
+  @media (min-width: $xxl) {
     grid-template-columns: auto auto auto;
     column-gap: 50px;
   }
@@ -31,27 +26,18 @@
   padding: 14px 24px;
   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
   border-radius: 8px;
-}
-
-.box:hover {
-  text-decoration: none;
-}
-
-@media screen and (min-width: 768px) {
-  .box {
+  &:hover {
+    text-decoration: none;
+  }
+  @media (min-width: $md) {
     width: 100%;
     max-width: 480px;
     padding: 20px 38px;
   }
-}
-@media screen and (min-width: 1024px) {
-  .box {
+  @media (min-width: $lg) {
     max-width: 460px;
   }
-}
-
-@media screen and (min-width: 1420px) {
-  .box {
+  @media (min-width: $xxl) {
     width: 420px;
   }
 }
@@ -69,7 +55,7 @@
 }
 
 .text--title {
-  color: #0297fb;
+  color: var(--text-color-title);
   font-size: 16px;
   font-weight: 800;
 }
