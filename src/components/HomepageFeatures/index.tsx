@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/homepage-features.css';
+import '../../css/homepage-features.scss';
 import Link from '@docusaurus/Link';
 
 type FeatureItem = {

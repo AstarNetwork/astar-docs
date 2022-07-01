@@ -4,6 +4,9 @@
  * work well for content-centric websites.
  */
 
+$astar-blue: #0085ff;
+$astar-blue-dark: #05b6fd;
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #001f40;
@@ -16,6 +19,7 @@
   --ifm-code-font-size: 95%;
   --box-background: #ffffff;
   --text-color-description: #001f40;
+  --text-color-title: #0085ff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -29,6 +33,7 @@
   --ifm-color-primary-lightest: #64d7fb;
   --box-background: #1b1e21;
   --text-color-description: #ffff;
+  --text-color-title: #05b6fd;
 }
 
 .docusaurus-highlight-code-line {
@@ -41,3 +46,10 @@
 [data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+$xs: 375px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1440px;
