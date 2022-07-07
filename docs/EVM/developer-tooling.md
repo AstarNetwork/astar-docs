@@ -84,7 +84,6 @@ module.exports = {
 
 Once your accounts are funded, you can deploy the sample contract to Shibuya with `npx hardhat run --network shibuya scripts/sample-script.js`.
 
-
 ## Truffle
 
 ### Create Ethereum Account
