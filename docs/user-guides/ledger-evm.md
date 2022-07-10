@@ -1,6 +1,6 @@
 ---
-sidebar_position: 4
-title: Ledger Astar/Shiden EVM on Metmask
+sidebar_position: 9
+title: Ledger Astar/Shiden EVM on Metamask
 ---
 
 ## Using Astar and Shiden EVM Ledger apps with MetaMask

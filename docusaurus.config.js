@@ -16,6 +16,7 @@ const config = {
   organizationName: 'AstarNetwork', // Usually your GitHub org/user name.
   projectName: 'astar-docs', // Usually your repo name.
   plugins: ['docusaurus-plugin-sass'],
+  stylesheets: [],
 
   presets: [
     [

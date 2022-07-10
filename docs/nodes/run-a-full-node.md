@@ -21,7 +21,7 @@ We have multiple networks, including our testnet Shibuya, Shiden on Kusama, and 
 Requirements for running any node are similar to what we recommend to our collators. Read more about this here.
 
 :::info
-Running a node for our testnet 'Shibuya' requires less. It's a perfect place to test your node infrastructure and costs. 
+Running a node for our testnet 'Shibuya' requires less. It's a perfect place to test your node infrastructure and costs.
 :::
 Astar nodes will listen on multiple ports. The default Substrate ports are used in the parachain, while the relay chain will listen on the next higher port. Both chains (parachain and relay chain) will run at the same time when you spin up your node.
 
@@ -33,4 +33,3 @@ There are a couple of different guides to help you get started running an Astar 
 
 - Using Docker - this method provides a quick and easy way to get started with a Docker container.
 - Using Binary - this method is recommended for those with less experience compiling a Substrate node.
-
