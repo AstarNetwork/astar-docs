@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# How to send ASTR/SDN from MetaMask to Polkadot.js
+# Sending ASTR/SDN from MetaMask to Polkadot.js
 
 In this tutorial, we explain how to transfer ASTR/SDN from MetaMask to Polkadot.js. Astar is Ethereum compatible layer1 blockchain. You are able to manage your ASTR/SDN on your MetaMask.
 

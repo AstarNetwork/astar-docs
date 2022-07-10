@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# How to send ASTR/SDN from exchanges to our portal
+# Sending ASTR/SDN from exchanges to our portal
 
 Currently, $ASTR and $SDN are listed on tier 1 exchanges. One of the FAQs from our community is how to withdraw the token from exchanges.
 

@@ -4,9 +4,6 @@ sidebar_position: 3
 
 # Spin up the Collator
 
-​Start by building the collator node by following this guide:
-LINK
-
 :::caution
 Collators are responsible for the network stability, it is very important to be able to react at any time of the day or night in case of trouble. We strongly encourage collators to set up a monitoring and alerting system, learn more about this from our 'Beginners Guide'.
 :::
@@ -104,4 +101,3 @@ Once your collator is active, you will see your name inside **Network** tab ever
 <center>
 <img src="https://i.imgur.com/e70Tpbq.png" border="1"></img>
 </center>
-
