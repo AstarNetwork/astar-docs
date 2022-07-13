@@ -18,6 +18,9 @@
     grid-template-columns: auto auto auto;
     column-gap: 50px;
   }
+  @media (min-width: 1900px) {
+    grid-template-columns: auto auto auto auto;
+  }
 }
 
 .box {

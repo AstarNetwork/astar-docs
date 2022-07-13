@@ -76,6 +76,28 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
+  {
+    title: 'dApp Staking',
+    link: '/docs/dapp-staking/',
+    Svg: require('@site/static/img/staking.svg').default,
+    description: (
+      <>
+        Earn tokens for yourself and your dApp by staking tokens and registering
+        your dApp with Astar’s dApp Staking.
+      </>
+    ),
+  },
+  {
+    title: 'User Guides',
+    link: '/docs/user-guides/',
+    Svg: require('@site/static/img/docs.svg').default,
+    description: (
+      <>
+        Learn how to create different types of wallets, obtain tokens, and
+        manage your assets.
+      </>
+    ),
+  },
 ];
 
 function Feature({ title, Svg, description, link }: FeatureItem) {
