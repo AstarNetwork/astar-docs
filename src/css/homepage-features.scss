@@ -82,8 +82,11 @@
   content: url('../../static/img/tool.svg');
 }
 
-.staking::before {
+.staking {
   padding-top: 6px;
+}
+
+.staking::before {
   content: url('../../static/img/staking.svg');
 }
 
