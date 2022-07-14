@@ -54,6 +54,43 @@
   height: 38px;
 }
 
+.node::before {
+  content: url('../../static/img/node.svg');
+}
+
+.tool::before {
+  content: url('../../static/img/tool.svg');
+}
+
+.wrench::before {
+  content: url('../../static/img/wrench.svg');
+}
+
+.evm::before {
+  content: url('../../static/img/evm.svg');
+}
+
+.wasm::before {
+  content: url('../../static/img/wasm.svg');
+}
+
+.broadcast::before {
+  content: url('../../static/img/broadcast.svg');
+}
+
+.tool::before {
+  content: url('../../static/img/tool.svg');
+}
+
+.staking::before {
+  padding-top: 6px;
+  content: url('../../static/img/staking.svg');
+}
+
+.docs::before {
+  content: url('../../static/img/docs.svg');
+}
+
 .row--title {
   display: flex;
   align-items: center;
