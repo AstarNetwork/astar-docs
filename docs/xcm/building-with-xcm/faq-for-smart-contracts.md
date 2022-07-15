@@ -6,8 +6,9 @@ sidebar_position: 6
 
 ## Q: Unable to use `transferFrom` for XC20 (DOT, KSM...) in Solidity contract
 
-An EVM smart contract (using XC20) also needs native token (ASTR, SDN, SBY) balance. In order for a contract to accept native tokens the contract needs payable function.
+This was an issue before when an account had to hold some native currency in order to be eligible to receive foreign currency.
+Since this was causing problems for our users, it was changed and no is no longer a requirement for payable foreign assets.
 
-```solidity
-function () public payable {}
-```
+Please note that for custom assets, which aren't supported as payment asset by Astar or Shiden, account (or contract) still has
+to hold at least ED in native currency to be eligible to receive custom asset.
+
