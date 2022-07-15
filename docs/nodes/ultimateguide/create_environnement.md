@@ -17,8 +17,8 @@ We will provide a basic configuration for reference, which guarantees that all b
 - System: Ubuntu 20.04
 - A dedicated server dedicated to the collator node
 - CPU: 8 cores
-- Memory: 32 GB
-- Hard Disk: 250 GB SSD (storage space will increase with time)
+- Memory: 16 GB
+- Hard Disk: 400 GB SSD (Shiden/Shibuya - 250GB. storage space will increase with time)
 
 **Basic minimum testnet configuration:**
 

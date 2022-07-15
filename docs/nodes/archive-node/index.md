@@ -12,7 +12,7 @@ We are manitaining 3 different networks: the testnet Shibuya, Shiden as a parach
 
 | Astar chain | Relay Chain | Name | Token |
 |---|---|---|---|
-| Testnet | Kyoto (hosted by Astar) | Shibuya | $SBY |
+| Testnet | Tokyo (hosted by Astar) | Shibuya | $SBY |
 | Shiden | Kusama | Shiden | $SDN |
 | Astar | Polkadot | Astar | $ASTR |
 
