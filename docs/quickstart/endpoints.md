@@ -11,19 +11,70 @@ import TabItem from '@theme/TabItem';
 
 There are public endpoints available for development on Shibuya (testnet) but for Astar or Shiden, you'll need to get your own endpoint from one of the supported providers. You can always run your own RPC nodes.
 
-**Astar is not responsible for your project downtime when using Astar public endpoint.**
+:::note
+**We recommend building your own endpoints or using our infra partners to make sure you have full control over them.**
+Astar is not responsible for your project downtime when using Astar free public endpoint for community.
+Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There is a possibility that this value will be lowered.
+:::
+
+<Tabs>
+<TabItem value="astar" label="Astar Network" default>
+
+|   | Public endpoint Astar |
+| --- | --- |
+| Network | Astar |
+| Parent chain | Polkadot |
+| ParachainID | 2006 |
+| EVM RPC | https://astar.api.onfinality.io/public |
+|         | https://astar.public.blastapi.io |
+|         | https://evm.astar.network (hosted by Astar team) |
+| Native RPC | https://astar.api.onfinality.io/public |
+|            | https://astar.public.blastapi.io |
+| Native Websocket | wss://astar.api.onfinality.io/public-ws  |
+|                  | wss://astar.public.blastapi.io |
+|                  | wss://rpc.astar.network (hosted by Astar team) |
+| chainID | 592 |
+| Symbol | ASTR |
+
+</TabItem>
+
+<TabItem value="shiden" label="Shiden Network" default>
+
+|   | Public endpoint Shiden |
+| --- | --- |
+| Network | Shiden |
+| Parent chain | Kusama |
+| ParachainID | 2007 |
+| EVM RPC | https://shiden.api.onfinality.io/public |
+|         | https://shiden.public.blastapi.io |
+|         | https://evm.shiden.astar.network (hosted by Astar team) |
+| Native RPC | https://shiden.api.onfinality.io/public |
+|            | https://shiden.public.blastapi.io |
+| Native Websocket | wss://shiden.api.onfinality.io/public-ws  |
+|                  | wss://shiden.public.blastapi.io |
+|                  | wss://rpc.shiden.astar.network (hosted by Astar team) |
+| chainID | 336 |
+| Symbol | SDN |
+
+</TabItem>
+
+<TabItem value="shibuya" label="Shibuya Network" default>
 
 |   | Public endpoint Shibuya |
 | --- | --- |
 | Network | Shibuya (parachain testnet) |
-| Parent chain | Astar relay chain |
+| Parent chain | Tokyo relay chain (hosted by Stake Technologies) |
 | ParachainID | 1000 |
-| WSS | wss://rpc.shibuya.astar.network |
-| RPC | https://rpc.shibuya.astar.network:8545 |
+| EVM RPC | https://shibuya.public.blastapi.io |
+|         | https://evm.shibuya.astar.network (hosted by Astar team) |
+| Native RPC | https://shibuya.public.blastapi.io |
+| Native Websocket | wss://shibuya.public.blastapi.io  |
+|                  | wss://rpc.shibuya.astar.network (hosted by Astar team) |
 | chainID | 81 |
 | Symbol | SBY |
-| Block explorer | https://shibuya.subscan.io |
-|   | https://blockscout.com/shibuya |
+
+</TabItem>
+</Tabs>
 
 
 ## Endpoint providers
