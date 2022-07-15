@@ -64,22 +64,22 @@ To set the asset metadata, click on **Developer** at the top of the page and the
 
 You can use the **Extrinsics** page to perform other functions such as minting tokens, delegating a team, freeze and thaw assets or accounts, and more.
 
-## Generate Mintable XC20 Precompile Address
+## Generate XC20 Precompile Address
 
-The use our asset now as XC20 on MetaMask or another EVM wallet we need to generate the smart contract. The mintable XC20 precompile address is generated using the following:
+The use our asset now as XC20 on MetaMask or another EVM wallet we need to generate the smart contract. The XC20 precompile address is generated using the following rule:
 
-`address = "0xFFFFFFFF..." + DecimalToHex(AssetId)`
+`address = "0xFFFFFFFF" + DecimalToHexWith32Digits(AssetId)`
 
 The first step is to take the asset ID and convert it to a hex value. You can use your search engine of choice to look up a simple tool for converting decimals to hex values. In this tutorial, we will use [this decimal to hexadecimal converter](https://www.rapidtables.com/convert/number/decimal-to-hex.html).
 
 For asset ID `19992021`, the hex value is `1310DD5`.
 
-Mintable XC20 precompiles can only fall between  `0xFFFFFFFF00000000000000000000000000000000` and `0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`. As such, the first 8 characters of the address will always be `FFFFFFFF`. Since Ethereum addresses are 40 characters long, you will need to prepend 0s to the hex value until the address has 40 characters.
+XC20 precompiles can only fall between  `0xFFFFFFFF00000000000000000000000000000000` and `0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`. As such, the first 8 characters of the address will always be `FFFFFFFF`. Since Ethereum addresses are 40 characters long, you will need to prepend 0s to the hex value until the address has 40 characters.
 
 The hex value that was already generated in the example is 7 characters long, so prepending the first 8 characters, `FFFFFFFF`, to the hex value will give you the part of the 40-character address you need to interact with the XC20 precompile. Note that you still need to add zeros to get the 40-character address. You add the zeros between `FFFFFFFF` and generated hex.
 
 For this example, the full address is `0xFFFFFFFF00000000000000000000000001310dD5`.
 
-Now that you've generated the mintable XC20 precompile address, you can use the address to interact with the XC20 as you would with any other ERC20 in Remix.
+Now that you've generated the XC20 precompile address, you can use the address to interact with the XC20 as you would with any other ERC20 in Remix.
 
 [polkadotjs-apps]: https://polkadot.js.org/apps/

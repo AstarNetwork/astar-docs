@@ -26,7 +26,21 @@ xcm-tools parachain-account 2006
 Replace **2006** with the parachain Id you require.
 
 For calculating sibling parachain's sovereign account, use the following command:
-> xcm-tools parachain-account -s 2006
+```bash
+xcm-tools parachain-account -s 2006
 5Eg2fntKDrAxhaGuB3idrxCFu3BveuyB1MooVPYuj2jaoSsw
+```
+
 E.g. this will be sovereign account of Astar on Statemint.
 Replace 2006 with the parachain Id you require.
+
+## XC20 Address
+
+For calculating XC20 EVM address, use the following command:
+```bash
+xcm-tools asset-id 42424242424242
+pallet_assets: 42424242424242
+EVM XC20: 0xffffffff000000000000000000002695a9e649b2
+```
+
+You can input standard asset Id (as seen by pallet-assets) and as output you get H160 address of that asset.

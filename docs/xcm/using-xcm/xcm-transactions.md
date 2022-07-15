@@ -4,20 +4,9 @@ sidebar_position: 1
 
 # XCM Transactions
 
-## Overview
+The following chapters will describe how to transfer native and foreign assets using Astar portal.
 
-**XCM is a format for how message transfer should be performed in an interoperable network.  Cross-Consensus Messaging is between chains, smart contracts, pallets, bridges, and even sharded enclaves like SPREE.**
-
-The significance of XCM is attributed to the groundbreaking capability of DOT, Polkadot's native coin, to be traded, sent, and composed across all parachains on the Polkadot network, the same as KSM will be for Kusama.
-The instruction here will explain how you will be able to transfer DOT via XCM on the Astar Portal from Polkadot to Astar. The same instructions can be used for KSM on Shiden.
-
-Also, HRMP is something that’s coming really soon. Currently, you have the ability to transfer DOT as the first asset but when HRMP becomes available in the next few weeks, it will be any token.
-
-One of the biggest takeaways for you today is that XCM is a generic message format designed to be a language for communication between two systems. As the name suggests, it’s not necessarily only bound to Substrate-based or Dotsama chains - it can be adopted and used by any system using any consensus.
-
-## Instructions
-
-### XCM Transfer from Polkadot to Astar
+## XCM Transfer from Polkadot to Astar
 
 When you go to the [Assets](https://portal.astar.network/#/assets) page, you can see the XCM Assets panel.
 
