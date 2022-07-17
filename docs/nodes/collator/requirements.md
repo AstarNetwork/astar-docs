@@ -58,13 +58,21 @@ Here you can find the basic configuration for reference, which guarantees that a
 Make sure your server is only dedicated to the collator node
 :::
 
-**Minimum recommended configuration for a mainnet collator**
+**Mainnet collator**
 
 - **System**: Ubuntu 20.04
 - **Dedicated server**
 - **CPU**: 8 cores
 - **Memory**: 16 GB
-- **Hard Disk**: 400 GB SSD NVMe (Shiden/Shibuya - 250 GB. storage space will increase with time)
+- **Hard Disk**: 400 GB SSD NVMe (storage space will increase with time)
+
+**Testnet configuration:**
+
+- **System**: Ubuntu 20.04
+- **CPU**: 4 cores
+- **Memory**: 8 GB
+- **Hard disk**: 100 GB SSD NVMe (storage space will increase with time)
+
 
 :::tip
 Shibuya is the perfect network to test out your knowledge about running nodes in the Astar ecosystem. To join the collator set on Shibuya you need to apply for a 32k SBY fund.
