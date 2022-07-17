@@ -66,7 +66,7 @@ Make sure your server is only dedicated to the collator node
 - **Memory**: 16 GB
 - **Hard Disk**: 400 GB SSD NVMe (storage space will increase with time)
 
-**Testnet configuration:**
+**Testnet collator**
 
 - **System**: Ubuntu 20.04
 - **CPU**: 4 cores
