@@ -15,7 +15,7 @@ Deploying and interacting with EVM-based smart contracts on Astar is as easy as 
 
 ### Initialize your project
 
-If you're starting your hardhat project from scratch, we recommend reading the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start) page.
+If you're starting your Hardhat project from scratch, we recommend reading the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start) page.
 
 ### Setting up your account
 
@@ -83,7 +83,6 @@ module.exports = {
 ```
 
 Once your accounts are funded, you can deploy the sample contract to Shibuya with `npx hardhat run --network shibuya scripts/sample-script.js`.
-
 
 ## Truffle
 

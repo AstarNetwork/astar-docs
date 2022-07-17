@@ -17,13 +17,13 @@ To help you start building in our ecosystem, you can get tokens from our faucet 
 <img src="https://i.imgur.com/rALI50E.png" alt="Network Selection" border="1"></img>
 </center>
 
-3. Select your wallet. Use MetaMask if you need tokens for EVM deployment and any other wallet if you need tokens for WASM deployment.
+3. Select your wallet. Use MetaMask if you need tokens for EVM deployment and any other wallet if you need tokens for Wasm deployment.
 
 <center>
 <img src="https://i.imgur.com/Wj2vuwJ.png" alt="Wallet Selection" border="1"></img>
 </center>
 
-4. As soon wallet is loaded you can see your balance. The faucet button is now enabled to request the native token of your connected network. Click on the faucet button to open the request pop-up. 
+4. As soon wallet is loaded you can see your balance. The faucet button is now enabled to request the native token of your connected network. Click on the faucet button to open the request pop-up.
 
 <center>
 <img src="https://i.imgur.com/Ffijw8J.png" alt="Grab your Tokens" border="1"></img>

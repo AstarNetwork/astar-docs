@@ -7,14 +7,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Astar Docs',
-  tagline: 'Your one-stop shop for everything Astar.',
-  url: 'https://astarnetwork.github.io',
-  baseUrl: '/astar-docs/',
+  tagline: 'Your one-stop shop for everything Astar',
+  url: 'https://staging.docs.astar.network',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/fav.png',
   organizationName: 'AstarNetwork', // Usually your GitHub org/user name.
   projectName: 'astar-docs', // Usually your repo name.
+  plugins: ['docusaurus-plugin-sass'],
+  stylesheets: [],
 
   presets: [
     [
@@ -29,11 +31,10 @@ const config = {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/AstarNetwork/astar-docs/tree/main/',
+          editUrl: 'https://github.com/AstarNetwork/astar-docs/tree/main/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       }),
     ],
@@ -46,7 +47,7 @@ const config = {
         title: 'Astar Docs',
         logo: {
           alt: 'Astar',
-          src: 'img/ring.svg',
+          src: 'img/astar-logo.svg',
         },
         items: [
           {
@@ -55,7 +56,11 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: 'https://medium.com/astar-network', label: 'Medium', position: 'left'},
+          {
+            to: 'https://medium.com/astar-network',
+            label: 'Medium',
+            position: 'left',
+          },
           {
             href: 'https://github.com/AstarNetwork/astar-docs',
             label: 'GitHub',
@@ -64,7 +69,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',

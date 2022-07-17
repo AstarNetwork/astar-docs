@@ -30,7 +30,7 @@ Astar provides two different kinds of explorers: one that combines Substrate and
 <p><b>Polkadot JS:</b> <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fshiden.api.onfinality.io%2Fpublic-ws#/explorer">https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fshiden.api.onfinality.io%2Fpublic-ws#/explorer</a></p>
 
 </TabItem>
-<TabItem value="shibuya" label="Shibuya">
+<TabItem value="shibuya" label="Shibuya Network">
 <p>Subscan is the most used explorer in the Polkadot ecosystem. With Subscan you can search the complete Astar Network. Subscan support Substrate and Ethereum API. BlockScout is the best explorer for developers who are building in our EVM environment, it has all the features as EtherScan.</p>
 <p><b>Subscan:</b> <a href="https://shibuya.subscan.io">https://shibuya.subscan.io</a></p>
 <p><b>BlockScout:</b> <a href="https://blockscout.com/shibuya">https://blockscout.com/shibuya</a></p>
