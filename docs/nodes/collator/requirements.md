@@ -71,7 +71,7 @@ Make sure your server is only dedicated to the collator node
 - **System**: Ubuntu 20.04
 - **CPU**: 4 cores
 - **Memory**: 8 GB
-- **Hard disk**: 100 GB SSD NVMe (storage space will increase with time)
+- **Hard Disk**: 100 GB SSD NVMe (storage space will increase with time)
 
 
 :::tip
