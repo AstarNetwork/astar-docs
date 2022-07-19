@@ -51,6 +51,8 @@ rm -v kusama.RocksDb.tar.lz4
 
 You can download the snapshot from <https://polkashots.io/>
 
+### Instructions
+
 ```sh
 # navigate to ksmcc3
 cd /var/lib/astar/astar-db/polkadot/chains/polkadot

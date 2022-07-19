@@ -2,10 +2,10 @@
 sidebar_position: 3
 ---
 
-# Spin up the Collator
+# Spin up a Collator
 
 :::caution
-Collators are responsible for the network stability, it is very important to be able to react at any time of the day or night in case of trouble. We strongly encourage collators to set up a monitoring and alerting system, learn more about this from our 'Beginners Guide'.
+Collators are responsible for the network stability, it is very important to be able to react at any time of the day or night in case of trouble. We strongly encourage collators to set up a monitoring and alerting system, learn more about this from our ['Secure Setup Guide'](/docs/nodes/collator/secure_setup_guide/).
 :::
 
 ### Verify synchronization

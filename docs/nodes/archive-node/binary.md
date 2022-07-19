@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Binary
 
 In this guide, we will use the binary provided in [Astar release](https://github.com/AstarNetwork/Astar).
@@ -49,12 +52,17 @@ To run a stable collator node, a **systemd service** has to be set and activated
 Create a service file
 
 ```sh
-sudo nano /etc/systemd/system/astar.service
+sudo vi /etc/systemd/system/astar.service
 ```
 
 ## Service parameters
 
-### Astar
+:::note
+Please make sure to change **${NODE_NAME}**
+:::
+
+<Tabs>
+<TabItem value="astar" label="Astar" default>
 
 ```sh
 [Unit]
@@ -83,7 +91,8 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-### Shiden
+</TabItem>
+<TabItem value="shiden" label="Shiden" default>
 
 ```sh
 [Unit]
@@ -112,7 +121,8 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-### Shibuya
+</TabItem>
+<TabItem value="shibuya" label="Shibuya" default>
 
 ```sh
 [Unit]
@@ -141,7 +151,8 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
-> Do not forget to change **${NODE_NAME}**
+</TabItem>
+</Tabs>
 
 Start the service:
 
@@ -169,15 +180,17 @@ curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"sy
 
 ## Next steps
 
-For any usage, wait for the chain to be fully sync by checking the [node log](https://docs.astar.network/maintain/archive-node/binary#get-node-logs).
+For any usage, wait for the chain to be fully sync by checking the [node log](/docs/nodes/archive-node/binary#get-node-logs).
 
-It all depends about what you plan to do with your archive node.
+It all depends on what you plan to do with your archive node.
 
-- In most cases, you will want to access node from outside. In this case, you need to set up a nginx server.
+- In most cases, you will want to access node from outside. In this case, [nginx server](/docs/nodes/archive-node/nginx) is one of available options.
 - If you run your dapp on the same server than the node (recommended for testing purpose only), you can access it directly with the `localhost` address.
 - If you run the node locally for testing purpose, you can for example switch network into [Polkadot.js portal](https://polkadot.js.org/apps) and explore the chain:
 
 ![1](img/1.png)
+
+---
 
 ## Extra operations
 
@@ -191,7 +204,7 @@ journalctl -fu astar-collator -n100
 
 ### Indexers and oracles
 
-To access data from indexers (lke The Graph) or Oracles (like Chainlink), you need to add the debug flags below to the node launch command, after the `astar-collator` line:
+To access data from indexers (e.g. The Graph) or Oracles (e.g. Chainlink), you need to add the debug flags below to the node launch command, after the `astar-collator` line:
 
 `-l evm=debug,ethereum=debug,rpc=debug`
 
@@ -228,4 +241,6 @@ sudo systemctl start astar.service
 
 If you run your collator it not only needs to sync the mainnet chain but also the complete relay chain from Kusama / Polkadot. This can take up to 3-4 days. You can also use a snapshot of Kusama/Polkadot. You can download this [here](https://polkashots.io/) and will save a lot of time.
 
-> NOTE: know what you are doing when using snapshots!
+:::note
+know what you are doing when using snapshots!
+:::
