@@ -40,7 +40,7 @@ Basic installation procedure is same as archive node. Please follow [Binary](/do
 
 ```sh
 [Unit]
-Description=Astar Archive node
+Description=Astar node
 
 [Service]
 User=astar
@@ -69,7 +69,7 @@ WantedBy=multi-user.target
 
 ```sh
 [Unit]
-Description=Shiden Archive node
+Description=Shiden node
 
 [Service]
 User=astar
@@ -98,7 +98,7 @@ WantedBy=multi-user.target
 
 ```sh
 [Unit]
-Description=Shibuya Archive node
+Description=Shibuya node
 
 [Service]
 User=astar

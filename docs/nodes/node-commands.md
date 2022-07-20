@@ -133,6 +133,7 @@ astar-collator \
 </TabItem>
 <TabItem value="shiden" label="Shiden" default>
 
+```
 docker run -d \
 --name shiden-container \
 -u $(id -u astar):$(id -g astar) \
@@ -148,6 +149,7 @@ astar-collator \
 --base-path /data \
 --rpc-cors=all \
 --state-cache-size 1
+```
 
 </TabItem>
 <TabItem value="shibuya" label="Shibuya" default>
