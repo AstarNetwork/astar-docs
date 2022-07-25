@@ -11,9 +11,9 @@ import TabItem from '@theme/TabItem';
 
 ### Permissionless collator
 
-To become a permissionless collator on one of our networks, you need to meet these requirements:
+To become a permissionless collator on our networks, you need to meet below requirements.
 
-**Collator staking requirements:**
+**Collator staking requirements**
 
 <Tabs>
 <TabItem value="astar" label="Astar Network" default>
@@ -23,7 +23,7 @@ To become a permissionless collator on one of our networks, you need to meet the
   <li>Meet hardware requirements</li>
 </ul>
 </p>
-<p>If your node stops producing blocks for 1 session, your node will be kicked out of the active set. Running a node with low performance can lead to skipping blocks which can lead to being kicked out of the active set.</p>
+<p>If your node stops producing blocks for 1 session, your node will be kicked out of the active set and 1% of the bonded funds will be slashed. Running a node with low performance can lead to skipping blocks which can lead to being kicked out of the active set.</p>
 
 </TabItem>
 <TabItem value="shiden" label="Shiden Network">
@@ -33,7 +33,7 @@ To become a permissionless collator on one of our networks, you need to meet the
   <li>Meet hardware requirements</li>
 </ul>
 </p>
-<p>If your node stops producing blocks for 1 session, your node will be kicked out of the active set. Running a node with low performance can lead to skipping blocks which can lead to being kicked out of the active set.</p>
+<p>If your node stops producing blocks for 1 session, your node will be kicked out of the active set and 1% of the bonded funds will be slashed. Running a node with low performance can lead to skipping blocks which can lead to being kicked out of the active set.</p>
 
 </TabItem>
 </Tabs>
@@ -58,23 +58,42 @@ Here you can find the basic configuration for reference, which guarantees that a
 Make sure your server is only dedicated to the collator node
 :::
 
-**Mainnet collator**
+<Tabs>
+<TabItem value="astar" label="Astar" default>
 
-- **System**: Ubuntu 20.04
-- **Dedicated server**
-- **CPU**: 8 cores
-- **Memory**: 16 GB
-- **Hard Disk**: 400 GB SSD NVMe (storage space will increase with time)
+| Component | Requirement |
+|---|---|
+| System | Ubuntu 20.04 |
+| CPU | 8 cores |
+| Memory | 16 GB |
+| Hard Disk | 400 GB SSD NVMe |
 
-**Testnet collator**
+</TabItem>
 
-- **System**: Ubuntu 20.04
-- **CPU**: 4 cores
-- **Memory**: 8 GB
-- **Hard Disk**: 100 GB SSD NVMe (storage space will increase with time)
+<TabItem value="shiden" label="Shiden" default>
 
+| Component | Requirement |
+|---|---|
+| System | Ubuntu 20.04 |
+| CPU | 8 cores |
+| Memory | 16 GB |
+| Hard Disk | 400 GB SSD NVMe |
+
+</TabItem>
+
+<TabItem value="shibuya" label="Shibuya" default>
+
+| Component | Requirement |
+|---|---|
+| System | Ubuntu 20.04 |
+| CPU | 4 cores |
+| Memory | 8 GB |
+| Hard Disk | 100 GB SSD NVMe |
+
+</TabItem>
+</Tabs>
 
 :::tip
 Shibuya is the perfect network to test out your knowledge about running nodes in the Astar ecosystem. To join the collator set on Shibuya you need to apply for a 32k SBY fund.
-If you never operated a collator node, we strongly encourage you to spin up a **Shibuya collator** node to start before thinking about mainnet. A perfect start is our [beginners guide](../ultimateguide).
+If you never operated a collator node, we strongly encourage you to spin up a **Shibuya collator** node to start before thinking about mainnet. A perfect start is our [secure setup guide](/docs/nodes/collator/secure_setup_guide/).
 :::

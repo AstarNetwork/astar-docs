@@ -119,28 +119,45 @@ sudo chown astar:astar /var/lib/astar
 
 Let's first go to our binary directory and start the collator manually:
 
+<Tabs>
+<TabItem value="astar" label="Astar" default>
+
 ```
 cd /usr/local/bin
 
-## Astar
 ./astar-collator --collator --chain astar --parachain-id 2006 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+```
 
-## Shiden
+</TabItem>
+<TabItem value="shiden" label="Shiden" default>
+
+```
+cd /usr/local/bin
+
 ./astar-collator --collator --chain shiden --parachain-id 2007 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+```
 
-## Shibuya
+</TabItem>
+<TabItem value="shibuya" label="Shibuya" default>
+
+```
+cd /usr/local/bin
+
 ./astar-collator --collator --chain shibuya --parachain-id 1000 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
 ```
 
-:::tips
+</TabItem>
+</Tabs>
+
+:::tip
 Type in the place of **${COLLATOR\_NAME}**, how you would like to call your node.
 :::
 
-Check on [https://telemetry.polkadot.io/](https://telemetry.polkadot.io/#/Dusty) to see your node syncing.
+Check on [https://telemetry.polkadot.io/](https://telemetry.polkadot.io/#list/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6) to see your node syncing.
 
-Useful commands to be used in screen:\
-_`ctrl+a+d` (detach actual session)_\
-_`screen ls` (this will list all running screens)_\
+Useful commands to be used in screen:
+_`ctrl+a+d` (detach actual session)_
+_`screen ls` (this will list all running screens)_
 _`screen -r` (restore a screen session)_
 
 Stop the manual node and kill the screen session:
@@ -161,6 +178,9 @@ sudo nano /etc/systemd/system/astar.service
 ```
 
 Add service parameters (this example is for Astar Network):
+<Tabs>
+<TabItem value="astar" label="Astar" default>
+
 ```
 [Unit]
 Description=Astar Collator
@@ -186,6 +206,67 @@ RestartSec=120
 [Install]
 WantedBy=multi-user.target
 ```
+
+</TabItem>
+<TabItem value="shiden" label="Shiden" default>
+
+```
+[Unit]
+Description=Astar Collator
+
+[Service]
+User=astar
+Group=astar
+  
+ExecStart=/usr/local/bin/astar-collator \
+  --collator \
+  --rpc-cors all \
+  --name ${COLLATOR_NAME} \
+  --chain shiden \
+  --parachain-id 2007 \
+  --base-path /var/lib/astar \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --execution wasm \
+  --state-cache-size 1
+  
+Restart=always
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target
+```
+
+</TabItem>
+<TabItem value="shibuya" label="Shibuya" default>
+
+```
+[Unit]
+Description=Astar Collator
+
+[Service]
+User=astar
+Group=astar
+  
+ExecStart=/usr/local/bin/astar-collator \
+  --collator \
+  --rpc-cors all \
+  --name ${COLLATOR_NAME} \
+  --chain shibuya \
+  --parachain-id 1000 \
+  --base-path /var/lib/astar \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --execution wasm \
+  --state-cache-size 1
+  
+Restart=always
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target
+```
+
+</TabItem>
+</Tabs>
 
 Start the service:
 

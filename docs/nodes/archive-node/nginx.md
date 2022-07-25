@@ -5,7 +5,7 @@ sidebar_position: 3
 # Nginx Server
 
 To access your archive node from outside, you need to install a server and setup a certificate.
-In this guide, we will use Nginx as a server.
+In this guide, we will use Nginx as a server as an example.
 
 ## Firewall
 
