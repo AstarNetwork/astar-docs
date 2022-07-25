@@ -23,7 +23,7 @@ To become a permissionless collator on our networks, you need to meet below requ
   <li>Meet hardware requirements</li>
 </ul>
 </p>
-<p>If your node stops producing blocks for 1 session, your node will be kicked out from the active set. Running a node with low performance can lead to skipping blocks which can lead to being kicked out of the active set.</p>
+<p>If your node stops producing blocks for 1 session, your node will be kicked out of the active set and 1% of the bonded funds will be slashed. Running a node with low performance can lead to skipping blocks which can lead to being kicked out of the active set.</p>
 
 </TabItem>
 <TabItem value="shiden" label="Shiden Network">
@@ -33,7 +33,7 @@ To become a permissionless collator on our networks, you need to meet below requ
   <li>Meet hardware requirements</li>
 </ul>
 </p>
-<p>If your node stops producing blocks for 1 session, your node will be kicked out from the active set. Running a node with low performance can lead to skipping blocks which can lead to being kicked out of the active set.</p>
+<p>If your node stops producing blocks for 1 session, your node will be kicked out of the active set and 1% of the bonded funds will be slashed. Running a node with low performance can lead to skipping blocks which can lead to being kicked out of the active set.</p>
 
 </TabItem>
 </Tabs>

@@ -174,7 +174,7 @@ To run a stable collator node, a **systemd service** has to be set and activated
 Create a service file
 
 ```
-sudo vi /etc/systemd/system/astar.service
+sudo nano /etc/systemd/system/astar.service
 ```
 
 Add service parameters (this example is for Astar Network):

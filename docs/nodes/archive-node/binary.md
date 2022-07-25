@@ -52,7 +52,7 @@ To run a stable collator node, a **systemd service** has to be set and activated
 Create a service file
 
 ```sh
-sudo vi /etc/systemd/system/astar.service
+sudo nano /etc/systemd/system/astar.service
 ```
 
 ## Service parameters
