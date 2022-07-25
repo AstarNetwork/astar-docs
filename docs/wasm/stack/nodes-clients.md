@@ -38,6 +38,10 @@ Shibuyas `pallet-contracts` has `unstable-feature` so you can use unstable flagg
 
 To get the latest info & get tokens via faucet, please check Shibuya's official docs.
 
-## Mainnet Node: Shiden and Astar
+## Mainnet Node: Shiden
 
-At the moment, Wasm smart contracts are not available on our mainnet. They should go live during 2022 Q2.
+Wasm contracts are live on Shiden. You can interact with them in the same way as Shibuya.
+
+## Mainnet Node: Astar
+
+At the moment, Wasm smart contracts are not available on Astar. They should go live during 2022 Q3.

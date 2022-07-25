@@ -6,6 +6,9 @@
 
 [The Astar Vision Part 2: Asset Diversity Through XCM dApps and Smart Contracts](https://medium.com/astar-network/the-astar-vision-part-2-asset-diversity-through-xcm-dapps-and-smart-contracts-3a689dee5b77)
 
+[The Astar Vision Part 3: The Innovation Hub of Web3.0](https://medium.com/astar-network/the-astar-vision-part-3-the-innovation-hub-of-web3-0-1cace547aba3)
+
+
 ## Basic information
 
 One of the killer features of the Dotsama ecosystem is the interconnection of all the parachains. Sharing the same security layer, all parachains have an innate shared platform to securely communicate with one another.

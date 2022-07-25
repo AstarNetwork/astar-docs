@@ -4,9 +4,8 @@ sidebar_position: 2
 
 # Register dApp
 
-How to register your dApp in our dApp staking mechanism. First, you have to make sure that you meet the requirements:
+How to register your dApp in our dApp staking mechanism. First, you have to make sure that you meet the [requirements](https://docs.astar.network/docs/dapp-staking/for-devs/requirements). **dApp staking is for all live projects in our ecosystem.** Just contact a member of [SpaceLabs](https://astar.network/spacelabs/) to be added to our dApp staking portal.
 
-> - **dApp staking is for all live projects in our ecosystem.** Just apply to [this form](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) to be added to our dApp staking portal.
 > - To register a dApp, you need to have 100 SDN or 1000 ASTR tokens + gas fee in your developer's wallet.
 > - Create/import your developer's wallet in the Polkadot JS extension.
 
@@ -14,11 +13,8 @@ How to register your dApp in our dApp staking mechanism. First, you have to make
 
 Deploy a smart contract in our ecosystem and verify the contract in our explorer. Deploy on Shiden if you want to join Shiden dApp staking, deploy on Astar for joining Astar dApp staking. You have two options for a smart contract:
 
-Use one of your own smart contracts and verify that in our explorer.
-
-The second option is only for those who don't deal with smart contracts. Deploy our `helloworld.sol` contract and provide all the information in the header of the contract.
-
-Template contract: <https://github.com/AstarNetwork/builders-program/blob/main/hellowold.sol>
+> - The first option is to use one of your own smart contracts and verify that in our explorer.
+> - The second option is only for those who don't deal with smart contracts. Deploy our `helloworld.sol` contract and provide all the information in the header of the contract. [Template contract](https://github.com/AstarNetwork/builders-program/blob/main/hellowold.sol)
 
 ## Step 2
 
