@@ -13,7 +13,7 @@ You can get the binary in one of the following ways:
 - Download the latest binary from Github
 - Build from source
 
-If you want to download the binary, go to the [Release page of Astar Github repository](https://github.com/PlasmNetwork/Astar/releases). You can find the pre-built binaries for MacOS and Ubuntu as well as Docker images.  If you want to build from source, [this readme](https://github.com/PlasmNetwork/Astar#building-from-source) helps you a lot!
+If you want to download the binary, go to the [Release page of Astar Github repository](https://github.com/AstarNetwork/Astar/releases). You can find the pre-built binaries for MacOS and Ubuntu as well as Docker images.  If you want to build from source, [this readme](https://github.com/AstarNetwork/Astar#building-from-source) helps you a lot!
 
 After you get the binary, you can rename the binary file to `shiden` and add execution permission to the binary by running the following command:
 

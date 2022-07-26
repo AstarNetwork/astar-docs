@@ -6,9 +6,9 @@ sidebar_position: 1
 
 [Astar Network]: https://astar.network/
 
-Astar Network is a scalable smart contract platform on Polkadot supporting cutting-edge layer 2 solutions. It is built on Substrate and designed to be a Polkadot Parachain. Plasm Network aims to make Ethereum 2.0 on Polkadot.
+Astar Network is a scalable smart contract platform on Polkadot supporting cutting-edge layer 2 solutions. It is built on Substrate and designed to be a Polkadot Parachain. Astar Network aims to make Ethereum 2.0 on Polkadot.
 
-Astar Network focuses on making the best smart contract platform so that dApps developers on Polkadot do not need to pay much attention to infrastructure and can focus more on their dApp. Ideally, the developers can build whatever applications on Plasm Network without having to consider its scalability. [Astar Network](https://astar.network/) solves prominent issues: scalability and interoperability.
+Astar Network focuses on making the best smart contract platform so that dApps developers on Polkadot do not need to pay much attention to infrastructure and can focus more on their dApp. Ideally, the developers can build whatever applications on Astar Network without having to consider its scalability. [Astar Network](https://astar.network/) solves prominent issues: scalability and interoperability.
 
 ## Scalability
 
