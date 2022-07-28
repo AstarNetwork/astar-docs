@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# `cargo-contract` CLI
+# Cargo-contract CLI
 
 `cargo-contract` is a CLI tool that helps you develop smart contracts in Parity's [ink!].
 
