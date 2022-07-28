@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Wasm Development Environment Setup
+# Environment Setup
 
 ## Install and Configure the Rust Toolchain
 
