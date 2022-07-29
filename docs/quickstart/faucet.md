@@ -8,7 +8,7 @@ sidebar_position: 3
 
 Faucets are available for all Shibuya accounts and empty accounts on Astar/Shiden.
 
-To access the faucet visit <https://portal.astar.network/#/assets>, and click on the 'Faucet button.
+To access the faucet visit <https://portal.astar.network/#/assets>, and click on the `Faucet` button.
 
 ![1](img/1.png)
 
