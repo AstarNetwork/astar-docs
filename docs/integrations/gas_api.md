@@ -14,9 +14,9 @@ Gas price api is a service that allows you to get the various gas prices of the 
 
 ## API
 
-- Shibuya: <https://astar-gas-station.herokuapp.com/api/shibuya/gasnow>
-- Shiden: <https://astar-gas-station.herokuapp.com/api/shiden/gasnow>
-- Astar: <https://astar-gas-station.herokuapp.com/api/astar/gasnow>
+- Shibuya: <https://gas.astar.network/api/gasnow?network=shibuya>
+- Shiden: <https://gas.astar.network/api/gasnow?network=shiden>
+- Astar: <https://gas.astar.network/api/gasnow?network=astar>
 
 ## Response
 
