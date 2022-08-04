@@ -50,4 +50,4 @@ Simply input your Astar native address and you will be able to see all the relat
 
 Please note that you can only make a XCM withdrawal when the receiver Relay chain has more than the Minimum Balance (1.1DOT for Polkadot and 0.01KSM for Kusama).
 
-<img src="https://user-images.githubusercontent.com/77480847/182851296-cb2b540c-a7ab-470d-9a73-be99f94cac53.png" width="400">
+<img src="https://user-images.githubusercontent.com/77480847/182851296-cb2b540c-a7ab-470d-9a73-be99f94cac53.png" width="400" />
