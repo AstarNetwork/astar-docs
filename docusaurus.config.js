@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Astar Docs',
   tagline: 'Your one-stop shop for everything Astar',
-  url: 'https://staging.docs.astar.network',
+  url: 'https://docs.astar.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
