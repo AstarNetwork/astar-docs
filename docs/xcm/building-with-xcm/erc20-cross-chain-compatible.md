@@ -6,6 +6,29 @@ sidebar_position: 4
 
 If you want to make an existing ERC20 asset cross-chain compatible, in an simple & easy way, please read on!
 
+## XC20+ Extension
+
+In short, **XC20** allows smart contracts to interact with cross-chain compatible assets same as if they were any other ERC20 asset.
+Unlike for standard ERC20 assets deployed in EVM, where balances, issuance, etc. is stored directly in EVM, **XC20** assets are backed
+by a Substrate pallet. This means that developer will not have access to all the internal logic of ERC20, like `_mint` or `_burn`.
+
+In general, this is fine for existing **XC20** assets since we shouldn't be minting or burning them in smart contracts (e.g. there is no valid reason to mint cross-chain DOT on Astar). However, there are use cases where having an extended set of functionalities is useful and required, like wrapped tokens.
+
+For this reason, we provide an extended **XC20** interface called **XC20+**. It provides the following methods:
+```Solidity
+// Used to check what is the existential deposit of XC20 asset
+function minimumBalance() external view returns (uint256);
+
+// Used to mint new funds
+function mint(address beneficiary, uint256 amount) external returns (bool);
+
+// Used to burn funds
+function burn(address who, uint256 amount) external returns (bool);
+```
+The aforementioned list could be extended in the future.
+
+Please note that minting and burning requires certain priviliges - read about **XC20** assets to learn more.
+
 ## Wrapped token in General
 A wrapped token is a token whose value is tied to an underlying cryptocurrency. An amount of the original token is locked in a digital vault, and in return this allows an equivalent amount of wrapped tokens to be minted.
 
