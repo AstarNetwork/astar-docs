@@ -90,12 +90,12 @@ To deploy XcBurrito contract you need 2 input parameters
 
 ### 3. Transfer xc asset ownership to the XcBurrito smart contract
 To enable **xcBurrito** contract to be able to mint/burn you need to call `setTeam()` extrinsic on pallet-assets. Configure the `issuer` and `admin` to be **xcBurrito**. This will enable the contract to issue wrapped **XC20** assets. Since the EVM contract has 24 bytes (H160), we need to transform EVM address into SS58 format to be able to call this extrinsic.
-![polkadot-js-ss-1](https://user-images.githubusercontent.com/34627453/182795050-f10dad6e-dbd9-4ac9-b526-d51a66503cb9.png)
+![Set the team of XC20 asset by calling setTeam()](img/convert-erc20-into-xc20_1.png)
 
 You can renounce ownership of the **XC20** by calling `transferOwnership()` extrinsic on pallet-assets. Note that after this, you won't be able to
 change `issuer` or `admin` anymore so make sure those are set correctly.
 
-![polkadot-js-ss-2](https://user-images.githubusercontent.com/34627453/182795097-d145073b-cdf0-4c28-916f-66abb5c68abc.png)
+![Renounce the ownership of XC20 asset by calling transferOwnership()](img/convert-erc20-into-xc20_2.png)
 
 Now XcBurrito contract can start minting **XC20** tokens for the callers who own Burrito ERC20 token.
 
