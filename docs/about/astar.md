@@ -25,7 +25,7 @@ Scalability on the Astar Network is addressing the followings topics:
 
 Many different blockchains exist but few have interoperability as a feature. To move "value" from Bitcoin to Ethereum, we need a centralized exchange. Polkadot is a sharded protocol that enables blockchain networks to operate together seamlessly.
 
-[Astar Network] is compatible with Polkadot. By connecting Astar Network to Polkadot, we will have true interoperability.
+[Astar Network] is compatible with Polkadot. By connecting Astar Network to Polkadot, we have true interoperability.
 
 ## Lack of Developer Incentive
  DApp developers are the most important human resource in the blockchain industry but they are paying a lot of costs to develop dApps or infrastructure projects. Astar has a #Build2Earn protocol that allows developers to earn basic income while making products.
