@@ -17,15 +17,15 @@ We will provide a basic configuration for reference, which guarantees that all b
 - System: Ubuntu 20.04
 - A dedicated server dedicated to the collator node
 - CPU: 8 cores
-- Memory: 32 GB
-- Hard Disk: 250 GB SSD (storage space will increase with time)
+- Memory: 16 GB
+- Hard Disk: 400 GB SSD (storage space will increase with time)
 
 **Basic minimum testnet configuration:**
 
 - System: Ubuntu 20.04
 - CPU: 4 cores
 - Memory: 8 GB
-- Hard disk: 80 GB (storage space will increase with time)
+- Hard Disk: 100 GB (storage space will increase with time)
 
 :::tip
 Shibuya is the perfect network to test out your knowledge about running nodes in the Astar ecosystem. To join the collator set on Shibuya you need to apply for a 32k SBY fund.

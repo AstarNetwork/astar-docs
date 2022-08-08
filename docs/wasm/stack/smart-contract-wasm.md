@@ -1,4 +1,8 @@
-# Astar Wasm Stack
+---
+sidebar_position: 1
+---
+
+# Smart-contract Stack
 
 ## Smart Contract Runtime Environment
 
