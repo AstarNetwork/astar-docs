@@ -9,3 +9,6 @@ The Astar SpaceLabs is a separate arm within the BizDev department. The Astar Sp
 
 [Astar Degens](https://astardegens.com/):
 ASTAR DEGENS DAO - Incubating promising projects and bringing new ideas to the Astar Ecosystem with the help of a community-governed DAO fund. Astar Degens is a community without hierarchy. Where impactful action is incentivized and rewarded. We welcome all ideas equally, and value productive effort. As a community, we help realize the value of supportive cooperation within the blockchain space, by encouraging fearless participation within the Astar Network.
+
+[Astar Troopers]:
+Astar Troopers aim to unite vastly different projects and groups and create activities that they can all participate in. The NFT that will be available is a way to identify oneself with our mission: to be innovative and collaborative with each other. Besides being a NFT project, it is also a place where you can learn about different nft projects and jump into them if you’re interested. 
