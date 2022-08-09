@@ -1,32 +1,43 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
-# Faucet
+# Faucets
 
-## Overview
+## Via Portal
 
-To help you start building in our ecosystem, you can get tokens from our faucet through the [portal](https://portal.astar.network). We provide a small amount of native tokens to help you with your smart contract deployment.
+Faucets are available for all Shibuya accounts and empty accounts on Astar/Shiden.
 
-## Instructions
+To access the faucet visit <https://portal.astar.network/#/assets>, and click on the `Faucet` button.
 
-1. Go to our [portal](https://portal.astar.network).
-2. Connect to your deployment network.
+![1](img/1.png)
 
-<center>
-<img src="https://i.imgur.com/rALI50E.png" alt="Network Selection" border="1"></img>
-</center>
+Then, click the `I'm not a robot` checkbox, and click 'Confirm'.
 
-3. Select your wallet. Use MetaMask if you need tokens for EVM deployment and any other wallet if you need tokens for Wasm deployment.
+![2](img/2.png)
 
-<center>
-<img src="https://i.imgur.com/Wj2vuwJ.png" alt="Wallet Selection" border="1"></img>
-</center>
+## Via [Astar Discord Server](https://discord.com/invite/kvRRnvBbQn)
 
-4. As soon wallet is loaded you can see your balance. The faucet button is now enabled to request the native token of your connected network. Click on the faucet button to open the request pop-up.
+Once you join the Discord server, you will be able to see the **#shibuya-faucet** channel.
 
-<center>
-<img src="https://i.imgur.com/Ffijw8J.png" alt="Grab your Tokens" border="1"></img>
-</center>
+![3](img/3.png)
 
-5. When you click on confirm our faucet server will send you the tokens for you to start with your deployment.
+In the **#shibuya-faucet** channel, please type `/drip`. Then, you can see the following options. Please click **network**
+
+![4](img/4.png)
+
+and select the network.
+
+![5](img/5.png)
+
+Lastly, please click **address** and paste your address.
+
+![6](img/6.png)
+![7](img/7.png)
+![8](img/8.png)
+
+If your inputs are valid, you can receive tokens from the faucet.
+
+![9](img/9.png)
+
+Enjoy🚀
