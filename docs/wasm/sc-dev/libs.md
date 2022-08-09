@@ -51,7 +51,7 @@ Defining a Trait definition is sufficient (a contract that implements that Trait
 
 [`parity-common`](https://github.com/paritytech/parity-common) is a collection of crates that you can use in your ink! contracts.
 
-It offers all Ethereum types and is really useful if you want to port solidity code to ink!.
+It offers all Ethereum types and is really useful if you want to port solidity code to Solidity.
 
 [OpenBrush]: https://github.com/Supercolony-net/openbrush-contracts
 [PSPs]: https://github.com/w3f/PSPs
