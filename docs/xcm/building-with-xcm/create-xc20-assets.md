@@ -82,4 +82,11 @@ For this example, the full address is `0xFFFFFFFF00000000000000000000000001310dD
 
 Now that you've generated the XC20 precompile address, you can use the address to interact with the XC20 as you would with any other ERC20 in Remix.
 
+## Accessing XC20 From Smart Contract
+
+In order to access XC20 via smart contract, _EVM revert code_ first needs to be registered on the XC20 address.
+This currently isn't automated and requires small intervention from the Astar team.
+
+Please contact us if you cannot access XC20 from your smart contract
+
 [polkadotjs-apps]: https://polkadot.js.org/apps/
