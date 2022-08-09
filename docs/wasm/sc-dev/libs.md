@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## OpenBrush
 
-[OpenBrush] is a library for smart contract development on ink!. It intends to be like OpenZeppellin for ink!.
+[OpenBrush] is a library for smart contract development on ink!. It intends to be like OpenZeppellin for Solidity.
 
 It provides standard contracts based on [PSPs], as well as useful contracts and Rust macros to help you build ink! smart contracts.
 
