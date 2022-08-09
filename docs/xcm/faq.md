@@ -12,7 +12,7 @@ Yes. Go to Polkadot.js, connect with your wallet and go to Network > Balances an
 
 ## Q: I used XCM to transfer 5 DOTs from Polkadot to Astar, but only received 4.999
 
-Please note that the gas amount will be deducted from the amount entered. The transferred amount should be adjusted with the gas fee estimate. For more info, please look [here](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/~/changes/aJQFFWQNMjlao1SSjj4a/xcm/using-xcm/xcm-transactions#xcm-transfer-from-polkadot-to-astar).
+Please note that the gas amount will be deducted from the amount entered. The transferred amount should be adjusted with the gas fee estimate. For more info, please look [here](https://docs.astar.network/docs/xcm/using-xcm/xcm-transactions).
 
 ## Q: My balance should be 1.00012 DOTs but the Portal is displaying 1 DOT, where are they?
 
@@ -28,7 +28,7 @@ You can send back DOT/KSM to relay chain using both EVM and native wallets. Just
 
 ## Q: Why is XCM button for DOT/KSM disabled when I connect my wallet on the Astar Portal?
 
-Please make sure you have non-zero balance of your native token as described in [this documentation section](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/~/changes/aJQFFWQNMjlao1SSjj4a/xcm/using-xcm/xcm-transactions#xcm-transfer-from-polkadot-to-astar).
+Please make sure you have non-zero balance of your native token as described in [this documentation section](https://docs.astar.network/docs/xcm/using-xcm/xcm-transactions).
 
 ## Q: I transferred X tokens to another account, but the amount transferred and received by the target account is greater than X. What is going on?
 
@@ -37,3 +37,17 @@ XC20 asset's have a defined minimum-balance. The minimum-balance is the minimum 
 Take a look at an example of a transaction in case of an asset whose minimum-balance is 10: Alice has 10.9 tokens and tries to send to Bob 10 tokens. Remaining balance of Alice would become 0.9 which is less than minimum amount. In this case, transaction amount would automatically equal 10.9 tokens, and Alice's account end balance would be 0.
 
 For more details take a look in the [documentation pages](building-with-xcm/send-xc20-evm.md).
+
+## Q: Where can I find other chains' addresses?
+
+You can check all different chains' addresses in Polkadot/Kusama :
+
+1. Using [Sub ID](https://sub.id/)
+
+Simply input your Astar native address and you will be able to see all the related addresses with the account.
+
+2. Showing it on Polkadot.js extension by selecting the chain you would like to know the address of.
+
+Please note that you can only make a XCM withdrawal when the receiver Relay chain has more than the Minimum Balance (1.1DOT for Polkadot and 0.01KSM for Kusama).
+
+<img src="https://user-images.githubusercontent.com/77480847/182851296-cb2b540c-a7ab-470d-9a73-be99f94cac53.png" width="400" />
