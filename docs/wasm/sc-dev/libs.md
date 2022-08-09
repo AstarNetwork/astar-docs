@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## OpenBrush
 
-[OpenBrush] is a library for smart contract development on ink!. It intends to be like OpenZeppellin for ink!.
+[OpenBrush] is a library for smart contract development on ink!. It intends to be like OpenZeppellin for Solidity.
 
 It provides standard contracts based on [PSPs], as well as useful contracts and Rust macros to help you build ink! smart contracts.
 
@@ -51,7 +51,7 @@ Defining a Trait definition is sufficient (a contract that implements that Trait
 
 [`parity-common`](https://github.com/paritytech/parity-common) is a collection of crates that you can use in your ink! contracts.
 
-It offers all Ethereum types and is really useful if you want to port solidity code to Solidity.
+It offers all Ethereum types and is really useful if you want to port solidity code to ink!.
 
 [OpenBrush]: https://github.com/Supercolony-net/openbrush-contracts
 [PSPs]: https://github.com/w3f/PSPs
