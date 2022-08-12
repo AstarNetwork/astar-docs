@@ -11,6 +11,16 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: 'About Astar',
+    link: '/docs/about/astar',
+    iconClass: 'wrench',
+    description: (
+      <>
+        This section gives you a brief idea of the problems Astar solves and our token economics including token allocation.
+      </>
+    ),
+  },
+  {
     title: 'Start Building',
     link: '/docs/quickstart/',
     iconClass: 'wrench',
@@ -18,6 +28,27 @@ const FeatureList: FeatureItem[] = [
       <>
         This section gives you the resources you need to get started testing,
         deploying, and interacting with smart contracts on the network.
+      </>
+    ),
+  },
+  {
+    title: 'Ecosystem',
+    link: '/docs/ecosystem/',
+    iconClass: 'evm',
+    description: (
+      <>
+        This section gives you an overview of our ecosystem, such as Polkadot, Substrate, and Initiatives.
+      </>
+    ),
+  },
+  {
+    title: 'dApp Staking',
+    link: '/docs/dapp-staking/',
+    iconClass: 'staking',
+    description: (
+      <>
+        Earn tokens for yourself and your dApp by staking tokens and registering
+        your dApp with Astar’s dApp Staking.
       </>
     ),
   },
@@ -33,7 +64,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Use WebAssembly',
+    title: 'Use WebAssembly(WASM)',
     link: '/docs/wasm/',
     iconClass: 'wasm',
     description: (
@@ -55,7 +86,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Learn Cross Chain Message (XCM)',
+    title: 'Learn Cross-Chain Message(XCM)',
     link: '/docs/xcm/',
     iconClass: 'broadcast',
     description: (
@@ -73,17 +104,6 @@ const FeatureList: FeatureItem[] = [
       <>
         Provide relevant information about the wallets, bridges, indexers, and
         oracles that are integrated with the network.
-      </>
-    ),
-  },
-  {
-    title: 'dApp Staking',
-    link: '/docs/dapp-staking/',
-    iconClass: 'staking',
-    description: (
-      <>
-        Earn tokens for yourself and your dApp by staking tokens and registering
-        your dApp with Astar’s dApp Staking.
       </>
     ),
   },

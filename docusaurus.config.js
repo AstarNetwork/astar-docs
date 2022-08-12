@@ -62,6 +62,11 @@ const config = {
             position: 'left',
           },
           {
+            to: 'https://www.youtube.com/channel/UC36JgEF6gqatVSK9xlzzrvQ',
+            label: 'Youtube',
+            position: 'left',
+          },
+          {
             href: 'https://github.com/AstarNetwork/astar-docs',
             label: 'GitHub',
             position: 'right',
