@@ -13,7 +13,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'About Astar',
     link: '/docs/about/astar',
-    iconClass: 'wrench',
+    iconClass: 'aboutastar',
     description: (
       <>
         This section gives you a brief idea of the problems Astar solves and our token economics including token allocation.
@@ -34,7 +34,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Ecosystem',
     link: '/docs/ecosystem/',
-    iconClass: 'evm',
+    iconClass: 'ecosystem',
     description: (
       <>
         This section gives you an overview of our ecosystem, such as Polkadot, Substrate, and Initiatives.

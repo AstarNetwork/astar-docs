@@ -58,6 +58,14 @@
   content: url('../../static/img/node.svg');
 }
 
+.ecosystem::before {
+  content: url('../../static/img/ecosystem.svg');
+}
+
+.aboutastar::before {
+  content: url('../../static/img/aboutastar.svg');
+}
+
 .tool::before {
   content: url('../../static/img/tool.svg');
 }
