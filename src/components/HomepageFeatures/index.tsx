@@ -26,7 +26,7 @@ const FeatureList: FeatureItem[] = [
     iconClass: 'ecosystem',
     description: (
       <>
-        Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.
+        Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives.
       </>
     ),
   },
@@ -36,8 +36,7 @@ const FeatureList: FeatureItem[] = [
     iconClass: 'wrench',
     description: (
       <>
-        This section gives you the resources you need to get started testing,
-        deploying, and interacting with smart contracts on the network.
+        Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.
       </>
     ),
   },
