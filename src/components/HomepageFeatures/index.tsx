@@ -16,7 +16,7 @@ const FeatureList: FeatureItem[] = [
     iconClass: 'aboutastar',
     description: (
       <>
-        Here you can find a brief idea of the problems Astar solves and our token economics including token allocation.
+        Get to know what Astar Network is solving and all the information related to our native token.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList: FeatureItem[] = [
     iconClass: 'ecosystem',
     description: (
       <>
-        Everything you need to know about our ecosystem, such as Polkadot, Substrate, and Initiatives.
+        Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.
       </>
     ),
   },
