@@ -8,6 +8,14 @@ sidebar_position: 3
 
 It's easy to configure your Metamask to interact with Astar/Shiden network family. Open Metamask, click network tab, and click the Custom RPC. In the screen shown, please enter the necessary information as follows:
 
+| Properties                    | Network Details                |
+| ----------------------------- | ------------------------------ |
+| Network Name                  | My Network (anything you want) |
+| New RPC URL                   | http://127.0.0.1:9933          |
+| Chain ID                      | 4369                           |
+| Currency Symbol               | ASTL                           |
+| Block Explorer URL (Optional) |                                |
+
 ## Get your local token on Metamask
 
 Need updating...
