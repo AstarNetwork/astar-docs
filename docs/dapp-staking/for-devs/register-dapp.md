@@ -22,4 +22,4 @@ Go to our [portal](https://portal.astar.network/#/store/discover-dapps) and clic
 
 Provide all the information in the pop-up window and press register. Keep in mind that your account needs to be **whitelisted**, and you have the needed tokens in the wallet that is registering the dApp.
 
-When your dApp is deployed, we would appreciate it if you shared this with your community. We have created a template that you can use to write the article. You can find it [here](https://docs.google.com/document/d/1xa1g3q1MYC8NkdrtEhr3KRgTMWVXd8rLKa5YLpkdVuw/edit?usp=sharing).
+When your dApp is deployed, we would appreciate it if you shared this with your community. We have created a template that you can use to write the article. You can find it [here](https://astarnetwork.notion.site/dApp-staking-template-Astar-Network-07d029f2d89644f48a17650522968682).
