@@ -32,7 +32,7 @@ The Swanky Node will be a local developer node with an instant seal and instant 
 
 The envisioned architecture of Swanky CLI and Swanky Node (Local developer node)
 
-![Project Diagram Canvas](https://user-images.githubusercontent.com/40356749/178747897-1097c160-195e-4901-8053-ac3fa9a5791f.jpg)
+![Project Diagram Canvas](IMG/SwankySuiteAstar.png)
 
 
 
