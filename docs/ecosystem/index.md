@@ -5,7 +5,9 @@ import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 ![ecosystem map](./img/2.jpeg)
-Note the ecosystem map above is as of July 26 2022.
+Astar Network is a permissionless blockchain, only the most used dApps are listed in the overview. 
+
+(source: DappRadar July 26, 2022)
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
 ```
