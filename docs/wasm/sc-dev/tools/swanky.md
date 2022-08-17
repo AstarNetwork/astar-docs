@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Swanky Suite aims to be a "all-in-one" tool for Wasm smart contract developers within Polkadot / Kusama ecosystem. It is based on existing tools like Cargo Contract CLI and Polkadot.js but extending with many additional features such as generating a new smart contract environment based on example projects and packaging an instant finality node (Swanky node) which can be used for shortening the contract development lifecycle loop. Swanky Suite is the tool that enables all existing (and future) Web3 developers to have an equal experience compared to EVM dev tooling.
 
-Features of Swanky:
+Features of Swanky Suite:
 
 - Quick start a local contract development node with instant finality (Swanky Node)
 - Scaffolding a new project with various templates for both smart contracts and front-end dApp. ie. Truffle for ink!
@@ -19,7 +19,7 @@ Below is the user documentation for Swanky CLI which is meant to be used hand-in
 
 For the latest version of Swanky CLI docs please checkout [Swanky CLI download page](https://www.npmjs.com/package/@astar-network/swanky-cli) (soon to be available on GitHub) and [Swanky Node Repo GitHub](https://github.com/AstarNetwork/swanky-node).
 
-> Swanky SLI is currently in Beta 1 phase allowing interaction with Swanky Node.
+> Swanky CLI is currently in Beta 1 phase allowing interaction with Swanky Node.
 
 
 ## Architecture overview
