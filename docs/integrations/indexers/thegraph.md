@@ -20,40 +20,9 @@ Before you run The Graph node in a server, you must install:
 
 In this guide, you will learn how to run an Astar node for getting more insight into the transactions of blockchain, providing indexing data to The Graph node.
 
-## One-line startup script
-
-If one wants to finish the process without explanation, here is the one-line script for you. if you face an error upon execution, the descriptions below will help you to find where it needs to be adjusted. This script supposes that the running computer has installed all prerequisites.
-
-### Astar
-
-```sh
-sudo curl -s <https://raw.githubusercontent.com/AstarNetwork/Astar/rpc-script/scripts/graph.sh> > graph.sh \
-&& sudo bash ./graph.sh \
--chain astar \
--rpc-url <RPC URL>
-```
-
-### Shiden
-
-```sh
-sudo curl -s <https://raw.githubusercontent.com/AstarNetwork/Astar/rpc-script/scripts/graph.sh> > graph.sh \
-&& sudo bash ./graph.sh \
--chain shiden \
--rpc-url <RPC URL>
-```
-
-### Shibuya
-
-```sh
-sudo curl -s <https://raw.githubusercontent.com/AstarNetwork/Astar/rpc-script/scripts/graph.sh> > graph.sh \
-&& sudo bash ./graph.sh \
--chain shibuya \
--rpc-url <RPC URL>
-```
-
 ## Running Graph node
 
-After successfully running an[RPC node](https://docs.astar.network/maintain/archive-node/docker), The Graph node needs to be installed and configured for Shiden to connect to a separate computer. If you are running a self-signed RPC node, you need to set up an extra environment variable for allowance.
+After successfully running an [RPC node](https://docs.astar.network/docs/nodes/archive-node/), The Graph node needs to be installed and configured to connect to a separate computer. If you are running a self-signed RPC node, you need to set up an extra environment variable for allowance.
 
 The first step is to clone the [Graph Node repository](https://github.com/graphprotocol/graph-node/):
 
@@ -128,7 +97,7 @@ services:
       postgres_pass: let-me-in
       postgres_db: graph-node
       ipfs: 'ipfs:5001'
-      ethereum: 'shiden:http://<IP address or DOMAIN>:<PORT>'
+      ethereum: 'shiden:https://<IP address or DOMAIN>:<PORT>'
       RUST_LOG: info
   ipfs:
     image: ipfs/go-ipfs:v0.4.23
