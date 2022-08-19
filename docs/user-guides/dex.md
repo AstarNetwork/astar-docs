@@ -10,11 +10,12 @@ There are a few DEXs that are built on Astar Network. Arthswap is one of them. A
 
 Go Metamask extension -> Settings -> Network -> Add Network
 
-Use this Custom RPC
-**Network**: Astar
-**RPC**: <https://rpc.astar.network:8545>
-**Chain ID**: 592
-**Symbol**: ASTR
+Use this Custom RPC below:
+
+**Network**: Astar <br />
+**RPC**: <https://evm.astar.network> <br />
+**Chain ID**: 592 <br />
+**Symbol**: ASTR <br />
 **Explorer**: <https://blockscout.com/astar>
 
 ## Bridge Ethereum Assets To Astar Network
