@@ -14,6 +14,12 @@ When you go to the [Assets](https://portal.astar.network/#/assets) page, you can
 
 > It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)!
 
+:::caution
+
+It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)! This applies to all assets except for DOT which is marked as sufficient asset on Astar Network. See User Guide for more details on existential deposist.
+
+:::
+
 When you press the XCM button, the XCM popup appears as follows.
 
 ![2](img/2.png)
