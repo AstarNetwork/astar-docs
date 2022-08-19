@@ -11,9 +11,9 @@ Astar “ultralight” app is now available on Ledger hardware wallet devices. T
 Please keep in mind ultralight app can only sign transfers, and nothing else. (don’t send EVM assets to that account because you won’t be able to transfer them to native balance for example)
 This guide will show you how to set up Astar app on your Ledger hardware wallet and how to use it in combination with polkadot.js browser extension.
 
-> **Note**
->
-> Photos are taken using the Nano S Plus device, but the process is the same with Nano S and Nano X devices.
+:::info
+Photos are taken using the Nano S Plus device, but the process is the same with Nano S and Nano X devices.
+:::
 
 ## Requirements
 

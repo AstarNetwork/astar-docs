@@ -8,13 +8,17 @@ sidebar_position: 3
 
 Using XCM within the EVM environment is also simple as our network uses the XC20 interface, which maps the Assets pallet to an ERC20-compatible interface that EVM dApps can use.
 
-> XC20s and ERC20s are very similar, some distinct differences are to be aware of since XC20s are Substrate-based assets.
->
-> One of the XC20 specific features is the existence of asset's minimum-balance specific for each asset. Minimum-balance of an asset resembles an amount which is sufficient to allow the account's existence on the system without requiring any other existential-deposit. This feature's implication is that when transferring a certain amount of XC20 tokens, the amount actually transferred may be slightly greater in the case that the transfer would otherwise take the sender balance above zero but below the minimum balance. Must be greater than zero.
->
-> In addition, XC20s transactions done via the Substrate API won’t be visible from EVM-based block explorers such as Blocksout. Only transactions done via the Ethereum API are visible through those explorers.
->
-> XC20s can interact through an ERC20 interface, so they have the additional benefit of being accessible from both the Substrate and Ethereum APIs. This ultimately provides greater flexibility for developers when working with these types of assets and allows seamless integrations with EVM-based smart contracts such as DEXs, and lending platforms, among others.
+:::info
+
+XC20s and ERC20s are very similar, some distinct differences are to be aware of since XC20s are Substrate-based assets.
+
+One of the XC20 specific features is the existence of asset's minimum-balance specific for each asset. Minimum-balance of an asset resembles an amount which is sufficient to allow the account's existence on the system without requiring any other existential-deposit. This feature's implication is that when transferring a certain amount of XC20 tokens, the amount actually transferred may be slightly greater in the case that the transfer would otherwise take the sender balance above zero but below the minimum balance. Must be greater than zero.
+
+In addition, XC20s transactions done via the Substrate API won’t be visible from EVM-based block explorers such as Blocksout. Only transactions done via the Ethereum API are visible through those explorers.
+
+XC20s can interact through an ERC20 interface, so they have the additional benefit of being accessible from both the Substrate and Ethereum APIs. This ultimately provides greater flexibility for developers when working with these types of assets and allows seamless integrations with EVM-based smart contracts such as DEXs, and lending platforms, among others.
+
+:::
 
 First, let’s approach this at a high level, and then move on to a more technical example for dApps. Let’s say I want to move the KSM token from Kusama to `0xd2C6929A72e466213D1c2Df8359194784650A50e`. From the Kusama side of things, the payload for sending the KSM tokens will be similar to the ones we used in the previous section. However, the `Beneficiary` address (account ID) will be a mapped SS58 address of the recipient’s EVM address as that is the only address format that XCM can accept. You can read [this article](https://medium.com/astar-network/using-astar-network-account-between-substrate-and-evm-656643df22a0) on how to create the mapped address. To keep things short, address mappings are:
 
@@ -28,7 +32,11 @@ To obtain the asset address for EVM, we need to get the token asset ID that we w
 
 On the previous page, we create a new asset and generated our asset contract address. Now let's add that contract address to MetaMask:
 
-> If you can't enter the decimals you haven't minted any assets. Make sure you minted your asset before going to this step.
+:::caution
+
+If you can't enter the decimals you haven't minted any assets. Make sure you minted your asset before going to this step.
+
+:::
 
 1. Make sure you are connected to [the network](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/~/changes/aJQFFWQNMjlao1SSjj4a/integration/network-details) you created your token.
 2. Click in your asset overview below on Import Tokens.
@@ -74,5 +82,9 @@ In this guide, I want to send an amount of 1000 minted assets to my EVM account.
 
 ![XC20 on MetaMask](img/13.png)
 
-> - We are still working closely with our block explorers to map the new assets and be visible in our explorers.
-> - If you get an error with sending your tokens to another EVM account, please increase the gas fee.
+:::info
+
+- We are still working closely with our block explorers to map the new assets and be visible in our explorers.
+- If you get an error with sending your tokens to another EVM account, please increase the gas fee.
+
+:::

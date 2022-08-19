@@ -9,7 +9,9 @@ Deploying and interacting with EVM-based smart contracts on Astar is as easy as 
 1. Configuring (and funding) your Ethereum account on the respective network
 2. Adding Astar's networks to your Ethereum client
 
-> For Astar and Shiden applications, we *highly* recommend [running your own network node](../nodes/index.md) and not relying on our RPC endpoints. This further decentralizes the network, and puts you in control of your uptime requirements.
+:::caution
+For Astar and Shiden applications, we *highly* recommend [running your own network node](../nodes/index.md) and not relying on our RPC endpoints. This further decentralizes the network, and puts you in control of your uptime requirements.
+:::
 
 ## Hardhat
 

@@ -19,4 +19,6 @@ Shibuya is the test network of Shiden and is connected to our own Relaychain. So
 
 We, of course, offer a local network to allow you to check your smart contract repeatedly in the local environment. We will let you know how to run the local standalone development network in the following section.
 
-> If you want to know the network details, please check out [this page](../../quickstart/endpoints.md).
+:::info
+If you want to know the network details, please check out [this page](../../quickstart/endpoints.md).
+:::

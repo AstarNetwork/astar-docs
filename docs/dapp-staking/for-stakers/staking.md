@@ -10,10 +10,12 @@ sidebar_position: 1
 
 Go to our portal:  and click on 'Staking'.
 
-> Make sure you are connected to the correct network.
-> **Shibuya Network**: testnet
-> **Shiden Network**: mainnet on Kusama
-> **Astar Network**: mainnet for Polkadot
+:::tip
+Make sure you are connected to the correct network.
+- **Shibuya Network**: testnet
+- **Shiden Network**: mainnet on Kusama
+- **Astar Network**: mainnet for Polkadot
+:::
 
 ![1](img/1.png)
 

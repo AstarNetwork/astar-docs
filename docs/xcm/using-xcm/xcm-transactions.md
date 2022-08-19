@@ -12,12 +12,9 @@ When you go to the [Assets](https://portal.astar.network/#/assets) page, you can
 
 ![Astar Asset Portal](img/1.png)
 
-> It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)!
 
 :::caution
-
 It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)! This applies to all assets except for DOT/KSM assets which on respective networks (Astar for DOT, Shiden for KSM) - Technical term is that DOT/KSM are _sufficient assets_, see User Guide for more details.
-
 :::
 
 When you press the XCM button, the XCM popup appears as follows.
@@ -28,7 +25,9 @@ Here we would like to send DOT from Polkadot to Astar Network. There are two tab
 
 Enter the amount to send and press the confirm button. A popup will appear to sign the transaction.
 
-> Please note that the gas amount will be deducted from the amount entered. The transferred amount should be adjusted with the gas fee estimate.
+:::caution
+Please note that the gas amount will be deducted from the amount entered. The transferred amount should be adjusted with the gas fee estimate.
+:::
 
 ![3](img/3.png)
 
@@ -44,7 +43,9 @@ When you go to the [Assets](https://portal.astar.network/#/assets) page, you can
 
 ![1](img/1.png)
 
-> It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)!
+:::caution
+It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)! This applies to all assets except for DOT/KSM assets which on respective networks (Astar for DOT, Shiden for KSM) - Technical term is that DOT/KSM are _sufficient assets_, see User Guide for more details.
+:::
 
 When you press the XCM button, the XCM popup appears as follows. For this tutorial, we will use Deposit to EVM.
 

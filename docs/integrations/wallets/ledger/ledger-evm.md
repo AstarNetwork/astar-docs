@@ -11,9 +11,9 @@ title: Ledger Astar/Shiden EVM on MetaMask
 
 This guide will show you how to set up Astar EVM and Shiden EVM on your Ledger hardware wallet and how to use it in combination with MetaMask.
 
-> **Note:**
->
-> Photos are taken using Nano S Plus device, and the example shows interaction with Astar EVM app, but the process is the same with Nano S and Nano X devices, as well as Shiden EVM app.
+:::info
+Photos are taken using Nano S Plus device, and the example shows interaction with Astar EVM app, but the process is the same with Nano S and Nano X devices, as well as Shiden EVM app.
+:::
 
 ## Requirements
 

@@ -88,7 +88,9 @@ SDK adapters always export balance objects, which is a dictionary where all the 
 
 If a token balance has an address key, the Defi Llama SDK will manage any raw to real amount conversion for you (so you don't need to worry about ERC20 decimals). If a token balance has a Coingecko ID key, you will need to process the decimals and use a real token amount in the balances object.
 
-> If you export token addresses in your balances object that isn't on CoinGecko, Defi Llama won't be able to fetch prices for the tokens. You can check which addresses are supported by going to the token on CoinGecko and checking the  'Contract' field on the right (pictured above).
+:::caution
+If you export token addresses in your balances object that isn't on CoinGecko, Defi Llama won't be able to fetch prices for the tokens. You can check which addresses are supported by going to the token on CoinGecko and checking the  'Contract' field on the right (pictured above).
+:::
 
 **Line 17 - Adding Data To The Balances Object**
 
@@ -143,7 +145,9 @@ module.exports = {
 
 Fetch adapters only allow us to get the TVL at the current time, so it's impossible to fill old values on a protocol's TVL chart or recompute them, thus leading to charts that look jumpy. To solve this we introduced SDK adapters, which allow us to retrieve a protocol's TVL at any point in time.
 
-> Fetch adapters can only be used for projects on non-EVM chains. Where possible, [SDK adapters](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/dapp-listing/defillama) are preferred to fetch adapters because on-chain calls are more transparent.
+:::caution
+Fetch adapters can only be used for projects on non-EVM chains. Where possible, [SDK adapters](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/dapp-listing/defillama) are preferred to fetch adapters because on-chain calls are more transparent.
+:::
 
 Third-party APIs should be used where possible to reduce bias. If third-party APIs are not available for the data you need, proprietary APIs can be used if they're open source.
 
