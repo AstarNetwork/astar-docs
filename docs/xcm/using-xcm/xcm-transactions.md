@@ -16,7 +16,7 @@ When you go to the [Assets](https://portal.astar.network/#/assets) page, you can
 
 :::caution
 
-It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)! This applies to all assets except for DOT which is marked as sufficient asset on Astar Network. See User Guide for more details on existential deposist.
+It is necessary to verify that the balance of the native asset (ASTR) is not zero for the beneficiary account. Because assets from the Assets pallet cannot be transferred to an account with 0 nonce (or 0 balance)! This applies to all assets except for DOT/KSM assets which on respective networks (Astar for DOT, Shiden for KSM) - Technical term is that DOT/KSM are _sufficient assets_, see User Guide for more details.
 
 :::
 
