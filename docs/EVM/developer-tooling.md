@@ -15,7 +15,7 @@ Deploying and interacting with EVM-based smart contracts on Astar is as easy as 
 
 ### Initialize your project
 
-If you're starting your Hardhat project from scratch, we recommend reading the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start) page.
+If you're starting your Hardhat project from scratch, we recommend reading the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start#overview) page.
 
 ### Setting up your account
 
