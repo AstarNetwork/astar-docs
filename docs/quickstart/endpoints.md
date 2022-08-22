@@ -91,7 +91,6 @@ Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There 
 Create your own endpoint for development or production. We recommend using any of the following API providers:
 
 - [Blast (Bware Labs)](./endpoints#bware-labs)
-- [Dwellir](./endpoints#dwellir)
 - [OnFinality](./endpoints#onfinality)
 
 ## Blast (Bware Labs)
