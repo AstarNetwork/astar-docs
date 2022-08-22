@@ -92,7 +92,7 @@ groups:
 
 The criteria for **triggering an alert** are set in the `expr:` part. To create your own alerts, you’re going to have to learn and test the different variables provided to Prometheus by the services we are setting up. There is (almost) an infinite number of possibilities to **personalize your alerts**.
 
-As this part can be time-consuming to learn and build, you can find a summary [list of alerts we like to use](https://pastebin.com/96wbiQN8).  Feel free to share your Alert file with the community. You should also have a look at [alerts provided by Parity](https://github.com/paritytech/substrate/tree/master/.maintain/monitoring/alerting-rules).
+As this part can be time-consuming to learn and build, you can find a summary [list of alerts we like to use](https://pastebin.com/96wbiQN8).  Feel free to share your Alert file with the community. You should also have a look at [alerts provided by Parity](https://github.com/paritytech/substrate/tree/master/scripts/ci/monitoring/alerting-rules).
 
 Then, check the **rules file**:
 

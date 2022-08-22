@@ -8,7 +8,7 @@ We've prepared an xcm-tools crate which provides an easy way for user to calcula
 
 ## Installation
 
-1. Make sure your machine is capable of compiling substrate code. For more info, check [here](https://docs.substrate.io/main-docs/install/rust-builds/).
+1. Make sure your machine is capable of compiling substrate code. For more info, check [here](https://docs.substrate.io/install/).
 2. Clone [Astar repo](https://github.com/AstarNetwork/Astar)
 3. Position yourself in repository root and run `cargo build --release -p xcm-tools`
 4. After compilation finishes, check the `./target/release` folder for the `xcm-tools` binary
