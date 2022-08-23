@@ -10,7 +10,7 @@ ink! is an eDSL written in Rust and developed by Parity. It targets specifically
 
 ink! offers Rust [procedural macros](https://doc.rust-lang.org/reference/procedural-macros.html#procedural-macro-hygiene) and a list of crates to facilitate development and avoid boilerplate code.
 
-Check the official documentation [[here](https://ink.substrate.io/why-rust-for-smart-contracts)] and the `Ink!` GitHub repo [here](https://github.com/paritytech/ink).
+Check the official documentation [here](https://ink.substrate.io/why-rust-for-smart-contracts) and `Ink!` GitHub repo [here](https://github.com/paritytech/ink).
 
 ## `Ask!`
 
