@@ -89,7 +89,7 @@ type Transfer @entity {
 }
 ```
 
-It's worth noting a couple of things in this [schema definition](https://docs.subsquid.io/reference/openreader-schema):
+It's worth noting a couple of things in this [schema definition](https://docs.subsquid.io/develop-a-squid/schema-file/):
 
 - **@entity** - signals that this type will be translated into an ORM model that is going to be persisted in the database
 - **@derivedFrom** - signals the field will not be persisted on the database, it will rather be derived
@@ -129,7 +129,7 @@ The ERC-721 ABI defines the signatures of all events in the contract. The `Trans
 
 ## Define and Bind Event Handler(s)
 
-The Subsquid SDK provides users with a [processor](https://docs.subsquid.io/key-concepts/processor) class, named `SubstrateProcessor` or, in this specific case [`SubstrateEvmProcessor`](https://docs.subsquid.io/reference/evm-processor). The processor connects to the [Subsquid archive](https://docs.subsquid.io/key-concepts/architecture#archive) to get chain data. It will index from the configured starting block, until the configured end block, or until new data is added to the chain.
+The Subsquid SDK provides users with a [processor](https://docs.subsquid.io/develop-a-squid/squid-processor/) class, named `SubstrateProcessor` or, in this specific case [`SubstrateEvmProcessor`](https://docs.subsquid.io/reference/evm-processor). The processor connects to the [Subsquid archive](https://docs.subsquid.io/key-concepts/architecture#archive) to get chain data. It will index from the configured starting block, until the configured end block, or until new data is added to the chain.
 
 The processor exposes methods to "attach" functions that will "handle" specific data such as Substrate events, extrinsics, storage items, or EVM logs. These methods can be configured by specifying the event or extrinsic name, or the EVM log contract address, for example. As the processor loops over the data, when it encounters one of the configured event names, it will execute the logic in the "handler" function.
 

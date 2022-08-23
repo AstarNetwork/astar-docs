@@ -17,7 +17,7 @@ For Astar and Shiden applications, we *highly* recommend [running your own netwo
 
 ### Initialize your project
 
-If you're starting your Hardhat project from scratch, we recommend reading the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start) page.
+If you're starting your Hardhat project from scratch, we recommend reading the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start#overview) page.
 
 ### Setting up your account
 
