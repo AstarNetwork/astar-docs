@@ -63,7 +63,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Use Swanky to develop WebAssembly smart contracts',
+    title: 'Use WASM with Swanky',
     link: '/docs/wasm/',
     iconClass: 'wasm',
     description: (
