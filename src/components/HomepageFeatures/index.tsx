@@ -63,13 +63,13 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Use WebAssembly(WASM)',
+    title: 'Use WASM with Swanky',
     link: '/docs/wasm/',
     iconClass: 'wasm',
     description: (
       <>
-        Provide an overview of ink! and ask! WASM contract frameworks, examples
-        for each framework,developer tooling and compiling Solidity to WASM.
+        Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples
+        for each framework.
       </>
     ),
   },
