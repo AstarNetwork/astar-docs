@@ -10,7 +10,9 @@ Below is the user documentation for Swanky CLI which is meant to be used hand-in
 
 For the latest version of Swanky CLI docs please checkout [Swanky CLI download page](https://www.npmjs.com/package/@astar-network/swanky-cli) (soon to be available on GitHub) and [Swanky Node Repo GitHub](https://github.com/AstarNetwork/swanky-node).
 
-> Swanky is currently in MVP phase, with soon to be announced and publicly available Beta 1 release.
+:::info
+Swanky is currently in MVP phase, with soon to be announced and publicly available Beta 1 release.
+:::
 
 ## Usage
 

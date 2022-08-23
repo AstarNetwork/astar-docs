@@ -16,7 +16,9 @@ The Wasm blob is then deployed and stored on-chain.
 
 Similar to Substrate, `pallet-contracts` uses [weight][weight] as a gas model.
 
-> One gas is equivalent to one weight, defined as one picosecond of execution time on the runtime's reference machine.
+:::info
+One gas is equivalent to one weight, defined as one picosecond of execution time on the runtime's reference machine.
+:::
 
 [Transaction Weight is Substrate documentation][weight]
 
@@ -24,7 +26,9 @@ Additionally to the weight, there is also a fee paid for on-chain storage called
 
 The *automatic deposit collection* can be simplified as follows:
 
-> A caller of a contract pays a deposit to each contract in which new storage was created as a result of the executed call. In a similar way, a caller gets a refund from all the contracts that the call removed storage from.
+:::info
+A caller of a contract pays a deposit to each contract in which new storage was created as a result of the executed call. In a similar way, a caller gets a refund from all the contracts that the call removed storage from.
+:::
 
 [ink! 3.0 Blog Post by Parity](https://www.parity.io/blog/ink-3-0-paritys-rust-based-language-gets-a-major-update)
 
@@ -65,7 +69,9 @@ There are two eDSLs currently available
 
 The only library available to communicate with smart contracts is [PolkadotJS API](https://github.com/polkadot-js/api).
 
-> This API provides application developers the ability to query a node and interact with the Polkadot or Substrate chains using Javascript.
+:::info
+This API provides application developers the ability to query a node and interact with the Polkadot or Substrate chains using Javascript.
+:::
 
 Parity also developed a web application to interact with contracts called [contracts-ui](https://github.com/paritytech/contracts-ui).
 
