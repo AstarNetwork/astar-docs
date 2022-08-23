@@ -89,7 +89,7 @@ SDK adapters always export balance objects, which is a dictionary where all the 
 If a token balance has an address key, the Defi Llama SDK will manage any raw to real amount conversion for you (so you don't need to worry about ERC20 decimals). If a token balance has a Coingecko ID key, you will need to process the decimals and use a real token amount in the balances object.
 
 :::caution
-If you export token addresses in your balances object that isn't on CoinGecko, DefiLlama won't be able to fetch prices for the tokens. You can check which addresses are supported by going to the token on CoinGecko and checking the 'Contract' field on the right (pictured above).
+If you export token addresses in your balances object that isn't on CoinGecko, Defi Llama won't be able to fetch prices for the tokens. You can check which addresses are supported by going to the token on CoinGecko and checking the 'Contract' field on the right (pictured above).
 :::
 
 **Line 17 - Adding Data To The Balances Object**
