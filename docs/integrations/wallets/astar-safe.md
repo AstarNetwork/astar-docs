@@ -10,7 +10,9 @@ Build on the Gnosis Safe infrastructure: take advantage of the most modular, fle
 
 To get started, navigate to [Astar Safe].
 
-> The current guide will focus on creating a MultiSig on Astar. Soon, we will add more networks to the list.
+:::info
+The current guide will focus on creating a MultiSig on Astar. Soon, we will add more networks to the list.
+:::
 
 ### Connect Metamask
 
@@ -101,7 +103,9 @@ Next, open up your MetaMask to initiate a transaction. Send your ASTR tokens to 
 
 Now that you have funds in the Safe, you can send funds from the Safe to another account. For this example, you can send **1 ASTR** token to the `Owner 2` address. Hover over **ASTR** in the list of assets, and this time click on **Send**. Fill in all the information and click **Review**. Double check all the information and click on **Submit**.
 
-> MetaMask will pop-up and you'll notice that instead of sending a transaction, you're sending a message. Click **Sign** to sign the message.
+:::caution
+MetaMask will pop-up and you'll notice that instead of sending a transaction, you're sending a message. Click **Sign** to sign the message.
+:::
 
 If you go back to the Safe, under the **Transactions** tab, you should be able to see that there has been a transaction proposal initiated to send 1 ASTR token to Ower 2 address. However, you should also see that only 1 out of 2 confirmations have been received and that 1 more owner is required to confirm the transaction before it gets executed.
 

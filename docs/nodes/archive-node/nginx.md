@@ -10,18 +10,25 @@ In this guide, we will use Nginx as a server as an example.
 ## Firewall
 
 Your server will communicate through HTTP ports, you need to enable ports 80 (http) and 443 (https) in your firewall.
+
+:::info
 At the end of the configuration, you can close port 80 since only port 443 will be used to access the node.
+:::
 
 ## Domain name
 
 In this guide, we consider that you already have a **domain name** and you have control over the **DNS**. In this case, you need to add an **A record** with the sub domain you will use and the IP address of your node into you DNS provider console.
 
-> If you don't have a domain name, you will have to generate a self-signed certificate and access your node through the raw ip address of your server.
+:::info
+If you don't have a domain name, you will have to generate a self-signed certificate and access your node through the raw ip address of your server.
+:::
 
 ## Installation
 
-> In all the next steps, don't forget to update ${SUB_DOMAIN} with your full sub domain name.
-> example: ws.astar.awesomedappproject.io
+:::info
+In all the next steps, don't forget to update ${SUB_DOMAIN} with your full sub domain name.
+Example: ws.astar.awesomedappproject.io
+:::
 
 First, install **Nginx** and **Certbot**:
 
@@ -121,9 +128,10 @@ server {
 }
 
 ```
-
-> Note the port 9944 used in proxy_pass in this example, this is the WS port.
-> To pass the RPC port, just change it to 9933.
+:::info
+Note the port 9944 used in proxy_pass in this example, this is the WS port.
+To pass the RPC port, just change it to 9933.
+:::
 
 Check and restart nginx:
 

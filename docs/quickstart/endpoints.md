@@ -25,13 +25,16 @@ Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There 
 | Network | Astar |
 | Parent chain | Polkadot |
 | ParachainID | 2006 |
-| EVM RPC | https://astar.api.onfinality.io/public |
-|         | https://astar.public.blastapi.io |
+| EVM RPC | https://astar.public.blastapi.io |
+|         | https://astar-rpc.dwellir.com |
+|         | https://astar.api.onfinality.io/public |
 |         | https://evm.astar.network (hosted by Astar team) |
-| Native RPC | https://astar.api.onfinality.io/public |
-|            | https://astar.public.blastapi.io |
-| Native Websocket | wss://astar.api.onfinality.io/public-ws  |
-|                  | wss://astar.public.blastapi.io |
+| Native RPC | https://astar.public.blastapi.io |
+|            | https://astar-rpc.dwellir.com |
+|            | https://astar.api.onfinality.io/public |
+| Native Websocket | wss://astar.public.blastapi.io |
+|                  | wss://astar-rpc.dwellir.com |
+|                  | wss://astar.api.onfinality.io/public-ws |
 |                  | wss://rpc.astar.network (hosted by Astar team) |
 | chainID | 592 |
 | Symbol | ASTR |
@@ -45,13 +48,16 @@ Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There 
 | Network | Shiden |
 | Parent chain | Kusama |
 | ParachainID | 2007 |
-| EVM RPC | https://shiden.api.onfinality.io/public |
-|         | https://shiden.public.blastapi.io |
+| EVM RPC | https://shiden.public.blastapi.io |
+|         | https://shiden-rpc.dwellir.com |
+|         | https://shiden.api.onfinality.io/public |
 |         | https://evm.shiden.astar.network (hosted by Astar team) |
-| Native RPC | https://shiden.api.onfinality.io/public |
-|            | https://shiden.public.blastapi.io |
-| Native Websocket | wss://shiden.api.onfinality.io/public-ws  |
-|                  | wss://shiden.public.blastapi.io |
+| Native RPC | https://shiden.public.blastapi.io |
+|            | https://shiden-rpc.dwellir.com |
+|            | https://shiden.api.onfinality.io/public |
+| Native Websocket | wss://shiden.public.blastapi.io  |
+|                  | wss://shiden-rpc.dwellir.com |
+|                  | wss://shiden.api.onfinality.io/public-ws |
 |                  | wss://rpc.shiden.astar.network (hosted by Astar team) |
 | chainID | 336 |
 | Symbol | SDN |
@@ -66,9 +72,12 @@ Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There 
 | Parent chain | Tokyo relay chain (hosted by Stake Technologies) |
 | ParachainID | 1000 |
 | EVM RPC | https://shibuya.public.blastapi.io |
+|         | https://shibuya-rpc.dwellir.com |
 |         | https://evm.shibuya.astar.network (hosted by Astar team) |
 | Native RPC | https://shibuya.public.blastapi.io |
+|            | https://shibuya-rpc.dwellir.com |
 | Native Websocket | wss://shibuya.public.blastapi.io  |
+|                  | wss://shibuya-rpc.dwellir.com |
 |                  | wss://rpc.shibuya.astar.network (hosted by Astar team) |
 | chainID | 81 |
 | Symbol | SBY |
@@ -81,10 +90,10 @@ Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There 
 
 Create your own endpoint for development or production. We recommend using any of the following API providers:
 
-- [Bware Labs](./endpoints#bware-labs)
+- [Blast (Bware Labs)](./endpoints#bware-labs)
 - [OnFinality](./endpoints#onfinality)
 
-## Bware Labs
+## Blast (Bware Labs)
 The goal of Bware Labs is to build a decentralized platform where Full Node owners and Endpoint users such as developers and organizations are able to collaborate in a secure and trustful manner.
 
 ### Instructions

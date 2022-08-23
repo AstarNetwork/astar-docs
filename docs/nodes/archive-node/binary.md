@@ -26,7 +26,7 @@ sudo apt install -y adduser libfontconfig1
 Download the [latest release](https://github.com/AstarNetwork/Astar/releases/latest) from Github:
 
 ```sh
-wget $(curl -s https://api.github.com/repos/AstarNetwork/Astar/releases/latest | grep "tag_name" | awk '{print "https://github.com/AstarNetwork/Astar/releases/download/" substr($2, 2, length($2)-3) "/astar-collator-" substr($2, 3, length($2)-4) "-ubuntu-x86_64.tar.gz"}')
+wget $(curl -s https://api.github.com/repos/AstarNetwork/Astar/releases/latest | grep "tag_name" | awk '{print "https://github.com/AstarNetwork/Astar/releases/download/" substr($2, 2, length($2)-3) "/astar-collator-v" substr($2, 3, length($2)-4) "-ubuntu-x86_64.tar.gz"}')
 tar -xvf astar-collator*.tar.gz
 ```
 
@@ -57,7 +57,7 @@ sudo nano /etc/systemd/system/astar.service
 
 ## Service parameters
 
-:::note
+:::tip
 Please make sure to change **${NODE_NAME}**
 :::
 
@@ -241,6 +241,6 @@ sudo systemctl start astar.service
 
 If you run your collator it not only needs to sync the mainnet chain but also the complete relay chain from Kusama / Polkadot. This can take up to 3-4 days. You can also use a snapshot of Kusama/Polkadot. You can download this [here](https://polkashots.io/) and will save a lot of time.
 
-:::note
+:::caution
 know what you are doing when using snapshots!
 :::

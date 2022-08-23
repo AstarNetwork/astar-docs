@@ -89,7 +89,7 @@ type Transfer @entity {
 }
 ```
 
-It's worth noting a couple of things in this [schema definition](https://docs.subsquid.io/reference/openreader-schema):
+It's worth noting a couple of things in this [schema definition](https://docs.subsquid.io/develop-a-squid/schema-file/):
 
 - **@entity** - signals that this type will be translated into an ORM model that is going to be persisted in the database
 - **@derivedFrom** - signals the field will not be persisted on the database, it will rather be derived
@@ -123,11 +123,13 @@ The `abi` parameter points at the JSON file previously created, and the output p
 
 This command will automatically generate a TypeScript file named `erc721.ts`, under the `src/abi` subfolder, that defines data interfaces to represent output of the EVM events defined in the ABI, as well as a mapping of the functions necessary to decode these events (see the events dictionary in the aforementione file).
 
-> NOTE: The ERC-721 ABI defines the signatures of all events in the contract. The `Transfer` event has three arguments, named: `from`, `to`, and `tokenId`. Their types are, respectively, `address`, `address`, and `uint256`. As such, the actual definition of the `Transfer` event looks like this: `Transfer(address, address, uint256)`.
+:::info
+The ERC-721 ABI defines the signatures of all events in the contract. The `Transfer` event has three arguments, named: `from`, `to`, and `tokenId`. Their types are, respectively, `address`, `address`, and `uint256`. As such, the actual definition of the `Transfer` event looks like this: `Transfer(address, address, uint256)`.
+:::
 
 ## Define and Bind Event Handler(s)
 
-The Subsquid SDK provides users with a [processor](https://docs.subsquid.io/key-concepts/processor) class, named `SubstrateProcessor` or, in this specific case [`SubstrateEvmProcessor`](https://docs.subsquid.io/reference/evm-processor). The processor connects to the [Subsquid archive](https://docs.subsquid.io/key-concepts/architecture#archive) to get chain data. It will index from the configured starting block, until the configured end block, or until new data is added to the chain.
+The Subsquid SDK provides users with a [processor](https://docs.subsquid.io/develop-a-squid/squid-processor/) class, named `SubstrateProcessor` or, in this specific case [`SubstrateEvmProcessor`](https://docs.subsquid.io/reference/evm-processor). The processor connects to the [Subsquid archive](https://docs.subsquid.io/key-concepts/architecture#archive) to get chain data. It will index from the configured starting block, until the configured end block, or until new data is added to the chain.
 
 The processor exposes methods to "attach" functions that will "handle" specific data such as Substrate events, extrinsics, storage items, or EVM logs. These methods can be configured by specifying the event or extrinsic name, or the EVM log contract address, for example. As the processor loops over the data, when it encounters one of the configured event names, it will execute the logic in the "handler" function.
 
@@ -232,7 +234,9 @@ export async function processTransfer(ctx: EvmLogHandlerContext): Promise<void> 
 
 The "handler" function takes in a `Context` of the correct type (`EvmLogHandlerContext`, in this case). The context contains the triggering event and the interface to store data, and is used to extract and process data and save it to the database.
 
-> For the event handler, it is also possible to bind an arrow function to the processor.
+:::info
+For the event handler, it is also possible to bind an arrow function to the processor.
+:::
 
 ### Configure Processor and Attach Handler
 
@@ -283,7 +287,9 @@ processor.addEvmLogHandler(
 processor.run();
 ```
 
-> The `lookupArchive` function is used to consult the [archive registry](https://github.com/subsquid/archive-registry) and yield the archive address, given a network name. Network names should be in lowercase.
+:::info
+The `lookupArchive` function is used to consult the [archive registry](https://github.com/subsquid/archive-registry) and yield the archive address, given a network name. Network names should be in lowercase.
+:::
 
 ## Launch and Set Up the Database
 
@@ -295,7 +301,9 @@ docker-compose up -d
 
 ![2](img/2.gif)
 
-> The `-d` parameter is optional, it launches the container in `daemon` mode so the terminal will not be blocked and no further output will be visible.
+:::info
+The `-d` parameter is optional, it launches the container in `daemon` mode so the terminal will not be blocked and no further output will be visible.
+:::
 
 Squid projects automatically manage the database connection and schema, via an [ORM abstraction](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping).
 

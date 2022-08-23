@@ -62,7 +62,9 @@ A **descriptive name** is arbitrary and for your use only. It is not stored on t
 
 The **password** will be used to encrypt this account's information. You will need to re-enter it when using the account for any kind of outgoing transaction or when using it to cryptographically sign a message.
 
-> Note that this password does NOT protect your seed phrase. If someone knows the twelve words in your mnemonic seed, they still have control over your account even if they do not know the password.
+:::danger
+Note that this password does **NOT** protect your seed phrase. If someone knows the twelve words in your mnemonic seed, they still have control over your account even if they do not know the password.
+:::
 
 After clicking on "Add the account with the generated seed", your account is created. We recommend also saving your account as json file somewhere safe.
 

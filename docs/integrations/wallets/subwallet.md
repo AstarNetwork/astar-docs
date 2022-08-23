@@ -20,11 +20,13 @@ You can open the `injectedWeb3` object in your browser's devtools
 
 ## How to integrate with your dApp
 
-> Please refer to our example:
->
-> - Github Repository <https://github.com/Koniverse/SubConnect>
-> - Demo App: <https://connect.subwallet.app/>
-> - Video Demo: <https://bit.ly/38QhmfI>
+:::info
+Please refer to the example:
+
+- Github Repository <https://github.com/Koniverse/SubConnect>
+- Demo App: <https://connect.subwallet.app/>
+- Video Demo: <https://bit.ly/38QhmfI>
+:::
 
 - Check the activation of the extension:
   - When a wallet extension is active in a browser it will modify `window.injectedWeb3` by adding its interaction with specifying the name.

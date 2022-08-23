@@ -112,4 +112,4 @@ Monitoring dashboard [Polkadot Essentials](https://grafana.com/grafana/dashboard
 
 Easy right? Just think about saving the dashboard once parameters are set and work.
 
-**Note**: you can also consider [Parity’s dashboards](https://github.com/paritytech/substrate/tree/master/.maintain/monitoring/grafana-dashboards) for advanced monitoring and analysis.
+**Note**: you can also consider [Parity’s dashboards](https://github.com/paritytech/substrate/tree/master/scripts/ci/monitoring/grafana-dashboards) for advanced monitoring and analysis. 

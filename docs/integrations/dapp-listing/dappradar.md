@@ -13,7 +13,9 @@ Astar and Shiden are live on DappRadar, and their homepages are under [Astar Dap
 
 You can [submit your project](https://dappradar.com/dashboard/submit-dapp) to DappRadar by providing background on your project including a short and a full description, website URL, and logo. Only a subset of the fields are required, but you are encouraged to complete as many as possible.
 
-> DappRadar contains user-generated content. You should verify any information with your own research. Astar/Shiden is a permissionless network. Any project can deploy its contracts to Astar/Shiden.
+:::caution
+DappRadar contains user-generated content. You should verify any information with your own research. Astar/Shiden is a permissionless network. Any project can deploy its contracts to Astar/Shiden.
+:::
 
 ## Required Content
 
