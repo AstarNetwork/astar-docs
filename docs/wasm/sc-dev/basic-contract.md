@@ -1,18 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 # Basic Contract
 
-## Using `cargo-contracts`
-
-Using cargo-contract will create a new folder with the basic code of [Flipper] contract.
-
-Run the command `cargo contract new my_contract`.
-
-## Manual Mode
-
-Each contract should be in its own crate. In a folder create two files:
+Each contract should be in its **own crate**. In a folder create two files:
 
 - Cargo.toml: The manifest
 - lib.rs: The default library file

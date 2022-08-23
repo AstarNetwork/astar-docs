@@ -12,15 +12,19 @@ To avoid unnecessary complexity, and boilerplate code, the best way is to use an
 
 The Wasm blob is then deployed and stored on-chain.
 
-### Gas Model
+### Transaction fees
 
-Similar to Substrate, `pallet-contracts` uses [weight][weight] as a gas model.
+##### weight
+
+Similar to Substrate, `pallet-contracts` uses [weight][weight] to charge execution.
 
 :::info
 One gas is equivalent to one weight, defined as one picosecond of execution time on the runtime's reference machine.
 :::
 
 [Transaction Weight is Substrate documentation][weight]
+
+##### automatic deposit collection
 
 Additionally to the weight, there is also a fee paid for on-chain storage called *automatic deposit collection*. This additional fee is paid by the caller and is calculated with the price set for each storage item `DepositPerItem` and the price charged for each byte of storage `DepositPerByte`.
 
@@ -31,6 +35,10 @@ A caller of a contract pays a deposit to each contract in which new storage was 
 :::
 
 [ink! 3.0 Blog Post by Parity](https://www.parity.io/blog/ink-3-0-paritys-rust-based-language-gets-a-major-update)
+
+##### Loading from storage weight
+In order to prevent from theoretical PoV attack, as contract's WASM blob should be loaded from storage to be sent via network for state changes validation (included into PoV), a [weight per byte](https://github.com/paritytech/substrate/blob/97ae6be11b0132224a05634c508417f048894670/frame/contracts/src/lib.rs#L331-L350) of code is charged when loading a contract from storage.
+
 
 ### Execution Engine
 
@@ -81,7 +89,7 @@ Parity also developed a web application to interact with contracts called [contr
 | --- | --- | --- |
 | L1 Architecture | [Ethereum clients](https://ethereum.org/en/developers/docs/nodes-and-clients/) | [Substrate](https://substrate.io/)
 Smart Contract Runtime Environment | [EVM] | [pallet-contract], EVM via [frontier]
-Gas Model | [fixed price per instruction] | [weight] + [storage fees][storage]
+Gas Model | [fixed price per instruction] | [weight] + [storage fees][storage] + [loading fees]
 Smart Contract DSLs | Solidity and Vyper | [ink!] (Rust) and [ask!] (AssemblyScript)
 Standards | [EIPs] | [PSPs]
 
@@ -97,5 +105,6 @@ Standards | [EIPs] | [PSPs]
 [frontier]: https://github.com/paritytech/frontier
 [weight]: https://docs.substrate.io/v3/concepts/weight/
 [storage]: https://github.com/paritytech/substrate/blob/c00ed052e7cd72cfc4bc0e00e38722081b789ff5/frame/contracts/src/lib.rs#L351
+[loading fees]: https://github.com/paritytech/substrate/blob/97ae6be11b0132224a05634c508417f048894670/frame/contracts/src/lib.rs#L331-L350
 [EIPs]: https://eips.ethereum.org/
 [PSPs]: https://github.com/w3f/PSPs
