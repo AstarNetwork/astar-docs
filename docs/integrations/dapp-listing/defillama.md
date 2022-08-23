@@ -146,7 +146,7 @@ module.exports = {
 Fetch adapters only allow us to get the TVL at the current time, so it's impossible to fill old values on a protocol's TVL chart or recompute them, thus leading to charts that look jumpy. To solve this we introduced SDK adapters, which allow us to retrieve a protocol's TVL at any point in time.
 
 :::caution
-Fetch adapters can only be used for projects on non-EVM chains. Where possible, [SDK adapters](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/dapp-listing/defillama) are preferred to fetch adapters because on-chain calls are more transparent.
+Fetch adapters can only be used for projects on non-EVM chains. Where possible, [SDK adapters](https://docs.llama.fi/list-your-project/how-to-write-a-fetch-adapter) are preferred to fetch adapters because on-chain calls are more transparent.
 :::
 
 Third-party APIs should be used where possible to reduce bias. If third-party APIs are not available for the data you need, proprietary APIs can be used if they're open source.
