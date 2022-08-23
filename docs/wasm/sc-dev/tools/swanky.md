@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Swanky Suite
 
-Swanky Suite aims to be a "all-in-one" tool for Wasm smart contract developers within Polkadot / Kusama ecosystem. It is based on existing tools like Cargo Contract CLI and Polkadot.js but extending with many additional features such as generating a new smart contract environment based on example projects and packaging an instant finality node (Swanky node) which can be used for shortening the contract development lifecycle loop. Swanky Suite is the tool that enables all existing (and future) Web3 developers to have an equal experience compared to EVM dev tooling.
+Swanky Suite aims to be a "all-in-one" tool for Wasm smart contract developers within Polkadot / Kusama ecosystem. It is based on existing tools like` cargo contract CLI` and `polkadot.js` but extending with many additional features such as generating a new smart contract environment based on example projects and providing an instant finality node (Swanky node) which will shorten the contract development lifecycle. Swanky Suite is the tool that enables all existing (and future) Web3 developers to have an equal experience compared to EVM dev tooling.
 
 Features of Swanky Suite:
 
