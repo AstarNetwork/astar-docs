@@ -40,6 +40,16 @@ const config = {
     ],
   ],
 
+  //enableing multilanguage support - Italian alongside default English
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'it'],
+    localeConfigs: {
+      en: {htmlLang: 'en-US',},
+      it: {},
+    }
+  },
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -65,6 +75,10 @@ const config = {
             to: 'https://www.youtube.com/channel/UC36JgEF6gqatVSK9xlzzrvQ',
             label: 'Youtube',
             position: 'left',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             href: 'https://github.com/AstarNetwork/astar-docs',

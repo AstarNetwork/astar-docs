@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "(IT) Astar Docs",
+    "description": "The title in the navbar"
+  },
+  "item.label.Docs": {
+    "message": "(IT) Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Medium": {
+    "message": "(IT) Medium",
+    "description": "Navbar item with label Medium"
+  },
+  "item.label.Youtube": {
+    "message": "(IT) Youtube",
+    "description": "Navbar item with label Youtube"
+  },
+  "item.label.GitHub": {
+    "message": "(IT) GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
