@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/homepage-features.scss';
 import Link from '@docusaurus/Link';
+import Translate, {translate} from '@docusaurus/Translate';
 
 type FeatureItem = {
   title: string;
@@ -11,87 +12,82 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'About Astar',
+    title: <Translate>'About Astar'</Translate>,
     link: '/docs/about/astar',
     iconClass: 'aboutastar',
     description: (
       <>
-        Get to know what Astar Network is solving and all the information related to our native token.
+        <Translate>Get to know what Astar Network is solving and all the information related to our native token.</Translate>
       </>
     ),
   },
   {
-    title: 'Ecosystem',
+    title: <Translate>'Ecosystem'</Translate>,
     link: '/docs/ecosystem/',
     iconClass: 'ecosystem',
     description: (
       <>
-        Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives.
+        <Translate>Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives.</Translate>
       </>
     ),
   },
   {
-    title: 'Start Building',
+    title: <Translate>'Start Building'</Translate>,
     link: '/docs/quickstart/',
     iconClass: 'wrench',
     description: (
       <>
-        Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.
+        <Translate>Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.</Translate>
       </>
     ),
   },
   {
-    title: 'dApp Staking',
+    title: <Translate>'dApp Staking'</Translate>,
     link: '/docs/dapp-staking/',
     iconClass: 'staking',
     description: (
       <>
-        Earn tokens for yourself and your dApp by staking tokens and registering
-        your dApp with Astar’s dApp Staking.
+        <Translate>Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking.</Translate>
       </>
     ),
   },
   {
-    title: 'Use EVM',
+    title: <Translate>'Use EVM'</Translate>,
     link: '/docs/EVM/',
     iconClass: 'evm',
     description: (
       <>
-        Dive deeper into EVM on Astar and explains how EVM contracts can
-        interact with other non-EVM modules through precompiles.
+        <Translate>Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles.</Translate>
       </>
     ),
   },
   {
-    title: 'Use WASM with Swanky',
+    title: <Translate>'Use WASM with Swanky'</Translate>,
     link: '/docs/wasm/',
     iconClass: 'wasm',
     description: (
       <>
-        Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples
-        for each framework.
+        <Translate>Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework.</Translate>
       </>
     ),
   },
   {
-    title: 'Run A Node',
+    title: <Translate>'Run A Node'</Translate>,
     link: '/docs/nodes/',
     iconClass: 'node',
     description: (
       <>
-        Explain how to run full nodes, collators, indexers, and everything you
-        need to know related to infrastructure.
+        <Translate>Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.</Translate>
       </>
     ),
   },
   {
-    title: 'Learn Cross-Chain Message(XCM)',
+    title: <Translate>'Learn Cross-Chain Message (XCM)'</Translate>,
     link: '/docs/xcm/',
     iconClass: 'broadcast',
     description: (
       <>
-        Explain how XCM is used in Astar and how developers can use it to
-        interact with the rest of the Polkadot network.
+        <Translate>Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.</Translate>
       </>
     ),
   },
