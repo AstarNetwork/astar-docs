@@ -12,7 +12,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: <Translate>'About Astar'</Translate>,
+    title: <Translate>About Astar</Translate>,
     link: '/docs/about/astar',
     iconClass: 'aboutastar',
     description: (
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: <Translate>'Ecosystem'</Translate>,
+    title: <Translate>Ecosystem</Translate>,
     link: '/docs/ecosystem/',
     iconClass: 'ecosystem',
     description: (
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: <Translate>'Start Building'</Translate>,
+    title: <Translate>Start Building</Translate>,
     link: '/docs/quickstart/',
     iconClass: 'wrench',
     description: (
@@ -42,7 +42,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: <Translate>'dApp Staking'</Translate>,
+    title: <Translate>dApp Staking</Translate>,
     link: '/docs/dapp-staking/',
     iconClass: 'staking',
     description: (
@@ -52,7 +52,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: <Translate>'Use EVM'</Translate>,
+    title: <Translate>Use EVM</Translate>,
     link: '/docs/EVM/',
     iconClass: 'evm',
     description: (
@@ -62,7 +62,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: <Translate>'Use WASM with Swanky'</Translate>,
+    title: <Translate>Use WASM with Swanky</Translate>,
     link: '/docs/wasm/',
     iconClass: 'wasm',
     description: (
@@ -72,7 +72,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: <Translate>'Run A Node'</Translate>,
+    title: <Translate>Run A Node</Translate>,
     link: '/docs/nodes/',
     iconClass: 'node',
     description: (
@@ -82,7 +82,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: <Translate>'Learn Cross-Chain Message (XCM)'</Translate>,
+    title: <Translate>Learn Cross-Chain Message (XCM)</Translate>,
     link: '/docs/xcm/',
     iconClass: 'broadcast',
     description: (
@@ -92,24 +92,22 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Integrate Toolings',
+    title: <Translate>Integrate Toolings</Translate>,
     link: '/docs/integrations/',
     iconClass: 'tool',
     description: (
       <>
-        Provide relevant information about the wallets, bridges, indexers, and
-        oracles that are integrated with the network.
+        <Translate>Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network.</Translate>
       </>
     ),
   },
   {
-    title: 'User Guides',
+    title: <Translate>User Guides</Translate>,
     link: '/docs/user-guides/',
     iconClass: 'docs',
     description: (
       <>
-        Learn how to create different types of wallets, obtain tokens, and
-        manage your assets.
+        <Translate>Learn how to create different types of wallets, obtain tokens, and manage your assets.</Translate>
       </>
     ),
   },

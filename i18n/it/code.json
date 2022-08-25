@@ -381,52 +381,64 @@
     "message": "(IT) Search docs",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
-  "'About Astar'": {
-    "message": "(IT) 'About Astar'"
+  "About Astar": {
+    "message": "(IT) About Astar"
   },
   "Get to know what Astar Network is solving and all the information related to our native token.": {
     "message": "(IT) Get to know what Astar Network is solving and all the information related to our native token."
   },
-  "'Ecosystem'": {
-    "message": "'Ecosystem'"
+  "Ecosystem": {
+    "message": "(IT) Ecosystem"
   },
   "Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives.": {
-    "message": "Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives."
+    "message": "(IT) Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives."
   },
-  "'Start Building'": {
-    "message": "'Start Building'"
+  "Start Building": {
+    "message": "(IT) Start Building"
   },
   "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.": {
-    "message": "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network."
+    "message": "(IT) Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network."
   },
-  "'dApp Staking'": {
-    "message": "'dApp Staking'"
+  "dApp Staking": {
+    "message": "(IT) dApp Staking"
   },
   "Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking.": {
-    "message": "Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking."
+    "message": "(IT) Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking."
   },
-  "'Use EVM'": {
-    "message": "'Use EVM'"
+  "Use EVM": {
+    "message": "(IT) Use EVM"
   },
   "Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles.": {
-    "message": "Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles."
+    "message": "(IT) Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles."
   },
-  "'Use WASM with Swanky'": {
-    "message": "'Use WASM with Swanky'"
+  "Use WASM with Swanky": {
+    "message": "(IT) Use WASM with Swanky"
   },
   "Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework.": {
-    "message": "Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework."
+    "message": "(IT) Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework."
   },
-  "'Run A Node'": {
-    "message": "'Run A Node'"
+  "Run A Node": {
+    "message": "(IT) Run A Node"
   },
   "Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.": {
-    "message": "Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure."
+    "message": "(IT) Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure."
   },
-  "'Learn Cross-Chain Message (XCM)'": {
-    "message": "'Learn Cross-Chain Message (XCM)'"
+  "Learn Cross-Chain Message (XCM)": {
+    "message": "(IT) Learn Cross-Chain Message (XCM)"
   },
   "Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.": {
-    "message": "Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network."
+    "message": "(IT) Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network."
+  },
+  "Integrate Toolings": {
+    "message": "(IT) Integrate Toolings"
+  },
+  "Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network.": {
+    "message": "(IT) Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network."
+  },
+  "User Guides": {
+    "message": "(IT) User Guides"
+  },
+  "Learn how to create different types of wallets, obtain tokens, and manage your assets.": {
+    "message": "(IT) Learn how to create different types of wallets, obtain tokens, and manage your assets."
   }
 }
