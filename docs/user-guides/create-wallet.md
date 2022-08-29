@@ -14,8 +14,8 @@ The address format used in Substrate-based chains like Astar is SS58. SS58 is a 
 - An Astar EVM address or H160 address starts with 0x
 
 ![1](img/1.png)
-<img width="800" alt="1-1" src="https://user-images.githubusercontent.com/77480847/187123614-dc821aed-9ce0-4a5f-afdc-48ac1df53b6a.png">
-<img width="800" alt="1-2" src="https://user-images.githubusercontent.com/77480847/187123681-a377c898-6621-4c8d-ad8e-efad5a220a20.png">
+<img src="https://user-images.githubusercontent.com/77480847/187123614-dc821aed-9ce0-4a5f-afdc-48ac1df53b6a.png" width="800">
+<img src="https://user-images.githubusercontent.com/77480847/187123681-a377c898-6621-4c8d-ad8e-efad5a220a20.png" width="800">
 
 To participate in the Stake2Earn Festival we will interact with our Astar native address. Using this address requires another extension then MetaMask. We recommend using the Polkadot JS extension if you are new to the ecosystem.
 
