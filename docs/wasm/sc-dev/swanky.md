@@ -55,24 +55,77 @@ The envisioned architecture of Swanky CLI and Swanky Node (Local developer node)
 
 Swanky CLI is a Node.js CLI app that uses the Polkadot.js API as its backend alongside many existing tools like the cargo contract CLI. There will be many features that will support the developer such as bootstrapping WASM dApps via smart contract and UI scaffolding, running integration tests, starting local nodes, account management, connecting and deploying contracts to both local and remote networks, compiling for various languages from a single CLI app, compatibility check from contract pallet to the compiler, and much more.
 
+```sh-session
+$ npm install -g @astar-network/swanky-cli
+$ swanky COMMAND
+running command...
+$ swanky (--version|-V|-v)
+@astar-network/swanky-cli/0.1.6 darwin-x64 node-v18.2.0
+$ swanky --help [COMMAND]
+USAGE
+  $ swanky COMMAND
+...
+```
+
 ### `swanky init`
 
 Scaffold a WASM project.
+
+```
+USAGE
+  $ swanky init [PROJECT_NAME] [--swanky-node] [--template blank|flipper|psp22]
+
+ARGUMENTS
+  PROJECT_NAME  directory name of new project
+
+FLAGS
+  --swanky-node
+  --template=<option>  <options: blank|flipper|psp22>
+
+DESCRIPTION
+  Generate a new smart contract environment
+```
 
 <Figure caption="Initiate a project" src={require('./img/01-init.gif').default} />
 
 After answering the prompts, Swanky will modify the templates, download the node and run appropriate installation scripts.
 The resulting folder structure should look like this:
 
+<Figure caption="Folder structure" src={require('./img/01a-folder_structure.png').default} />
+
 ### `swanky check`
 
 Verify the dependencies needed to run the swanky project.
+
+```
+USAGE
+  $ swanky check
+
+DESCRIPTION
+  Check installed package versions and compatibility
+```
 
 <Figure caption="Verify dependencies" src={require('./img/02-check.gif').default} />
 
 ### `swanky compile`
 
-Compile the given project.
+Compile the given contract.
+
+:::note
+Currently only the default contract that was added in the init step can be interacted with.
+Support for multiple contracts is planned for the coming version.
+:::
+
+```
+USAGE
+  $ swanky compile [-s]
+
+FLAGS
+  -s, --silent  Don't display compilation output
+
+DESCRIPTION
+  Compile the smart contract(s) in your contracts directory
+```
 
 <Figure caption="Compile a contract" src={require('./img/03-compile.gif').default} />
 
@@ -87,7 +140,35 @@ At the current state, `swanky account` command should only be used to store deve
 The secure storage and handling of live accounts will be added in a coming version.
 :::
 
+#### `list`
+
+```
+USAGE
+  $ swanky account list
+
+DESCRIPTION
+  List dev accounts stored in config
+
+ALIASES
+  $ swanky account ls
+```
+
 <Figure caption="Listing accounts" src={require('./img/04-account_list.gif').default} />
+
+#### `create`
+
+```
+USAGE
+  $ swanky account create [-f] [-g]
+
+FLAGS
+  -f, --force
+  -g, --generate
+
+DESCRIPTION
+  Create a new dev account in config
+```
+
 <Figure caption="Add account" src={require('./img/05-account_create.gif').default} />
 <Figure caption="Generate account" src={require('./img/06-account_generate.gif').default} />
 
@@ -100,6 +181,20 @@ Manage a local node.
 ### `swanky deploy`
 
 Deploy a compiled contract to a running node.
+
+```
+USAGE
+  $ swanky deploy --account <value> -c <value> -g <value> -a <value>
+
+FLAGS
+  -a, --args=<value>...   (required)
+  -c, --contract=<value>  (required)
+  -g, --gas=<value>       (required)
+  --account=<value>       (required) Alias of account to be used
+
+DESCRIPTION
+  Deploy contract to a running node
+```
 
 <Figure caption="Deploy a contract" src={require('./img/08-deploy.gif').default} />
 
