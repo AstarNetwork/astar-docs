@@ -9,7 +9,11 @@ import TabItem from '@theme/TabItem';
 
 ## Public Endpoints
 
-There are public endpoints available for development on Shibuya (testnet) but for Astar or Shiden, you'll need to get your own endpoint from one of the supported providers. You can always run your own RPC nodes.
+:::note
+The free endpoints below are dedicated to end users, they can be used to interact with dapps or deploy/call smart contracts.
+They limit the rate of API calls, so they are not suitable for a dapp UI scraping blockchain data constantly or an indexer (like the Graph).
+To deploy a production dapp, please refer to the [Run an archive node](/docs/nodes/archive-node/) section or get own api key for free/paid tier from one of our [infra partners](./endpoints#endpoint-providers).
+:::
 
 <Tabs>
 <TabItem value="astar" label="Astar Network" default>
@@ -79,7 +83,7 @@ There are public endpoints available for development on Shibuya (testnet) but fo
 Create your own endpoint for development or production. We recommend using any of the following API providers:
 
 - [Alchemy](./endpoints/#alchemy)
-- [Blast (Bware Labs)](./endpoints#bware-labs)
+- [Blast (Bware Labs)](./endpoints#blast-bware-labs)
 - [OnFinality](./endpoints#onfinality)
 
 ## Alchemy
