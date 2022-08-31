@@ -95,7 +95,7 @@ Once own Dashboard is prepared,
 4. Your endpoint is generated, url and api key become available.
 
 <center>
-<img src="" alt="Alchemy" border="0"></img>
+<img src="https://i.imgur.com/27KISSt.png" alt="Alchemy" border="0"></img>
 </center>
 
 ## Blast (Bware Labs)
