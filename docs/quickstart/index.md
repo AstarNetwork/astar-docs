@@ -4,7 +4,6 @@ Astar is a collection of networks and tools providing:
 
 - Native support for Wasm and EVM-compatable smart contracts
 - Advanced cross-chain features through Polkadot's XCMP
-- [**Swanky Suite**](../wasm/sc-dev/tools/swanky) - developer tooling for writing Wasm smart contracts in ink! (Rust-like syntax) and ask! (TypeScript-like syntax)
 
 The Astar ecosystem has two mainnets and a testnet:
 

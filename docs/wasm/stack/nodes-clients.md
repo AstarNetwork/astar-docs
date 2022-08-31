@@ -16,6 +16,7 @@ Features:
 
 - Consensus: `instant-seal` and `manual-seal`
 - dApps staking enabled
+- Chain-extensions
 
 You can find the Github repo [here](https://github.com/AstarNetwork/swanky-node).
 
@@ -34,7 +35,7 @@ Github can be found [here](https://github.com/paritytech/substrate-contracts-nod
 
 Shibuya has almost the exact chain specifications as our mainnet Shiden & Astar and creates the best test environment for developers who want to launch their dApp on the mainnet.
 
-Shibuyas `pallet-contracts` has `unstable-feature` so you can use unstable flagged features of ink!/`pallet-contracts`.
+Shibuya's `pallet-contracts` has `unstable-feature` so you can use unstable flagged features of ink! `pallet-contracts`.
 
 To get the latest info & get tokens via faucet, please check Shibuya's official docs.
 
@@ -45,3 +46,6 @@ Wasm contracts are live on Shiden. You can interact with them in the same way as
 ## Mainnet Node: Astar
 
 At the moment, Wasm smart contracts are not available on Astar. They should go live during 2022 Q3.
+
+## Network Infographic
+![1](img/1.png)
