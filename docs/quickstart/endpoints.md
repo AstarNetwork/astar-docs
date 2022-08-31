@@ -11,12 +11,6 @@ import TabItem from '@theme/TabItem';
 
 There are public endpoints available for development on Shibuya (testnet) but for Astar or Shiden, you'll need to get your own endpoint from one of the supported providers. You can always run your own RPC nodes.
 
-:::note
-**We recommend building your own endpoints or using our infra partners to make sure you have full control over them.**
-Astar is not responsible for your project downtime when using Astar free public endpoint for community.
-Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There is a possibility that this value will be lowered.
-:::
-
 <Tabs>
 <TabItem value="astar" label="Astar Network" default>
 
@@ -25,17 +19,16 @@ Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There 
 | Network | Astar |
 | Parent chain | Polkadot |
 | ParachainID | 2006 |
-| EVM RPC | https://astar.public.blastapi.io |
-|         | https://astar-rpc.dwellir.com |
-|         | https://astar.api.onfinality.io/public |
-|         | https://evm.astar.network (hosted by Astar team) |
-| Native RPC | https://astar.public.blastapi.io |
-|            | https://astar-rpc.dwellir.com |
-|            | https://astar.api.onfinality.io/public |
-| Native Websocket | wss://astar.public.blastapi.io |
-|                  | wss://astar-rpc.dwellir.com |
-|                  | wss://astar.api.onfinality.io/public-ws |
-|                  | wss://rpc.astar.network (hosted by Astar team) |
+| HTTPS | Alchemy: Get started [here](https://www.alchemy.com/astar) |
+|         | Blast: https://astar.public.blastapi.io |
+|         | Dwellier: https://astar-rpc.dwellir.com |
+|         | OnFinality: https://astar.api.onfinality.io/public |
+|         | Pinknode: Get started [here](https://www.pinknode.io/) |
+| Websocket | Alchemy: Get started [here](https://www.alchemy.com/astar) |
+|           | Blast: wss://astar.public.blastapi.io |
+|           | Dwellier: wss://astar-rpc.dwellir.com |
+|           | OnFinality: wss://astar.api.onfinality.io/public-ws |
+|           | Pinknode: Get started [here](https://www.pinknode.io/) |
 | chainID | 592 |
 | Symbol | ASTR |
 
@@ -48,17 +41,14 @@ Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There 
 | Network | Shiden |
 | Parent chain | Kusama |
 | ParachainID | 2007 |
-| EVM RPC | https://shiden.public.blastapi.io |
-|         | https://shiden-rpc.dwellir.com |
-|         | https://shiden.api.onfinality.io/public |
-|         | https://evm.shiden.astar.network (hosted by Astar team) |
-| Native RPC | https://shiden.public.blastapi.io |
-|            | https://shiden-rpc.dwellir.com |
-|            | https://shiden.api.onfinality.io/public |
-| Native Websocket | wss://shiden.public.blastapi.io  |
-|                  | wss://shiden-rpc.dwellir.com |
-|                  | wss://shiden.api.onfinality.io/public-ws |
-|                  | wss://rpc.shiden.astar.network (hosted by Astar team) |
+| HTTPS | Blast: https://shiden.public.blastapi.io |
+|         | Dwellier: https://shiden-rpc.dwellir.com |
+|         | OnFinality: https://shiden.api.onfinality.io/public |
+|         | Pinknode: Get started [here](https://www.pinknode.io/) |
+| Websocket | Blast: wss://shiden.public.blastapi.io  |
+|           | Dwellier: wss://shiden-rpc.dwellir.com |
+|           | OnFinality: wss://shiden.api.onfinality.io/public-ws |
+|           | Pinknode: Get started [here](https://www.pinknode.io/) |
 | chainID | 336 |
 | Symbol | SDN |
 
@@ -71,14 +61,12 @@ Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There 
 | Network | Shibuya (parachain testnet) |
 | Parent chain | Tokyo relay chain (hosted by Stake Technologies) |
 | ParachainID | 1000 |
-| EVM RPC | https://shibuya.public.blastapi.io |
-|         | https://shibuya-rpc.dwellir.com |
-|         | https://evm.shibuya.astar.network (hosted by Astar team) |
-| Native RPC | https://shibuya.public.blastapi.io |
-|            | https://shibuya-rpc.dwellir.com |
-| Native Websocket | wss://shibuya.public.blastapi.io  |
-|                  | wss://shibuya-rpc.dwellir.com |
-|                  | wss://rpc.shibuya.astar.network (hosted by Astar team) |
+| HTTPS | Blast: https://shibuya.public.blastapi.io |
+|         | Dwellier: https://shibuya-rpc.dwellir.com |
+|         | Astar Team: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
+| Websocket | Blast: wss://shibuya.public.blastapi.io  |
+|           | Dwellier: wss://shibuya-rpc.dwellir.com |
+|           | Astar Team: wss://rpc.shibuya.astar.network |
 | chainID | 81 |
 | Symbol | SBY |
 
@@ -90,8 +78,25 @@ Currently, endpoints provided by Astar team have rate limits 10 reqs/sec. There 
 
 Create your own endpoint for development or production. We recommend using any of the following API providers:
 
+- [Alchemy](./endpoints/alchemy)
 - [Blast (Bware Labs)](./endpoints#bware-labs)
 - [OnFinality](./endpoints#onfinality)
+
+## Alchemy
+[Alchemy](https://www.alchemy.com/) is widely known infra provider in entire crypto space. Alchemy provides variety of usuful products for DApps development in addition to network APIs.
+
+### Instructions
+Alchemy provides free API key for accessing thier endpoints. You need to go to [website](https://www.alchemy.com/) and follow instructions after signing up.
+Once own Dashboard is prepared,
+
+1. Click on **+Create App** button.
+2. Name your app.
+3. Select Chain and Network.
+4. Your endpoint is generated, url and api key become available.
+
+<center>
+<img src="" alt="Alchemy" border="0"></img>
+</center>
 
 ## Blast (Bware Labs)
 The goal of Bware Labs is to build a decentralized platform where Full Node owners and Endpoint users such as developers and organizations are able to collaborate in a secure and trustful manner.
