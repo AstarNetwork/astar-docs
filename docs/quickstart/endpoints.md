@@ -78,7 +78,7 @@ There are public endpoints available for development on Shibuya (testnet) but fo
 
 Create your own endpoint for development or production. We recommend using any of the following API providers:
 
-- [Alchemy](./endpoints/alchemy)
+- [Alchemy](./endpoints/#alchemy)
 - [Blast (Bware Labs)](./endpoints#bware-labs)
 - [OnFinality](./endpoints#onfinality)
 
