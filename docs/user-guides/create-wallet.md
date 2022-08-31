@@ -11,11 +11,12 @@ sidebar_position: 1
 The address format used in Substrate-based chains like Astar is SS58. SS58 is a modification of Base-58-check from Bitcoin with some minor modifications. Notably, the format contains an address type prefix that identifies an address as belonging to a specific network. The Astar ecosystem is a special parachain in the Polkadot ecosystem because it's the only parachain that supports EVM as WASM smart contract. With the use of two different virtual machines come two different kinds of addresses.
 
 - An Astar Native address or SS58 address
-- An Astar EVM address or H160 address
+- An Astar EVM address or H160 address which starts with 0x
 
-![1](img/1.png)
+<img width="800" alt="1" src="https://user-images.githubusercontent.com/77480847/186840773-5874ba05-a067-4204-b72f-3f1017de85b7.png" />
+<img width="800" alt="2" src="https://user-images.githubusercontent.com/77480847/186840936-692dc1f3-c5a8-450f-813c-6067c60f8cc2.png" />
 
-To participate in the Stake2Earn Festival we will interact with our Astar native address. Using this address requires another extension then MetaMask. We recommend using the Polkadot JS extension if you are new to the ecosystem.
+You will interact with our Astar native address when using WASM dApps are ready or our dApps Staking page. Using this address requires another extension than MetaMask. We recommend using the Polkadot JS extension if you are new to the ecosystem.
 
 ## Astar Portal
 
@@ -23,13 +24,13 @@ To participate in the Stake2Earn Festival we will interact with our Astar native
 
 The [Astar Portal] is the place to be for doing anything in our ecosystem. The Astar developers created a one-stop-place for everyone who wants to interact in our ecosystem.
 
-Through our portal, you can connect to different networks in the Astar ecosystem. To join our Stake2Earn festival you need to connect to **Astar Network**. Here is an overview of all our networks:
+Through our portal, you can connect to different networks in the Astar ecosystem. 
 
 - **Astar Network**: parachain on Polkadot.
 - **Shiden Network**: parachain on Kusama.
 - **Shibuya**: parachain testnet
 
-![2](img/2.png)
+<img width="500" alt="2" src="https://user-images.githubusercontent.com/77480847/186842212-fa88eef0-b768-448e-995f-cc5834eb7c88.png" />
 
 ## Recommend: Polkadot{.js} Browser Plugin
 
@@ -40,7 +41,6 @@ The Polkadot{.js} plugin provides a reasonable balance of security and usability
 The browser plugin is available for both [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (and Chromium-based browsers like Brave) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension). After installing the plugin, you should see the orange and white Polkadot{.js} logo in your browser menu bar.
 
 ![4](img/4.png)
-![5](img/5.png)
 
 ### Create Account
 
@@ -76,11 +76,11 @@ Return to [Astar Portal] and refresh the page. You will get a popup that Polkado
 
 When you have given the extension permission, let's connect the wallet. A popup will show with all possible extensions. We just create a new account with Polkadot JS, so let's select this extension.
 
-![10](img/10.png)
+<img width="500" alt="10" src="https://user-images.githubusercontent.com/77480847/186843723-2363e66d-1a16-4653-afdd-61c5d5e29ca7.png" />
 
 Once you have clicked on Polkadot JS, you can select your newly created account. Select your account and press confirm.
 
-![11](img/11.png)
+<img width="530" alt="11" src="https://user-images.githubusercontent.com/77480847/186843769-9c9ee368-3b74-46ee-8794-a88451b13438.png" />
 
 You have now successfully connected an Astar wallet to our portal. Note that you can use this wallet on all parachains in the Dotsama ecosystem.
 
