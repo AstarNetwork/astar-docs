@@ -227,7 +227,7 @@ The easiest way is to download a binary release from [Release Page](https://gith
 
 ### Build Locally
 
-First, complete the [basic Rust setup instructions](./docs/rust-setup.md).
+First, complete the [basic Rust setup instructions](https://github.com/AstarNetwork/swanky-node/blob/main/docs/rust-setup.md).
 After that, you can build node via
 
 ```bash
