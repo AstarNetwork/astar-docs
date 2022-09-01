@@ -61,6 +61,16 @@ After the transaction, you can see
 
 and check out your Metamask!
 
+## Understanding the difference betweeen USDT vs. cUSDT
+
+Recently, Tether announced the launch of USDT on Kusama (a scalable network of specialized blockchains built using Substrate and nearly the same codebase as Polkadot), which is the native USDT token on the Kusama blockchain.
+
+Shiden Network is a multi-chain decentralized application layer on Kusama Network. cUSDC on Shiden is a "bridged form of Ethereum USDT" that was bridged from the cBridge. Because of this, cUSDT is not the same as native USDT. Tether products do not support cUSDT. You cannot send cUSDT to a Tether deposit address. It is important to note that you cannot use cUSDT in any WASM environemnt but only in EVM environement. You can use USDT which is a native USDT token on the Kusama blockchain on both WASM and EVM enviroment.
+
+To off-ramp back to fiat currency with cUSDT, you would need to "unbridge" the cUSDT back to the Ethereum blockchain via the cBridge. After the "unbridging", you would ened up with native USDT on Ethereum. From this point, you could deposit the Ethereum USDT into your Tether account and off-ramp to fiat currency.
+
+In the future, we are potentially going to have a pool of USDT and cUSDT on decentralized exchanges in our ecosystems, so that it is easier for our users to use the two different assets.
+
 ## Support
 
 In case you have any problems. Join our community and our Ambassadors will support you. Please remember that we will never DM you first! If you get approached by someone pretending to be part of the team, do not trust them.
