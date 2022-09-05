@@ -7,23 +7,21 @@ sidebar_position: 6
 
 In this tutorial we will navigate you how to transfer tokens using Portal and sending tokens to Portal.
 
-- Create Astar Accounts(Native and EVM)
+- [Create Astar Accounts(Native and EVM)](#create-astar-accountsnative-and-evm)
 
-- Sending ASTR/SDN to Astar Network from Central Exchanges
+- [Sending ASTR/SDN to Astar Network from Central Exchanges](#sending-astrsdn-to-astar-network-from-central-exchanges)
 
-- Sending ASTR/SDN to Central Exchanges from Astar Network 
+- [Sending ASTR/SDN to Central Exchanges from Astar Network](#sending-astrsdn-to-central-exchanges-from-astar-network)
 
-- Sending ASTR/SDN to Astar EVM from Astar Native
+- [Sending ASTR/SDN to Astar EVM from Astar Native](#sending-astrsdn-to-astar-evm-from-astar-native)
 
-- Sending ASTR/SDN to Astar Native from Astar EVM
+- [Sending ASTR/SDN to Astar Native from Astar EVM](#sending-astrsdn-to-astar-native-from-astar-evm)
 
-- Sending ASTR/SDN to Astar Native from Astar EVM
+- [Cross-chain Transfer(XCM)](#cross-chain-transferxcm)
 
-- Cross-chain Transfer(XCM)
+- [Transferring cross-chain assets into Astar Network](#transferring-cross-chain-assets-into-astar-network)
 
-- Transferring cross-chain assets into Astar Network
-
-- Transferring cross-chain assets to other chains from Astar Network
+- [Transferring cross-chain assets to other chains from Astar Network](#transferring-cross-chain-assets-to-other-chains-from-astar-network)
 
 - How to find transaction ID
 
@@ -134,7 +132,7 @@ Note: xcAssets (XCM tokens that are compatible in ERC environment) are currently
 
 :::
 
-1.  Go to [Portal](https://portal.astar.network/) and connect to Astar Native account to copy address you wish to use. 
+1. Go to [Portal](https://portal.astar.network/) and connect to Astar Native account to copy address you wish to use. 
 
 <image>
 
@@ -172,7 +170,7 @@ There are few points you have to prepare before transferring.
 
 ## Transferring cross-chain assets into Astar Network
 
-1. Go to Portal and connect to Astar Native Account (Deposit is not possible from Astar EVM)
+1. Go to [Portal](https://portal.astar.network/)  and connect to Astar Native Account (Deposit is not possible from Astar EVM)
 
 2. Choose the token you wish to deposit to Astar Network.
 
@@ -190,8 +188,32 @@ Note: We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amou
 
 4. If you would like tokens to arrive in Astar EVM then change the destination to Astar(EVM) and input the EVM address.
 
+<image>
+
+<image>
+
+5. Enter the amount you would like to bring to Astar Network. And confirm.
 
 
 
-![20](img/20.png)
-![21](img/21.png)
+
+## Transferring cross-chain assets to other chains from Astar Network
+
+1. Go to [Portal](https://portal.astar.network/)  and connect to Native or EVM Account. 
+
+2. Choose the token you wish to withdraw from  Astar Network to other chains..
+
+3. Click Transfer and move to Transfer Page. Choose the Cross-chain Transfer tab.
+
+4. If you are on Astar EVM, place the destination address. You would need the [origin chain’s address](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). 
+
+<image>
+
+5. If you are on Astar Native and happy to transfer the token within the same account when you don’t need to change here but just reverse the order but you can manually input another account’s address.
+
+<image>
+
+<image>
+
+6. Enter the amount you would like to bring to Astar Network. And confirm.
+
