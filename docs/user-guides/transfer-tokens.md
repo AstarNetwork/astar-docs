@@ -140,15 +140,15 @@ xcAssets (XCM tokens that are compatible in ERC environment) are currently unabl
 
 4. You are in the transfer page and add the destination Astar Native address and the amount you wish to transfer. Send. **This transaction is to send tokens to EVM Deposit.** 
 
-<img width="1000" alt="EVM-to-Native" src="https://user-images.githubusercontent.com/77480847/188534236-a5b70980-6093-41f1-84a5-c1178eeefa4d.png/" 
+<img width="1137" alt="EVM-depo" src="https://user-images.githubusercontent.com/77480847/188536340-5a59d4e6-290d-451e-b9fd-6d6e424ee76d.png"/>　
 
 5. You will  need to withdraw EVM deposit before you can use the tokens. 
      
 6. Go back to Native account and press Withdraw button. 
-<img width="1137" alt="EVM-depo" src="https://user-images.githubusercontent.com/77480847/188534362-3182f4bf-cc32-4d54-a6a9-5624036df905.png"> 
+<img width="1137" alt="EVM-depo" src="https://user-images.githubusercontent.com/77480847/188534362-3182f4bf-cc32-4d54-a6a9-5624036df905.png"/> 
 
 7. Modal will come up and you can withdraw by signing. 
-<img width="945" alt="depo-withdraw" src="https://user-images.githubusercontent.com/77480847/188534447-70873ad8-f597-46da-a8b1-3808f3802c0d.png"> 
+<img width="945" alt="depo-withdraw" src="https://user-images.githubusercontent.com/77480847/188534447-70873ad8-f597-46da-a8b1-3808f3802c0d.png"/> 
 
 
 
@@ -210,7 +210,7 @@ If you wish to move cross-chain(XCM) assets to Astar Native accounts from Astar 
 3. Click Transfer and move to Transfer Page. Choose the Cross-chain Transfer(XCM) tab. 
 
 4. If you are on Astar EVM, place the destination address. You would need the [origin chain’s address](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). 
-<img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png"> 
+<img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png"/> 
 
 5. If you are on Astar Native and happy to transfer the token within the same account when you don’t need to change here but just reverse the order but you can manually input another account’s address. 
 <img width="1000" alt="XCM-reverse" src="https://user-images.githubusercontent.com/77480847/188535198-27aaf6e9-6b15-4e6f-bc6a-84febcd78de0.png"/> 
