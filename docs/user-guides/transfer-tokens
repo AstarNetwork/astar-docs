@@ -1,6 +1,6 @@
 
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # How to transfer tokens
@@ -162,15 +162,19 @@ Note: xcAssets (XCM tokens that are compatible in ERC environment) are currently
 
 There are few points you have to prepare before transferring.
 
+:::note
+
 - When transferring native tokens for origin chains we recommend to leave some amount in the account otherwise you might need some gas tokens to make further transactions.
 
 - Min.Balance is usually applied to tokens in the Polkadot Ecosystem and Astar Portal will only make transactions the amount greater than the Min.Balance.
+
+:::
 
 
 
 ## Transferring cross-chain assets into Astar Network
 
-1. Go to [Portal](https://portal.astar.network/)  and connect to Astar Native Account (Deposit is not possible from Astar EVM)
+1. Go to [Portal](https://portal.astar.network/)  and connect to Astar Native Account (Deposit to Astar EVM is only possible through Astar Native account)
 
 2. Choose the token you wish to deposit to Astar Network.
 
@@ -178,7 +182,7 @@ There are few points you have to prepare before transferring.
 
 <image>
 
-With Astar Native Account which is made in Polkadot.js has all chains corresponding addresses. Here we are in Astar Network account but you can see Polkadot chain’s DOT token balance. You can bring your asset in one click.
+With Astar Native Account which is made in Polkadot.js has all Polkadot and parachains corresponding addresses. Here we are in Astar Network account but you can see Polkadot chain’s DOT token balance. You can bring your asset in one click.
 
 :::Note
 
@@ -194,16 +198,25 @@ Note: We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amou
 
 5. Enter the amount you would like to bring to Astar Network. And confirm.
 
+6. Finding transactions of XCM can be trickey, portal now has browser history so it will take you to the right transaction you have made.
+
+<image history>
 
 
 
-## Transferring cross-chain assets to other chains from Astar Network
+## Transferring cross-chain(XCM) assets to other chains from Astar Network
 
 1. Go to [Portal](https://portal.astar.network/)  and connect to Native or EVM Account. 
 
-2. Choose the token you wish to withdraw from  Astar Network to other chains..
+:::Note
 
-3. Click Transfer and move to Transfer Page. Choose the Cross-chain Transfer tab.
+If you wish to move cross-chain(XCM) assets to Astar Native accounts from Astar EVM accounts, you will first need to send tokens back to the origin chains and make another cross-chain(XCM) transfer to Astar Native account 
+
+:::
+
+2. Choose the token you wish to withdraw from Astar Network to other chains.
+
+3. Click Transfer and move to Transfer Page. Choose the Cross-chain Transfer(XCM) tab.
 
 4. If you are on Astar EVM, place the destination address. You would need the [origin chain’s address](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). 
 
@@ -215,5 +228,5 @@ Note: We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amou
 
 <image>
 
-6. Enter the amount you would like to bring to Astar Network. And confirm.
+6. Enter the amount you would like to bring to Astar Network. And confirm to sign.
 
