@@ -33,7 +33,7 @@ Astar has two different addresses in different formats.
 - An Astar Native address - to do dApps Staking and interact with WASM projects
 - An Astar EVM address - to interact with EVM projects
 
-If you need to create Astar Native account, [this page](@create-wallet) will help you to create the accounts.
+If you need to create Astar Native account, [this page](create-wallet.md) will help you to create the accounts.
 
 If you need to create an Astar EVM account
 
