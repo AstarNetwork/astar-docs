@@ -7,8 +7,7 @@ sidebar_position: 4
 
 In this tutorial we will navigate you how to transfer tokens using Portal and sending tokens to Portal.
 
-<p>
-<br> </p>
+<br />
 
 - [Create Astar Accounts(Native and EVM)](#create-astar-accountsnative-and-evm)
 
@@ -27,8 +26,7 @@ In this tutorial we will navigate you how to transfer tokens using Portal and se
 
 - [Transferring cross-chain(XCM) assets to other chains from Astar Network](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
-<p>
-<br>　</p>
+<br />
 
 ## Create Astar Accounts(Native and EVM)
 
@@ -39,10 +37,9 @@ Astar has two different addresses in different formats.
 
 If you need to create Astar Native account, [this page](create-wallet.md) will help you to create the accounts.
 
-If you need to create an Astar EVM account
+If you need to create an Astar EVM account.
 
-<p>
-<br></p>
+<br />
 
 ## Sending ASTR/SDN to Astar Network from Central Exchanges
 
@@ -79,8 +76,7 @@ Most Exchanges only mention Astar Network which means the network they support i
 6. Once a transaction is made, go back to Portal and check the balance. 
  
  
-<p>
-<br>　</p>
+<br />
 
  
 ## Sending ASTR/SDN to Central Exchanges from Astar Network 
@@ -100,8 +96,7 @@ Most Exchanges only mention Astar Network which means the network they support i
 5. Add the destination address of the exchange and the amount you wish to transfer. 
 <img width="1000" alt="Native-local-destination-address" src="https://user-images.githubusercontent.com/77480847/188531182-9222121b-1c4b-4515-992f-407462a5ae42.png" /> 
  
-<p>
-<br>　</p>
+<br />
    
 ## Sending ASTR/SDN to Astar EVM from Astar Native (or any tokens in the account)
 
@@ -121,8 +116,7 @@ As mentioned above, most exchanges only support Astar Native and you would need 
 5. You are in the transfer page and add the destination address and the amount you wish to transfer. Send. 
 <img width="1000" alt="Native-local-destination-address" src="https://user-images.githubusercontent.com/77480847/188531500-38c2755e-691d-4bc9-bf21-470e98dec4f5.png" /> 
 
-<p>
-<br>　</p>
+<br />
 
 ## Sending ASTR/SDN to Astar Native from Astar EVM
 
@@ -160,8 +154,7 @@ xcAssets (XCM tokens that are compatible in ERC environment) are currently unabl
 7. Modal will come up and you can withdraw by signing. 
 <img width="945" alt="depo-withdraw" src="https://user-images.githubusercontent.com/77480847/188534447-70873ad8-f597-46da-a8b1-3808f3802c0d.png" /> 
 
-<p>
-<br>　</p>
+<br />
 
 ## Cross-chain Transfer(XCM)
 
@@ -175,8 +168,7 @@ There are few points you have to prepare before transferring.
 
 :::
 
-<p>
-<br>　</p>
+<br />
 
 ## Transferring cross-chain(XCM) assets into Astar Network
 
@@ -206,8 +198,8 @@ Note: We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amou
 
 <img width="1000" alt="history" src="https://user-images.githubusercontent.com/77480847/188534964-529b4933-3a60-48ec-a71c-afeb99ff2ade.png" /> 
 
-<p>
-<br>　</p>
+
+<br />
 
 ## Transferring cross-chain(XCM) assets to other chains from Astar Network
 
