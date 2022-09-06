@@ -24,11 +24,11 @@ Adding Astar Network to Metamask is very easiy.
 :::note
 Alternably you can also set it up mannually by giving information bellow.
 <br />
-**Network Details**<br />
-**Network Name**: Astar Network Mainnet<br />
-**Network URL**: https://evm.astar.network<br />
-**Chain ID**: 592<br />
-**Currency Symbol**: astr<br />
-**Block Explorer URL**: https://blockscout.com/astar
+Network Details<br />
+Network Name: Astar Network Mainnet<br />
+Network URL: https://evm.astar.network<br />
+Chain ID: 592<br />
+Currency Symbol: astr<br />
+Block Explorer URL: https://blockscout.com/astar
 
 :::
