@@ -13,7 +13,8 @@ In this tutorial we will navigate you how to transfer tokens using Portal and se
 
 - [Sending ASTR/SDN to Central Exchanges from Astar Network](#sending-astrsdn-to-central-exchanges-from-astar-network)
 
-- [Sending ASTR/SDN to Astar EVM from Astar Native](#sending-astrsdn-to-astar-evm-from-astar-native)
+- [Sending ASTR/SDN to Astar EVM from Astar Native](#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account
+)
 
 - [Sending ASTR/SDN to Astar Native from Astar EVM](#sending-astrsdn-to-astar-native-from-astar-evm)
 
@@ -23,7 +24,6 @@ In this tutorial we will navigate you how to transfer tokens using Portal and se
 
 - [Transferring cross-chain(XCM) assets to other chains from Astar Network](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
-- How to find transaction ID
 
 
 ## Create Astar Accounts(Native and EVM)
@@ -139,7 +139,8 @@ xcAssets (XCM tokens that are compatible in ERC environment) are currently unabl
 <img width="1000" alt="EVM-transfer" src="https://user-images.githubusercontent.com/77480847/188533050-6a8508da-049e-4697-be86-1f61b2d4c0e3.png"/> 
 
 4. You are in the transfer page and add the destination Astar Native address and the amount you wish to transfer. Send. **This transaction is to send tokens to EVM Deposit.** 
-<img width="1384" alt="EVM-to-Native" src="https://user-images.githubusercontent.com/77480847/188534236-a5b70980-6093-41f1-84a5-c1178eeefa4d.png/" 
+
+<img width="1000" alt="EVM-to-Native" src="https://user-images.githubusercontent.com/77480847/188534236-a5b70980-6093-41f1-84a5-c1178eeefa4d.png/" 
 
 5. You will  need to withdraw EVM deposit before you can use the tokens. 
      
@@ -164,7 +165,7 @@ There are few points you have to prepare before transferring.
 :::
 
 
-## Transferring cross-chain assets into Astar Network
+## Transferring cross-chain(XCM) assets into Astar Network
 
 1. Go to [Portal](https://portal.astar.network/)  and connect to Astar Native Account **(Deposit to Astar EVM is only possible through Astar Native account) **
 
