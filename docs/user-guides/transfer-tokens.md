@@ -45,7 +45,7 @@ If you need to create an Astar EVM account.
 
 Most Exchanges support only Astar Network (Native) today except Gate.io who supports Astar (EVM). So you will need an Astar Native Account to receive ASTR tokens and you will send tokens to an Astar EVM account as you wish.
 
-:::Note
+:::tip
 
 Most Exchanges only mention Astar Network which means the network they support is Astar Native.
 
@@ -81,7 +81,7 @@ Most Exchanges only mention Astar Network which means the network they support i
  
 ## Sending ASTR/SDN to Central Exchanges from Astar Network 
 
-:::note
+:::tip
 
 - **Use Astar Native account to send tokens to exchanges who support Astar Network**
 - **Use Astar EVM account to send tokens to exchanges who support Astar EVM**
@@ -181,9 +181,9 @@ There are few points you have to prepare before transferring.
 
 With Astar Native Account which is made in Polkadot.js has all Polkadot and parachains corresponding addresses. Here we are in Astar Network account but you can see Polkadot chain’s DOT token balance. You can bring your asset in one click. 
 
-:::Note
+:::caution
 
-Note: We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amount for 1.1. You will have to have at least 2.2DOT + gas to make a minimum transfer. This is to protect users funds getting reaped by it’s Existential Deposit(ED) (more infor for ED, please go to [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
+We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amount for 1.1. You will have to have at least 2.2DOT + gas to make a minimum transfer. This is to protect users funds getting reaped by it’s Existential Deposit(ED) (more infor for ED, please go to [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
 
 :::
 
@@ -205,7 +205,7 @@ Note: We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amou
 
 1. Go to [Portal](https://portal.astar.network/)  and connect to Native or EVM Account. 
 
-:::Note
+:::tip
 
 If you wish to move cross-chain(XCM) assets to Astar Native accounts from Astar EVM accounts, you will first need to send tokens back to the origin chains and make another cross-chain(XCM) transfer to Astar Native account 
 
