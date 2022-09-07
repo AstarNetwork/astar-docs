@@ -196,7 +196,7 @@ We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amount for
 
 5. Enter the amount you would like to bring to Astar Network. And confirm.
 
-6. Finding transactions of XCM can be trickey, portal now has browser history so it will take you to the right transaction you have made.
+6. Finding transactions of XCM can be tricky, portal now has browser history so it will take you to the right transaction you have made.
 
 <img width="1000" alt="history" src="https://user-images.githubusercontent.com/77480847/188534964-529b4933-3a60-48ec-a71c-afeb99ff2ade.png" />
 
