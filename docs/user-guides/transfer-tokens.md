@@ -107,15 +107,15 @@ As mentioned above, most exchanges only support Astar Native and you would need 
 1. Go to [Portal](https://portal.astar.network/) and copy the Astar EVM address.
    <img width="1000" alt="account-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
 
-2. Or go check Metamask extension and copy the address.
+2. Alternatively, go check MetaMask extension and copy the address.
    <img width="355" alt="MM" src="https://user-images.githubusercontent.com/77480847/188531287-20dfc966-076d-44fc-805a-502f326708cc.png" />
 
 3. Connect to Astar Native account.
 
-4. Press the transfer button next to ASTR token.
+4. Press the transfer button next to the ASTR token.
    <img width="1000" alt="Account-copy" src="https://user-images.githubusercontent.com/77480847/188531419-78d95073-be4e-4020-a40b-cb64150dcdf6.png" />
 
-5. You are in the transfer page and add the destination address and the amount you wish to transfer. Send.
+5. You are now on the transfer page. Add the destination address and the amount you wish to transfer, then press the confirm button.
    <img width="1000" alt="Native-local-destination-address" src="https://user-images.githubusercontent.com/77480847/188531500-38c2755e-691d-4bc9-bf21-470e98dec4f5.png" />
 
 <br />
@@ -126,7 +126,7 @@ Please follow the steps below when you would like to transfer ASTR/SDN tokens to
 
 :::caution
 
-xcAssets (XCM tokens that are compatible in ERC environment) are currently unable to transfer back to Native account (even you might have transferred from native account). You would need to cross-chain transfer(XCM) to the origin chains and make another XCM transfer to Astar Native. Please follow [the steps here](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+xcAssets (XCM tokens that are compatible in EVM network) are currently unable to transfer back to Native account (even you might have transferred from native account). You would need to cross-chain transfer(XCM) to the origin chains and make another XCM transfer to Astar Native. Please follow [the steps here](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
 :::
 :::danger
@@ -138,34 +138,35 @@ xcAssets (XCM tokens that are compatible in ERC environment) are currently unabl
 1. Go to [Portal](https://portal.astar.network/) and connect to Astar Native account to copy address you wish to use.
    <img width="1000" alt="Account-copy" src="https://user-images.githubusercontent.com/77480847/188532843-8be68dcf-edce-4c72-b8c9-4877f45c72d2.png" />
 
-2. Connect to Astar EVM account by switching chains from header button.
+2. Connect to Astar EVM account by switching chains from the header button.
    <img width="1000" alt="Switch-to-EVM" src="https://user-images.githubusercontent.com/77480847/188532949-3ae37836-acd2-424b-b398-8e06ad76271c.png" />
 
 3. Press the transfer button next to the token you wish to send.
    <img width="1000" alt="EVM-transfer" src="https://user-images.githubusercontent.com/77480847/188533050-6a8508da-049e-4697-be86-1f61b2d4c0e3.png" />
 
-4. You are in the transfer page and add the destination Astar Native address and the amount you wish to transfer. Send. **This transaction is to send tokens to EVM Deposit.**
+4. You are now on the transfer page. Add the destination Astar Native address and the amount you wish to transfer, then press the confirm button. **This transaction is to send tokens to EVM Deposit.**
 
 <img width="1137" alt="EVM-depo" src="https://user-images.githubusercontent.com/77480847/188536340-5a59d4e6-290d-451e-b9fd-6d6e424ee76d.png" />　
 
 5. You will need to withdraw EVM deposit before you can use the tokens.
-6. Go back to Native account and press Withdraw button.
+
+6. Go back to Native account and press the Withdraw button.
    <img width="1137" alt="EVM-depo" src="https://user-images.githubusercontent.com/77480847/188534362-3182f4bf-cc32-4d54-a6a9-5624036df905.png" />
 
-7. Modal will come up and you can withdraw by signing.
+7. The modal will come up and you can withdraw by signing.
    <img width="945" alt="depo-withdraw" src="https://user-images.githubusercontent.com/77480847/188534447-70873ad8-f597-46da-a8b1-3808f3802c0d.png" />
 
 <br />
 
 ## Cross-chain Transfer(XCM)
 
-There are few points you have to prepare before transferring.
+There are a few points you have to prepare before making a transfer.
 
 :::note
 
-- When transferring native tokens for origin chains we recommend to leave some amount in the account otherwise you might need some gas tokens to make further transactions.
+- When transferring native tokens for origin chains, we recommend leaving some amount in the account. Otherwise, you might need some gas tokens to make further transactions.
 
-- Min.Balance is usually applied to tokens in the Polkadot Ecosystem and Astar Portal will only make transactions the amount greater than the Min.Balance.
+- Min.Balance is usually applied to tokens in the Polkadot Ecosystem and Astar Portal will only make transactions for amounts greater than the Min.Balance.
 
 :::
 
@@ -184,7 +185,7 @@ With Astar Native Account which is made in Polkadot.js has all Polkadot and para
 
 :::caution
 
-We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amount for 1.1. You will have to have at least 2.2DOT + gas to make a minimum transfer. This is to protect users funds getting reaped by it’s Existential Deposit(ED) (more infor for ED, please go to [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
+We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amount for 1.1. You will have to have at least 2.2DOT + gas to make a minimum transfer. This is to protect user's funds from getting reaped by its Existential Deposit(ED) (more information for ED, please go to [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
 
 :::
 
@@ -193,9 +194,9 @@ We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amount for
 <img width="1000" alt="Chain-select" src="https://user-images.githubusercontent.com/77480847/188534777-ef3c57cb-6f0f-40da-8f5e-5b4058d3e946.png" />
 <img width="1000" alt="XCM-Native-EVM" src="https://user-images.githubusercontent.com/77480847/188534889-ae0086d0-0b47-4016-9e8a-83f2bc928f56.png" />
 
-5. Enter the amount you would like to bring to Astar Network. And confirm.
+1. Enter the amount you would like to bring to Astar Network, then press the confirm button.
 
-6. Finding transactions of XCM can be tricky, portal now has browser history so it will take you to the right transaction you have made.
+2. Finding transactions of XCM can be tricky. Portal now has browser history which will take you to the right transaction you have made.
 
 <img width="1000" alt="history" src="https://user-images.githubusercontent.com/77480847/188534964-529b4933-3a60-48ec-a71c-afeb99ff2ade.png" />
 
@@ -223,4 +224,4 @@ If you wish to move cross-chain(XCM) assets to Astar Native accounts from Astar 
 
 <img width="1000" alt="Input-manually" src="https://user-images.githubusercontent.com/77480847/188535225-6a7afe9d-83db-4fa9-a519-def33c30391a.png" />
 
-6. Enter the amount you would like to bring to Astar Network. And confirm to sign.
+6. Enter the amount you would like to bring to Astar Network, then press the confirm button.
