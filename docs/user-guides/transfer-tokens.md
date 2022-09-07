@@ -28,20 +28,20 @@ In this tutorial we will navigate you how to transfer tokens using Portal and se
 
 ## Create Astar Accounts(Native and EVM)
 
-Astar has two different addresses in different formats.
+Astar has two addresses in different formats.
 
 - An Astar Native address - to do dApps Staking and interact with WASM projects
 - An Astar EVM address - to interact with EVM projects
 
-If you need to create Astar Native account, [this page](create-wallet.md) will help you to create the accounts.
+If you need to create an Astar Native account, [this page](create-wallet.md) will help you to create the accounts.
 
-If you have not added Astar Network to Metamask, it is very simple - Please go to our [Portal](https://portal.astar.network/) and choose Metamask. Metamask will ask you for permission to add Astar Network. Alternatively please see [here](setup-metamask.md) for more Network details.
+If you have not added Astar Network to MetaMask, it is very simple - Please go to our [Portal](https://portal.astar.network/) and choose MetaMask. MetaMask will ask you for permission to add Astar Network. Alternatively, please see [here](setup-metamask.md) for more Network details.
 
 <br />
 
 ## Sending ASTR/SDN to Astar Network from Central Exchanges
 
-Most Exchanges support only Astar Network (Native) today except Gate.io who supports Astar (EVM). So you will need an Astar Native Account to receive ASTR tokens and you will send tokens to an Astar EVM account as you wish.
+Most Exchanges support only Astar Network (Native) today except Gate.io that supports Astar (EVM). You will need an Astar Native Account to receive ASTR tokens and you can send tokens to an Astar EVM account as you wish.
 
 :::tip
 
@@ -51,7 +51,7 @@ Most Exchanges only mention Astar Network which means the network they support i
 
 :::danger
 
-**Make sure the supported network, if it says Astar (EVM) you can only transfer tokens to Astar EVM accounts**.
+**Double check the supported network, if it says Astar (EVM) you can only transfer tokens to Astar EVM accounts**.
 
 :::
 
@@ -79,8 +79,8 @@ Most Exchanges only mention Astar Network which means the network they support i
 
 :::tip
 
-- **Use Astar Native account to send tokens to exchanges who support Astar Network**
-- **Use Astar EVM account to send tokens to exchanges who support Astar EVM**
+- **Use Astar Native account to send tokens to exchanges that support Astar Network**
+- **Use Astar EVM account to send tokens to exchanges that support Astar EVM**
 
 :::
 
@@ -90,10 +90,9 @@ In line with instructions below, please read carefully all the instructions prov
 
 :::
 
-
 1. Copy an address from an exchange you wish to make a transfer to.
 2. Go to [Portal](https://portal.astar.network/) and connect the network to Astar/Shiden (Astar Network is for ASTR and Shiden Network is for SDN token).
-3. Connect your wallet (Native or EVM depends on the exchanges) - if you have not done it yet please go back to [Create Astar Accounts]
+3. Connect your wallet (Native or EVM depends on the exchanges) - if you have not done it yet please go back to [Create Astar Accounts].
 4. Click transfer button.
    <img width="1000" alt="Native-Asset-transfer" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png"/>
 5. Add the destination address of the exchange and the amount you wish to transfer.
