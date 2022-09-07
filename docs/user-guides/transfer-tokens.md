@@ -35,7 +35,7 @@ Astar has two different addresses in different formats.
 
 If you need to create Astar Native account, [this page](create-wallet.md) will help you to create the accounts.
 
-If you need to create an Astar EVM account.
+If you have not added Astar Network to Metamask, it is very simple - Please go to our [Portal](https://portal.astar.network/) and choose Metamask. Metamask will ask you for permission to add Astar Network. Alternatively please see [here](setup-metamask.md) for more Network details.
 
 <br />
 
