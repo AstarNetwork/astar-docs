@@ -84,6 +84,13 @@ Most Exchanges only mention Astar Network which means the network they support i
 
 :::
 
+:::caution
+
+In line with instructions below, please read carefully all the instructions provided by the Exchange as well (address, format, etc).
+
+:::
+
+
 1. Copy an address from an exchange you wish to make a transfer to.
 2. Go to [Portal](https://portal.astar.network/) and connect the network to Astar/Shiden (Astar Network is for ASTR and Shiden Network is for SDN token).
 3. Connect your wallet (Native or EVM depends on the exchanges) - if you have not done it yet please go back to [Create Astar Accounts]
