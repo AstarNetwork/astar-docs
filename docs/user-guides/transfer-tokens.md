@@ -93,7 +93,7 @@ Most Exchanges only mention Astar Network which means the network they support i
    <img width="1000" alt="Native-local-destination-address" src="https://user-images.githubusercontent.com/77480847/188531182-9222121b-1c4b-4515-992f-407462a5ae42.png" />
 
 <br />
-   
+
 ## Sending ASTR/SDN to Astar EVM from Astar Native (or any tokens in the account)
 
 As mentioned above, most exchanges only support Astar Native and you would need to transfer ASTR tokens to Astar EVM if you wish to interact with EVM projects.
