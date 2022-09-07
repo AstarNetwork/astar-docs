@@ -55,13 +55,13 @@ Most Exchanges only mention Astar Network which means the network they support i
 
 :::
 
-1. Go to our [Portal](https://portal.astar.network/)
+1. Go to our [Portal](https://portal.astar.network/).
 
-2. Connect the network to Astar/Shiden (Astar Network is for ASTR and Shiden Network is for SDN token)
+2. Connect the network to Astar/Shiden (Astar Network is for ASTR and Shiden Network is for SDN token).
 
 <img width="1000" alt="network" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Connect your Poladot.js wallet - if you have not done it yet please go back to [Create Astar Accounts](#create-wallet/#astar-accounts)
+3. Connect your Poladot.js wallet - if you have not done it yet please go back to [Create Astar Accounts](#create-wallet/#astar-accounts).
 
 <img width="1000" alt="wallet" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
@@ -85,7 +85,7 @@ Most Exchanges only mention Astar Network which means the network they support i
 :::
 
 1. Copy an address from an exchange you wish to make a transfer to.
-2. Go to [Portal](https://portal.astar.network/) and connect the network to Astar/Shiden (Astar Network is for ASTR and Shiden Network is for SDN token)
+2. Go to [Portal](https://portal.astar.network/) and connect the network to Astar/Shiden (Astar Network is for ASTR and Shiden Network is for SDN token).
 3. Connect your wallet (Native or EVM depends on the exchanges) - if you have not done it yet please go back to [Create Astar Accounts]
 4. Click transfer button.
    <img width="1000" alt="Native-Asset-transfer" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png"/>
@@ -178,7 +178,7 @@ With Astar Native Account which is made in Polkadot.js has all Polkadot and para
 
 :::caution
 
-We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amount for 1.1. You will have to have at least 2.2DOT + gas to make a minimum transfer. This is to protect users funds getting reaped by it’s Existential Deposit(ED) (more infor for ED, please go to [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)
+We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amount for 1.1. You will have to have at least 2.2DOT + gas to make a minimum transfer. This is to protect users funds getting reaped by it’s Existential Deposit(ED) (more infor for ED, please go to [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
 
 :::
 
@@ -201,7 +201,7 @@ We set Polkadot’s DOT Min.balance of 1.1DOT and we set Min.Transfer Amount for
 
 :::tip
 
-If you wish to move cross-chain(XCM) assets to Astar Native accounts from Astar EVM accounts, you will first need to send tokens back to the origin chains and make another cross-chain(XCM) transfer to Astar Native account
+If you wish to move cross-chain(XCM) assets to Astar Native accounts from Astar EVM accounts, you will first need to send tokens back to the origin chains and make another cross-chain(XCM) transfer to Astar Native account.
 
 :::
 
