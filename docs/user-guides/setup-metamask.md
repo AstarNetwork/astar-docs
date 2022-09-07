@@ -8,8 +8,9 @@ In this tutorial we will navigate you how to add Astar/Shiden Network to your Me
 
 <br />
 
-Adding Astar Network to Metamask is very easiy.
+Adding Astar Network to Metamask is very easy.
 <br />
+
 1. You will just need to go to [our Portal](https://portal.astar.network/) and try to connect to Metamask.
 
 <img width="1000" alt="Screenshot 2022-09-06 at 14 08 21" src="https://user-images.githubusercontent.com/77480847/188554147-02f09f39-6051-4f7f-8e6f-d263867afb88.png" /><br />
@@ -22,7 +23,7 @@ Adding Astar Network to Metamask is very easiy.
 <br />
 
 :::note
-Alternatively you can also set it up mannually by giving information bellow.
+Alternatively, you can also set it up manually by giving information bellow.
 <br />
 Network Details<br />
 Network Name: Astar Network Mainnet<br />
