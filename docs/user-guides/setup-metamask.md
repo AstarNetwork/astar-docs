@@ -22,7 +22,7 @@ Adding Astar Network to Metamask is very easiy.
 <br />
 
 :::note
-Alternably you can also set it up mannually by giving information bellow.
+Alternatively you can also set it up mannually by giving information bellow.
 <br />
 Network Details<br />
 Network Name: Astar Network Mainnet<br />
