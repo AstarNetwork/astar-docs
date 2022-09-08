@@ -61,15 +61,11 @@ After the transaction, you can see
 
 and check out your Metamask!
 
-## Understanding the difference betweeen USDT vs. cUSDT
+## The difference betweeen USDT vs. bridgedUSDT
 
-Recently, Tether announced the launch of USDT on Kusama (a scalable network of specialized blockchains built using Substrate and nearly the same codebase as Polkadot), which is the native USDT token on the Kusama blockchain.
+We would have USDT on Astar through Statemint, which is the native USDT token on the Astar blockchain.
 
-Shiden Network is a multi-chain decentralized application layer on Kusama Network. cUSDC on Shiden is a "bridged form of Ethereum USDT" that was bridged from the cBridge. <strong>Because of this, cUSDT is not the same as native USDT.</strong> Tether products do not support cUSDT. You cannot send cUSDT to a Tether deposit address. It is important to note that <strong>you cannot use cUSDT in any WASM environemnt but only in EVM environement.</strong> You can use USDT which is a native USDT token on the Kusama blockchain on both WASM and EVM enviroment.
-
-To off-ramp back to fiat currency with cUSDT, you would need to "unbridge" the cUSDT back to the Ethereum blockchain via the cBridge. After the "unbridging", you would ened up with native USDT on Ethereum. From this point, you could deposit the Ethereum USDT into your Tether account and off-ramp to fiat currency.
-
-In the future, we are potentially going to have a pool of USDT and cUSDT on decentralized exchanges in our ecosystem, so that it is easier for our users to use the two different assets.
+On the other hand, for example, ceUSDT on Astar is a "bridged asset of Ethereum USDT" that was bridged from the ceBridge. Because of this, <strong>ceUSDT is not the same as native USDT.</strong> It is important to note that you can use native USDT registered as XC20 on any WASM projcts in Astar ecosystem in addition to EVM projects but you cannot use bridged USDT on WASM projects.
 
 ## Support
 
