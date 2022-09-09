@@ -63,7 +63,7 @@ and check out your Metamask!
 
 ## The difference betweeen USDT vs. bridgedUSDT
 
-When Tether USD on Astar comes through Statemint, it will act as the native USDT token in the Astar ecosystem.
+When Tether USD on Astar comes through Statemint, it will be the native USDT token in the Astar ecosystem.
 
 ceUSDT on Astar is a "bridged asset of Ethereum USDT" that is bridged from the Celer Bridge (cBridge). Because of this, <strong>ceUSDT is not the same as native USDT.</strong> It is important to note that you can use native USDT registered as XC20 on any WASM projects in Astar ecosystem and supported EVM projects but you cannot use bridged (ce)USDT on WASM projects.
 
