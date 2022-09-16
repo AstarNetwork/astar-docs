@@ -15,7 +15,7 @@ In the following chapters, we will only mention Astar and ASTR token but same ap
 
 [Astar Network]: https://astar.network/
 
-[Astar Network] tokenomics model is built around supporting developers via dApps staking.   At it's core, ASTR tokens have multiple roles:
+[Astar Network] tokenomics model is built around supporting developers via dApps staking. At its core, ASTR tokens have multiple roles:
 
 1. Payment for transaction fees
 2. Staking dApps
@@ -25,7 +25,7 @@ In the following chapters, we will only mention Astar and ASTR token but same ap
 
 ### Overview
 
-Previous chapters defined initial ASTR token distribution. However, Astar uses an inflationary tokenomics model (unbound supply) where some tokens are issued each time a new block is produced. These tokens drive the dApps staking system and are used to reward stakers and collators.
+Previous chapters defined initial ASTR token distribution. However, Astar uses an inflationary tokenomics model (unbound supply) where tokens are issued each time a new block is produced. These tokens drive the dApps staking system and are used to reward stakers and collators.
 
 For each produced block, Astar will issue a fixed number of tokens. These numbers were picked to achieve approximate 10% inflation for the first year, assuming a new block is produced every **12** seconds.
 
@@ -34,8 +34,7 @@ For each produced block, Astar will issue a fixed number of tokens. These number
 |  Astar  |     266.4 ASTR   |
 | Shiden  |      2.664 SDN   |
 
-The reader might notice that Astar issues 100 times more tokens per block than Shiden.
-This is due to Astar having a 100 times greater initial supply than Shiden.
+The reader might notice that Astar issues 100 times more tokens per block than Shiden. This is due to Astar having a 100 times greater initial supply than Shiden.
 
 ### Beneficiaries
 
@@ -43,11 +42,10 @@ Each block reward is distributed to a set of beneficiaries.
 ​
 #### > Collators
 
-The collator responsible for building the block will receive **collator's** portion of reward. This is the main financial incentive for the collators. Portion is configured as percentage of the block reward on-chain and is constant per block unless manually changed. (**TODO**: link where it's explained)
+The collator responsible for building the block will receive **collator's** portion of reward. This is the main financial incentive for the collators. Portion is configured as percentage of the block reward on-chain and is constant per block unless manually changed.
 
 In addition, it will receive fees paid by the users for transactions that were included in the produced block.
-For Shiden, **20%** of the fees are burned to provide deflationary force to the model.
-**TODO** Why not Astar too?
+For Shiden, **20%** of the fees are burned to provide deflationary force to the model. The same might soon be adopted by Astar.
 
 #### > On-chain Treasury
 
@@ -55,10 +53,9 @@ Treasury receives a variable portion of block reward. It is primarily used as re
 
 #### > dApps Staking
 
-`dApps staking`, Astar's innovative developer incentive mechanism, receives a variable portion of the block rewards, depending on current **total value locked** (or **TVL** in further text) in dAPps staking.
+`dApps staking`, Astar's innovative developer incentive mechanism, receives a variable portion of the block rewards depending on current **total value locked** (or **TVL** in further text) in dApps staking.
 
 Part of it is dedicated for supporting dApp developers while another part goes towards stakers who locked their ASTR to *stake* or *vote* for a dApp.
-
 
 ### Model Overview
 

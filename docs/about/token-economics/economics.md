@@ -18,7 +18,7 @@ dApps Staking is a simple but strong mechanism. Astar token holders can stake As
 
 ## Transactions
 
-Every on-chain transaction takes fees. Part of it is burned and part is deposited to the collator.
+Every on-chain transaction requires the sender to pay fees. Part of the fee is burned and part is deposited to the collator.
 
 ## On-Chain Governance
 
