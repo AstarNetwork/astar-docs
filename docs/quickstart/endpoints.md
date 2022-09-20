@@ -106,15 +106,16 @@ Once own Dashboard is prepared,
 The goal of Bware Labs is to build a decentralized platform where Full Node owners and Endpoint users such as developers and organizations are able to collaborate in a secure and trustful manner.
 
 ### Instructions
-To get started, you'll need to head to [Bware Labs](https://app.bwarelabs.com/), and launch the app. You need to connect your wallet to get access to the platform. Once your wallet is connected you will be able to generate your own custom endpoint. To generate an endpoint click on **API Endpoints**:
+To get started, you'll need to head to [Blast API](https://blastapi.io/), and launch the app. You need to connect your wallet to get access to the platform. Once your wallet is connected you will be able to obtain your own custom endpoint.
 
-1. Select a network for your endpoint. There are two options to choose from: Astar or Shiden Network. To get a custom endpoint for Shibuya, select Shiden and choose in the network dropdown for Shibuya.
-2. Give your endpoint a name. 
-3. Click **Create Endpoint.**
-4. Sign with your MetaMask.
+1. Create a project.
+2. Go to Available endpoints and activate Astar or Shiden Network. To get a custom endpoint for Shibuya, select Shiden and choose Shibuya.
 
 <center>
-<img src="https://i.imgur.com/A6shINy.png" alt="BwareLabs" border="0"></img>
+<img src="https://imgur.com/ADu8enD.png" alt="BwareLabs" border="0"></img>
+</center>
+<center>
+<img src="https://imgur.com/9Aha2fR.png" alt="BwareLabs" border="0"></img>
 </center>
 
 ## OnFinality
