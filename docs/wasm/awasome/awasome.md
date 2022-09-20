@@ -2,14 +2,9 @@
 sidebar_position: 2
 ---
 
-# Community
+# aWASoMe
 
-## Didn't find your answer?
+An aWASoMe list of all things related to WASM contract development in the Dotsama community.
+[aWASoMe Github link](https://github.com/AstarNetwork/aWASoMe)
 
-### Polkadot and Substrate Stack Exchange
-
-Many answers can be found in the [Polkadot and Substrate Stack Exchange](https://substrate.stackexchange.com/). Feel free to ask a question if you have one, too!
-
-### Astar Discord
-
-We also have a Discord server that you can join and ask questions in [here](https://discord.com/invite/kvRRnvBbQn)!
+ß
