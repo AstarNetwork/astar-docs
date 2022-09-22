@@ -108,28 +108,6 @@ DESCRIPTION
 
 <Figure caption="Verify dependencies" src={require('./img/02-check.gif').default} />
 
-### `swanky compile`
-
-Compile the given contract.
-
-:::note
-Currently only the default contract that was added in the init step can be interacted with.
-Support for multiple contracts is planned for the coming version.
-:::
-
-```
-USAGE
-  $ swanky compile [-v]
-
-FLAGS
-  -v, --verbose  Display additional compilation output
-
-DESCRIPTION
-  Compile the smart contract(s) in your contracts directory
-```
-
-<Figure caption="Compile a contract" src={require('./img/03-compile.gif').default} />
-
 ### `swanky account`
 
 Manage network accounts.
@@ -173,26 +151,61 @@ DESCRIPTION
 <Figure caption="Add account" src={require('./img/05-account_create.gif').default} />
 <Figure caption="Generate account" src={require('./img/06-account_generate.gif').default} />
 
-### `swanky node`
+### `swanky contract`
 
-Manage a local node.
+#### `new`
+Generate a new contract template.
 
-<Figure caption="Start a local node" src={require('./img/07-node_start.gif').default} />
+```
+USAGE
+  $ swanky contract new [CONTRACTNAME] [--template blank|flipper|psp22] [-v]
 
-### `swanky deploy`
+ARGUMENTS
+  CONTRACTNAME  Name of new contract
+
+FLAGS
+  -v, --verbose
+  --template=<option>  <options: blank|flipper|psp22>
+
+DESCRIPTION
+  Generate a new smart contract template inside a project
+```
+
+#### `compile`
+Compile the given contract.
+
+```
+USAGE
+  $ swanky contract compile [CONTRACTNAME] [-v]
+
+ARGUMENTS
+  CONTRACTNAME  Name of the contract to compile
+
+FLAGS
+  -v, --verbose  Display additional compilation output
+
+DESCRIPTION
+  Compile the smart contract(s) in your contracts directory
+```
+
+<Figure caption="Compile a contract" src={require('./img/03-compile.gif').default} />
+
+#### `deploy`
 
 Deploy a compiled contract to a running node.
 
 ```
 USAGE
-  $ swanky deploy --account <value> -c <value> -g <value> [-a <value>] [-n <value>]
+  $ swanky contract deploy [CONTRACTNAME] --account <value> -g <value> [-a <value>] [-n <value>]
+
+ARGUMENTS
+  CONTRACTNAME  Name of the contract to deploy
 
 FLAGS
   -a, --args=<value>...
-  -c, --contract=<value>  (required)
-  -g, --gas=<value>       (required)
-  -n, --network=<value>   Network name to connect to
-  --account=<value>       (required) Alias of account to be used
+  -g, --gas=<value>      (required)
+  -n, --network=<value>  Network name to connect to
+  --account=<value>      (required) Alias of account to be used
 
 DESCRIPTION
   Deploy contract to a running node
@@ -200,13 +213,13 @@ DESCRIPTION
 
 <Figure caption="Deploy a contract" src={require('./img/08-deploy.gif').default} />
 
-### `swanky call`
+#### `call`
 
 Call a method on a smart contract
 
 ```
 USAGE
-  $ swanky call -m <value> [-a <value>] [-d] [-g <value>] [-n <value>]
+  $ swanky contract call --address <value> -m <value> [-a <value>] [-d] [-g <value>] [-n <value>]
 
 FLAGS
   -a, --args=<value>
@@ -214,9 +227,39 @@ FLAGS
   -g, --gas=<value>
   -m, --message=<value>  (required)
   -n, --network=<value>  Network name to connect to
+  --address=<value>      (required)
 
 DESCRIPTION
   Call a method on a smart contract
+```
+
+### `swanky node`
+
+#### start
+Start a local node.
+
+```
+USAGE
+  $ swanky node start [-t]
+
+FLAGS
+  -t, --tmp  Run node with non-persistent mode
+
+DESCRIPTION
+  Start a local node
+```
+
+<Figure caption="Start a local node" src={require('./img/07-node_start.gif').default} />
+
+#### purge
+Purge local node's persistent chain state.
+
+```
+USAGE
+  $ swanky node purge
+
+DESCRIPTION
+  Purge local chain state
 ```
 
 ## Swanky CLI Config
