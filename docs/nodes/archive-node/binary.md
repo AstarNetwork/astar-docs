@@ -81,9 +81,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
-  --ws-external \
-  --state-cache-size 1
-  
+  --ws-external
+
 Restart=always
 RestartSec=10
 
@@ -111,9 +110,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
-  --ws-external \
-  --state-cache-size 1
-  
+  --ws-external
+
 Restart=always
 RestartSec=10
 
@@ -141,9 +139,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
-  --ws-external \
-  --state-cache-size 1
-  
+  --ws-external
+
 Restart=always
 RestartSec=10
 
