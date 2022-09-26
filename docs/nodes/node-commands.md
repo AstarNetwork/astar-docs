@@ -709,5 +709,5 @@ SUBCOMMANDS:
                                 (public or secret) key
 ```
 
-Node process will launch with Parachain ID 2006 for Astar, 2007 for Shiden, 1000 for Shibuya  when `--parachain-id` flag is not provided explicitly.
+Node process will be launched with Parachain ID 2006 for Astar, 2007 for Shiden, 1000 for Shibuya  when `--parachain-id` flag is not provided explicitly.
 Parachain ID info for each network can be found [here](/docs/quickstart/endpoints/#public-endpoints).
