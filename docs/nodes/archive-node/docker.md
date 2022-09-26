@@ -94,7 +94,6 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
---parachain-id 1000 \
 --pruning archive \
 --name ${NODE_NAME} \
 --chain shibuya \

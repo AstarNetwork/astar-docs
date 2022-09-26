@@ -77,7 +77,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name ${NODE_NAME} \
   --chain astar \
-  --parachain-id 2006 \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
@@ -107,7 +106,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name ${NODE_NAME} \
   --chain shiden \
-  --parachain-id 2007 \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
@@ -137,7 +135,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name ${NODE_NAME} \
   --chain shibuya \
-  --parachain-id 1000 \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \

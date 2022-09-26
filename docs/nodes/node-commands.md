@@ -33,7 +33,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name ${COLLATOR_NAME} \
   --chain astar \
-  --parachain-id 2006 \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
   --execution wasm \
@@ -62,7 +61,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name ${COLLATOR_NAME} \
   --chain shiden \
-  --parachain-id 2007 \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
   --execution wasm \
@@ -91,7 +89,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name ${COLLATOR_NAME} \
   --chain shibuya \
-  --parachain-id 1000 \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
   --execution wasm \
@@ -123,7 +120,6 @@ astar-collator \
 --collator \
 --name ${COLLATOR_NAME} \
 --chain astar \
---parachain-id 2006 \
 --execution wasm \
 --base-path /data \
 --rpc-cors=all \
@@ -144,7 +140,6 @@ astar-collator \
 --collator \
 --name ${COLLATOR_NAME} \
 --chain shiden \
---parachain-id 2007 \
 --execution wasm \
 --base-path /data \
 --rpc-cors=all \
@@ -165,7 +160,6 @@ astar-collator \
 --collator \
 --name ${COLLATOR_NAME} \
 --chain shibuya \
---parachain-id 1000 \
 --execution wasm \
 --base-path /data \
 --rpc-cors=all \
@@ -196,7 +190,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name ${NODE_NAME} \
   --chain astar \
-  --parachain-id 2006 \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
@@ -226,7 +219,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name ${NODE_NAME} \
   --chain shiden \
-  --parachain-id 2007 \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
@@ -256,7 +248,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name ${NODE_NAME} \
   --chain shibuya \
-  --parachain-id 1000 \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
@@ -291,7 +282,6 @@ astar-collator \
 --pruning archive \
 --name ${NODE_NAME} \
 --chain astar \
---parachain-id 2006 \
 --execution Wasm \
 --base-path /data \
 --rpc-cors=all \
@@ -316,7 +306,6 @@ astar-collator \
 --pruning archive \
 --name ${NODE_NAME} \
 --chain shiden \
---parachain-id 2007 \
 --execution Wasm \
 --base-path /data \
 --rpc-cors=all \
@@ -338,7 +327,6 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
---parachain-id 1000 \
 --pruning archive \
 --name ${NODE_NAME} \
 --chain shibuya \
@@ -373,7 +361,7 @@ astar-collator \
 ```
 $ ./astar-collator -h
 
-astar-collator 4.7.0-6c3657987df
+astar-collator 4.21.0-b13d2bc7d98
 Stake Technologies <devops@stake.co.jp>
 Astar Collator
 
@@ -397,6 +385,9 @@ OPTIONS:
             Always accept connecting to private IPv4 addresses (as specified in
             [RFC1918](https://tools.ietf.org/html/rfc1918)). Enabled by default for chains marked as
             "local" in their chain specifications, or when `--dev` is passed
+
+        --blocks-pruning <COUNT>
+            Specify the number of finalized blocks to keep in the database
 
         --bob
             Shortcut for `--name Bob --validator` with session keys for `Bob` added to keystore
@@ -499,9 +490,6 @@ OPTIONS:
             Require iterative Kademlia DHT queries to use disjoint paths for increased resiliency in
             the presence of potentially adversarial nodes
 
-        --keep-blocks <COUNT>
-            Specify the number of finalized blocks to keep in the database
-
         --keystore-path <PATH>
             Specify custom keystore path
 
@@ -510,9 +498,6 @@ OPTIONS:
 
     -l, --log <LOG_PATTERN>...
             Sets a custom logging filter. Syntax is <target>=<level>, e.g. -lsync=debug
-
-        --light
-            Experimental: Run in light client mode
 
         --listen-addr <LISTEN_ADDR>...
             Listen on this multiaddress
@@ -566,7 +551,7 @@ OPTIONS:
             Specify the number of outgoing connections we're trying to maintain [default: 25]
 
         --parachain-id <PARACHAIN_ID>
-            Id of the parachain this collator collates for [default: 2007]
+            Id of the parachain this collator collates for
 
         --password <PASSWORD>
             Password used by the keystore. This allows appending an extra user-defined secret to the
@@ -592,9 +577,6 @@ OPTIONS:
 
         --prometheus-port <PORT>
             Specify Prometheus exporter TCP Port
-
-        --pruning <PRUNING_MODE>
-            Specify the state pruning mode, a number of blocks to keep or 'archive'
 
         --public-addr <PUBLIC_ADDR>...
             The public address that other nodes will use to connect to it. This can be used if
@@ -645,6 +627,9 @@ OPTIONS:
         --state-cache-size <Bytes>
             Specify the state cache size [default: 67108864]
 
+        --state-pruning <PRUNING_MODE>
+            Specify the state pruning mode, a number of blocks to keep or 'archive'
+
         --sync <SYNC_MODE>
             Blockchain syncing mode. [default: full] [possible values: full, fast, fast-unsafe,
             warp]
@@ -663,6 +648,9 @@ OPTIONS:
 
         --two
             Shortcut for `--name Two --validator` with session keys for `Two` added to keystore
+
+        --tx-ban-seconds <SECONDS>
+            How long a transaction is banned for, if it is considered invalid. Defaults to 1800s
 
         --unsafe-pruning
             THIS IS A DEPRECATED CLI-ARGUMENT
@@ -720,3 +708,6 @@ SUBCOMMANDS:
     verify                  Verify a signature for a message, provided on STDIN, with a given
                                 (public or secret) key
 ```
+
+Node process will launch with Parachain ID 2006 for Astar, 2007 for Shiden, 1000 for Shibuya  when `--parachain-id` flag is not provided explicitly.
+Parachain ID info for each network can be found [here](/docs/quickstart/endpoints/#public-endpoints).
