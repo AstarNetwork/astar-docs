@@ -125,7 +125,7 @@ Let's first go to our binary directory and start the collator manually:
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain astar --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+./astar-collator --collator --chain astar --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
 ```
 
 </TabItem>
@@ -134,7 +134,7 @@ cd /usr/local/bin
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain shiden --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+./astar-collator --collator --chain shiden --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
 ```
 
 </TabItem>
@@ -143,7 +143,7 @@ cd /usr/local/bin
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain shibuya --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+./astar-collator --collator --chain shibuya --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
 ```
 
 </TabItem>
@@ -196,9 +196,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain astar \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm \
-  --state-cache-size 1
-  
+  --execution wasm
+
 Restart=always
 RestartSec=120
 
@@ -224,9 +223,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain shiden \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm \
-  --state-cache-size 1
-  
+  --execution wasm
+
 Restart=always
 RestartSec=120
 
@@ -252,9 +250,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain shibuya \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm \
-  --state-cache-size 1
-  
+  --execution wasm
+
 Restart=always
 RestartSec=120
 

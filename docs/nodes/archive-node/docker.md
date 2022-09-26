@@ -51,8 +51,7 @@ astar-collator \
 --base-path /data \
 --rpc-cors=all \
 --unsafe-rpc-external \
---ws-external \
---state-cache-size 1
+--ws-external
 ```
 
 </TabItem>
@@ -76,8 +75,7 @@ astar-collator \
 --base-path /data \
 --rpc-cors=all \
 --unsafe-rpc-external \
---ws-external \
---state-cache-size 1
+--ws-external
 ```
 
 </TabItem>
@@ -101,8 +99,7 @@ astar-collator \
 --base-path /data \
 --rpc-cors=all \
 --unsafe-rpc-external \
---ws-external \
---state-cache-size 1
+--ws-external
 ```
 
 </TabItem>
