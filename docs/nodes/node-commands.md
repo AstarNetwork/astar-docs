@@ -36,8 +36,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --parachain-id 2006 \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm \
-  --state-cache-size 1
+  --execution wasm
 
 Restart=always
 RestartSec=120
@@ -65,8 +64,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --parachain-id 2007 \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm \
-  --state-cache-size 1
+  --execution wasm
 
 Restart=always
 RestartSec=120
@@ -94,8 +92,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --parachain-id 1000 \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm \
-  --state-cache-size 1
+  --execution wasm
 
 Restart=always
 RestartSec=120
@@ -126,8 +123,7 @@ astar-collator \
 --parachain-id 2006 \
 --execution wasm \
 --base-path /data \
---rpc-cors=all \
---state-cache-size 1
+--rpc-cors=all
 ```
 
 </TabItem>
@@ -147,8 +143,7 @@ astar-collator \
 --parachain-id 2007 \
 --execution wasm \
 --base-path /data \
---rpc-cors=all \
---state-cache-size 1
+--rpc-cors=all
 ```
 
 </TabItem>
@@ -168,8 +163,7 @@ astar-collator \
 --parachain-id 1000 \
 --execution wasm \
 --base-path /data \
---rpc-cors=all \
---state-cache-size 1
+--rpc-cors=all
 ```
 
 </TabItem>
@@ -200,8 +194,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
-  --ws-external \
-  --state-cache-size 1
+  --ws-external
   
 Restart=always
 RestartSec=10
@@ -230,8 +223,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
-  --ws-external \
-  --state-cache-size 1
+  --ws-external
   
 Restart=always
 RestartSec=10
@@ -260,9 +252,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --execution Wasm \
   --unsafe-rpc-external \
-  --ws-external \
-  --state-cache-size 1
-  
+  --ws-external
+
 Restart=always
 RestartSec=10
 
@@ -296,8 +287,7 @@ astar-collator \
 --base-path /data \
 --rpc-cors=all \
 --unsafe-rpc-external \
---ws-external \
---state-cache-size 1
+--ws-external
 ```
 
 </TabItem>
@@ -321,8 +311,7 @@ astar-collator \
 --base-path /data \
 --rpc-cors=all \
 --unsafe-rpc-external \
---ws-external \
---state-cache-size 1
+--ws-external
 ```
 
 </TabItem>
@@ -346,8 +335,7 @@ astar-collator \
 --base-path /data \
 --rpc-cors=all \
 --unsafe-rpc-external \
---ws-external \
---state-cache-size 1
+--ws-external
 ```
 
 </TabItem>
@@ -640,10 +628,7 @@ OPTIONS:
             Specify HTTP RPC server TCP port
 
         --runtime-cache-size <RUNTIME_CACHE_SIZE>
-            Maximum number of different runtimes that can be cached [default: 2]
-
-        --state-cache-size <Bytes>
-            Specify the state cache size [default: 67108864]
+            Maximum number of different runtimes that can be cached [default: 2]    
 
         --sync <SYNC_MODE>
             Blockchain syncing mode. [default: full] [possible values: full, fast, fast-unsafe,
@@ -660,6 +645,13 @@ OPTIONS:
 
         --tracing-targets <TARGETS>
             Sets a custom profiling filter. Syntax is the same as for logging: <target>=<level>
+
+        --trie-cache-size <Bytes>
+            Specify the state cache size.
+            
+            Providing `0` will disable the cache.
+            
+            [default: 67108864]
 
         --two
             Shortcut for `--name Two --validator` with session keys for `Two` added to keystore

@@ -125,7 +125,7 @@ Let's first go to our binary directory and start the collator manually:
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain astar --parachain-id 2006 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+./astar-collator --collator --chain astar --parachain-id 2006 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
 ```
 
 </TabItem>
@@ -134,7 +134,7 @@ cd /usr/local/bin
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain shiden --parachain-id 2007 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+./astar-collator --collator --chain shiden --parachain-id 2007 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
 ```
 
 </TabItem>
@@ -143,7 +143,7 @@ cd /usr/local/bin
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain shibuya --parachain-id 1000 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm --state-cache-size 1
+./astar-collator --collator --chain shibuya --parachain-id 1000 --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
 ```
 
 </TabItem>
@@ -197,9 +197,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --parachain-id 2006 \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm \
-  --state-cache-size 1
-  
+  --execution wasm
+
 Restart=always
 RestartSec=120
 
@@ -226,9 +225,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --parachain-id 2007 \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm \
-  --state-cache-size 1
-  
+  --execution wasm
+
 Restart=always
 RestartSec=120
 
@@ -255,9 +253,8 @@ ExecStart=/usr/local/bin/astar-collator \
   --parachain-id 1000 \
   --base-path /var/lib/astar \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm \
-  --state-cache-size 1
-  
+  --execution wasm
+
 Restart=always
 RestartSec=120
 
