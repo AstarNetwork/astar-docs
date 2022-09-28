@@ -94,3 +94,10 @@ const xcmToken = {
 1. Create a class(Repository) that inherits from [XcmRepository](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/repositories/implementations/XcmRepository.ts) class and define the logic under `getTransferCall` and `getTokenBalance` methods [(e.g.)](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/repositories/implementations/xcm/AcalaXcmRepository.ts).
 2. export the Repository class in [/src/v2/repositories/implementations/index.ts](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/repositories/implementations/index.ts)
 3. Add the Repository at [XcmRepositoryConfiguration](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/config/xcm/XcmRepositoryConfiguration.ts#L11) object variable.
+
+## Requirement for creating a PR
+
+1. Developers should have tested for both deposit and withdrawal transactions invoked via our portal
+2. Developers should have tested for both deposit and withdrawal transactions with the `minBridgeAmount`
+3. Developers should have tested for withdrawing assets to wallet accounts which have 0 balance for the assets being withdrawn (for checking whether `minBridgeAmount` is higher than `Existential Deposit` that defined on origin chain).
+4. Submit the Subscan link for transaction details of the XCM transfers for all assets you've registered.
