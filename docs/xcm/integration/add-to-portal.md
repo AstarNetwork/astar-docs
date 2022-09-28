@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Add assets to Astar Portal
+# Add assets into Astar Portal
 
 Once a channel is opened between parachains and assets have been registered, developers can create a PR to [our portal](https://github.com/AstarNetwork/astar-apps) for adding assets to our portal. Here’s what you need to know about the integration of the XCM assets into our portal.
 
