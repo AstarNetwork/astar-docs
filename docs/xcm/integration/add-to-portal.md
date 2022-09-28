@@ -9,7 +9,7 @@ Once a channel is opened between parachains and assets have been registered, dev
 ## Define the parachains information
 
 1. Add the `Chain name` at the [Chain](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/models/XcmModels.ts#L2) enum.
-2. Add the `parachain id` at the [parachainIds](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/models/XcmModels.ts#L2) enum.
+2. Add the `parachain id` at the [parachainIds](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/models/XcmModels.ts#L17) enum.
 3. Add the `chain metadata` at the [xcmChainObj](https://github.com/AstarNetwork/astar-apps/blob/main/src/modules/xcm/index.ts#L48) object variable.
 
    e.g.
