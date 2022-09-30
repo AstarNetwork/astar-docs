@@ -28,11 +28,13 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 |         | Dwellier: https://astar-rpc.dwellir.com |
 |         | OnFinality: https://astar.api.onfinality.io/public |
 |         | Pinknode: Get started [here](https://www.pinknode.io/) |
+|         | Automata 1RPC: https://1rpc.io/astr, get started [here](https://www.1rpc.io) |
 | Websocket | Alchemy: Get started [here](https://www.alchemy.com/astar) |
 |           | Blast: wss://astar.public.blastapi.io |
 |           | Dwellier: wss://astar-rpc.dwellir.com |
 |           | OnFinality: wss://astar.api.onfinality.io/public-ws |
 |           | Pinknode: Get started [here](https://www.pinknode.io/) |
+|           | Automata 1RPC: wss://1rpc.io/astr, get started [here](https://www.1rpc.io) |
 | chainID | 592 |
 | Symbol | ASTR |
 
