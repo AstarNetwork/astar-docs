@@ -1,0 +1,89 @@
+---
+sidebar_position: 6
+---
+
+# Remote Tranasct via Smart Contracts
+
+XCM's `Transact` instructions allows sender to execute arbitrary call in the destination chain. This allows us to execute remote transactions
+in other chains, in case they support or allow such functionality.
+
+E.g. a user could send `Transact` instruction from **Astar** to **Polkadot** that will transfer some `DOT` from user's derived account on **Polkadot** to an arbitrary receiver account on **Polkadot**. The end user does't directly interact with **Polkadot** chain, but can still change its state. It's important to note that this is just an example - any call that can be interpreted by the remote (destination) chain can potentially be sent and executed.
+
+This is of particular use to smart contracts since it allows them to build custom cross-chain interoperable logic.
+
+It's important to understand the difference between sending an XCM instruction sequence and receiving/interpreting it. Even though sending an XCM from `Astar` or `Shiden` might succeed, execution on the destination chain might fail.
+
+User must ensure that the destination chain supports the encoded call and remote transaction in general. It is possible that remote chain doesn't support remote transaction (it's blocked by them) or that only a subset of calls can be executed remotely. This doesn't fall under `Astar` or `Shiden` chains though.
+
+## XCM Instructions
+
+Parachain is responsible for configuring it's own `XCM executor` and which calls it exposes to users, therefore it's important to make sure that not just anyone can execute any XCM instruction sequence. To simplify the API via which smart contracts send the `Transact` instruction, we expose an **API** that builds a sequence like:
+1. `DescendOrigin`
+2. `WithdrawAsset`
+3. `BuyExecution`
+4. `Transact`
+
+### DescendOrigin
+
+ Ensures that origin isn't parachain but a more complex junction like `{ parachain: 2006, accountId: 0x123aff....ff }`. If this was omitted, any call would be executed as if it was sent from the *root-only* parachain's sovereign account, and we cannot allow that.
+
+ Some chains might allow direct mapping, where the same account can be controlled on the destination chain as the one that was used to send the instruction on the origin chain. Other chains might use the received account Id and the origin parachain Id to derive an entirely new account Id (private account). This is not controlled by `Astar` and can differ from parachain to parachain.
+
+ ### WithdrawAsset
+
+ Withdraws assets on the destination chain from the derived sender account. The account must have the specified asset and the requested amount, otherwise the instruction will fail. These assets are used to pay for the execution time - both XCM execution and the remote call execution.
+
+ ### BuyExecution
+
+ Using the withdrawn assets, buy execution time using all the withdrawn assets in the previous step.
+ The `weight_limit` parameter is set to `Unlimited`. This isn't too important for the used instruction sequence since user controls the maximum allowed weight via the amount of withdrawn assets.
+
+ There are no refunds at the end of sequence. Unused weight will be handled by the remote chain.
+
+ ### Transact
+
+ At this point, the `origin` has been configured and execution time has been bought. Assuming origin is supported and enough execution time was bought, the remote call can be executed.
+
+ Two important parameter of the `Transact` instruction:
+ * `origin_type` - this is set to `SovereignAccount` and cannot be changed by the end user
+ * `require_weight_at_most` - maximum amount of weight that will be consumed by the remote call (doesn't include XCM instructions weight)
+
+ It's important to configure the weight correctly since if it is too low, the remote execution will be blocked.
+
+ See TODO for more info on how to calculate correct parameters.
+
+## EVM
+
+`Transact` functionality is exposed to EVM smart contracts via precompiles. Interface can be found [here](https://github.com/AstarNetwork/astar-frame) under the XCM precompiles.
+
+```js
+function remote_transact(
+    uint256 parachain_id,
+    bool is_relay,
+    address payment_asset_id,
+    uint256 payment_amount,
+    bytes calldata call,
+    uint64 transact_weight
+) external returns (bool);
+```
+
+`destination` can either be a sibling parachain Id or relay chain (in which case parachain Id is ignored)
+`payment asset Id & amount` - which asset to withdraw in the destination chain and how much. Used to pay for execution time. Current limitation is that the asset used must have a local derivative since it's referenced via H160 address
+`call` - encoded call to be executed on the remote chain
+`transact_weight` - max weight that can be consumed by the call execution on remote chain
+
+## Payment Asset and Transact Weight
+
+Specifying the correct amount of assets to withdraw and buy execution time with, as well as the correct transact weight can be tricky. Neither are actually controlled by `Astar` or `Shiden` runtime, instead the destination chain's runtime handles it. There are a few points and tips that can help user calculate the correct values.
+
+The payment asset amount is used to pay for two distinct executions:
+1. XCM instructions - there are 4 XCM instructions in the sequence we're sending and each one is weighed by the destination chain in order to determine how much should be paid for the execution. At the moment most of the parachains (and relay chains) have XCM instruction weight configured to be `1_000_000_000` units of weight
+2. Call weight - weight of the `call` on the remote chain
+
+The withdrawn amount must therefore cover `4_000_000_000 + weight(call)` units of weight.
+
+
+
+Keep in mind that these values can change - if destination runtime gets upgraded or reconfigured, the values might change and you will need to adjust values in your smart contract.
+
+# ![17](img/17.png)
