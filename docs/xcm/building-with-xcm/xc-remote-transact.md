@@ -123,7 +123,8 @@ The total weight is **4_941_000_000** units of weight.
 Repeat step 3 and query the fee details.
 ![6-final-fee-details](img/remote-transact/006_total_fee_for_execution.png)
 
+The calculated fee is **5.2682 mASTR**.
 
-TODO
-
-
+To summarize, in case we want to do remote execution on `Astar`, we should:
+* withdraw about **0.0053 ASTR** 
+* specify max transact weight to be **941_000_000** units of weight.
