@@ -80,10 +80,50 @@ The payment asset amount is used to pay for two distinct executions:
 1. XCM instructions - there are 4 XCM instructions in the sequence we're sending and each one is weighed by the destination chain in order to determine how much should be paid for the execution. At the moment most of the parachains (and relay chains) have XCM instruction weight configured to be `1_000_000_000` units of weight
 2. Call weight - weight of the `call` on the remote chain
 
-The withdrawn amount must therefore cover `4_000_000_000 + weight(call)` units of weight.
+The withdrawn asset amount must therefore cover `4_000_000_000 + weight(call)` units of weight.
 
-
+Weight of the `call` is determined by the destination chain's runtime, it's not controled either by `Astar` or `Shiden`. User should ensure to correctly weigh the remote call on the destination chain before sending it via XCM.
 
 Keep in mind that these values can change - if destination runtime gets upgraded or reconfigured, the values might change and you will need to adjust values in your smart contract.
 
-# ![17](img/17.png)
+### Calculating Values
+
+Astar docs page cannot guarantee that the following approach will work on all parachains since each of them can be customized differently. But in general, all parachains should have access to these methods.
+
+Let's assume for this example that we're on some other chain and want to execute remote transaction `Astar`.
+
+**Step 1** is to open `Astar` in *polkadot-js* and find the extrinsic we want to execute. For the sake of simplicity, let's assume it's `dappsStaking->claimStaker` although it could be any call.
+
+![1-encoded-call](img/remote-transact/001_dapps_staking_claim.png)
+
+**Step 2** is to sign the transaction without submitting it.
+![2-sign-no-submit](img/remote-transact/002_unsigned_transaction.png)
+
+**Step 3** is to press **Sign** and store the *Signed transaction* data for further use.
+![3-signed-tx-data](img/remote-transact/003_non_signed_tx_data.png)
+
+**Step 4** is to open the **RPC** handle under **Developer** and select `payment->QueryInfo`. Copy the stored `Signed transaction` data into prompt and submit the RPC call. Reply will show how much this transaction weights and how much does it cost to execute it.
+In this particular case, we can see it costs **941_000_000** units of weight to execute.
+![4-query-sig-tx-info](img/remote-transact/004_rpc_query_info_weight_transact_call.png)
+
+**Step 5** is a bit hacky - we need to know how much executing each XCM instruction costs in the destination chain. For `Astar` and `Shiden` it's `1_000_000_000` units of weight per instruction - this is more or less used by every parachain, there's no guarantee however. Knowing this, we can take the transact call weight and sum it up with 4 times weight of a single XCM instruction.
+
+| Name      | Amount |
+| ----------- | ----------- |
+| Call      | 941_000_000       |
+| XCM instructions   | 4_000_000_000 |
+| Total  | 4_941_000_000  |
+
+The total weight is **4_941_000_000** units of weight.
+
+**Step 6** is yet again hacky - open the `polkadotXcm->execute` extrinsic call and specify `maxWeight` to equal the previously calculated value of **4_941_000_000**. As in step 2, get the signed transaction data.
+
+![5-empty-execute](img/remote-transact/005_xcm_execute_weight_hack.png)
+
+Repeat step 3 and query the fee details.
+![6-final-fee-details](img/remote-transact/006_total_fee_for_execution.png)
+
+
+TODO
+
+
