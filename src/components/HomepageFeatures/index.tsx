@@ -117,6 +117,16 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
+  {
+    title: 'Cookbooks',
+    link: '/docs/cookbooks/',
+    iconClass: 'docs',
+    description: (
+      <>
+        Learn how to use tools and build projects in Astar ecosystem.
+      </>
+    ),
+  },
 ];
 
 function Feature({ title, iconClass, description, link }: FeatureItem) {
