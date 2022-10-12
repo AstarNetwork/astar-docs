@@ -37,12 +37,6 @@ Source code for both Swanky CLI nad Swanky Node is hosted on GitHub:
 - [Swanky CLI](https://github.com/AstarNetwork/swanky-cli)
 - [Swanky Node](https://github.com/AstarNetwork/swanky-node).
 
-:::note
-
-Swanky CLI is currently in Beta 1 phase allowing interaction with Swanky Node.
-
-:::
-
 ## Architecture overview
 
 The Swanky Suite consists of two main parts, Swanky CLI and the Swanky Node.
@@ -60,11 +54,29 @@ $ npm install -g @astar-network/swanky-cli
 $ swanky COMMAND
 running command...
 $ swanky (--version|-V|-v)
-@astar-network/swanky-cli/0.1.6 darwin-x64 node-v18.2.0
+@astar-network/swanky-cli/0.2.0 darwin-x64 node-v18.2.0
 $ swanky --help [COMMAND]
 USAGE
   $ swanky COMMAND
 ...
+```
+
+### `swanky help`
+
+Display help and usage examples for swanky commands and subcommands.
+
+```
+USAGE
+  $ swanky help [COMMAND] [-n]
+
+ARGUMENTS
+  COMMAND  Command to show help for.
+
+FLAGS
+  -n, --nested-commands  Include all nested commands in the output.
+
+DESCRIPTION
+  Display help for swanky.
 ```
 
 ### `swanky init`
@@ -108,73 +120,52 @@ DESCRIPTION
 
 <Figure caption="Verify dependencies" src={require('./img/02-check.gif').default} />
 
-### `swanky account`
-
-Manage network accounts.
-
-With this command you can list all accounts added to the config to interact with the node, as well as create new ones from existing mnemonic, or generated one.
-
-:::warning
-At the current state, `swanky account` command should only be used to store developer accounts that are not used on live chains.
-The secure storage and handling of live accounts will be added in a coming version.
+:::note
+Currently you have to be be in a project folder to run this command.
 :::
 
-#### `list`
+### `swanky account`
+
+Create and manage accounts to be used in contract interaction.
 
 ```
 USAGE
-  $ swanky account list
+  $ swanky account COMMAND
 
-DESCRIPTION
-  List dev accounts stored in config
-
-ALIASES
-  $ swanky account ls
+COMMANDS
+  account create  Create a new dev account in config
+  account list    List dev accounts stored in config
+  account ls      List dev accounts stored in config
 ```
 
-<Figure caption="Listing accounts" src={require('./img/04-account_list.gif').default} />
+When creating a new account with `swanky account create`, you will be asked if you're creating a dev account.
+If you answer YES, the mnemonic for that account will not be encrypted, and you will not be asked to create a password, nor to input it when interacting with a contract.
+Be careful not to use that account on live networks.
 
-#### `create`
+To generate a new mnemonic, use `-g` or `--generate` flag.
 
-```
-USAGE
-  $ swanky account create [-f] [-g]
-
-FLAGS
-  -f, --force
-  -g, --generate
-
-DESCRIPTION
-  Create a new dev account in config
-```
-
-<Figure caption="Add account" src={require('./img/05-account_create.gif').default} />
 <Figure caption="Generate account" src={require('./img/06-account_generate.gif').default} />
 
 ### `swanky contract`
 
-#### `new`
-Generate a new contract template.
-
-```
-USAGE
-  $ swanky contract new [CONTRACTNAME] [--template blank|flipper|psp22] [-v]
-
-ARGUMENTS
-  CONTRACTNAME  Name of new contract
-
-FLAGS
-  -v, --verbose
-  --template=<option>  <options: blank|flipper|psp22>
-
-DESCRIPTION
-  Generate a new smart contract template inside a project
-```
-
-#### `compile`
 Compile the given contract.
 
 ```
+USAGE
+  $ swanky contract COMMAND
+
+COMMANDS
+  contract call     Call a method on a smart contract
+  contract compile  Compile the smart contract(s) in your contracts directory
+  contract deploy   Deploy contract to a running node
+  contract new      Generate a new smart contract template inside a project
+```
+
+#### `compile`
+
+```
+Compile the smart contract(s) in your contracts directory
+
 USAGE
   $ swanky contract compile [CONTRACTNAME] [-v]
 
@@ -213,6 +204,25 @@ DESCRIPTION
 
 <Figure caption="Deploy a contract" src={require('./img/08-deploy.gif').default} />
 
+#### `new`
+
+Generate a new smart contract template inside a project
+
+```
+USAGE
+  $ swanky contract new [CONTRACTNAME] [--template blank|flipper|psp22] [-v]
+
+ARGUMENTS
+  CONTRACTNAME  Name of new contract
+
+FLAGS
+  -v, --verbose
+  --template=<option>  <options: blank|flipper|psp22>
+
+DESCRIPTION
+  Generate a new smart contract template inside a project
+```
+
 #### `call`
 
 Call a method on a smart contract
@@ -235,93 +245,18 @@ DESCRIPTION
 
 ### `swanky node`
 
-#### start
-Start a local node.
+Manage a local node.
 
 ```
 USAGE
-  $ swanky node start [-t]
+  $ swanky node COMMAND
 
-FLAGS
-  -t, --tmp  Run node with non-persistent mode
-
-DESCRIPTION
-  Start a local node
+COMMANDS
+  node purge  Purge local chain state
+  node start  Start a local node
 ```
 
 <Figure caption="Start a local node" src={require('./img/07-node_start.gif').default} />
-
-#### purge
-Purge local node's persistent chain state.
-
-```
-USAGE
-  $ swanky node purge
-
-DESCRIPTION
-  Purge local chain state
-```
-
-## Swanky CLI Config
-
-A newly generated project will have a `swanky.config.json` file.
-
-### Example:
-
-```json
-{
-  "node": {
-    "localPath": "/path/to/swanky-node",
-    "polkadotPalletVersions": "polkadot-v0.9.27",
-    "supportedInk": "v3.3.1"
-  },
-  "accounts": [
-    {
-      "alias": "alice",
-      "mnemonic": "//Alice"
-    },
-    {
-      "alias": "bob",
-      "mnemonic": "//Bob"
-    }
-  ],
-  "networks": {
-    "local": {
-      "url": "ws://127.0.0.1:9944"
-    },
-    "astar": {
-      "url": "wss://rpc.astar.network"
-    },
-    "shiden": {
-      "url": "wss://rpc.shiden.astar.network"
-    },
-    "shibuya": {
-      "url": "wss://rpc.shibuya.astar.network"
-    }
-  }
-}
-
-```
-
-### Network Management
-You can deploy/call wasm smart contracts on any chains supporting the substrate contracts module ([`pallet-contracts`](https://github.com/paritytech/substrate/tree/master/frame/contracts)) by swanky-cli.
-`--network` flag is available for `deploy` and `call` commands. For example,
-```
-swanky deploy --account alice --gas 100000000000 --contract flipper --args true --network shibuya
-```
-
-By default, `swanky init` prepares local/astar/shiden/shibuya endpoint for you.
-To add networks or change endpoint to interact with, you need to update `swanky.config.json` `networks` section.
-```
-"networks": {
-  "local": {
-    "url": "ws://127.0.0.1:9944"
-  },
-  "your_network": {
-    "url": "wss://your.network"
-  }
-}
-```
 
 ## Swanky Node
 
