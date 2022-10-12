@@ -119,7 +119,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Builder Guides',
-    link: '/docs/builder-guides/',
+    link: '/docs/cookbooks/',
     iconClass: 'docs',
     description: (
       <>
