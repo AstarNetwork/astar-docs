@@ -85,8 +85,17 @@ Now that you've generated the XC20 precompile address, you can use the address t
 ## Accessing XC20 From Smart Contract
 
 In order to access XC20 via smart contract, _EVM revert code_ first needs to be registered on the XC20 address.
-This currently isn't automated and requires small intervention from the Astar team.
+This currently isn't automated and requires small intervention from the Astar team for `Astar` and `Shiden` network.
 
 Please contact us if you cannot access XC20 from your smart contract
 
-[polkadotjs-apps]: https://polkadot.js.org/apps/
+For `Shibuya` testnet, user can manually register revert code using a small trick. Open `Shibuya` in [polkadot-js app](https://polkadot.js.org/apps/) (under *Test networks*) and select `Extrinsic` under `Developer` dropdown menu.
+
+Now do the following:
+* select `xcAssetConfig->registerAssetLocation`
+* it doesn't really matter which asset location you select, but to make it more consistent and easier to follow-up, we suggest the following:
+  * `V1`
+  * `parents: 0`
+  * `interior: X1( GeneralIndex (>>your asset Id<<) )`
+* `assetId` should match your asset Id
+* submit the extrinsic and after it gets included in the block, revert code will be registered for you asset, making it accessible from smart contracts
