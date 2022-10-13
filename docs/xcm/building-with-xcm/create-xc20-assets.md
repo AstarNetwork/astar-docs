@@ -98,4 +98,4 @@ Now do the following:
   * `parents: 0`
   * `interior: X1( GeneralIndex (>>your asset Id<<) )`
 * `assetId` should match your asset Id
-* submit the extrinsic and after it gets included in the block, revert code will be registered for you asset, making it accessible from smart contracts
+* submit the extrinsic and after it gets included in the block, revert code will be registered for your asset, making it accessible from smart contracts
