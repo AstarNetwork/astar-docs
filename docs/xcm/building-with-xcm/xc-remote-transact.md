@@ -13,11 +13,11 @@ This is of particular use to smart contracts since it allows them to build custo
 
 It's important to understand the difference between sending an XCM instruction sequence and receiving/interpreting it. Even though sending an XCM from `Astar` or `Shiden` might succeed, execution on the destination chain might fail.
 
-User must ensure that the destination chain supports the encoded call and remote transaction in general. It is possible that remote chain doesn't support remote transaction (it's blocked by them) or that only a subset of calls can be executed remotely. This doesn't fall under `Astar` or `Shiden` chains though.
+A user must ensure that the destination chain supports the encoded call and remote transaction in general. It is possible that remote chain doesn't support remote transaction (it's blocked by them) or that only a subset of calls can be executed remotely. This doesn't fall under `Astar` or `Shiden` chains though.
 
 ## XCM Instructions
 
-Parachain is responsible for configuring it's own `XCM executor` and which calls it exposes to users, therefore it's important to make sure that not just anyone can execute any XCM instruction sequence. To simplify the API via which smart contracts send the `Transact` instruction, we expose an **API** that builds a sequence like:
+A parachain is responsible for configuring it's own `XCM executor` and which calls it exposes to users, therefore it's important to make sure that not just anyone can execute any XCM instruction sequence. To simplify the API via which smart contracts send the `Transact` instruction, we expose an **API** that builds a sequence like:
 1. `DescendOrigin`
 2. `WithdrawAsset`
 3. `BuyExecution`
@@ -25,7 +25,7 @@ Parachain is responsible for configuring it's own `XCM executor` and which calls
 
 ### DescendOrigin
 
- Ensures that origin isn't parachain but a more complex junction like `{ parachain: 2006, accountId: 0x123aff....ff }`. If this was omitted, any call would be executed as if it was sent from the *root-only* parachain's sovereign account, and we cannot allow that.
+ Ensures that the origin isn't a parachain but a more complex junction like `{ parachain: 2006, accountId: 0x123aff....ff }`. If this was omitted, any call would be executed as if it was sent from the *root-only* parachain's sovereign account, and we cannot allow that.
 
  Some chains might allow direct mapping, where the same account can be controlled on the destination chain as the one that was used to send the instruction on the origin chain. Other chains might use the received account Id and the origin parachain Id to derive an entirely new account Id (private account). This is not controlled by `Astar` and can differ from parachain to parachain.
 
@@ -82,7 +82,7 @@ The payment asset amount is used to pay for two distinct executions:
 
 The withdrawn asset amount must therefore cover `4_000_000_000 + weight(call)` units of weight.
 
-Weight of the `call` is determined by the destination chain's runtime, it's not controled either by `Astar` or `Shiden`. User should ensure to correctly weigh the remote call on the destination chain before sending it via XCM.
+The weight of the `call` is determined by the destination chain's runtime, it's not controlled either by `Astar` or `Shiden`. A user should ensure to correctly weigh the remote call on the destination chain before sending it via XCM.
 
 Keep in mind that these values can change - if destination runtime gets upgraded or reconfigured, the values might change and you will need to adjust values in your smart contract.
 
