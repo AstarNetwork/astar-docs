@@ -106,7 +106,9 @@ Let's assume for this example that we're on some other chain and want to execute
 In this particular case, we can see it costs **941_000_000** units of weight to execute.
 ![4-query-sig-tx-info](img/remote-transact/004_rpc_query_info_weight_transact_call.png)
 
-**Step 5** is a bit hacky - we need to know how much executing each XCM instruction costs in the destination chain. For `Astar` and `Shiden` it's `1_000_000_000` units of weight per instruction - this is more or less used by every parachain, there's no guarantee however. Knowing this, we can take the transact call weight and sum it up with 4 times weight of a single XCM instruction.
+**Step 5** is a bit hacky. We need to know how much does it cost to execute a **single** XCM instruction in the destination chain. For `Astar` and `Shiden` it's `1_000_000_000` units of weight per instruction. This is more or less used by every parachain, but there's no guarantee so user should make sure to check this themselves or contact the other parachains team.
+
+Since we are sending 4 XCM instructions, the total weight of *raw* XCM instructions will be 4 times the weight of a single XCM instruction: `4 x 1_000_000_000`. There's the additional weight of the transact call being executed - this is summed up with the raw XCM instructions weight.
 
 | Name      | Amount |
 | ----------- | ----------- |
