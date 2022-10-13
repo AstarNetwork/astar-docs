@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# XCM with dApps
+# XC20 via Smart Contracts
 
 So far we’ve successfully transferred assets from Kusama to Shiden and we’ve shown we can access those assets the same as any other via MetaMask. Now we take it one step further and demonstrate how to use these assets from the Smart Contracts.
 
