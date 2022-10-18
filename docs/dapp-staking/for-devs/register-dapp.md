@@ -4,10 +4,10 @@ sidebar_position: 2
 
 # Register dApp
 
-How to register your dApp in our dApp staking mechanism. First, you have to make sure that you meet the [requirements](https://docs.astar.network/docs/dapp-staking/for-devs/requirements). **dApp staking is for all live projects in our ecosystem.** Just contact a member of [SpaceLabs](https://astar.network/spacelabs/) to be added to our dApp staking portal.
+How to register your dApp in our dApp staking mechanism. First, you have to make sure that you meet the [requirements](https://docs.astar.network/docs/dapp-staking/for-devs/requirements). **dApp staking is for all live projects in our ecosystem.** To receive support, the fastest way is to contact a member of [SpaceLabs](https://astar.network/spacelabs/).
 
 :::info
-- To register a dApp, you need to have 100 SDN or 1000 ASTR tokens + gas fee in your developer's wallet.
+- To register a dApp, you need to have 100 SDN or 1000 ASTR tokens + gas fee in your developer's wallet. On our testnet Shibuya you also need to have 100 SBY tokens.
 - Create/import your developer's wallet in the Polkadot JS extension.
 :::
 
@@ -24,6 +24,6 @@ Deploy a smart contract in our ecosystem and verify the contract in our explorer
 
 Go to our [portal](https://portal.astar.network/#/store/discover-dapps) and click on `+ Register dApp`:
 
-Provide all the information in the pop-up window and press register. Keep in mind that your account needs to be **whitelisted**, and you have the needed tokens in the wallet that is registering the dApp.
+Provide all the information in the pop-up window and press register. Keep in mind that your account needs to be **approved first**, and you have the needed tokens in the wallet that is registering the dApp.
 
 When your dApp is deployed, we would appreciate it if you shared this with your community. We have created a template that you can use to write the article. You can find it [here](https://astarnetwork.notion.site/dApp-staking-template-Astar-Network-07d029f2d89644f48a17650522968682).
