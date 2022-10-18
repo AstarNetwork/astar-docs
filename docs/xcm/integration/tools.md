@@ -44,3 +44,24 @@ EVM XC20: 0xffffffff000000000000000000002695a9e649b2
 ```
 
 You can input standard asset Id (as seen by pallet-assets) and as output you get H160 address of that asset.
+
+## Account32Hash
+
+For calculating `Account32Hash` ([here](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-builder/src/location_conversion.rs#L25)), we provide a dedicated command. However, the possible `MultiLocation`s format is limited to:
+
+1. `{ parents: 1, interior: X1(AccountId32{ network: Any, id: 0x<id>}) }`
+2. `{ parents: 1, interior: X2(Parachain(para_id), AccountId32{ network: Any, id: 0x<id>}) }`
+
+For the first case, use the following command:
+```bash
+xcm-tools account32-hash -a 0x84746218b9858233f45f99d742aa3ea2f31aeb5a525938f240fdee3000000000
+5EKFVedcKtGBPytwgj9sbCTmjSr8wJTmhHuuWTz9RhMRrv1h
+```
+The value under `-a` is a SS58 public key.
+
+For the second case, use the following command:
+```bash
+xcm-tools account32-hash -p 1000 -a 0x84746218b9858233f45f99d742aa3ea2f31aeb5a525938f240fdee3000000000
+5G9fvUEXj93MBeaAzzXQh4RpsTygPssbrVcpuWCzE9u8K4KD
+```
+The value under `-p` is parachain Id, while `-a` is again public key.
