@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Requirements
 
-**Are you a product owner and want to list your dApp in our staking mechanism to earn rewards?** Please read these guidelines carefully. If you meet all the requirements, you can just continue filling in [this form](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) so we can list your dApp.
+**Are you a project owner and want to list your dApp in our staking mechanism to earn rewards?** Please read these guidelines carefully. If you meet all the requirements, you can just continue filling in [this form](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) so we can list your dApp.
 
 Are you interested to join dApp staking on Shiden or Astar? Read carefully to see if you meet the requirements:
 
