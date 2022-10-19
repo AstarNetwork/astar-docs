@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Gas Price API
+# Astar.js
 
 ## Overview
 
