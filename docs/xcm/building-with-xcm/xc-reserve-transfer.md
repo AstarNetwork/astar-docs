@@ -1,0 +1,58 @@
+---
+sidebar_position: 7
+---
+
+# Reserve Transfer Assets
+
+XCM allowus us to transfer assets from one chain to another in several ways. In this chapter we'll see how to use reserve transfers.
+
+First of all, you need to understand that we don't just magically teleport an asset to a remote chain, i.e. actual tokens do not leave the local chain, they just migrate to a special local account controlled by a remote entity. Basically we create a derivative that will represent local asset on a remote chain. This is done by registering an asset and mapping it's supply to a sovereign account. That way, the `assets` pallet will handle token minting and burning automatically, so the amount of minted derivatives will always match amount of actual tokens residing in corresponding sovereign account.
+ок,
+
+Suppose we want Shibuya `SBY` tokens to be present on Shiden as a wrapped asset `wSBY`.
+
+- Shibuya chain will need to have Shiden's sovereign account. This account is controlled by Shiden and would represent funds that were sent to the remote chain (Shiden from Shibuya's perspective)
+- Shiden should create `wSBY` asset and configure it to act as a cross-chain asset
+- HRMP channels should also be configured for chains to communicate and exchange XCM messages
+- To pay for execution time `wSBY` should be configured as a payment asset on Shiden
+
+During the actual transfer the following happens:
+1. Some `SBY`s are moved from source account to the sovereign account of Shiden on Shibuya
+2. `ReserveTransferAssets` message is sent to Shiden
+3. That message is processed by assets pallet on Shiden, the corresponding amount of `wSBY`s is minted on Shiden
+4. Minted `wSBY` tokens are transferred to the destination account
+5. Some amount is deducted as a payment for execution time
+
+# EVM precompile
+
+This functionality is exposed to EVM smart contracts via precompiles. Interface can be found [here](https://github.com/AstarNetwork/astar-frame) under the XCM precompiles.
+
+```js
+    function assets_reserve_transfer(
+        address[] calldata asset_id,
+        uint256[] calldata asset_amount,
+        bytes32   recipient_account_id,
+        bool      is_relay,
+        uint256   parachain_id,
+        uint256   fee_index
+    ) external returns (bool);
+```
+
+- `asset_id` is a list of assets to transfer
+- `asset_amount` - the corresponding amounts of assets
+- `recipient_account_id` - recepient account id on the destination chain (or a relay chain)
+- `is_relay` is true if destination account is on the relay chain
+- `parachain_id` - destination parachain id
+- `fee_index` - which asset from `asset_id` to use for paying XCM fee
+
+**Note:** there is another version of `assets_reserve_transfer` precompile that accepts `address` instead of `bytes32` for `recipient_account_id`.
+
+# Transaction fees and asset sufficiency
+
+Every transaction must be paid. This is done to prevent transaction floods by creating economical pressure to sender. So, technically only those tokens that have some real value can be used to pay for transactions.
+
+Usually we pay for transactions using chain's native token. It's expected that its emission was controlled and will not cause any problems. But in some cases we may want to allow users pay for transactions using foreign assets only.
+
+To do that remote chain should be configured to allow XCM execution payment using that asset.
+
+If an asset is configured as sufficient then an account containing such an asset does not need to hold existential deposit in native tokens of that chain. So an account does not need to have any native tokens to receive such an asset.
