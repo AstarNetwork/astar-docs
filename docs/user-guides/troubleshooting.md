@@ -15,7 +15,7 @@ This section will guide you to troubleshoot and solve most issues when connectin
 2. Click on the 3 dots.
 3. On the dropdown menu, select "Allow use on any chain".
 
-## Getting Errors Or Unable To Execute Certain Funtions
+## Getting Errors Or Unable To Execute Certain Functions
 Some of you may be unable to execute certain funtions e.g. claim staking rewards. Please try these steps.
 1. Update metadata (if required).
 2. Clear cache, restart browser and connect wallet to the portal again.
