@@ -6,9 +6,6 @@ sidebar_position: 7
 
 XCM allows us to transfer assets from one chain to another in several ways. In this chapter we'll see how to use reserve transfers.
 
-First of all, you need to understand that we don't just magically teleport an asset to a remote chain, i.e. actual tokens do not leave the local chain, they just migrate to a special local account controlled by a remote entity. Basically we create a derivative that will represent local asset on a remote chain. This is done by registering an asset and mapping it's supply to a sovereign account. That way, the `assets` pallet will handle token minting and burning automatically, so the amount of minted derivatives will always match amount of actual tokens residing in corresponding sovereign account.
-ок,
-
 Suppose we want Shibuya `SBY` tokens to be present on Shiden as a wrapped asset `wSBY`.
 
 - Shibuya chain will need to have Shiden's sovereign account. This account is controlled by Shiden and would represent funds that were sent to the remote chain (Shiden from Shibuya's perspective)
@@ -22,6 +19,8 @@ During the actual transfer the following happens:
 3. That message is processed by assets pallet on Shiden, the corresponding amount of `wSBY`s is minted on Shiden
 4. Minted `wSBY` tokens are transferred to the destination account
 5. Some amount is deducted as a payment for execution time
+
+**Note:** Please keep in mind that everything above is just an example specific to the implementation of two particular parachains. XCM does not dictate or impose any restrictions on how to interpret incoming messages, or how to manage derivative assets. Other parachains may or may not use `assets` pallet and technically the only thing we can say for sure is that `assets_reserve_transfer` will form a XCM message `ReserveTransferAssets` that would be sent to a remote chain specified by its `parachain_id`. Eeverything else is dependent on the remote chain and its logic.
 
 # EVM precompile
 
@@ -60,5 +59,3 @@ Every transaction must be paid. This is done to prevent transaction floods by cr
 Usually we pay for transactions using chain's native token. It's expected that its emission was controlled and will not cause any problems. But in some cases we may want to allow users pay for transactions using foreign assets only.
 
 To do that remote chain should be configured to allow XCM execution payment using that asset.
-
-If an asset is configured as sufficient then an account containing such an asset does not need to hold existential deposit in native tokens of that chain. So an account does not need to have any native tokens to receive such an asset.
