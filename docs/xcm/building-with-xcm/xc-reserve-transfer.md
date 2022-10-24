@@ -75,7 +75,7 @@ assets = [
 asset_amounts = [ 333333333, 111111 ]
 ```
 
-# Transaction fees and asset sufficiency
+# Transaction fees
 
 Every transaction must be paid. This is done to prevent transaction floods by creating economical pressure to sender. So, technically only those tokens that have some real value can be used to pay for transactions.
 
