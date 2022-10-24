@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Reserve Transfer Assets
 
-XCM allowus us to transfer assets from one chain to another in several ways. In this chapter we'll see how to use reserve transfers.
+XCM allows us to transfer assets from one chain to another in several ways. In this chapter we'll see how to use reserve transfers.
 
 First of all, you need to understand that we don't just magically teleport an asset to a remote chain, i.e. actual tokens do not leave the local chain, they just migrate to a special local account controlled by a remote entity. Basically we create a derivative that will represent local asset on a remote chain. This is done by registering an asset and mapping it's supply to a sovereign account. That way, the `assets` pallet will handle token minting and burning automatically, so the amount of minted derivatives will always match amount of actual tokens residing in corresponding sovereign account.
 ок,
@@ -35,10 +35,10 @@ This functionality is exposed to EVM smart contracts via precompiles. Interface 
         bool      is_relay,
         uint256   parachain_id,
         uint256   fee_index
-    ) external returns (bool);
+    ) external payable returns (bool);
 ```
 
-- `asset_id` is a list of assets to transfer
+- `asset_id` is a list of assets to transfer; for transferring native assets see the next section.
 - `asset_amount` - the corresponding amounts of assets
 - `recipient_account_id` - recepient account id on the destination chain (or a relay chain)
 - `is_relay` is true if destination account is on the relay chain
@@ -46,6 +46,12 @@ This functionality is exposed to EVM smart contracts via precompiles. Interface 
 - `fee_index` - which asset from `asset_id` to use for paying XCM fee
 
 **Note:** there is another version of `assets_reserve_transfer` precompile that accepts `address` instead of `bytes32` for `recipient_account_id`.
+
+# Transferring native assets
+
+Current API identifes assets being transferred by specifying an H160 style address (XC20). This prevents us from sending native token since there's no representation for it. However, there is a workaround for that which uses EVM `msg.value` API.
+
+Precompile implemenation checks `msg.value` and, if positive, treats it as another asset to be sent (`MultiLocation { parents: 0, interior: Here }`). In that case, native asset is added to the tail of `asset_id` and `asset_amount` lists and can be indexed by `fee_index` as any other asset in the list. Its value would be set equal to `msg.value`.
 
 # Transaction fees and asset sufficiency
 
