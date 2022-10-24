@@ -17,10 +17,10 @@ During the actual transfer the following happens:
 1. Some `SBY`s are moved from source account to the sovereign account of Shiden on Shibuya
 2. `ReserveTransferAssets` message is sent to Shiden
 3. That message is processed by assets pallet on Shiden, the corresponding amount of `wSBY`s is minted on Shiden
-4. Minted `wSBY` tokens are transferred to the destination account
+4. Minted `wSBY` tokens are deposited to the destination account
 5. Some amount is deducted as a payment for execution time
 
-**Note:** Please keep in mind that everything above is just an example specific to the implementation of two particular parachains. XCM does not dictate or impose any restrictions on how to interpret incoming messages, or how to manage derivative assets. Other parachains may or may not use `assets` pallet and technically the only thing we can say for sure is that `assets_reserve_transfer` will form a XCM message `ReserveTransferAssets` that would be sent to a remote chain specified by its `parachain_id`. Eeverything else is dependent on the remote chain and its logic.
+**Note:** Please keep in mind that everything above is just an example specific to the implementation of two particular parachains. XCM does not dictate or impose any restrictions on how to interpret incoming messages, or how to manage derivative assets. Other parachains may or may not use `assets` pallet and technically the only thing we can say for sure is that `assets_reserve_transfer` will form a XCM message that would be sent to a remote chain specified by its `parachain_id`. Everything else is dependent on the remote chain and its logic.
 
 # EVM precompile
 
@@ -51,6 +51,29 @@ This functionality is exposed to EVM smart contracts via precompiles. Interface 
 Current API identifes assets being transferred by specifying an H160 style address (XC20). This prevents us from sending native token since there's no representation for it. However, there is a workaround for that which uses EVM `msg.value` API.
 
 Precompile implemenation checks `msg.value` and, if positive, treats it as another asset to be sent (`MultiLocation { parents: 0, interior: Here }`). In that case, native asset is added to the tail of `asset_id` and `asset_amount` lists and can be indexed by `fee_index` as any other asset in the list. Its value would be set equal to `msg.value`.
+
+For example, if we have an EVM call like
+```
+reserve_transfer:
+    // for the sake of example, let's say this is
+    // { parents: 1, interior: X1(Parachain(2007)) }
+    asset_id = [ "0x123....000" ]
+
+    asset_amount = [ 333333333 ]
+    ...
+    fee_index = 1
+    msg.value = 111111,
+```
+
+…then precompile internals will transform call args into something like this:
+```
+assets = [
+    { parents: 1, interior: X1(Parachain(2007)) },
+    { parents: 0, interior: Here }
+]
+
+asset_amounts = [ 333333333, 111111 ]
+```
 
 # Transaction fees and asset sufficiency
 
