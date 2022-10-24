@@ -1,0 +1,138 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.About Astar": {
+    "message": "About Astar",
+    "description": "The label for category About Astar in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Token Economics": {
+    "message": "Token Economics",
+    "description": "The label for category Token Economics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ecosystem": {
+    "message": "Ecosystem",
+    "description": "The label for category Ecosystem in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Start Building": {
+    "message": "Start Building",
+    "description": "The label for category Start Building in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.dApp Staking": {
+    "message": "dApp Staking",
+    "description": "The label for category dApp Staking in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Stakers": {
+    "message": "For Stakers",
+    "description": "The label for category For Stakers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Devs": {
+    "message": "For Devs",
+    "description": "The label for category For Devs in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Use EVM": {
+    "message": "Use EVM",
+    "description": "The label for category Use EVM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Your First Contract": {
+    "message": "Your First Contract",
+    "description": "The label for category Your First Contract in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Use WebAssembly(WASM)": {
+    "message": "Use WebAssembly(WASM)",
+    "description": "The label for category Use WebAssembly(WASM) in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Astar Wasm Stack": {
+    "message": "Astar Wasm Stack",
+    "description": "The label for category Astar Wasm Stack in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Smart-contract development": {
+    "message": "Smart-contract development",
+    "description": "The label for category Smart-contract development in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Advanced": {
+    "message": "Advanced",
+    "description": "The label for category Advanced in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run A Node": {
+    "message": "Run A Node",
+    "description": "The label for category Run A Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run an Archive Node": {
+    "message": "Run an Archive Node",
+    "description": "The label for category Run an Archive Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run a Collator Node": {
+    "message": "Run a Collator Node",
+    "description": "The label for category Run a Collator Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Secure Setup Guide": {
+    "message": "Secure Setup Guide",
+    "description": "The label for category Secure Setup Guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integrate Toolings": {
+    "message": "Integrate Toolings",
+    "description": "The label for category Integrate Toolings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.API": {
+    "message": "API",
+    "description": "The label for category API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.dApp Listings": {
+    "message": "dApp Listings",
+    "description": "The label for category dApp Listings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Bridges": {
+    "message": "Bridges",
+    "description": "The label for category Bridges in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Wallets": {
+    "message": "Wallets",
+    "description": "The label for category Wallets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ledger": {
+    "message": "Ledger",
+    "description": "The label for category Ledger in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Node Providers": {
+    "message": "Node Providers",
+    "description": "The label for category Node Providers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Indexers": {
+    "message": "Indexers",
+    "description": "The label for category Indexers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Oracles": {
+    "message": "Oracles",
+    "description": "The label for category Oracles in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Cross-Chain Messaging - XCM": {
+    "message": "Cross-Chain Messaging - XCM",
+    "description": "The label for category Cross-Chain Messaging - XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Using XCM": {
+    "message": "Using XCM",
+    "description": "The label for category Using XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Building with XCM": {
+    "message": "Building with XCM",
+    "description": "The label for category Building with XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration": {
+    "message": "Integration",
+    "description": "The label for category Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Builder Guides": {
+    "message": "Builder Guides",
+    "description": "The label for category Builder Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration and Toolings": {
+    "message": "Integration and Toolings",
+    "description": "The label for category Integration and Toolings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.User Guides": {
+    "message": "User Guides",
+    "description": "The label for category User Guides in sidebar tutorialSidebar"
+  }
+}
