@@ -15,12 +15,12 @@ Suppose we want Shibuya `SBY` tokens to be present on Shiden as a wrapped asset 
 
 During the actual transfer the following happens:
 1. Some `SBY`s are moved from source account to the sovereign account of Shiden on Shibuya
-2. `ReserveTransferAssets` message is sent to Shiden
+2. An XCM containing `ReserveTransferAssets` instruction is sent to Shiden
 3. That message is processed by assets pallet on Shiden, the corresponding amount of `wSBY`s is minted on Shiden
 4. Minted `wSBY` tokens are deposited to the destination account
 5. Some amount is deducted as a payment for execution time
 
-**Note:** Please keep in mind that everything above is just an example specific to the implementation of two particular parachains. XCM does not dictate or impose any restrictions on how to interpret incoming messages, or how to manage derivative assets. Other parachains may or may not use `assets` pallet and technically the only thing we can say for sure is that `assets_reserve_transfer` will form a XCM message that would be sent to a remote chain specified by its `parachain_id`. Everything else is dependent on the remote chain and its logic.
+**Note:** Please keep in mind that everything above is just an example specific to the implementation of two particular parachains. XCM does not dictate or impose any restrictions on how to interpret incoming messages, or how to manage derivative assets. Other parachains may or may not use `assets` pallet and technically the only thing we can say for sure is that `assets_reserve_transfer` will form an XCM that would be sent to a remote chain specified by its `parachain_id`. Everything else is dependent on the remote chain and its logic.
 
 # EVM precompile
 
