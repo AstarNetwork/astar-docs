@@ -43,7 +43,7 @@ The asset is now created in our network but has no supply. To mint the tokens yo
 ![Mint your assets](img/7.png)
 
 1. Only the **issuer account** has permission to mint the token.
-2. Select to address who receives the minted assets, we recommend using a [multisig](https://docs.astar.network/tutorial/how-to/how-to-create-a-multisig-wallet).
+2. Select to address who receives the minted assets, we recommend using a [multisig](https://docs.astar.network/docs/user-guides/create-multisig).
 
 ## Set Asset Metadata
 
