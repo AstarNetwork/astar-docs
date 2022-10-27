@@ -20,8 +20,7 @@ It offers a large range of features:
 - Off-chain Testing - `#[ink(test)]`
 
 ## Documentation
-
-[Ink! Github repo](https://github.com/paritytech/ink)
-[Ink! Intro repo](https://paritytech.github.io/ink/)
-[Ink! Official Documentation](https://ink.substrate.io/)
-[Ink! Rust doc](https://paritytech.github.io/ink/ink_lang/)
+- [Ink! Github repo](https://github.com/paritytech/ink)
+- [Ink! Intro repo](https://paritytech.github.io/ink/)
+- [Ink! Official Documentation](https://use.ink/)
+- [Ink! Rust doc](https://paritytech.github.io/ink/ink_lang/)
