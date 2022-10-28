@@ -181,7 +181,7 @@ There are a few points you have to prepare before making a transfer.
 3. Click Transfer and move to Transfer Page. Choose the Cross-chain Transfer tab.
    <img width="1000" alt="Native-XCM" src="https://user-images.githubusercontent.com/77480847/188534616-5980f599-a5ba-4516-983f-108939ce87e6.png" />
 
-With Astar Native Account which is made in Polkadot.js has all Polkadot and parachains corresponding addresses. Here we are in Astar Network account but you can see Polkadot chain’s DOT token balance. You can bring your asset in one click.
+Polkadot.js supports all parachains therefore you will be able to view all the assets of other parachains including DOT. You can bring your asset in one click.
 
 :::caution
 
@@ -219,9 +219,9 @@ If you wish to move cross-chain(XCM) assets to Astar Native accounts from Astar 
 4. If you are on Astar EVM, place the destination address. You would need the [origin chain’s address](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses).
    <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
-5. If you are on Astar Native and happy to transfer the token within the same account when you don’t need to change here but just reverse the order but you can manually input another account’s address.
+5. If you are on Astar Native and would like to transfer token to a different chain within the same account, you do not need to input the address. Otherwise, enter the address manually if you want to transfer to other account. You may also transfer tokens from another chain to Astar Native by clicking the reverse button.
    <img width="1000" alt="XCM-reverse" src="https://user-images.githubusercontent.com/77480847/188535198-27aaf6e9-6b15-4e6f-bc6a-84febcd78de0.png" />
 
 <img width="1000" alt="Input-manually" src="https://user-images.githubusercontent.com/77480847/188535225-6a7afe9d-83db-4fa9-a519-def33c30391a.png" />
 
-6. Enter the amount you would like to bring to Astar Network, then press the confirm button.
+6. Enter the amount you would like to transfer, then press the confirm button.
