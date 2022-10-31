@@ -24,12 +24,12 @@ The Frontier EVM used in Astar provides several useful precompiled contracts. Th
 
 | Precompile | Address |
 | -------- | -------- |
-| DappsStaking     | 0x0000000000000000000000000000000000005001     |
-| Sr25519     | 0x0000000000000000000000000000000000005002     |
-| SubstrateEcdsa | 0x0000000000000000000000000000000000005003     |
-| XCM | 0x0000000000000000000000000000000000005004     |
+| [DappsStaking](precompiles/dapp-staking.md) | 0x0000000000000000000000000000000000005001     |
+| [Sr25519](precompiles/sr25519.md) | 0x0000000000000000000000000000000000005002     |
+| [SubstrateEcdsa](precompiles/substrate-ecdsa.md) | 0x0000000000000000000000000000000000005003     |
+| [XCM](precompiles/xcm.md) | 0x0000000000000000000000000000000000005004     |
 | assets-erc20 | ASSET_PRECOMPILE_ADDRESS_PREFIX |
-| XVM | ? |
+| [XVM](precompiles/xvm.md) | ? |
 
 The interface descriptions for these precompiles can be found in the `precompiles` folder: [astar-frame repo](https://github.com/AstarNetwork/astar-frame/).
 
