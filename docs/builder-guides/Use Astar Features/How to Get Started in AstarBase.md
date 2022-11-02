@@ -2,17 +2,17 @@
 sidebar_position: 1
 ---
 
-# How to get started in AstarBase
+# How to get started with AstarBase
 
 ## TL;DR
 
-This cookbook lets you learn how to start using AstarBase, which is an on-chain EVM database in Astar Ecosystem. After reading this, you will be able to make a small "Hello World" use case of AstarBase yourself.
+This cookbook will learn you on how to started using AstarBase. AstarBase is an on-chain EVM database in Astar Ecosystem. After reading this, you will be able to make a small "Hello World" use case of AstarBase yourself.
 
 ## What is AstarBase
 
-AstarBase is an on-chain EVM database. AstarBase contains a mapping of users's EVM and Native address, which makes user to have many applications on top of AstarBase. EVM address is usually referred as Metamask address or H160 and Polkadot native address can be referred as ss58 and these two are interchangeable through the mapping AstarBase offers. 
+AstarBase is an on-chain EVM database. AstarBase contains the mapping of users's EVM and native address. An EVM address is usually referred as a Metamask address or H160, native address can be referred as a SS58 address. These two are now interchangeable through the mapping that AstarBase offers. 
 
-All in all, the main goal of Astar Base is creating more end user cases for users to participate in the Astar Ecosystem by offering some mechanisms such as rewarding users easily.
+The main goal of AstarBase is creating more end-user cases for users to participate in the Astar ecosystem by offering some mechanisms such as rewarding users easily.
 
 ## (Functions available in AstarBase)
 
@@ -23,33 +23,29 @@ function isRegistered(address evmAddress)
     external view 
     returns (bool);
 ```
-
-This one checks if the given address was registered in AstarBase.
+This code snippet checks if the given address was registered in AstarBase.
 
 ```jsx
 function checkStakerStatus(address evmAddress)
     external view
     returns (uint128);
 ```
-
-This one checks if pair of addresses (ss58, evm) is an active staker in dApps-staking and returns staked amount
+This code snippet checks if the pair of addresses (SS58 & EVM) is an active staker in dApps Staking and returns the staked amount.
 
 ```jsx
 function checkStakerStatusOnContract(address evmAddress, address stakingContract)
     external view
     returns (uint128);
 ```
-
-The one above checks if pair of addresses (ss58, evm) is an active staker in dApps-staking on the specified contract and returns staked amount.
+This code snippet checks if the pair of addresses (SS58 & EVM) is an active staker in dApps Staking on the specified contract and returns the staked amount.
 
 ## Create a simple dApp using AstarBase
 
 We will work on a simple “Hello World” dApp which has a simple frontend to show a practical use case of AstarBase. 
 
-Our app checks if certain user is a registered user in AstarBase. One application of this would be to pick a loyal user so that ERC20 airdrop can be made to only those loyal users.
+Our showcase checks if certain user is a registered user in AstarBase. One application of this would be to pick a loyal user.
 
-### Step1:
-
+### Step 1:
 First, we will create a simple front end. In this example, we use React.js by running the command below.
 
 ```bash
@@ -58,8 +54,7 @@ cd my-app
 npm start
 ```
 
-### Step2:
-
+### Step 2:
 We slightly modify the frontend in App.js file so that now when a user clicks a button. The log on console shows if a certain user is registered in AstarBase.
 
 ```jsx
@@ -70,17 +65,16 @@ return (
   );
 ```
 
-### Step3:
+### Step 3:
 
-We use Shibuya Address for this example and so add a necessary detail available from [here](https://github.com/AstarNetwork/astarbase/blob/main/public/config/config.json) in App.js file.
+We use a Shibuya address for this example. Add the a necessary details available from [here](https://github.com/AstarNetwork/astarbase/blob/main/public/config/config.json) in App.js file.
 
 ```jsx
 const web3 = new Web3(new Web3.providers.HttpProvider("[https://rpc.shibuya.astar.network:8545](https://rpc.shibuya.astar.network:8545/)"));
 ```
 
-### Step4:
-
-ABI is available [here](https://github.com/AstarNetwork/astarbase/blob/main/public/config/register_abi.json) and so we add it in App.js file. For this, we put ABI in the same file for simplicity but you can put it in a different folder to make your code cleaner.
+### Step 4:
+The ABI is available [here](https://github.com/AstarNetwork/astarbase/blob/main/public/config/register_abi.json), we can now add it in App.js file. For this, we put ABI in the same file to make is easy, but you can put it in a different folder to make your code cleaner.
 
 ```jsx
 const abi = [
@@ -382,17 +376,15 @@ const abi = [
     ];
 ```
 
-### Step5:
-
-Finally, we add a corresponding contract address available [here](https://github.com/AstarNetwork/astarbase/blob/main/contract/deployment-info.md). In this example, we use the Shibuya version but you can use Astar version as well as Shiden version.
+### Step 5:
+Finally, we add an example contract address available from [here](https://github.com/AstarNetwork/astarbase/blob/main/contract/deployment-info.md). In this example, we use the Shibuya version but you can use Astar version as well as Shiden version.
 
 ```jsx
 const address = "0xF183f51D3E8dfb2513c15B046F848D4a68bd3F5D";
 ```
 
-### Step6:
-
-For the step, we would combine what we wrote in the previous steps. For #EVM_ADDRESS, you can replace it with your specified address in EVM format. 
+### Step 6:
+We will combine all what we wrote in the previous steps. For #EVM_ADDRESS, you can replace it with your specified address in EVM format. 
 
 ```jsx
 const smartContract = new web3.eth.Contract(abi, address);
@@ -401,7 +393,6 @@ console.log(stakerStatus);
 ```
 
 In the end, this returns if a certain address is registered in AstarBase.
-
 That’s a wrap! Happy hacking!
 
 ## Reference
