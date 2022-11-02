@@ -14,7 +14,7 @@ AstarBase is an on-chain EVM database. AstarBase contains the mapping of users's
 
 The main goal of AstarBase is creating more end-user cases for users to participate in the Astar ecosystem by offering some mechanisms such as rewarding users easily.
 
-## (Functions available in AstarBase)
+### Functions available in AstarBase
 
 We have three major functions in AstarBase.
 
@@ -70,7 +70,7 @@ return (
 We use a Shibuya address for this example. Add the a necessary details available from [here](https://github.com/AstarNetwork/astarbase/blob/main/public/config/config.json) in App.js file.
 
 ```jsx
-const web3 = new Web3(new Web3.providers.HttpProvider("[https://rpc.shibuya.astar.network:8545](https://rpc.shibuya.astar.network:8545/)"));
+const web3 = new Web3(new Web3.providers.HttpProvider("[https://evm.shibuya.astar.network](https://evm.shibuya.astar.network/)"));
 ```
 
 ### Step 4:
