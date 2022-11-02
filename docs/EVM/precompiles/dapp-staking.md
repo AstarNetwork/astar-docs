@@ -1,4 +1,4 @@
-### DappsStaking Precompile
+# DApp Staking Precompile
 
 DappsStaking Precompile enables EVM smart contract to access `pallet-dapps-staking` functionality.
 Example use of this precompile from Contract A:
