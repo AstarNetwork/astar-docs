@@ -1,41 +1,51 @@
 # Website
 
+Welcome to Astar Docs GitHub Repo.
+
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-### Installation
+## Instructions on how to contribute to Astar Docs using local instance of Docusaurus engine
 
-```
-$ yarn
-```
+### Prereqs
 
-### Local Development
+  - Make sure `git` and `yarn` exist as commands in your terminal/vscode: [https://yarnpkg.com/](https://yarnpkg.com/)
+  - Git/Github: understand what the following commands do
+      - managing branches (`git checkout main` and `git checkout -b feat/your-new-branch`
+      - Commits (`git add .` and `git commit`, `git push -u origin feat/your-new-branch`)
+      - Creating PR in Github
+      - maybe: stashing (`git stash` and `git stash pop` are your best friends)
+  - Markdown basics
+      - titles, subtitles
+      - lists
+      - hyperlinks
 
-```
-$ yarn start
-```
+### Setup: First time only
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+  - Clone repo `git clone https://github.com/astarnetwork/astar-docs`
+  - Install dependencies by running `yarn` (`cd astar-docs` , `yarn` )
+  - `yarn start` - spin up realtime website
 
-### Build
+### New document / Modify existing docment --> Submit a PR
+  
+  -  Get latest version of docs locally
+      - Make sure you’re on the main branch (`git checkout main`)
+      - Pull the latest version of the docs (`git pull`)
+      - Create a new branch (`git checkout -b feat/new-feature-name-here`)
+  - Create/update the docs as you please
+      - Spin up live docs (`yarn start`)
+      - Add new page/tweaks/etc
+      - When you’re happy with it, ensure `yarn build` runs without errors
+  - PR and staging environment
+      - Commit your changes and push the new branch up to Github (`git add .` and `git commit`, `git push -u origin feat/your-new-branch`)
+      - Create New PR on Github (https://github.com/astarnetwork/astar-docs)
+      - Once PR is up, **CICD** will automatically build you a unique staging link you can see progress of this on Actions tab in Github
+      - Get feedback from team
 
-```
-$ yarn build
-```
+### Deploy to production
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+    - When PR is ready for merge, merge it by clicking the button at the bottom saying **Merge and Close**
+    - Should be soon available at `[https://docs.astar.network](https://docs.astar.network)`
+    
+### HELP SOMETHING IS BROKEN
+    - Likely, a broken build got pushed to `main` somehow. Remove the commit from `main` and force push to `main`, reopen PR in a new PR
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

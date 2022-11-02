@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Remote Tranasct via Smart Contracts
+# Remote Transact via Smart Contracts
 
 XCM's `Transact` instructions allows sender to execute arbitrary call in the destination chain. This allows us to execute remote transactions
 in other chains, in case they support or allow such functionality.
