@@ -14,7 +14,6 @@ Please note that XVM is still in its alpha.
         bytes calldata context,
         bytes calldata to,
         bytes calldata input,
-        bytes calldata metadata
     ) external;
 ```
 
@@ -23,7 +22,6 @@ Since the interface is abstract and extensible and each VM treats its parameters
 - `context` is a set of data built by caller that is specific to a particular execution environment. Depending on a VM it may contain id of a virtual machine and its exexcution environment, gas limits and execution tickets, apparent value, continuation info and other information.
 - `to` is an abstraction of an address, anything can be viewed as a destination of a XVM call
 - `input` is a SCALE encoded input parameters specific to this particular call which is created by a sender
-- `metadata` now outdated and will be removed in future editions
 
 Please note that this is a low-level interface that is not expected to be used by directly. Instead, library authors use such an API to build idiomatic wrappers for specific execution environments.
 

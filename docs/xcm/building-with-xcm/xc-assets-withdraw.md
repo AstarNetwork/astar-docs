@@ -1,3 +1,6 @@
+---
+sidebar_position: 8
+---
 
 # Withdraw Assets
 
@@ -5,7 +8,21 @@ In polkadot ecosystem there are two ways to transfer assets between remote chain
 
 The second way to transfer assets uses cross chain assets backed by some assets on the sending side. Assets to be transferred are locked on the sender's side but are then said to be belonging to the remote side. Depending on the business logic, remote side now owning the assets can mint some derivatives to reflect that ownership. That way, original assets never actually leave the chain, but their ownership does. Such transfer can be done using [`assets_reserve_transfer`](xc-reserve-transfer) API.
 
-Afterwards, when remote chain wishes to redeem some original assets it can use `assets_withdraw` to perform the reverse operation.
+Suppose we want Shibuya `SBY` tokens to be present on Shiden as a wrapped asset `wSBY`.
+
+- Shibuya chain will need to have Shiden's sovereign account. This account is controlled by Shiden and would represent funds that were sent to the remote chain (Shiden from Shibuya's perspective)
+- Shiden should create `wSBY` asset and configure it to act as a cross-chain asset
+- HRMP channels should also be configured for chains to communicate and exchange XCM messages
+- To pay for execution time `wSBY` should be configured as a payment asset on Shiden
+
+During the actual transfer the following happens:
+1. Some `SBY`s are moved from source account to the sovereign account of Shiden on Shibuya
+2. An XCM containing `ReserveTransferAssets` instruction is sent to Shiden
+3. That message is processed by the `assets` pallet on Shiden, the corresponding amount of `wSBY`s is minted on Shiden
+4. Minted `wSBY` tokens are deposited to the destination account
+5. Some amount is deducted as a payment for execution time
+
+Afterwards, when Shiden chain wishes to redeem some original `SBY`s it can use `assets_withdraw` to perform the reverse operation.
 
 **Note:** Please keep in mind that everything above is just an example specific to the implementation of affected parachains. XCM does not dictate or impose any restrictions on how to interpret incoming messages, or how to manage derivative assets. Other parachains may or may not use `assets` pallet may or may not mint derivative tokens and so on.
 

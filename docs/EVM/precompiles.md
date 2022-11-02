@@ -29,7 +29,7 @@ The Frontier EVM used in Astar provides several useful precompiled contracts. Th
 | [SubstrateEcdsa](precompiles/substrate-ecdsa.md) | 0x0000000000000000000000000000000000005003     |
 | [XCM](precompiles/xcm.md) | 0x0000000000000000000000000000000000005004     |
 | assets-erc20 | ASSET_PRECOMPILE_ADDRESS_PREFIX |
-| [XVM](precompiles/xvm.md) | ? |
+| [XVM](precompiles/xvm.md) | 0x0000000000000000000000000000000000005005 |
 
 The interface descriptions for these precompiles can be found in the `precompiles` folder: [astar-frame repo](https://github.com/AstarNetwork/astar-frame/).
 
