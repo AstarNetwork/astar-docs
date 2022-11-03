@@ -30,4 +30,4 @@ There are a few mobile wallets that support Astar native such as [Nova Wallet](h
 11. If you have the EVM wallet, you can use it to navigate the dApps within the EVM environment.
 ---
 
-That's all and as a **REMINDER**, please make sure you save the seed phrase and password safe.
+That's all and as a **REMINDER**, please make sure you keep the seed phrase and password safe.
