@@ -24,14 +24,14 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 | Parent chain | Polkadot |
 | ParachainID | 2006 |
 | HTTPS | Alchemy: Get started [here](https://www.alchemy.com/astar) |
-|         | Blast: https://astar.public.blastapi.io |
-|         | Dwellier: https://astar-rpc.dwellir.com |
+|         | BlastAPI: https://astar.public.blastapi.io |
+|         | Dwellir: https://astar-rpc.dwellir.com |
 |         | OnFinality: https://astar.api.onfinality.io/public |
 |         | Pinknode: Get started [here](https://www.pinknode.io/) |
 |         | Automata 1RPC: https://1rpc.io/astr, get started [here](https://www.1rpc.io) |
 | Websocket | Alchemy: Get started [here](https://www.alchemy.com/astar) |
-|           | Blast: wss://astar.public.blastapi.io |
-|           | Dwellier: wss://astar-rpc.dwellir.com |
+|           | BlastAPI: wss://astar.public.blastapi.io |
+|           | Dwellir: wss://astar-rpc.dwellir.com |
 |           | OnFinality: wss://astar.api.onfinality.io/public-ws |
 |           | Pinknode: Get started [here](https://www.pinknode.io/) |
 |           | Automata 1RPC: wss://1rpc.io/astr, get started [here](https://www.1rpc.io) |
@@ -47,12 +47,12 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 | Network | Shiden |
 | Parent chain | Kusama |
 | ParachainID | 2007 |
-| HTTPS | Blast: https://shiden.public.blastapi.io |
-|         | Dwellier: https://shiden-rpc.dwellir.com |
+| HTTPS | BlastAPI: https://shiden.public.blastapi.io |
+|         | Dwellir: https://shiden-rpc.dwellir.com |
 |         | OnFinality: https://shiden.api.onfinality.io/public |
 |         | Pinknode: Get started [here](https://www.pinknode.io/) |
-| Websocket | Blast: wss://shiden.public.blastapi.io  |
-|           | Dwellier: wss://shiden-rpc.dwellir.com |
+| Websocket | BlastAPI: wss://shiden.public.blastapi.io  |
+|           | Dwellir: wss://shiden-rpc.dwellir.com |
 |           | OnFinality: wss://shiden.api.onfinality.io/public-ws |
 |           | Pinknode: Get started [here](https://www.pinknode.io/) |
 | chainID | 336 |
@@ -67,11 +67,11 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 | Network | Shibuya (parachain testnet) |
 | Parent chain | Tokyo relay chain (hosted by Stake Technologies) |
 | ParachainID | 1000 |
-| HTTPS | Blast: https://shibuya.public.blastapi.io |
-|         | Dwellier: https://shibuya-rpc.dwellir.com |
+| HTTPS | BlastAPI: https://shibuya.public.blastapi.io |
+|         | Dwellir: https://shibuya-rpc.dwellir.com |
 |         | Astar Team: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
-| Websocket | Blast: wss://shibuya.public.blastapi.io  |
-|           | Dwellier: wss://shibuya-rpc.dwellir.com |
+| Websocket | BlastAPI: wss://shibuya.public.blastapi.io  |
+|           | Dwellir: wss://shibuya-rpc.dwellir.com |
 |           | Astar Team: wss://rpc.shibuya.astar.network |
 | chainID | 81 |
 | Symbol | SBY |
