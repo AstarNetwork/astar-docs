@@ -50,13 +50,13 @@ const config = {
         ],
     ],
 
-    //Enable multilanguage support (only Italian as a starting example)
+    //Enable multilanguage support. Portuguese added as first language
     i18n: {
       defaultLocale: 'en',
-      locales: ['en', 'it'],
+      locales: ['en', 'pt'],
       localeConfigs: {
         en: {htmlLang: 'en-US',},
-        it: {},
+        pt: {},
       }
     },
     themeConfig:
