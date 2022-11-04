@@ -1,6 +1,6 @@
 # Withdraw Stake From Unregistered Contract
 
-**Occassionally but rare, some projects decided to change their contract address on the portal or some projects might get delisted. In this cases, some stakes are not automatically removed so stakers need to manually withdraw their stake. This tutorial will guide you on how to withdraw stake from a dApp that has been removed from the portal.**
+**Occassionally but rare, some projects decided to change their contract address on the portal or some projects might get delisted. In this case, some stakes are not automatically removed, so stakers need to manually withdraw their stake. This tutorial will guide you on how to withdraw your stake from a dApp that has been removed from the portal.**
 ---
 
 ## Step 1: Find The Contract Address That You Are Staked On
@@ -19,7 +19,7 @@
 ![image](https://user-images.githubusercontent.com/37278708/199924710-61d994f3-ddae-4dfb-b4c3-f186138d86de.png)
 
 10. Leave that page as it is.
-11. Now open another browser tab and go to [Astar Portal](https://portal.astar.network/#/astar/dapp-staking/discover).
+11. Open another browser tab and go to [Astar Portal](https://portal.astar.network/#/astar/dapp-staking/discover).
 12. Connect using the same wallet.
 13. Go to dApp Staking -> My dApps.
 14. You can see the list of dApps that you are staked on.
@@ -42,7 +42,7 @@
 4. Click "Developer" and "Extrinsics". 
 5. On the left dropdown menu, select "dappsStaking".
 6. On the right dropdown menu, select "claimStaker".
-7. On EVM: H160, paste the contract address that you have on the notepad e.g 0xaab44542c72f88f7b98fffda418e3efe94bc13af.
+7. On EVM: H16O, paste the contract address that you have on the notepad e.g 0xaab44542c72f88f7b98fffda418e3efe94bc13af.
 8. Submit transaction and add a tip before signing the transaction.
 9. If you have a huge backlog, you need to repeat this step many times until all the rewards are claimed. Otherwise, you won't be able to proceed with the next step.
 
