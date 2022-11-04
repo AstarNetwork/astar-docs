@@ -88,7 +88,16 @@ O valor recebido pelos stakers e pelo tesouro é dinâmico e depende do TVL. No 
 
 ##### Porcentagem Ajustável
 
-Dependendo do TVL, a **porcentagem ajustável** da recompensa do bloco é dividida entre os stakers e o tesouro. $$ \begin{aligned} a&djustable_{staker} = min(1, {TVL_{\%} \over TVL_{ideal}}) * adjustable_{\%} \newline\newline t&otal_{staker} = base_{staker} + adjustable_{staker} \newline\newline t&otal_{treasury} = base_{treasury} + (adjustable_{\%} - adjustable_{staker}) \end{aligned} $$
+Dependendo do TVL, a **porcentagem ajustável** da recompensa do bloco é dividida entre os stakers e o tesouro.
+$$
+\begin{aligned}
+a&djustable_{staker} = min(1, {TVL_{\%} \over TVL_{ideal}}) * adjustable_{\%}
+\newline\newline
+t&otal_{staker} = base_{staker} + adjustable_{staker}
+\newline\newline
+t&otal_{treasury} = base_{treasury} + (adjustable_{\%} - adjustable_{staker})
+\end{aligned}
+$$
 
 À medida que mais tokens são colocados em stake e o TVL aumenta, a parte das recompensas dos stakers aumentará para compensar, assim o stake será um *jogo soma-zero*. Esse aumento é linear até um certo limite, $TVL_{ideal}$, após o qual satura. Qualquer aumento adicional no TVL não resultará em aumento nas recompensas dos stakers.
 
@@ -96,13 +105,18 @@ Observe que no modelo de Polkadot, quando o TVL ideal é alcançado, as recompen
 
 ##### Taxa de juro
 
-Usando os parâmetros dos capítulos anteriores, podemos expressar a taxa de juros anual para os stakers: $$ i = {inflation_{anual} * total_{staker} \over TVL_{\%}} $$
+Usando os parâmetros dos capítulos anteriores, podemos expressar a taxa de juros anual para os stakers:
+$$
+i = {inflation_{anual} * total_{staker} \over TVL_{\%}}
+$$
 
 Por exemplo, no caso $total_{staker} = 55\%$ e $TVL_{\%} = 40\%$, acabamos com ${0,1 * 0,55 \over 0,4}$ que é `13,75%` de taxa de juros anual.
 
 No entanto, a inflação dilui a taxa de juros, então é mais preciso considerar a *taxa de juros anual ajustada pela inflação*.
 
-$$ i_{adjusted} = {i + 1 \over inflation_{anual} + 1} - 1 $$
+$$
+i_{adjusted} = {i + 1 \over inflation_{anual} + 1} - 1
+$$
 
 Para acompanhar o exemplo acima, o valor *ajustado pela inflação* seria ${0,1375 + 1 \over 0,1 + 1} - 1$ que é `3,4%`.
 
