@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Defi Llama
+# Defi Llama {#defillama-en-page-id}
 
 Defi Llama provides inclusive, non-biased, and community-driven statistics for the decentralized finance industry.
 

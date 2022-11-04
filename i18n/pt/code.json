@@ -1,4 +1,70 @@
 {
+  "About Astar": {
+    "message": "Sobre Astar"
+  },
+  "Get to know what Astar Network is solving and all the information related to our native token.": {
+    "message": "Saiba o que Astar Network soluciona e todas as informações relacionadas ao nosso token nativo."
+  },
+  "Ecosystem": {
+    "message": "Ecossistema"
+  },
+  "Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives.": {
+    "message": "Entre no nosso ecossistema e descubra mais sobre Polkadot, Substrate e outras iniciativas."
+  },
+  "Start Building": {
+    "message": "Comece Construir"
+  },
+  "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.": {
+    "message": "Encontre todos os recursos necessários para começar testar, implantar e interagir com contratos inteligentes na rede."
+  },
+  "dApp Staking": {
+    "message": "dApp Staking"
+  },
+  "Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking.": {
+    "message": "Ganhe tokens para você e para seu dApp fazendo staking de tokens e registrando seu dApp com o dApp Staking de Astar."
+  },
+  "Use EVM": {
+    "message": "Usar EVM"
+  },
+  "Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles.": {
+    "message": "Mergulhe mais fundo no EVM em Astar e entenda como os contratos de EVM podem interagir com outros módulos que não são EVM através de pré-compilações."
+  },
+  "Use WASM with Swanky": {
+    "message": "Usar WASM com Swanky"
+  },
+  "Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework.": {
+    "message": "Use o Swanky Suite all-in-one para começar a construir contratos inteligentes WASM. Obtenha uma visão geral dos frameworks de contratos WASM em ink! e ask! e exemplos para cada framework."
+  },
+  "Run A Node": {
+    "message": "Executar um Nó"
+  },
+  "Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.": {
+    "message": "Entenda como rodar nós completos, coletores, indexadores e tudo o que você precisa saber sobre infraestrutura."
+  },
+  "Learn Cross-Chain Message (XCM)": {
+    "message": "Aprenda Mensagem Cross-Chain (XCM)"
+  },
+  "Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.": {
+    "message": "Entenda como o XCM é usado em Astar e como os desenvolvedores podem usá-lo para interagir com o resto da rede Polkadot."
+  },
+  "Integrate Toolings": {
+    "message": "Integração de Ferramentas"
+  },
+  "Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network.": {
+    "message": "Fornece informações relevantes sobre carteiras, bridges, indexadores e oráculos que estão integrados com a rede."
+  },
+  "User Guides": {
+    "message": "Guias do Usuário"
+  },
+  "Learn how to create different types of wallets, obtain tokens, and manage your assets.": {
+    "message": "Aprenda a criar diferentes tipos de carteiras, obter tokens e gerenciar seus ativos."
+  },
+  "'Builder Guides'": {
+    "message": "'Guias do Construtor'"
+  },
+  "Learn how to use tools and build projects in Astar ecosystem.": {
+    "message": "Aprenda a usar ferramentas e a criar projetos no ecossistema Astar."
+  },
   "theme.ErrorPageContent.title": {
     "message": "Esta página parou de funcionar.",
     "description": "The title of the fallback page when the page crashed"
@@ -253,6 +319,38 @@
   "theme.SearchBar.seeAll": {
     "message": "Ver todos os {count} resultados"
   },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Um documento encontrado|{count} documentos encontrados",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Resultados da busca por {query}",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Pesquisar documentação",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "Digite sua pesquisa aqui",
+    "description": "The placeholder for search page input"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "Pesquisar",
+    "description": "The ARIA label for search page input"
+  },
+  "theme.SearchPage.algoliaLabel": {
+    "message": "Pesquisado por Algolia",
+    "description": "The ARIA label for Algolia mention"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Nenhum resultado encontrado",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "Buscando novos resultados...",
+    "description": "The paragraph for fetching new search results"
+  },
   "theme.SearchBar.label": {
     "message": "Pesquisar",
     "description": "The ARIA label and placeholder for search button"
@@ -349,106 +447,8 @@
     "message": "Pesquisar documentos",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
-  "theme.SearchPage.documentsFound.plurals": {
-    "message": "Um documento encontrado|{count} documentos encontrados",
-    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
-  },
-  "theme.SearchPage.existingResultsTitle": {
-    "message": "Resultados da busca por {query}",
-    "description": "The search page title for non-empty query"
-  },
-  "theme.SearchPage.emptyResultsTitle": {
-    "message": "Pesquisar documentação",
-    "description": "The search page title for empty query"
-  },
-  "theme.SearchPage.inputPlaceholder": {
-    "message": "Digite sua pesquisa aqui",
-    "description": "The placeholder for search page input"
-  },
-  "theme.SearchPage.inputLabel": {
-    "message": "Pesquisar",
-    "description": "The ARIA label for search page input"
-  },
-  "theme.SearchPage.algoliaLabel": {
-    "message": "Pesquisado por Algolia",
-    "description": "The ARIA label for Algolia mention"
-  },
-  "theme.SearchPage.noResultsText": {
-    "message": "Nenhum resultado encontrado",
-    "description": "The paragraph for empty search result"
-  },
-  "theme.SearchPage.fetchingNewResults": {
-    "message": "Buscando novos resultados...",
-    "description": "The paragraph for fetching new search results"
-  },
   "theme.tags.tagsPageTitle": {
     "message": "Marcações",
     "description": "The title of the tag list page"
-  },
-  "About Astar": {
-    "message": "About Astar"
-  },
-  "Get to know what Astar Network is solving and all the information related to our native token.": {
-    "message": "Get to know what Astar Network is solving and all the information related to our native token."
-  },
-  "Ecosystem": {
-    "message": "Ecosystem"
-  },
-  "Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives.": {
-    "message": "Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives."
-  },
-  "Start Building": {
-    "message": "Start Building"
-  },
-  "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.": {
-    "message": "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network."
-  },
-  "dApp Staking": {
-    "message": "dApp Staking"
-  },
-  "Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking.": {
-    "message": "Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking."
-  },
-  "Use EVM": {
-    "message": "Use EVM"
-  },
-  "Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles.": {
-    "message": "Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles."
-  },
-  "Use WASM with Swanky": {
-    "message": "Use WASM with Swanky"
-  },
-  "Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework.": {
-    "message": "Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework."
-  },
-  "Run A Node": {
-    "message": "Run A Node"
-  },
-  "Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.": {
-    "message": "Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure."
-  },
-  "Learn Cross-Chain Message (XCM)": {
-    "message": "Learn Cross-Chain Message (XCM)"
-  },
-  "Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.": {
-    "message": "Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network."
-  },
-  "Integrate Toolings": {
-    "message": "Integrate Toolings"
-  },
-  "Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network.": {
-    "message": "Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network."
-  },
-  "User Guides": {
-    "message": "User Guides"
-  },
-  "Learn how to create different types of wallets, obtain tokens, and manage your assets.": {
-    "message": "Learn how to create different types of wallets, obtain tokens, and manage your assets."
-  },
-  "'Builder Guides'": {
-    "message": "'Builder Guides'"
-  },
-  "Learn how to use tools and build projects in Astar ecosystem.": {
-    "message": "Learn how to use tools and build projects in Astar ecosystem."
   }
 }
