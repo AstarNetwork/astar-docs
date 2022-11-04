@@ -1,4 +1,4 @@
-# Withdrawing Stake From Unregistered Contract
+# Withdraw Stake From Unregistered Contract
 
 **Occassionally but rare, some projects decided to change their contract address on the portal or some projects might get delisted. In this cases, some stakes are not automatically removed so stakers need to manually withdraw their stake. This tutorial will guide you on how to withdraw stake from a dApp that has been removed from the portal.**
 ---
