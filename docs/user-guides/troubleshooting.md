@@ -1,3 +1,7 @@
+---
+sidebar_position: 9
+---
+
 # Portal Troubleshooting Guide
 
 This section will guide you to troubleshoot and solve most issues when connecting to the portal.
