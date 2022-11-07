@@ -16,11 +16,7 @@ Suppose we want Shibuya `SBY` tokens to be present on Shiden as a wrapped asset 
 During the actual transfer the following happens:
 1. Some `SBY`s are moved from source account to the sovereign account of Shiden on Shibuya
 2. An XCM containing `ReserveTransferAssets` instruction is sent to Shiden
-<<<<<<< HEAD
 3. That message is processed by the `assets` pallet on Shiden, the corresponding amount of `wSBY`s is minted on Shiden
-=======
-3. That message is processed by assets pallet on Shiden, the corresponding amount of `wSBY`s is minted on Shiden
->>>>>>> origin/main
 4. Minted `wSBY` tokens are deposited to the destination account
 5. Some amount is deducted as a payment for execution time
 

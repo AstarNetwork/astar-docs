@@ -36,9 +36,9 @@ The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork
 
 ## Third Party Util Precompiles
 
-This is a third-party set of utility libraries that provide helpers functions for writing EVM precompiles. It provides ABI encoding parser and builder, logging utils and execution guards. **Please note that it is neither developed nor supported by Astar Network.**
+This is a third-party set of utility libraries that provide helpers functions for writing EVM precompiles. It provides ABI encoding parser and builder, logging utils and execution guards. 
 
-For more information see [the Moonbeam documentation](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/overview/).
+**Please note that it is neither developed nor supported by Astar Network.**
 
 # Usage example
 
