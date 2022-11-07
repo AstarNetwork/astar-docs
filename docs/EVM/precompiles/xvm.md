@@ -1,5 +1,5 @@
 
-# XVM Precompile
+# XVM
 
 XVM Precompile provides an interface for EVM to call into XVM.
 

@@ -1,4 +1,4 @@
-# XCM Precompile
+# XCM
 
 XCM Precompile provides the following functions to handle specific XCM operations.
 

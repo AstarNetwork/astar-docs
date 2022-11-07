@@ -1,7 +1,7 @@
-# DApp Staking Precompile
+# DApp Staking
 
-DappsStaking Precompile enables EVM smart contract to access `pallet-dapps-staking` functionality.
-Below is the Solidity interface to the precompiles:
+DApp Staking Precompile enables EVM smart contract to access `pallet-dapps-staking` functionality.
+Below you will see the Solidity interface to the precompile:
 
 
 ```js
