@@ -95,9 +95,10 @@ const xcmToken = {
 2. Export the Repository class in [/src/v2/repositories/implementations/index.ts](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/repositories/implementations/index.ts)
 3. Add the Repository at [XcmRepositoryConfiguration](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/config/xcm/XcmRepositoryConfiguration.ts#L11) object variable.
 
-## Requirement for creating a PR
+## Requirements for creating a PR
 
 1. Developers should have tested for sending both deposit and withdrawal transactions from our portal.
 2. Developers should have tested for sending both deposit and withdrawal transactions with the `minBridgeAmount`.
 3. Developers should have tested for withdrawing assets to wallet accounts which have 0 balance for the assets being withdrawn (for checking whether `minBridgeAmount` is higher than `Existential Deposit` that defined on origin chain).
 4. Submit the Subscan link for transaction details of the XCM transfers for all assets you've registered.
+5. Deploy the forked app and submit the staging URL ([ref](deploy-astar-portal)).
