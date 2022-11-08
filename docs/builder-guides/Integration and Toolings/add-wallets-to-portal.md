@@ -93,4 +93,4 @@ Add a small `.svg` or `.png` to the [assets](https://github.com/AstarNetwork/ast
 
 2. Submit the [Subscan](https://astar.subscan.io/) or [Blockscout](https://blockscout.com/astar/) links (both Astar and Shiden networks) for transaction details of the items listed above.
 3. Submit screen recordings of the connect, a transaction and account switch visual interactions.
-4. Deploy the forked app and submit the staging URL ([ref](deploy-astar-portal)).
+4. Deploy the forked app and submit the staging URL([ref](deploy-astar-portal)).
