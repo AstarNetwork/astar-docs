@@ -34,12 +34,6 @@ The Frontier EVM used in Astar provides several useful precompiled contracts. Th
 The interface descriptions for these precompiles can be found in the `precompiles` folder: [astar-frame repo](https://github.com/AstarNetwork/astar-frame/).
 The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.
 
-## Third Party Util Precompiles
-
-This is a third-party set of utility libraries that provide helpers functions for writing EVM precompiles. It provides ABI encoding parser and builder, logging utils and execution guards. 
-
-**Please note that it is neither developed nor supported by Astar Network.**
-
 # Usage example
 
 Here we'll see how to interact with dApp Staking precompile using Remix IDE. Other precompiles can be accessed in a similar manner.
