@@ -10,7 +10,7 @@ Submitting a staging URL whenever making a PR to [Astar Portal](https://github.c
 
 ## Deploying with Vercel
 
-Deploying Astar Portal(build with [Quasar Framework](https://quasar.dev/)) with [Vercel](https://vercel.com) is super easy. All you have to do is to download the [Vercel CLI](https://vercel.com/docs/cli) and log in by running:
+Deploying Astar Portal(built with [Quasar Framework](https://quasar.dev/)) with [Vercel](https://vercel.com) is super easy. All you have to do is to download the [Vercel CLI](https://vercel.com/docs/cli) and log in by running:
 
 ```
 $ vercel login
