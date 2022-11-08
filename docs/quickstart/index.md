@@ -22,7 +22,7 @@ Developers will want to use our testnet faucet to deploy and test their contract
 
 ## Astar account scheme
 
-Astar is the only smart-contract parachain in the Polkadot ecosystem that supports multi-virtual machines (Wasm and EVM). Resultingly, managing multiple types of accounts can be non-trivial. Read more about [Astar's account structure](https://astarnetwork.github.io/astar-docs/docs/quickstart/addresses) in our documentation.
+Astar is the only smart-contract parachain in the Polkadot ecosystem that supports multi-virtual machines (Wasm and EVM). Resultingly, managing multiple types of accounts can be non-trivial. Read more about [Astar's account structure](https://docs.astar.network/docs/user-guides/create-wallet/#astar-accounts) in our documentation.
 
 ---
 
