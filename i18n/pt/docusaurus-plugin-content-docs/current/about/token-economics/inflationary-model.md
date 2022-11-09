@@ -4,11 +4,11 @@ sidebar_position: 4
 
 # Tokenomics & Modelo de Inflação
 
-:::nota
+:::note
 Esse é um conteúdo avançado.
 :::
 
-:::dica
+:::tip
 Os modelos para Astar & Shiden são os mesmos, mas algumas diferenças de configuração poderão existir. Nos capítulos seguintes, mencionaremos apenas o token Astar e ASTR, mas o mesmo se aplica à Shiden e seu token SDN.
 :::
 
@@ -60,7 +60,9 @@ Há duas coisas principais para entender antes de se aprofundar no modelo - **TV
 
 #### TVL
 
-A principal variável no sistema que varia de bloco para bloco, com base nas ações do usuário é, **TVL** de dApps staking. :::observação  
+A principal variável no sistema que varia de bloco para bloco, com base nas ações do usuário é, **TVL** de dApps staking. 
+
+:::note  
 O TVL neste contexto não considera tokens não-ASTR bloqueados por outros protocolos construídos em Astar (por exemplo, protocolos DeFi) e, como tal, não tem efeito no esquema de distribuição de recompensas.
 :::
 
