@@ -60,7 +60,7 @@ Um **descriptive name** é arbitrário e somente para seu uso. Ele não é armaz
 
 Um **password** será usado para criptografar as informações desta conta. Você precisará reinseri-lo ao usar a conta para qualquer tipo de transação de saída ou ao usá-la para assinar criptograficamente uma mensagem.
 
-:::perigo
+:::danger
 Observe que essa senha **NÃO** protege sua frase inicial. Se alguém souber as doze palavras em sua seed mnemônica, ainda terá controle sobre sua conta, mesmo que não saiba a senha.
 :::
 
