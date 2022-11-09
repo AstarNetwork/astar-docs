@@ -24,17 +24,20 @@ The Frontier EVM used in Astar provides several useful precompiled contracts. Th
 
 | Precompile | Address |
 | -------- | -------- |
-| DappsStaking     | 0x0000000000000000000000000000000000005001     |
-| Sr25519     | 0x0000000000000000000000000000000000005002     |
+| [DappsStaking](dapp-staking.md) | 0x0000000000000000000000000000000000005001     |
+| [Sr25519](sr25519.md) | 0x0000000000000000000000000000000000005002     |
+| [SubstrateEcdsa](substrate-ecdsa.md) | 0x0000000000000000000000000000000000005003     |
+| [XCM](xcm.md) | 0x0000000000000000000000000000000000005004     |
+| [assets-erc20](xc20.md) | ASSET_PRECOMPILE_ADDRESS_PREFIX |
+| [XVM](xvm.md) | 0x0000000000000000000000000000000000005005 |
 
 The interface descriptions for these precompiles can be found in the `precompiles` folder: [astar-frame repo](https://github.com/AstarNetwork/astar-frame/).
-
 The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.
 
-### DappsStaking Precompile
+# Usage example
 
-DappsStaking Precompile enables EVM smart contract to access `pallet-dapps-staking` functionality.
-Example use of this precompile from Contract A:
+Here we'll see how to interact with dApp Staking precompile using Remix IDE. Other precompiles can be accessed in a similar manner.
+
 
 ```
 import "./DappsStaking.sol";
