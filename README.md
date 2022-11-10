@@ -33,6 +33,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
       - Create a new branch (`git checkout -b feat/new-feature-name-here`)
   - Create/update the docs as you please
       - Spin up live docs (`yarn start`)
+        - If you are working on a translation of a document use `yarn start --locale IT` (example for Italian) (checkout [Docusaurus docs or further reference](https://docusaurus.io/docs/i18n/tutorial)
       - Add new page/tweaks/etc
       - When you’re happy with it, ensure `yarn build` runs without errors
   - PR and staging environment
@@ -43,9 +44,10 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 ### Deploy to production
 
-    - When PR is ready for merge, merge it by clicking the button at the bottom saying **Merge and Close**
-    - Should be soon available at `[https://docs.astar.network](https://docs.astar.network)`
+  - When PR is ready for merge, merge it by clicking the button at the bottom saying **Merge and Close**
+  - Should be soon available at `[https://docs.astar.network](https://docs.astar.network)`
     
 ### HELP SOMETHING IS BROKEN
-    - Likely, a broken build got pushed to `main` somehow. Remove the commit from `main` and force push to `main`, reopen PR in a new PR
+
+  - Likely, a broken build got pushed to `main` somehow. Remove the commit from `main` and force push to `main`, reopen PR in a new PR
 

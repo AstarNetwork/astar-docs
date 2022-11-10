@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# DappRadar
+# DappRadar {#dappradar-en-page-id}
 
 ## Introduction to DappRadar
 

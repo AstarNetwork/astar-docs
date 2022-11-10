@@ -50,6 +50,15 @@ const config = {
         ],
     ],
 
+    //Enable multilanguage support. Portuguese added as first language
+    i18n: {
+      defaultLocale: 'en',
+      locales: ['en', 'pt'],
+      localeConfigs: {
+        en: {htmlLang: 'en-US',},
+        pt: {},
+      }
+    },
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
@@ -74,6 +83,10 @@ const config = {
                         to: 'https://www.youtube.com/channel/UC36JgEF6gqatVSK9xlzzrvQ',
                         label: 'Youtube',
                         position: 'left',
+                    },
+                    {
+                      type: 'localeDropdown',
+                      position: 'right',
                     },
                     {
                         href: 'https://github.com/AstarNetwork/astar-docs',
