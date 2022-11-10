@@ -43,13 +43,13 @@ Se você não adicionou a rede Astar à MetaMask, é muito simples - por favor, 
 
 A maioria das corretoras só suportam a Rede Astar (Nativa) hoje, exceto Gate.io que suporta Astar (EVM). Você vai precisar de uma Conta Nativa Astar para receber tokens ASTR e você pode enviar tokens para uma conta Astar EVM como desejar.
 
-:::dica
+:::tip
 
 A maioria das corretoras mencionam apenas a rede Astar o que significa que a rede que eles suportam é a Astar Nativa.
 
 :::
 
-:::perigo
+:::danger
 
 **Verifique a rede suportada, se ela diz Astar (EVM), você só pode transferir tokens para a conta Astar EVM**.
 
@@ -77,14 +77,14 @@ A maioria das corretoras mencionam apenas a rede Astar o que significa que a red
 
 ## Enviando ASTR/SDN para Corretoras de Astar Network
 
-:::dica
+:::tip
 
 - **Use a conta Nativa de Astar para enviar tokens para corretoras que suportam Astar Network**
 - **Use a conta Astar EVM para enviar tokens para corretoras que suportam Astar EVM**
 
 :::
 
-:::cuidado
+:::caution
 
 Em conformidade com as instruções abaixo, por favor, leia cuidadosamente todas as instruções fornecidas também pela Corretora (endereço, formato, etc).
 
@@ -118,12 +118,12 @@ Como mencionado acima, a maioria das corretoras só suportam Astar Nativa e voc�
 
 Por favor, siga os passos abaixo quando você quiser transferir tokens ASTR/SDN para Astar Nativa.
 
-:::cuidado
+:::caution
 
 xcAssets (tokens XCM compatíveis com EVM) atualmente são incapazes de serem transferidos de volta para uma conta nativa (até mesmo se tiver sido transferido de uma conta nativa). Você precisará transferir cross-chain (XCM) para as cadeias de origem e fazer outra transferência XCM para Astar Nativa. Por favor, siga [os passos aqui](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
 :::  
-:::perigo
+:::danger
 
 **Por favor, note que a maioria das corretoras suportam apenas endereços Nativos de Astar então não use este método para transferir tokens para corretoras, a menos que a corretora suporte Astar EVM.**
 
@@ -151,7 +151,7 @@ xcAssets (tokens XCM compatíveis com EVM) atualmente são incapazes de serem tr
 
 Há alguns pontos que você precisa se preparar antes de fazer uma transferência.
 
-:::nota
+:::note
 
 - Ao transferir tokens nativos para cadeias de origem, recomendamos deixar algum valor na conta. Caso contrário, você pode precisar de alguns tokens para gas ao fazer transações adicionais.
 
@@ -171,7 +171,7 @@ Há alguns pontos que você precisa se preparar antes de fazer uma transferênci
 
 Como a conta Nativa de Astar que é criada na Polkadot.js tem todos endereços correspondentes de Polkadot e de parachains. Aqui estamos na conta Astar Network mas você pode ver o saldo do token DOT da cadeia de Polkadot. Você pode trazer seus ativos em um clique.
 
-:::cuidado
+:::caution
 
 Definimos o valor DOT Min.balance de Polkadot para 1.1DOT e estabelecemos Min.Transferência para 1.1. Você terá que ter pelo menos 2.2DOT + gás para fazer uma transferência mínima. Isto é para proteger os fundos do usuário de serem cortados pelo Depósito Existencial(ED) (mais informações sobre ED, por favor acesse [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
 
@@ -194,7 +194,7 @@ Definimos o valor DOT Min.balance de Polkadot para 1.1DOT e estabelecemos Min.Tr
 
 1. Vá para [Portal](https://portal.astar.network/) e copie o endereço de Astar EVM.
 
-:::dica
+:::tip
 
 Se você deseja mover os ativos cross-chain(XCM) para contas Nativas Astar a partir de contas Astar EVM, primeiro você precisará enviar tokens de volta para as cadeias de origem e fazer outra transferência cross-chain(XCM) para a conta Nativa Astar.
 
