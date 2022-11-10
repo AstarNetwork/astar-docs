@@ -49,7 +49,16 @@ const config = {
             }),
         ],
     ],
-
+    // Enable multilanguage support.
+    i18n: 
+    {
+        defaultLocale: 'en',
+        locales: ['en', 'pl'],
+        localeConfigs: {
+          en: { htmlLang: 'en-US', },
+          pl: {},
+        }
+    },
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
