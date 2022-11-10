@@ -21,7 +21,7 @@ Verifique se você está conectado na rede correta.
 
 ### Stake
 
-Procure pelo seu projeto favorito. Você pode clicar no nome para ver mais informações sobre o projeto. Outro referência importante é procurar no nosso [fórum](https://forum.astar.network/), consultar [DefilLama](../../integrations/dapp-listing/defillama.md) ou [DappRadar](../../integrations/dapp-listing/dappradar.md).
+Procure pelo seu projeto favorito. Você pode clicar no nome para ver mais informações sobre o projeto. Outro referência importante é procurar no nosso [fórum](https://forum.astar.network/), consultar [DefilLama](#defillama-en-page-id) ou [DappRadar](#dappradar-en-page-id).
 
 Para adicionar o valor de staking, clique em 'staking' na caixa do seu projeto favorito.
 
