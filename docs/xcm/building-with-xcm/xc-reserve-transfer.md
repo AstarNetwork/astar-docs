@@ -48,13 +48,13 @@ This functionality is exposed to EVM smart contracts via precompiles. Interface 
 
 # Transferring native assets
 
-Current API identifes assets being transferred by specifying an H160 style address (XC20). This prevents us from sending native token since there's no representation for it. However, there is a workaround for that which uses special H160 address `0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE` (note the final `E`) and interprets it as a command to send native token (`MultiLocation { parents: 0, interior: Here }`).
+Current API identifes assets being transferred by specifying an H160 style address (XC20). This prevents us from sending native token since there's no representation for it. However, there is a workaround for that which uses special zeroed H160 address `0x0000000000000000000000000000000000000000` and by convention interprets it as a command to send native token (`MultiLocation { parents: 0, interior: Here }`).
 
 For example, if we have an EVM call like
 ```
 reserve_transfer:
-    asset_id = [ "0xFF...FE" ]
-    asset_amount = [ 333333333 ]
+    asset_id = [ "0x00...0" ]
+    asset_amount = [ "333333333" ]
     ...
     fee_index = 0
 ```
