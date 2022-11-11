@@ -27,7 +27,6 @@ console.log('extensions', extensions); -> extensions[index] -> name
 2. Add the `SupportWallet.[new_value]` to the [WalletModalOption](https://github.com/AstarNetwork/astar-apps/blob/ecb067e9683eb5224fac96c5bf9fa9ce4c123a7d/src/config/wallets.ts#L23) array.
 3. Add the `SupportWallet.[new_value]` to the [SubstrateWallets](https://github.com/AstarNetwork/astar-apps/blob/ecb067e9683eb5224fac96c5bf9fa9ce4c123a7d/src/config/wallets.ts#L48) array only if it is a Substrate wallet.
 
-
 ### Add the wallets information
 
 Add the Substrate wallets information to the [supportWalletObj](https://github.com/AstarNetwork/astar-apps/blob/ecb067e9683eb5224fac96c5bf9fa9ce4c123a7d/src/config/wallets.ts#L64) object variable.
@@ -44,7 +43,7 @@ export const supportWalletObj = {
     guideUrl: 'https://app.talisman.xyz/',
     isSupportBrowserExtension: true,
     isSupportMobileApp: false,
-  }
+  },
 };
 ```
 
@@ -63,7 +62,7 @@ export const supportEvmWalletObj = {
     isSupportBrowserExtension: true,
     isSupportMobileApp: false,
     ethExtension: 'talismanEth',
-  }
+  },
 };
 ```
 
@@ -71,7 +70,7 @@ export const supportEvmWalletObj = {
 
 Add a small `.svg` or `.png` to the [assets](https://github.com/AstarNetwork/astar-apps/tree/main/src/assets/img) directory.
 
-## Requirement for creating a PR
+## Requirements for creating a PR
 
 1. Developers should have tested sending transactions(see below) from our portal.
 
@@ -94,3 +93,4 @@ Add a small `.svg` or `.png` to the [assets](https://github.com/AstarNetwork/ast
 
 2. Submit the [Subscan](https://astar.subscan.io/) or [Blockscout](https://blockscout.com/astar/) links (both Astar and Shiden networks) for transaction details of the items listed above.
 3. Submit screen recordings of the connect, a transaction and account switch visual interactions.
+4. Deploy the forked app and submit the staging URL([ref](/docs/builder-guides/Integration%20and%20Toolings/deploy-astar-portal)).
