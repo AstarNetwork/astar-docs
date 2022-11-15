@@ -60,7 +60,8 @@ Il y a deux choses principales à comprendre avant de plonger plus profondément
 
 #### TVL
 
-La principale variable dans le système, qui fluctue d'un bloc à l'autre, en fonction des actions de l'utilisateur, est la **TVL** dans le dApps staking. :::note  
+La principale variable dans le système, qui fluctue d'un bloc à l'autre, en fonction des actions de l'utilisateur, est la **TVL** dans le dApps staking. 
+:::note  
 La TVL dans ce contexte ne prend pas en compte les jetons non ASTR verrouillés par d'autres protocoles construits au-dessus d'Astar (par exemple les protocoles DeFi) et n'a donc aucun effet sur le schéma de distribution des récompenses.
 :::
 
