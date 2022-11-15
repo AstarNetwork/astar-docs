@@ -143,7 +143,7 @@ xcAssets (jetons XCM compatibles avec le réseau EVM) ne peuvent pas être trans
 
 6. Retourner sur le compte natif et appuyer sur le bouton Retrait. <img width="1137" alt="EVM-depo" src="https://user-images.githubusercontent.com/77480847/188534362-3182f4bf-cc32-4d54-a6a9-5624036df905.png" />
 
-7. La modale va apparaître et vous pourrez retirer vos fonds. <img width="945" alt="depo-retrait" src="https://user-images.githubusercontent.com/77480847/188534447-70873ad8-f597-46da-a8b1-3808f3802c0d.png" />
+7. La fenêtre modale va apparaître et vous pourrez retirer vos fonds. <img width="945" alt="depo-retrait" src="https://user-images.githubusercontent.com/77480847/188534447-70873ad8-f597-46da-a8b1-3808f3802c0d.png" />
 
 <br />
 
