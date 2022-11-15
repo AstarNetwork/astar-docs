@@ -53,10 +53,11 @@ const config = {
     //Enable multilanguage support. Portuguese added as first language
     i18n: {
       defaultLocale: 'en',
-      locales: ['en', 'pt'],
+      locales: ['en', 'pt', 'id'],
       localeConfigs: {
         en: {htmlLang: 'en-US',},
         pt: {},
+        id: {},
       }
     },
     themeConfig:

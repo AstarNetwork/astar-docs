@@ -1,0 +1,134 @@
+{
+  "version.label": {
+    "message": "Selanjutnya",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.About Astar": {
+    "message": "Tentang Astar",
+    "description": "The label for category About Astar in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Token Economics": {
+    "message": "Token Economics",
+    "description": "The label for category Token Economics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ecosystem": {
+    "message": "Ekosistem",
+    "description": "The label for category Ecosystem in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Start Building": {
+    "message": "Mulai Membangun",
+    "description": "The label for category Start Building in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.dApp Staking": {
+    "message": "dApp Staking",
+    "description": "The label for category dApp Staking in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Stakers": {
+    "message": "Untuk Para Staker",
+    "description": "The label for category For Stakers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Devs": {
+    "message": "Untuk Developer",
+    "description": "The label for category For Devs in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Use EVM": {
+    "message": "Menggunakan EVM",
+    "description": "The label for category Use EVM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Your First Contract": {
+    "message": "Kontrak Pertama Anda",
+    "description": "The label for category Your First Contract in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Use WebAssembly(WASM)": {
+    "message": "Menggunakan WebAssembly(WASM)",
+    "description": "The label for category Use WebAssembly(WASM) in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Astar Wasm Stack": {
+    "message": "Astar Wasm Stack",
+    "description": "The label for category Astar Wasm Stack in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Smart-contract development": {
+    "message": "Pengembangan Smart Contract",
+    "description": "The label for category Smart-contract development in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Advanced": {
+    "message": "Tingkat Lanjut",
+    "description": "The label for category Advanced in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run A Node": {
+    "message": "Menjalankan Node",
+    "description": "The label for category Run A Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run an Archive Node": {
+    "message": "Menjalankan Node Arsip",
+    "description": "The label for category Run an Archive Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run a Collator Node": {
+    "message": "Menjalankan Node Collator",
+    "description": "The label for category Run a Collator Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Secure Setup Guide": {
+    "message": "Panduan Persiapan Yang Aman",
+    "description": "The label for category Secure Setup Guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integrate Toolings": {
+    "message": "Peralatan Integrasi",
+    "description": "The label for category Integrate Toolings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Bridges": {
+    "message": "Bridges",
+    "description": "The label for category Bridges in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.dApp Listings": {
+    "message": "Pendaftaran dApp",
+    "description": "The label for category dApp Listings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Wallets": {
+    "message": "Wallet",
+    "description": "The label for category Wallets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ledger": {
+    "message": "Ledger",
+    "description": "The label for category Ledger in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Node Providers": {
+    "message": "Penyedia Node",
+    "description": "The label for category Node Providers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Indexers": {
+    "message": "Indexers",
+    "description": "The label for category Indexers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Oracles": {
+    "message": "Oracles",
+    "description": "The label for category Oracles in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Cross-Chain Messaging - XCM": {
+    "message": "Cross-Chain Messaging - XCM",
+    "description": "The label for category Cross-Chain Messaging - XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Using XCM": {
+    "message": "Menggunakan XCM",
+    "description": "The label for category Using XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Building with XCM": {
+    "message": "Membangun Dengan XCM",
+    "description": "The label for category Building with XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration": {
+    "message": "Integrasi",
+    "description": "The label for category Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Builder Guides": {
+    "message": "Panduan Builder",
+    "description": "The label for category Builder Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration and Toolings": {
+    "message": "Integrasi dan Peralatan",
+    "description": "The label for category Integration and Toolings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.User Guides": {
+    "message": "Panduan Pengguna",
+    "description": "The label for category User Guides in sidebar tutorialSidebar"
+  }
+}
