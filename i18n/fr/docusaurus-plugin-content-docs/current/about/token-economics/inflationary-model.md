@@ -60,16 +60,17 @@ Il y a deux choses principales à comprendre avant de plonger plus profondément
 
 #### TVL
 
-La principale variable dans le système, qui fluctue d'un bloc à l'autre, en fonction des actions de l'utilisateur, est la **TVL** dans le dApps staking. :::note  
+La principale variable dans le système, qui fluctue d'un bloc à l'autre, en fonction des actions de l'utilisateur, est la **TVL** dans le dApps staking. 
+:::note  
 La TVL dans ce contexte ne prend pas en compte les jetons non ASTR verrouillés par d'autres protocoles construits au-dessus d'Astar (par exemple les protocoles DeFi) et n'a donc aucun effet sur le schéma de distribution des récompenses.
 :::
 
 Nous sommes particulièrement intéressés par **le pourcentage de TVL**
-- $total\_issuance$ - montant total des jetons **ASTR** émis
+- $total\_emis$ - montant total des jetons **ASTR** émis
 - $TVL$ - nombre total de jetons verrouillés dans le dApps-staking
-- $TVL_{\%} = {total \over TVL}$
+- $TVL_{\%} = {total_emis \over TVL}$
 
-Dans le cas où **total_issuance** équivaut à 1000 et la **TVL** à 242, **le pourcentage de la TVL** sera `24,2%`.
+Dans le cas où **total_emis** équivaut à 1000 et la **TVL** à 242, **le pourcentage de la TVL** sera `24,2%`.
 
 #### Paramètres configurables
 
@@ -90,10 +91,10 @@ Le montant reçu par les stakers et la trésorerie est dynamique et dépend de l
 
 Selon la TVL, le **pourcent ajustable** de la récompense de bloc est divisé entre les stakers et la trésorerie. 
 $$
-\begin{aligned} a&justable_{staker} = min(1, {TVL_{\%} \over TVL_{ideal}}) * ajustable_{\%} \newline\newline t&otal_{staker} = base_{staker} + ajustable_{staker} \newline\newline t&otal_{treasury} = base_{treasury} + (ajustable_{\%} - ajustable_{staker}) \end{aligned}
+\begin{aligned} a&justable_{staker} = min(1, {TVL_{\%} \over TVL_{idéale}}) * ajustable_{\%} \newline\newline t&otal_{staker} = base_{staker} + ajustable_{staker} \newline\newline t&otal_{trésorerie} = base_{trésorerie} + (ajustable_{\%} - ajustable_{staker}) \end{aligned}
 $$
 
-Au fur et à mesure que les jetons sont stakés et que la TVL augmente, la partie des récompenses versée aux stakers augmentera pour éviter que le staking devienne un *jeu à somme nulle*. Cette augmentation est linéaire jusqu'à un certain seuil, $TVL_{ideal}$, après quoi elle plafonne. Toute augmentation supplémentaire de la TVL n'entrainera pas d'augmentation des récompenses aux stakers.
+Au fur et à mesure que les jetons sont stakés et que la TVL augmente, la partie des récompenses versée aux stakers augmentera pour éviter que le staking devienne un *jeu à somme nulle*. Cette augmentation est linéaire jusqu'à un certain seuil, $TVL_{idéale}$, après quoi elle plafonne. Toute augmentation supplémentaire de la TVL n'entrainera pas d'augmentation des récompenses aux stakers.
 
 Notez que dans le modèle de Polkadot, lorsque la TVL idéale est atteinte, les récompenses de staking chutent de façon exponentielle. Dans notre cas, ils ne font que plafonnés, ce qui en fait un *jeu à somme nulle*. La motivation derrière notre approche est la simplicité.
 
@@ -101,7 +102,7 @@ Notez que dans le modèle de Polkadot, lorsque la TVL idéale est atteinte, les 
 
 En utilisant les paramètres des chapitres précédents, nous pouvons exprimer le taux d'intérêt annuel pour les stakers : 
 $$
-i = {inflation_{anual} * total_{staker} \over TVL_{\%}}
+i = {inflation_{anuelle} * total_{staker} \over TVL_{\%}}
 $$
 
 Par exemple, dans le cas où $total_{staker} = 55\%$ et $TVL_{\%} = 40\%$, on obtient ${0. * 0.55 \over 0.4}$ qui est `13,75%` le taux d'intérêt annuel.
@@ -109,7 +110,7 @@ Par exemple, dans le cas où $total_{staker} = 55\%$ et $TVL_{\%} = 40\%$, on ob
 Cependant, l'inflation dilue le taux d'intérêt, il est donc plus précis de considérer *le taux d'intérêt annuel ajusté en fonction de l'inflation*.
 
 $$
-i_{adjusted} = {i + 1 \over inflation_{anual} + 1} - 1
+i_{ajusté} = {i + 1 \over inflation_{anuelle} + 1} - 1
 $$
 
 Pour suivre l'exemple ci-dessus, *l'inflation ajustée* serait de ${0. 375 + 1 \over 0.1 + 1} - 1$ à savoir `3.4%`.
@@ -120,7 +121,7 @@ Le graphique suivant est une visualisation du modèle décrit.
 
 * la ligne verte est le taux d'intérêt $i$
 * la droite bleue est le nombre grandissant de stakers $total_{staker}$
-* la ligne rouge est le taux d'intérêt ajusté en fonction de l'inflation $i_{adjusted}$
+* la ligne rouge est le taux d'intérêt ajusté en fonction de l'inflation $i_{ajusté}$
 
 ![tokenomics_model_visualization](img/tokenomics_1.png)
 

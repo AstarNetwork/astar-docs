@@ -12,7 +12,7 @@ Le token ASTR est le jeton utilitaire sur le réseau Astar qui a 3 fonctions pri
 
 ## dApps Staking
 
-Le dApps Staking est un projet original inventé par l'équipe principale d'Astar Network et seul l'écosystème Astar prend en charge cette fonctionnalité dans l'écosystème Polkadot. Astar Network vise à être le hub principal des dApps sur le réseau Polkadot. C'est pourquoi nous avons prévus des incitations pour les développeurs de dApps afin de constuire des smart contracts sur Astar Network.
+Le dApps Staking est un projet original inventé par l'équipe principale d'Astar Network et seul l'écosystème Astar prend en charge cette fonctionnalité dans l'écosystème Polkadot. Astar Network vise à être le hub principal des dApps sur le réseau Polkadot. C'est pourquoi nous avons prévu des incitations pour les développeurs de dApps afin de constuire des smart contracts sur Astar Network.
 
 Le dApps Staking est un mécanisme simple mais puissant. Les détenteurs de jetons ASTR peuvent staker leurs jetons sur les dApps qu'ils aiment et qu'ils soutiennent. En agissant ainsi, le staker gagne des jetons ASTR à partir des récompenses de bloc. En plus de cela, les développeurs reçoivent des récompenses en fonction du montant staké sur leur dApp. De façon générale, les développeurs d'applications sur le réseau Astar reçoivent des jetons ASTR en développant des smarts contracts ou une infrastructure pour la communauté. Nous avons l'intention d'en faire un mécanisme de subvention durable et décentralisé.
 

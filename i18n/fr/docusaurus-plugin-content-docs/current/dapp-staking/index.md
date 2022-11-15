@@ -24,7 +24,7 @@ Pour que de bonnes dApps se construisent, les développeurs doivent les construi
 
 C’est là qu’intervient le dApp staking.
 
-Sur le réseau Astar/Shiden, le dApp staking est la façon dont les développeurs qui construisent des dApps peuvent être compensés. En ayant un revenu de base, les développeurs peuvent continuer à construire et à améliorer leurs dApps.
+Sur le réseau Astar/Shiden, le dApp staking est la façon de récompenser les développeurs qui construisent les dApps. En ayant un revenu de base, les développeurs peuvent continuer à construire et à améliorer leurs dApps.
 
 En son cœur, le dApp staking est similaire au staking sur les validateurs, mais dans ce nouveau paradigme, Les dApp stakers— également appelés nominateurs — peuvent nominer leurs jetons Astar/Shiden sur les dApps qu'ils souhaitent soutenir.
 
