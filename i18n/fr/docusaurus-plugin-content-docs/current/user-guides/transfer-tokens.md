@@ -102,7 +102,7 @@ En accord avec les instructions ci-dessous, veuillez lire attentivement toutes l
 
 Comme mentionné ci-dessus, La plupart des exchanges ne prennent en charge qu'Astar Natif et vous devrez transférer des jetons ASTR vers Astar EVM si vous souhaitez interagir avec les projets EVM.
 
-1. Allez sur le [Portail](https://portal. astar. network/) et copiez l'adresse EVM Astar. <img width="1000" alt="Compte-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
+1. Allez sur le [Portail](https://portal.astar.network/) et copiez l'adresse EVM Astar. <img width="1000" alt="Compte-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
 
 2. Vous pouvez également ouvrir l'extension Metamask et copier l'adresse. <img width="355" alt="MM" src="https://user-images.githubusercontent.com/77480847/188531287-20dfc966-076d-44fc-805a-502f326708cc.png" />
 
