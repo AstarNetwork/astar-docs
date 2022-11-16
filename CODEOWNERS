@@ -1,0 +1,14 @@
+#CODEOWNERS file to manage who can approve PRs depending on content (main Docs and site config vs i18n
+
+#Docusaurus file layout related to internationalization is following:
+# - to add language (one time action, part of first PR when additional language enabled) you need to edit config here /docusaurus.config.js
+# - to add/change translations for enabled language only ownership of this folder is required: /i18n/*
+
+
+#Any PR related to anything outside of /i18n folder requires an approval by someone from @AstarNetwork/astar-core-dev org. 
+#Source https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging
+*       @AstarNetwork/astar-core-dev
+
+#Any PR related to /i18n/ folder can be approved by @AstarNetwork/ambassadors members (Linguistars)
+/i18n/* @AstarNetwork/ambassadors
+
