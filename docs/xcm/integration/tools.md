@@ -50,7 +50,7 @@ You can input standard asset Id (as seen by pallet-assets) and as output you get
 For calculating `Account32Hash` ([here](https://github.com/paritytech/polkadot/blob/master/xcm/xcm-builder/src/location_conversion.rs#L25)), we provide a dedicated command. However, the possible `MultiLocation`s format is limited to:
 
 1. `{ parents: 1, interior: X1(AccountId32{ network: <network_id>, id: 0x<id>}) }`
-2. `{ parents: 1, interior: X2(Parachain(<parachain_id>), AccountId32{ network: Any, id: 0x<id>}) }`
+2. `{ parents: 1, interior: X2(Parachain(<parachain_id>), AccountId32{ network: <network_id>, id: 0x<id>}) }`
 
 For the first case, use the following command:
 ```bash
