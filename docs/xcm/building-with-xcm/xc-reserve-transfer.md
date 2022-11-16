@@ -48,32 +48,24 @@ This functionality is exposed to EVM smart contracts via precompiles. Interface 
 
 # Transferring native assets
 
-Current API identifes assets being transferred by specifying an H160 style address (XC20). This prevents us from sending native token since there's no representation for it. However, there is a workaround for that which uses EVM `msg.value` API.
-
-Precompile implemenation checks `msg.value` and, if positive, treats it as another asset to be sent (`MultiLocation { parents: 0, interior: Here }`). In that case, native asset is added to the tail of `asset_id` and `asset_amount` lists and can be indexed by `fee_index` as any other asset in the list. Its value would be set equal to `msg.value`.
+Current API identifes assets being transferred by specifying an H160 style address (XC20). This prevents us from sending native token since there's no representation for it. However, there is a workaround for that which uses special zeroed H160 address `0x0000000000000000000000000000000000000000` and by convention interprets it as a command to send native token (`MultiLocation { parents: 0, interior: Here }`).
 
 For example, if we have an EVM call like
 ```
 reserve_transfer:
-    // for the sake of example, let's say this is
-    // { parents: 1, interior: X1(Parachain(2007)) }
-    asset_id = [ "0x123....000" ]
-
-    asset_amount = [ 333333333 ]
+    asset_id = [ "0x00...0" ]
+    asset_amount = [ "333333333" ]
     ...
-    fee_index = 1
-    msg.value = 111111,
+    fee_index = 0
 ```
 
 …then precompile internals will transform call args into something like this:
 ```
-assets = [
-    { parents: 1, interior: X1(Parachain(2007)) },
-    { parents: 0, interior: Here }
-]
-
-asset_amounts = [ 333333333, 111111 ]
+assets = [{ parents: 0, interior: Here }]
+asset_amounts = [ 333333333 ]
 ```
+
+Native assets can be used for paying transaction fees as any other assets. In that case `fee_index` should point to the `asset_id` entry containing `0x00...0`.
 
 # Transaction fees
 
