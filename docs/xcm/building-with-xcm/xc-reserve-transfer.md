@@ -65,7 +65,7 @@ assets = [{ parents: 0, interior: Here }]
 asset_amounts = [ 333333333 ]
 ```
 
-Native assets can be used for paying transaction fees as any other assets. In that case `fee_index` should point to the `asset_id` entry containing `0xFF...FE`. 
+Native assets can be used for paying transaction fees as any other assets. In that case `fee_index` should point to the `asset_id` entry containing `0x00...0`.
 
 # Transaction fees
 
