@@ -34,14 +34,20 @@ If you already have this, feel free to skip this part.
 1. In MetaMask menu navigate to Settings → Networks, and click “Add a network”
 2. Enter following details for Astar:
    1. Network name: `Astar Network Mainnet`
-   2. New RPC URL: `https://rpc.astar.network:8545/`
+   2. New RPC URL: 
+  `https://astar.public.blastapi.io/` 
+  `https://astar-rpc.dwellir.com/`
+  `https://astar.api.onfinality.io/public`
    3. Chain ID: `592`
    4. Currency Symbol: `ASTR`
    5. Block Explorer URL(Optional): `https://astar.subscan.io/`
 3. Click the “Save” button
 4. Repeat steps 1-3 for Shiden network with following details:
    1. Network name: `Shiden Network Mainnet`
-   2. New RPC URL: `https://evm.shiden.astar.network/`
+   2. New RPC URL: 
+    `https://shiden.public.blastapi.io`
+    `https://shiden-rpc.dwellir.com`
+    `https://shiden.api.onfinality.io/public`
    3. Chain ID: `336`
    4. Currency Symbol: `SDN`
    5. Block Explorer URL(Optional): `https://shiden.subscan.io/`
