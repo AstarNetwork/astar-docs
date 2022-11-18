@@ -71,7 +71,8 @@ We’ll basically say yes to every subsequent questions.
 
 After a while, you will see “project created” message.
 
-## Step2
+---
+## Set up a private key
 
 In this section, we will set up a private key.
 
