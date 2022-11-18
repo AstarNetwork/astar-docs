@@ -31,7 +31,7 @@ Disetiap block yang diproduksi, Astar akan mengeluarkan token dengan jumlah teta
 | Astar   | 266.4 ASTR        |
 | Shiden  | 2.664 SDN         |
 
-Para pembaca mungkin menyadari bahwa Astar menghasilkan 100 kali lebih banyak token setiap block daripada Shiden. Hal ini dikarenakan Astar mempunyai supply awal 100 kali lebih banyak dibanding Shiden.
+Para pembaca mungkin menyadari bahwa Astar mengeluarkan 100 kali lebih banyak token pada setiap block yang diproduksi daripada Shiden. Hal ini dikarenakan Astar mempunyai supply awal 100 kali lebih banyak dibanding Shiden.
 
 ### Penerima
 
