@@ -39,7 +39,7 @@
     "message": "Menjalankan Node"
   },
   "Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.": {
-    "message": "Nodes penjelasan mengenai bagaimana menjalankan Full Node, menjadi Collator, Indexer dan semua yang anda ingin ketahui tentang infrastruktur."
+    "message": "Penjelasan mengenai bagaimana menjalankan Full Node, menjadi Collator, Indexer dan semua yang anda ingin ketahui tentang infrastruktur."
   },
   "Learn Cross-Chain Message (XCM)": {
     "message": "Mempelajari Cross-Chain Message (XCM)"
@@ -60,10 +60,10 @@
     "message": "Mempelajari bagaimana menciptakan beragam tipe wallet, mendapatkan token dan mengatur aset-aset anda."
   },
   "'Builder Guides'": {
-    "message": "'Panduan Builder'"
+    "message": "Panduan Builder"
   },
   "Learn how to use tools and build projects in Astar ecosystem.": {
-    "message": "Mempelajari bagaimana menggunakan peralatan (tools) dan membangun sebuah proyek dalam ekosistem Astar."
+    "message": "Mempelajari bagaimana menggunakan peralatan (tools) dan mengembangkan proyek dalam ekosistem Astar."
   },
   "theme.ErrorPageContent.title": {
     "message": "Halaman ini mengalami kerusakan.",
