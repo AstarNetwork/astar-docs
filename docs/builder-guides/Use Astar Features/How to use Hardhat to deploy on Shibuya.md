@@ -149,7 +149,8 @@ We can confirm we got some Shibuya token now.
 
 ![4](img/4.png)
 
-## Step6
+---
+## Deploy the smart contract on Shibuya
 
 Finally, we deploy our smart contract by running the command below.
 
