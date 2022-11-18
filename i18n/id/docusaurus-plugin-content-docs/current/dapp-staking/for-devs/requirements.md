@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Persyaratan
 
-**Apakah anda adalah pemilik proyek dan ingin mendaftarkan dApp anda ke dalam mekanisme staking kami untuk mendapatkan imbalan?** Silahkan baca baik-baik panduan berikut. Apabila anda memenuhi semua persyaratannya, anda bisa langsung mengisi [form ini](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) dan kami bisa mendaftarkan dApp anda.
+**Apakah anda developer yang ingin mendaftarkan dApp anda ke dalam mekanisme staking kami untuk mendapatkan imbalan?** Silahkan baca baik-baik panduan berikut. Apabila anda memenuhi semua persyaratannya, anda bisa langsung mengisi [form ini](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) dan kami bisa mendaftarkan dApp anda.
 
 Anda tertarik untuk bergabung dengan dApp staking pada Astar atau Shiden? Bisa dibaca persyaratan berikut ini:
 
