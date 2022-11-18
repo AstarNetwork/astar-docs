@@ -128,7 +128,7 @@
     "description": "The label for category Integration and Toolings in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.User Guides": {
-    "message": "Guides pour les utilisation",
+    "message": "Guides pour les utilisateurs",
     "description": "The label for category User Guides in sidebar tutorialSidebar"
   }
 }
