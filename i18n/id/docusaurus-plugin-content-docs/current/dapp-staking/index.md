@@ -6,9 +6,9 @@ Memperkenalkan #Build2Earn: Apa itu dApp Staking dan Mengapa Ini Penting untuk W
 
 Di Astar, misi kita adalah merevolusi internet. Kami membayangkan masa depan dimana Internet menjadi sepenuhnya desentralisasi, dan tidak hanya dikontrol oleh segelintir perusahaan raksasa teknologi. Kami percaya bahwa internet seharusnya bebas dan dimiliki oleh masyarakat untuk sesama masyarakat. Kami percaya bahwa masyarakat seharusnya memiliki hak kepemilikan atas data dan aset mereka, bukan ketergantungan di tangan pihak-pihak tertentu. Ini adalah esensi dari visi Web3 dan ini yang menjadi tujuan Astar.
 
-*Namun, apa hubungannya ini semua dengan dApp staking*? Mudahnya begini.
+*Namun, apa hubungannya ini semua dengan dApp Staking*? Mudahnya begini.
 
-Dapp staking adalah salah satu katalis untuk akselerasi visi Web3 dari sebuah imajinasi menjadi realita. Agar Web3 terwujud, ada tiga hal penting yang harus dilaksanakan.
+Dapp Staking adalah salah satu katalis untuk akselerasi visi Web3 dari sebuah imajinasi menjadi realita. Agar Web3 terwujud, ada tiga hal penting yang harus dilaksanakan.
 
 - Biaya transaksi (cont. pemakaian gas fee) harus sangat murah secara dramatis
 - Semua jaringan Blockchain harus bisa interoperabilitas, saling terhubung, dan sedikit friksi
@@ -24,11 +24,11 @@ Agar dApp yang berkualitas tercipta, maka developer perlu membangun hal tersebut
 
 Di situlah kami dApp staking mencoba menjawab hal tersebut.
 
-Pada Astar/Shiden Network, dApp staking adalah bagaimana para developer dapat membangun dAppnya dan mendapat kompensasi imbalan. Dengan adanya pendapatan dasar, mereka dapat terus membangun dan mengembangkan dApp-nya.
+Pada Astar/Shiden Network, dApp Staking adalah bagaimana para developer dapat membangun dAppnya dan mendapat kompensasi imbalan. Dengan adanya pendapatan dasar, mereka dapat terus membangun dan mengembangkan dApp-nya.
 
-Pada dasarnya, dApp staking mirip dengan melakukan staking terhadap Validator, namun dalam paradigma baru ini, para staker dalam dApp Staking --juga disebut Nominator-- dapat menominasikan token Astar/Shiden mereka terhadap proyek dApp yang hendak mereka dukung.
+Pada dasarnya, dApp Staking mirip dengan melakukan staking terhadap Validator, namun dalam paradigma baru ini, para staker dalam dApp Staking --juga disebut Nominator-- dapat menominasikan token Astar/Shiden mereka terhadap proyek dApp yang hendak mereka dukung.
 
-Setiap block, ada sebagian porsi dari imbalan yang dihasilkan dialokasi menuju dApp staking. Imbalan ini kemudian dibagi antara operator (atau para developer) dan para nominator. Hal ini akan menyebabkan terjadinya insentif yang bagus untuk para developer membangun dApp di atas Astar/Shiden.
+Setiap block, ada sebagian porsi dari imbalan yang dihasilkan dialokasi menuju dApp Staking. Imbalan ini kemudian dibagi antara operator (atau para developer) dan para nominator (staker). Hal ini akan menyebabkan terjadinya insentif yang bagus untuk para developer membangun dApp di atas Astar/Shiden.
 
 Saat membangun di atas jaringan blockchain lainnya, para developer dApp butuh untuk mendaftarkan dirinya mendapatkan program bantuan, menerbitkan token ataupun mengadakan pengumpulan dana. Tidak hanya itu, merekapun harus membayar gas fee.
 
@@ -40,7 +40,7 @@ Agar Web3 dapat tumbuh, harus ada hubungan simbiosis antara para staker (atau no
 
 ### Para dApp Staker (Nominator): Pertumbuhan Nilai Token & APR Tinggi
 
-Para staker di Astar/Shiden dApp staking (nominator) menghendaki harga token mereka meningkat, namun agar hal itu terjadi, nilai aset di belakangnya --dalam hal ini Astar/Shiden Network-- juga harus meningkat.
+Semua para Staker di Astar/Shiden dApp Staking (Nominator) menghendaki harga token mereka meningkat, namun agar hal itu terjadi, nilai aset di belakangnya --dalam hal ini Astar/Shiden Network-- juga harus meningkat.
 
 Jalan lain agar nilai token meningkat adalah sirkulasi total dari token berkurang. Semakin banyak token terkunci pada dApp staking, semakin sedikit token yang beredar pada sirkulasi, dan dengan sedikitnya token yang ada pada sirkulasi, harga akan semakin tinggi.
 
@@ -48,7 +48,7 @@ Pasar yang dinamis ini membantu para staker di dApp staking mendapatkan nilai le
 
 ### Pengguna dApp: Pertumbuhan Jumlah dApp & Utilitas Jaringan
 
-Untuk para pengguna, dApp staking menyebabkan ekosistem akan bertumbuh dan berkembang dalam hal utilitas. Ini dikarenakan dApp yang lebih baik akan dibangun sebagai hasil para developer mendapatkan imbalan selagi membangun dApp tersebut.
+Untuk para pengguna, dApp Staking menyebabkan ekosistem akan bertumbuh dan berkembang dalam hal utilitas. Ini dikarenakan dApp yang lebih baik akan dibangun sebagai hasil para developer mendapatkan imbalan selagi membangun dApp tersebut.
 
 Memiliki jumlah dApp lebih banyak (dan yang bagus) akan menarik dan membuat para pengguna betah, menciptakan efek jaringan, dimana hal ini akan membantu ekosistem untuk tumbuh dan meningkatkan nilai intrinsik jaringan dalam jangka panjang.
 
