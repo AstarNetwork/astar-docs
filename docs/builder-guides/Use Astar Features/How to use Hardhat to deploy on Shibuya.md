@@ -10,9 +10,17 @@ In this cookbook, we will guide you on how to set up the environment for Astar E
 
 ---
 
+## What is Astar EVM?
+
+As a multi-VM smart contract hub, Astar Network supports both WASM and EVM, which means both Solidity smart contracts and WASM-based smart contracts can be deployed on Astar Network. 
+
+And for Solidity developers, you can directly use Ethereum dev tools including Hardhat, Remix, MetaMask to directly interact with Astar EVM’s API and deploy Solidity smart contracts on Astar EVM.
+
 ## What is Hardhat?
 
-Hardhat is a development environment that helps developers in testing, compiling, deploying, and debugging dApps on the Ethereum based blockchain. It serves a crucial role in supporting coders and developers with the management of tasks, which are important for smart contract and dApp development. 
+Hardhat is a development environment that helps developers in testing, compiling, deploying, and debugging smart contracts and dApps on Ethereum Virtual Machine (EVM). Hardhat smart contract development environment offers suitable tools to developers for managing the development workflow, and identifying causes for the failure of applications.
+
+---
 
 ## Step1
 
