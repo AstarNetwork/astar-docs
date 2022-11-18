@@ -2,7 +2,11 @@
 
 ## TL;DR
 
-This cookbook gives you a basic tutorial of how to use Hardhat and deploy a simple test smart contract on our Shibuya test net.
+Hardhat is an Ethereum (EVM) development environment that helps developers to manage and automate the recurring tasks inherent to the process of building smart contracts and dApps, which means compiling and testing at the very core. 
+
+Since Astar Network is a multi-VM smart contract hub, we support both WASM and EVM, which means you can use Ethereum dev tools including Hardhat to directly interact with Astar EVM’s API and deploy Solidity smart contract on Astar.
+
+In this cookbook, we will guide you on how to set up the environment for Astar EVM development, how to create and configure a Hardhat project for Astar EVM, and how to deploy a simple Solidity smart contract on Astar EVM via Hardhat.
 
 ---
 
