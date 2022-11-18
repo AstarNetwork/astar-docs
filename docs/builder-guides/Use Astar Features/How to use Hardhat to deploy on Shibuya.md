@@ -87,7 +87,8 @@ Then, we add private key which Hardhat prepared as default.
 {"privateKey":"0xde9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0"}
 ```
 
-## Step3
+---
+## Add Shibuya Network details to Hardhat project configuration file
 
 Now, we need to add network settings in hardhat.config.js file like below.
 
