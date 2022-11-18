@@ -42,7 +42,7 @@ Then, let’s initialize npm environment.
 npm init -y
 ```
 
-After the command above, you will see something like this.
+After the command above, you will the following return message.
 
 ```
 Wrote to /Users/suguruseo/Documents/Astar Work/hardhat/test-hardhat/hardhat_test/package.json:{
