@@ -130,7 +130,8 @@ Now, we can manually add Shibuya test net in MetaMask like below.
 
 ![2](img/2.png)
 
-## Step5
+---
+## Claim Shibuya testnet tokens from the Discord faucet
 
 Now, we need gas fee to deploy smart contract. 
 
