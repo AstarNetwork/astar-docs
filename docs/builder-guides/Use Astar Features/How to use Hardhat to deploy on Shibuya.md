@@ -59,7 +59,7 @@ Wrote to /Users/suguruseo/Documents/Astar Work/hardhat/test-hardhat/hardhat_test
 }
 ```
 
-Finally, we install Hardhat.
+At last, we install Hardhat and create a Hardhat project.
 
 ```bash
 npm install hardhat
