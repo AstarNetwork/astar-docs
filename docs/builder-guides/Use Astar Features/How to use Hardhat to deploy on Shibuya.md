@@ -35,7 +35,6 @@ mkdir hardhat_test
 cd hardhat_test
 ```
 
----
 
 Then, let’s initialize npm environment.
 
