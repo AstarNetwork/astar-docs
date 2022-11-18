@@ -67,9 +67,6 @@ npm install hardhat
 
 ![1](img/1.png)
 
-We’ll basically say yes to every subsequent questions.
-
-After a while, you will see “project created” message.
 
 ---
 ## Set up a private key
