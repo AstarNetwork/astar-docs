@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # Withdraw Stake From Unregistered Contract
 
-Occassionally but rare, some projects decided to change their contract address on the portal or projects get delisted. In this case, some stakes are not automatically removed. Stakers need to manually withdraw their stake. This tutorial will guide you on how to withdraw your stake from a dApp that has been removed from the portal.
+Occasionally but rare, some projects decided to change their contract address on the portal or projects get delisted. In this case, some stakes are not automatically removed. Stakers need to manually withdraw their stake. This tutorial will guide you on how to withdraw your stake from a dApp that has been removed from the portal.
 
 **Most easiest way**, is to connect to the portal with the address that is staking on the unregistered dApp and click on 'Claim'. The moment you click on claim, your bonded tokens will be unlocked and enter unbonding period. In case the above doesn't work, you can follow the guide below.
 
