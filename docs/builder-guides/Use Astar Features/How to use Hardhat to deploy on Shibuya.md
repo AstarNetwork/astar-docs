@@ -123,7 +123,8 @@ module.exports = {
 };
 ```
 
-## Step4
+---
+## Add Shibuya testnet to MetaMask
 
 Now, we can manually add Shibuya test net in MetaMask like below.
 
