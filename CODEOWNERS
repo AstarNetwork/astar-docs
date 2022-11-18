@@ -5,9 +5,9 @@
 # - to add/change translations for enabled language only ownership of this folder is required: /i18n/*
 
 
-#Any PR related to anything outside of /i18n folder requires an approval by someone from @AstarNetwork/astar-core-dev org. 
+#For Any PR related to anything outside of /i18n folder requires an approval by someone from @AstarNetwork/documentation. 
 #Source https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging
-*       @AstarNetwork/astar-core-dev
+*       @AstarNetwork/documentation
 
 #Any PR related to /i18n/ folder can be approved by @AstarNetwork/ambassadors members (Linguistars)
 /i18n/* @AstarNetwork/ambassadors
