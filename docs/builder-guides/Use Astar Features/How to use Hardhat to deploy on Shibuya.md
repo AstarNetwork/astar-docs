@@ -4,7 +4,7 @@
 
 Hardhat is an Ethereum (EVM) development environment that helps developers to manage and automate the recurring tasks inherent to the process of building smart contracts and dApps, which means compiling and testing at the very core. 
 
-Since Astar Network is a multi-VM smart contract hub, we support both WASM and EVM, which means you can use Ethereum dev tools including Hardhat to directly interact with Astar EVM’s API and deploy Solidity smart contract on Astar.
+Since Astar Network is a multi-VM smart contract hub, we support both WASM and EVM smart contracts, which means you can use Ethereum dev tools including Hardhat to directly interact with Astar EVM’s API and deploy Solidity smart contracts on Astar.
 
 In this cookbook, we will guide you on how to set up the environment for Astar EVM development, how to create and configure a Hardhat project for Astar EVM, and how to deploy a simple Solidity smart contract on Astar EVM via Hardhat.
 
@@ -12,7 +12,7 @@ In this cookbook, we will guide you on how to set up the environment for Astar E
 
 ## What is Astar EVM?
 
-As a multi-VM smart contract hub, Astar Network supports both WASM and EVM, which means both Solidity smart contracts and WASM-based smart contracts can be deployed on Astar Network. 
+As a multi-VM smart contract hub, Astar Network supports both WASM and EVM smart contracts, which means both Solidity smart contracts and WASM-based smart contracts can be deployed on Astar Network. 
 
 And for Solidity developers, you can directly use Ethereum dev tools including Hardhat, Remix, MetaMask to directly interact with Astar EVM’s API and deploy Solidity smart contracts on Astar EVM.
 
@@ -25,6 +25,7 @@ Hardhat is a development environment that helps developers in testing, compiling
 Hardhat is built on top of Node.js, the JavaScript runtime built on Chrome's V8 JavaScript engine. As the first step for to set up Hardhat, we need to set up Node.js environment.
 
 Make sure you have git installed and run the following command in the terminal.
+
 ---
 ## Create a Hardhat project
 
@@ -42,7 +43,7 @@ Then, let’s initialize npm environment.
 npm init -y
 ```
 
-After the command above, you will the following return message.
+After the command above, you will see the following return message.
 
 ```
 Wrote to /Users/suguruseo/Documents/Astar Work/hardhat/test-hardhat/hardhat_test/package.json:{
@@ -69,7 +70,7 @@ npm install hardhat
 
 
 ---
-## Set up a private key
+### Set up a private key
 
 In this section, we will set up a private key.
 
@@ -78,14 +79,14 @@ touch private.json
 vim private.json
 ```
 
-Then, we add private key which Hardhat prepared as default.
+Then, we add the private key which Hardhat prepared as default.
 
 ```
 {"privateKey":"0xde9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0"}
 ```
 
 ---
-## Add Shibuya Network details to Hardhat project configuration file
+### Add Shibuya Network details to Hardhat project configuration file
 
 Now, we need to add network settings in hardhat.config.js file like below.
 
@@ -121,17 +122,16 @@ module.exports = {
 ```
 
 ---
-## Add Shibuya testnet to MetaMask
+### Add Shibuya testnet to MetaMask
 
 Now, we can manually add Shibuya test net in MetaMask like below.
 
 ![2](img/2.png)
 
 ---
-## Claim Shibuya testnet tokens from the Discord faucet
+### Claim Shibuya testnet tokens from the Discord faucet
 
-Now, we need gas fee to deploy smart contract. 
-
+Now, we need gas fee to deploy smart contract.
 For this purpose, we use our Shibuya faucet from our [discord](https://discord.gg/astarnetwork) like below.
 
 We need to type something like below.
@@ -147,7 +147,7 @@ We can confirm we got some Shibuya token now.
 ![4](img/4.png)
 
 ---
-## Deploy the smart contract on Shibuya
+### Deploy the smart contract on Shibuya
 
 Finally, we deploy our smart contract by running the command below.
 
@@ -168,5 +168,4 @@ Happy Hacking!
 ## Reference
 
 Official Document for Hardhat: [https://hardhat.org/hardhat-runner/docs/getting-started#overview](https://hardhat.org/hardhat-runner/docs/getting-started#overview)
-
 Astar Document for Hardhat: [https://docs.astar.network/docs/EVM/developer-tooling/#hardhat](https://docs.astar.network/docs/EVM/developer-tooling/#hardhat)
