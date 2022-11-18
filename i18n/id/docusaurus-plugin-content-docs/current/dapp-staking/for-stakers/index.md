@@ -1,4 +1,4 @@
-# Untuk Para Staker
+# Untuk Staker
 
 ## Pandangan Umum
 
