@@ -120,7 +120,7 @@
     "description": "The label for category Integration in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Builder Guides": {
-    "message": "Tutoriels pour construire",
+    "message": "Guides pour les développeurs",
     "description": "The label for category Builder Guides in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Integration and Toolings": {
@@ -128,7 +128,7 @@
     "description": "The label for category Integration and Toolings in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.User Guides": {
-    "message": "Guides d'utilisation",
+    "message": "Guides pour les utilisation",
     "description": "The label for category User Guides in sidebar tutorialSidebar"
   }
 }
