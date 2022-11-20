@@ -164,7 +164,7 @@ You can also confirm that the contract was deployed successfully by checking [Bl
 ![6](img/6.png)
 
 Happy Hacking!
-
+---
 ## Reference
 
 Official Document for Hardhat: [https://hardhat.org/hardhat-runner/docs/getting-started#overview](https://hardhat.org/hardhat-runner/docs/getting-started#overview)
