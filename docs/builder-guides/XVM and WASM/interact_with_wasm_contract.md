@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Interact with WASM contract with astar.js
 ## TL;DR
-During this guide, we'll be guiding you on how to interact with WASM contract with astar.js
+Here we'll be guiding you on how to interact with WASM contract using astar.js.
 
 ---
 
@@ -12,15 +12,15 @@ During this guide, we'll be guiding you on how to interact with WASM contract wi
 Astar.js library provides application developers the ability to query a node and interact with the astar/shiden/shibuya chains using Javascript/Typescript.
 
 ## Packages
-The @polkadot/api-contract packages is to be used alongside the @astar-network/astar-api package. With that in mind, we can install from npm, so we are not going to waste too much time with the bare basics.
+The @polkadot/api-contract package is to be used alongside the @astar-network/astar-api package. With that in mind, we can install from npm, so we are not going to waste too much time with the bare basics.
 
 yarn add @astar-network/astar-api@beta @polkadot/api @polkadot/api-contract
 
 ## API connection
 
-The API provides application developers the ability to query astar node for sending transactions to contract.
+The API provides application developers the ability to send transactions to astar node.
 
-Here is how you can create API instance:
+Here is how we can create API instance:
 
 ```ts
 import { ApiPromise } from '@polkadot/api';
@@ -39,7 +39,7 @@ async function main() {
 
 ## Web3 accounts
 
-You will need a Substrate account to sign messages. You can use dev accounts like Alice, Bob, Charlie, ..etc, or create new ones.
+We will need a Substrate account to sign messages. We can use dev accounts like Alice, Bob, Charlie, ..etc, or create new ones.
 
 ## Contract build artifacts
 
@@ -100,7 +100,7 @@ As noted above the `createBlueprint` helper on the `Code` interface is a normal 
 
 A `BlueprintPromise` wraps an existing `codeHash` and an `Abi` and provides the opportunity to create contracts on-chain. It is either created via `new BlueprintPromise` from an existing `codeHash`, or as seen in the above example from deploying a WASM code bundle on-chain.
 
-Assuming that we did not deploy code, we can start by creating one (if following from the previous section, this is for information only, since you already have access to the created Blueprint from `CodePromise`) -
+Assuming that we did not deploy code, we can start by creating one (if following from the previous section, this is for information only, since we already have access to the created Blueprint from `CodePromise`) -
 
 ```javascript
 import { BlueprintPromise } from '@polkadot/api-contract';
@@ -164,7 +164,7 @@ const unsub = await blueprint
 
 ## Contract
 
-The `ContractPromise` interface allows you to interact with a deployed contract. In the previous Blueprint example this instance was created via `createContract`. In general use, you can also create an instance via `new`, i.e. when you are attaching to an existing contract on-chain -
+The `ContractPromise` interface allows us to interact with a deployed contract. In the previous Blueprint example this instance was created via `createContract`. In general use, we can also create an instance via `new`, i.e. when we are attaching to an existing contract on-chain -
 
 ```javascript
 import { ContractPromise } from '@polkadot/api-contract';
@@ -179,7 +179,7 @@ const contract = new ContractPromise(api, abi, address);
 ...
 ```
 
-Either via a create above or via a call to `createContract` both instances are the same. The `Contract` provides a wrapper around the `Abi` and allows you to call either `read` or `exec` on a contract to interact with it.
+Either via a create above or via a call to `createContract` both instances are the same. The `Contract` provides a wrapper around the `Abi` and allows us to call either `read` or `exec` on a contract to interact with it.
 
 
 ## Reading contract values
@@ -226,8 +226,6 @@ const callValue = await contract.query.balanceOf(from, { value: 0, gasLimit: -1 
 
 In this example we have specified a `gasLimit` of `-1`, in a subsequent section we will expand on this. for now, just remember that is indicated to use max available, i.e. we don't explicitly want to specify a value.
 
-When executing it encodes the message using the selector and the input values to allow execution in the contract environment. This can be executed on any contract message, unlike the examples that will follow below it will only read state, not actually execute and therefore not consume any real value from the account.
-
 An alternative for reading would be via the lower-level `.read` method, in this case
 
 ```javascript
@@ -246,7 +244,7 @@ In cases where the ABI messages have conflicting names, instead of the `'get'` s
 
 ## Sending a transaction
 
-In addition to using the `.query.<messageName>` on a contract, the `.tx.<messageName>` method is provides to send an actual encoded transaction to the contract, allow for execution and have this applied in a block. Expanding on our previous examples, we can now execute and then retrieve the subsequent value -
+In addition to using the `.query.<messageName>` on a contract, the `.tx.<messageName>` method is provided to send an actual encoded transaction to the contract, allow for execution and have this applied in a block. Expanding on our previous examples, we can now execute and then retrieve the subsequent value -
 
 ```javascript
 // We will use these values for the execution
@@ -268,7 +266,7 @@ await contract.tx
   });
 ```
 
-If we perform the same `query.get` read on the value now, it would be `124`. For lower-level access, like we have in the `Blueprint` via `.createContract` you can also perform the execution via the `.exec` function, which would yield equivalent results -
+If we perform the same `query.get` read on the value now, it would be `124`. For lower-level access, like we have in the `Blueprint` via `.createContract` we can also perform the execution via the `.exec` function, which would yield equivalent results -
 
 ```javascript
 // Send the transaction, like elsewhere this is a normal submittable
@@ -285,7 +283,7 @@ For the above interface we can specify the message as the string name, the index
 
 ## Weight estimation
 
-To estimate the gasLimit (which in the Substrate context refers to the weight used), we can use the `.query` (read) interfaces with a sufficiently large value to retrieve the actual gas consumed. The API makes this easy - with a `gasLimit` or `-1` passed to the query it will use the maximum gas limit available to transactions and the return value will have the actual gas used.
+To estimate the gasLimit (which in the Substrate context refers to the weight used), we can use the `.query` (read) interface with a sufficiently large value to retrieve the actual gas consumed. The API makes this easy - with a `gasLimit` or `-1` passed to the query it will use the maximum gas limit available to transactions and the return value will have the actual gas used.
 
 To see this in practice -
 
