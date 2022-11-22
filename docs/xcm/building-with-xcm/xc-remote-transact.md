@@ -2,57 +2,96 @@
 sidebar_position: 6
 ---
 
-# Remote Transact via Smart Contracts
+# Remote Transact via XCM
 
-XCM's `Transact` instructions allows sender to execute arbitrary call in the destination chain. This allows us to execute remote transactions
-in other chains, in case they support or allow such functionality.
+## Feature Overview
 
-E.g. a user could send `Transact` instruction from **Astar** to **Polkadot** that will transfer some `DOT` from user's derived account on **Polkadot** to an arbitrary receiver account on **Polkadot**. The end user does't directly interact with **Polkadot** chain, but can still change its state. It's important to note that this is just an example - any call that can be interpreted by the remote (destination) chain can potentially be sent and executed.
+XCM's `Transact` instructions allows the sender to execute arbitrary calls in the destination chain. This feature is extremely useful since it allows us to control our account on a remote chain.
+
+For example, a user could send `Transact` instruction from **Astar** to **Polkadot** that will transfer some `DOT` from user's derived account on **Polkadot** to an arbitrary receiver account on **Polkadot**. The end user doesn't directly interact with **Polkadot** chain, but can still change its state. It's important to note that this is just an example - any call that can be interpreted by the remote (destination) chain can potentially be sent and executed.
 
 This is of particular use to smart contracts since it allows them to build custom cross-chain interoperable logic.
 
-It's important to understand the difference between sending an XCM instruction sequence and receiving/interpreting it. Even though sending an XCM from `Astar` or `Shiden` might succeed, execution on the destination chain might fail.
+It's important to understand the difference between sending an XCM instruction sequence and receiving/interpreting it. 
 
-A user must ensure that the destination chain supports the encoded call and remote transaction in general. It is possible that remote chain doesn't support remote transaction (it's blocked by them) or that only a subset of calls can be executed remotely. This doesn't fall under `Astar` or `Shiden` chains though.
+Sending an XCM from `Astar` or `Shiden` to another remote chain might be successfull on the sender side, but execution on the destination chain might fail. The same is true for the vice-versa scenario. This can be for multiple reasons - the XCM sequence might be incorrect, the remote chain doesn't know how to inrerpret the provided `call` or perhaps the remote chain doesn't allow remote execution at all.
 
-## XCM Instructions
+The user must ensure that the destination chain supports the encoded call and remote transaction in general.
 
-A parachain is responsible for configuring it's own `XCM executor` and which calls it exposes to users, therefore it's important to make sure that not just anyone can execute any XCM instruction sequence. To simplify the API via which smart contracts send the `Transact` instruction, we expose an **API** that builds a sequence like:
+## Remote Transact on Astar/Shiden/Shibuya
+
+### XCM Sequence
+
+At the moment, remote execution that doesn't come from parachain accounts isn't allowed by any of our runtimes.
+This will be changed very soon.
+
+The sequence that we will allow will have to start like:
+1. `DescendOrigin`
+2. `WithdrawAsset`
+3. `BuyExecution`
+4. `Transact` or `SetAppendix` or _whatever user wants_
+
+This XCM sequence prefix can be followed up by arbitrary instructions, e.g. with `Transact`.
+Although we cannot guarantee this, other chains will most likely allow the same (or very similar) sequence prefix.
+
+### DescendOrigin
+
+Ensures that the origin isn't a parachain but a more complex junction like `{ parachain: 2006, accountId: 0x123aff....ff }`. If this was omitted, any call would be executed as if it was sent from the *root-only* parachain's sovereign account, and we cannot allow that.
+
+### WithdrawAsset
+
+Withdraws assets on the destination chain from the derived sender account. The account must have the specified asset and the requested amount, otherwise the instruction will fail. These assets are used to pay for the XCM execution time.
+
+### BuyExecution
+
+Using the withdrawn assets, buys XCM executuion time.
+
+## Transact
+
+Execute the specified encoded call data, without consuming weight more than specified.
+Call data can be virtually anything that is supported by the remote chain - doesn't matter what the origin chain supports.
+
+## Derived Remote Accounts
+
+When executing a remote transaction, the remote chain will derive a new address based on the sender's multilocation.
+The way this address is derived is decided by the chain itself.
+
+For our runtimes, a generalized approach, aligned with `Polkadot` and `Kusama` is used. A tuple like `("multiloc", sender_multilocation)` is SCALE encoded and hashed using `Blake2_256` hasher. The output is the derived address.
+
+For example, let's assume `Alice` is sending an XCM sequence from `Polkadot` to `Astar`.
+
+| Name      | Value       |
+| ----------- | ----------- |
+| Alice's Address in Polkadot      | 15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5       |
+| Alice's Public Key  | 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d  |
+| Alice's MultiLoc in Astar | { parents: 1, interior: AccountId32 {network: NetworkId::Polkadot, id: 0xd4359...a27d } } |
+| Alice's Derived Account in Astar | 5HNGwjahXUvxBe4wNMJEb3SHhdFWaGxyuSYvsW77K9EMSy4Z |
+
+Please use `xcm-tools` binary to generate the derived addresse based on your needs.
+
+## Remote Transact via EVM Smart Contracts
+
+We enable EVM smart contracts to send `Transact` instructions to remote chains, given them the possiblity to execute arbitrary calls.
+
+### XCM Sequence
+
+To simplify the API via which EVM smart contracts send the `Transact` instruction, and to ensure security, we expose a function that builds a sequence like:
 1. `DescendOrigin`
 2. `WithdrawAsset`
 3. `BuyExecution`
 4. `Transact`
 
-### DescendOrigin
+`DescendOrigin` will ensure that the origin is correctly set to be the smart contract's derived SS58 address. **TODO** give an example?
 
- Ensures that the origin isn't a parachain but a more complex junction like `{ parachain: 2006, accountId: 0x123aff....ff }`. If this was omitted, any call would be executed as if it was sent from the *root-only* parachain's sovereign account, and we cannot allow that.
+`WithdrawAsset` at the moment requires that asset representation is present in our runtimes. However, it is expected that the remote chain's derived address will be funded so it can pay for XCM execution.
 
- Some chains might allow direct mapping, where the same account can be controlled on the destination chain as the one that was used to send the instruction on the origin chain. Other chains might use the received account Id and the origin parachain Id to derive an entirely new account Id (private account). This is not controlled by `Astar` and can differ from parachain to parachain.
+`BuyExecution` will use the previously withdrawn assets. The `weight_limit` will be set to `Unlimited`. This isn't too important for the used instruction sequence since user controls the maximum allowed weight via the amount of withdrawn assets. However, the funds should be sufficient to pay for both XCM sequence execution and the encoded remote call.
 
- ### WithdrawAsset
+`Transact` will execute the encoded call. The `origin_type` is set to `SovereignAccount` and cannot be changed by the end user.
 
- Withdraws assets on the destination chain from the derived sender account. The account must have the specified asset and the requested amount, otherwise the instruction will fail. These assets are used to pay for the execution time - both XCM execution and the remote call execution.
+There are no refunds at the end of sequence. Unused weight will be handled by the remote chain.
 
- ### BuyExecution
-
- Using the withdrawn assets, buy execution time using all the withdrawn assets in the previous step.
- The `weight_limit` parameter is set to `Unlimited`. This isn't too important for the used instruction sequence since user controls the maximum allowed weight via the amount of withdrawn assets.
-
- There are no refunds at the end of sequence. Unused weight will be handled by the remote chain.
-
- ### Transact
-
- At this point, the `origin` has been configured and execution time has been bought. Assuming origin is supported and enough execution time was bought, the remote call can be executed.
-
- Two important parameter of the `Transact` instruction:
- * `origin_type` - this is set to `SovereignAccount` and cannot be changed by the end user
- * `require_weight_at_most` - maximum amount of weight that will be consumed by the remote call (doesn't include XCM instructions weight)
-
- It's important to configure the weight correctly since if it is too low, the remote execution will be blocked.
-
- See TODO for more info on how to calculate correct parameters.
-
-## EVM
+## API
 
 `Transact` functionality is exposed to EVM smart contracts via precompiles. Interface can be found [here](https://github.com/AstarNetwork/astar-frame) under the XCM precompiles.
 
@@ -71,6 +110,8 @@ function remote_transact(
 `payment asset Id & amount` - which asset to withdraw in the destination chain and how much. Used to pay for execution time. Current limitation is that the asset used must have a local derivative since it's referenced via H160 address
 `call` - encoded call to be executed on the remote chain
 `transact_weight` - max weight that can be consumed by the call execution on remote chain
+
+Please read on to get a better understanding of how to calculate these parameters.
 
 ## Payment Asset and Transact Weight
 
