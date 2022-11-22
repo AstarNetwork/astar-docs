@@ -69,6 +69,13 @@ For example, let's assume `Alice` is sending an XCM sequence from `Polkadot` to 
 
 Please use `xcm-tools` binary to generate the derived addresse based on your needs.
 
+:::caution
+Please be aware that it is possible derived accounts will change with the introduction of **XCM v3**.
+This is because `AccountId32` type's `network` parameter will become an `Option<NetworkId>`.
+
+**XCM v3** is still under development so whether this will happen still remains uncertain.
+:::
+
 ## Remote Transact via EVM Smart Contracts
 
 We enable EVM smart contracts to send `Transact` instructions to remote chains, given them the possiblity to execute arbitrary calls.
@@ -91,7 +98,7 @@ To simplify the API via which EVM smart contracts send the `Transact` instructio
 
 There are no refunds at the end of sequence. Unused weight will be handled by the remote chain.
 
-## API
+### Precompiles API
 
 `Transact` functionality is exposed to EVM smart contracts via precompiles. Interface can be found [here](https://github.com/AstarNetwork/astar-frame) under the XCM precompiles.
 
@@ -113,7 +120,7 @@ function remote_transact(
 
 Please read on to get a better understanding of how to calculate these parameters.
 
-## Payment Asset and Transact Weight
+### Payment Asset and Transact Weight
 
 Specifying the correct amount of assets to withdraw and buy execution time with, as well as the correct transact weight can be tricky. Neither are actually controlled by `Astar` or `Shiden` runtime, instead the destination chain's runtime handles it. There are a few points and tips that can help user calculate the correct values.
 
