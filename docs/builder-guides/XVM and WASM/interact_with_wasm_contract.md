@@ -309,6 +309,21 @@ On current versions of the API, any events raised by the contract will be transp
 
 Where no events were emitted this value would be `undefined`, however should events be emitted, the array will contain all the decoded values.
 
+## Debugging
+
+One thing you need to know about debugging is Adding #[ink(payable)] to a #[ink(message)] prevents ink_env::debug_println! messages to be logged in console when executing the smart contract call. Debug messages are only emitted during a dry run (query), not during the actual transaction (tx)(Source).When you're calling the contract, first query it, then perform your transaction if there are no error messages.
+
+e.g.
+
+```js
+public async transaction(signer: Signer, method: string, args: any[]): Promise<Partial<TransactionResponse>> {
+// View any debug in substrate logs and catch any errors here
+const queryBeforeTx = await await this.contract.query[method](this.account.address, {}, ...args);
+
+// Then run your transaction
+const extrinsic = this.contract.tx[method]({}, ...args);
+```
+
 
 ## Reference
 
