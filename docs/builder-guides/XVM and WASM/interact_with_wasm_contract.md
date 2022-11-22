@@ -125,7 +125,7 @@ We either have a `Blueprint` from a code deploy of a manual create. From here we
 
 ```javascript
 // Deploy a contract using the Blueprint
-const endowment = 1230000000000n;
+const endowment = 0;
 
 // NOTE The apps UI specifies these in Mgas
 const gasLimit = 100000n * 1000000n;
@@ -212,7 +212,7 @@ if (result.isOk) {
 }
 ```
 
-Underlying the above `.query.<messageName>` is using the `api.rpc.contracts.call` API on the contracts palette to retrieve the value. For this interface, the format is always of the form `messageName(<account address to use>, <value>, <gasLimit>, <...additional params>)`. An example of querying a balance of a specific account on an erc20 contract will therefore be -
+Underlying the above `.query.<messageName>` is using the `api.rpc.contracts.call` API on the contracts palette to retrieve the value. For this interface, the format is always of the form `messageName(<account address to use>, <value>, <gasLimit>, <...additional params>)`. An example of querying a balance of a specific account on an psp22 contract will therefore be -
 
 ```js
 // the address we are going to query
