@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ## Feature Overview
 
-XCM's `Transact` instructions allows the sender to execute arbitrary calls in the destination chain. This feature is extremely useful since it allows us to control our account on a remote chain.
+XCM's `Transact` instruction allows the sender to execute arbitrary calls in the destination chain. This feature is extremely useful since it allows us to control our account on a remote chain.
 
 For example, a user could send `Transact` instruction from **Astar** to **Polkadot** that will transfer some `DOT` from user's derived account on **Polkadot** to an arbitrary receiver account on **Polkadot**. The end user doesn't directly interact with **Polkadot** chain, but can still change its state. It's important to note that this is just an example - any call that can be interpreted by the remote (destination) chain can potentially be sent and executed.
 
