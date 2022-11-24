@@ -7,7 +7,7 @@
 
 #For Any PR related to anything outside of /i18n folder requires an approval by someone from @AstarNetwork/documentation. 
 #Source https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging
-*       @AstarNetwork/documentation
+*       @AstarNetwork/documentation @AstarNetwork/astar-core-dev
 
 #Any PR related to /i18n/ folder can be approved by @AstarNetwork/ambassadors members (Linguistars)
 /i18n/* @AstarNetwork/ambassadors
