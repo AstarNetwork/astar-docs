@@ -311,7 +311,7 @@ Where no events were emitted this value would be `undefined`, however should eve
 
 ## Debugging
 
-One thing you need to know about debugging is Adding #[ink(payable)] to a #[ink(message)] prevents ink_env::debug_println! messages to be logged in console when executing the smart contract call. Debug messages are only emitted during a dry run (query), not during the actual transaction (tx)(Source).When you're calling the contract, first query it, then perform your transaction if there are no error messages.
+One thing you need to remember about debugging is that `#[ink(payable)]` added to an `#[ink(message)]` prevents `ink_env::debug_println!` messages to be logged in console when executing the smart contract call. Debug messages are only emitted during a dry run (query), not during the actual transaction (tx)(Source). When you're calling the contract, first query it, then perform your transaction if there are no error messages.
 
 e.g.
 
