@@ -252,6 +252,11 @@ const value = 0; // only useful on isPayable messages
 const gasLimit = 3000n * 1000000n;
 const incValue = 1;
 
+
+// Query the transaction method to get the error. This is euqivalent to a dry run of the txn
+await contract.query
+  .inc({ value }, incValue);
+
 // Send the transaction, like elsewhere this is a normal extrinsic
 // with the same rules as applied in the API (As with the read example,
 // additional params, if required can follow - here only one is needed)
@@ -309,19 +314,20 @@ On current versions of the API, any events raised by the contract will be transp
 
 Where no events were emitted this value would be `undefined`, however should events be emitted, the array will contain all the decoded values.
 
-## Debugging
+## Best Practice
 
-One thing you need to remember about debugging is that `#[ink(payable)]` added to an `#[ink(message)]` prevents `ink_env::debug_println!` messages to be logged in console when executing the smart contract call. Debug messages are only emitted during a dry run (query), not during the actual transaction (tx)(Source). When you're calling the contract, first query it, then perform your transaction if there are no error messages.
+One thing you need to remember is that `#[ink(payable)]` added to an `#[ink(message)]` prevents `ink_env::debug_println!` messages to be logged in console when executing the smart contract call. Debug messages are only emitted during a dry run (query), not during the actual transaction (tx)(Source). When you're calling the contract, first query it, then perform your transaction if there are no error messages.
 
 e.g.
 
 ```js
 public async transaction(signer: Signer, method: string, args: any[]): Promise<Partial<TransactionResponse>> {
-// View any debug in substrate logs and catch any errors here
-const queryBeforeTx = await await this.contract.query[method](this.account.address, {}, ...args);
+  // View any debug in substrate logs and catch any errors here
+  const queryBeforeTx = await this.contract.query[method](this.account.address, {}, ...args);
 
-// Then run your transaction
-const extrinsic = this.contract.tx[method]({}, ...args);
+  // Then run your transaction
+  const extrinsic = this.contract.tx[method]({}, ...args);
+}
 ```
 
 
