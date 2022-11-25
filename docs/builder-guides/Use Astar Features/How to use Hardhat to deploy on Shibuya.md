@@ -24,8 +24,6 @@ Hardhat is a development environment that helps developers in testing, compiling
 ## Set up Node.js environment for Hardhat
 Hardhat is built on top of Node.js, the JavaScript runtime built on Chrome's V8 JavaScript engine. As the first step for to set up Hardhat, we need to set up Node.js environment.
 
-Make sure you have git installed and run the following command in the terminal.
-
 ---
 ## Create a Hardhat project
 
