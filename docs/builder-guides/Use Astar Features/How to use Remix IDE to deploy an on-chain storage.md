@@ -98,7 +98,7 @@ Before smart contracts can be deployed, the Solidity code must be compiled to by
 - Click the EVM icon on the left sidebar (the fourth icon) and visit the “DEPLOY & RUN TRANSACTIONS” page.
 - Switch the “ENVIRONMENT” to “Injected Provider - MetaMask” and ensure you have the right wallet address connected in MetaMask.
 
-![Untitled](img-Remix-cookbook3/Untitled%204.png)
+![Untitled](img-Remix-cookbook/Untitled%204.png)
 
 - Click “Deploy” and confirm the transaction in your MetaMask.
 
