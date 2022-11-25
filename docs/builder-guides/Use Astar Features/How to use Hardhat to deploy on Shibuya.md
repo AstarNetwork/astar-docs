@@ -79,7 +79,7 @@ touch private.json
 vim private.json
 ```
 
-Then, we add the private key which Hardhat prepared as default.
+Then, we add a private key for testing deployment here. PLEASE DON NOT USE IT IN PROD DEPLOYMENT.
 
 ```
 {"privateKey":"0xde9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0"}
