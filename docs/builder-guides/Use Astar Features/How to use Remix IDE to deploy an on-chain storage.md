@@ -28,7 +28,7 @@ Remix is a powerful open-source toolset for developing, deploying, debugging, a
     - or install the Remix IDE Desktop from [https://github.com/ethereum/remix-**desktop**/releases](https://github.com/ethereum/remix-desktop/releases).
 - Create a new workspace by clicking the “+” beside “Workspace” and use the “Blank” template.
 
-![Untitled](How%20to%20use%20Remix%20IDE%20to%20deploy%20an%20on-chain%20storage%203dd34752bfab4c91938a55bb55dd9823/Untitled.png)
+![Untitled](img-Remix-cookbook/Untitled.png)
 
 - Add a new file named “storage.sol” with the following contract code provided.
     - This is a simple example contract with two methods to `store()` and `retrieve()` value in a variable deployed on-chain.
