@@ -52,7 +52,7 @@ Call data can be virtually anything that is supported by the remote chain - does
 
 ### Remote WASM Smart Contract Execution
 
-For all our runtimes supporting WASM Smart Contracts & remote transact via XCM, users can fully utilize contract uploads, instantiation and most important - calls. No special approach or setup are needed since WASM Smart Contracts are native to our chains. Sending a remote WASM SC call is same as executing any other remote transaction.
+For all our runtimes supporting WASM Smart Contracts & remote transact via XCM, users can fully utilize contract uploads, instantiation and most important - calls. No special approach or setup are needed since WASM Smart Contracts are native to our chains. Sending a remote WASM SC call is the same as executing any other remote transaction.
 
 You can prepare the call you need via `polkadot.js portal`(see image below) or within your custom code using [polkadot-js/api-contract](https://github.com/polkadot-js/api/tree/46076c5595ab62e960a1097611a3e150bfa942f2/packages/api-contract) TypeScript library.
 
