@@ -22,8 +22,7 @@ The user must ensure that the destination chain supports the encoded call and re
 
 ### XCM Sequence
 
-At the moment, remote execution that doesn't come from parachain accounts isn't allowed by any of our runtimes.
-This will be changed very soon.
+At the moment, remote execution that doesn't come from parachain accounts is only allowed by `Shibuya` runtime (including RocStar).
 
 The sequence that we will allow will have to start like:
 1. `DescendOrigin`
@@ -34,22 +33,34 @@ The sequence that we will allow will have to start like:
 This XCM sequence prefix can be followed up by arbitrary instructions, e.g. with `Transact`.
 Although we cannot guarantee this, other chains will most likely allow the same (or very similar) sequence prefix.
 
-### DescendOrigin
+#### DescendOrigin
 
 Ensures that the origin isn't a parachain but a more complex junction like `{ parachain: 2006, accountId: 0x123aff....ff }`. If this was omitted, any call would be executed as if it was sent from the *root-only* parachain's sovereign account, and we cannot allow that.
 
-### WithdrawAsset
+#### WithdrawAsset
 
 Withdraws assets on the destination chain from the derived sender account. The account must have the specified asset and the requested amount, otherwise the instruction will fail. These assets are used to pay for the XCM execution time.
 
-### BuyExecution
+#### BuyExecution
 
 Using the withdrawn assets, buys XCM executuion time.
 
-## Transact
+#### Transact
 
 Execute the specified encoded call data, without consuming weight more than specified.
 Call data can be virtually anything that is supported by the remote chain - doesn't matter what the origin chain supports.
+
+### Remote WASM Smart Contract Execution
+
+For all our runtimes supporting WASM Smart Contracts & remote transact via XCM, users can fully utilize contract uploads, instantiation and most important - calls. No special approach or setup are needed since WASM Smart Contracts are native to our chains. Sending a remote WASM SC call is same as executing any other remote transaction.
+
+You can prepare the call you need via `polkadot.js portal`(see image below) or within your custom code using [polkadot-js/api-contract](https://github.com/polkadot-js/api/tree/46076c5595ab62e960a1097611a3e150bfa942f2/packages/api-contract) TypeScript library.
+
+![remote-wasm-call](img/remote-transact/007_wasm_flipper_call.png)
+
+The `data: Bytes` part consists of function selector (which contract function to call) and [SCALE](https://github.com/paritytech/parity-scale-codec) encoded input arguments. Unfortunately, no tool for easily generating the `data` value exists for the moment. Once it becomes available, we'll provide a link here.
+
+Until then please rely on the aforementioned library or the `polkadot-js portal` to extract these values.
 
 ## Derived Remote Accounts
 
