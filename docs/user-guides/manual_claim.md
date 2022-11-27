@@ -39,5 +39,5 @@ If you are caught in this situation, this tutorial will guide you on how to clai
 
 ---
 
-That's all, and please claim your rewards regulary to avoid this situation. If you happen to come across any issue, please contact any of the Team Members or Ambassadors on [Discord](https://discord.gg/2FGq5KqwBh).
+That's all, and please claim your rewards regularly to avoid this situation. If you happen to come across any issue, please contact any of the Team Members or Ambassadors on [Discord](https://discord.gg/2FGq5KqwBh).
 
