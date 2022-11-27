@@ -30,9 +30,8 @@ Remix is a powerful open-source toolset for developing, deploying, debugging, a
 
 ![Untitled](img-Remix-cookbook/Untitled.png)
 
-- Add a new file named “storage.sol” with the following contract code provided.
-    - This is a simple example contract with two methods to `store()` and `retrieve()` value in a variable deployed on-chain.
-    
+- Add a new file named “storage.sol” with the following contract code provided. This is a simple example contract with two methods to `store()` and `retrieve()` value in a variable deployed on-chain.
+
     ```
     // SPDX-License-Identifier: GPL-3.0
     
@@ -82,8 +81,7 @@ Before smart contracts can be deployed, the Solidity code must be compiled to by
 
 ![Untitled](img-Remix-cookbook/Untitled%203.png)
 
-- After the compilation, you will be able to check the contract ABI and bytecode in the “ABI” and “Bytecode” sections under the “Compilation Details”.
-    - You will also find the “Storage.json” file in your workspace, which may be useful for your contract verification on block explorers.
+- After the compilation, you will be able to check the contract ABI and bytecode in the “ABI” and “Bytecode” sections under the “Compilation Details”. You will also find the “Storage.json” file in your workspace, which may be useful for your contract verification on block explorers.
 
 ---
 
@@ -104,8 +102,7 @@ Before smart contracts can be deployed, the Solidity code must be compiled to by
 
 ![Untitled](img-Remix-cookbook/Untitled%205.png)
 
-- Now, your first Solidity contract on the Shibuya testnet is deployed! Please feel free to copy the deployed contract address from “Deployed Contracts” and view it in the block explorer.
-    - BlockScout for Shibuya: [https://blockscout.com/shibuya](https://blockscout.com/shibuya)
+- Now, your first Solidity contract on the Shibuya testnet is deployed! Please feel free to copy the deployed contract address from “Deployed Contracts” and view it in the block explorer. BlockScout for Shibuya: [https://blockscout.com/shibuya](https://blockscout.com/shibuya)
 
 ![Untitled](img-Remix-cookbook/Untitled%206.png)
 
