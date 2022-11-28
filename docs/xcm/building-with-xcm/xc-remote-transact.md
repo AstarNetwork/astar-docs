@@ -161,7 +161,7 @@ Please read on to get a better understanding of how to calculate these parameter
 
 At the moment, user can only specify the paymet asset via `H160` address. Even though payment asset references an asset in the destination chain, the remote asset must have a local derivative. This will be changed & improved in the future so that user can specify asset multilocation directly.
 
-In case user wants to pay using local currency derivative (wrapped ASTR or SDN) in the destination chain, please use the specialized zeroed H160 address `0x0000000000000000000000000000000000000000`.
+In case user wants to pay using local currency derivative (wrapped ASTR or SDN) in the destination chain, specialized zeroed H160 address,`0x0000000000000000000000000000000000000000`, should be used.
 
 ### Transact Weight
 
