@@ -157,7 +157,13 @@ function remote_transact(
 
 Please read on to get a better understanding of how to calculate these parameters.
 
-### Payment Asset and Transact Weight
+### Payment Asset
+
+At the moment, user can only specify the paymet asset via `H160` address. Even though payment asset references an asset in the destination chain, the remote asset must have a local derivative. This will be changed & improved in the future so that user can specify asset multilocation directly.
+
+In case user wants to pay using local currency derivative (wrapped ASTR or SDN) in the destination chain, please use the specialized zeroed H160 address `0x0000000000000000000000000000000000000000`.
+
+### Transact Weight
 
 Specifying the correct amount of assets to withdraw and buy execution time with, as well as the correct transact weight can be tricky. Neither are actually controlled by `Astar` or `Shiden` runtime, instead the destination chain's runtime handles it. There are a few points and tips that can help user calculate the correct values.
 
