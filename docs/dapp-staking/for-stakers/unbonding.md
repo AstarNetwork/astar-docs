@@ -2,34 +2,33 @@
 sidebar_position: 2
 ---
 
-# Unbond your stake
+# Fare Unbond del tuo stake
 
-## Overview
+## Panoramica
 
-Moving towards dApp Staking v2 the first new implementation is the unbonding period. In general terms, bonding is a process by which tokens are temporarily locked. Staking is one of the scenarios that require tokens to be bonded. Unbonding is the action of telling the network that you want to unlock these tokens. After the unbonding time, which is 5 days for Shiden and 10 days for Astar, you can withdraw the tokens, and they become a transferable balance. Please note that this is based on a perfect block production of 12s. In case of any delay, your unbonding period can be a little longer.
+Con il passagio alla versione dApp Staking v2 la prima nuova implementazione sarà il periodo di unbonding. In termini generali, il bonding è un processo attraverso il quale i token sono temporaneamente bloccati. Lo staking è uno degli scenari che richiede che i token devono essere messi in bonding. Unbonding è l'azione che comunica alla rete che si desidera sbloccare questi token. Dopo il periodo di unbonding, che è di 5 giorni per Shiden e 10 giorni per Astar, è possibile ritirare i token, i quali passano su saldo trasferibile. Si prega di notare che questo si basa su una perfetta produzione di blocchi di 12s. In caso di ritardo, il vostro periodo di unbonding potrebbe essere un po' più lungo.
 
-| Network | Unbonding period |
-| --- | --- |
-| Astar | 10 days |
-| Shiden | 5 days |
+| Network | Periodo di unbonding |
+| ------- | -------------------- |
+| Astar   | 10 giorni            |
+| Shiden  | 5 giorni             |
 
-## How to unbond
+## Come fare unbond
 
-If you have staked on one of the dApps, you can now click on Unbond to make your tokens transferable.
+Se hai messo in stake su una delle dApps, ora puoi fare clic su Unbond per rendere i tuoi token trasferibili.
 
 ![3](img/3.png)
 
-Select the amount you want to **Unbond**, and click on **Max** to unbond your complete stake. To sign your transaction click on **Start Unbonding**.
+Selezionare l'importo del quale desideri fare **Unbond** e fare clic su **Max** per fare unbond dello stake completo. Per firmare la transazione, clicca su **Start Unbonding**.
 
 ![4](img/4.png)
 
-Check your **Chunks**
+Controlla i tuoi **Chunks**
 
-![5](img/5.png)
-![6](img/6.png)
+![5](img/5.png) ![6](img/6.png)
 
-What's a Chunk? A chunk is the number of different ERA's you want to unbond your tokens. Chunks do not equal the amount of unbonding on dApps you requested but the amount of different ERA's you unbonded your tokens.
+Cos'è una Chunk? Un chunk è il numero di ERA differenti in cui vuoi fare unbond dei tuoi token. I chunks non sono uguali alla quantità di unbonding su dApps che hai richiesto, ma alla quantità di ERA differenti in cui hai fatto unbonding dei tuoi token.
 
-Withdraw your 'Chunks'. When your unbond period is over, you need to withdraw your funds by clicking on the withdraw button. Sign the transaction and your tokens will be made transferrable in your wallet.
+Preleva i tuoi 'Chunks'. Quando il periodo di unbond è finito, è necessario prelevare i fondi cliccando sul pulsante di prelievo. Firma la transazione e i tuoi token saranno resi trasferibili nel tuo wallet.
 
 ![7](img/7.png)
