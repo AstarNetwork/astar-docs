@@ -2,28 +2,28 @@
 sidebar_position: 4
 ---
 
-# Nomination Transfer
+# Trasferimento Nomination
 
-Nomination Transfer allows stakers to move the entirety or portions of their nominations to other projects while skipping the unbonding period. This way, stakers don't have to sacrifice staking rewards in the unbonding period to support a project you are interested in.
+Il Trsferimento di Nomination consente agli staker di spostare la totalità o porzioni delle loro nomination ad altri progetti saltando il periodo di unbonding. In questo modo, gli staker non devono sacrificare le reward da staking nel periodo di unbonding e possono sostenere un progetto a cui sono interessati.
 
-DApp staking is designed to support the projects and developers in our ecosystem. Staking through dApp Staking is giving your vote to the project you want to support. Your vote (stake) will impact their earnings with the protocol.
+Le DApp staking sono progettate per supportare i progetti e gli sviluppatori nel nostro ecosistema. Lo Staking attraverso le dApp Staking è come dare il vostro voto al progetto che si desiderate supportare. Il tuo voto (stake) influenzerà i loro guadagni con il protocollo.
 
-## Instructions
+## Istruzioni
 
-When you go to our [dApp staking page](https://portal.astar.network/#/dapp-staking/discover), you will find all the dApps listed in our dApp Staking mechanism. The instructions written down are the same in all Astar networks.
+Quando vai alla nostra [dApp staking page](https://portal.astar.network/#/dapp-staking/discover), troverai tutte le dApps elencate nel nostro meccanismo dApp Staking. Le istruzioni scritte sono le stesse in tutte le reti Astar.
 
-This function is only available for stakers who are already staking in a dApp. If this is the first time staking in our dApp Staking mechanism, you can find a step-by-step guide [here](staking)
+Questa funzione è disponibile solo per gli staker che sono già in fase di staking in una dApp. Se questa è la prima volta che ti trovi nel nostro meccanismo dApp Staking puoi trovare una guida passo-passo [qui](staking)
 
-## Example use-case
+## Esempio di use-case
 
-I staked 150 SDN on *Stake Technologies* and want to transfer a portion to the *Community Rewards* dApp because I want to support them with my vote by staking on their dApp.
+Hai messo in stake 150 SDN su *Stake Technologies* e vorresti trasferire una porzione a *Community Rewards* dApp perché vorresti supportarli con il voto staking sulla loro dApp.
 
 ![9](img/9.png)
 
-You open the transfer window by clicking on the **Stake** button on the dApp you wish to support. You can select what funds you would like to use, funds that are transferable and in your wallet, or use it from another dApp you are staking on. In this case, I want to transfer some funds from *Stake Technologies* to the *Community Rewards* program. Enter the amount you wish to transfer (in the case of Shiden, the minimum is 50 SDN) and click on **Stake**. At the end of the process, you finalize by signing the transaction.
+Si apre la finestra di trasferimento facendo clic sul pulsante **Stake** sulla dApp che desideri supportare. È possibile selezionare quali fondi si desidera utilizzare, fondi che sono trasferibili e nel tuo wallet, o puoi utilizzarli da un altra dApp su cui stai facendo staking. In questo caso, vuoi trasferire alcuni fondi da *Stake Technologies* al programma *Community Rewards*. Inserisci l'importo che desideri trasferire (nel caso di Shiden, il minimo è 50 SDN) e clicca su **Stake**. Al termine del processo, si finalizza firmando la transazione.
 
 ![10](img/10.png)
 
-Now you see that you transferred a part of your staked amount to the new dApp without having to unbond your tokens.
+Ora vedi che hai trasferito una parte del tuo importo in staking alla nuova dApp senza dover fare unbond di tutti i tuoi token.
 
 ![11](img/11.png)
