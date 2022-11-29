@@ -1,45 +1,45 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 ---
 
-# Swap Cross-Chain Assets from Major EVM Chains to Astar
+# Scambio asset Cross-Chain dalle chain EVM ad Astar
 
-In this tutorial, we will guide you through the process for making a cross-chain swap from at least 12 EVM chains to Astar.
+In questo tutorial, ti guideremo attraverso il processo per effettuare uno scambio cross-chain da almeno 12 catene EVM ad Astar.
 
-## Visit XY Finance’s X swap page
+## Visita la pagina per lo swap su XY Finance
 
-XY Finance is a one-stop cross-chain swap aggregator for DeFi & Metaverse, allowing users to directly buy ASTR and other tokens on Astar from other chains in one transaction. Currently, XY Finance supports 12 EVM chains, including Ethereum, BSC, Fantom, Polygon, Arbitrum, Optimism, Avalanche C-Chain, Cronos, KCC, ThunderCore, Astar, and Moonriver.
+XY Finance è un aggregatore one-stop cross-chain per DeFi & Metaversi, consentendo agli utenti di acquistare direttamente ASTR e altri token su Astar con una transazione. Attualmente XY Finance supporta 12 chain EVM, tra cui Ethereum, BSC, Fantom, Polygon, Arbitrum, Optimism, Avalanche C-Chain, Cronos, KCC, ThunderCore, Astar, e Moonriver.
 
-## Connect Wallet
+## Connettere il portafoglio
 
-Click the “Connect Wallet” button.
+Clicca sul pulsante “Connetti portafoglio”.
 
-Before you explore the straightforward features offered by XY Finance, you will need to connect your wallet. XY Finance currently supports Metamask and WalletConnect on desktop browsers, with more types of wallets supported on mobile.
+Prima di esplorare le semplici funzionalità offerte da XY Finance, dovrai collegare il tuo portafoglio. XY Finance attualmente supporta Metamask e WalletConnect sui browser desktop, con più portafogli supportati sui dispositivi mobili.
 
 ![26](img/26.png)
 
-## Swap token
+## Scambiare token
 
-Choose the token you want to swap on your source chain and the token you want to receive on the Astar. Here, we’re going to swap USDT on Polygon to ASTR on Astar as an example. With the service offered by XY Finance, EVM users can directly acquire ASTR in one transaction.
+Scegli il token che desideri scambiare dalle chain disponibili e il token che desideri ricevere sull'Astar. Nell'esempio scambieremo USDT su Polygon con ASTR su Astar. Con il servizio offerto da XY Finance, gli utenti EVM possono acquisire direttamente ASTR in un'unica transazione.
 
-## Enter token amount
+## Inserire importo token
 
-Enter the amount of USDT you want to swap.
+Inserisci la quantità di USDT che vuoi scambiare.
 
 ![27](img/27.png)
 
-Double-check the recipient's address. XY Finance will display your connected wallet address by default and it also allows you to change the recipient address.
+Controlla attentamente l'indirizzo del destinatario. XY Finance visualizzerà l'indirizzo del tuo portafoglio connesso e ti consentirà anche di modificare l'indirizzo del destinatario.
 
 ![28](img/28.png)
 
-Click the “Approve to Swap” button, and your wallet will ask you to confirm the action.
+Fai clic sul pulsante "Approva per lo scambio" dopodiché ti verrà chiesto di confermare l'operazione.
 
 ![29](img/29.png)
 
 # Swap
 
-Click the “ Swap” button, and your wallet will ask you to confirm the action again. Confirm your transaction from your wallet.
+Clicca sul pulsante "Scambia", il tuo portafoglio ti chiederà di confermare nuovamente l'azione. Conferma la transazione dal tuo portafoglio.
 
 ![30](img/30.png)
 
-You will receive your ASTR on Astar Network in a few minutes.
+Riceverai i tuoi ASTR token su Astar Network in pochi minuti.
