@@ -1,19 +1,19 @@
-# For Stakers
+# Per gli Stakers
 
-## Overview
+## Panoramica
 
-Do you love to stake? Or do you want to support your favorite project by staking on their dApp? You can educate yourself by reading the documentation carefully. In case you have any questions, come and join our Discord channel.
+Ti piace lo stake? Oppure vuoi supportare il tuo progetto preferito mettendo in stake sulla loro dApp? È possibile reperire informazioni per voi, leggendo attentamente la documentazione. Nel caso in cui aveste domande, venite e unitevi al nostro canale Discord.
 
-Please take the following parameters into consideration:
+Si prega di prendere in considerazione i seguenti parametri:
 
-- The **minimum** amount to stake for users is **50 SDN or 500 ASTR.**
-- **You need to claim to receive your rewards, we recommend claiming for your staking rewards once a week.**
-- There is a bonding period for around 5 days on Shiden and 10 days on Astar. Please note that this is based on a perfect block production of 12s. In case of any delay, your unbonding period can be a little longer.
-- The staking rewards are shown in APY by default. APY option is available for stakers who have allowed compounding by turning on 'Re-stake after claiming". On the other hand, APR option is availble for stakers who haven't enabled compounding. The difference is that APR represents the annual rate simply for earning your stake but APY takes compounding into account. 
+- L’importo **minimo** per lo staking per singolo utente è **50 SDN o 500 ASTR.**
+- **Devi fare il claim delle tue reward, ti consigliamo di richiedere le tue reward da staking una volta alla settimana.**
+- C'è un periodo di bonding di circa 5 giorni su Shiden e 10 giorni su Astar. Si prega di notare che questo si basa su una perfetta produzione di blocchi di 12s. In caso di ritardo, il vostro periodo di unbonding può essere un po' più lungo.
+- Le reward per lo staking sono mostrate in APY per impostazione predefinita. L'opzione APY è disponibile per gli staker che hanno permesso il compounding cliccando 'Re-stake dopo aver reclamato". D'altra parte, l'opzione APR è disponibile per i staker che non hanno abilitato il compounding. La differenza è che APR rappresenta il tasso annuale semplice guadagnato dal vostro staking, mentre l' APY prende in considerazione il compounding delle reward.
 
 ![12](img/12.png)
 
-Other pages that can be of interest:
+Altre pagine che possono essere interessanti:
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
