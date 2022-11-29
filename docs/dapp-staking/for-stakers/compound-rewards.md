@@ -2,10 +2,10 @@
 sidebar_position: 3
 ---
 
-# Compound Rewards
+# Reward con Compound
 
-Compound rewards feature allows stakers to claim staked rewards which will be automatically restaked on the same dApp. So rather than having to make two extrinsic calls and having to sign two transactions, users needs to only make one extrinsic call to claim the rewards and those rewards are automatically reinvested.
+La funzione di reward con compound permette agli staker di reclamare reward in staking che vengono automaticamente rimesse in stake sulla stessa dApp. Quindi piuttosto che dover fare due chiamate extrinsic e dover firmare due transazioni, gli utenti devono fare una sola chiamata extrinsic per richiedere le reward e quei premi vengono reinvestiti automaticamente.
 
-The compounding rewards feature is enabled by default. You can disable this feature via the portal.
+La funzione reward con compound è abilitata per impostazione predefinita. È possibile disabilitare questa funzione tramite il portale.
 
 ![8](img/8.png)
