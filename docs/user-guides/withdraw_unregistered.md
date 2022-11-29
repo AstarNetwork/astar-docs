@@ -2,69 +2,64 @@
 sidebar_position: 9
 ---
 
-# Withdraw Stake From Unregistered Contract
+# Prelevare lo Stake dal Contratto non registrato
 
-Occasionally but rare, some projects decided to change their contract address on the portal or projects get delisted. In this case, some stakes are not automatically removed. Stakers need to manually withdraw their stake. This tutorial will guide you on how to withdraw your stake from a dApp that has been removed from the portal.
+Occasionalmente, ma raramente, alcuni progetti possono decidere di cambiare l'indirizzo del contratto sul portale oppure  essere rimossi. In questi casi, gli stake non vengono rimossi automaticamente. È necessario ritirare manualmente il vostro stake. Questo tutorial ti guiderà su come ritirare il tuo stake da una dApp che è stata rimossa dal portale.
 
-**Most easiest way**, is to connect to the portal with the address that is staking on the unregistered dApp and click on 'Claim'. The moment you click on claim, your bonded tokens will be unlocked and enter unbonding period. In case the above doesn't work, you can follow the guide below.
-
----
-
-## Step 1: Find The Contract Address That You Are Staked On
-1. Go to [Polkadot.js web app](https://polkadot.js.org/apps/#/chainstate).
-2. Make sure you are connected to the correct chain (Astar/Shiden/Shibuya).
-3. Make sure you are connected with the correct wallet.
-4. Click `Developer` and `Chain State`. 
-5. On the left dropdown menu, select `dappsStaking`.
-6. On the right dropdown menu, select `generalStakerInfo`.
-7. Unselect `include option`.
-8. Click the **+** sign.
-![image](https://user-images.githubusercontent.com/37278708/199924502-e833a53e-ce7f-4b7d-bdee-b2ea1b377904.png)
-
-9. You are now able to see all the contracts that you are staked on.
-![image](https://user-images.githubusercontent.com/37278708/199924710-61d994f3-ddae-4dfb-b4c3-f186138d86de.png)
-
-10. Leave that page as it is.
-11. Open another browser tab and go to [Astar Portal](https://portal.astar.network/#/astar/dapp-staking/discover).
-12. Connect using the same wallet.
-13. Go to dApp Staking -> My dApps.
-14. You can see the list of dApps that you are staked on.
-![image](https://user-images.githubusercontent.com/37278708/199926165-909fa598-d9b2-4811-8619-f3ae414b9fb3.png)
-
-15. Go to the info of each dApp that you are staked on and you can see the contract address.
-![image](https://user-images.githubusercontent.com/37278708/199926265-f1913a1a-0635-4ed2-9f9b-91e7c8e0a2ec.png)
-
-16. Cross check the contract addresses with the ones you have on Polkadot.js web app. If you come across a contract address that is available on Polkadot.js web app but not available on Astar Portal, that is the contract address that has been removed, which is what you are looking for.
-17. Copy that contract address and paste it on a notepad as a reference for the next steps.
+**Il modo più semplice**, è quello di connettersi al portale con l'indirizzo usato per lo staking sulla dApp non registrata e fare clic su 'Claim'. Cliccando su Claim i token saranno sbloccati ed entreranno nel periodo di unbonding. Nel caso in cui questo non funzioni, puoi seguire la guida qui sotto.
 
 ---
 
-## Step 2: Claim All The Unclaimed Rewards
-1. Open a new browser tab and go to [Polkadot.js web app](https://polkadot.js.org/apps/#/extrinsics).
-2. Make sure you are connected to the correct chain (Astar/Shiden/Shibuya).
-3. Make sure you are connected with the correct wallet.
-4. Click `Developer` and `Extrinsics`. 
-5. On the left dropdown menu, select `dappsStaking`.
-6. On the right dropdown menu, select `claimStaker`.
-7. On EVM: H160, paste the contract address that you have on the notepad e.g `0xaab44542c72f88f7b98fffda418e3efe94bc13af`.
-8. Submit transaction and add a tip before signing the transaction.
-9. If you have a huge backlog, you need to repeat this step many times until all the rewards are claimed. Otherwise, you won't be able to proceed with the next step.
+## Passo 1: Trovare l'indirizzo del contratto usato per lo staking
+1. Vai su [Polkadot.js web app](https://polkadot.js.org/apps/#/chainstate).
+2. Assicurati di essere connesso con la chain corretta (Astar/Shiden/Shibuya).
+3. Assicurati di essere connesso con il portafoglio corretto.
+4. Clicca su `Developer` e `Chain State`.
+5. Nel menu a discesa a sinistra, seleziona `dappsStaking`.
+6. Nel menu a discesa a destra, seleziona `generalStakerInfo`.
+7. Deseleziona l'opzione `include`.
+8. Clicca sul segno **+**. ![image](https://user-images.githubusercontent.com/37278708/199924502-e833a53e-ce7f-4b7d-bdee-b2ea1b377904.png)
+
+9. Ora sei in grado di vedere tutti i contratti con i quali stai facendo lo staking. ![image](https://user-images.githubusercontent.com/37278708/199924710-61d994f3-ddae-4dfb-b4c3-f186138d86de.png)
+
+10. Lascia la pagina così com'è.
+11. Apri un'altra scheda del browser e vai su [Astar Portal](https://portal. astar. network/#/astar/dapp-staking/discover).
+12. Connettiti usando lo stesso portafoglio.
+13. Vai su dApp Staking -> My dApps.
+14. Puoi vedere la lista delle dApp sulle quali sei in staking. ![image](https://user-images.githubusercontent.com/37278708/199926165-909fa598-d9b2-4811-8619-f3ae414b9fb3.png)
+
+15. Vai sulle informazioni di ogni dApp su cui sei in staking per vedere l'indirizzo del contratto. ![image](https://user-images.githubusercontent.com/37278708/199926265-f1913a1a-0635-4ed2-9f9b-91e7c8e0a2ec.png)
+
+16. Controlla gli indirizzi dei contratti con quelli che hai sull'app web di Polkadot.js. Se ti imbatti in un indirizzo del contratto disponibile sull'app Web Polkadot.js ma non disponibile su Astar Portal, questo è il contratto che è stato rimosso, ed è quello che stai cercando.
+17. Copia l'indirizzo del contratto e incollalo in una nota come riferimento per le fasi successive.
+
+---
+
+## Passo 2: Richiedi tutte le reward non riscosse
+1. Apri una nuova scheda del browser e vai su [Polkadot.js web app](https://polkadot.js.org/apps/#/extrinsics).
+2. Assicurati di essere connesso con la chain corretta (Astar/Shiden/Shibuya).
+3. Assicurati di essere connesso con il portafoglio corretto.
+4. Clicca su `Developer` e `Extrinsics`.
+5. Nel menu a sinistra, seleziona `dappsStaking`.
+6. Nel menu a destra, seleziona `claimStaker`.
+7. Su EVM: H16O, incolla l'indirizzo del contratto che hai precedentemente salvato sulle note, per esempio `0xaab44542c72f88f7b98fffda418e3efe94bc13af`.
+8. Invia la transazione e aggiungi una mancia prima di firmare la transazione.
+9. Se si dispone di un enorme backlog, è necessario ripetere questa operazione più volte fino a quando tutte le reward non sono reclamate. Altrimenti, non sarai in grado di procedere con il passo successivo.
 ![image](https://user-images.githubusercontent.com/37278708/199938229-92e8eb7d-46fa-450f-a16f-d583da7bf48c.png)
 ---
 
-## Step 3: Withdraw The Stake From The Contract
-1. Stay on the same browser.
-2. On the left dropdown menu, select `dappsStaking`.
-3. On the right dropdown menu, select `withdrawFromUnregistered`.
-4. On EVM: H160, paste the contract address that you have on the notepad e.g `0xaab44542c72f88f7b98fffda418e3efe94bc13af`.
-5. Submit transaction and add a small tip before signing the transaction.
-![image](https://user-images.githubusercontent.com/37278708/199930565-fff88330-bc9d-4680-aea3-de8d52052c00.png)
+## Passo 3: Prelievo dello stake dal contratto
+1. Rimani sullo stesso browser.
+2. Nel menu a discesa a sinistra, seleziona `dappsStaking`.
+3. Nel menu a discesa a destra, seleziona `withdrawFromUnregistered`.
+4. Su EVM: H16O, incolla l'indirizzo del contratto che hai precedentemente salvato sulle note, per esempio `0xaab44542c72f88f7b98fffda418e3efe94bc13af`.
+5. Invia la transazione e aggiungi una piccola fee di mancia prima di firmare la transazione. ![image](https://user-images.githubusercontent.com/37278708/199930565-fff88330-bc9d-4680-aea3-de8d52052c00.png)
 
-6. Your stake is now withdrawn from the unregistered contract. 
+6. Il tuo stake è ora prelevato dal contratto rimosso.
 
 ---
 
-That's all. If you happen to come across any issue, please contact any of the Team members or Ambassadors on [Discord](https://discord.gg/2FGq5KqwBh).
+È tutto! In caso di problemi, contatta uno dei membri del team o un ambasciatore su [Discord](https://discord.gg/2FGq5KqwBh).
 
 
 
