@@ -2,41 +2,41 @@
 sidebar_position: 1
 ---
 
-# Requirements
+# Requisiti
 
-**Are you a project owner and want to list your dApp in our staking mechanism to earn rewards?** Please read these guidelines carefully. If you meet all the requirements, you can just continue filling in [this form](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) so we can list your dApp.
+**Sei il proprietario di un progetto e vuoi listare la tua dApp nel nostro meccanismo di staking per guadagnare reward?** Per favore leggi queste linee guida attentamente. Se soddisfi tutti i requisiti, puoi semplicemente continuare a compilare [questo modulo](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) in modo da poter listare la tua dApp.
 
-Are you interested to join dApp staking on Shiden or Astar? Read carefully to see if you meet the requirements:
+Sei interessato a partecipare allo staking dApp su Shiden o Astar? Leggi attentamente per vedere se soddisfi i requisiti:
 
 :::info
-Astar is aiming to become a DAO in a couple of years. While moving towards becoming a DAO our dApp staking onboarding also includes passing our council. The process is to create your proposal to join dApp staking also on our [forum](https://forum.astar.network/c/initiatives/dapp-staking-applications/21) after meeting the requirements below.
+Astar mira a diventare un DAO in un paio di anni. Mentre ci muoviamo per diventare una DAO il nostro dApp staking onboarding include anche l 'approvazione del nostro consiglio. Il processo è quello di creare la tua proposta per unirti allo staking dApp anche sul nostro forum [](https://forum.astar.network/c/initiatives/dapp-staking-applications/21) dopo aver soddisfatto i requisiti qui sotto.
 :::
 
 ## Astar Network
 
-- Your dApp is **launched and live on Astar Network**
-- Does your project contribute to Astar TVL, make sure you are listed on [DefilLama](../../integrations/dapp-listing/defillama).
-- List your project on [DappRadar](../../integrations/dapp-listing/dappradar).
+- La tua dApp è **lanciata e live su Astar Network**
+- Il tuo progetto contribuisce ad Astar TVL, assicurati di essere elencato su [DefilLama](../../integrations/dapp-listing/defillama).
+- Lista il tuo progetto su [DappRadar](../../integrations/dapp-listing/dappradar).
 
-### What about infrastructure partners?
+### Che dire dei partner infrastutturali?
 
-You don’t have any dApp but you are providing infrastructure services to the Astar ecosystem. You also can be added to dApp staking. How to join:
+Non hai alcun dApp ma stai fornendo servizi di infrastruttura per l'ecosistema Astar. Puoi anche essere aggiunto al dApp staking. Come partecipare:
 
-- You already have a long-term partnership with Astar and a close relationship with some projects.
-- You have a proven record in our ecosystem.
-- You have docs about how to use your tools in our documentation and in yours. You can add instructions to our documentation by creating a PR on our Github.
+- Avete già una partnership a lungo termine con Astar e una stretta relazione con alcuni progetti.
+- Avete una comprovata esperienza nel nostro ecosistema.
+- Hai i documenti su come utilizzare i tuoi tool nella nostra documentazione e nella tua. È possibile aggiungere istruzioni alla nostra documentazione creando una PR sul nostro Github.
 
-### What about other projects who can't meet the above requirements?
+### Che dire di altri progetti che non riescono a soddisfare i requisiti qui sopra?
 
-You can't add your project to DefilLama because it's not generating any TVL, also DappRadar is not an option because there is no use of smart contracts? These are the current steps to follow:
+Non puoi aggiungere il tuo progetto a DefilLama perché non genera nessun TVL, anche DappRadar non è un'opzione perché non c'è uso di smart contracts? Queste sono le fasi da seguire:
 
-- Ambassador KYC, this is done with an AMA with Ambassador with video on.
-- Create a proposal on our forum and pass the council voting.
-- Active on Discord, post updates in our dedicated announcement channels.
-- Use the tooling we provide to track metrics later down your development.
+- Ambasciatore KYC, questo è fatto con un AMA con Ambasciatore con un video.
+- Creare una proposta sul nostro forum e passare il voto del consiglio.
+- Essere attivo su Discord, postare aggiornamenti nei nostri canali di annuncio dedicati.
+- Usa i tool che ti che forniamo per tenere traccia delle metriche più avanti del tuo sviluppo.
 
 ## Shiden Network
 
-- Your dApp is **launched and live on Shiden Network**.
-- Does your project contribute to the growth of Shiden it would be great to list your project on DappRadar and or DefilLama. This is not a requirement but it would help grow the trust for your project with our community.
-- Infrastructure partners who are contributing to our ecosystem and need to cover their costs can apply to our dApp staking mechanism on Shiden.
+- La tua dApp è **lanciata e live su Shiden Network**.
+- Il progetto contribuisce alla crescita di Shiden sarebbe utile elencare il tuo progetto su DappRadar e o DefilLama. Questo non è un requisito, ma contribuirebbe a far crescere la fiducia per il vostro progetto con la nostra comunità.
+- I partner infrastrutturali che contribuiscono al nostro ecosistema e devono coprire i loro costi possono rivolgersi al nostro meccanismo dApp staking su Shiden.
