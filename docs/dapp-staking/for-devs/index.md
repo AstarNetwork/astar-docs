@@ -1,13 +1,13 @@
-# For Developers
+# Per gli sviluppatori
 
-## Overview
+## Panoramica
 
-Are you a product owner and want to list your dApp in our staking mechanism to earn rewards? You have to make sure you meet the requirements. Read more about those by clicking on the links below.
+Sei il proprietario di un prodotto e vuoi listare la tua dApp nel nostro meccanismo di staking per guadagnare premi? Devi essere sicuro di soddisfare i requisiti. Leggi di più su quelli cliccando sui link qui sotto.
 
-Please take the following parameters into consideration:
+Si prega di tenere conto dei seguenti parametri:
 
-- To register a dApp for dApp staking you need to have 100 SDN tokens or 1000 ASTR tokens depending on the network you would like to join as a project. DApp staking on our testnet Shibuya requires 100 SBY.
-- **You need to claim to receive your rewards, we recommend claiming for your staking rewards once a week.**
+- Per registrare un dApp per lo staking è necessario avere 100 token SDN o 1000 token ASTR a seconda della rete in cui si desidera partecipare come progetto. DApp staking sulla nostra testnet Shibuya richiede 100 SBY.
+- **Devi fare il claim delle tue reward, ti consigliamo di richiedere le tue reward da staking una volta alla settimana.**
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
