@@ -2,24 +2,24 @@
 sidebar_position: 1
 ---
 
-# About Astar and Shiden Tokens
+# Informazioni su Astar e Shiden Tokens
 
-Astar Token is the utility token for Astar Network that has 3 primary functions.
+Astar Token è l'utility token di Astar Network che ha tre funzioni principali.
 
 1. dApp Staking
-2. Transactions
-3. On-chain Governance
+2. Transazioni
+3. Governance on-chain
 
-## dApps Staking
+## dApp Staking
 
-DApps Staking is an original scheme that Astar Network core team invented and only the Astar ecosystem supports this feature in the Polkadot ecosystem. Astar Network aims to be the leading dApps hub on Polkadot Network. Hence, we prepared incentives for dApps developers to make smart contracts on Astar Network.
+DApps Staking è un progetto originale inventato dal core team di Astar Network e solo l'ecosistema Astar supporta questa funzionalità nell'ecosistema Polkadot. Astar Network mira a diventare il principale hub di dApp su Polkadot Network. Quindi, abbiamo preparato degli incentivi per gli sviluppatori di dApps per sviluppare smart contract su Astar Network.
 
-dApps Staking is a simple but strong mechanism. Astar token holders can stake Astar tokens on dApps they like and want to support. By doing so, the staker earns Astar tokens from block rewards. In addition to that, dApps developers get rewards based on the amount staked on them. In general, application developers on Astar Network receive Astar tokens by making smart contracts or infrastructure for Astar Network community. We intend to make it a  sustainable and decentralized grant mechanism.
+dApps Staking è un meccanismo semplice ma efficace. I possessori di token Astar possono mettere in staking i token sulle dApp che preferiscono, supportando cosi direttamente gli sviluppatori. In questo modo lo staker guadagna i token Astar dalle ricompense dei blocchi. Inoltre, gli sviluppatori di dApps ottengono premi in base all'importo in stake su di loro. In generale, gli sviluppatori di applicazioni su Astar Network ricevono dei token Astar creando smart contract o infrastrutture per la comunità di Astar Network. Intendiamo renderlo un meccanismo di sovvenzione sostenibile e decentralizzato.
 
-## Transactions
+## Transazioni
 
-Every on-chain transaction requires the sender to pay fees. Part of the fee is burned and part is deposited to the collator.
+Ogni transazione richiede al mittente di pagare le commissioni. Una parte delle commissioni viene bruciata e una parte viene depositata al Collator.
 
-## On-Chain Governance
+## Governance on-chain
 
-We plan to make on-chain governance and Astar token is used for facilitating the governance activities such as voting and referenda.
+Abbiamo in programma di realizzare una governance on-chain e il token Astar viene utilizzato per facilitare le attività di governance come votazioni e referendum.
