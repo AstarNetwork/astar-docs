@@ -1,17 +1,17 @@
 ---
-sidebar_position: 8
+sidebar_position: 7
 ---
 
-# Unbonding Vested Tokens
+# Sblocco Token Vincolati
 
-If you joined the crowdloan, you will have vested tokens that you can unlock.
+Se avevi partecipato al crowdloan avrai dei token acquisiti che puoi sbloccare.
 
-To unbond your tokens, go to your wallet and load your account.
+Per sbloccare i tuoi token, vai al tuo portafoglio e accedi al tuo account.
 
-When your account is loaded you will see your tokens and how many are locked, vested, or transferrable:
+Dopo l'accesso vedrai i tuoi token, quanti sono bloccati, acquisiti o trasferibili:
 
 ![31](img/31.png)
 
-Click on the three dots next to 'send' where you can 'Unlock vested amount'. When you click on this, you need to confirm and sign the transaction. After this, your vested tokens and now transferrable!
+Clicca sui tre punti accanto a 'invia' dove puoi sbloccare l'importo accumulato. Cliccandoci sarà necessario confermare e firmare la transazione. Adesso i tuoi token vincolati sono ora trasferibili!
 
 ![32](img/32.png)
