@@ -2,31 +2,31 @@
 sidebar_position: 2
 ---
 
-# Creating a Multisig Wallet
+# Creazione di un portafoglio Multisig
 
-This tutorial serves as a guide to create a multisig substrate wallet.
+Questo tutorial è una guida per creare un portafoglio substrate multisig.
 
-## Add contacts
+## Aggiungi contatti
 
-1. Go to <https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts>
-2. Go to Accounts -> Address Book
-3. Click `+ Add Contact` and add all the contact addresses that you want to include in the multisig wallet.
-4. For example; Bob, Charlie and Dave
+1. Vai su <https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts>
+2. Vai a Account -> Address Book
+3. Clicca su `+ Add Contact` aggiungi tutti gli indirizzi di contatto desiderati da includere nel portafogli multisig.
+4. Per esempio: Bob, Charlie e Dave
 
 ![12](img/12.png)
 
-## Create new wallet
+## Crea un nuovo portafoglio
 
-1. Go to Accounts -> `+ Multisig`
-2. From the available signatories, select the ones that you want to include in the multisig.
-3. Add a threshold. A threshold of 2 means a minimum of 2 signatories are required to sign the transactions.
-4. Give the multisig wallet a name.
-5. Click "Create".
+1. Vai su Accounts -> `+ Multisig`
+2. Tra i firmatari disponibili, seleziona quelli che si desiderano includere nel multisig.
+3. Aggiungi una soglia. Una soglia di 2 indica che per firmare le operazioni sono necessari almeno 2 firmatari.
+4. Dai un nome al portafoglio multisig.
+5. Cliccare su "Create".
 
 ![13](img/13.png)
 
-## Test the wallet
+## Testare il portafoglio
 
-1. The multisig wallet is created.
-2. To test the multisig wallet, it is recommended to first use Shibuya testnet. You can get SBY faucet from <https://portal.astar.network> by connecting your own wallet.
-3. After getting the SBY faucet, send the SBY tokens to the multisig wallet and then you can start playing around.
+1. Il portafoglio multisig è stato creato
+2. Per testare il portafoglio multisig, si consiglia di utilizzare prima Shibuya testnet. Puoi ottenere SBY token dal faucet tramite <https://portal.astar.network> collegando il tuo portafoglio.
+3. Dopo aver ottenuto SBY dal faucet , invia i token SBY al portafoglio multisig per fare delle prove.
