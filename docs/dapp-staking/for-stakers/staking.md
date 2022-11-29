@@ -2,39 +2,39 @@
 sidebar_position: 1
 ---
 
-# Staking on dApps
+# Staking sulle dApps
 
-## How to stake
+## Come fare staking
 
-### Connect to network
+### Connettiti alla rete
 
-Go to our portal:  and click on 'Staking'.
+Vai al nostro portale: e clicca su 'Staking'.
 
 :::tip
-Make sure you are connected to the correct network.
+Assicurati di essere connesso alla rete corretta.
 - **Shibuya Network**: testnet
-- **Shiden Network**: mainnet on Kusama
-- **Astar Network**: mainnet for Polkadot
+- **Shiden Network**: mainnet su Kusama
+- **Astar Network**: mainnet su Polkadot
 :::
 
 ![1](img/1.png)
 
 ### Stake
 
-Look for your favorite project. You can click on the name to see more information about the project. Another great resource is looking in our [forum](https://forum.astar.network/), check [DefilLama](../../integrations/dapp-listing/defillama.md) or [DappRadar](../../integrations/dapp-listing/dappradar.md).
+Cerca il tuo progetto preferito. È possibile fare clic sul nome per visualizzare ulteriori informazioni sul progetto. Un'altra grande risorsa è la ricerca nel nostro [forum](https://forum. astar. network/), controlla [DefilLama](../../integrations/dapp-listing/defillama. md) o [DappRadar](../../integrations/dapp-listing/dappradar. md).
 
-To add your staking amount, just click on 'Stake' in the box of your favorite project.
+Per aggiungere la quantità da mettere in staking, è sufficiente cliccare su 'Stake' nella casella del vostro progetto preferito.
 
 ![2](img/2.png)
 
-### Manage dApp Staking
+### Gestisci le dApp Staking
 
-Once you have staked, new options to manage your dApp staking will appear on the main page:
+Una volta che hai messo in stake, nella pagina principale appariranno nuove opzioni per gestire le tue dApp staking:
 
-**Add**: you can add more tokens in dApp staking.
+**Aggiungi**: puoi aggiungere altri token nello staking della dApp.
 
-**Unbond**: here you can select how many tokens you want to unbond from your staked amount.
+**Unbond**: qui puoi selezionare a quanti token vuoi fare unbond dal tuo importo totale in stake.
 
-**Claim** (top of page): claim your rewards from all dApps you staked on. Every ERA you can claim for your rewards, but we recommend doing this once every week.
+**Richiedi** (parte superiore della pagina): prendi le tue reward da tutte le dApps su cui stai facendo staking. Ogni ERA è possibile richiederele tue reward, ma si consiglia di farlo una volta alla settimana.
 
-**Re-stake after claiming** (top of page): You can turn on or off automatic compounding of claimed rewards on staked dApps. More info is available [here](compound-rewards)
+**Re-stake dopo aver fatto il claim** (parte superiore della pagina): Puoi attivare o disattivare il compound automatico delle reward reclamate sulle dApps su cui fai stake. Maggiori informazioni sono disponibili [qui](compound-rewards)
