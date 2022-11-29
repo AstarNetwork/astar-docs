@@ -1,28 +1,24 @@
----
-sidebar_position: 11
----
+# Guida alla risoluzione dei problemi
 
-# Portal Troubleshooting Guide
+Questa sezione ti guiderà nella risoluzione della maggior parte dei problemi durante la connessione al portale.
 
-This section will guide you to troubleshoot and solve most issues when connecting to the portal.
+## Impossibile Collegare Il Portafoglio Al Portale
 
-## Can't Connect Wallet To The Portal
+**Consenti a Polkadot.js di accedere al portale**
+1. Vai all'estensione del browser Polkadot.js.
+2. Clicca l'icona dell'ingranaggio.
+3. Clicca su "Gestisci l'accesso ai siti web".
+4. Assicurarsi che portal.astar.network abbia il permesso.
 
-**Allow Polkadot.js to access the portal**
-1. Go to Polkadot.js browser extension.
-2. Click on the "gear" icon.
-3. Click on "manage website access".
-4. Make sure portal.astar.network is allowed.
+**Consenti l'uso di Polkadot.js su Astar/Shiden**
+1. Vai all'estensione del browser Polkadot.js.
+2. Clicca sui 3 punti.
+3. Nel menu a tendina, seleziona "Consenti l'uso su qualsiasi chain".
 
-**Allow Polkadot.js to be used on Astar/Shiden**
-1. Go to Polkadot.js browser extension.
-2. Click on the 3 dots.
-3. On the dropdown menu, select "Allow use on any chain".
+## Errori e impossibilità di eseguire determinate funzioni
+Alcuni potrebbero non essere in grado di eseguire determinate funzioni, ad es. richiedere ricompense di staking. Si prega di provare questi passaggi.
+1. Aggiornare i metadati (se richiesto).
+2. Cancella la cache, riavvia il browser e connetti nuovamente il portafoglio al portale.
+3. Nell'angolo in alto a destra, passa a un altro endpoint.
 
-## Getting Errors Or Unable To Execute Certain Functions
-Some of you may be unable to execute certain funtions e.g. claim staking rewards. Please try these steps.
-1. Update metadata (if required).
-2. Clear cache, restart browser and connect wallet to the portal again.
-3. On the top right corner, switch to a different endpoint.
-
-If none of the above is helpful, please contact any of the team members or ambassadors on [Discord](https://discord.gg/2FGq5KqwBh).
+Se nessuno di questi è utile, si prega di contattare uno dei membri del team o ambasciatori su [Discord](https://discord.gg/2FGq5KqwBh).
