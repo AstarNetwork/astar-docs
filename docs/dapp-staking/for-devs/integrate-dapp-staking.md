@@ -2,8 +2,8 @@
 sidebar_position: 3
 ---
 
-# Integrate dApp Staking
+# Integrare dApp Staking
 
-Read more about how to integrate dApp staking into your EVM dApp:
+Per saperne di più su come integrare uma dApp staking sul vostro EVM dApp:
 
-[EVM Precompiled Contracts](../../evm/)
+[Contratti Precompilati EVM](../../evm/)
