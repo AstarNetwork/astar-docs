@@ -2,24 +2,24 @@
 sidebar_position: 2
 ---
 
-# $ASTR Allocation
+# $ASTR Allocazione
 
-**Total token supply**: 7,000,000,000
+**Supply totale **: 7.000,000,000
 
-**Token ticker**: $ASTR
+**Token **: $ASTR
 
-**Token decimals**: 18
+**Decimali del Token **: 18
 
-**Inflation**: 10% (yearly)
+**Inflazione**: 10% (annuale)
 
-| Title | % |
-|----|----|
-|Users and Early Supporters| 30|
-|Parachain Auction in 2021 | 20 |
-| Parachain Auctions Reserve | 5|
-| Protocol Development | 10 |
-|On-Chain DAO| 5|
-|Marketing | 5 |
-| Early Financial Backers | 10 |
-| Team (Employee Incentives) | 5 |
-| Foundation | 10 |
+| Titolo                           | %  |
+| -------------------------------- | -- |
+| Utenti e sostenitori iniziali    | 30 |
+| Asta Parachain 2021              | 20 |
+| Riserva delle Aste Parachain     | 5  |
+| Sviluppo protocollo              | 10 |
+| DAO On-Chain                     | 5  |
+| Marketing                        | 5  |
+| Finanziatori iniziali            | 10 |
+| Team(Incentivi per i dipendenti) | 5  |
+| Fondazione                       | 10 |
