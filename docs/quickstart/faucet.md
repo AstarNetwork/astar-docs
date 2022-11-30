@@ -41,3 +41,21 @@ If your inputs are valid, you can receive tokens from the faucet.
 ![9](img/9.png)
 
 Enjoy🚀
+
+## Chaindrop Portal
+
+Faucets are available for Shibuya account.
+
+To access the faucet visit <https://chaindrop.org/?chainid=81&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee>, and select Shibuya from token list.
+
+![1](img/chaindrop_1.png)
+
+Paste your wallet address in Beneficiary field.
+
+Then, click the `I'm not a robot` checkbox, to validate the Captcha.
+
+![2](img/chaindrop_2.png)
+
+Click `Send Me` to recieve amount in your wallet, you can also see the amount you will receive below.
+
+Additionally you can also click on `success` link to view your transaction on explorer.
