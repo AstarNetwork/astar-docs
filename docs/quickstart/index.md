@@ -20,6 +20,8 @@ Developers can connect and interact with the network via HTTPS or Websocket endp
 
 Developers will want to use our testnet faucet to deploy and test their contracts before mainnet deployment. This faucet is accessable via the [Astar portal](https://portal.astar.network) and instructions can be found [here](faucet).
 
+Developers can also use chaindrop faucet [here](https://chaindrop.org) and instructions can be found [here](faucet).
+
 ## Astar account scheme
 
 Astar is the only smart-contract parachain in the Polkadot ecosystem that supports multi-virtual machines (Wasm and EVM). Resultingly, managing multiple types of accounts can be non-trivial. Read more about [Astar's account structure](https://docs.astar.network/docs/user-guides/create-wallet/#astar-accounts) in our documentation.
