@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ### Address Format
 
-The address format used in Substrate-based chains like Astar is SS58. SS58 is a modification of Base-58-check from Bitcoin with some minor modifications. Notably, the format contains an address type prefix that identifies an address as belonging to a specific network. The Astar ecosystem is a special parachain in the Polkadot ecosystem because it's the only parachain that supports EVM as WASM smart contract. With the use of two different virtual machines come two different kinds of addresses.
+The address format used in Substrate-based chains like Astar is SS58. SS58 is a modification of Base-58-check from Bitcoin with some minor modifications. Notably, the format contains an address type prefix that identifies an address as belonging to a specific network. Astar Network is special in the Polkadot ecosystem because it's the only parachain that supports EVM as WASM smart contract. With the use of two different virtual machines comes two different kinds of addresses.
 
 - An Astar Native address or SS58 address
 - An Astar EVM address or H160 address which starts with 0x
