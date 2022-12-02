@@ -34,9 +34,8 @@ To buy ASTR, you need to have other assets which you can use to swap. One way to
 ## Swap On Arthswap
 
 1. Go back to <http://app.arthswap.org/#/swap> and connect Metamask wallet.
-2. Select swap USDT to wASTR and enter the amount you want.
+2. Select swap USDT to ASTR and enter the amount you want.
 3. Execute the swap and sign the transaction.
-4. Now that you have wASTR, you can swap it to ASTR.
-5. You now have ASTR tokens in your wallet.
+4. You now have ASTR tokens in your wallet.
 
 After having ASTR if your Metamask, you can send it to Polkadot.js if you want to dApp stake. Please refer the previous tutorials.
