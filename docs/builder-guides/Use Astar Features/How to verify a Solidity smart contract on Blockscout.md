@@ -79,7 +79,7 @@ I have already deployed an ERC20 token contract using OpenZepplin library import
 
 - Paste the copied flattened source code from **Flattener** into the “Enter the Solidity Contract Code” field and click “Verify & Publish”. And  you are all set!
 
-![Untitled](img-verification-cookbook7/Untitled%208.png)
+![Untitled](img-verification-cookbook/Untitled%208.png)
 
 ---
 
