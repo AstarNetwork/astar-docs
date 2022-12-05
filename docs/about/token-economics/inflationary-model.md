@@ -73,7 +73,7 @@ TVL in this context does not consider non-ASTR tokens locked by other protocols 
 We're interested particularly in **TVL percentage**
 - $total\_issuance$ - total amount of issued **ASTR** tokens
 - $TVL$ - total amount of tokens locked in dApps-staking
-- $TVL_{\%} = {total \over TVL}$
+- $TVL_{\%} = {TVL \over total}$
 
 In case **total_issuance** equals 1000 and **TVL** is 242, **TVL percentage** will be `24.2%`.
 
