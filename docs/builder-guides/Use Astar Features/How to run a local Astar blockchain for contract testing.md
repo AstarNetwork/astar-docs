@@ -38,7 +38,7 @@ If you prefer building from source code with your local environment, please refe
     </aside>
     
 
-![Untitled](How%20to%20run%20a%20local%20Astar%20blockchain%20for%20contract%20t%20ec10eb1940a4477bb14b3c5086fd8230/Untitled.png)
+![Untitled](img-localchain-cookbook/Untitled.png)
 
 - Please rename the binary file to `astar`, for illustration purposes the consistency of the command lines in this tutorial.
 
@@ -87,9 +87,9 @@ If you prefer building from source code with your local environment, please refe
     
 - You will be able to see the local astar-collator node info and new blocksafter successfully running it
     
-    ![Untitled](How%20to%20run%20a%20local%20Astar%20blockchain%20for%20contract%20t%20ec10eb1940a4477bb14b3c5086fd8230/Untitled%201.png)
+    ![Untitled](img-localchain-cookbook/Untitled%201.png)
     
-    ![Untitled](How%20to%20run%20a%20local%20Astar%20blockchain%20for%20contract%20t%20ec10eb1940a4477bb14b3c5086fd8230/Untitled%202.png)
+    ![Untitled](img-localchain-cookbook/Untitled%202.png)
     
 - You can check a full list of subcommand and explanation using the following command
     
@@ -106,7 +106,7 @@ If you prefer building from source code with your local environment, please refe
     - since we have used `port 9944` for WebSocket connection
 - Then, you will be able to to view the recent blocks, accounts info, etc. as the on-chain environment of Astar Network
     
-    ![Untitled](How%20to%20run%20a%20local%20Astar%20blockchain%20for%20contract%20t%20ec10eb1940a4477bb14b3c5086fd8230/Untitled%203.png)
+    ![Untitled](img-localchain-cookbook/Untitled%203.png)
     
 
 ---
