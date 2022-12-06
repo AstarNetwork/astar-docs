@@ -12,7 +12,7 @@ This page is inteded for developers & builders.
 
 Finding the right environment for testing XCM features, both standalone or with smart contracts, can be difficult since it requires at least two parachains with open HRMP channels and a relaychain. The parachains need to have the features we rely on in testing.
 
-At the moment, only production networks, like `Astar` or `Shiden`, have access to a great number of HRMP channels with various parachains. Testing in production isn't a good idea though and should be avoided. A possible alternative is to use `Rococo` as relay chain and the connected parachains, if they are available. Not all projects deploy a testnet on Rococo.
+At the moment, only production networks, like `Astar` or `Shiden`, have access to a great number of HRMP channels with various parachains. Testing in production isn't a good idea though and should be avoided. A possible alternative is to use `Rococo` as a relay chain and the connected parachains, if they are available. Not all projects deploy a testnet on Rococo.
 
 ## Zombienet
 
