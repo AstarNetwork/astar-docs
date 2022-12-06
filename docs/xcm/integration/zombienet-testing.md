@@ -50,7 +50,7 @@ For users who already know what they are doing, please check [this](https://gith
 
 7. After a minute or two, block production on both `Shibuya` and `Shiden` should start. This will usually happen after **relay-chain** reaches block 11, which will trigger a new session. HRMP channels will automatically be configured between the parachains (check the configuration file).
 
-8. The test network is running and users can interract with relay chain and both parachains. It is possible to deploy EVM and WASM smart contracts, send XCM instructions and everything else possible on live chains. In addition, users have direct access to `Alice` account, which has `sudo` privileges.
+8. The test network is running and users can interract with relay chain and both parachains. It is now possible to deploy EVM and WASM smart contracts, send XCM instructions and do everything else what is possible on live chains. In addition, users have direct access to `Alice` account, which has `sudo` privileges.
 
 > We will provide automated way of performing these setup actions in the future.
 
