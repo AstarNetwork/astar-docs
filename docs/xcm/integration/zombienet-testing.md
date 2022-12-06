@@ -59,9 +59,9 @@ For users who already know what they are doing, please check [this](https://gith
 After completing the previous steps, a local test network with two parachains is running.
 The following steps will explain how to setup basic cross-chain payable assets for both parachains.
 
-The aim is to configure a cross-chain **SDN** asset on `Shibuya` and cross-chain **SBY** asset on `Shiden`. Both assets will be configured as _payable_, meaning they can be used to pay for XCM execution on remote chain.
+The aim is to configure a cross-chain **SDN** asset on `Shibuya` and cross-chain **SBY** asset on `Shiden`. Both assets will be configured as _payable_, meaning they can be used to pay for XCM execution on the remote chain.
 
-For all steps, encoded call data will be provided to simplify the process for the user. **ALL** calls should be executed as `Alice`.
+For all steps, encoded call data will be provided to simplify the process for the user. Call data can be copy/pasted into field under `Developer -> Extrinsic -> Decode`. **ALL** calls should be executed as `Alice`.
 
 1. In the local `Shibuya polkadot-js` explorer, create a new asset for the cross-chain SDN wrapper. Configure it to be sufficient and payable.
 ```
