@@ -111,7 +111,7 @@ npm i dotenv
 ```
 
 ```bash
-MNEMONIC="(Your secret revoery phase)"
+MNEMONIC="(Your secret recovery phase)"
 ```
 
 We can find our secret recovery phase for our account in the Metamask by going through **Settings**, **Security & Privacy**, and then **Reveal Secret Recovery Phrase**.
@@ -146,4 +146,4 @@ If you have any questions, please feel free to ask us in our [official discord c
 
 Official Document for Truffle: [https://trufflesuite.com/docs/](https://trufflesuite.com/docs/)
 
-Astar Document for Hardhat: [https://docs.astar.network/docs/EVM/developer-tooling/#truffle](https://docs.astar.network/docs/EVM/developer-tooling/#truffle)
+Astar Document for Truffle: [https://docs.astar.network/docs/EVM/developer-tooling/#truffle](https://docs.astar.network/docs/EVM/developer-tooling/#truffle)
