@@ -69,7 +69,7 @@ contract HelloShibuya {
 
 Then we would add a migration file called **1_deploy_contract.js** inside the **migrations** directory.
 
-```solidity
+```jsx
 var HelloShibuya = artifacts.require("HelloShibuya");
 
 module.exports = function (deployer) {
