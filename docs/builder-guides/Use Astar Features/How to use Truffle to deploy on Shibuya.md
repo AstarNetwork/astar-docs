@@ -17,7 +17,7 @@ Overall, Truffle is designed to make it easier for developers to build and deplo
 
 ## Step 1 Project Setup
 
-Let’s set up project folder first. We create a project directory and navigate into that directory.
+Let’s set up a project folder first. We create a project directory and navigate into that directory.
 
 ```bash
 mkdir truffleApp
@@ -130,7 +130,7 @@ Then, we run the command below to deploy on Shibuya testnet.
 truffle migrate --network shibuya
 ```
 
-We would see something like below to confirm you smart contract is deployed on Shibuya test net.
+We would see something like below to confirm our smart contract is deployed on Shibuya test net.
 
 ![3](img-Truffle-cookbook/3.png)
 
