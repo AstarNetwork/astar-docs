@@ -15,21 +15,23 @@ Moving towards dApp Staking v2 the first new implementation is the unbonding per
 
 ## How to unbond
 
-If you have staked on one of the dApps, you can now click on Unbond to make your tokens transferable.
+If you have staked on one of the dApps, you can now click on Unbond from My dApps Panel to make your tokens transferable.
 
-![3](img/3.png)
+![16_MydApps](img/16_MydApps.png)
 
 Select the amount you want to **Unbond**, and click on **Max** to unbond your complete stake. To sign your transaction click on **Start Unbonding**.
 
-![4](img/4.png)
+<img src="https://github.com/AstarNetwork/astar-docs/blob/main/docs/dapp-staking/for-stakers/img/20_unbonding_modal.png" width="500px"/>
+
+---
 
 Check your **Chunks**
 
-![5](img/5.png)
-![6](img/6.png)
+<img width="1168" alt="15_Unbonding" src="https://user-images.githubusercontent.com/77480847/206512645-4ba23626-f4a5-4079-83a1-bc6027b13c5c.png"/>
+
 
 What's a Chunk? A chunk is the number of different ERA's you want to unbond your tokens. Chunks do not equal the amount of unbonding on dApps you requested but the amount of different ERA's you unbonded your tokens.
 
 Withdraw your 'Chunks'. When your unbond period is over, you need to withdraw your funds by clicking on the withdraw button. Sign the transaction and your tokens will be made transferrable in your wallet.
 
-![7](img/7.png)
+
