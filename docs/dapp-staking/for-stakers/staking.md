@@ -29,12 +29,14 @@ To add your staking amount, just press Stake button and go to Staking page.
 
 ![19_Staking](img/19_Staking.png)
 
-- You can either use your funds from Transferable Balance or other projects you have staked with (Nomination Transfer)
+- You can either use your funds from Transferable Balance or other projects you have staked with [Nomination Transfer](nomination-transfer)
 - Place the amount you wish to stake and confirm.
 
 ### Manage dApp Staking
 
 Once you have staked, new options to manage your dApp staking will appear on “My Staking Panel”.
+
+---
 
 **My Rewards Panel**
 
@@ -48,7 +50,9 @@ My Rewards Panel where you can see your status of your rewards :
 
 **Re-Stake after claiming**: When turn this feature on, your rewards will automatically re-staked after you claim the unclaimed eras(so you would have to claim by yourself).
 
-**Total Earned(all-time)**: This is total rewards you have received from staking.
+**Total Earned(all-time)**: This is total rewards you have received from staking.  
+
+---
 
 **Unbonding Panel**
 
@@ -58,6 +62,8 @@ Unbonding Panel is where you can see the progress of unbonding and withdraw.
 
 Once it’s unbonding we cannot know which dApp you have unbonded from but remain as Chunks. There is unbonding period apply, 10eras and Shiden for 5eras, after you unstaked and when those era pass, you will be able to withdraw.
 
+---
+
 **My dApps Panel**
 
 ![16_MydApps](img/16_MydApps.png)
@@ -65,5 +71,6 @@ Once it’s unbonding we cannot know which dApp you have unbonded from but remai
 My dApps Panel is where you can see all dApps you have staked with and manage the assets.
 
 **Add**: you can add more tokens in dApp staking.
+
 **Unbond**: here you can select how many tokens you want to unbond from your staked amount. Remember you cannot leave less than minimum amount.
 
