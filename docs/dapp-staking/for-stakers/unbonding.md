@@ -21,7 +21,7 @@ If you have staked on one of the dApps, you can now click on Unbond from My dApp
 
 Select the amount you want to **Unbond**, and click on **Max** to unbond your complete stake. To sign your transaction click on **Start Unbonding**.
 
-<img src="https://github.com/AstarNetwork/astar-docs/blob/main/docs/dapp-staking/for-stakers/img/20_unbonding_modal.png" width="500"/>
+<img src="https://github.com/AstarNetwork/astar-docs/blob/main/docs/dapp-staking/for-stakers/img/20_unbonding_modal.png" width=50% />
 
 ---
 
