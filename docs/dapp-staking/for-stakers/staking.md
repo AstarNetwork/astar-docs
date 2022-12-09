@@ -48,7 +48,7 @@ My Rewards Panel where you can see your status of your rewards :
 
 **Available to claim**: The unclaimed eras - It is recommended to claim friquently around once a week.
 
-**Re-Stake after claiming**: When turn this feature on, your rewards will automatically re-staked after you claim the unclaimed eras(so you would have to claim by yourself).
+**Re-Stake after claiming**: When turn this feature on, your rewards will automatically re-staked after you claim the unclaimed eras(so you are required to claim by yourself). More about [Re-Stake](compound-rewards)
 
 **Total Earned(all-time)**: This is total rewards you have received from staking.  
 
@@ -60,7 +60,7 @@ My Rewards Panel where you can see your status of your rewards :
 
 Unbonding Panel is where you can see the progress of unbonding and withdraw.
 
-Once it’s unbonding we cannot know which dApp you have unbonded from but remain as Chunks. There is unbonding period apply, 10eras and Shiden for 5eras, after you unstaked and when those era pass, you will be able to withdraw.
+Once it’s unbonding we cannot know which dApp you have unbonded from but remain as Chunks. There is a unbonding period apply, 10eras and Shiden for 5eras, after you unstaked and when those era pass, you will be able to withdraw. More about [Unbonding](unbonding)
 
 ---
 
