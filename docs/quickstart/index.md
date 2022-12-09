@@ -18,9 +18,8 @@ Developers can connect and interact with the network via HTTPS or Websocket endp
 
 ## Faucet
 
-Developers will want to use our testnet faucet to deploy and test their contracts before mainnet deployment. This faucet is accessable via the [Astar portal](https://portal.astar.network) and instructions can be found [here](faucet).
-
-Developers can also use chaindrop faucet [here](https://chaindrop.org) and instructions can be found [here](faucet).
+The faucet is accessable via the [Astar portal](https://portal.astar.network), instructions can be found [here](faucet). <br />
+Developers can also use chaindrop faucet [here](https://chaindrop.org), instructions can be found [here](faucet).
 
 ## Astar account scheme
 
