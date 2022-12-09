@@ -16,16 +16,14 @@ This function is only available for stakers who are already staking in a dApp. I
 
 ## Example use-case
 
-I staked some SDN tokens on *Comunity Rewards* but want to transfer a portion to an dApp, because I want to support them with my vote by staking on their dApp.
-
+I staked some SDN tokens on *Community Rewards* but want to transfer a portion to another dApp  to support them with my vote by staking on their dApp.
 First, you open the transfer page by clicking on the **Stake** button on the dApp you wish to support.
 
-<img width="1120" alt="22_nomination01" src="https://user-images.githubusercontent.com/77480847/206516967-5f16eca1-e093-4ea7-90c8-aafc12b666b1.png"/>
+![24_nomination01](img/22_nomination01.png)
 
-You can select what funds you would like to use, funds that are transferable and in your wallet, or use it from another dApp you are staking on. In this case, I want to transfer some funds from *Comunity Rewards*. Enter the amount you wish to transfer (in the case of Shiden, the minimum is 50 SDN) and click on **Stake**. At the end of the process, you finalize by signing the transaction.
+You can select what funds you would like to use, funds that are transferable and in your wallet, or use it from another dApp you are staking on. In this case, I want to transfer some funds from *Community Rewards*. Enter the amount you wish to transfer (in the case of Shiden, the minimum is 50 SDN) and click on **Stake**. At the end of the process, you finalize by signing the transaction.
 
-<img width="1127" alt="23_nomination02" src="https://user-images.githubusercontent.com/77480847/206517083-3f0aa79d-fb35-4ac6-b734-05f163b64f59.png"/>
-
+![24_nomination02](img/23_nomination02.png)
 
 Now you see that you transferred a part of your staked amount to the new dApp without having to unbond your tokens.
 
