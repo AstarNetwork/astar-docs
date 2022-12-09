@@ -21,7 +21,7 @@ If you have staked on one of the dApps, you can now click on Unbond from My dApp
 
 Select the amount you want to **Unbond**, and click on **Max** to unbond your complete stake. To sign your transaction click on **Start Unbonding**.
 
-<img src="img/20_unbonding_modal.png" width="200" />
+<img width="576" alt="20_unbonding_modal" src="https://user-images.githubusercontent.com/77480847/206718017-3b844c2f-f12e-4b2b-a6f9-d95c215d295f.png" width="200" />
 
 ---
 
