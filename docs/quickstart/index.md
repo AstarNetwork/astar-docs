@@ -1,6 +1,6 @@
 # Quick Start
 
-Astar is a collection of networks and tools providing:
+Astar Network is a collection of networks and tools providing:
 
 - Native support for Wasm and EVM-compatable smart contracts
 - Advanced cross-chain features through Polkadot's XCMP
