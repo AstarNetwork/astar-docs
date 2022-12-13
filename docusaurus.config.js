@@ -59,6 +59,7 @@ const config = {
         pt: {},
         fr: {},
         id: {},
+        jp: {},
       }
     },
     themeConfig:

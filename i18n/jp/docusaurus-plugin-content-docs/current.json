@@ -1,0 +1,134 @@
+{
+  "version.label": {
+    "message": "次へ",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.About Astar": {
+    "message": "Astarについて",
+    "description": "The label for category About Astar in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Token Economics": {
+    "message": "トークンエコノミクス",
+    "description": "The label for category Token Economics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ecosystem": {
+    "message": "エコシステム",
+    "description": "The label for category Ecosystem in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Start Building": {
+    "message": "構築の開始",
+    "description": "The label for category Start Building in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.dApp Staking": {
+    "message": "dApp Staking",
+    "description": "The label for category dApp Staking in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Stakers": {
+    "message": "ステーカー向け",
+    "description": "The label for category For Stakers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Devs": {
+    "message": "開発者向け",
+    "description": "The label for category For Devs in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Use EVM": {
+    "message": "EVMの使用",
+    "description": "The label for category Use EVM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Your First Contract": {
+    "message": "初めてのコントラクト",
+    "description": "The label for category Your First Contract in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Use WebAssembly(WASM)": {
+    "message": "WebAssembly(WASM)の使用",
+    "description": "The label for category Use WebAssembly(WASM) in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Astar Wasm Stack": {
+    "message": "Astar Wasm スタック",
+    "description": "The label for category Astar Wasm Stack in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Smart-contract development": {
+    "message": "スマートコントラクト開発",
+    "description": "The label for category Smart-contract development in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Advanced": {
+    "message": "高度な設定",
+    "description": "The label for category Advanced in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run A Node": {
+    "message": "ノードの実行",
+    "description": "The label for category Run A Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run an Archive Node": {
+    "message": "アーカイブノードの実行",
+    "description": "The label for category Run an Archive Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run a Collator Node": {
+    "message": "Collator ノードの実行",
+    "description": "The label for category Run a Collator Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Secure Setup Guide": {
+    "message": "セキュアなセットアップガイド",
+    "description": "The label for category Secure Setup Guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integrate Toolings": {
+    "message": "連携ツール",
+    "description": "The label for category Integrate Toolings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Bridges": {
+    "message": "ブリッジ",
+    "description": "The label for category Bridges in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.dApp Listings": {
+    "message": "dApp 一覧",
+    "description": "The label for category dApp Listings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Wallets": {
+    "message": "ウォレット",
+    "description": "The label for category Wallets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ledger": {
+    "message": "Ledger",
+    "description": "The label for category Ledger in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Node Providers": {
+    "message": "ノードプロバイダー",
+    "description": "The label for category Node Providers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Indexers": {
+    "message": "インデックス",
+    "description": "The label for category Indexers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Oracles": {
+    "message": "オラクル",
+    "description": "The label for category Oracles in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Cross-Chain Messaging - XCM": {
+    "message": "Cross-Chain Messaging - XCM",
+    "description": "The label for category Cross-Chain Messaging - XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Using XCM": {
+    "message": "XCM の使用",
+    "description": "The label for category Using XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Building with XCM": {
+    "message": "XCMでの構築",
+    "description": "The label for category Building with XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration": {
+    "message": "連携",
+    "description": "The label for category Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Builder Guides": {
+    "message": "ビルダーガイド",
+    "description": "The label for category Builder Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration and Toolings": {
+    "message": "統合とツール",
+    "description": "The label for category Integration and Toolings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.User Guides": {
+    "message": "ユーザーガイド",
+    "description": "The label for category User Guides in sidebar tutorialSidebar"
+  }
+}
