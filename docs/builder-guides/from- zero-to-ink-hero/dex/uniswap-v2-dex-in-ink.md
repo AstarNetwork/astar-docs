@@ -12,7 +12,7 @@ Please follow these tutorials first:
 | [Your first flipper contract](../flipper-contract/flipper.md)              | Basic ink! -  Basic Rust       |          
 |  [full dApp: NFT contract with PSP34 + UI](../flipper-contract/flipper.md) | Intermediate ink! - Basic Rust |
 
-To follow this tutorial you will need:
+# To follow this tutorial you will need:
 - to [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md)
 - to have knowledge about AMM & [Uniswap V2 implementation](https://docs.uniswap.org/contracts/v2/overview) (as this tutorial will fucos on implementation)
 
