@@ -91,3 +91,46 @@ pub mod contract {
 *lib.rs*
 
 ## Structure of DEX Project
+
+We will use the Trait and generic implementation in separate files described below for the DEX.
+The contracts will be on `contracts` folder and the Traits & generic implementation in `logics` folder. All this in the same workspace.
+
+```bash
+├── uniswap-v2
+│   ├── contracts
+│   └── logics
+├── Cargo.lock
+├── Cargo.toml
+├── .rustfmt
+└── .gitignore
+```
+
+In the `contracts` folder there is one folder by contract and inside the folder a crate with a `Cargo.toml` and a `lib.rs`.    
+The `logics` folder is a crate that is composed of Traits & and implementations. There is one folder for `traits` and one fore `impls`.
+Inside the `traits` folder there is one file per contract. Inside the `impls` there is one folder per contract and inside one file for the implementation of the trait and one 'data' file for the storage.
+
+```bash
+├── logics
+│   ├── impls
+│   │   ├── factory
+│   │   │    ├── mod.rs
+│   │   │    ├── data.rs
+│   │   │    └── factory.rs
+│   │   ├── pair
+│   │   │    ├── mod.rs
+│   │   │    ├── data.rs
+│   │   │    └── pair.rs
+│   │   └── mod.rs
+│   └── traits
+│       ├── mod.rs
+│       ├── factory.rs
+│       ├── pair.rs
+│       ├── math.rs
+├── Cargo.toml
+└── lib.rs
+```
+
+#### Resources 
+OpenBrush - [Setup a project](https://docs.openbrush.io/smart-contracts/example/setup_project)
+
+
