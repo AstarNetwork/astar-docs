@@ -276,7 +276,7 @@ impl Internal for PairContract {
     ...
 ```
 
-Also in Uniswap V2 max allowance will not [decrease allowance](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2ERC20.sol#L74). for this we need to override `transfer_from` and not decrease allowance if it's u128::MAX
+Also in Uniswap V2 max allowance will not [decrease allowance](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2ERC20.sol#L74). for this we need to override `transfer_from` and not decrease allowance if it's u128::MAX.
 Important here: please note that `#[ink(message)]` is needed in order to compile.
 
 ```rust
