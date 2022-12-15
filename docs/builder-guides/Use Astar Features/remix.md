@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # How to use Remix IDE to deploy an on-chain storage contract on Astar EVM
 
 ## TL;DR
