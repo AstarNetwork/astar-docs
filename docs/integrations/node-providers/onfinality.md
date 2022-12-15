@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: "OnFinality is a SaaS platform providing infrastructure services for the Polkadot community. Its mission is to support blockchain developers of all shapes and sizes by providing infrastructure services so they can focus on building the next dApp."
 ---
 
 # OnFinality
