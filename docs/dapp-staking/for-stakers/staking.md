@@ -17,60 +17,62 @@ Make sure you are connected to the correct network.
 - **Astar Network**: mainnet for Polkadot
 :::
 
+<div style={{textAlign: 'center'}}>
+
 ![1](img/1.png)
+</div>
+
 
 ### Stake
 
-Look for your favorite project. Staking on-chain TVL is available on top page, click project cards to get more information, go to their communities or check the team accounts. Another great resource is looking in our [forum](https://forum.astar.network/), check [DefilLama](../../integrations/dapp-listing/defillama.md) or [DappRadar](../../integrations/dapp-listing/dappradar.md).
+Look for your favorite project. The staked TVL is available on the top of the page. Click on the project cards to get more information, go to their communities or check the team accounts. Another great resource is looking in our [forum](https://forum.astar.network/), check [DefilLama](https://defillama.com/) or [DappRadar](https://dappradar.com/).
+<div style={{textAlign: 'center'}}>
 
 ![18_projects](img/18_projects.png)
+</div>
 
-To add your staking amount, just press Stake button and go to Staking page.
+To add your staking amount, just press the `Stake` button and go to Staking page.
+
+<div style={{textAlign: 'center'}}>
 
 ![19_Staking](img/19_Staking.png)
+</div>
 
-- You can either use your funds from Transferable Balance or other projects you have staked with [Nomination Transfer](nomination-transfer)
+- You can either use your funds from the  `Transferable Balance` or other projects you have staked with through [nomination transfer](nomination-transfer)
 - Place the amount you wish to stake and confirm.
+
+---
+---
 
 ### Manage dApp Staking
 
-Once you have staked, new options to manage your dApp staking will appear on “My Staking Panel”.
+Once you have staked, new options to manage your dApp staking will appear on `My Staking Panel`.
 
----
-
-**My Rewards Panel**
+**My Staking Panel**
+<div style={{textAlign: 'center'}}>
 
 ![14_Myrewards](img/14_Myrewards.png)
+</div>
 
-My Rewards Panel where you can see your status of your rewards : 
+**The Rewards Panel**: 
+- **Total Staked**: Total amount of $ASTR tokens you have staked.
+- **Available to claim**: The unclaimed ERAs - It is recommended to claim frequently.
+- **Re-Stake after claiming**: When turn this feature on, your rewards will automatically re-staked after you claim the unclaimed ERAs (more info about the [Re-Stake](compound-rewards) feature).
+- **Total Earned (all-time)**: This is total rewards you have received from staking.  
 
-**Total Staked**: Total amount of ASTR tokens you have staked.
+**Unbonding Panel:**
 
-**Available to claim**: The unclaimed eras - It is recommended to claim friquently around once a week.
+The unbonding panel is where you can see the progress of unbonding and withdraw. Once it’s unbonding we cannot know which dApp you have unbonded from but remain as `Chunks`. There is a unbonding period of 10 ERAs for Astar and 5 EARs on Shiden. After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unbonding](unbonding).
 
-**Re-Stake after claiming**: When turn this feature on, your rewards will automatically re-staked after you claim the unclaimed eras(so you are required to claim by yourself). More about [Re-Stake](compound-rewards)
-
-**Total Earned(all-time)**: This is total rewards you have received from staking.  
-
----
-
-**Unbonding Panel**
-
-![15_Unbonding](img/15_Unbonding.png)
-
-Unbonding Panel is where you can see the progress of unbonding and withdraw.
-
-Once it’s unbonding we cannot know which dApp you have unbonded from but remain as Chunks. There is a unbonding period apply, 10eras and Shiden for 5eras, after you unstaked and when those era pass, you will be able to withdraw. More about [Unbonding](unbonding)
-
----
+----
 
 **My dApps Panel**
+<div style={{textAlign: 'center'}}>
 
 ![16_MydApps](img/16_MydApps.png)
+</div>
 
 My dApps Panel is where you can see all dApps you have staked with and manage the assets.
-
-**Add**: you can add more tokens in dApp staking.
-
-**Unbond**: here you can select how many tokens you want to unbond from your staked amount. Remember you cannot leave less than minimum amount.
+- **Add**: you can add more $ASTR in dApp staking.
+- **Unbond**: here you can select how many tokens you want to unbond from your staked amount.
 
