@@ -109,7 +109,7 @@ impl PairContract {
 }
 ```
 
-your contract should look like below and should build if your run 
+Your contract should look like below and should build if you run 
 ```console
 cargo contract build
 ```
@@ -214,7 +214,7 @@ impl Internal for PairContract {
 ### 3. Override generic function of PSP22
 
 PSP22 OpenBrush implementation have a check fo zero account in [mint](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L270), [burn](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L286), [transfer_from](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L223) and [approve](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L257) functions. But uniswap V2 use zero address to [lock tokens](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L121).
-So just implement the same function body but remove the check for zero address.
+The good thing is that you can override any functions of the generic implementation. So just implement the same function body but remove the check for zero address.
 
 ```rust
 impl Internal for PairContract {
@@ -274,6 +274,36 @@ impl Internal for PairContract {
         Ok(())
     }
     ...
+```
+
+Also in Uniswap V2 max allowance will not [decrease allowance](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2ERC20.sol#L74). for this we need to override `transfer_from` and not decrease allowance if it's u128::MAX
+Important here: please note that `#[ink(message)]` is needed in order to compile.
+
+```rust
+impl PSP22 for PairContract {
+    #[ink(message)]
+    fn transfer_from(
+        &mut self,
+        from: AccountId,
+        to: AccountId,
+        value: Balance,
+        data: Vec<u8>,
+    ) -> Result<(), PSP22Error> {
+        let caller = self.env().caller();
+        let allowance = self._allowance(&from, &caller);
+
+        // In uniswapv2 max allowance never decrease
+        if allowance != u128::MAX {
+            if allowance < value {
+                return Err(PSP22Error::InsufficientAllowance)
+            }
+
+            self._approve_from_to(from, caller, allowance - value)?;
+        }
+        self._transfer_from_to(from, to, value, data)?;
+        Ok(())
+    }
+}
 ```
 
 Import Vec from `ink_prelude`:

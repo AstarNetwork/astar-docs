@@ -2,4 +2,4 @@
 sidebar_position: 2
 ---
 
-Impl data storage
+# Pair Storage and Getters
