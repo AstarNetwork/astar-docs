@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # How to use Hardhat to deploy on Shibuya
 
 ## TL;DR
