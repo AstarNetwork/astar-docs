@@ -18,40 +18,14 @@ Features of Swanky Suite:
 - Deploying smart contracts to networks within the Dotsama ecosystem that support pallet-contracts
 - Making arbitrary calls to the deployed smart contracts
 
-Below is the user documentation for Swanky CLI which is meant to be used hand-in-hand with Swanky Node.
+## Architecture overview
 
-## Installation
-### Prerequisites
-Swanky CLI requires Rust and WebAssembly environment, also `cargo-contract` being installed to work.
-If you haven't done environment setup, please follow [instructions](/docs/wasm/sc-dev/env-setup.md) and make sure everything installed correctly.
-
-Node.js version `>= 18.0.0` is supported. Please check node version to use beforehand.
-```
-node -v
-```
-
-### CLI Installation
-
-Swanky CLI can be either installed globally via [NPM](https://www.npmjs.com/package/@astar-network/swanky-cli):
-
-```
-npm i -g @astar-network/swanky-cli
-```
-
-or used with `npx` command:
-
-```
-npx @astar-network/swanky-cli [command]
-```
+The Swanky Suite consists of two main parts, Swanky CLI and the Swanky Node.
 
 Source code for both Swanky CLI nad Swanky Node is hosted on GitHub:
 
 - [Swanky CLI](https://github.com/AstarNetwork/swanky-cli)
-- [Swanky Node](https://github.com/AstarNetwork/swanky-node)
-
-## Architecture overview
-
-The Swanky Suite consists of two main parts, Swanky CLI and the Swanky Node.
+- [Swanky Node](https://github.com/AstarNetwork/swanky-node).
 
 The envisioned architecture of Swanky CLI and Swanky Node (Local developer node)
 
@@ -61,19 +35,41 @@ The envisioned architecture of Swanky CLI and Swanky Node (Local developer node)
 
 Swanky CLI is a Node.js CLI app that uses the Polkadot.js API as its backend alongside many existing tools like the cargo contract CLI. There will be many features that will support the developer such as bootstrapping WASM dApps via smart contract and UI scaffolding, running integration tests, starting local nodes, account management, connecting and deploying contracts to both local and remote networks, compiling for various languages from a single CLI app, compatibility check from contract pallet to the compiler, and much more.
 
+### Installing
+
+CLI can be installed in two ways:
+
+#### Globally with npm
+
+This approach is arguably simpler, but due to the nature of NodeJs dependency management, could lead to dependency and compatibility errors.
+
 ```sh-session
 $ npm install -g @astar-network/swanky-cli
-$ swanky COMMAND
-running command...
-$ swanky (--version|-V|-v)
-@astar-network/swanky-cli/0.2.0 darwin-x64 node-v18.2.0
-$ swanky --help [COMMAND]
-USAGE
-  $ swanky COMMAND
-...
 ```
 
-### `swanky help`
+or
+
+```sh-session
+$ npx @astar-network/swanky-cli [command]
+```
+
+#### Downloading the precompiled binaries
+
+This is the recommended way - it comes with all the dependencies (even NodeJs) included and will support auto-updates in the future.
+
+1. Download the correct archive for your platform from the [releases section of swanky-cli github page](https://github.com/AstarNetwork/swanky-cli/releases).
+
+2. Extract the archive to appropriate location, for example `software` directory.
+
+3. Add the `swanky` executable to your path variable by creating a symbolic link to it from a common `bin` directory or similar.
+
+> Example on MacOS:
+>
+> `ln -s /Users/my_name/software/swanky-cli/bin/swanky /usr/local/bin`
+
+### Commands
+
+#### `swanky help`
 
 Display help and usage examples for swanky commands and subcommands.
 
@@ -91,7 +87,7 @@ DESCRIPTION
   Display help for swanky.
 ```
 
-### `swanky init`
+#### `swanky init`
 
 Scaffold a WASM project.
 
@@ -118,7 +114,7 @@ The resulting folder structure should look like this:
 
 <Figure caption="Folder structure" src={require('./img/01a-folder_structure.png').default} />
 
-### `swanky check`
+#### `swanky check`
 
 Verify the dependencies needed to run the swanky project.
 
@@ -136,7 +132,7 @@ DESCRIPTION
 Currently you have to be be in a project folder to run this command.
 :::
 
-### `swanky account`
+#### `swanky account`
 
 Create and manage accounts to be used in contract interaction.
 
@@ -158,9 +154,9 @@ To generate a new mnemonic, use `-g` or `--generate` flag.
 
 <Figure caption="Generate account" src={require('./img/06-account_generate.gif').default} />
 
-### `swanky contract`
+#### `swanky contract`
 
-Compile the given contract.
+Compile, deploy, call a command on a given contract, or scaffold a new contract inside the project.
 
 ```
 USAGE
@@ -173,7 +169,7 @@ COMMANDS
   contract new      Generate a new smart contract template inside a project
 ```
 
-#### `compile`
+#### `swanky contract compile`
 
 ```
 Compile the smart contract(s) in your contracts directory
@@ -193,7 +189,7 @@ DESCRIPTION
 
 <Figure caption="Compile a contract" src={require('./img/03-compile.gif').default} />
 
-#### `deploy`
+#### `swanky contract deploy`
 
 Deploy a compiled contract to a running node.
 
@@ -216,7 +212,7 @@ DESCRIPTION
 
 <Figure caption="Deploy a contract" src={require('./img/08-deploy.gif').default} />
 
-#### `new`
+#### `swanky contract new`
 
 Generate a new smart contract template inside a project
 
@@ -235,7 +231,7 @@ DESCRIPTION
   Generate a new smart contract template inside a project
 ```
 
-#### `call`
+#### `swanky contract call`
 
 Call a method on a smart contract
 
@@ -255,13 +251,14 @@ DESCRIPTION
   Call a method on a smart contract
 ```
 
-### `swanky node`
+#### `swanky node`
 
 Manage a local node.
 
 ```
 USAGE
   $ swanky node COMMAND
+
 COMMANDS
   node purge  Purge local chain state
   node start  Start a local node
@@ -273,30 +270,34 @@ COMMANDS
 
 Swanky node is a Substrate based blockchain configured to enable `pallet-contracts` (a smart contract module) and more features to help WASM smart contract development locally.
 
-### Features
-- [pallet-contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts) (polkadot-0.9.30) and its unstable-feature are enabled by default.
+## Features
+
+- [pallet-contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts) (polkadot-0.9.27) and its unstable-feature are enabled by default.
 - `grandpa` & `aura` consensus were removed. Instead, `instant-seal` & `manual-seal` are used.
-  Blocks are authored & finalized (1) as soon as a transaction get in the pool (2) when `engine_createBlock` `engine_finalizeBlock` RPC called respectively.
-- [pallet-dapps-staking](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.30/frame/dapps-staking) and ChainExtension to interact with it.
-- [pallet-assets](https://github.com/paritytech/substrate/tree/polkadot-v0.9.30/frame/assets).
-- [pallet-rmrk](https://github.com/AstarNetwork/rmrk-substrate/tree/polkadot-v0.9.30) (core, equip, market) and chain extensions for pallet-rmrk-core.
-- RMRK chain-extension
-- Pallet-assets chain-extension
-- dApps-staking chain-extension
+  Blocks are authored (1) as soon as a transaction get in the pool (2) when `engine_createBlock` RPC called.
+  Blocks are finalized when `engine_finalizeBlock` RPC called.
+- [pallet-dapps-staking](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.27/frame/dapps-staking) and ChainExtension to interact with it.
+- [pallet-assets](https://github.com/paritytech/substrate/tree/master/frame/assets).
+- [pallet-rmrk](https://github.com/AstarNetwork/rmrk-substrate/tree/polkadot-v0.9.27) (core, equip, market) and chain extensions for pallet-rmrk-core.
 
 It is optimized to local development purpose while removing unnecessary components such as P2P.
 More features and pallets to interact with (Contract <-> Runtime) will be added.
 
-### Compatible ink! version
-ink! version `3.4.0` or lower is supported by pallet-contract polkadot-0.9.30 branch.
+## Compatible ink! version
 
-### Installation
-#### Download Binary
+ink! version `3.3.1` or lower is supported by pallet-contract polkadot-0.9.27 branch.
+
+## Installation
+
+### Download Binary
+
 The easiest way is to download a binary release from [Release Page](https://github.com/AstarNetwork/swanky-node/releases)
 
 ### Build Locally
-First, complete the [basic Rust setup instructions](/docs/wasm/sc-dev/env-setup.md).
+
+First, complete the [basic Rust setup instructions](https://github.com/AstarNetwork/swanky-node/blob/main/docs/rust-setup.md).
 After that, you can build node via
+
 ```bash
 cargo build --release
 ```
@@ -310,12 +311,16 @@ subcommands:
 ./target/release/swanky-node -h
 ```
 
-### Usage
+## Usage
+
 This command will start the single-node development chain with persistent state.
+
 ```bash
 ./target/release/swanky-node
 ```
+
 If you want to run the node with non-persist mode, use tmp option.
+
 ```
 ./target/release/swanky-node --tmp
 # or
@@ -323,6 +328,7 @@ If you want to run the node with non-persist mode, use tmp option.
 ```
 
 Purge the development chain's state.
+
 ```bash
 ./target/release/swanky-node purge-chain
 ```
@@ -330,6 +336,7 @@ Purge the development chain's state.
 > Development **alice** account will be authority and sudo account as declared in the
 > [genesis state](https://github.com/AstarNetwork/swanky-node/blob/main/node/src/chain_spec.rs#L44).
 > At the same time the following accounts will be pre-funded:
+>
 > - Alice
 > - Bob
 > - Charlie
@@ -344,11 +351,8 @@ Purge the development chain's state.
 > - Ferdie//stash
 
 ### Show only Errors and Contract Debug Output
-To have only errors and contract debug output show up on the console you can supply
-```
--lerror,runtime::contracts=debug
-```
-when starting the node.
+
+To have only errors and contract debug output show up on the console you can supply `-lerror,runtime::contracts=debug` when starting the node.
 
 Important: Debug output is only printed for RPC calls or off-chain tests ‒ not for transactions.
 
@@ -389,7 +393,8 @@ by appending your own. A few useful ones are as follow.
 ./scripts/docker_run.sh cargo check
 ```
 
-### Consensus (Manual Seal & Instant Seal)
+## Consensus (Manual Seal & Instant Seal)
+
 Unlike other blockchains, Swanky node adopts block authioring and finalized gadget called Manual Seal and Instant Seal, consensus which is suitable for contracts development and testing.
 
 Manual seal - Blocks are authored whenever RPC called.
@@ -397,7 +402,8 @@ Instant seal - Block are authored as soon as transactions get inside the pool, m
 
 Swanky node enables both Manual seal and Instant seal.
 
-#### Manual Seal RPC calls
+### Manual Seal RPC calls
+
 We can tell the node to author a block by calling the `engine_createBlock` RPC.
 
 ```bash
@@ -410,16 +416,18 @@ $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d
 ```
 
 #### Params
+
 - **Create Empty**
-`create_empty` is a Boolean value indicating whether empty blocks may be created. Setting `create-empty` to true does not mean that an empty block will necessarily be created. Rather it means that the engine should go ahead creating a block even if no transaction are present. If transactions are present in the queue, they will be included regardless of `create_empty`'s value.'
+  `create_empty` is a Boolean value indicating whether empty blocks may be created. Setting `create-empty` to true does not mean that an empty block will necessarily be created. Rather it means that the engine should go ahead creating a block even if no transaction are present. If transactions are present in the queue, they will be included regardless of `create_empty`'s value.'
 
 - **Finalize**
-`finalize` is a Boolean indicating whether the block (and its ancestors, recursively) should be finalized after creation.
+  `finalize` is a Boolean indicating whether the block (and its ancestors, recursively) should be finalized after creation.
 
 - **Parent Hash**
-`parent_hash` is an optional hash of a block to use as a parent. To set the parent, use the format `"0x0e0626477621754200486f323e3858cd5f28fcbe52c69b2581aecb622e384764"`. To omit the parent, use `null`. When the parent is omitted the block is built on the current best block. Manually specifying the parent is useful for constructing fork scenarios and demonstrating chain reorganizations.
+  `parent_hash` is an optional hash of a block to use as a parent. To set the parent, use the format `"0x0e0626477621754200486f323e3858cd5f28fcbe52c69b2581aecb622e384764"`. To omit the parent, use `null`. When the parent is omitted the block is built on the current best block. Manually specifying the parent is useful for constructing fork scenarios and demonstrating chain reorganizations.
 
 #### Manually Finalizing Blocks
+
 In addition to finalizing blocks while creating them, they can be finalized later by using the second provided RPC call, `engine_finalizeBlock`.
 
 ```bash
@@ -434,8 +442,6 @@ $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d
 ### More Details
 
 For more detailed documentation please visit the [`swanky-node` GitHub repo].
-
---- 
 
 ## Documentation
 
