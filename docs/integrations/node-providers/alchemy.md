@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+description: "Alchemy is a developer platform that helps companies to build scalable and reliable decentralized applications without the difficulty of managing blockchain infrastructure in-house."
 ---
 
 # Alchemy
