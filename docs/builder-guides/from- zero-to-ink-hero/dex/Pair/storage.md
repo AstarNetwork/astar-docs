@@ -78,11 +78,9 @@ std = [
 ```
 *./uniswap-v2/logics/Cargo.toml*
 
-The `lib.rs` file should contain conditional compilation and specialization. It should export `impls` and `traits`
-
+The `lib.rs` file should contain conditional compilation attribute. It should also export `impls` and `traits`
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
-#![feature(min_specialization)]
 
 pub mod impls;
 pub mod traits;
@@ -133,7 +131,7 @@ pub struct Data {
 }
 ```
 
-Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with specified storage key (storage key is required input argument to macro).
+Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with specified storage key (storage key is a required input argument of the macro).
 To generate a unique key openbrush provides [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is base on the name of the struct and its file path. Let's add this to our struct and import required fields.
 
 ```rust
@@ -163,8 +161,8 @@ pub struct Data {
 
 ### 3. Trait for Getters
 
-Unlike solidity that will automatically create getters for the storage items, you should add add it yourself in ink!. For this we will create a Trait and add generic implementation.
-in the *./logics/traits/pair.rs* let's create a Trait with the needed getters functions and make them callable with `#[ink(message)]` :
+Unlike solidity that will automatically create getters for the storage items, you should add add it yourself in ink!. For this we will create a trait and add generic implementation.
+in the *./logics/traits/pair.rs*  file, let's create a trait with the getters functions and make them callable with `#[ink(message)]` :
 
 ```rust
 pub trait Pair {
@@ -182,7 +180,7 @@ pub trait Pair {
 }
 ```
 
-Openbrush provide `#[openbrush::trait_definition]` that will make sure your Trait (and its default implementation) will be generated in the contract. Also, you can create a wrapper arroud this trait to use this Trait for cross-contract calls (so no need to import the contract as ink-as-dependancy). Import what is needed from openbrush
+Openbrush provide `#[openbrush::trait_definition]` that will make sure your trait (and its default implementation) will be generated in the contract. Also, you can create a wrapper arroud this trait to use this trait for cross-contract calls (so no need to import the contract as ink-as-dependancy). Import what is needed from openbrush:
 
 ```rust
 use openbrush::traits::{
@@ -227,3 +225,137 @@ pub enum PairError {
 
 ### 4. Implement Getters
 
+in *./logics/impls/pair/pair.rs* add and impl block for generic type `data::Data`. We wrap the Data struct in Storage trait to add it as trait bound.
+
+```rust
+impl<T: Storage<data::Data>> Pair for T {}
+```
+
+**get_reserves**
+
+This function should return a tuple of reserves & timestamp of type `(Balance, Balance, Timestamp)`. It takes `&self` as it should access to Data storage struct but will not modify it hence no need of a mutable ref.
+```rust
+fn get_reserves(&self) -> (Balance, Balance, Timestamp) {
+    (
+        self.data::<data::Data>().reserve_0,
+        self.data::<data::Data>().reserve_1,
+        self.data::<data::Data>().block_timestamp_last,
+    )
+}
+```
+
+**initialize**
+
+This method is more of a setter as it will set token address in storage. That's why it takes a `&mut self` as first argument.    
+As a general rule if a function only takes `&self` then it will not modify the state so it will only be called as a query.
+If the functions takes an `&mut self` it will make state change so can be called as a transaction, and should return a Result<T, E>.
+
+```rust
+fn initialize(
+    &mut self,
+    token_0: AccountId,
+    token_1: AccountId,
+) -> Result<(), PairError> {
+    self.data::<data::Data>().token_0 = token_0;
+    self.data::<data::Data>().token_1 = token_1;
+    Ok(())
+}
+```
+
+**get_token**
+
+These two functions returns the accountId of the tokens
+
+```rust
+    fn get_token_1(&self) -> AccountId {
+    self.data::<data::Data>().token_1
+}
+```
+
+Add imports, and your file should look like this:
+
+```rust
+pub use crate::{
+    impls::pair::*,
+    traits::pair::*,
+};
+use openbrush::traits::{
+    AccountId,
+    Balance,
+    Storage,
+    Timestamp,
+};
+
+impl<T: Storage<data::Data>> Pair for T {
+    fn get_reserves(&self) -> (Balance, Balance, Timestamp) {
+        (
+            self.data::<data::Data>().reserve_0,
+            self.data::<data::Data>().reserve_1,
+            self.data::<data::Data>().block_timestamp_last,
+        )
+    }
+
+    fn initialize(
+        &mut self,
+        token_0: AccountId,
+        token_1: AccountId,
+    ) -> Result<(), PairError> {
+        self.data::<data::Data>().token_0 = token_0;    
+        self.data::<data::Data>().token_1 = token_1;
+        Ok(())
+    }
+
+    fn get_token_0(&self) -> AccountId {
+        self.data::<data::Data>().token_0
+    }
+
+    fn get_token_1(&self) -> AccountId {
+        self.data::<data::Data>().token_1
+    }
+}
+```
+
+#### 5. Implement Getters to Pair contract
+
+In *./contracts/pair/Cargo.toml* import the uniswap-v2 logics crate and add it to the std features
+
+```toml
+...
+uniswap_v2 = { path = "../../logics", default-features = false }
+...
+std = [
+"ink_primitives/std",
+"ink_metadata",
+"ink_metadata/std",
+"ink_env/std",
+"ink_storage/std",
+"ink_lang/std",
+"scale/std",
+"scale-info",
+"scale-info/std",
+"openbrush/std",
+"uniswap_v2/std"
+]
+```
+
+In the contract *lib.rs* import everything from pair traits (and impls):
+
+```rust
+use uniswap_v2::{
+    impls::pair::*,
+    traits::pair::*,
+};
+```
+
+And just below the storage struct impl Pair trait for the PairContract:
+```rust
+    impl Pair for PairContract {}
+```
+
+And that's it!    
+You learned how to create a trait, its generic implementation and implented it in Pair contract.    
+Check your Pair contract with (to run in contract folder):
+```console
+cargo contract build
+```
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end)

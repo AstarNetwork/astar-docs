@@ -313,7 +313,7 @@ Import Vec from `ink_prelude`:
 ```
 
 And that's it! You implemented PSP22, its event and override its default implementation.    
-Check your contract with:
+Check your Pair contract with (to run in contract folder):
 ```console
 cargo contract build
 ```
