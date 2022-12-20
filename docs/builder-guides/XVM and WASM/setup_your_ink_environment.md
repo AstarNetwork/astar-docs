@@ -38,7 +38,7 @@ rustup target add wasm32-unknown-unknown --toolchain nightly
 
 ### ink! CLI[](https://use.ink/getting-started/setup#ink-cli)
 
-The first and most important tool we will be installing is `[cargo-contract](https://github.com/paritytech/cargo-contract)`, a CLI tool for helping set up and manage WebAssembly smart contracts written with ink!. 
+The first and most important tool we will be installing is [cargo-contract](https://github.com/paritytech/cargo-contract), a CLI tool for helping set up and manage WebAssembly smart contracts written with ink!. 
 
 As a pre-requisite for the tool, you need to install the [binaryen](https://github.com/WebAssembly/binaryen) package, which is used to optimize the WebAssembly bytecode of the contract.
 
