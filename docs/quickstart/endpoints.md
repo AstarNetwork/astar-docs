@@ -2,16 +2,18 @@
 sidebar_position: 2
 ---
 
-# Network endpoints
+# Network RPC endpoints
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## Public Endpoints
 
-:::note
+:::info
 The free endpoints below are dedicated to end users, they can be used to interact with dapps or deploy/call smart contracts.
-They limit the rate of API calls, so they are not suitable for a dapp UI scraping blockchain data constantly or an indexer (like the Graph).
+<b>They limit the rate of API calls</b>, so they are not suitable for a dapp UI scraping blockchain data constantly or an indexer (like the Graph).
+:::
+:::tip
 To deploy a production dapp, please refer to the [Run an archive node](/docs/nodes/archive-node/) section or get own API key for free/paid tier from one of our [infra partners](/docs/integrations/node-providers/)
 :::
 
@@ -23,13 +25,15 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 | Network | Astar |
 | Parent chain | Polkadot |
 | ParachainID | 2006 |
-| HTTPS | Alchemy: Get started [here](https://www.alchemy.com/astar) |
+| HTTPS | Astar Foundation: https://evm.astar.network |
+|         | Alchemy: Get started [here](https://www.alchemy.com/astar) |
 |         | BlastAPI: https://astar.public.blastapi.io |
 |         | Dwellir: https://astar-rpc.dwellir.com |
 |         | OnFinality: https://astar.api.onfinality.io/public |
 |         | Pinknode: Get started [here](https://www.pinknode.io/) |
 |         | Automata 1RPC: https://1rpc.io/astr, get started [here](https://www.1rpc.io) |
-| Websocket | Alchemy: Get started [here](https://www.alchemy.com/astar) |
+| Websocket | Astar Foundation: wss://rpc.astar.network |
+|           | Alchemy: Get started [here](https://www.alchemy.com/astar) |
 |           | BlastAPI: wss://astar.public.blastapi.io |
 |           | Dwellir: wss://astar-rpc.dwellir.com |
 |           | OnFinality: wss://astar.api.onfinality.io/public-ws |
@@ -47,11 +51,13 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 | Network | Shiden |
 | Parent chain | Kusama |
 | ParachainID | 2007 |
-| HTTPS | BlastAPI: https://shiden.public.blastapi.io |
+| HTTPS | Astar Foundation: https://evm.shiden.astar.network |
+|         | BlastAPI: https://shiden.public.blastapi.io |
 |         | Dwellir: https://shiden-rpc.dwellir.com |
 |         | OnFinality: https://shiden.api.onfinality.io/public |
 |         | Pinknode: Get started [here](https://www.pinknode.io/) |
-| Websocket | BlastAPI: wss://shiden.public.blastapi.io  |
+| Websocket |  Astar Foundation: wss://rpc.shiden.astar.network |
+|           | BlastAPI: wss://shiden.public.blastapi.io |
 |           | Dwellir: wss://shiden-rpc.dwellir.com |
 |           | OnFinality: wss://shiden.api.onfinality.io/public-ws |
 |           | Pinknode: Get started [here](https://www.pinknode.io/) |
@@ -65,14 +71,15 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 |   | Public endpoint Shibuya |
 | --- | --- |
 | Network | Shibuya (parachain testnet) |
-| Parent chain | Tokyo relay chain (hosted by Stake Technologies) |
+| Parent chain | Tokyo relay chain (hosted by Astar Foundation) |
 | ParachainID | 1000 |
-| HTTPS | BlastAPI: https://shibuya.public.blastapi.io |
+| HTTPS | Astar Foundation: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
+|         | BlastAPI: https://shibuya.public.blastapi.io |
 |         | Dwellir: https://shibuya-rpc.dwellir.com |
-|         | Astar Team: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
-| Websocket | BlastAPI: wss://shibuya.public.blastapi.io  |
+|         
+| Websocket | Astar Foundation: wss://rpc.shibuya.astar.network |
+|           | BlastAPI: wss://shibuya.public.blastapi.io |
 |           | Dwellir: wss://shibuya-rpc.dwellir.com |
-|           | Astar Team: wss://rpc.shibuya.astar.network |
 | chainID | 81 |
 | Symbol | SBY |
 
