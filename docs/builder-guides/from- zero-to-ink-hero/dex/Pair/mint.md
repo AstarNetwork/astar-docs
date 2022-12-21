@@ -144,4 +144,46 @@ Then implements line by line the same logic as in Uniswap-V2:
 
 ### 3. Update
 
-The update function will update the [oracle price](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) of the token with time-weighted average prices (TWAPs). 
+The update function will update the [oracle price](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) of the tokens with time-weighted average prices (TWAPs). Please check Uniswap V2 [implementation](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L73).    
+To implement this in ink!:
+- ink! contracts should [never panic!](https://substrate.stackexchange.com/questions/2391/panic-in-ink-smart-contracts). The reason is that a panic! will give the user no information about the Error (it only return `CalleeTrapped`). Every potential business/logical error should be returned in a predictive way using `Result<T, Error>`.
+- To handle time use `Self::env().block_timestamp()` that is the milliseconds time since the Unix epoch.
+- In solidity float point division is not supported, it uses Q number UQ112x112 for more precision. We will use div for our example (note that is DEX template we use [U256](https://github.com/swanky-dapps/dex/blob/4676a73f4ab986a3a3f3de42be1b0052562953f1/uniswap-v2/logics/impls/pair/pair.rs#L374) for more precision).
+- To store values is storage (but first verify then save) just set the value of the Storage field (as the function takes `&mut self` it can modify Storage struct fields)
+
+You can then implement **update**
+
+```rust
+    fn _update(
+    &mut self,
+    balance_0: Balance,
+    balance_1: Balance,
+    reserve_0: Balance,
+    reserve_1: Balance,
+) -> Result<(), PairError> {
+    if balance_0 == u128::MAX || balance_1 == u128::MAX {
+        return Err(PairError::Overflow)
+    }
+    let now = Self::env().block_timestamp();
+    let time_elapsed = now - self.data::<data::Data>().block_timestamp_last;
+    if time_elapsed > 0 && reserve_0 != 0 && reserve_1 != 0 {
+        let price_cumulative_last_0 = (reserve_1 / reserve_0)
+            .checked_mul(time_elapsed as u128)
+            .ok_or(PairError::MulOverFlow4)?;
+        let price_cumulative_last_1 = (reserve_0 / reserve_1)
+            .checked_mul(time_elapsed as u128)
+            .ok_or(PairError::MulOverFlow4)?;
+        self.data::<data::Data>().price_0_cumulative_last += price_cumulative_last_0;
+        self.data::<data::Data>().price_1_cumulative_last += price_cumulative_last_1;
+    }
+    self.data::<data::Data>().reserve_0 = balance_0;
+    self.data::<data::Data>().reserve_1 = balance_1;
+    self.data::<data::Data>().block_timestamp_last = now;
+
+    self._emit_sync_event(reserve_0, reserve_1);
+    Ok(())
+}
+```
+
+### 4. Mint
+
