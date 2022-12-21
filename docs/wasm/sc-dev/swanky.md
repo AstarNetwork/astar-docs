@@ -255,6 +255,20 @@ DESCRIPTION
   Call a method on a smart contract
 ```
 
+### `swanky node`
+
+Manage a local node.
+
+```
+USAGE
+  $ swanky node COMMAND
+COMMANDS
+  node purge  Purge local chain state
+  node start  Start a local node
+```
+
+<Figure caption="Start a local node" src={require('./img/07-node_start.gif').default} />
+
 ## Swanky Node
 
 Swanky node is a Substrate based blockchain configured to enable `pallet-contracts` (a smart contract module) and more features to help WASM smart contract development locally.
