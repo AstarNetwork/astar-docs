@@ -25,14 +25,14 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 | Network | Astar |
 | Parent chain | Polkadot |
 | ParachainID | 2006 |
-| HTTPS | Astar Foundation: https://evm.astar.network |
+| HTTPS | Astar Team: https://evm.astar.network |
 |         | Alchemy: Get started [here](https://www.alchemy.com/astar) |
 |         | BlastAPI: https://astar.public.blastapi.io |
 |         | Dwellir: https://astar-rpc.dwellir.com |
 |         | OnFinality: https://astar.api.onfinality.io/public |
 |         | Pinknode: Get started [here](https://www.pinknode.io/) |
 |         | Automata 1RPC: https://1rpc.io/astr, get started [here](https://www.1rpc.io) |
-| Websocket | Astar Foundation: wss://rpc.astar.network |
+| Websocket | Astar Team: wss://rpc.astar.network |
 |           | Alchemy: Get started [here](https://www.alchemy.com/astar) |
 |           | BlastAPI: wss://astar.public.blastapi.io |
 |           | Dwellir: wss://astar-rpc.dwellir.com |
@@ -51,12 +51,12 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 | Network | Shiden |
 | Parent chain | Kusama |
 | ParachainID | 2007 |
-| HTTPS | Astar Foundation: https://evm.shiden.astar.network |
+| HTTPS | Astar Team: https://evm.shiden.astar.network |
 |         | BlastAPI: https://shiden.public.blastapi.io |
 |         | Dwellir: https://shiden-rpc.dwellir.com |
 |         | OnFinality: https://shiden.api.onfinality.io/public |
 |         | Pinknode: Get started [here](https://www.pinknode.io/) |
-| Websocket |  Astar Foundation: wss://rpc.shiden.astar.network |
+| Websocket |  Astar Team: wss://rpc.shiden.astar.network |
 |           | BlastAPI: wss://shiden.public.blastapi.io |
 |           | Dwellir: wss://shiden-rpc.dwellir.com |
 |           | OnFinality: wss://shiden.api.onfinality.io/public-ws |
@@ -71,13 +71,13 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 |   | Public endpoint Shibuya |
 | --- | --- |
 | Network | Shibuya (parachain testnet) |
-| Parent chain | Tokyo relay chain (hosted by Astar Foundation) |
+| Parent chain | Tokyo relay chain (hosted by Astar Team) |
 | ParachainID | 1000 |
-| HTTPS | Astar Foundation: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
+| HTTPS | Astar Team: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
 |         | BlastAPI: https://shibuya.public.blastapi.io |
 |         | Dwellir: https://shibuya-rpc.dwellir.com |
 |         
-| Websocket | Astar Foundation: wss://rpc.shibuya.astar.network |
+| Websocket | Astar Team: wss://rpc.shibuya.astar.network |
 |           | BlastAPI: wss://shibuya.public.blastapi.io |
 |           | Dwellir: wss://shibuya-rpc.dwellir.com |
 | chainID | 81 |
