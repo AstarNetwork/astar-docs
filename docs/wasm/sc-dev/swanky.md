@@ -295,7 +295,7 @@ ink! version `3.4.0` or lower is supported by pallet-contract polkadot-0.9.30 br
 The easiest way is to download a binary release from [Release Page](https://github.com/AstarNetwork/swanky-node/releases)
 
 ### Build Locally
-First, complete the [basic Rust setup instructions](/docs/rust-setup.md).
+First, complete the [basic Rust setup instructions](/docs/wasm/sc-dev/env-setup.md).
 After that, you can build node via
 ```bash
 cargo build --release
