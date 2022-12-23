@@ -435,6 +435,8 @@ $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d
 
 For more detailed documentation please visit the [`swanky-node` GitHub repo].
 
+--- 
+
 ## Documentation
 
 [`swanky` CLI Github repo] with the latest documentation
