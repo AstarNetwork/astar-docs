@@ -10,7 +10,7 @@ If you start tutorial from here, Please checkout this [branch](https://github.co
 
 We will implement [mint](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L110) function of Pair contract.   
 In *./logics/traits/pair.rs* add the **mint** function to Pair trait. You should also add two internal **_mint_fee** and **_update**.
-As these functions modify the state, they should take a `&mut self` as first argument. When sending transaction (as tx) it return nothing (a tx cannot return a value neither a variant of the Error enum) so in most cases state changes function will return `Result<(), PairError>`.
+As those functions modify the state, they should take a `&mut self` as first argument. When sending transaction (as tx) it return nothing (a tx cannot return a value neither a variant of the Error enum) so in most cases state changes function will return `Result<(), PairError>`.
 But if you call the function as dry-run (as a query, it will not modify the state) it can return a value (any value and Error enum as well). That is why the **mint** message function returns a `Balance` (and not `()`). So before calling **mint** as tx you can call it as dry-run and gets the liquidity that will be minted.
 Also add the function to emit mint event that will have to be implemented in the contract.
 ```rust
@@ -20,8 +20,18 @@ pub trait Pair {
     fn mint(&mut self, to: AccountId) -> Result<Balance, PairError>;
 
     fn _mint_fee(&mut self, reserve_0: Balance, reserve_1: Balance) -> Result<bool, PairError>;
-
+    
+    fn _update(
+        &mut self,
+        balance_0: Balance,
+        balance_1: Balance,
+        reserve_0: Balance,
+        reserve_1: Balance,
+    ) -> Result<(), PairError>;
+    
     fn _emit_mint_event(&self, _sender: AccountId, _amount_0: Balance, _amount_1: Balance);
+
+    fn _emit_sync_event(&self, reserve_0: Balance, reserve_1: Balance);
 }
 ```
 
@@ -150,7 +160,7 @@ To implement this in ink!:
 - ink! contracts should [never panic!](https://substrate.stackexchange.com/questions/2391/panic-in-ink-smart-contracts). The reason is that a panic! will give the user no information about the Error (it only return `CalleeTrapped`). Every potential business/logical error should be returned in a predictive way using `Result<T, Error>`.
 - To handle time use `Self::env().block_timestamp()` that is the milliseconds time since the Unix epoch.
 - In solidity float point division is not supported, it uses Q number UQ112x112 for more precision. We will use div for our example (note that is DEX template we use [U256](https://github.com/swanky-dapps/dex/blob/4676a73f4ab986a3a3f3de42be1b0052562953f1/uniswap-v2/logics/impls/pair/pair.rs#L374) for more precision).
-- To store values is storage (but first verify then save) just set the value of the Storage field (as the function takes `&mut self` it can modify Storage struct fields)
+- To store values in storage (but first verify then save) just set the value of the Storage field (as the function takes `&mut self` it can modify Storage struct fields)
 
 You can then implement **update**
 
@@ -329,8 +339,15 @@ If you handle all overflow (that takes most of the lines of function body) it sh
     }
 ```
 
+Add the empty implementation of **_emit_mint_event** and **_emit_sync_event** in the Pair impl. It should have `default` keyword as we will override those function in Pair contract.
+```rust
+    default fn _emit_mint_event(&self, _sender: AccountId, _amount_0: Balance, _amount_1: Balance) {}
+
+    default fn _emit_sync_event(&self, _reserve_0: Balance, _reserve_1: Balance) {}
+```
+
 And that's it!    
-You learned how to create a wrapper arround a Trait to do cross-contract calls and avanced Rsut & ink! implementation. 
+You learned how to create a wrapper around a Trait to do cross-contract calls and advanced Rust & ink! implementation. 
 Check your Pair contract with (to run in contract folder):
 ```console
 cargo contract build
