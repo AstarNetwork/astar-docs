@@ -44,7 +44,8 @@ impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
 ```
 
 In the [first line](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L90) of **_mintFee** there is a cross-contract call to factory contract to get the address of the account collecting the fees. To do so we will use openbrush wrapper around a Factory trait (and demonstrate that the trait only is needed - no implementation).
-create a the file *./logics/traits/factory.rs* and add `Factory` trait and a **fee_to** function getter. Add `#[openbrush::trait_definition]` on top of it:
+create a the file *./logics/traits/factory.rs* and add `Factory` trait and a **fee_to** function getter.     
+Add `#[openbrush::trait_definition]` on top of it:
 
 ```rust
 #[openbrush::trait_definition]
@@ -88,7 +89,7 @@ And in the body of **_mint_fee** let get the fee_on with a cross-contract call t
 }
 ```
 
-For the rest of the function body let's see what can be complex:
+For the rest of the function body let's see what can be tricky:
 
 - For ` address(0)` in solidity you can use `openbrush::traits::ZERO_ADDRESS` (which is a const `[0; 32]`)
 - For `sqrt` you can either implement the [same function](https://github.com/AstarNetwork/wasm-tutorial-dex/blob/4afd2d2a0503ad5dfcecd87e2b40d55cd3c854a0/uniswap-v2/logics/impls/pair/pair.rs#L437) or use [integer-sqrt](https://crates.io/crates/integer-sqrt)
@@ -187,3 +188,151 @@ You can then implement **update**
 
 ### 4. Mint
 
+Now that all childs functions has been added we can add **mint**.
+First add function definition in the impl block of *./logics/impls/pair/pair.rs* :
+
+```rust
+fn mint(&mut self, to: AccountId) -> Result<Balance, PairError> {}
+```
+
+In line [112](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L112) of *Pair.sol* there is a cross-contract call to the ERC20 to get the balance of the contract `uint balance0 = IERC20(token0).balanceOf(address(this));`.    
+To implement this cross-contract call we will use `PSP22Ref` from openbrush. To get the address of the contract, use `Self::env().account_id()`.
+find all ink_env getters in this [doc](https://docs.rs/ink_env/latest/ink_env/)
+
+First add the `psp22::Data` Trait bound to the generic impl block:
+```rust
+impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T { 
+    ...
+}
+```
+
+In the body of **mint**:
+```rust
+use openbrush::contracts::traits::psp22::PSP22Ref;
+...
+fn mint(&mut self, to: AccountId) -> Result<Balance, PairError> {
+    let reserves = self.get_reserves();
+    let contract = Self::env().account_id();
+    let balance_0 = PSP22Ref::balance_of(&self.data::<data::Data>().token_0, contract);
+    let balance_1 = PSP22Ref::balance_of(&self.data::<data::Data>().token_1, contract);
+    ...
+}
+```
+
+Then as the call to `PSP22Ref` returns `Result<Balance, PSP22Error>` we should implement the `From` trait for our `PairError` (to not have to map_err for every calls). 
+To do so in the file *.logics/traits/pair.rs* where we defined `PairError` add a field that takes an `PSP22Error` and implement the `From` Trait for it (also add all the error fields used in the implementation):
+```rust
+#[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
+#[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]
+pub enum PairError {
+    PSP22Error(PSP22Error),
+    InsufficientLiquidityMinted,
+    Overflow,
+    SubUnderFlow1,
+    SubUnderFlow2,
+    SubUnderFlow3,
+    SubUnderFlow14,
+    MulOverFlow1,
+    MulOverFlow2,
+    MulOverFlow3,
+    MulOverFlow4,
+    MulOverFlow5,
+    MulOverFlow14,
+    MulOverFlow15,
+    DivByZero1,
+    DivByZero2,
+    DivByZero5,
+    AddOverflow1,
+}
+
+impl From<PSP22Error> for PairError {
+    fn from(error: PSP22Error) -> Self {
+        PairError::PSP22Error(error)
+    }
+}
+```
+
+For **MINIMUM_LIQUIDTY** constant, please add:
+```rust
+pub const MINIMUM_LIQUIDITY: u128 = 1000;
+```
+
+For **min** function just adds the [same implementation](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/libraries/Math.sol#L6):
+```rust
+fn min(x: u128, y: u128) -> u128 {
+    if x < y {
+        return x
+    }
+    y
+}
+```
+
+If you handle all overflow (that takes most of the lines of function body) it should look like this:
+```rust
+    fn mint(&mut self, to: AccountId) -> Result<Balance, PairError> {
+        let reserves = self.get_reserves();
+        let contract = Self::env().account_id();
+        let balance_0 = PSP22Ref::balance_of(&self.data::<data::Data>().token_0, contract);
+        let balance_1 = PSP22Ref::balance_of(&self.data::<data::Data>().token_1, contract);
+        let amount_0 = balance_0
+            .checked_sub(reserves.0)
+            .ok_or(PairError::SubUnderFlow1)?;
+        let amount_1 = balance_1
+            .checked_sub(reserves.1)
+            .ok_or(PairError::SubUnderFlow2)?;
+
+        let fee_on = self._mint_fee(reserves.0, reserves.1)?;
+        let total_supply = self.data::<psp22::Data>().supply;
+
+        let liquidity;
+        if total_supply == 0 {
+            let liq = amount_0
+                .checked_mul(amount_1)
+                .ok_or(PairError::MulOverFlow1)?;
+            liquidity = sqrt(liq)
+                .checked_sub(MINIMUM_LIQUIDITY)
+                .ok_or(PairError::SubUnderFlow3)?;
+            self._mint_to(ZERO_ADDRESS.into(), MINIMUM_LIQUIDITY)?;
+        } else {
+            let liquidity_1 = amount_0
+                .checked_mul(total_supply)
+                .ok_or(PairError::MulOverFlow2)?
+                .checked_div(reserves.0)
+                .ok_or(PairError::DivByZero1)?;
+            let liquidity_2 = amount_1
+                .checked_mul(total_supply)
+                .ok_or(PairError::MulOverFlow3)?
+                .checked_div(reserves.1)
+                .ok_or(PairError::DivByZero2)?;
+            liquidity = min(liquidity_1, liquidity_2);
+        }
+
+        if liquidity == 0 {
+            return Err(PairError::InsufficientLiquidityMinted)
+        }
+
+        self._mint_to(to, liquidity)?;
+
+        self._update(balance_0, balance_1, reserves.0, reserves.1)?;
+
+        if fee_on {
+            let k = reserves
+                .0
+                .checked_mul(reserves.1)
+                .ok_or(PairError::MulOverFlow5)?;
+            self.data::<data::Data>().k_last = k;
+        }
+
+        self._emit_mint_event(Self::env().caller(), amount_0, amount_1);
+
+        Ok(liquidity)
+    }
+```
+
+And that's it!    
+You learned how to create a wrapper arround a Trait to do cross-contract calls and avanced Rsut & ink! implementation. 
+Check your Pair contract with (to run in contract folder):
+```console
+cargo contract build
+```
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/mint_end)
