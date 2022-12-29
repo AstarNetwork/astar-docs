@@ -346,6 +346,12 @@ Add the empty implementation of **_emit_mint_event** and **_emit_sync_event** in
     default fn _emit_sync_event(&self, _reserve_0: Balance, _reserve_1: Balance) {}
 ```
 
+The `default` keyword needs the attribute `min_specialization` to be added. in **./logics/lib.rs** :
+```rust
+#![cfg_attr(not(feature = "std"), no_std)]
+#![feature(min_specialization)]
+```
+
 And that's it!    
 You learned how to create a wrapper around a Trait to do cross-contract calls and advanced Rust & ink! implementation. 
 Check your Pair contract with (to run in contract folder):
