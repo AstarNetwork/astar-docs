@@ -8,7 +8,7 @@ sidebar_position: 1
 
 This cookbook will go through how to extract and analyze on-chain data of Astar Network using Python and Covalent API. This cookbook is especially useful for non-devs who are not familiar with setting up indexers to query on-chain data. All steps can be done totally free without having to use a terminal or setting up a local development environment. 
 
-## What is Covalent
+## What is Covalent?
 
 Covalent leverages big-data technologies to create meaning from hundreds of billions of data points, delivering actionable insights to investors and allowing developers to allocate resources to higher-utility goals within their organization. Instead of pain-stakingly sourcing data from a small handful of chains, Covalent aggregates information from across dozens of sources including nodes, chains and data feeds. The Covalent API then sources end users with individualized data by wallet, including current and historical investment performance across all types of digital assets. Most importantly, Covalent returns this data in a rapid and consistent manner, incorporating all relevant data within one API interface.
 
