@@ -2,6 +2,9 @@
 sidebar_position: 4
 ---
 
+import Figure from "/src/components/figure"
+//do not translate lines above
+
 # トークノミクス & インフレーションモデル
 
 :::note
@@ -114,7 +117,7 @@ $$ i_{adjusted} = {i + 1 \over inflation_{anual} + 1} - 1 $$
 * 青のラインは合計ステーカーインフレ $total_{staker}$
 * 赤のラインはインフレ調整利率 $i_{adjusted}$
 
-![tokenomics_model_visualization](img/tokenomics_1.png)
+<Figure caption="トークノミクス & インフレーションモデル" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" />
 
 モデルを確認し、[こちら](https://www.desmos.com/calculator/cjjkt6smk5)で自分で設定することができます。
 

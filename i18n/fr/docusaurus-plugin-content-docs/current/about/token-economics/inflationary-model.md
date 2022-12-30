@@ -2,6 +2,9 @@
 sidebar_position: 4
 ---
 
+import Figure from "/src/components/figure"
+//do not translate lines above
+
 # Tokenomics & Modèle d’inflation
 
 :::note
@@ -123,7 +126,7 @@ Le graphique suivant est une visualisation du modèle décrit.
 * la droite bleue est le nombre grandissant de stakers $total_{staker}$
 * la ligne rouge est le taux d'intérêt ajusté en fonction de l'inflation $i_{ajusté}$
 
-![tokenomics_model_visualization](img/tokenomics_1.png)
+<Figure caption="Tokenomics Model" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" />
 
 Vous pouvez vérifier le modèle et le configurer vous-même [ici](https://www.desmos.com/calculator/cjjkt6smk5).
 

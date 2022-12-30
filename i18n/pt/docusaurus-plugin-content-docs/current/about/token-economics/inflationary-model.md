@@ -2,6 +2,9 @@
 sidebar_position: 4
 ---
 
+import Figure from "/src/components/figure"
+//do not translate lines above
+
 # Tokenomics & Modelo de Inflação
 
 :::note
@@ -130,7 +133,7 @@ O gráfico a seguir é uma visualização do modelo descrito.
 * a linha azul é a inflação total do staker $total_{staker}$
 * a linha vermelha é a taxa de juros ajustada pela inflação $i_{adjusted}$
 
-![tokenomics_model_visualização](img/tokenomics_1.png)
+<Figure caption="Tokenomics & Modelo de Inflação" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" />
 
 Você pode verificar o modelo e configurá-lo [aqui](https://www.desmos.com/calculator/cjjkt6smk5).
 

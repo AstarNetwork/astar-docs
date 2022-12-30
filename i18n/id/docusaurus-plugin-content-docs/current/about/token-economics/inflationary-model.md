@@ -2,6 +2,9 @@
 sidebar_position: 4
 ---
 
+import Figure from "/src/components/figure"
+//do not translate lines above
+
 # Tokenomics & Model Inflasi
 
 :::note
@@ -114,7 +117,7 @@ Grafik selanjutnya akan menjelaskan visualisasi dari model tersebut.
 * garis biru adalah total inflasi staker $total_{staker}$
 * garis merah adalah tingkat inflasi suku bunga yang disesuaikan $i_{adjusted}$
 
-![visualisasi_model_tokenomics](img/tokenomics_1.png)
+<Figure caption="Tokenomics & Model Inflasi" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" />
 
 Pembaca dapat langsung melihat dan mengkonfigurasikan sendiri [di sini](https://www.desmos.com/calculator/cjjkt6smk5).
 
