@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-import Figure from './figure'
+import Figure from '/src/components/figure'
 
 # Swanky Suite
 
