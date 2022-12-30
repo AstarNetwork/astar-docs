@@ -47,8 +47,6 @@ Defining a Trait definition is sufficient (a contract that implements that Trait
 - [Substrate Seminar (Youtube)](https://www.youtube.com/watch?v=I5OFGNVvzOc)
 - [How to use modifiers](https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76)
 
-You can join the [Brushfam Element channel](https://matrix.to/#/!utTuYglskDvqRRMQta:matrix.org?via=matrix.org&via=t2bot.io&via=web3.foundation) if you have any question about OpenBrush or ink! smart contracts in general.
-
 [OpenBrush]: https://github.com/727-Ventures/openbrush-contracts
 [PSPs]: https://github.com/w3f/PSPs
 [Brushfam]: https://www.brushfam.io/

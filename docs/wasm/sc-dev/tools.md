@@ -26,10 +26,6 @@ This tool can build your contracts, then create the artifcats and based on that,
 
 It offers all Ethereum types and is really useful if you want to port solidity code to ink!.
 
-## Questions?
-
-You can join the [Brushfam Element channel](https://matrix.to/#/!utTuYglskDvqRRMQta:matrix.org?via=matrix.org&via=t2bot.io&via=web3.foundation) if you have any question about some of the mentioned tools, or ink! smart contracts in general, and meet other ink! smart contracts developers.
-
 [OpenBrush]: https://github.com/727-Ventures/openbrush-contracts
 [PSPs]: https://github.com/w3f/PSPs
 
