@@ -8,7 +8,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 ### Prereqs
 
-  - Make sure `git` and `yarn` exist as commands in your terminal/vscode: [https://yarnpkg.com/](https://yarnpkg.com/)
+  - Make sure `git` and `yarn` exist as commands in your terminal/vscode: [https://yarnpkg.com/](https://yarnpkg.com/) **(NOTE: Please make sure you use yarn 1 (classic) by using command `yarn set version classic`**
   - Git/Github: understand what the following commands do
       - managing branches (`git checkout main` and `git checkout -b feat/your-new-branch`
       - Commits (`git add .` and `git commit`, `git push -u origin feat/your-new-branch`)
@@ -50,4 +50,5 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 ### HELP SOMETHING IS BROKEN
 
   - Likely, a broken build got pushed to `main` somehow. Remove the commit from `main` and force push to `main`, reopen PR in a new PR
+  - Please make sure you use yarn 1 (classic) by using command `yarn set version classic`
 
