@@ -223,6 +223,48 @@ pub enum PairError {
     AddOverflow1,
 }
 ```
+
+### 4. Implement Event
+
+in the contracts *./cotnracts/pair/lib.rs* add the Event struct and override the implementation of emit event:
+```rust
+...
+#[ink(event)]
+pub struct Swap {
+    #[ink(topic)]
+    pub sender: AccountId,
+    pub amount_0_in: Balance,
+    pub amount_1_in: Balance,
+    pub amount_0_out: Balance,
+    pub amount_1_out: Balance,
+    #[ink(topic)]
+    pub to: AccountId,
+}
+...
+impl Pair for PairContract {
+    ...
+    fn _emit_swap_event(
+        &self,
+        sender: AccountId,
+        amount_0_in: Balance,
+        amount_1_in: Balance,
+        amount_0_out: Balance,
+        amount_1_out: Balance,
+        to: AccountId,
+    ) {
+        self.env().emit_event(Swap {
+            sender,
+            amount_0_in,
+            amount_1_in,
+            amount_0_out,
+            amount_1_out,
+            to,
+        })
+    }
+}
+...
+```
+
 And that's it!
 Check your Pair contract with (to run in contract folder):
 ```console

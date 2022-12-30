@@ -171,6 +171,41 @@ pub enum PairError {
 }
 ```
 
+### 4. Implement Event
+
+in the contracts *./cotnracts/pair/lib.rs* add the Event struct and override the implementation of emit event:
+```rust
+...
+#[ink(event)]
+pub struct Burn {
+    #[ink(topic)]
+    pub sender: AccountId,
+    pub amount_0: Balance,
+    pub amount_1: Balance,
+    #[ink(topic)]
+    pub to: AccountId,
+}
+...
+impl Pair for PairContract {
+    ...
+    fn _emit_burn_event(
+        &self,
+        sender: AccountId,
+        amount_0: Balance,
+        amount_1: Balance,
+        to: AccountId,
+    ) {
+        self.env().emit_event(Burn {
+            sender,
+            amount_0,
+            amount_1,
+            to,
+        })
+    }
+}
+...
+```
+
 And that's it!    
 You learned how to easily add advanced Rust & ink! implementation.
 Check your Pair contract with (to run in contract folder):

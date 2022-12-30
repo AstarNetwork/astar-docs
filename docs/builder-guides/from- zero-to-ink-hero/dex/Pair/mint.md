@@ -352,6 +352,30 @@ The `default` keyword needs the attribute `min_specialization` to be added. in *
 #![feature(min_specialization)]
 ```
 
+### 5. Implement Event
+
+in the contracts *./cotnracts/pair/lib.rs* add the Event struct and override the implementation of emit event:
+```rust
+...
+#[ink(event)]
+pub struct Mint {
+    #[ink(topic)]
+    pub sender: AccountId,
+    pub amount_0: Balance,
+    pub amount_1: Balance,
+}
+...
+impl Pair for PairContract {
+    fn _emit_mint_event(&self, sender: AccountId, amount_0: Balance, amount_1: Balance) {
+        self.env().emit_event(Mint {
+            sender,
+            amount_0,
+            amount_1,
+        })
+    }
+}
+```
+
 And that's it!    
 You learned how to create a wrapper around a Trait to do cross-contract calls and advanced Rust & ink! implementation. 
 Check your Pair contract with (to run in contract folder):
