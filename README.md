@@ -45,7 +45,9 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 ### Working with images
 
   - Please import and use tag `<Figure/>` instead of `![image]` as this enables smoother translation of docs to other languages (automatic reference to original images, no need to copy images to translated subfolders)
+    
     - Example - as seen [here](https://github.com/AstarNetwork/astar-docs/blob/d530139ca7a5ab034a783981d313542e02fdfb54/docs/about/token-economics/inflationary-model.md):
+      
       top of file:
       ```
       import Figure from "/src/components/figure"
@@ -56,11 +58,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
       <Figure caption="Tokenomics Model" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" /> 
       ```
 
-  - If you are editing/creating English language version of the docs (located under /doc folder)
-    - please use the IMG subfolder located under the section you are editing (e.g. docs/about/token-economics/img)
-
-  - If you are editing/creating translated version of the docs (located under /i18n folder)
-    - please use Figure tag for adding images
+    - Please use absolute path to image (e.g. `/docs/about/token-economics/img/tokenomics_1.png` instead `img/tokenomics_1.png`
 
 ### Deploy to production
 
