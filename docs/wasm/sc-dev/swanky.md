@@ -30,6 +30,13 @@ Node.js version `>= 18.0.0` is supported. Please check node version to use befor
 node -v
 ```
 
+If you are trying to develop on macOS, check that binaryen is installed.  
+binaryen is compiler infrastructure and toolchain library for WebAssembly.
+
+```bash
+brew install binaryen
+```
+
 ### CLI Installation
 
 Swanky CLI can be either installed globally via [NPM](https://www.npmjs.com/package/@astar-network/swanky-cli):
