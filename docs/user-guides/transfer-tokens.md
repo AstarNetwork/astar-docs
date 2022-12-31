@@ -113,7 +113,7 @@ As mentioned above, most exchanges only support Astar Native and you would need 
 3. Connect to Astar Native account.
 
 4. Press the transfer button next to the ASTR token.
-   <img width="1000" alt="Account-copy" src="https://user-images.githubusercontent.com/77480847/188531419-78d95073-be4e-4020-a40b-cb64150dcdf6.png" />
+   ![image](https://user-images.githubusercontent.com/37278708/210126359-b31d52c4-2e5e-4da7-a421-478439e71ba8.png)
 
 5. You are now on the transfer page. Add the destination address and the amount you wish to transfer, then press the confirm button.
    <img width="1000" alt="Native-local-destination-address" src="https://user-images.githubusercontent.com/77480847/188531500-38c2755e-691d-4bc9-bf21-470e98dec4f5.png" />
