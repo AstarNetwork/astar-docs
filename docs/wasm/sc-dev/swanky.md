@@ -39,6 +39,21 @@ Swanky CLI is a Node.js CLI app that uses the Polkadot.js API as its backend alo
 
 CLI can be installed in two ways:
 
+#### Recommended Way: Downloading the precompiled binaries
+
+This is the recommended way - it comes with all the dependencies (even NodeJs) included and will support auto-updates in the future.
+
+1. Download the correct archive for your platform from the [releases section of swanky-cli github page](https://github.com/AstarNetwork/swanky-cli/releases).
+
+2. Extract the archive to appropriate location, for example `software` directory.
+
+3. Add the `swanky` executable to your path variable by creating a symbolic link to it from a common `bin` directory or similar.
+
+> Example on MacOS:
+>
+> `ln -s /Users/my_name/software/swanky-cli/bin/swanky /usr/local/bin`
+
+
 #### Globally with npm
 
 This approach is arguably simpler, but due to the nature of NodeJs dependency management, could lead to dependency and compatibility errors.
@@ -53,19 +68,6 @@ or
 $ npx @astar-network/swanky-cli [command]
 ```
 
-#### Downloading the precompiled binaries
-
-This is the recommended way - it comes with all the dependencies (even NodeJs) included and will support auto-updates in the future.
-
-1. Download the correct archive for your platform from the [releases section of swanky-cli github page](https://github.com/AstarNetwork/swanky-cli/releases).
-
-2. Extract the archive to appropriate location, for example `software` directory.
-
-3. Add the `swanky` executable to your path variable by creating a symbolic link to it from a common `bin` directory or similar.
-
-> Example on MacOS:
->
-> `ln -s /Users/my_name/software/swanky-cli/bin/swanky /usr/local/bin`
 
 ### Commands
 
