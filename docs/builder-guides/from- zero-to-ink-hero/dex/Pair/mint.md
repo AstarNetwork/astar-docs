@@ -277,7 +277,12 @@ fn min(x: u128, y: u128) -> u128 {
 }
 ```
 
-If you handle all overflow (that takes most of the lines of function body) it should look like this:
+If you handle all overflows (that takes most of the lines of function body):
+1. First get reserves, balances and liquidity
+2. mint_fee
+3. mint liquidity to `to`
+4. update reserves
+5. emit event
 ```rust
     fn mint(&mut self, to: AccountId) -> Result<Balance, PairError> {
         let reserves = self.get_reserves();

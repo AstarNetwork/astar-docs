@@ -66,8 +66,14 @@ use ink_prelude::vec::Vec;
 ### 3. Burn
 
 First line of the function is the same as mint (as we get the same values). 
-In the [line #147](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L147) `_burn(address(this), liquidity);` actually calls the burn of the internal ERC20 (as Pair is an extended ERC20). 
-We have seen how to implement from solidity in mint implementation. Nothing exotic here:
+In the [line #147](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L147) `_burn(address(this), liquidity);` actually calls the burn of the internal ERC20 (as Pair is an extended ERC20).
+The flow of the function body:
+1. First get reserves, balances and liquidity
+2. mint_fee
+3. burn liquidity and transfer token from contract to `to`
+4. update reserves
+5. emit event
+
 ```rust
 impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
     ...
