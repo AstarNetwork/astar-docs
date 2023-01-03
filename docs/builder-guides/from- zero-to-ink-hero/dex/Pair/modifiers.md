@@ -111,7 +111,7 @@ impl From<ReentrancyGuardError> for PairError {
 }
 ```
 
-### 1. Only owner
+### 2. Only owner
 
 In **initialize** there is a guard that ensure [caller is the factory](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67). We can use [ownable modifier](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/access/ownable/mod.rs) that will store the deployer address on storage and restrict function access to this address.
 In *./contracts/pair/Cargo.toml* add `"ownable"` feature to openbrush dependency:
@@ -234,7 +234,7 @@ impl From<OwnableError> for PairError {
 
 And that's it!    
 You learned how to import and use modifiers from openbrush.
-You can also implement your own modifier, check this [tutorial](https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76)
+You can also implement your own modifier, check this [tutorial](https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76).      
 Check your Pair contract with (to run in contract folder):
 ```console
 cargo contract build

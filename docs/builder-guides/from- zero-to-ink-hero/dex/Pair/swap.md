@@ -224,7 +224,7 @@ pub enum PairError {
 }
 ```
 
-### 4. Implement Event
+### 3. Implement Event
 
 in the contracts *./cotnracts/pair/lib.rs* add the Event struct and override the implementation of emit event:
 ```rust
