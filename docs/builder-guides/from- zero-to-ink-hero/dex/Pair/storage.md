@@ -89,7 +89,7 @@ pub mod traits;
 
 ### 2. Pair Storage
 
-The uniswap v2 have those [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L18) in solidity that we should implemented:
+The uniswap v2 Pair contract has those [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L18) in solidity that we should implemented:
 
 ```solidity
 address public factory;
@@ -105,7 +105,7 @@ uint public price1CumulativeLast;
 uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
 ```
 
-ink! uses most of substrate primitives types. This is the table of conversion betwwen solidity and ink! types:
+ink! uses most substrate primitives types. This is the table of conversion between solidity and ink! types:
 
 | Solidity                                | ink!                                                                                      |
 |-----------------------------------------|-------------------------------------------------------------------------------------------|
@@ -161,7 +161,7 @@ pub struct Data {
 
 ### 3. Trait for Getters
 
-Unlike solidity that will automatically create getters for the storage items, you should add add it yourself in ink!. For this we will create a trait and add generic implementation.
+Unlike solidity that will automatically create getters for the storage items, you should add it yourself in ink!. For this we will create a trait and add generic implementation.
 in the *./logics/traits/pair.rs*  file, let's create a trait with the getters functions and make them callable with `#[ink(message)]` :
 
 ```rust
@@ -214,7 +214,6 @@ For the moment we don't need a proper error so just add `Error` as field
 
 ```rust
 ...
-
 #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
 #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]
 pub enum PairError {
