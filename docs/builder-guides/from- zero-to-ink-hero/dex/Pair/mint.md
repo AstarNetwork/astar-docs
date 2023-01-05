@@ -38,7 +38,7 @@ pub trait Pair {
 ### 2. Mint fee and Factory trait
 
 As **_update** and **_mint_fee** are child functions of **mint** let start by implementing those.
-Let's have a lok at [_mintFee](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L89) in solidity: it takes `uint112 _reserve0` and `uint112 _reserve1`  as arguments,
+Let's have a lok at [_mintFee](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L89) in Solidity: it takes `uint112 _reserve0` and `uint112 _reserve1`  as arguments,
 that translate to `Balance` in ink! and returns a bool and make state changes (it can save `k_last` to storage) so in ink! it should return `Result<bool, PairError>`.    
 Let's add it to *./logics/impls/pair/pair.rs*:
 
@@ -101,7 +101,7 @@ And in the body of **_mint_fee** let get the fee_on with a cross-contract call t
 
 For the rest of the function body let's see what can be tricky:
 
-- For ` address(0)` in solidity you can use `openbrush::traits::ZERO_ADDRESS` (which is a const `[0; 32]`)
+- For ` address(0)` in Solidity you can use `openbrush::traits::ZERO_ADDRESS` (which is a const `[0; 32]`)
 - For `sqrt` you can either implement the [same function](https://github.com/AstarNetwork/wasm-tutorial-dex/blob/4afd2d2a0503ad5dfcecd87e2b40d55cd3c854a0/uniswap-v2/logics/impls/pair/pair.rs#L437) or use [integer-sqrt](https://crates.io/crates/integer-sqrt)
 - When doing Math operations you should handle the overflow case (and return an Error if it overflows). you can use checked operations on `u128`
 - A great trick is to use each Error variant only once, so when testing or debugging you will know right away which line the Error come from
@@ -159,7 +159,7 @@ The update function will update the [oracle price](https://docs.uniswap.org/cont
 To implement this in ink!:
 - ink! contracts should [never panic!](https://substrate.stackexchange.com/questions/2391/panic-in-ink-smart-contracts). The reason is that a panic! will give the user no information about the Error (it only return `CalleeTrapped`). Every potential business/logical error should be returned in a predictive way using `Result<T, Error>`.
 - To handle time use `Self::env().block_timestamp()` that is the milliseconds time since the Unix epoch.
-- In solidity float point division is not supported, it uses Q number UQ112x112 for more precision. We will use div for our example (note that is DEX template we use [U256](https://github.com/swanky-dapps/dex/blob/4676a73f4ab986a3a3f3de42be1b0052562953f1/uniswap-v2/logics/impls/pair/pair.rs#L374) for more precision).
+- In Solidity float point division is not supported, it uses Q number UQ112x112 for more precision. We will use div for our example (note that is DEX template we use [U256](https://github.com/swanky-dapps/dex/blob/4676a73f4ab986a3a3f3de42be1b0052562953f1/uniswap-v2/logics/impls/pair/pair.rs#L374) for more precision).
 - To store values in storage (but first verify then save) just set the value of the Storage field (as the function takes `&mut self` it can modify Storage struct fields)
 
 You can then implement **update**
@@ -232,6 +232,8 @@ fn mint(&mut self, to: AccountId) -> Result<Balance, PairError> {
 Then as the call to `PSP22Ref` returns `Result<Balance, PSP22Error>` we should implement the `From` trait for our `PairError` (to not have to map_err for every calls). 
 To do so in the file *.logics/traits/pair.rs* where we defined `PairError` add a field that takes an `PSP22Error` and implement the `From` Trait for it (also add all the error fields used in the implementation):
 ```rust
+use openbrush::contracts::psp22::PSP22Error;
+...
 #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
 #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]
 pub enum PairError {
@@ -267,13 +269,34 @@ For **MINIMUM_LIQUIDTY** constant, please add:
 pub const MINIMUM_LIQUIDITY: u128 = 1000;
 ```
 
-For **min** function just adds the [same implementation](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/libraries/Math.sol#L6):
+For **min** function just adds the [same implementation](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/libraries/Math.sol#L6), and add it below the `impl` block:
 ```rust
+    default fn _emit_mint_event(&self, _sender: AccountId, _amount_0: Balance, _amount_1: Balance) {}
+    
+    default fn _emit_sync_event(&self, _reserve_0: Balance, _reserve_1: Balance) {}
+}
+
 fn min(x: u128, y: u128) -> u128 {
     if x < y {
         return x
     }
     y
+}
+```
+
+For **sqrt** function just adds the [same implementation](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/libraries/Math.sol#L11), and add it below **min** function:
+```rust
+fn sqrt(y: u128) -> u128 {
+    let mut z = 1;
+    if y > 3 {
+        z = y;
+        let mut x = y / 2 + 1;
+        while x < z {
+            z = x;
+            x = (y / x + x) / 2;
+        }
+    }
+    z
 }
 ```
 
@@ -379,6 +402,15 @@ impl Pair for PairContract {
         })
     }
 }
+```
+
+Don't forget to add `overflow-checks = false` in your pair `Cargo.toml`:
+```toml
+[profile.dev]
+overflow-checks = false
+
+[profile.release]
+overflow-checks = false
 ```
 
 And that's it!    

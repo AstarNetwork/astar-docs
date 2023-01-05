@@ -8,7 +8,7 @@ If you start tutorial from here, Please checkout this [branch](https://github.co
 
 ### 1. Factory Storage
 
-Factory contract has those [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L7) in solidity that we should implemented:
+Factory contract has those [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L7) in Solidity that we should implement:
 
 ```solidity
     address public feeTo;
@@ -18,7 +18,7 @@ Factory contract has those [storage fields](https://github.com/Uniswap/v2-core/b
     address[] public allPairs;
 ```
 
-ink! uses most substrate primitives types. This is the table of conversion between solidity and ink! types:
+ink! uses most substrate primitives types. This is the table of conversion between Solidity and ink! types:
 
 | Solidity                                | ink!                                                                                      |
 |-----------------------------------------|-------------------------------------------------------------------------------------------|
@@ -74,7 +74,7 @@ pub struct Data {
 
 ### 2. Trait for Getters
 
-Unlike solidity that will automatically create getters for the storage items, you should add it yourself in ink!. There is already a `Factory` trait with `fee_to` function in the file *./logivs/traits/factory.rs*.    
+Unlike Solidity that will automatically create getters for the storage items, you should add it yourself in ink!. There is already a `Factory` trait with `fee_to` function in the file *./logics/traits/factory.rs*.    
 Add all getters:
 
 ```rust
@@ -131,7 +131,18 @@ pub enum FactoryError {
 in *./logics/impls/factory/factory.rs* add and impl block for generic type `data::Data`. We wrap the Data struct in Storage trait to add it as trait bound.
 
 ```rust
-impl<T: Storage<data::Data>> Pair for T {}
+pub use crate::{
+    impls::factory::*,
+    traits::factory::*,
+};
+use openbrush::{
+    traits::{
+        AccountId,
+        Storage
+    },
+};
+
+impl<T: Storage<data::Data>> Factory for T {}
 ```
 
 **all_pair_length** 
@@ -267,7 +278,7 @@ pub mod factory {
 Add the [storage struct](https://use.ink/macros-attributes/storage) and add the factory field (that we defined in traits):
 
 ```rust
-    #[ink(storage)]
+#[ink(storage)]
 #[derive(Default, SpreadAllocate, Storage)]
 pub struct FactoryContract {
     #[storage_field]
@@ -300,4 +311,4 @@ Check your Factory contract with (to run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end)
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_storage)

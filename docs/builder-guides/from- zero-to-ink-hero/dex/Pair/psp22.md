@@ -55,6 +55,12 @@ std = [
     "openbrush/std",
 ]
 ink-as-dependency = []
+
+[profile.dev]
+overflow-checks = false
+
+[profile.release]
+overflow-checks = false
 ```
 *contracts/pair/Cargo.toml*
 
@@ -162,7 +168,7 @@ use ink_lang::codegen::{
 };
 ```
 
-[PSP22](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#events) emits `Transfer` and `Approval` events. An event is a struct with `#[ink(event)]` [attribute](https://use.ink/macros-attributes/event). Some fields can be marked with `#[ink(topic)]` [attribute](https://use.ink/macros-attributes/topic) which acts as `indexed` in solidity.
+[PSP22](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#events) emits `Transfer` and `Approval` events. An event is a struct with `#[ink(event)]` [attribute](https://use.ink/macros-attributes/event). Some fields can be marked with `#[ink(topic)]` [attribute](https://use.ink/macros-attributes/topic) which acts as `indexed` in Solidity.
 
 ```rust
 #[ink(event)]
@@ -184,7 +190,7 @@ pub struct Approval {
 }
 ```
 
-And finally ovveride event emitting methods of PSP22 Internal trait
+And finally override event emitting methods of PSP22 Internal trait (Due to ink!'s [design](https://github.com/paritytech/ink/issues/809) it is not possible to share event definitions between multiple contracts since events can only be defined in the ink! module scope directly.)
 
 ```rust
 impl Internal for PairContract {
@@ -277,7 +283,7 @@ impl Internal for PairContract {
 ```
 
 Also in Uniswap V2 max allowance will not [decrease allowance](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2ERC20.sol#L74). for this we need to override `transfer_from` and not decrease allowance if it's u128::MAX.
-Important here: please note that `#[ink(message)]` is needed in order to compile.
+Important here: please note that `#[ink(message)]` is needed in order to compile. Inside the existing `impl PSP22` block:
 
 ```rust
 impl PSP22 for PairContract {

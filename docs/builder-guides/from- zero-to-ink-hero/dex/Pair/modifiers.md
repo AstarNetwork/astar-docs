@@ -120,7 +120,7 @@ In *./contracts/pair/Cargo.toml* add `"ownable"` feature to openbrush dependency
 openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "ownable", "reentrancy_guard"] }
 ```
 
-In *./contracts/pair/lib.rs* add import statement and add the ownable field in the Storage field. Also, owner should be initialized in the constructor (and as deployer will only be factory we can set factory field address as the caller). You should implement `Ownable` trait that will expose [useful callable functions](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/traits/ownable/mod.rs#L32):
+In *./contracts/pair/lib.rs* add import statement and add the ownable field in the Storage field. Also, you should update the constructor as owner should be initialized (and as deployer will only be factory we can set factory field address as the caller). You should implement `Ownable` trait that will expose [useful callable functions](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/traits/ownable/mod.rs#L32):
 ```rust
 ...
 use openbrush::{
@@ -152,13 +152,15 @@ impl Pair for PairContract {}
 
 impl Ownable for PairContract {}
 ...
-#[ink(constructor)]
-pub fn new() -> Self {
-    ink_lang::codegen::initialize_contract(|instance: &mut Self| {
-        let caller = instance.env().caller();
-        instance._init_with_owner(caller);
-        instance.pair.factory = caller;
-    })
+impl PairContract {
+    #[ink(constructor)]
+    pub fn new() -> Self {
+        ink_lang::codegen::initialize_contract(|instance: &mut Self| {
+            let caller = instance.env().caller();
+            instance._init_with_owner(caller);
+            instance.pair.factory = caller;
+        })
+    }
 }
 ```
 

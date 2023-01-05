@@ -18,7 +18,7 @@ Please follow these tutorials first:
 
 # What will we do ?
 
-in this tutorial we will implement in ink! the follow contracts from the solidity implementation of Uniswap V2 Core
+in this tutorial we will implement in ink! the follow contracts from the Solidity implementation of Uniswap V2 Core
 - [Pair](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol)
 - [Factory](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol)
 - [PSP22 (ERC20 equivalent)](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2ERC20.sol)

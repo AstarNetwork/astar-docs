@@ -172,6 +172,24 @@ Then update pool reserves and emit swap event:
         Ok(())
 ```
 
+Add the empty implementation of **_emit_swap_event**. It should have `default` keyword as we will override this function in Pair contract.
+```rust
+impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
+    ...
+    default fn _emit_swap_event(
+        &self,
+        _sender: AccountId,
+        _amount_0_in: Balance,
+        _amount_1_in: Balance,
+        _amount_0_out: Balance,
+        _amount_1_out: Balance,
+        _to: AccountId,
+    ) {
+    }
+    ...
+}
+```
+
 Adds the Error fields to `PairError` in *./logics/traits/pair.rs* :
 ```rust
 #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
