@@ -10,7 +10,7 @@ Pair contract defines and uses [lock](https://github.com/Uniswap/v2-core/blob/ee
 ### 1. Reentrancy guard
 
 To protect callable functions from reentrancy we will use [reentrancy guard](https://github.com/Supercolony-net/openbrush-contracts/blob/d6e29f05fd462e4e027de1f2f9177d594a5a0f05/contracts/src/security/reentrancy_guard/mod.rs#L54) modifier from openbrush. It save the lock status in storage (either `ENTERED` or `NOT_ENTERED`) and prevents reentrancy.
-In *./contracts/pair/Cargo.toml* add `"reentrancy_guard"` feature to openbrush dependency:
+In *./contracts/pair/Cargo.toml* add `"reentrancy_guard"` feature to Openbrush dependency:
 
 ```toml
 openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "reentrancy_guard"] }
@@ -114,7 +114,7 @@ impl From<ReentrancyGuardError> for PairError {
 ### 2. Only owner
 
 In **initialize** there is a guard that ensure [caller is the factory](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67). We can use [ownable modifier](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/access/ownable/mod.rs) that will store the deployer address on storage and restrict function access to this address.
-In *./contracts/pair/Cargo.toml* add `"ownable"` feature to openbrush dependency:
+In *./contracts/pair/Cargo.toml* add `"ownable"` feature to Openbrush dependency:
 
 ```toml
 openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "ownable", "reentrancy_guard"] }

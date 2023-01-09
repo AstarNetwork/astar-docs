@@ -48,8 +48,7 @@ That's why factory Storage should save the Pair contract `code_hash` to instanci
 ```
 
 Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with specified storage key (storage key is a required input argument of the macro).
-To generate a unique key openbrush provides [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is base on the name of the struct and its file path. Let's add this to our struct and import required fields.
-
+To generate a unique key Openbrush provides [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is base on the name of the struct and its file path. Let's add this to our struct and import required fields:
 ```rust
 use ink_env::Hash;
 use ink_prelude::vec::Vec;
@@ -76,7 +75,6 @@ pub struct Data {
 
 Unlike Solidity that will automatically create getters for the storage items, you should add it yourself in ink!. There is already a `Factory` trait with `fee_to` function in the file *./logics/traits/factory.rs*.    
 Add all getters:
-
 ```rust
 use openbrush::traits::AccountId;
 
@@ -115,7 +113,6 @@ pub trait Factory {
 
 Last thing is the Error enum. Each contract should use its own error enum. As it will be used in function arguments it should implement Scale encode & decode.
 For the moment we don't need a proper error so just add `Error` as field:
-
 ```rust
 ...
 #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
@@ -128,8 +125,7 @@ pub enum FactoryError {
 
 ### 3. Implement Getters
 
-in *./logics/impls/factory/factory.rs* add and impl block for generic type `data::Data`. We wrap the Data struct in Storage trait to add it as trait bound.
-
+in *./logics/impls/factory/factory.rs* add and impl block for generic type `data::Data`. We wrap the Data struct in Storage trait to add it as trait bound:
 ```rust
 pub use crate::{
     impls::factory::*,
@@ -147,7 +143,7 @@ impl<T: Storage<data::Data>> Factory for T {}
 
 **all_pair_length** 
 
-This getter return the total number of pairs.
+This getter return the total number of pairs:
 ```rust
     fn all_pair_length(&self) -> u64 {
     self.data::<data::Data>().all_pairs.len() as u64
@@ -156,7 +152,7 @@ This getter return the total number of pairs.
 
 **set_fee_to** 
 
-This setter set the address collecting the fee.
+This setter set the address collecting the fee:
 ```rust
     fn set_fee_to(&mut self, fee_to: AccountId) -> Result<(), FactoryError> {
     self.data::<data::Data>().fee_to = fee_to;
@@ -166,7 +162,7 @@ This setter set the address collecting the fee.
 
 **set_fee_to_setter**
 
-This setter set the address of the fee setter.
+This setter set the address of the fee setter:
 ```rust
     fn set_fee_to_setter(&mut self, fee_to_setter: AccountId) -> Result<(), FactoryError> {
     self.data::<data::Data>().fee_to_setter = fee_to_setter;
@@ -176,7 +172,7 @@ This setter set the address of the fee setter.
 
 **fee_to**
 
-This getter return the address collecting the fee.
+This getter return the address collecting the fee:
 ```rust
     fn fee_to(&self) -> AccountId {
     self.data::<data::Data>().fee_to
@@ -185,7 +181,7 @@ This getter return the address collecting the fee.
 
 **fee_to_setter**
 
-This getter return the address of the fee setter.
+This getter return the address of the fee setter:
 ```rust
     fn fee_to(&self) -> AccountId {
     self.data::<data::Data>().fee_to
@@ -194,7 +190,7 @@ This getter return the address of the fee setter.
 
 **get_pair**
 
-This getter takes two addresses as argument and return the pair contract address (or None if not found)
+This getter takes two addresses as argument and return the pair contract address (or None if not found):
 ```rust
     fn get_pair(&self, token_a: AccountId, token_b: AccountId) -> Option<AccountId> {
     self.data::<data::Data>().get_pair.get(&(token_a, token_b))
@@ -255,7 +251,7 @@ overflow-checks = false
 overflow-checks = false
 ```
 
-In the `lib.rs` creates a factory module with openbrush contract. Import the `Storage` trait from openbrush (as well as `ZERO_ADDRESS`) and `SpreadAllocate` from ink!
+In the `lib.rs` creates a factory module with Openbrush contract. Import the `Storage` trait from openbrush (as well as `ZERO_ADDRESS`) and `SpreadAllocate` from ink!
 As reminder the `#![cfg_attr(not(feature = "std"), no_std)]` attribute is for [conditional compilation](https://use.ink/faq#what-does-the-cfg_attrnotfeature--std-no_std-at-the-beginning-of-each-contract-mean) and the `#![feature(min_specialization)]` is the feature needed for enable [specialization](../Structure/file-structure.md).
 Also import everything (with `*`) from `impls::factory` and `traits::factory`:
 ```rust
@@ -286,8 +282,7 @@ pub struct FactoryContract {
 }
 ```
 
-implement the Factory trait to your contract struct
-
+implement the Factory trait to your contract struct:
 ```rust
     impl Factory for FactoryContract {}
 ```

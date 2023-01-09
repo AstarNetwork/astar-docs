@@ -9,7 +9,7 @@ Let's create a custom modifier for it.
 
 ### only_fee_setter
 
-In *.logics/impls/factory/factory.rs* import `modifier_definition` and `modifiers` :
+In *.logics/impls/factory/factory.rs* import `modifier_definition` and `modifiers`:
 ```rust
 use openbrush::{
     modifier_definition,
@@ -42,7 +42,7 @@ pub fn only_fee_setter<T, F, R, E>(instance: &mut T, body: F) -> Result<R, E>
 }
 ```
 
-Add the modifier on top of **set_fee_to** and **set_fee_to_setter** :
+Add the modifier on top of **set_fee_to** and **set_fee_to_setter**:
 ```rust
 #[modifiers(only_fee_setter)]
 fn set_fee_to(&mut self, fee_to: AccountId) -> Result<(), FactoryError> {
@@ -57,7 +57,7 @@ fn set_fee_to_setter(&mut self, fee_to_setter: AccountId) -> Result<(), FactoryE
 }
 ```
 
-Add `CallerIsNotFeeSetter` variant to `FactoryError` :
+Add `CallerIsNotFeeSetter` variant to `FactoryError`:
 ```rust
 #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
 #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]

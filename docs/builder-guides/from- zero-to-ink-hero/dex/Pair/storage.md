@@ -32,7 +32,7 @@ Let's create (empty) files and folders so your project looks like this:
 └── .gitignore
 ```
 
-The *./uniswap-v2/logics/Cargo.toml* will be a `rlib` crate named `"uniswap_v2""` and import crates from ink!, scale, and openbrush (with feature `"psp22"`)
+The *./uniswap-v2/logics/Cargo.toml* will be a `rlib` crate named `"uniswap_v2""` and import crates from ink!, scale, and Openbrush (with feature `"psp22"`)
 
 ```toml
 [package]
@@ -132,7 +132,7 @@ pub struct Data {
 ```
 
 Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with specified storage key (storage key is a required input argument of the macro).
-To generate a unique key openbrush provides [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is base on the name of the struct and its file path. Let's add this to our struct and import required fields.
+To generate a unique key Openbrush provides [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is base on the name of the struct and its file path. Let's add this to our struct and import required fields.
 
 ```rust
 use openbrush::traits::{

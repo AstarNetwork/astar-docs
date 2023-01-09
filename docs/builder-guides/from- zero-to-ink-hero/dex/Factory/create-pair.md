@@ -12,8 +12,7 @@ We will implement [createPair](https://github.com/Uniswap/v2-core/blob/ee547b178
 In *./logics/traits/factory.rs* add the **create_pair** function to Factory trait as well as the internal child function **_instantiate_pair** that will have to be implemented in the contract crate.
 The reason why we need an internal **_instantiate_pair** here is because the instantiate builder is not part of `#[openbrush::wrapper]` so we need to use the one from ink! by importing Pair contract as `ink-as-dependancy`.
 The **create_pair** message function returns the address of the instantiated Pair contract.
-Add also the function to emit create_pair event that will have to be implemented in the contract.
-
+Add also the function to emit create_pair event that will have to be implemented in the contract:
 ```rust
 pub trait Factory {
     ...
@@ -40,7 +39,8 @@ pub trait Factory {
 
 In *./logics/impls/factory/factory.rs* let's implement **create_pair** function body:
 #### 1. Checks that addresses are not identical
-AccountId derives `Eq` trait, so comparison operators can be used
+
+AccountId derives `Eq` trait, so comparison operators can be used:
 ```rust
 impl<T: Storage<data::Data>> Factory for T {
     ...
@@ -185,7 +185,7 @@ use openbrush::traits::{
 
 ### 3. Implement Event
 
-In *./logics/impls/factory/factory.rs* add empty implementation of **_emit_create_pair_event** :
+In *./logics/impls/factory/factory.rs* add empty implementation of **_emit_create_pair_event**:
 ```rust
 default fn _emit_create_pair_event(
     &self,
@@ -241,7 +241,7 @@ impl Factory for FactoryContract {
 ### 4. Override _instantiate_pair
 
 As you cannot call constructor of contract using `#[openbrush::wrapper]`, we need to use contract Ref from ink!.     
-If you want to import a contract as `ink-as-dependency` it should be built as a library crate `rlib`. Add this to the `Cargo.toml` of Pair contract in *./contracts/pair/Cargo.toml* :
+If you want to import a contract as `ink-as-dependency` it should be built as a library crate `rlib`. Add this to the `Cargo.toml` of Pair contract in *./contracts/pair/Cargo.toml*:
 ```toml
 ...
 [lib]
@@ -254,7 +254,7 @@ crate-type = [
 ...
 ```
 
-Then import Pair contract as `ink-as-dependency` in Factory contract. Add dependency to the `Cargo.toml` of Factory contract in *./contracts/factory/Cargo.toml* :
+Then import Pair contract as `ink-as-dependency` in Factory contract. Add dependency to the `Cargo.toml` of Factory contract in *./contracts/factory/Cargo.toml*:
 ```toml
 ...
 pair_contract = { path = "../pair", default-features = false, features = ["ink-as-dependency"] }
@@ -303,7 +303,7 @@ impl Factory for FactoryContract {
 ```
 
 #### 2. Instantiate Pair
-Use [create builder](https://github.com/paritytech/ink/blob/v3.4.0/crates/env/src/call/create_builder.rs) from ink!. we call **new** constructor from Pair and pass no endowment (as storage rent has been removed it is not needed). it returns the accountId back to the caller.
+Use [create builder](https://github.com/paritytech/ink/blob/v3.4.0/crates/env/src/call/create_builder.rs) from ink!. we call **new** constructor from Pair and pass no endowment (as storage rent has been removed it is not needed). it returns the accountId back to the caller:
 ```rust
 ...
 let pair = PairContractRef::new()

@@ -11,7 +11,7 @@ If you start tutorial from here, Please checkout this [branch](https://github.co
 
 We will implement [burn](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L134) function of Pair contract.   
 In *./logics/traits/pair.rs* add the **burn** function to Pair trait as well as internal child function **_safe_transfer**.
-Also add the function to emit burn event that will have to be implemented in the contract.
+Also add the function to emit burn event that will have to be implemented in the contract:
 
 ```rust
 pub trait Pair {
@@ -38,7 +38,7 @@ pub trait Pair {
 
 ### 2. Safe transfer
 
-in Pair.sol contract, inside burn function there is [_safeTransfer](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L148). In PSP22 transfer is [safe by default](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#psp22receiver) if its implement `PSP22Receiver` which is the case for openbrush PSP22 implementation (in [_do_safe_transfer_check](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L172))
+in Pair.sol contract, inside burn function there is [_safeTransfer](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L148). In PSP22 transfer is [safe by default](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#psp22receiver) if its implement `PSP22Receiver` which is the case for Openbrush PSP22 implementation (in [_do_safe_transfer_check](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L172))
 It will use a basic call to **transfer** of PSP22:
 ```rust
 impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
@@ -128,7 +128,7 @@ impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
 }
 ```
 
-Add the empty implementation of **_emit_burn_event**. It should have `default` keyword as we will override this function in Pair contract.
+Add the empty implementation of **_emit_burn_event**. It should have `default` keyword as we will override this function in Pair contract:
 ```rust
 impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
     ...
@@ -144,7 +144,7 @@ impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
 }
 ```
 
-Adds the Error fields to `PairError` in *./logics/traits/pair.rs* :
+Adds the Error fields to `PairError` in *./logics/traits/pair.rs*:
 ```rust
 #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
 #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]

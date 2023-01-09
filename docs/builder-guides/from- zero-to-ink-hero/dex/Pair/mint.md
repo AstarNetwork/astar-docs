@@ -12,7 +12,7 @@ We will implement [mint](https://github.com/Uniswap/v2-core/blob/ee547b17853e71e
 In *./logics/traits/pair.rs* add the **mint** function to Pair trait. You should also add two internal **_mint_fee** and **_update**.
 As those functions modify the state, they should take a `&mut self` as first argument. When sending transaction (as tx) it return nothing (a tx cannot return a value neither a variant of the Error enum) so in most cases state changes function will return `Result<(), PairError>`.
 But if you call the function as dry-run (as a query, it will not modify the state) it can return a value (any value and Error enum as well). That is why the **mint** message function returns a `Balance` (and not `()`). So before calling **mint** as tx you can call it as dry-run and gets the liquidity that will be minted.
-Also add the function to emit mint event that will have to be implemented in the contract.
+Also add the function to emit mint event that will have to be implemented in the contract:
 ```rust
 pub trait Pair {
     ...
@@ -53,7 +53,7 @@ impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
 }
 ```
 
-In the [first line](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L90) of **_mintFee** there is a cross-contract call to factory contract to get the address of the account collecting the fees. To do so we will use openbrush wrapper around a Factory trait (and demonstrate that the trait only is needed - no implementation).
+In the [first line](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L90) of **_mintFee** there is a cross-contract call to factory contract to get the address of the account collecting the fees. To do so we will use Openbrush wrapper around a Factory trait (and demonstrate that the trait only is needed - no implementation).
 create a the file *./logics/traits/factory.rs* and add `Factory` trait and a **fee_to** function getter.     
 Add `#[openbrush::trait_definition]` on top of it:
 
@@ -65,7 +65,7 @@ pub trait Factory {
 }
 ```
 
-And then add a wrapper around this trait. Imports what needs to be imported.
+And then add a wrapper around this trait. Imports what needs to be imported:
 
 ```rust
 use openbrush::traits::AccountId;
@@ -75,7 +75,7 @@ pub type FactoryRef = dyn Factory;
 ...
 ```
 
-Add this file to *./logics/traits/mod.rs*
+Add this file to *./logics/traits/mod.rs*:
 
 ```rust
 pub mod pair;
@@ -88,7 +88,7 @@ In *./logics/impls/pair/pair.rs* import this contract `FactoryRef`:
 use crate::traits::factory::FactoryRef;
 ```
 
-And in the body of **_mint_fee** let get the fee_on with a cross-contract call to factory. When using openbrush wrapper around a trait the first argument of the function should be the contract address you call. So add this line:
+And in the body of **_mint_fee** let get the fee_on with a cross-contract call to factory. When using Openbrush wrapper around a trait the first argument of the function should be the contract address you call. So add this line:
 ```rust
     fn _mint_fee(
         &mut self,
@@ -162,7 +162,7 @@ To implement this in ink!:
 - In Solidity float point division is not supported, it uses Q number UQ112x112 for more precision. We will use div for our example (note that is DEX template we use [U256](https://github.com/swanky-dapps/dex/blob/4676a73f4ab986a3a3f3de42be1b0052562953f1/uniswap-v2/logics/impls/pair/pair.rs#L374) for more precision).
 - To store values in storage (but first verify then save) just set the value of the Storage field (as the function takes `&mut self` it can modify Storage struct fields)
 
-You can then implement **update**
+You can then implement **update**:
 
 ```rust
     fn _update(
@@ -206,7 +206,7 @@ fn mint(&mut self, to: AccountId) -> Result<Balance, PairError> {}
 ```
 
 In line [112](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L112) of *Pair.sol* there is a cross-contract call to the ERC20 to get the balance of the contract `uint balance0 = IERC20(token0).balanceOf(address(this));`.    
-To implement this cross-contract call we will use `PSP22Ref` from openbrush. To get the address of the contract, use `Self::env().account_id()`.
+To implement this cross-contract call we will use `PSP22Ref` from Openbrush. To get the address of the contract, use `Self::env().account_id()`.
 find all ink_env getters in this [doc](https://docs.rs/ink_env/latest/ink_env/)
 
 First add the `psp22::Data` Trait bound to the generic impl block:
