@@ -593,15 +593,15 @@ OPTIONS:
             `rpc_max_response_size` instead
 
         --rpc-max-request-size <RPC_MAX_REQUEST_SIZE>
-            Set the the maximum RPC request payload size for both HTTP and WS in megabytes. Default
+            Set the maximum RPC request payload size for both HTTP and WS in megabytes. Default
             is 15MiB
 
         --rpc-max-response-size <RPC_MAX_RESPONSE_SIZE>
-            Set the the maximum RPC response payload size for both HTTP and WS in megabytes. Default
+            Set the maximum RPC response payload size for both HTTP and WS in megabytes. Default
             is 15MiB
 
         --rpc-max-subscriptions-per-connection <RPC_MAX_SUBSCRIPTIONS_PER_CONNECTION>
-            Set the the maximum concurrent subscriptions per connection. Default is 1024
+            Set the maximum concurrent subscriptions per connection. Default is 1024
 
         --rpc-methods <METHOD SET>
             RPC methods to expose. [default: auto] [possible values: auto, safe, unsafe]
