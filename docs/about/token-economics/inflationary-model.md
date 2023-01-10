@@ -46,9 +46,8 @@ The collator responsible for building the block will receive **collator's** port
 
 In addition, it will receive fees paid by the users for transactions that were included in the produced block.
 
-For **Shiden**, **100%** of fees are burned, and **100%** of tips are paid to the collator.
-
-For **Astar**, **20%** of the fees & tips are burned, and rest is paid to the collator.
+For **Shiden**, **100%** of the fees are burned, and the full tip is paid to the collator.
+For **Astar**, **20%** of the fees & tips are burned, and the rest is paid to the collator.
 
 #### > On-chain Treasury
 
