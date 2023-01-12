@@ -1,0 +1,171 @@
+# Openbrush Wizard
+
+## Use wizard to generate generic PSP34 code
+
+To create a smart contract whish follows PSP34 standard use Openbrush wizard:
+1. Open [openbrush.io](https://openbrush.io/) website and go to bottom of the page (Try it out)
+2. Select PSP34
+3. Select version to match rest of the tutorial
+4. Name your contract. This tutorial will be called Shiden34
+5. Select extensions *Metadata*, *Mintable*, *Enumerable*
+6. Copy `lib.rs` and `Cargo.toml`
+
+Your lib.rs file shoud look like this:
+```rust
+#![cfg_attr(not(feature = "std"), no_std)]
+#![feature(min_specialization)]
+        
+#[openbrush::contract]
+pub mod shiden34 {
+    // imports from ink!
+	use ink_storage::traits::SpreadAllocate;
+
+    // imports from openbrush
+	use openbrush::traits::String;
+	use openbrush::traits::Storage;
+	use openbrush::contracts::psp34::extensions::mintable::*;
+	use openbrush::contracts::psp34::extensions::enumerable::*;
+	use openbrush::contracts::psp34::extensions::metadata::*;
+
+    #[ink(storage)]
+    #[derive(Default, SpreadAllocate, Storage)]
+    pub struct Contract {
+    	#[storage_field]
+		psp34: psp34::Data<Balances>,
+		#[storage_field]
+		metadata: metadata::Data,
+    }
+    
+    // Section contains default implementation without any modifications
+	impl PSP34 for Contract {}
+	impl PSP34Mintable for Contract {}
+	impl PSP34Enumerable for Contract {}
+	impl PSP34Metadata for Contract {}
+     
+    impl Contract {
+        #[ink(constructor)]
+        pub * new() -> Self {
+            ink_lang::codegen::initialize_contract(|_instance: &mut Contract|{
+				_instance._mint_to(_instance.env().caller(), Id::U8(1)).expect("Can't mint");
+				let collection_id = _instance.collection_id();
+				_instance._set_attribute(collection_id.clone(), String::from("name"), String::from("Shiden34"));
+				_instance._set_attribute(collection_id, String::from("symbol"), String::from("SH34"));
+			})
+        }
+    }
+}
+```
+
+Your Cargo.toml file should look like this:
+```toml
+[package]
+name = "shiden34"
+version = "1.0.0"
+edition = "2021"
+authors = ["The best developer ever"]
+
+[dependencies]
+
+ink_primitives = { version = "~3.4.0", default-features = false }
+ink_metadata = { version = "~3.4.0", default-features = false, features = ["derive"], optional = true }
+ink_env = { version = "~3.4.0", default-features = false }
+ink_storage = { version = "~3.4.0", default-features = false }
+ink_lang = { version = "~3.4.0", default-features = false }
+ink_prelude = { version = "~3.4.0", default-features = false }
+ink_engine = { version = "~3.4.0", default-features = false, optional = true }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
+
+# Include brush as a dependency and enable default implementation for PSP34 via brush feature
+openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp34"] }
+
+[lib]
+name = "shiden34"
+path = "lib.rs"
+crate-type = [
+    # Used for normal contract Wasm blobs.
+    "cdylib",
+]
+
+[features]
+default = ["std"]
+std = [
+    "ink_primitives/std",
+    "ink_metadata",
+    "ink_metadata/std",
+    "ink_env/std",
+    "ink_storage/std",
+    "ink_lang/std",
+    "scale/std",
+    "scale-info/std",
+
+    "openbrush/std",
+]
+ink-as-dependency = [] 
+
+```
+
+Make the folder structure or use Swanky-cli like this:
+```bash
+.
+└── contracts
+    └── shiden34
+        ├── Cargo.toml
+        └── lib.rs
+```
+
+Add another `Cargo.toml` with workspace definition to your project's root folder:
+```toml
+[workspace]
+members = [
+    "contracts/**",
+]
+
+exclude = [
+]
+```
+And your folder structure will look like:
+```cargo
+.
+├── Cargo.toml
+└── contracts
+    └── shiden34
+        ├── Cargo.toml
+        └── lib.rs
+```
+You are now ready to check if all is set. Run in root project folder:
+```bash
+cargo check
+```
+
+## Examine Openbrush traits 
+Let's examine what we have inside module shiden34 (lib.rs) so far:
+* Defined structure `Contract` for contract storage
+* Implemented `new()` method for structure `Contract`
+* Implemented Openbrush traits *PSP34, Metadata, Mintable, Enumberable* for structure `Contract`
+
+Each of implemented traits will enrich shiden34 contract with a set of methods. To examine which methods you now have available check:
+* Openbrush [PSP34 trait](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/psp34.rs) brings all familiar functions from ERC721 plus a few extra:
+    * `collection_id()`
+    * `balance_of()`
+    * `owner_of()`
+    * `allowance()`
+    * `approve()`
+    * `transfer()`
+    * `total_supply()`
+* Openbrush [Metadata](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/metadata.rs)
+    * `get_attribute()`
+* Openbrush [Mintable](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/mintable.rs) 
+    * `mint()`
+* Openbrush [Enumerable](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/enumerable.rs)
+    * `owners_token_by_index()`
+    * `token_by_index()`
+
+Major diferences when compared with ERC721 are
+* `Metadata` trait brings possibility to define numerous attributes
+* `PSP34` trait brings collection_id() which can be used or ignered in contracts
+
+We could have used `Burnable` trait as well but for simplicity sake it is skipped in this tutorial since burning can be performed by sending a token to address 0x00.
+
+
