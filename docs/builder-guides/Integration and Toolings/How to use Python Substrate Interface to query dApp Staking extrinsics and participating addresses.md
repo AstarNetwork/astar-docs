@@ -129,7 +129,7 @@ In order to collect the addresses that participated in dApp Staking during a cer
     
 - Below is the example output of the addresses participated in dApp Staking during block #2536100 and block #2536200 and the corresponding block number containing the extrinsic.
 
-![Untitled](img-python-interface-cookbook/Untitled.png)
+![Untitled](img/python0.png)
 
 ---
 
