@@ -37,8 +37,10 @@ I. OpenBrush wizard
 
 II. Override mint() method 
 
-III. Util Trait definition
+III Custom Trait for mint()
 
-IV. Util Trait implementation
+IV. PayableMint Trait definition
 
-V. Events
+V. PayableMint Trait implementation
+
+VI. Events
