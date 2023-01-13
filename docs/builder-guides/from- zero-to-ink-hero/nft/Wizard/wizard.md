@@ -191,7 +191,17 @@ We could have used `Burnable` trait as well but for simplicity sake it is skippe
 
 After this step your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/wizard-step1).
 
-## Deploy and interact with contract
+## Build, Deploy and Interact with the Contract
+Build your contract with
+```bash
+cd contracts/shiden34
+cargo contract build --release
+```
+Use ***shiden34.contract*** target to deploy contract. The file is located in this folder:
+```
+ls target/ink/shiden34/
+```
+
 To deploy your contract using Polkadot.js you can follow [instructions](https://docs.astar.network/docs/wasm/sc-dev/polkadotjs-ui).
 Other easy way to deploy your contract is by using [contracts-ui](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network).
 
