@@ -11,7 +11,7 @@ To create a smart contract whish follows PSP34 standard use Openbrush wizard:
 6. Under Security pick *Ownable*
 7. Copy `lib.rs` and `Cargo.toml`
 
-Your `lib.rs` file shoud look like this:
+Your `lib.rs` file should look like this:
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
 #![feature(min_specialization)]
@@ -183,9 +183,9 @@ Each of implemented traits will enrich shiden34 contract with a set of methods. 
     * `transferOwnership()`
     * `owner()`
 
-Major diferences when compared with ERC721 are
+Major differences when compared with ERC721 are
 * `Metadata` trait brings possibility to define numerous attributes
-* `PSP34` trait brings collection_id() which can be used or ignered in contracts
+* `PSP34` trait brings collection_id() which can be used or ignored in contracts
 
 We could have used `Burnable` trait as well but for simplicity sake it is skipped in this tutorial since burning can be performed by sending a token to address 0x00.
 
@@ -208,6 +208,6 @@ Other easy way to deploy your contract is by using [contracts-ui](https://contra
 You can start interacting with your contract. You will notice that one token is already minted. This is due to the `mint()` call in the contract's constructor `new()`.
 * Try minting another token by calling `mint()`
 * Read the token `ownerOf()` for your newly minted token
-* Check that `totalSuply()` has increased
+* Check that `totalSupply()` has increased
 
 
