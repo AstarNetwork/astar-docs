@@ -7,9 +7,6 @@ So far our `mint()` method was very generic giving a freedom to a caller to mint
 The mint() method now takes receiver nft account and amount of tokens to be minted.
 This will allow contract to be in charge which token will be minted next and allows minting more than one token at the time.
 
-### mint_next()
-Let' make one more simple mint() method which does not take any parameter. It mints a next available token.
-
 ### set_base_uri(uri: PreludeString)
 First we need to import String from `ink_prelude` and rename it not to be mixed with Openbrush String implementation. The difference is that Openbrush String is in fact a vector of u8 elements. Since we expect users to use utf-8 string we use String from prelude.
 ```rust
@@ -48,9 +45,9 @@ pub type PayableMintRef = dyn PayableMint;
 #[openbrush::trait_definition]
 pub trait PayableMint {
     #[ink(message, payable)]
-    fn mint_next(&mut self) -> Result<(), PSP34Error>;
-    #[ink(message, payable)]
-    fn mint_for(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34Error>;
+    fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34Error>;
+    #[ink(message)]
+    fn withdraw(&mut self) -> Result<(), PSP34Error>;
     #[ink(message)]
     fn set_base_uri(&mut self, uri: PreludeString) -> Result<(), PSP34Error>;
     #[ink(message)]
@@ -59,7 +56,5 @@ pub trait PayableMint {
     fn max_supply(&self) -> u64;
     #[ink(message)]
     fn price(&self) -> Balance;
-    #[ink(message)]
-    fn withdraw(&mut self) -> Result<(), PSP34Error>;
 }
 ```
