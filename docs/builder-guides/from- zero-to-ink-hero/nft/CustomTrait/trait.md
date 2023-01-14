@@ -206,6 +206,4 @@ pub mod shiden34 {
 }
 ```
 
-
-
-
+After this step your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/trait-step3).
