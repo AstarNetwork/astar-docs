@@ -10,7 +10,6 @@ One could expect that by calling Openbrush `_mint_to()`, and event will be emitt
 
 ```rust
 default fn _emit_transfer_event(&self, _from: Option<AccountId>, _to: Option<AccountId>, _id: Id) {}
-
 ```
 Let's define two events that are needed for token handling, *Transfer* and *Approve*. This needs to be done in the contracts's `lib.rs`. Please note that there is no Mint event. Mint is covered by *Transfer* event where `from` will be the contract address.
 ```rust
