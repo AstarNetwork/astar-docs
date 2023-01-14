@@ -254,4 +254,9 @@ fn set_sender(sender: AccountId) {
     ink_env::test::set_caller::<Environment>(sender);
 }
 ```
+
+Run unit test:
+```bash
+cargo test
+```
 After this step your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/payablemint-step5).
