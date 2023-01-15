@@ -34,10 +34,9 @@ So the only solution, in ink!, to implement a big contract is to have all the co
 
 ## Trait and generic implementation in separate files
 
-In order to organise business logic in different files Openbrush use [specialization](https://github.com/rust-lang/rfcs/pull/1210) that permits multiple `impl` blocks to apply to the same type. So you can define as many Trait and its generic implementation as needed. This allows to split your code and also to be easily implemented into your contract. 
-
-Of course specialization also allow to override a default implementation (if the method or the impl is specialized with the [`default`](https://github.com/rust-lang/rfcs/blob/master/text/1210-impl-specialization.md#the-default-keyword) keyword). So you define a Trait and a generic implementation in a crate and in the contract you implement this Trait. If this impl block is empty `{}` specialization will implement the most specific implementation which is the one you defined in the file.
-Every generic implementation in openbrush (PSP22, PSP34, ..) use the `default` keyword that makes this functions *overrideable*.    
+In order to organise business logic in different files Openbrush use [specialization](https://github.com/rust-lang/rfcs/pull/1210) that permits multiple `impl` blocks to apply to the same type.  
+So you can define as many Trait and its generic implementation as needed. This allows to split your code and also to be easily implemented into your contract. Of course specialization also allow to override a default implementation (if the method or the impl is specialized with the [`default`](https://github.com/rust-lang/rfcs/blob/master/text/1210-impl-specialization.md#the-default-keyword) keyword).   
+So you define a Trait and a generic implementation in a crate and in the contract you implement this Trait. If this impl block is empty `{}` specialization will implement the most specific implementation which is the one you defined in the file. Every generic implementation in Openbrush (PSP22, PSP34, ..) use the `default` keyword that makes this functions *overrideable*.    
 Define your Trait in a file:
 
 ```rust

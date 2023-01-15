@@ -145,8 +145,7 @@ xcAssets (XCM tokens that are compatible in EVM network) are currently unable to
    <img width="1000" alt="EVM-transfer" src="https://user-images.githubusercontent.com/77480847/188533050-6a8508da-049e-4697-be86-1f61b2d4c0e3.png" />
 
 4. You are now on the transfer page. Add the destination Astar Native address and the amount you wish to transfer, then press the confirm button. **This transaction is to send tokens to EVM Deposit.**
-
-<img width="1137" alt="EVM-depo" src="https://user-images.githubusercontent.com/77480847/188536340-5a59d4e6-290d-451e-b9fd-6d6e424ee76d.png" />　
+![image](https://user-images.githubusercontent.com/37278708/210047489-797cbfae-004f-4860-9681-1a2f1390e57b.png)
 
 5. You will need to withdraw EVM deposit before you can use the tokens.
 

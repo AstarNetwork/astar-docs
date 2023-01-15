@@ -11,7 +11,7 @@ In Astar the standard for fungible token is [PSP22](https://github.com/w3f/PSPs/
 
 ### 1. Implement basic PSP22 in our contract.   
 
-In the `Cargo.toml` import crates from ink!, scale, and openbrush (with feature `"psp22"`)
+In the `Cargo.toml` import crates from ink!, scale, and Openbrush (with feature `"psp22"`)
 
 ```toml
 [package]
@@ -55,12 +55,18 @@ std = [
     "openbrush/std",
 ]
 ink-as-dependency = []
+
+[profile.dev]
+overflow-checks = false
+
+[profile.release]
+overflow-checks = false
 ```
 *contracts/pair/Cargo.toml*
 
 In the `lib.rs` of the contract crate import everything (with `*`) from `openbrush::contracts::psp22` as well as the `Storage` trait and `SpreadAllocate` from ink!
 
-As reminder the `#![cfg_attr(not(feature = "std"), no_std)]` attribute is for [conditional compilation](https://use.ink/faq#what-does-the-cfg_attrnotfeature--std-no_std-at-the-beginning-of-each-contract-mean) and the `#![feature(min_specialization)]` is the feature needed for enable [specialization](../Structure/file-structure.md)
+As reminder the `#![cfg_attr(not(feature = "std"), no_std)]` attribute is for [conditional compilation](https://use.ink/faq#what-does-the-cfg_attrnotfeature--std-no_std-at-the-beginning-of-each-contract-mean) and the `#![feature(min_specialization)]` is the feature needed for enable [specialization](../Structure/file-structure.md):
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
 #![feature(min_specialization)]
@@ -81,7 +87,7 @@ pub mod pair {
 }
 ```
 
-Add the [storage struct](https://use.ink/macros-attributes/storage) and add the psp22 field
+Add the [storage struct](https://use.ink/macros-attributes/storage) and add the psp22 field:
 
 ```rust
 #[ink(storage)]
@@ -92,13 +98,13 @@ pub struct PairContract {
 }
 ```
 
-implement PSP22 trait to your contract struct
+implement PSP22 trait to your contract struct:
 
 ```rust
     impl PSP22 for PairContract {}
 ```
 
-Add an `impl` block for the contract and add the constructor 
+Add an `impl` block for the contract and add the constructor:
 
 ```rust
 impl PairContract {
@@ -109,7 +115,7 @@ impl PairContract {
 }
 ```
 
-Your contract should look like below and should build if you run 
+Your contract should look like below and should build if you run:
 ```console
 cargo contract build
 ```
@@ -153,7 +159,7 @@ pub mod pair {
 ### 2. Add events
 
 You should add [events struct](https://use.ink/macros-attributes/event) to your contract and also override event emission methods from the PSP22 implementation.
-Import what's needed for editing events.
+Import what's needed for editing events:
 
 ```rust
 use ink_lang::codegen::{
@@ -162,7 +168,7 @@ use ink_lang::codegen::{
 };
 ```
 
-[PSP22](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#events) emits `Transfer` and `Approval` events. An event is a struct with `#[ink(event)]` [attribute](https://use.ink/macros-attributes/event). Some fields can be marked with `#[ink(topic)]` [attribute](https://use.ink/macros-attributes/topic) which acts as `indexed` in solidity.
+[PSP22](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#events) emits `Transfer` and `Approval` events. An event is a struct with `#[ink(event)]` [attribute](https://use.ink/macros-attributes/event). Some fields can be marked with `#[ink(topic)]` [attribute](https://use.ink/macros-attributes/topic) which acts as `indexed` in Solidity:
 
 ```rust
 #[ink(event)]
@@ -184,7 +190,7 @@ pub struct Approval {
 }
 ```
 
-And finally ovveride event emitting methods of PSP22 Internal trait
+And finally override event emitting methods of PSP22 Internal trait (Due to ink!'s [design](https://github.com/paritytech/ink/issues/809) it is not possible to share event definitions between multiple contracts since events can only be defined in the ink! module scope directly.):
 
 ```rust
 impl Internal for PairContract {
@@ -214,7 +220,7 @@ impl Internal for PairContract {
 ### 3. Override generic function of PSP22
 
 PSP22 OpenBrush implementation have a check fo zero account in [mint](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L270), [burn](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L286), [transfer_from](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L223) and [approve](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L257) functions. But uniswap V2 use zero address to [lock tokens](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L121).
-The good thing is that you can override any functions of the generic implementation. So just implement the same function body but remove the check for zero address.
+The good thing is that you can override any functions of the generic implementation. So just implement the same function body but remove the check for zero address:
 
 ```rust
 impl Internal for PairContract {
@@ -277,7 +283,7 @@ impl Internal for PairContract {
 ```
 
 Also in Uniswap V2 max allowance will not [decrease allowance](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2ERC20.sol#L74). for this we need to override `transfer_from` and not decrease allowance if it's u128::MAX.
-Important here: please note that `#[ink(message)]` is needed in order to compile.
+Important here: please note that `#[ink(message)]` is needed in order to compile. Inside the existing `impl PSP22` block:
 
 ```rust
 impl PSP22 for PairContract {

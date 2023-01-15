@@ -32,7 +32,7 @@ Let's create (empty) files and folders so your project looks like this:
 └── .gitignore
 ```
 
-The *./uniswap-v2/logics/Cargo.toml* will be a `rlib` crate named `"uniswap_v2""` and import crates from ink!, scale, and openbrush (with feature `"psp22"`)
+The *./uniswap-v2/logics/Cargo.toml* will be a `rlib` crate named `"uniswap_v2""` and import crates from ink!, scale, and Openbrush (with feature `"psp22"`)
 
 ```toml
 [package]
@@ -89,7 +89,7 @@ pub mod traits;
 
 ### 2. Pair Storage
 
-The uniswap v2 have those [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L18) in solidity that we should implemented:
+The uniswap v2 Pair contract has those [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L18) in Solidity that we should implemented:
 
 ```solidity
 address public factory;
@@ -105,7 +105,7 @@ uint public price1CumulativeLast;
 uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
 ```
 
-ink! uses most of substrate primitives types. This is the table of conversion betwwen solidity and ink! types:
+ink! uses most substrate primitives types. This is the table of conversion between Solidity and ink! types:
 
 | Solidity                                | ink!                                                                                      |
 |-----------------------------------------|-------------------------------------------------------------------------------------------|
@@ -132,7 +132,7 @@ pub struct Data {
 ```
 
 Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with specified storage key (storage key is a required input argument of the macro).
-To generate a unique key openbrush provides [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is base on the name of the struct and its file path. Let's add this to our struct and import required fields.
+To generate a unique key Openbrush provides [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is base on the name of the struct and its file path. Let's add this to our struct and import required fields.
 
 ```rust
 use openbrush::traits::{
@@ -161,7 +161,7 @@ pub struct Data {
 
 ### 3. Trait for Getters
 
-Unlike solidity that will automatically create getters for the storage items, you should add add it yourself in ink!. For this we will create a trait and add generic implementation.
+Unlike Solidity that will automatically create getters for the storage items, you should add it yourself in ink!. For this we will create a trait and add generic implementation.
 in the *./logics/traits/pair.rs*  file, let's create a trait with the getters functions and make them callable with `#[ink(message)]` :
 
 ```rust
@@ -214,7 +214,6 @@ For the moment we don't need a proper error so just add `Error` as field
 
 ```rust
 ...
-
 #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
 #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]
 pub enum PairError {
@@ -268,7 +267,11 @@ fn initialize(
 These two functions returns the accountId of the tokens
 
 ```rust
-    fn get_token_1(&self) -> AccountId {
+fn get_token_0(&self) -> AccountId {
+    self.data::<data::Data>().token_0
+}
+
+fn get_token_1(&self) -> AccountId {
     self.data::<data::Data>().token_1
 }
 ```
@@ -346,6 +349,18 @@ use uniswap_v2::{
     impls::pair::*,
     traits::pair::*,
 };
+```
+
+Add the `Data` storage struct to the contract storage struct:
+```rust
+#[ink(storage)]
+#[derive(Default, SpreadAllocate, Storage)]
+pub struct PairContract {
+    #[storage_field]
+    psp22: psp22::Data,
+    #[storage_field]
+    pair: data::Data,
+}
 ```
 
 And just below the storage struct impl Pair trait for the PairContract:

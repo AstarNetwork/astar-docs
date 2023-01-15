@@ -37,7 +37,7 @@ A binary file is an executable program that is already compiled with a specific 
 
 If you prefer building from source code with your local environment, follow the guide [here](https://github.com/AstarNetwork/Astar#building-from-source).
 
-Download the latest release of [ the Astar collator](https://github.com/AstarNetwork/Astar/releases) for macOS for Ubuntu: 
+Download the latest release of [the Astar collator](https://github.com/AstarNetwork/Astar/releases) for macOS for Ubuntu: 
     
 ![Untitled](img-localchain-cookbook/Untitled.png)
 :::tip

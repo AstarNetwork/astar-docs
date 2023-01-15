@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: "Blast is Bware Labs' API provider platform that aims to solve Web 3 infrastructure issues related to reliability and latency, by employing geographically distributed third-party nodes."
 ---
 
 # Blast

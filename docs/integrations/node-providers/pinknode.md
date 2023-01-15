@@ -1,10 +1,13 @@
 ---
 sidebar_position: 3
+description: "Pinknode is a Polkadot-focused Infrastructure-as-a-Service platform offering RPC service through globally distributed node architecture coupled with Kubernetes clustering and geo-location routing for increased reliability and reduced latency. You will be able to integrate into the Astar ecosystem with Pinknode API services within minutes."
 ---
 
-![5](img/5.png)
-
 # Pinknode
+<div style={{textAlign: 'center'}}>
+
+![5](img/5.png)
+</div>
 
 ## Overview
 
