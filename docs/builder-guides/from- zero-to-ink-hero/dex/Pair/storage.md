@@ -354,9 +354,8 @@ And just below the storage struct impl Pair trait for the PairContract:
 ```
 
 And that's it!    
-You learned how to create a trait, its generic implementation and implented it in Pair contract.    
-Check your Pair contract with (to run in contract folder):
+You learned how to create a trait, its generic implementation and implented it in Pair contract. Check your Pair contract with (to run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end)
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end).

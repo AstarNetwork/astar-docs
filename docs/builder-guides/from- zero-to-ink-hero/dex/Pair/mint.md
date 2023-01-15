@@ -6,7 +6,7 @@ sidebar_position: 3
 
 If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
 
-### 1. Add Mint functions to Pair trait
+### 1. Add Mint functions to Pair Trait
 
 We will implement [mint](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L110) function of Pair contract.   
 In *./logics/traits/pair.rs* add the **mint** function to Pair trait. You should also add two internal **_mint_fee** and **_update**.
@@ -25,7 +25,7 @@ pub trait Pair {
 }
 ```
 
-### 2. Mint fee and Factory trait
+### 2. Mint Fee and Factory Trait
 
 As **_update** and **_mint_fee** are child functions of **mint** let start by implementing those.
 Let's have a lok at [_mintFee](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L89) in solidity: it takes `uint112 _reserve0` and `uint112 _reserve1`  as arguments,
@@ -89,7 +89,6 @@ And in the body of **_mint_fee** let get the fee_on with a cross-contract call t
 ```
 
 For the rest of the function body let's see what can be complex:
-
 - For ` address(0)` in solidity you can use `openbrush::traits::ZERO_ADDRESS` (which is a const `[0; 32]`)
 - For `sqrt` you can either implement the [same function](https://github.com/AstarNetwork/wasm-tutorial-dex/blob/4afd2d2a0503ad5dfcecd87e2b40d55cd3c854a0/uniswap-v2/logics/impls/pair/pair.rs#L437) or use [integer-sqrt](https://crates.io/crates/integer-sqrt)
 - When doing Math operations you should handle the overflow case (and return an Error if it overflows). you can use checked operations on `u128`
@@ -143,7 +142,6 @@ Then implements line by line the same logic as in Uniswap-V2:
 ```
 
 ### 3. Update
-
 The update function will update the [oracle price](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) of the tokens with time-weighted average prices (TWAPs). Please check Uniswap V2 [implementation](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L73).    
 To implement this in ink!:
 - ink! contracts should [never panic!](https://substrate.stackexchange.com/questions/2391/panic-in-ink-smart-contracts). The reason is that a panic! will give the user no information about the Error (it only return `CalleeTrapped`). Every potential business/logical error should be returned in a predictive way using `Result<T, Error>`.

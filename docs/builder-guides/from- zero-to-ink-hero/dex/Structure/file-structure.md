@@ -28,18 +28,18 @@ pub mod contract {
 }
 ```
 
-As defining inherent `impl` for a type outside of the crate where the type is defined is not [supported](https://doc.rust-lang.org/error_codes/E0116.html) in Rust, it is however possible to define a Trait in an outside crate and implement it.   
-ink! implemented this functionality with the macro `#[ink::trait_definition]` (see [ink! trait-definitions doc](https://use.ink/basics/trait-definitions/)) but it has some limitations as it is not possible to have a default implementation.  
+As defining inherent `impl` for a type outside of the crate where the type is defined is not [supported](https://doc.rust-lang.org/error_codes/E0116.html) in Rust, it is however possible to define a Trait in an outside crate and implement it. ink! implemented this functionality with the macro `#[ink::trait_definition]` (see [ink! trait-definitions doc](https://use.ink/basics/trait-definitions/)) but it has some limitations as it is not possible to have a default implementation.  
 
 So the only solution, in ink!, to implement a big contract is to have all the code in the same file. It will not be easily readable and maintainable.
 
 ## Trait and generic implementation in separate files
 
-In order to organise business logic in different files Openbrush use [specialization](https://github.com/rust-lang/rfcs/pull/1210) that permits multiple `impl` blocks to apply to the same type.  
-So you can define as many Trait and its generic implementation as needed. This allows to split your code and also to be easily implemented into your contract. Of course specialization also allow to override a default implementation (if the method or the impl is specialized with the [`default`](https://github.com/rust-lang/rfcs/blob/master/text/1210-impl-specialization.md#the-default-keyword) keyword).   
-So you define a Trait and a generic implementation in a crate and in the contract you implement this Trait. If this impl block is empty `{}` specialization will implement the most specific implementation which is the one you defined in the file.
+In order to organise business logic in different files Openbrush use [specialization](https://github.com/rust-lang/rfcs/pull/1210) that permits multiple `impl` blocks to apply to the same type. So you can define as many Trait and its generic implementation as needed. This allows to split your code and also to be easily implemented into your contract. 
+
+Of course specialization also allow to override a default implementation (if the method or the impl is specialized with the [`default`](https://github.com/rust-lang/rfcs/blob/master/text/1210-impl-specialization.md#the-default-keyword) keyword). So you define a Trait and a generic implementation in a crate and in the contract you implement this Trait. If this impl block is empty `{}` specialization will implement the most specific implementation which is the one you defined in the file.
 Every generic implementation in openbrush (PSP22, PSP34, ..) use the `default` keyword that makes this functions *overrideable*.    
 Define your Trait in a file:
+
 ```rust
 #[openbrush::trait_definition]
 pub trait MyTrait {
@@ -134,7 +134,7 @@ Inside the `traits` folder there is one file per contract. Inside the `impls` th
 └── lib.rs
 ```
 
-#### Resources 
+## Resources 
 OpenBrush - [Setup a project](https://docs.openbrush.io/smart-contracts/example/setup_project)
 
 

@@ -312,9 +312,8 @@ Import Vec from `ink_prelude`:
  use ink_prelude::vec::Vec;
 ```
 
-And that's it! You implemented PSP22, its event and override its default implementation.    
-Check your Pair contract with (to run in contract folder):
+And that's it! You implemented PSP22, its event and override its default implementation. Check your Pair contract with (to run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/psp22)
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/psp22).
