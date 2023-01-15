@@ -6,7 +6,7 @@ sidebar_position: 1
 
 If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/modifiers_end) and open it in your IDE.
 
-### 1. Factory Storage
+## 1. Factory Storage
 
 Factory contract has those [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L7) in Solidity that we should implement:
 
@@ -71,7 +71,7 @@ pub struct Data {
 ```
 *./logics/impls/factory/data.rs*
 
-### 2. Trait for Getters
+## 2. Trait for Getters
 
 Unlike Solidity that will automatically create getters for the storage items, you should add it yourself in ink!. There is already a `Factory` trait with `fee_to` function in the file *./logics/traits/factory.rs*.    
 Add all getters:
@@ -123,7 +123,7 @@ pub enum FactoryError {
 ```
 *./logics/traits/factory.rs*
 
-### 3. Implement Getters
+## 3. Implement Getters
 
 in *./logics/impls/factory/factory.rs* add and impl block for generic type `data::Data`. We wrap the Data struct in Storage trait to add it as trait bound:
 ```rust
@@ -301,9 +301,8 @@ Add an `impl` block for the contract and add the constructor. The constructor ta
 }
 ```
 
-And that's it!     
-Check your Factory contract with (to run in contract folder):
+And that's it! Check your Factory contract with (to run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_storage)
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_storage).

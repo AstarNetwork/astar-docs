@@ -412,8 +412,7 @@ overflow-checks = false
 overflow-checks = false
 ```
 
-And that's it!    
-You learned how to create a wrapper around a Trait to do cross-contract calls and advanced Rust & ink! implementation. 
+And that's it! You learned how to create a wrapper around a Trait to do cross-contract calls and advanced Rust & ink! implementation. 
 Check your Pair contract with (to run in contract folder):
 ```console
 cargo contract build

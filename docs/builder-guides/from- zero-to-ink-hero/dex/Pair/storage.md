@@ -6,7 +6,7 @@ sidebar_position: 2
 
 If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/start) and open it in your IDE.
 
-### 1. Logics crate
+## 1. Logics crate
 
 As described in [File & Folder structure](../Structure/file-structure.md), Pair business logic will be in the uniswapv2 logics crate.
 Let's create (empty) files and folders so your project looks like this:
@@ -87,7 +87,7 @@ pub mod traits;
 ```
 *./uniswap-v2/logics/lib.rs*
 
-### 2. Pair Storage
+## 2. Pair Storage
 
 The uniswap v2 Pair contract has those [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L18) in Solidity that we should implemented:
 
@@ -159,7 +159,7 @@ pub struct Data {
 ```
 *./logics/impls/pair/data.rs*
 
-### 3. Trait for Getters
+## 3. Trait for Getters
 
 Unlike Solidity that will automatically create getters for the storage items, you should add it yourself in ink!. For this we will create a trait and add generic implementation.
 in the *./logics/traits/pair.rs*  file, let's create a trait with the getters functions and make them callable with `#[ink(message)]` :
@@ -222,7 +222,7 @@ pub enum PairError {
 ```
 *./logics/traits/pair.rs*
 
-### 4. Implement Getters
+## 4. Implement Getters
 
 in *./logics/impls/pair/pair.rs* add and impl block for generic type `data::Data`. We wrap the Data struct in Storage trait to add it as trait bound.
 
@@ -319,7 +319,7 @@ impl<T: Storage<data::Data>> Pair for T {
 }
 ```
 
-#### 5. Implement Getters to Pair contract
+## 5. Implement Getters to Pair contract
 
 In *./contracts/pair/Cargo.toml* import the uniswap-v2 logics crate and add it to the std features
 

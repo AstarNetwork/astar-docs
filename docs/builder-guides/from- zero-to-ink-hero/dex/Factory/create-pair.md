@@ -6,7 +6,7 @@ sidebar_position: 2
 
 If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
 
-### 1. Add Create pair to Factory trait
+## 1. Add Create Pair to Factory Trait
 
 We will implement [createPair](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L23) function of Factory contract.   
 In *./logics/traits/factory.rs* add the **create_pair** function to Factory trait as well as the internal child function **_instantiate_pair** that will have to be implemented in the contract crate.
@@ -35,7 +35,7 @@ pub trait Factory {
 }
 ```
 
-### 2. Implement Create Pair
+## 2. Implement Create Pair
 
 In *./logics/impls/factory/factory.rs* let's implement **create_pair** function body:
 #### 1. Checks that addresses are not identical
@@ -56,7 +56,7 @@ impl<T: Storage<data::Data>> Factory for T {
 }
 ```
 
-#### 2. Order the tuple
+### 2. Order The Tuple
 ```rust
 let token_pair = if token_a < token_b {
     (token_a, token_b)
@@ -72,7 +72,7 @@ if token_pair.0 == ZERO_ADDRESS.into() {
 }
 ```
 
-#### 4. Instantiate Pair contract     
+### 4. Instantiate Pair Contract     
 The [generate_address](https://github.com/paritytech/substrate/blob/982f5998c59bd2bd455808345ae1bd2b1767f353/frame/contracts/src/lib.rs#L187) function in `pallet_contract` is akin to the formula of ETH's CREATE2 opcode. There is no CREATE equivalent because CREATE2 is strictly more powerful. Formula: `hash(deploying_address ++ code_hash ++ salt)`
 Instantiation of a contract will determine deterministically the address of the instantiated contract with the concatenated hash of:
 - salt (in bytes)
@@ -85,7 +85,7 @@ let salt = Self::env().hash_encoded::<Blake2x256, _>(&token_pair);
 let pair_contract = self._instantiate_pair(salt.as_ref())?;
 ```
 
-#### 5. Initialize Pair
+## 5. Initialize Pair
 ```rust
 PairRef::initialize(&pair_contract, token_pair.0, token_pair.1)?;
 ```
@@ -357,9 +357,8 @@ impl From<PairError> for FactoryError {
 ```
 
 
-And that's it!     
-Check your Factory contract with (to run in contract folder):
+And that's it! Check your Factory contract with (to run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_create_pair_end)
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_create_pair_end).

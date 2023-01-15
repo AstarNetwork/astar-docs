@@ -9,7 +9,7 @@ Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/
 Pair contract implements an ERC-20 (slightly modified as uint256::MAX does not [decrease allowance](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2ERC20.sol#L74)).
 In Astar the standard for fungible token is [PSP22](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md). we will use OpenBrush [PSP22 implementation](https://github.com/Supercolony-net/openbrush-contracts/tree/main/contracts/src/token/psp22).
 
-### 1. Implement basic PSP22 in our contract.   
+## 1. Implement basic PSP22 in our contract.   
 
 In the `Cargo.toml` import crates from ink!, scale, and Openbrush (with feature `"psp22"`)
 
@@ -156,7 +156,7 @@ pub mod pair {
 ```
 *contracts/pair/lib.rs*
 
-### 2. Add events
+## 2. Add events
 
 You should add [events struct](https://use.ink/macros-attributes/event) to your contract and also override event emission methods from the PSP22 implementation.
 Import what's needed for editing events:
@@ -217,7 +217,7 @@ impl Internal for PairContract {
 }
 ```
 
-### 3. Override generic function of PSP22
+## 3. Override generic function of PSP22
 
 PSP22 OpenBrush implementation have a check fo zero account in [mint](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L270), [burn](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L286), [transfer_from](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L223) and [approve](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L257) functions. But uniswap V2 use zero address to [lock tokens](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L121).
 The good thing is that you can override any functions of the generic implementation. So just implement the same function body but remove the check for zero address:

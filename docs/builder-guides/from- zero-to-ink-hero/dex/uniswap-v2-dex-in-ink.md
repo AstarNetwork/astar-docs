@@ -6,16 +6,11 @@ sidebar_position: 1
 
 This tutorial targets developers with an **advanced** level in ink! and an **intermediate** level in Rust.
 
-| Tutorial                                                                   | Difficulty                     |
-|----------------------------------------------------------------------------|--------------------------------|
-| [Your first flipper contract](../flipper-contract/flipper.md)              | Basic ink! -  Basic Rust       |          
-|  [full dApp: NFT contract with PSP34 + UI](../flipper-contract/flipper.md) | Intermediate ink! - Basic Rust |
-
 # To follow this tutorial you will need:
-- to [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md)
-- to have knowledge about AMM & [Uniswap V2 implementation](https://docs.uniswap.org/contracts/v2/overview) (as this tutorial will focus on implementation)
+- To [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md).
+- To have knowledge about AMM & [Uniswap V2 implementation](https://docs.uniswap.org/contracts/v2/overview) (as this tutorial will focus on implementation).
 
-# What will we do ?
+## What will we do?
 
 in this tutorial we will implement in ink! the follow contracts from the Solidity implementation of Uniswap V2 Core
 - [Pair](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol)

@@ -6,7 +6,7 @@ sidebar_position: 4
 
 If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
 
-### 1. Add Burn functions to Pair trait
+## 1. Add Burn functions to Pair trait
 
 
 We will implement [burn](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L134) function of Pair contract.   
@@ -36,7 +36,7 @@ pub trait Pair {
 }
 ```
 
-### 2. Safe transfer
+## 2. Safe transfer
 
 in Pair.sol contract, inside burn function there is [_safeTransfer](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L148). In PSP22 transfer is [safe by default](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#psp22receiver) if its implement `PSP22Receiver` which is the case for Openbrush PSP22 implementation (in [_do_safe_transfer_check](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L172))
 It will use a basic call to **transfer** of PSP22:
@@ -176,7 +176,7 @@ pub enum PairError {
 }
 ```
 
-### 4. Implement Event
+## 4. Implement Event
 
 in the contracts *./cotnracts/pair/lib.rs* add the Event struct and override the implementation of emit event:
 ```rust
