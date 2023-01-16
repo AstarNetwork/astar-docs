@@ -9,7 +9,7 @@ Please follow this tutorial first:
 
 | Tutorial                                                                   | Difficulty                     |
 |----------------------------------------------------------------------------|--------------------------------|
-| [Your first flipper contract](../flipper-contract/flipper.md)              | Basic ink! -  Basic Rust       |          
+| Your first flipper contract              | Basic ink! -  Basic Rust       |          
 
 # To follow this tutorial you will need:
 - to [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md)
