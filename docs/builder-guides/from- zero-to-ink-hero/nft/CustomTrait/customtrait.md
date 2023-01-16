@@ -38,7 +38,7 @@ pub mod traits;
 The crate's `Cargo.toml` will import all ink! and Openbrush crates and it will be used by the contract's Cargo.toml to import all methods. We will name this package `payable_mint`
 ```toml
 [package]
-name = "payable_mint"
+name = "payable_mint_pkg"
 version = "0.2.0"
 authors = ["Stake Technologies <devops@stake.co.jp>"]
 edition = "2021"
@@ -81,13 +81,13 @@ pub mod payable_mint;
 ```
 As a last step add link to `payable_mint` in Contract's Cargo.toml
 ```toml
-payable_mint = { path = "../../logics", default-features = false }
+payable_mint_pkg = { path = "../../logics", default-features = false }
 
 [features]
 default = ["std"]
 std = [
     // ...
-    "payable_mint/std",
+    "payable_mint_pkg/std",
 ]
 ```
 
