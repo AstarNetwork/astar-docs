@@ -1,10 +1,10 @@
-# How to use Python Substrate Interface to query dApp Staking extrinsics and participating addresses
+# Query dApp Staking extrinsics and participating addresses with Python
 
 ## TL;DR
 
-As a Substrate-based multi-VM blockchain, Astar nodes have all Polkadot or Substrate features. And [Python Substrate Interface](https://github.com/polkascan/py-substrate-interface) library allows developers to query Substrate-runtime-level metadata from an Astar node and interact with the node's Polkadot or Substrate features including querying and composing extrinsics using a native Python interface.
+As a Substrate-based multi-VM blockchain, Astar nodes have all Polkadot or Substrate features. [Python Substrate Interface](https://github.com/polkascan/py-substrate-interface) library allows developers to query Substrate-runtime-level metadata from an Astar node and interact with the node's Polkadot or Substrate features including querying and composing extrinsics using a native Python interface.
 
-In this cookbook, we will guide you on how to install Python Substrate Interface, how to create an API provider instance, and how to query blocks and extrinsics, with an example of querying dApp Staking participants’ addresses.
+In this guide, we will support you on how to install Python Substrate Interface, how to create an API provider instance, and how to query blocks and extrinsics, with an example of querying dApp Staking participants’ addresses. 
 
 ---
 
@@ -22,7 +22,8 @@ For interface function reference, please read [https://polkascan.github.io/py-su
 
 ---
 
-## Install Substrate Python Interface
+## Instructions
+### 1. Install Substrate Python Interface
 
 - Before installing Substrate Python Interface, please run the following command to check if you have Python package installer [`pip`](https://pypi.org/project/pip/) installed:
     
@@ -40,10 +41,9 @@ For interface function reference, please read [https://polkascan.github.io/py-su
 
 ---
 
-## Construct an API provider instance
+### 2. Construct an API provider Instance
 
-In order to query and interact with an Astar node, you need to first construct a `WsProvider`
- API provider using the WebSocket endpoint of Astar Network that you wish to interact with.
+In order to query and interact with an Astar node, you need to first construct a `WsProvider` API provider using the WebSocket endpoint of Astar Network that you wish to interact with.
 
 You can find the list of supported endpoints from our [network RPC endpoint list](https://docs.astar.network/docs/quickstart/endpoints/) .
 
@@ -59,9 +59,9 @@ ws_provider = SubstrateInterface(
 
 ---
 
-## Retrieve blocks and extrinsics using py-substrate-interface
+### 3. Retrieve blocks and extrinsics using py-substrate-interface
 
-- For demonstration purposes, we will be using JupyterLab in the cookbook. Please feel free to download and install JupyterLab following the guide [here](https://docs.jupyter.org/en/latest/install.html).
+- For demonstration purposes, we will be using JupyterLab in the guide. Please feel free to download and install JupyterLab following the tutorial [here](https://docs.jupyter.org/en/latest/install.html).
 - To retrieve blocks and extrinsics in the blocks, you can use `get_block` method defined in the `py-substrate-interface`, which returns a Python dictionary containing extrinsics and metadata in a Substrate block.
     
     ```python
@@ -94,15 +94,15 @@ ws_provider = SubstrateInterface(
     {'header': {'parentHash': '0x0000000000000000000000000000000000000000000000000000000000000000', 'number': 0, 'stateRoot': '0xc9451593261d67c47e14c5cbefeeffff5b5a1707cf81800becfc79e6df354da9', 'extrinsicsRoot': '0x03170a2e7597b7b7e3d84c05391d139a62b157e78786d8c082f29dcf4c111314', 'digest': {'logs': []}, 'hash': '0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6'}, 'extrinsics': []}
     ```
     
-- You can find the reference to more method in the Substrate Python Interface in [https://polkascan.github.io/py-substrate-interface](https://polkascan.github.io/py-substrate-interface/#substrateinterface.SubstrateInterface.get_block)
+- You can find the reference to more method in the Substrate Python Interface [here](https://polkascan.github.io/py-substrate-interface/#substrateinterface.SubstrateInterface.get_block).
 
 ---
 
-## Iterate through blocks to collect the addresses participating in dApp Staking
+### 4. Collect the addresses participating in dApp Staking
 
 In order to collect the addresses that participated in dApp Staking during a certain period of time, we need to iterate through the Substrate blocks of Astar Network and iterate through the extrinsics inside each block to filter out the `bond_and_stake` calls of `dapp-staking-pallet`.
 
-- Below is the example code:
+- An example code:
     
     ```python
     # Import Python Substrate Interface
@@ -138,9 +138,6 @@ In order to collect the addresses that participated in dApp Staking during a cer
 Please feel free to our Discord at [https://discord.com/invite/Z3nC9U4](https://discord.com/invite/Z3nC9U4) for technical support.
 
 ## Reference
-
-[https://github.com/polkascan/py-substrate-interface](https://github.com/polkascan/py-substrate-interface)
-
-[https://polkascan.github.io/py-substrate-interface](https://polkascan.github.io/py-substrate-interface)
-
-[https://polkascan.github.io/py-substrate-metadata-docs/](https://polkascan.github.io/py-substrate-metadata-docs/)
+- [Python Substrate Interface Github](https://github.com/polkascan/py-substrate-interface)
+- [Python Substrate Interface Docs](https://polkascan.github.io/py-substrate-interface)
+- [Python Substrate Metadate Docs](https://polkascan.github.io/py-substrate-metadata-docs/)
