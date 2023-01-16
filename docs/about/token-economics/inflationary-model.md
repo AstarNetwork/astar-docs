@@ -45,7 +45,9 @@ Each block reward is distributed to a set of beneficiaries.
 The collator responsible for building the block will receive **collator's** portion of reward. This is the main financial incentive for the collators. Portion is configured as percentage of the block reward on-chain and is constant per block unless manually changed.
 
 In addition, it will receive fees paid by the users for transactions that were included in the produced block.
-For both Astar & Shiden, **20%** of the fees are burned to provide deflationary force to the model.
+
+For **Shiden**, **100%** of the fees are burned, and the full tip is paid to the collator.
+For **Astar**, **20%** of the fees & tips are burned, and the rest is paid to the collator.
 
 #### > On-chain Treasury
 
