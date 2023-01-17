@@ -8,7 +8,7 @@ The `mint()` method now takes receiver NFT account and amount of tokens to be mi
 This will allow contract to be in charge which token will be minted next and allows minting more than one token at the time.
 
 ### `set_base_uri(uri: PreludeString)`
-First we need to import string from `ink_prelude` and rename it not to be mixed with Openbrush String Implementation. The difference is that Openbrush String is in fact a vector of u8 elements. Since we expect users to use `utf-8` string we use String from prelude.
+First we need to import `String` from `ink_prelude` and rename it not to be mixed with Openbrush String Implementation. The difference is that Openbrush String is in fact a vector of u8 elements. Since we expect users to use `utf-8` string we use String from prelude.
 ```rust
 use ink_prelude::string::String as PreludeString;
 ```

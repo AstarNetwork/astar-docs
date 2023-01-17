@@ -6,12 +6,12 @@ Events are important for smart contracts because they facilitate communication b
 
 ## Minting Event
 In our contract there is one occasion where an event should be emitted and that is when token is minted.
-One could expect that by calling Openbrush `mint_to()`, and event will be emitted but upon closer examination we can see that `emit_transfer_event()` has empty default [implementation](https://github1s.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/token/psp34/psp34.rs#L151-L152). This gives flexibility to create events for our needs.
+One could expect that by calling Openbrush `_mint_to()`, and event will be emitted but upon closer examination we can see that `_emit_transfer_event()` has empty default [implementation](https://github1s.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/token/psp34/psp34.rs#L151-L152). This gives flexibility to create events for our needs.
 
 ```rust
 default fn _emit_transfer_event(&self, _from: Option<AccountId>, _to: Option<AccountId>, _id: Id) {}
 ```
-Let's define two events that are needed for token handling, *Transfer* and *Approve*. This needs to be done in the contracts's `lib.rs`. Please note that there is no mint event. Mint is covered by *Transfer* event where `from` will be the contract address.
+Let's define two events that are needed for token handling, *Transfer* and *Approve*. This needs to be done in the contracts's `lib.rs`. Please note that there is no `Mint` event. `Mint` is covered by *Transfer* event where `from` will be the contract address.
 ```rust
 use ink_lang::codegen::{
     EmitEvent,

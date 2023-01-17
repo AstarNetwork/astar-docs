@@ -6,7 +6,7 @@ To create a smart contract which follows PSP34 standard use Openbrush Wizard:
 1. Open [Openbrush.io](https://openbrush.io/) website and go to bottom of the page.
 2. Select PSP34.
 3. Select the version to match the rest of the tutorial. Check *What will be used* in the [prerequisites chapter](../nft.md).
-4. Name your contract. In this tutorial we will use `Shiden34`.
+4. Name your contract. In this tutorial we will use `shiden34`.
 5. Select extensions: *Metadata*, *Mintable*, *Enumerable*.
 6. Under Security pick *Ownable*.
 7. Copy `lib.rs` and `Cargo.toml`.
@@ -157,13 +157,13 @@ cargo check
 ```
 
 ## Examine Openbrush Traits 
-Let's examine what we have inside module `Shiden34` (lib.rs) so far:
+Let's examine what we have inside module `shiden34` (lib.rs) so far:
 * Defined structure `Contract` for contract storage.
 * Implemented constructor `new()` for `Contract` structure.
 * Implemented Openbrush traits *PSP34, Metadata, Mintable, Enumberable, Ownable* for structure `Contract`.
 * Overridden `mint()` method from trait *Mintable*. More about this in next section.
 
-Each of implemented traits will enrich `Shiden34` contract with a set of methods. To examine which methods you now have available check:
+Each of implemented traits will enrich `shiden34` contract with a set of methods. To examine which methods you now have available check:
 * Openbrush [PSP34 trait](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/psp34.rs) brings all familiar functions from ERC721 plus a few extra:
     * `collection_id()`
     * `balance_of()`
