@@ -33,6 +33,7 @@ To change the default values you can add CLI flags when spinning up your tracing
 
 ## Run a debug node
 
+
 To use the supported RPC methods, you need to run a node in debug mode, which is slightly different than running a full node. Additional flags will also need to be used to tell the node which of the non-standard features to support.
 
 Spinning up a debug or tracing node is similar to running a full node. However, there are some additional flags that you may want to enable specific tracing features:
@@ -43,6 +44,14 @@ Spinning up a debug or tracing node is similar to running a full node. However, 
 * `--runtime-cache-size 64` - required flag that configures the number of different runtime versions preserved in the in-memory cache to 64
 * `--ethapi-trace-max-count <uint>` - sets the maximum number of trace entries to be returned by the node. _The default maximum number of trace entries a single request of trace_filter returns is_ **500**
 * `--ethapi-trace-cache-duration <uint>` - sets the duration (in seconds) after which the cache of `trace_filter`, for a given block, is discarded. _The default amount of time blocks are stored in the cache is **300** seconds_
+
+> EVM debug RPC available in Astar Collator **v5.0 and later**.
+
+For example, launch node with debug RPC enabled on Shibuya testnet.
+
+```
+astar-collator --ethapi=debug --chain=shibuya
+```
 
 ### Using debug/tracing API
 
