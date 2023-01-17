@@ -3,19 +3,15 @@ sidebar_position: 2
 ---
 
 # Flipper 
-
 This is step-by-step explanation of ink! smart contract by using the most simple app, which is flipper. You will understand the basic structure of ink! smart-contract.
 
-#### What is Flipper
+## What is Flipper
+Flipper is a very basic smart contract. It has only one boolean in the storage (`true` or `false`), and when you flip, the value will be changed in to the other.
 
-Flipper is the simplest application. It has only one boolean in the storage(`true` or `false`), and when you flip, the value will be changed in to the other.
-
-#### Preparation
-
+## Preparation
 Please refer to [Prerequisites](./prerequisites.md)
 
-#### Flipper App
-
+## Flipper Smart Contract
 In a folder run:
 
 ```bash
@@ -27,7 +23,6 @@ $ cd flipper/
 $ cargo contract build #build flipper app
 ```
 
-
 💡 If you get an error saying:
 ```bash
 ERROR: cargo-contract cannot build using the "stable" channel. Switch to nightly.
@@ -37,18 +32,17 @@ Please try:
 $ rustup default nightly
 ```
 
-Then, you get the full package and code for the flipper App.
+Then, you get the full package and code for Flipper.
+Let’s dive into the structure.
 
-Let’s dive.
-
-#### The File Structure of Flipper App
+### The File Structure of Flipper
 
 - `target`: build info, binary info
 - `Cargo.lock`: lock file for dependency package
 - `Cargo.toml`: Package Config
 - `lib.rs`: Your contract logic
 
-#### Flipper contract(lib.rs)
+### Flipper Contract (lib.rs)
 
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
@@ -127,7 +121,7 @@ mod flipper {
 }
 ```
 
-#### Contract structure(lib.rs)
+### Contract Structure (lib.rs)
 
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
@@ -153,7 +147,7 @@ mod flipper {
 }
 ```
 
-#### Storage
+### Storage
 
 ```rust
     #[ink(storage)]
@@ -167,8 +161,7 @@ This annotates a struct that represents the **contract's internal state.** ([det
 #[ink(storage)]
 ```
 
-Storage types;
-
+Storage types:
 - Rust primitives types
     - `bool`
     - `u{8,16,32,64,128}`
@@ -191,9 +184,8 @@ pub struct Flipper {
 }
 ```
 
-#### Callable Functions
-
-This Is called when the contract is deployed and is responsible for **bootstrapping the initial contract state** into the storage. ([details](https://use.ink/4.0.0-alpha.1/macros-attributes/constructor/))
+### Callable Functions
+This is when the contract is deployed and is responsible for **bootstrapping the initial contract state** into the storage, ([more details](https://use.ink/4.0.0-alpha.1/macros-attributes/constructor/)).
 
 ```rust
 #[ink(constructor)]
@@ -217,8 +209,7 @@ pub fn default() -> Self {
 }
 ```
 
-This marks a function as **publicly dispatchable**, meaning that it is exposed in the contract interface to the outside world. ([details](https://use.ink/4.0.0-alpha.1/macros-attributes/message))
-Note that all public functions must use the `#[ink(message)]` attribute.
+This marks a function as **publicly dispatchable**, meaning that it is exposed in the contract interface to the outside world, ([more details](https://use.ink/4.0.0-alpha.1/macros-attributes/message)). Note that all public functions must use the `#[ink(message)]` attribute.
 
 ```rust
 #[ink(message)]
@@ -272,7 +263,7 @@ impl Flipper {
     }
 ```
 
-#### Test
+### Test
 
 ```rust
 #[cfg(test)]
@@ -301,8 +292,7 @@ impl Flipper {
     }
 ```
 
-#### Compile, Deploy and interact with contracts
+### Compile, Deploy and interact with contracts
 
 Here is the guide how to deploy your contract. Once you deploy it, you can interact with the contracts there:
-
-[Deploy using Polkadot UI](https://docs.astar.network/docs/wasm/sc-dev/polkadotjs-ui/)
+[deploy using Polkadot UI](https://docs.astar.network/docs/wasm/sc-dev/polkadotjs-ui/).

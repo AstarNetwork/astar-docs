@@ -6,20 +6,22 @@ sidebar_position: 1
 
 This tutorial targets developers with no experience in ink! and a **basic** level in Rust.
 
-# To follow this tutorial you will need:
-- to [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md)
-- Basic Rust knowledge. [Learn Rust](https://www.rust-lang.org/learn)
+| Available Tutorials                                                                   | Difficulty                     |
+|----------------------------------------------------------------------------|--------------------------------|
+| [NFT contract with PSP34](../nft/nft.md)              | Intermediate ink! -  Basic Rust       |          
+| [Implement Uniswap V2 core DEX](../dex/uniswap-v2-dex-in-ink.md) | Advanced ink! - Basic Rust |
 
-# What will we do ?
+### To follow this tutorial you will need:
+- To [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md).
+- Basic Rust knowledge. [Learn Rust](https://www.rust-lang.org/learn).
 
-in this tutorial we will implement the most basic contract [Flipper](https://github.com/paritytech/ink/blob/v3.3.0/examples/flipper/lib.rs) in ink!:
+### What will we do?
+In this tutorial we will implement the most basic contract: [Flipper](https://github.com/paritytech/ink/blob/v3.3.0/examples/flipper/lib.rs) in ink!.
 
-# What will we use ?
+### What will we use?
+- [ink! 3.3.0](https://github.com/paritytech/ink/tree/v3.3.0)
 
-[ink! 3.3.0](https://github.com/paritytech/ink/tree/v3.3.0)
-
-# What will you learn ?
-
+### What will you learn?
 - Anatomy of an ink! contract
 - Define contract storage
 - Callable functions
