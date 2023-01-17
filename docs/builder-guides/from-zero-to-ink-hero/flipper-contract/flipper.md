@@ -2,14 +2,14 @@
 sidebar_position: 2
 ---
 
-# Flipper 
+# Flipper Contract
 This is step-by-step explanation of ink! smart contract by using the most simple app, which is flipper. You will understand the basic structure of ink! smart-contract.
 
-## What is Flipper
+## What is Flipper?
 Flipper is a very basic smart contract. It has only one boolean in the storage (`true` or `false`), and when you flip, the value will be changed in to the other.
 
 ## Preparation
-Please refer to [Prerequisites](./prerequisites.md)
+Please refer to [Prerequisites](./flipper-contract.md)
 
 ## Flipper Smart Contract
 In a folder run:
@@ -42,7 +42,7 @@ Let’s dive into the structure.
 - `Cargo.toml`: Package Config
 - `lib.rs`: Your contract logic
 
-### Flipper Contract (lib.rs)
+### Flipper Contract `lib.rs`
 
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
@@ -121,7 +121,7 @@ mod flipper {
 }
 ```
 
-### Contract Structure (lib.rs)
+### Contract Structure `lib.rs`
 
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]

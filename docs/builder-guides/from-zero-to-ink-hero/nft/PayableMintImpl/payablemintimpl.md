@@ -1,9 +1,9 @@
 # PayableMint Trait Implementation
-In this section we will 
-* define new data type, 
-* implement methods defined in the PayableMint trait from previous section
-* update contract's constructor to accept new parameters
-* write unit test for `mint()`
+In this section we will: 
+* Define new data type. 
+* Implement methods defined in the PayableMint trait from previous section.
+* Update contract's constructor to accept new parameters.
+* Write unit test for `mint()`.
 
 ## Data type definition
 Since our contract will now accept new parameters we need storage to keep them. Let's create new file `logics/impls/types.rs` and add:
@@ -21,11 +21,11 @@ pub struct Data {
     pub price_per_mint: Balance,
 }
 ```
-Do not forget to update mod.rs file with:
+Do not forget to update `mod.rs` file with:
 ```rust
 pub mod types;
 ```
-Since we introduced Data storage we need to add a trait bond.
+Since we introduced data storage we need to add a trait bond.
 ```rust
 impl<T> PayableMint for T
 where
@@ -46,9 +46,9 @@ pub trait Internal {
 }
 ```
 
-## Mint implementation
-There are several checks we need to do before proceeding with the token mint. We have implemented these methods in the Internal trait.
-### Check transferred funds and check the overflow
+## Mint Implementation
+There are several checks we need to do before proceeding with the token mint. We have implemented these methods in the `internal` trait.
+### Check Transferred Funds and Overflow
 ```rust
 default fn check_value(
     &self,
@@ -66,7 +66,7 @@ default fn check_value(
 }
 ```
 
-### Check amount of tokens to be minted
+### Check Amount of Tokens to be Minted
 ```rust
 /// Check amount of tokens to be minted
 default fn check_amount(&self, mint_amount: u64) -> Result<(), PSP34Error> {
@@ -105,7 +105,7 @@ default fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34E
     Ok(())
 }
 ```
-## Withdraw implementation
+## Withdraw Implementation
 Enable contract owner to be able to withdraw funds from contract by implementing withdraw method:
 ```rust
 /// Withdraws funds to contract owner
@@ -123,7 +123,7 @@ default fn withdraw(&mut self) -> Result<(), PSP34Error> {
     Ok(())
 }
 ```
-## Set base_uri and get token uri
+## Set `base_uri` and get `token_uri`
 Let's first create `token_exist` check and place it in the Internal trait:
 ```rust
 /// Check if token is minted
@@ -163,12 +163,12 @@ default fn token_uri(&self, token_id: u64) -> Result<PreludeString, PSP34Error> 
 }
 ```
 
-## Update contract
+## Update Contract
 Since we have added new type `Data` let's import it:
 ```rust
 use payable_mint::impls::payable_mint::*;
 ```
-And add new element in the `struct Contract`:
+Add a new element in the `struct Contract`:
 ```rust
 #[storage_field]
 payable_mint: types::Data,
@@ -197,7 +197,7 @@ pub fn new(
 ```
 
 ## Write unit test
-Let's write a simple unit test to check mint() method. In ink! contract the unit test is placed inside the contract module. By default Alice creates the contract.
+Let's write a simple unit test to check `mint()` method. In ink! contract the unit test is placed inside the contract module. By default Alice creates the contract.
 After all imports let's write helper method to initiate contract:
 ```rust
 #[cfg(test)]

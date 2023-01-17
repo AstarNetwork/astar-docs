@@ -6,10 +6,10 @@ sidebar_position: 1
 
 This tutorial targets developers with no experience in ink! and a **basic** level in Rust.
 
-| Available Tutorials                                                                   | Difficulty                     |
+| Tutorial                                                                   | Difficulty                     |
 |----------------------------------------------------------------------------|--------------------------------|
 | [NFT contract with PSP34](../nft/nft.md)              | Intermediate ink! -  Basic Rust       |          
-| [Implement Uniswap V2 core DEX](../dex/uniswap-v2-dex-in-ink.md) | Advanced ink! - Basic Rust |
+| [Implement Uniswap V2 core DEX](../dex/dex.md) | Advanced ink! - Basic Rust |
 
 ### To follow this tutorial you will need:
 - To [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md).

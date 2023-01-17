@@ -1,7 +1,7 @@
 # Custom Trait
 
-As a next step we want to expand contract with more utility methods to have more control over the nft creation, minting, payments and all that most of the nft projects will need.
-To start with we will move mint() from contract lib.rs to a custom trait `PayableMint`.
+As a next step we want to expand contract with more utility methods to have more control over the NFT creation, minting, payments and all that most of the NFT projects will need.
+To start with we will move `mint()` from contract `lib.rs` to a custom trait `PayableMint`.
 
 ## Folder Structure for Custom Trait
 Before starting to add code we need to prepare the scene for the external trait. Create new `logics` folder with following empty files:
@@ -25,8 +25,8 @@ Before starting to add code we need to prepare the scene for the external trait.
         └── payable_mint.rs
 ```
 
-## Module linking
-With the extended structure we need to link all new modules. Let's start from `logics` folder:
+## Module Linking
+With the extended structure we need to link all new modules. Let's start from `logics` folder.   
 The crate's `lib.rs` needs to point to impls and trait folders and since it is top module for this crate it needs a few macros:
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
@@ -36,7 +36,7 @@ pub mod impls;
 pub mod traits;
 ```
 
-The crate's `Cargo.toml` will import all ink! and Openbrush crates and it will be used by the contract's Cargo.toml to import all methods. We will name this package `payable_mint`
+The crate's `Cargo.toml` will import all ink! and Openbrush crates and it will be used by the contract's `Cargo.toml` to import all methods. We will name this package `payable_mint`.
 ```toml
 [package]
 name = "payable_mint_pkg"
@@ -76,11 +76,11 @@ std = [
     "openbrush/std",
 ]
 ```
-Add same `mod.rs` file in folders: traits, impls, impls/payable_mint
+Add same `mod.rs` file in folders: traits, impls, and impls/payable_mint.
 ```rust
 pub mod payable_mint;
 ```
-As a last step add link to `payable_mint` in Contract's Cargo.toml
+As a last step add link to `payable_mint` in contract's `Cargo.toml`.
 ```toml
 payable_mint_pkg = { path = "../../logics", default-features = false }
 
@@ -92,7 +92,7 @@ std = [
 ]
 ```
 
-## Define custom trait 
+## Define Custom Trait 
 In `logics/traits/payable_mint.rs` add trait definition for PayableMint.
 ```rust
 use openbrush::{
@@ -117,8 +117,8 @@ pub trait PayableMint {
 
 You may notice a couple of new macro commands used. More details on these and other macros can be found throughout the advanced tutorial for DEX.
 
-## Move mint() to Custom trait implementation
-Now let's move `mint()` method from the contract's lib.rs to the newly created `logics/impls/payable_mint.rs` file. We do not want to have duplicated calls in the contract.
+## Move `mint()` to Custom Trait Implementation
+Now let's move `mint()` method from the contract's `lib.rs` to the newly created `logics/impls/payable_mint.rs` file. We do not want to have duplicated calls in the contract.
 
 ```rust
 pub use crate::traits::payable_mint::PayableMint;
@@ -149,7 +149,7 @@ where
     }
 }
 ```
-Last remaining step is to import and implement `PayableMint` for our `Contract`:
+Last remaining step is to import and implement `PayableMint` for our contract:
 ```rust
 use payable_mint::{
     traits::payable_mint::*,
