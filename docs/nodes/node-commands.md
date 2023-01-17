@@ -350,3 +350,6 @@ To see full node command binary embedded documentation, please use help option.
 ```
 $ ./astar-collator -h
 ```
+
+Node process will be launched with Parachain ID 2006 for Astar, 2007 for Shiden, 1000 for Shibuya.
+Parachain ID info for each network can be found [here](/docs/quickstart/endpoints/#public-endpoints).
