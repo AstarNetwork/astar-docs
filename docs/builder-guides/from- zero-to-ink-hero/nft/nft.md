@@ -1,1 +1,48 @@
-TODO
+---
+sidebar_position: 1
+---
+
+# Prerequisites
+
+This tutorial targets developers with an **intermediate** level in ink! and Rust.   
+Please follow this tutorial first:
+
+| Tutorial                                                                   | Difficulty                     |
+|----------------------------------------------------------------------------|--------------------------------|
+| Your first flipper contract              | Basic ink! -  Basic Rust       |          
+
+# To follow this tutorial you will need:
+- to [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md)
+- Basic Rust knowledge. [Learn Rust](https://www.rust-lang.org/learn)
+- Prior knowledge about ERC721 is helpful but not mandatory
+
+# What will we do?
+In this tutorial we will implement PSP34 in ink! with additional functions often seen in NFT projects.
+- [PSP34 standard](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md)
+
+# What will be used?
+
+[ink! 3.4.0 (latest)](https://github.com/paritytech/ink/tree/v3.4.0)   
+[Openbrush 2.3.0 (latest)](https://github.com/Supercolony-net/openbrush-contracts/tree/v2.3.0)
+
+# What will you learn?
+- Full implementation of NFT project in ink!
+- Use Openbrush wizard to create PSP34 smart contract
+- File structure for a smart contract with an additional trait
+- Trait and generic implementation in separate files
+- Unit test for smart contract
+- Event handling
+
+# Summary
+
+I. OpenBrush wizard
+
+II. Override mint() method 
+
+III Custom Trait for mint()
+
+IV. PayableMint Trait definition
+
+V. PayableMint Trait implementation
+
+VI. Events
