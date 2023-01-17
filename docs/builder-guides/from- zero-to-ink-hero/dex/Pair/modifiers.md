@@ -7,7 +7,7 @@ sidebar_position: 6
 Modifiers basically checks a condition prior to entering a function. By defining modifiers you will reduce code redundancy (keep it DRY) and increase its readability as you will not have to add guards for each of your functions.     
 Pair contract defines and uses [lock](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L31) modifier that prevents from reentrancy. In **initialize** it also ensure that the [caller is the factory](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67), it can be used as modifier.
 
-### 1. Reentrancy guard
+## 1. Reentrancy guard
 
 To protect callable functions from reentrancy we will use [reentrancy guard](https://github.com/Supercolony-net/openbrush-contracts/blob/d6e29f05fd462e4e027de1f2f9177d594a5a0f05/contracts/src/security/reentrancy_guard/mod.rs#L54) modifier from openbrush. It save the lock status in storage (either `ENTERED` or `NOT_ENTERED`) and prevents reentrancy.
 In *./contracts/pair/Cargo.toml* add `"reentrancy_guard"` feature to Openbrush dependency:
@@ -111,7 +111,7 @@ impl From<ReentrancyGuardError> for PairError {
 }
 ```
 
-### 2. Only owner
+## 2. Only owner
 
 In **initialize** there is a guard that ensure [caller is the factory](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67). We can use [ownable modifier](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/access/ownable/mod.rs) that will store the deployer address on storage and restrict function access to this address.
 In *./contracts/pair/Cargo.toml* add `"ownable"` feature to Openbrush dependency:
@@ -235,8 +235,8 @@ impl From<OwnableError> for PairError {
 ```
 
 And that's it!    
-You learned how to import and use modifiers from openbrush.
-You can also implement your own modifier, check this [tutorial](https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76).      
+
+You learned how to import and use modifiers from openbrush. You can also implement your own modifier, check this [tutorial](https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76).      
 Check your Pair contract with (to run in contract folder):
 ```console
 cargo contract build

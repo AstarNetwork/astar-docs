@@ -6,7 +6,7 @@ sidebar_position: 5
 
 If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/burn_end) and open it in your IDE.
 
-### 1. Add Swap functions to Pair trait
+## 1. Add Swap functions to Pair trait
 
 We will implement [swap](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L159) function of Pair contract.  
 [Swap](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps) is a way for traders to trade one PSP22 token for another in a simple way.    
@@ -36,7 +36,7 @@ pub trait Pair {
 }
 ```
 
-### 2. Swap
+## 2. Swap
 
 First check user inputs then *get_reserves* and check liquidity:
 ```rust
@@ -242,7 +242,7 @@ pub enum PairError {
 }
 ```
 
-### 3. Implement Event
+## 3. Implement Event
 
 in the contracts *./cotnracts/pair/lib.rs* add the Event struct and override the implementation of emit event:
 ```rust
@@ -283,9 +283,8 @@ impl Pair for PairContract {
 ...
 ```
 
-And that's it!
-Check your Pair contract with (to run in contract folder):
+And that's it! Check your Pair contract with (to run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/swap_end)
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/swap_end).

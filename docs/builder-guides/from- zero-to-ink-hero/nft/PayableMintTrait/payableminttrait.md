@@ -15,7 +15,7 @@ use ink_prelude::string::String as PreludeString;
 This method can change base_uri for our collection. This is not often used function but it can come handy in case collection metadata has an error and requires change. Initial `base_uri` will be set during the contract creation and that is described in next section of the tutorial.
 
 ### withdraw()
-Since our contract not takes funds for minting, the contract owner needs to be able to withdraw the funds. Otherwise funds will be forever locked on the contract. This method will have `only_owner` modifier and it allows only contract owner to withdraw funds. The funds will be sent to the owner's address.
+Since our contract now takes native token fees for minting, the contract owner needs to be able to withdraw the funds. Otherwise funds will be forever locked in the contract. This method will have `only_owner` modifier and it allows only contract owner to withdraw funds. The funds will be sent to the owner's address.
 
 
 ### token_uri(token_id: u64) -> PreludeString

@@ -7,7 +7,7 @@ sidebar_position: 3
 in factory contract prior entering **setFeeTo** and **setFeeToSetter** there is a [check](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L41) that caller is `feeToSetter`.
 Let's create a custom modifier for it.
 
-### only_fee_setter
+## only_fee_setter
 
 In *.logics/impls/factory/factory.rs* import `modifier_definition` and `modifiers`:
 ```rust
@@ -70,9 +70,8 @@ pub enum FactoryError {
 }
 ```
 
-And that's it!     
-Check your Factory contract with (to run in contract folder):
+And that's it! Check your Factory contract with (to run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_modifiers)
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_modifiers).

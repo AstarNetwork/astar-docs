@@ -166,14 +166,14 @@ default fn token_uri(&self, token_id: u64) -> Result<PreludeString, PSP34Error> 
 ## Update contract
 Since we have added new type `Data` let's import it:
 ```rust
-use pallet_payable_mint::impls::payable_mint::*;
+use payable_mint::impls::payable_mint::*;
 ```
 And add new element in the `struct Contract`:
 ```rust
 #[storage_field]
 payable_mint: types::Data,
 ```
-Update constructor to accept new parameters
+Update constructor to accept new parameters:
 ```rust
 #[ink(constructor)]
 pub fn new(

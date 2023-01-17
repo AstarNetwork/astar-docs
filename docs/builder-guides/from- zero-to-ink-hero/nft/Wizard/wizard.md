@@ -2,11 +2,11 @@
 
 ## Use wizard to generate generic PSP34 code
 
-To create a smart contract whish follows PSP34 standard use Openbrush wizard:
+To create a smart contract which follows PSP34 standard use Openbrush wizard:
 1. Open [openbrush.io](https://openbrush.io/) website and go to bottom of the page (Try it out)
 2. Select PSP34
-3. Select version to match rest of the tutorial
-4. Name your contract. This tutorial will be called Shiden34
+3. Select version to match rest of the tutorial. Check *What will be used* in the [Prerequisites chapter](../nft.md)
+4. Name your contract. This tutorial will call it Shiden34
 5. Select extensions *Metadata*, *Mintable*, *Enumerable*
 6. Under Security pick *Ownable*
 7. Copy `lib.rs` and `Cargo.toml`
@@ -72,7 +72,7 @@ pub mod shiden34 {
 }
 ```
 
-Your Cargo.toml file should look like this:
+Your `Cargo.toml` should now look like this:
 ```toml
 [package]
 name = "shiden34"
@@ -158,11 +158,11 @@ cargo check
 ## Examine Openbrush traits 
 Let's examine what we have inside module shiden34 (lib.rs) so far:
 * Defined structure `Contract` for contract storage
-* Implemented `new()` method for structure `Contract`
+* Implemented constructor `new()` for `Contract` structure
 * Implemented Openbrush traits *PSP34, Metadata, Mintable, Enumberable, Ownable* for structure `Contract`
-* Overriden `mint()` method from trait *Mintable*. More about this in next section.
+* Overridden `mint()` method from trait *Mintable*. More about this in next section.
 
-Each of implemented traits will enrich shiden34 contract with a set of methods. To examine which methods you now have available check:
+Each of implemented traits will enrich Shiden34 contract with a set of methods. To examine which methods you now have available check:
 * Openbrush [PSP34 trait](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/psp34.rs) brings all familiar functions from ERC721 plus a few extra:
     * `collection_id()`
     * `balance_of()`

@@ -35,10 +35,11 @@ The crate's `lib.rs` needs to point to impls and trait folders and since it is t
 pub mod impls;
 pub mod traits;
 ```
-The crate's Cargo.toml file will import all ink! and openbrush crates and it will be used by the contract's Cargo.toml to import all methods. We will name this package `pallet_payable_mint`
+
+The crate's `Cargo.toml` will import all ink! and Openbrush crates and it will be used by the contract's Cargo.toml to import all methods. We will name this package `payable_mint`
 ```toml
 [package]
-name = "pallet_payable_mint"
+name = "payable_mint_pkg"
 version = "0.2.0"
 authors = ["Stake Technologies <devops@stake.co.jp>"]
 edition = "2021"
@@ -79,14 +80,20 @@ Add same `mod.rs` file in folders: traits, impls, impls/payable_mint
 ```rust
 pub mod payable_mint;
 ```
-As a last step add link to `pallet_payable_mint` in Contract's Cargo.toml
+As a last step add link to `payable_mint` in Contract's Cargo.toml
 ```toml
-pallet_payable_mint = { path = "../../logics", default-features = false }
+payable_mint_pkg = { path = "../../logics", default-features = false }
 
+[features]
+default = ["std"]
+std = [
+    // ...
+    "payable_mint_pkg/std",
+]
 ```
 
 ## Define custom trait 
-In `logics/traits/payable_mint.rs` add trait definition for Payablemint.
+In `logics/traits/payable_mint.rs` add trait definition for PayableMint.
 ```rust
 use openbrush::{
     contracts::{
@@ -107,7 +114,9 @@ pub trait PayableMint {
     fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error>;
 }
 ```
-You may notice a couple of new macro commands used. More details on these and other macros can be found in the next tutorial for DEX.
+
+You may notice a couple of new macro commands used. More details on these and other macros can be found throughout the advanced tutorial for DEX.
+
 ## Move mint() to Custom trait implementation
 Now let's move `mint()` method from the contract's lib.rs to the newly created `logics/impls/payable_mint.rs` file. We do not want to have duplicated calls in the contract.
 
@@ -140,9 +149,9 @@ where
     }
 }
 ```
-Last remaining step is to import and implement `PayableMint for our Contract:
+Last remaining step is to import and implement `PayableMint` for our `Contract`:
 ```rust
-use pallet_payable_mint::{
+use payable_mint::{
     traits::payable_mint::*,
 };
 
@@ -150,7 +159,6 @@ use pallet_payable_mint::{
 
 impl PayableMint for Contract {}
 ```
-
 
 Your contract with all changes should now look like this:
 ```rust
@@ -168,8 +176,7 @@ pub mod shiden34 {
 	use openbrush::contracts::ownable::*;
 	use openbrush::contracts::psp34::extensions::enumerable::*;
 	use openbrush::contracts::psp34::extensions::metadata::*;
-
-	use pallet_payable_mint::{
+	use payable_mint::{
         traits::payable_mint::*,
     };
 

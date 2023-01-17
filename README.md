@@ -42,6 +42,24 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
       - Once PR is up, **CICD** will automatically build you a unique staging link you can see progress of this on Actions tab in Github
       - Get feedback from team
 
+### Working with images
+
+  - Please import and use tag `<Figure/>` instead of `![image]` as this enables smoother translation of docs to other languages (automatic reference to original images, no need to copy images to translated subfolders)
+    
+    - Example - as seen [here](https://github.com/AstarNetwork/astar-docs/blob/d530139ca7a5ab034a783981d313542e02fdfb54/docs/about/token-economics/inflationary-model.md):
+      
+      top of file:
+      ```
+      import Figure from "/src/components/figure"
+      ```
+      
+      within the file:
+      ```
+      <Figure caption="Tokenomics Model" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" /> 
+      ```
+
+    - Please use absolute path to image (e.g. `/docs/about/token-economics/img/tokenomics_1.png` instead `img/tokenomics_1.png`
+
 ### Deploy to production
 
   - When PR is ready for merge, merge it by clicking the button at the bottom saying **Merge and Close**
