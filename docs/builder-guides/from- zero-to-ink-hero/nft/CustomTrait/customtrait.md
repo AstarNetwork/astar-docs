@@ -35,6 +35,7 @@ The crate's `lib.rs` needs to point to impls and trait folders and since it is t
 pub mod impls;
 pub mod traits;
 ```
+
 The crate's `Cargo.toml` will import all ink! and Openbrush crates and it will be used by the contract's Cargo.toml to import all methods. We will name this package `payable_mint`
 ```toml
 [package]
@@ -113,7 +114,9 @@ pub trait PayableMint {
     fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error>;
 }
 ```
+
 You may notice a couple of new macro commands used. More details on these and other macros can be found throughout the advanced tutorial for DEX.
+
 ## Move mint() to Custom trait implementation
 Now let's move `mint()` method from the contract's lib.rs to the newly created `logics/impls/payable_mint.rs` file. We do not want to have duplicated calls in the contract.
 
@@ -173,7 +176,6 @@ pub mod shiden34 {
 	use openbrush::contracts::ownable::*;
 	use openbrush::contracts::psp34::extensions::enumerable::*;
 	use openbrush::contracts::psp34::extensions::metadata::*;
-
 	use payable_mint::{
         traits::payable_mint::*,
     };

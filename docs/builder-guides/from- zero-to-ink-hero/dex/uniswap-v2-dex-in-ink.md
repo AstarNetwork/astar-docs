@@ -3,7 +3,6 @@ sidebar_position: 1
 ---
 
 # Prerequisites
-
 This tutorial targets developers with an **advanced** level in ink! and an **intermediate** level in Rust.
 
 # To follow this tutorial you will need:
@@ -11,8 +10,7 @@ This tutorial targets developers with an **advanced** level in ink! and an **int
 - To have knowledge about AMM & [Uniswap V2 implementation](https://docs.uniswap.org/contracts/v2/overview) (as this tutorial will focus on implementation).
 
 ## What will we do?
-
-in this tutorial we will implement in ink! the follow contracts from the Solidity implementation of Uniswap V2 Core
+In this tutorial we will implement in ink! the follow contracts from the Solidity implementation of Uniswap V2 Core
 - [Pair](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol)
 - [Factory](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol)
 

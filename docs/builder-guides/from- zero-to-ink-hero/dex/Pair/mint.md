@@ -417,4 +417,4 @@ Check your Pair contract with (to run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/mint_end)
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/mint_end).

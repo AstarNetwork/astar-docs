@@ -133,7 +133,8 @@ Inside the `traits` folder there is one file per contract. Inside the `impls` th
 └── lib.rs
 ```
 
+
 ## Resources 
-OpenBrush - [Setup a project](https://docs.openbrush.io/smart-contracts/example/setup_project)
+OpenBrush - [Setup a project](https://docs.openbrush.io/smart-contracts/example/setup_project).
 
 

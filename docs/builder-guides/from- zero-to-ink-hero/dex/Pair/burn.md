@@ -7,8 +7,6 @@ sidebar_position: 4
 If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
 
 ## 1. Add Burn functions to Pair trait
-
-
 We will implement [burn](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L134) function of Pair contract.   
 In *./logics/traits/pair.rs* add the **burn** function to Pair trait as well as internal child function **_safe_transfer**.
 Also add the function to emit burn event that will have to be implemented in the contract:
@@ -218,3 +216,4 @@ Check your Pair contract with (to run in contract folder):
 cargo contract build
 ```
 It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/burn_end).
+

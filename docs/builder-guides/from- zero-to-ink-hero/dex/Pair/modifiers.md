@@ -235,6 +235,7 @@ impl From<OwnableError> for PairError {
 ```
 
 And that's it!    
+
 You learned how to import and use modifiers from openbrush. You can also implement your own modifier, check this [tutorial](https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76).      
 Check your Pair contract with (to run in contract folder):
 ```console
