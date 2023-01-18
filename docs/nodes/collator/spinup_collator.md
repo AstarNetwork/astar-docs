@@ -2,11 +2,64 @@
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Spin up a Collator
 
 :::caution
 Collators are responsible for the network stability, it is very important to be able to react at any time of the day or night in case of trouble. We strongly encourage collators to set up a monitoring and alerting system, learn more about this from our ['Secure Setup Guide'](/docs/nodes/collator/secure_setup_guide/).
 :::
+
+### Service Parameters
+
+<Tabs>
+<TabItem value="astar" label="Astar" default>
+
+```sh
+./astar-collator \
+  --collator \
+  --rpc-cors all \
+  --name {NODE_NAME} \
+  --base-path {DB_PATH} \
+  --trie-cache-size 0 \
+  --prometheus-external \
+  --chain astar \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+```
+
+</TabItem>
+<TabItem value="shiden" label="Shiden" default>
+
+```sh
+./astar-collator \
+  --collator \
+  --rpc-cors all \
+  --name {NODE_NAME} \
+  --base-path {DB_PATH} \
+  --trie-cache-size 0 \
+  --prometheus-external \
+  --chain shiden \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+```
+
+</TabItem>
+<TabItem value="shibuya" label="Shibuya" default>
+
+```sh
+./astar-collator \
+  --collator \
+  --rpc-cors all \
+  --name {NODE_NAME} \
+  --base-path {DB_PATH} \
+  --trie-cache-size 0 \
+  --prometheus-external \
+  --chain shibuya \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+```
+
+</TabItem>
+</Tabs>
 
 ### Verify synchronization
 
