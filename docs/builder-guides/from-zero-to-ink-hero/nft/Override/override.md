@@ -1,4 +1,4 @@
-# Override mint() method
+# Override `mint()` Method
 
 ## Mint allowed only for owner
 
@@ -27,9 +27,9 @@ _instance._init_with_owner(_instance.env().caller());
 ```
 
 At this step of tutorial we will make couple of changes:
-* We do not want tokens to be mintable only by owner. We want everyone who paid to be able to mint 
-* Charge 1 SDN token for each minted token (or any other native token depending on the used network)
-* Constructor will not call mint method
+* We do not want tokens to be mintable only by owner. We want everyone who paid to be able to mint. 
+* Charge 1 SDN token for each minted token (or any other native token depending on the used network).
+* Constructor will not call mint method.
 
 
 ## Add payable mint() method

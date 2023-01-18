@@ -1,15 +1,15 @@
 # Openbrush Wizard
 
-## Use wizard to generate generic PSP34 code
+## Use the Wizard to generate generic PSP34 code
 
-To create a smart contract which follows PSP34 standard use Openbrush wizard:
-1. Open [openbrush.io](https://openbrush.io/) website and go to bottom of the page (Try it out)
-2. Select PSP34
-3. Select version to match rest of the tutorial. Check *What will be used* in the [Prerequisites chapter](../nft.md)
-4. Name your contract. This tutorial will call it Shiden34
-5. Select extensions *Metadata*, *Mintable*, *Enumerable*
-6. Under Security pick *Ownable*
-7. Copy `lib.rs` and `Cargo.toml`
+To create a smart contract which follows PSP34 standard use Openbrush Wizard:
+1. Open [Openbrush.io](https://openbrush.io/) website and go to bottom of the page.
+2. Select PSP34.
+3. Select the version to match the rest of the tutorial. Check *What will be used* in the [prerequisites chapter](../nft.md).
+4. Name your contract. In this tutorial we will use `shiden34`.
+5. Select extensions: *Metadata*, *Mintable*, *Enumerable*.
+6. Under Security pick *Ownable*.
+7. Copy `lib.rs` and `Cargo.toml`.
 
 Your `lib.rs` file should look like this:
 ```rust
@@ -122,7 +122,7 @@ ink-as-dependency = []
 
 ```
 
-Make the folder structure or use Swanky-cli like this:
+Make the folder structure or use `Swanky-cli` like this:
 ```bash
 .
 └── contracts
@@ -150,19 +150,20 @@ And your folder structure will look like:
         ├── Cargo.toml
         └── lib.rs
 ```
-You are now ready to check if all is set. Run in root project folder:
+You are now ready to check if all is set.   
+Run in root project folder:
 ```bash
 cargo check
 ```
 
-## Examine Openbrush traits 
-Let's examine what we have inside module shiden34 (lib.rs) so far:
-* Defined structure `Contract` for contract storage
-* Implemented constructor `new()` for `Contract` structure
-* Implemented Openbrush traits *PSP34, Metadata, Mintable, Enumberable, Ownable* for structure `Contract`
+## Examine Openbrush Traits 
+Let's examine what we have inside module `shiden34` (lib.rs) so far:
+* Defined structure `Contract` for contract storage.
+* Implemented constructor `new()` for `Contract` structure.
+* Implemented Openbrush traits *PSP34, Metadata, Mintable, Enumberable, Ownable* for structure `Contract`.
 * Overridden `mint()` method from trait *Mintable*. More about this in next section.
 
-Each of implemented traits will enrich Shiden34 contract with a set of methods. To examine which methods you now have available check:
+Each of implemented traits will enrich `shiden34` contract with a set of methods. To examine which methods you now have available check:
 * Openbrush [PSP34 trait](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/psp34.rs) brings all familiar functions from ERC721 plus a few extra:
     * `collection_id()`
     * `balance_of()`
@@ -183,31 +184,31 @@ Each of implemented traits will enrich Shiden34 contract with a set of methods. 
     * `transferOwnership()`
     * `owner()`
 
-Major differences when compared with ERC721 are
-* `Metadata` trait brings possibility to define numerous attributes
-* `PSP34` trait brings collection_id() which can be used or ignored in contracts
+Major differences when compared with ERC721 are:
+1. `Metadata` trait brings possibility to define numerous attributes
+2. `PSP34` trait brings collection_id() which can be used or ignored in contracts
 
-We could have used `Burnable` trait as well but for simplicity sake it is skipped in this tutorial since burning can be performed by sending a token to address 0x00.
+We could have used `Burnable` trait as well but for simplicity it is skipped in this tutorial since burning can be performed by sending a token to address 0x00.
 
 After this step your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/wizard-step1).
 
 ## Build, Deploy and Interact with the Contract
-Build your contract with
+Build your contract:
 ```bash
 cd contracts/shiden34
 cargo contract build --release
 ```
-Use ***shiden34.contract*** target to deploy contract. The file is located in this folder:
+Use ***shiden34.contract*** target to deploy contract.   
+The file is located in this folder:
 ```
 ls target/ink/shiden34/
 ```
 
-To deploy your contract using Polkadot.js you can follow [instructions](https://docs.astar.network/docs/wasm/sc-dev/polkadotjs-ui).
-Other easy way to deploy your contract is by using [contracts-ui](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network).
+To deploy your contract using Polkadot.js you can follow [instructions](https://docs.astar.network/docs/wasm/sc-dev/polkadotjs-ui). Other easy way to deploy your contract is by using the [contracts-ui](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network).
 
 You can start interacting with your contract. You will notice that one token is already minted. This is due to the `mint()` call in the contract's constructor `new()`.
-* Try minting another token by calling `mint()`
-* Read the token `ownerOf()` for your newly minted token
-* Check that `totalSupply()` has increased
+* Try minting another token by calling `mint()`.
+* Read the token `ownerOf()` for your newly minted token.
+* Check that `totalSupply()` has increased.
 
 
