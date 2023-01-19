@@ -129,3 +129,19 @@ module.exports = {
 ```
 
 Deploy/Migrate by running `truffle migrate --network shibuya`, replacing `shibuya` with your chosen network. If `--network` is not specified, the network values under`development` will be used.
+
+## Your own RPC server
+
+For EVM developers and projects could be reasonable to have own EVM endpoints. In case of using public endpoints the project will depend of this endpoint, centralized EVM RPC can become single point of failure. Officially Astar team recommend projects to use their own managed EVM endpoints.
+
+Fortunately launch Astar Network endpoint is not that difficult.
+
+> By default EVM RPC server is disabled, for turn it on please add `--enable-evm-rpc` flag into launch string.
+
+```
+astar-collator --chain=shiden --enable-evm-rpc --unsafe-rpc-external --unsafe-ws-external
+```
+
+Launch string above start Astar Collator for Shiden network. HTTP endpoint becomes available on port `9933` and WS on port `9944`.
+
+We also could recommend take attention to `--ws-max-connections` parameter, by default it relatively small and you probably would increase it to couple of thousands.
