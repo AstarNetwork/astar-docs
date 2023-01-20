@@ -132,7 +132,9 @@ Deploy/Migrate by running `truffle migrate --network shibuya`, replacing `shibuy
 
 ## Your own RPC server
 
-For EVM developers and projects could be reasonable to have own EVM endpoints. In case of using public endpoints the project will depend of this endpoint, centralized EVM RPC can become single point of failure. Officially Astar team recommend projects to use their own managed EVM endpoints.
+For EVM developers and projects, it is reasonable to have their own managed EVM endpoints. Relying on public endpoints introduces, introduces the risk of relying on centralized endpoints which can become single point of failure.
+
+Astar team officially recommends projects to use their own managed EVM endpoints.
 
 Fortunately launch Astar Network endpoint is not that difficult.
 
