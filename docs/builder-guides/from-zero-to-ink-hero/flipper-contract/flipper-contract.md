@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Prerequisites
 
-This tutorial targets developers with an **beginner** level in ink! and an **beginner** level in Rust.   
+This tutorial targets developers with no experience in ink! and a **basic** level in Rust.
 
 ## To follow this tutorial you will need:
 - to [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md)
