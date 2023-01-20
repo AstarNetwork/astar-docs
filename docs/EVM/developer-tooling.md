@@ -136,7 +136,7 @@ For EVM developers and projects, it is reasonable to have their own managed EVM 
 
 Astar team officially recommends projects to use their own managed EVM endpoints.
 
-Fortunately launch Astar Network endpoint is not that difficult.
+Fortunately, launching Astar Network endpoint is not that difficult.
 
 :::note
 By default EVM RPC server is disabled, to turn it on please add `--enable-evm-rpc` flag into the launch string.
