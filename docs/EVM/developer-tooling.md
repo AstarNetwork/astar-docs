@@ -148,4 +148,4 @@ astar-collator --chain=shiden --enable-evm-rpc --unsafe-rpc-external --unsafe-ws
 
 Launch string above will start Astar Collator for Shiden network. HTTP endpoint becomes available on port `9933` and WS on port `9944`.
 
-We also could recommend take attention to `--ws-max-connections` parameter, by default it relatively small and you probably would increase it to couple of thousands.
+We also recommend to pay attention to the `--ws-max-connections` parameter. By default it relatively small and you will probably want to increase it to couple of thousands.
