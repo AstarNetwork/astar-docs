@@ -296,3 +296,5 @@ impl Flipper {
 
 Here is the guide how to deploy your contract. Once you deploy it, you can interact with the contracts there:
 [deploy using Polkadot UI](https://docs.astar.network/docs/wasm/sc-dev/polkadotjs-ui/).
+
+In this [wasm-flipper](https://github.com/AstarNetwork/wasm-flipper) repository, it explains how to compile and deploy with swanky, and you can interact with contract from UI.
