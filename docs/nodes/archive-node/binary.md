@@ -154,7 +154,7 @@ Start the service:
 sudo systemctl start astar.service
 ```
 
-Check the node log and that everything is syncing fine:
+Check the node log to ensure proper syncing:
 
 ```sh
 journalctl -f -u astar.service -n100
@@ -166,7 +166,7 @@ Enable the service:
 sudo systemctl enable astar.service
 ```
 
-You can test the node health through RPC port with this command:
+You can test the node health through the RPC port with this command:
 
 ```sh
 curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9933
@@ -178,9 +178,9 @@ For any usage, wait for the chain to be fully sync by checking the [node log](/d
 
 It all depends on what you plan to do with your archive node.
 
-- In most cases, you will want to access node from outside. In this case, [nginx server](/docs/nodes/archive-node/nginx) is one of available options.
-- If you run your dapp on the same server than the node (recommended for testing purpose only), you can access it directly with the `localhost` address.
-- If you run the node locally for testing purpose, you can for example switch network into [Polkadot.js portal](https://polkadot.js.org/apps) and explore the chain:
+- In most cases, you will want to access node from outside. In this case, [nginx server](/docs/nodes/archive-node/nginx) is the recommended option.
+- If you run your dApp on the same server as the node, then you can access it directly with the `localhost` address. This setup is recommended for testing purpose only.
+- If you run the node locally for testing purpose, you can switch the network in [Polkadot.js portal](https://polkadot.js.org/apps) and explore the chain:
 
 ![1](img/1.png)
 
@@ -233,8 +233,8 @@ sudo systemctl start astar.service
 
 ### Relay Chain snapshot
 
-If you run your collator it not only needs to sync the mainnet chain but also the complete relay chain from Kusama / Polkadot. This can take up to 3-4 days. You can also use a snapshot of Kusama/Polkadot. You can download this [here](https://polkashots.io/) and will save a lot of time.
+If you run a collator it not only needs to sync the mainnet chain but also the complete relay chain from Polkadot/Kusama. This can take up to 3-4 days. Alternatively, you can use a [snapshot of Polkadot/Kusama](https://polkashots.io/) to save a lot of time.
 
 :::caution
-know what you are doing when using snapshots!
+Only use snapshots if you are familiar with how to use them! You can learn more about Polkadot's snapshot services [**here**](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#database-snapshot-services).
 :::
