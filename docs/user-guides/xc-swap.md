@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Swap Cross-Chain Assets from Major EVM Chains to Astar
