@@ -40,6 +40,4 @@ This is a 2-step process.
 4. Enter the password that you saved from Step 1 and click”Restore”.
 5. he wallet is now restored on the Polkadot.js extension.
 6. Click on the 3 dots and select “Allow use on any chain”.
-7. Your ECDSA wallet is now restored on Polkadot.js and you can use with Astar Portal.
-
-:::
+7. Your ECDSA wallet is now restored on Polkadot.js and you can use it with Astar Portal.
