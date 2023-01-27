@@ -153,8 +153,25 @@ And your folder structure will look like:
 You are now ready to check if all is set.   
 Run in root project folder:
 ```bash
+cargo check
+```
+
+:::tip
+
+if your rustup is setup to use stable toolchain as default (instead of nigthly) build, you might get this error: ```error[E0554]: `#![feature]` may not be used on the stable release channel```
+
+In that case please run the following command instead:
+```bash
 cargo +nightly check
 ```
+
+or change your defauilt toolchain to nightly:
+```bash
+rustup default nightly
+```
+
+:::
+
 
 ## Examine Openbrush Traits 
 Let's examine what we have inside module `shiden34` (lib.rs) so far:
