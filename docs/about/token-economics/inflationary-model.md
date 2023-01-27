@@ -27,14 +27,18 @@ In the following chapters, we will only mention Astar and ASTR token but same ap
 
 Previous chapters defined initial ASTR token distribution. However, Astar uses an inflationary tokenomics model (unbound supply) where tokens are issued each time a new block is produced. These tokens drive the dApps staking system and are used to reward stakers and collators.
 
-For each produced block, Astar will issue a fixed number of tokens. These numbers were picked to achieve approximate 10% inflation for the first year, assuming a new block is produced every **12** seconds.
+For each produced block, Astar will issue a fixed number of tokens. Initially, these numbers were picked to achieve approximate 10% inflation of the initial supply.
 
-| Network | Issued Per Block |
-| ------- | ---------------- |
-|  Astar  |     266.4 ASTR   |
-| Shiden  |      2.664 SDN   |
+Since January 2023, Astar inflation has been reduced by 5% to ~665,000,000 ASTR yearly.
 
-The reader might notice that Astar issues 100 times more tokens per block than Shiden. This is due to Astar having a 100 times greater initial supply than Shiden.
+| Network | Issued Per Block | Issued Per Era* |
+| ------- | ---------------- | --------------  |
+|  Astar  |    253.08 ASTR   | 1,822,176 ASTR  |
+| Shiden  |      2.664 SDN   |  19,180.8 SDN   |
+
+\* 1 era =~ 1 day, assuming a new block is produced every **12** seconds.
+
+The reader might notice that Astar issues 95 times more tokens per block than Shiden. This is due to Astar having a 100 times greater initial supply than Shiden.
 
 ### Beneficiaries
 
@@ -58,6 +62,8 @@ Treasury receives a variable portion of block reward. It is primarily used as re
 `dApps staking`, Astar's innovative developer incentive mechanism, receives a variable portion of the block rewards depending on current **total value locked** (or **TVL** in further text) in dApps staking.
 
 Part of it is dedicated for supporting dApp developers while another part goes towards stakers who locked their ASTR to *stake* or *vote* for a dApp.
+
+![inflation_graphic](img/inflation_1.png)
 
 ### Model Overview
 

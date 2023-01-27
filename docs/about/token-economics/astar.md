@@ -4,15 +4,15 @@ sidebar_position: 2
 
 # $ASTR Allocation
 
-**Total token supply**: 7,000,000,000
+**Total initial supply**: 7,000,000,000
 
 **Token ticker**: $ASTR
 
 **Token decimals**: 18
 
-**Inflation**: 10% (yearly)
+**Inflation**: ~665,000,000 yearly
 
-| Title | % |
+| Allocation | % |
 |----|----|
 |Users and Early Supporters| 30|
 |Parachain Auction in 2021 | 20 |

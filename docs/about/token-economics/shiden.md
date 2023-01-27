@@ -4,13 +4,13 @@ sidebar_position: 3
 
 # $SDN Allocation
 
-**Total token supply**: 70,000,000
+**Total initial supply**: 70,000,000
 
 **Token ticker**: $SDN
 
-**Inflation**: 10% (yearly)
+**Inflation**: ~7,000,000 yearly
 
-| Title | % |
+| Allocation | % |
 |----|----|
 |Users and Early Supporters| 30|
 |Parachain Auctions | 30 |
