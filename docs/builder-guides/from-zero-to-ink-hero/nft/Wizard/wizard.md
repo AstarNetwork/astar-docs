@@ -153,7 +153,7 @@ And your folder structure will look like:
 You are now ready to check if all is set.   
 Run in root project folder:
 ```bash
-cargo check
+cargo +nightly check
 ```
 
 ## Examine Openbrush Traits 
