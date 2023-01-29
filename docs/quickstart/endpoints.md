@@ -76,7 +76,6 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 | HTTPS | Astar Team: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
 |         | BlastAPI: https://shibuya.public.blastapi.io |
 |         | Dwellir: https://shibuya-rpc.dwellir.com |
-|         
 | Websocket | Astar Team: wss://rpc.shibuya.astar.network |
 |           | BlastAPI: wss://shibuya.public.blastapi.io |
 |           | Dwellir: wss://shibuya-rpc.dwellir.com |
