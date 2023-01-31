@@ -157,19 +157,17 @@ cargo check
 ```
 
 :::tip
+if your rust environment is setup to use stable toolchain as default (instead of nigthly build), you might get this error:
+```error[E0554]: `#![feature]` may not be used on the stable release channel```
 
-if your rustup is setup to use stable toolchain as default (instead of nigthly) build, you might get this error: ```error[E0554]: `#![feature]` may not be used on the stable release channel```
-
-In that case please run the following command instead:
+In that case try to run the following command instead:
 ```bash
 cargo +nightly check
 ```
-
 or change your defauilt toolchain to nightly:
 ```bash
 rustup default nightly
 ```
-
 :::
 
 
