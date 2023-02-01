@@ -12,7 +12,7 @@ This tutorial targets developers with no experience in ink! and a **basic** leve
 | [Implement Uniswap V2 core DEX](../dex/dex.md) | Advanced ink! - Basic Rust |
 
 ### To follow this tutorial you will need:
-- To [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md).
+- To [set up your ink! environment](../../xvm_wasm/setup_your_ink_environment.md).
 - Basic Rust knowledge. [Learn Rust](https://www.rust-lang.org/learn).
 
 ### What will we do?

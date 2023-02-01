@@ -11,7 +11,7 @@ This tutorial targets developers with an **advanced** level in ink! and an **int
 | [NFT contract with PSP34](../nft/nft.md)              | Intermediate ink! -  Basic Rust       |          
 
 # To follow this tutorial you will need:
-- To [set up your ink! environment](../../XVM%20and%20WASM/setup_your_ink_environment.md).
+- To [set up your ink! environment](../../xvm_wasm/setup_your_ink_environment.md).
 - To have knowledge about AMM & [Uniswap V2 implementation](https://docs.uniswap.org/contracts/v2/overview) (as this tutorial will focus on implementation).
 
 ## What will we do?
