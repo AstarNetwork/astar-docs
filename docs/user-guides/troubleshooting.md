@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 12
 ---
 
 # Portal Troubleshooting Guide
@@ -24,5 +24,6 @@ Some of you may be unable to execute certain funtions e.g. claim staking rewards
 1. Update metadata (if required).
 2. Clear cache, restart browser and connect wallet to the portal again.
 3. On the top right corner, switch to a different endpoint.
+4. Brave browser is known to give errors. Use Chrome or Firefox instead.
 
 If none of the above is helpful, please contact any of the team members or ambassadors on [Discord](https://discord.gg/2FGq5KqwBh).

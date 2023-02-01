@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # How to transfer tokens
@@ -23,6 +23,8 @@ In this tutorial we will navigate you how to transfer tokens using Portal and se
 - [Transferring cross-chain(XCM) assets into Astar Network](#transferring-cross-chainxcm-assets-into-astar-network)
 
 - [Transferring cross-chain(XCM) assets to other chains from Astar Network](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+
+- [Cross Virtual Machine Transfer Of ERC20 Tokens(XVM)](#cross-virtual-machine-transfer-of-erc20-tokensxvm)
 
 <br />
 
@@ -224,3 +226,40 @@ If you wish to move cross-chain(XCM) assets to Astar Native accounts from Astar 
 <img width="1000" alt="Input-manually" src="https://user-images.githubusercontent.com/77480847/188535225-6a7afe9d-83db-4fa9-a519-def33c30391a.png" />
 
 6. Enter the amount you would like to transfer, then press the confirm button.
+
+<br />
+
+## Cross Virtual Machine Transfer Of ERC20 Tokens(XVM)
+
+:::tip
+
+This feature is currently only available on Shibuya.
+
+:::
+
+1. Connect Metamask to https://portal.astar.network
+2. On the top right corner, connect to Shibuya.
+3. Go to the Asset page.
+4. If the asset that you want to transfer is not displayed, you need to manually add the contract address. 
+
+![image](https://user-images.githubusercontent.com/37278708/213384226-66737a56-9708-4622-a48c-d41c777a7772.png)
+
+5. Click “transfer” on the asset that you want to transfer.
+
+![image](https://user-images.githubusercontent.com/37278708/213384333-d480ba61-057d-4127-9d0b-270e2821ed2f.png)
+
+6. Enter the destination native address.
+7. Enter the amount of tokens that you want to transfer.
+8. Click confirm.
+
+![image](https://user-images.githubusercontent.com/37278708/213384489-cb1419df-f31c-410a-95bd-1d9376899a40.png)
+
+10. Done. Your ERC20 tokens have been transferred from EVM to Native.
+11. Disconnect Metamask and connect the native wallet you sent the tokens to.
+12. You should be able to see the XVM ERC20 asset.
+
+![image](https://user-images.githubusercontent.com/37278708/213384947-72f72fe5-1758-4a21-92f8-47e8fff1d1b3.png)
+
+12. If the asset is not displayed, you need to manually add it.
+13. You can now try to transfer the asset from Native to EVM.
+

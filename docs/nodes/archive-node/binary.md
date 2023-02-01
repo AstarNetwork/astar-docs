@@ -79,7 +79,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain astar \
   --base-path /var/lib/astar \
   --execution Wasm \
-  --unsafe-rpc-external \
+  --rpc-external \
   --ws-external
 
 Restart=always
@@ -107,7 +107,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain shiden \
   --base-path /var/lib/astar \
   --execution Wasm \
-  --unsafe-rpc-external \
+  --rpc-external \
   --ws-external
 
 Restart=always
@@ -135,7 +135,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain shibuya \
   --base-path /var/lib/astar \
   --execution Wasm \
-  --unsafe-rpc-external \
+  --rpc-external \
   --ws-external
 
 Restart=always

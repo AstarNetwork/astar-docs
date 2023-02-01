@@ -10,11 +10,11 @@ import TabItem from '@theme/TabItem';
 ## Public Endpoints
 
 :::info
-The free endpoints below are dedicated to end users, they can be used to interact with dapps or deploy/call smart contracts.
-<b>They limit the rate of API calls</b>, so they are not suitable for a dapp UI scraping blockchain data constantly or an indexer (like the Graph).
+The free endpoints below are dedicated to end users, they can be used to interact with dApps or deploy/call smart contracts.
+<b>They limit the rate of API calls</b>, so they are not suitable for high demand, such as a dApp UI constantly scraping blockchain data or an indexer.
 :::
 :::tip
-To deploy a production dapp, please refer to the [Run an archive node](/docs/nodes/archive-node/) section or get own API key for free/paid tier from one of our [infra partners](/docs/integrations/node-providers/)
+To meet the demands of a production dApp you can [run an archive node](/docs/nodes/archive-node/) **or** get your own API key from one of our [infra partners](/docs/integrations/node-providers/)
 :::
 
 <Tabs>
@@ -76,7 +76,6 @@ To deploy a production dapp, please refer to the [Run an archive node](/docs/nod
 | HTTPS | Astar Team: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
 |         | BlastAPI: https://shibuya.public.blastapi.io |
 |         | Dwellir: https://shibuya-rpc.dwellir.com |
-|         
 | Websocket | Astar Team: wss://rpc.shibuya.astar.network |
 |           | BlastAPI: wss://shibuya.public.blastapi.io |
 |           | Dwellir: wss://shibuya-rpc.dwellir.com |

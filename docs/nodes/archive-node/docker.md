@@ -50,7 +50,7 @@ astar-collator \
 --execution Wasm \
 --base-path /data \
 --rpc-cors=all \
---unsafe-rpc-external \
+--rpc-external \
 --ws-external
 ```
 
@@ -74,7 +74,7 @@ astar-collator \
 --execution Wasm \
 --base-path /data \
 --rpc-cors=all \
---unsafe-rpc-external \
+--rpc-external \
 --ws-external
 ```
 
@@ -98,7 +98,7 @@ astar-collator \
 --execution Wasm \
 --base-path /data \
 --rpc-cors=all \
---unsafe-rpc-external \
+--rpc-external \
 --ws-external
 ```
 
