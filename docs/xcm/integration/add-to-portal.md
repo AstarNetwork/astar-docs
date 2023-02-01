@@ -101,4 +101,4 @@ const xcmToken = {
 2. Developers should have tested for sending both deposit and withdrawal transactions with the `minBridgeAmount`.
 3. Developers should have tested for withdrawing assets to wallet accounts which have 0 balance for the assets being withdrawn (for checking whether `minBridgeAmount` is higher than `Existential Deposit` that defined on origin chain).
 4. Submit the Subscan link for transaction details of the XCM transfers for all assets you've registered.
-5. Deploy the forked app and submit the staging URL([ref](/docs/builder-guides/Integration%20and%20Toolings/deploy-astar-portal)).
+5. Deploy the forked app and submit the staging URL([ref](../../builder-guides/integration_toolings/deploy-astar-portal.md)).
