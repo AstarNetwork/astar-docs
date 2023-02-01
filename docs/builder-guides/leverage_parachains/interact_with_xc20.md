@@ -72,7 +72,7 @@ To mint the initial supply of the registered XC20 asset, we need to open Polkado
 
 ### Transfer the asset parameters to a multi-sig account (suggested)
 
-The owner of the XC20 asset has many high-level accesses. Thus, to ensure the security of the mintable XC20 assets, we suggest transferring the owner, issuer, freezer, and admin to a multi-sig account after the creation and initial mint. Click [here](../../user-guides/create-multisig.md) for the guide to create a multi-sig wallet.
+The owner of the XC20 asset has many high-level accesses. Thus, to ensure the security of the mintable XC20 assets, we suggest transferring the owner, issuer, freezer, and admin to a multi-sig account after the creation and initial mint. Click [here](https://docs.astar.network/docs/user-guides/create-multisig) for the guide to create a multi-sig wallet.
 
 - Go to `Developer` → `Extrinsics`
 - Choose `assets` extrinsics and `transferOwnership` method
