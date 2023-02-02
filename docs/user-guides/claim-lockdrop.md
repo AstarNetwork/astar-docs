@@ -17,5 +17,7 @@ This section will guide you on how to claim the ETH that you locked during Lockd
 
 6. You will need to pay the gas fee to complete the transaction.
 7. The ETH shall be in your wallet after the transaction is complete.
+8. If you have troubles connecting, use VPN.
+
 
 The other method to claim is by simply sending 0 ETH to the lock address. This will trigger the claim.
