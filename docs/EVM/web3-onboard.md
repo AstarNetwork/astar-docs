@@ -12,13 +12,13 @@ With a few lines of code you can now bring your app into the web3 world and conn
  Simply 
 
  ```bash
-yarn add @web3-onboard/core @web3-onboard/injected-wallets ethers
+yarn add @web3-onboard/core @web3-onboard/injected-wallets @web3-onboard/react ethers
  ```
 
- or 
+ or
 
  ```bash
- npm i @web3-onboard/core @web3-onboard/injected-wallets ethers
+ npm i @web3-onboard/core @web3-onboard/injected-wallets @web3-onboard/react ethers
  ```
 
  Then just use this prepared config file.  Can be easilly adapted for VueJs and others frameworks.
@@ -81,12 +81,14 @@ init({
   appMetadata
 })
 
-  // create an ethers provider
-  let ethersProvider
+const [{ wallet, connecting }, connect, disconnect] = useConnectWallet()
 
-  if (wallet) {
-    ethersProvider = new ethers.providers.Web3Provider(wallet.provider, 'any')
-  }
+// create an ethers provider
+let ethersProvider
+
+if (wallet) {
+  ethersProvider = new ethers.providers.Web3Provider(wallet.provider, 'any')
+}
  ```
 
 Now you only need a button to connect and activate the wallet.
