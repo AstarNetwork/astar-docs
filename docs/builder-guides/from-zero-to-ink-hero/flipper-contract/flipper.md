@@ -185,7 +185,7 @@ pub struct Flipper {
 ```
 
 ### Callable Functions
-This is when the contract is deployed and is responsible for **bootstrapping the initial contract state** into the storage, ([more details](https://use.ink/4.0.0-alpha.1/macros-attributes/constructor/)).
+This is when the contract is deployed and is responsible for **bootstrapping the initial contract state** into the storage, ([more details](https://use.ink/macros-attributes/constructor)).
 
 ```rust
 #[ink(constructor)]
