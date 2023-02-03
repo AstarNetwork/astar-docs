@@ -5,15 +5,15 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-An **archive node** keeps all the past blocks. It plays a vital role on a blockchain: it connects users and dApps to the blockchain through WS and RPC endpoints. The public endpoints you can see in [network details](/docs/quickstart/endpoints) are running archive nodes.
+An **archive node** stores the history of past blocks. It plays a vital role on our network: it connects users and dApps to the blockchain through WS and RPC endpoints. For example, our [public endpoints](/docs/quickstart/endpoints) run archive nodes for anyone to quickly connect to Astar.
 
-**Dapp projects** need to run their own archive node to retrieve blockchain data they use in order not to rely on public infrastructure that will respond slower because of the large amount of users connected.
+**DApp projects** need to run their own archive node to the retrieve necessary blockchain data and not to rely on public infrastructure. Public endpoints respond slower because of the large amount of users connected.
 
 :::caution
-Be careful of the confusion with a **full node** that has a prunned database: a full node only keeps the past configured number of blocks (256 blocks by default) and uses much less storage space.
+Be careful not to confuse with a **full node** that has a prunned database: a full node only stores the current state and most recent blocks (256 blocks by default) and uses much less storage space.
 :::
 
-We are manitaining 3 different networks: the testnet Shibuya, Shiden as a parachain of Kusama, and Astar as a parachain of Polkadot.
+We manitain 3 different networks: the testnet Shibuya, Shiden as a parachain of Kusama, and Astar as a parachain of Polkadot.
 
 | Astar chain | Relay Chain | Name | Token |
 |---|---|---|---|
@@ -25,7 +25,7 @@ We are manitaining 3 different networks: the testnet Shibuya, Shiden as a parach
 ### Machine
 :::note
 - Storage space will increase as the network grows.
-- In case with Archive node, depending on the amount and frequency of data requested by a dApp, it may require a larger server.
+- Archive nodes may require a larger server, depending on the amount and frequency of data requested by a dApp.
 :::
 
 <Tabs>
@@ -64,7 +64,7 @@ We are manitaining 3 different networks: the testnet Shibuya, Shiden as a parach
 </Tabs>
 
 ### Ports
-The Astar node runs in parachain configuration: they will listen at different ports by default for both the parachain and the embeeded relay chain.
+The Astar node runs in parachain configuration, meaning they will listen at different ports by default for both the parachain and the embeeded relay chain.
 
 |Description| Parachain Port | Relaychain Port | Custom Port Flag |
 |---|---|---|---|
@@ -73,8 +73,8 @@ The Astar node runs in parachain configuration: they will listen at different po
 | RPC | 9933 | 9934 | `--rpc-port` |
 | Prometheus | 9615 | 9616 | `--prometheus-port` |
 
-For all types of nodes, port `30333` and `30334` need to be opened for imcoming traffics at Firewall.
-**Collator node should not expose WS and RPC ports to the public.**
+For all types of nodes, ports `30333` and `30334` need to be opened for incoming traffic at the Firewall.
+**Collator nodes should not expose WS and RPC ports to the public.**
 
 ---
 

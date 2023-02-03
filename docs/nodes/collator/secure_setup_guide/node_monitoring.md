@@ -10,9 +10,9 @@ In this chapter, we will walk you through the setup of local monitoring for your
 
 ## Installation
 
-Make sure you download the latest releases. Please check [Prometheus](https://prometheus.io/download/), [Process exporter](https://github.com/ncabatoff/process-exporter/releases), and [Grafana](https://grafana.com/grafana/download) download pages. We will do our best to keep this guide updated but it wouldn't hurt to check if you are installing the latest versions.
+Make sure you download the latest releases. Please check [Prometheus](https://prometheus.io/download/), [Process exporter](https://github.com/ncabatoff/process-exporter/releases), and [Grafana](https://grafana.com/grafana/download) download pages. We will continue to update this guide but recommend that you verify that you are installing the latest versions.
 
-Installation of these packages goes in 7 steps:
+There are 7 steps to install these packages:
 
 * Download
 * Extract

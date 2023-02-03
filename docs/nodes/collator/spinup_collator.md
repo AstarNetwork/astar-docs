@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 # Spin up a Collator
 
 :::caution
-Collators are responsible for the network stability, it is very important to be able to react at any time of the day or night in case of trouble. We strongly encourage collators to set up a monitoring and alerting system, learn more about this from our ['Secure Setup Guide'](/docs/nodes/collator/secure_setup_guide/).
+Collators are responsible for the network stability, it is very important to be able to react at any time of the day or night in case of trouble. We strongly encourage collators to set up a monitoring and alerting system, learn more about this from our [secure setup guide](/docs/nodes/collator/secure_setup_guide/).
 :::
 
 ### Service Parameters
@@ -63,7 +63,7 @@ Collators are responsible for the network stability, it is very important to be 
 
 ### Verify synchronization
 
-Before jumping to the next steps, you have to wait until your node is **fully synchronized**. This can take a long time depending on the chain height. Please node that syncing to one of our networks requires the node to sync with the network and with the relay chain.
+Before jumping to the next steps, you have to wait until your node is **fully synchronized**. This can take a long time depending on the chain height. Please note that syncing to one of our networks requires the node to sync with the network and with the relay chain.
 
 Check the current synchronization:
 
@@ -81,7 +81,7 @@ Run the following command to author session keys:
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
-Result will look like this, you just need to copy the key:
+The result will look like this (you just need to copy the key):
 
 ```
 {"jsonrpc":"2.0","result":"0x600e6cea49bdeaab301e9e03215c0bcebab3cafa608fe3b8fb6b07a820386048","id":1}
@@ -123,7 +123,7 @@ Send the transaction.
 
 #### Request judgment
 
-Go to the Polkadot.js portal: _**Developper > Extrinsic**_
+Go to the Polkadot.js portal: _**Developer > Extrinsic**_
 
 Select your **collator account** and extrinsic type: _**identity / requestJudgment**_
 
@@ -133,7 +133,7 @@ Send the transaction.
 
 To start collating, you need to have **32 000 SDN** tokens for Shiden or **3 200 000 ASTR** tokens for Astar.
 
-Go to the Shibuya Polkadot.js portal: _**Developper > Extrinsic**_
+Go to the Shibuya Polkadot.js portal: _**Developer > Extrinsic**_
 
 Select your **collator account** and extrinsic type: _**CollatorSelection / registerAsCandidate**_
 
