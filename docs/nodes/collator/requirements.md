@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ### Permissionless collator
 
-To become a permissionless collator on our networks, you need to meet below requirements.
+To become a permissionless collator on our networks, you need to meet the requirements below.
 
 **Collator staking requirements**
 
@@ -23,7 +23,7 @@ To become a permissionless collator on our networks, you need to meet below requ
   <li>Meet hardware requirements</li>
 </ul>
 </p>
-<p>If your node stops producing blocks for 1 session, your node will be kicked out of the active set and 1% of the bonded funds will be slashed. Running a node with low performance can lead to skipping blocks which can lead to being kicked out of the active set.</p>
+<p>If your node stops producing blocks for 1 session, your node will be kicked out of the active set and 1% of the bonded funds will be slashed. Running a node with low performance can lead to skipping blocks which may result in being kicked out of the active set.</p>
 
 </TabItem>
 <TabItem value="shiden" label="Shiden Network">
@@ -48,14 +48,14 @@ Onboarding takes **n+1** session.
 
 ### System requirements
 
-A collator usually deploys its nodes on cloud servers. You can choose your preferred operating system, we highly recommend Linux.
+A collator usually deploys its nodes on cloud servers. You can choose your preferred operating system, though we highly recommend Linux.
 
 **Hardware requirements**
 
-Here you can find the basic configuration for reference, which guarantees that all blocks can process in time. If the hardware is inferior to that, there is a chance it will be malfunctioning and you will be automatically kicked out from the active set.
+Use the charts below to find the basic configuration, which guarantees that all blocks can process in time. If the hardware doesn't meet these requirements, there is a chance it will malfunction and you will be automatically kicked out from the active set.
 
 :::note
-Make sure your server is only dedicated to the collator node
+Make sure your server is only dedicated to the collator node.
 :::
 
 <Tabs>

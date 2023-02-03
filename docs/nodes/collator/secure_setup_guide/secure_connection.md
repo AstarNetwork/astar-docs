@@ -17,7 +17,7 @@ This part is a modified version of [bLd's guide](https://medium.com/bld-nodes/se
 ## Configuration
 
 :::info
-Follow this guide step-by-step, try to understand every step explained in this guide.
+Follow this guide step-by-step. We recommend that you try to understand every step explained in this guide.
 :::
 
 :::caution
@@ -27,7 +27,7 @@ Be very careful to never close your actual session until you’ve tested the con
 Connect to your server using [PuTTy](https://www.chiark.greenend.org.uk/\~sgtatham/putty/latest.html).
 
 1. Open PuTTY
-2. Typ in the field of ‘**Host Name**’ the IP of your server on Azure
+2. Type the IP of your server on Azure in the field called ‘**Host Name**’.
 3. The terminal will open and you can log in with your username and password.
 
 Let’s start by moving our actual unsecured host keys into a backup directory:
@@ -67,7 +67,7 @@ sudo nano /etc/ssh/sshd_config
 ```
 
 :::info
-In the following lines, you see that I used port 4321, this is just an example. You can use any random port inside the range of 1024 and 49151. Copy these lines in your file:
+In the following lines, you see that we use port 4321. This is just an example. You can use any random port within the range of 1024 to 49151. Copy these lines in your file:
 :::
 
 ```
@@ -83,8 +83,9 @@ PasswordAuthentication no
 ChallengeResponseAuthentication no
 ```
 
-Save `CTRL+O` your file and close the editor `CTRL+X` .\
-Now, what did you do? In details, by doing that, we tell the host to
+Save `CTRL+O` your file and close the editor `CTRL+X` .
+
+Now, what did we just do? In detail, we told the host to:
 
 * Use the port  instead 4321 of default 22: please use a different random port in the range 1024–49151
 * Use the `curve25519` protocol for authentication
@@ -95,7 +96,7 @@ Now, what did you do? In details, by doing that, we tell the host to
 * Disable password access
 
 :::info
-We left here the line `Port 22` for the first test on the new port. Once your tests are successful, we will remove this line.
+Here we left the line `Port 22` for the first test on the new port. Once your tests are successful, we will remove this line.
 :::
 
 Then, create the new SSH host key:
@@ -111,7 +112,7 @@ sudo groupadd ssh-user
 sudo usermod -a -G ssh-user <username>
 ```
 
-**Note**: you have to change `<username>` by the user, you use on your server.
+**Note**: you have to change `<username>` by the user that you use on your server.
 
 ### Firewall
 
@@ -120,7 +121,7 @@ Before continuing, it is very important to open the newly configured SSH port in
 ### Generate SSH keys
 
 :::info
-This guide is build around Azure and PuTTy, in case you want to use OpenSSH follow [this guide](https://medium.com/bld-nodes/securing-ssh-access-to-your-server-cc1324b9adf6).
+This guide is built around Azure and PuTTy, in case you want to use OpenSSH follow [this guide](https://medium.com/bld-nodes/securing-ssh-access-to-your-server-cc1324b9adf6).
 :::
 
 Open PUTTYGen GUI:
@@ -137,7 +138,7 @@ Select the `Ed25519`key type and click on _Generate_:
 
 Enter a strong passphrase and save both private and public key in a secure folder. Copy the public key from the text box.
 
-Go back to the PuTTy session on your **server** and open the `authorized_keys`file.
+Go back to the PuTTy session on your **server** and open the `authorized_keys` file.
 
 ```
 sudo nano ~/.ssh/authorized_keys
