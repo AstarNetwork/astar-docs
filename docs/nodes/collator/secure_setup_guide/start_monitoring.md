@@ -6,7 +6,7 @@ sidebar_position: 9
 
 ## Run Grafana dashboard
 
-Now is the time to get the most visual part: the **monitoring dashboard**.
+Now we get to the most visual part: the **monitoring dashboard**.
 
 From the browser on your local machine, connect to the custom port on localhost that we have set at the beginning of this guide:
 
@@ -98,11 +98,11 @@ Select the Prometheus and AlertManager sources and click _Import_.Dashboard sele
 
 In the dashboard selection, make sure you select:
 
-* **Chain Metrics**: `polkadot` for a Polkadot/Kusama node, `substrate` for any other parachain node
+* **Chain Metrics**: `polkadot` for a Polkadot/Kusama node or `substrate` for any other parachain node
 * **Chain Instance Host:** `localhost:9615` to point the chain data scrapper
 * **Chain Process Name**: the name of your node binary
 
-And here you go, everything is set!
+And there you go, everything is set!
 
 Monitoring dashboard [Polkadot Essentials](https://grafana.com/grafana/dashboards/13840)
 
@@ -110,6 +110,6 @@ Monitoring dashboard [Polkadot Essentials](https://grafana.com/grafana/dashboard
 <img src="https://i.imgur.com/MZVOvk5.jpg" border="1"></img>
 </center>
 
-Easy right? Just think about saving the dashboard once parameters are set and work.
+Easy right? Consider saving the dashboard once parameters are set and working.
 
 **Note**: you can also consider [Parity’s dashboards](https://github.com/paritytech/substrate/tree/master/scripts/ci/monitoring/grafana-dashboards) for advanced monitoring and analysis. 

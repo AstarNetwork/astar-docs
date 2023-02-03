@@ -5,7 +5,7 @@ sidebar_position: 6
 # 6. Configuration
 
 :::tip
-This will be a lot of copy/paste but don't be lazy and try to understand what we are doing here.
+There is a lot of copy/paste in this section, but it is highly recommended that you try to understand each step. Please use our official discord for support.
 :::
 
 ### Prometheus
@@ -52,7 +52,7 @@ scrape_configs:
 ```
 
 * `scrape_interval` defines how often Prometheus scrapes targets, while `evaluation_interval` controls how often the software will evaluate the rules.
-* `rule_files` set the location of Alert manager rules we will add next.
+* `rule_files` sets the location of Alert manager rules that we will add next.
 * `alerting` contains the alert manager target.
 * `scrape_configs` contain the services Prometheus will monitor.
 
@@ -90,7 +90,7 @@ groups:
           description: "CPU load is > 80%\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
 ```
 
-The criteria for **triggering an alert** are set in the `expr:` part. To create your own alerts, you’re going to have to learn and test the different variables provided to Prometheus by the services we are setting up. There is (almost) an infinite number of possibilities to **personalize your alerts**.
+The criteria for **triggering an alert** are set in the `expr:` part. To create your own alerts, you’re going to have to learn and test the different variables provided to Prometheus by the services we are setting up. There is an infinite number of possibilities to **personalize your alerts**.
 
 As this part can be time-consuming to learn and build, you can find a summary [list of alerts we like to use](https://pastebin.com/96wbiQN8).  Feel free to share your Alert file with the community. You should also have a look at [alerts provided by Parity](https://github.com/paritytech/substrate/tree/master/scripts/ci/monitoring/alerting-rules).
 
@@ -132,7 +132,7 @@ process_names:
 
 To allow AlertManager to send an email to you, you will need to generate something called an `app password` in your Gmail account. For details, click [here](https://support.google.com/accounts/answer/185833?hl=en) to follow the whole setup.
 
-You should see something like the below:
+You should see something similar to the image below:
 
 <center>
 <img src="https://i.imgur.com/YID4WId.png" border="1"></img>
@@ -140,7 +140,7 @@ You should see something like the below:
 
 ### Alert Manager
 
-There is a configuration file named `alertmanager.yml` inside the directory that you just extracted in the previous command, but that is not of our use. We will create our `alertmanager.yml` file under `/etc/alertmanager` with the following config.
+There is a configuration file named `alertmanager.yml` inside the directory that you just extracted in the previous command, but that is not useful yet. We will create our `alertmanager.yml` file under `/etc/alertmanager` with the following config.
 
 Let’s create the file:
 

@@ -29,21 +29,21 @@ Aura PoS consist of 2 pallets:
 - [Aura pallet](https://crates.parity.io/pallet_aura/index.html)
 - PoS pallet
 
-The first phase in making PoS was by deploying the Aura pallet. Aura PoA Collator Phase - permissioned block authoring and collator session key setup for Astar ecosystem. After extended testing, we have deployed the PoS pallet and switched to Aura PoS. We have enabled permissionless collator staking, network inflation, and rewards.
+The first phase in making PoS was by deploying the Aura pallet. Aura PoA Collator Phase - permissioned block authoring and collator session key setup for Astar ecosystem. After extensive testing, we deployed the PoS pallet and switched to Aura PoS. We have enabled permissionless collator staking, network inflation, and rewards.
 
 **Let’s break down the latest phase:**
 
 - **Collator staking**: collators can now start with securing the network. This will be with a minimum bond of a fixed amount of tokens.
-- **Network inflation**: Astar mainnets has a 10% inflation. This 10% is based on a perfect block production every 12 seconds.
+- **Network inflation**: Astar mainnet has a 10% inflation. This 10% is based on a perfect block production every 12 seconds.
 - **Rewards**: a fixed amount will be created at each block and divided between treasury, collators, and dApp staking.
 
-A collator (block producer) gets a reward for each block it’s produced. The reward is a fixed amount for each block.
+A collator (block producer) is rewarded a fixed amount for each block produced.
 
 ---
 
 ## Collator election mechanism
 ### Election process
-When your node fits the parameters and checks all the boxes to become a collator, you will be added to the chain. After registering for a collator and bonded the tokens. **Note: if your collator doesn’t produce blocks during one session (1h) it will be kicked out.**
+To join the election process you must register for a collator and bond tokens, see [Collator Requirements](https://docs.astar.network/docs/nodes/collator/requirements) for details. When your node fits the parameters and checks all the boxes to become a collator, it will be added to the chain. **Note: if your collator doesn’t produce blocks during one session (1h) it will be kicked out.**
 
 ---
 
@@ -53,11 +53,11 @@ At every block you produced as a collator, rewards will automatically be transfe
 ---
 
 ## Slash mechanism
-Starting April 2022, a slashing mechanism is implemented on Astar and Shiden network: a collator who doesn't produce any block during one session (1 hour) will get slashed by 1% of his total stake and kick out from active collator set.
-This slashing aims to ensure the best block rate for the network and prevent malicious actors to harm it without financial consequences.
+Starting April 2022, a slashing mechanism is implemented on Astar and Shiden networks - a collator that doesn't produce blocks during one session (1 hour) will be slashed 1% of its total stake and kicked out of the active collator set.
+This slashing ensures the best block rate and prevents malicious actors from harming the network without financial consequences.
 
 ---
 
 ## FAQ
 ### What about NPoS?
-Our first intention was to activate NPoS to Shiden Network. After internal testing, this would use a lot of Shiden collator resources. NPoS is not designed for collators in the Polkadot ecosystem (reference: [role of collators](/docs/nodes/collator/learn#role-of-collators-in-the-astar-ecosystem)). Astar ecosystem is build to be a dApp hub in the Polkadot ecosystem for smart contracts with a unique incentive reward mechanism for developers, dApp staking. 
+Our first intention was to activate NPoS to Shiden Network. After internal testing, we realised this would use a lot of Shiden collator resources. NPoS is not designed for collators in the Polkadot ecosystem (reference: [role of collators](/docs/nodes/collator/learn#role-of-collators-in-the-astar-ecosystem)). Astar ecosystem is built to be a dApp hub in the Polkadot ecosystem for smart contracts with a unique incentive reward mechanism for developers, dApp staking. 

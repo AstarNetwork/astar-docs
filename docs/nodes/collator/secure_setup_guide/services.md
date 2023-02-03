@@ -6,9 +6,9 @@ sidebar_position: 7
 
 ## Systemd
 
-Starting all programs manually is such a pain. So we are going to take a few minutes to create the `systemd` services.
+Starting all programs manually is such a pain. So we are going to use this section to create the `systemd` services.
 
-Creating those services will allow a fully **automated process** that you will never have to do again **if your node reboots**.
+Creating those services will setup a fully **automated process** that you will never have to do again **if your node reboots**.
 
 :::tip
 Please set all the services provided here.
@@ -121,5 +121,5 @@ WantedBy=multi-user.target
 **Grafana’s service** is automatically created during the extraction of the `deb` package, you do not need to create it manually.
 
 
-Now it's getting exciting! We are going to fire up everything. In case of any errors in a file, go back some steps and check if you haven't missed anything.
-If you really don't know what's wrong. Join our Discord, where we provide you with support.
+Now it's getting exciting! We are going to fire up everything. If you encounter errors in a file, go back to previous sections steps and check if you missed anything.
+If cannot identify the issues then join our Discord. We will provide you with support there.

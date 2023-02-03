@@ -71,7 +71,7 @@ CARGO_PROFILE_RELEASE_LTO=true RUSTFLAGS="-C codegen-units=1" cargo build --rele
 
 ### Build from binaries
 
-The easiest way to install an Astar node is to download the binaries. You can find them here: [Astar releases](https://github.com/AstarNetwork/Astar)
+The easiest way to install an Astar node is to download the binaries. You can find them here: [Astar releases](https://github.com/AstarNetwork/Astar).
 
 Get the file and extract:
 
@@ -117,7 +117,7 @@ sudo mkdir /var/lib/astar
 sudo chown astar:astar /var/lib/astar
 ```
 
-Let's first go to our binary directory and start the collator manually:
+Now, let's go to our binary directory and start the collator manually:
 
 <Tabs>
 <TabItem value="astar" label="Astar" default>
@@ -150,10 +150,10 @@ cd /usr/local/bin
 </Tabs>
 
 :::tip
-Type in the place of **${COLLATOR\_NAME}**, how you would like to call your node.
+Type in the place of **${COLLATOR\_NAME}**, what you would like to call your node.
 :::
 
-Check on [https://telemetry.polkadot.io/](https://telemetry.polkadot.io/#list/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6) to see your node syncing.
+See your node syncing on [https://telemetry.polkadot.io/](https://telemetry.polkadot.io/#list/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6).
 
 Useful commands to be used in screen:
 _`ctrl+a+d` (detach actual session)_
@@ -282,10 +282,10 @@ sudo systemctl enable astar.service
 
 ## Relay Chain snapshot
 
-If you run your collator it not only needs to sync the **mainnet** chain but also the complete relay chain from **Kusama / Polkadot**. This can take up to 3-4 days. You can also use a snapshot of Kusama/Polkadot. You can download this [here](https://polkashots.io) and will save a lot of time.
+If you run a collator it not only needs to sync the mainnet chain but also the complete relay chain from Polkadot/Kusama. This can take up to 3-4 days. Alternatively, you can use a [snapshot of Polkadot/Kusama](https://polkashots.io/) to save a lot of time.
 
 :::caution
-**NOTE**: know what you are doing when using snapshots!
+Only use snapshots if you are familiar with how to use them! You can learn more about Polkadot's snapshot services [**here**](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#database-snapshot-services).
 :::
 
 ## Finalizing
