@@ -7,11 +7,11 @@ import TabItem from '@theme/TabItem';
 
 # Docker
 
-A **Docker container** allow you to run easily a node without depending on the platform it is running on. This method should be reserved for users who already have experience with Docker containers.
+A **Docker container** allows you to easily run a node without depending on the platform it is running on. This method should only be used if you already have experience with Docker containers.
 
 ## Installation
 
-If you don't already have, start by installing docker: [How to install Docker on Ubuntu](https://linuxize.com/post/how-to-install-and-use-docker-on-ubuntu-20-04/)
+Start by installing docker: [How to install Docker on Ubuntu](https://linuxize.com/post/how-to-install-and-use-docker-on-ubuntu-20-04/)
 
 Create a local directory for the **chain storage data** and a dedicated user:
 
@@ -23,7 +23,7 @@ sudo chown astar:astar /var/lib/astar
 
 ## Start Docker node
 
-In this guide, we will start a container for both WS and RPC endpoints. If you want only one of those, just remove the unnecessary port and command.
+In this guide, we will start a container for both WS and RPC endpoints. If you only want one type of endpoint then just remove the unnecessary port and command.
 
 Launch the docker node in detached mode:
 
@@ -105,7 +105,7 @@ astar-collator \
 </TabItem>
 </Tabs>
 
-You can test the node health through RPC port with this command:
+You can test the node health through the RPC port with this command:
 
 ```sh
 curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9933
@@ -113,13 +113,13 @@ curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"sy
 
 ## Next steps
 
-For any usage, wait for the chain to be fully sync by checking the [node log](/docs/nodes/archive-node/docker#get-node-logs).
+For any usage, wait for the chain to be fully sync by checking the [node log](/docs/nodes/archive-node/binary#get-node-logs).
 
-It depends on what you plan to do with your archive node.
+It all depends on what you plan to do with your archive node.
 
-- In most cases, you will want to access node from outside. In this case, [nginx server](/docs/nodes/archive-node/nginx) is one of available options.
-- If you run your dapp on the same server than the node (recommended for testing purpose only), you can access it directly with the `localhost` address.
-- If you run the node locally for testing purpose, you can for example switch network into [Polkadot.js portal](https://polkadot.js.org/apps) and explore the chain:
+- In most cases, you will want to access node from outside. In this case, [nginx server](/docs/nodes/archive-node/nginx) is the recommended option.
+- If you run your dApp on the same server as the node, then you can access it directly with the `localhost` address. This setup is recommended for testing purpose only.
+- If you run the node locally for testing purpose, you can switch the network in [Polkadot.js portal](https://polkadot.js.org/apps) and explore the chain:
 
 ![1](img/1.png)
 
@@ -179,8 +179,8 @@ Then start a new container by following the instructions under the [Start Docker
 
 ### Relay Chain snapshot
 
-If you run your collator it not only needs to sync the **mainnet** chain but also the complete relay chain from **Kusama / Polkadot**. This can take up to 3-4 days. You can also use a snapshot of Kusama/Polkadot. You can download this [here](https://polkashots.io/) and will save a lot of time.
+If you run a collator it not only needs to sync the mainnet chain but also the complete relay chain from Polkadot/Kusama. This can take up to 3-4 days. Alternatively, you can use a [snapshot of Polkadot/Kusama](https://polkashots.io/) to save a lot of time.
 
 :::caution
-know what you are doing when using snapshots!
+Only use snapshots if you are familiar with how to use them! You can learn more about Polkadot's snapshot services [**here**](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#database-snapshot-services).
 :::
