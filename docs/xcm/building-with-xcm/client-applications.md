@@ -4,11 +4,11 @@ sidebar_position: 9
 
 # Client Applications
 
-In this chapter, we will look into how we can use TypeScript to interact with the XCM pallet and construct XCM transactions. With this information, you can create your XCM dApp or bridges.
+In this chapter, we will examine how we can use TypeScript to interact with the XCM pallet and construct XCM transactions. With this information, you will be able to create an XCM dApp, or bridge.
 
-Because we need to interact with the XCM pallet via the Substrate RPC, we will use the [`polkadot/api`](https://github.com/polkadot-js/api) package throughout this chapter.
+While interacting with the XCM pallet via the Substrate RPC, we will use the [`polkadot/api`](https://github.com/polkadot-js/api) package, throughout this chapter.
 
-First, you need to initialize the API like you would with any Substrate application.
+First, you will need to initialize the API as you would with any Substrate application.
 
 ```js
 import { ApiPromise, WsProvider } from '@polkadot/api';
@@ -24,7 +24,7 @@ const myApp = async () => {
 };
 ```
 
-In Astar Network, we use the [Substrate Assets pallet](https://github.com/paritytech/substrate/tree/master/frame/assets) to handle the XCM multi-asset representation. Let’s try to get the list of assets from the network.
+In Astar Network, we use the [Substrate Assets pallet](https://github.com/paritytech/substrate/tree/master/frame/assets) to handle the XCM multi-asset representation. Let’s retrieve the list of assets from the network.
 
 ```js
  
@@ -64,13 +64,13 @@ interface ChainAsset extends AssetDetails {
 };
 ```
 
-Running this function should give you the list of assets that are registered on the chain. This is useful when you want to create a UI that lists all possible assets and XCM-compatible assets too.
+Running this function will produce a list of assets that are registered on the chain. This is useful when you want to create a UI that lists all possible assets, including XCM-compatible assets.
 
-Next, let’s try executing a cross-consensus function. Parachains will have the pallet called `polkadotXcm`, while relaychains will use the pallet `xcmPallet`. Both of them will have the same function and syntax for sending XCM transactions.
+Next, let’s execute a cross-consensus function. Parachains will have a pallet called `polkadotXcm`, while Relay Chains will use the pallet `xcmPallet`. Both of them will have the same function and syntax for sending XCM transactions.
 
-For this example, we’ll send the relaychain asset to the parachain, which is what we did in the previous chapters, but here, we’ll do it in TypeScript.
+For this example, we will send the Relay Chain asset to the parachain, like we've done in previous chapters, but this time, we’ll be using TypeScript.
 
-Let’s first create two API instances, one for the parachain and the other for the relaychain. Although for our example, we will only call the extrinsic from the relaychain, we will initialize the parachain API instance to dynamically obtain the parachain ID.
+Let’s create two API instances, one for the parachain and another for the Relay Chain. Although for our example, we will only call the extrinsic from the Relay Chain, and initialize the parachain API instance to dynamically obtain the parachain ID.
 
 ```js
 import { ApiPromise, WsProvider } from '@polkadot/api';
@@ -166,7 +166,7 @@ const myApp = async () => {
 };
 ```
 
-The first half of the function is about loading the account that will send the KSM and initializing the API. The real magic happens in the latter half of the function.
+The first half of the function is about loading the account that will send the KSM and initialize the API. The real magic happens in the latter half of the function.
 
 ```js
     // the target parachain connected to the current relaychain
@@ -215,7 +215,7 @@ The first half of the function is about loading the account that will send the K
     };
 ```
 
-As you can see, the `dest` refers to the destination or the target chain that will receive the asset identified by the parachain ID. The `beneficiary` refers to the account within the parachain that will receive the token. Finally, the `assets` parameter simply refers to the amount you wish to send. Finally, we can sign the transaction with the following function:
+As you can see, the `dest` refers to the destination or target chain that will receive the asset identified by the parachain ID. The `beneficiary` refers to the account within the parachain that will receive the token. Finally, the `assets` parameter simply refers to the amount you wish to send. Finally, we can sign the transaction with the following function:
 
 ```js
 // This can be zero
@@ -251,8 +251,8 @@ const assetBalance = await Promise.all(assetInfos.map(async (i) => {
 console.log(assetBalance);
 ```
 
-Now, you should be able to transfer the asset from the relaychain to the parachain, and check if it was successful by listing all the assets within the asset pallet that the current account holds.
+Now, you should be able to transfer the asset from the Relay Chain to the parachain, and check to see if it was successful by listing all the assets within the asset pallet that the current account holds.
 
-Please note that the gas amount will be deduced from the transferred amount. Transferred amount should be adjusted with gas fee estimate. Please refer to [Gas Price API](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/~/changes/aJQFFWQNMjlao1SSjj4a/build/api/gas-price-api) if needed for specific use case.
+Please note that the gas will be deducted from the amount transferred, so it should be adjusted accordingly, based on the estimated gas fee. Please refer to [Gas Price API](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/~/changes/aJQFFWQNMjlao1SSjj4a/build/api/gas-price-api) if needed for specific use cases.
 
-You can find the full project that deals with similar functionality from [this repository](https://github.com/AstarNetwork/astar-xcm-tools).
+You can find the whole project that integrates similar functionality in [this repository](https://github.com/AstarNetwork/astar-xcm-tools).
