@@ -1,12 +1,14 @@
 # XCM
 
-Astar Network is a multi-virtual machine smart contract dApp hub that supports WebAssembly smart contracts and EVM smart contracts. We imagine various dApps within the Astar ecosystem utilizing XCM for their projects to leverage assets from other parachains and create a dApp that is XCM native, from both EVM and Wasm.
+Astar Network is a modular and flexible decentralized application (dApp) platform that supports not only WebAssembly and EVM smart contracts, but cross-VM communications (XVM), as well. dApps within the Astar ecosystem are able to utilize XCM to leverage assets from other parachains, but it can also be used to build purely Native dApps, which can be deployed on either EVM or Wasm virtual machines.
 
-XCM is still under heavy development and not all features and possibilities have yet been enabled. The current version of XCM allows us to move assets between chains.
 
-For e.g. a user can move their **DOT** from Polkadot over to **Astar**, and vice-versa. This **DOT** in the Astar ecosystem is interfaced to smart contracts and any application can make use of it. E.g. a DeFi dApp can use this to enable **DOT** trading without having to use a bridge, which makes it much simpler, cheaper, and safer.
 
-In this section, we will describe the technical details for using XCM so that developers can adopt this for their own dApps. Astar/Polkadot and Shiden/Kusama examples are interchangeable as the features are supported on both networks.
+XCM is still under heavy development and not all features and capabilities have yet been enabled. The current version of XCM allows assets to move between chains.
+
+For example, a user can move their **DOT** from Polkadot over to **Astar**, and vice-versa. This **DOT** in the Astar ecosystem can be used for smart contracts, and applications are able to integrate it should they choose to. Or as another example, a DeFi dApp can use it to enable **DOT** trading without having to use a bridge, which makes it much simpler, safer, and cost less.
+
+In this section, we will describe technical details surrounding the use of XCM so that developers can adopt it for use in their dApps. Astar/Polkadot and Shiden/Kusama examples are interchangeable as the features are supported on both networks.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
