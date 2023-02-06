@@ -10,12 +10,12 @@ sidebar_position: 1
 
 [Subsquid] is a query node framework for Substrate-based blockchains. In very simple terms, Subsquid can be thought of as an ETL (Extract, Transform, and Load) tool, with a GraphQL server included. It enables comprehensive filtering, pagination, and even full-text search capabilities.
 
-Subsquid has native and full support for both the Ethereum Virtual Machine and Substrate data. This allows developers to extract on-chain data from any of the Astar networks and process EVM logs as well as Substrate entities (events, extrinsics and storage items) in one single project and serve the resulting data with one single GraphQL endpoint. With Subsquid, filtering by EVM topic, contract address, and block range are all possible.
+Subsquid has native and full support for both the Ethereum Virtual Machine and Substrate data. This allows developers to extract on-chain data from any of the Astar networks and process EVM logs as well as Substrate entities (events, extrinsics and storage items) in one single project, and serve the resulting data with one single GraphQL endpoint. With Subsquid, filtering by EVM topic, contract address, and block range are all possible.
 
-This guide will explain how to create a Subsquid project (also known as a "*Squid*") that indexes ERC-721 token transfers on the Astar network. As such, you'll be looking at the `Transfer` EVM event topics. This guide can be adapted for Shiden network and other type of tokens as well.
+This guide will explain how to create a Subsquid project (also known as a "*Squid*") that indexes ERC721 token transfers on the Astar network. As such, you'll be looking at the `Transfer` EVM event topics. This guide can be adapted for Shiden network and other types of tokens as well.
 
 Prerequisites
-For a Squid project to be able to run, you need to have the following installed:
+For a Squid project to be able to run, you will need to have the following installed:
 
 - [Node.js](https://nodejs.org/en/download/): version 16 or later
 - Docker
@@ -47,7 +47,7 @@ The next sections will take the template and customize it, one aspect at a time,
 
 The EVM template already contains a schema that defines the exact entities we need for the purpose of this guide. For this reason, changes are necessary, but it's still useful to explain what is going on.
 
-To index ERC-721 token transfers, we will need to track:
+To index ERC721 token transfers, we will need to track:
 
 - Token transfers
 - Ownership of tokens
@@ -89,7 +89,7 @@ type Transfer @entity {
 }
 ```
 
-It's worth noting a couple of things in this [schema definition](https://docs.subsquid.io/develop-a-squid/schema-file/):
+It's worth noting a few things in this [schema definition](https://docs.subsquid.io/develop-a-squid/schema-file/):
 
 - **@entity** - signals that this type will be translated into an ORM model that is going to be persisted in the database
 - **@derivedFrom** - signals the field will not be persisted on the database, it will rather be derived
@@ -108,7 +108,7 @@ Subsquid offers support for automatically building TypeScript type-safe interfac
 
 This functionality has been extended to EVM indexing, with the release of an `evm-typegen` tool to generate TypeScript interfaces and decoding functions for EVM logs.
 
-Once again, the template repository already includes interfaces for ERC-721 contracts, which is the subject of this guide. But it is still important to explain what needs to be done, in case, for example, one wants to index a different type of contract.
+Once again, the template repository already includes interfaces for ERC721 contracts, which is the subject of this guide. But it is still important to explain what needs to be done, in case, for example, one wants to index a different type of contract.
 
 First of all, it is necessary to obtain the definition of its Application Binary Interface (ABI). This can be obtained in the form of a JSON file, which will be imported into the project.
 
@@ -124,7 +124,7 @@ The `abi` parameter points at the JSON file previously created, and the output p
 This command will automatically generate a TypeScript file named `erc721.ts`, under the `src/abi` subfolder, that defines data interfaces to represent output of the EVM events defined in the ABI, as well as a mapping of the functions necessary to decode these events (see the events dictionary in the aforementione file).
 
 :::info
-The ERC-721 ABI defines the signatures of all events in the contract. The `Transfer` event has three arguments, named: `from`, `to`, and `tokenId`. Their types are, respectively, `address`, `address`, and `uint256`. As such, the actual definition of the `Transfer` event looks like this: `Transfer(address, address, uint256)`.
+The ERC721 ABI defines the signatures of all events in the contract. The `Transfer` event has three arguments, named: `from`, `to`, and `tokenId`. Their types are, respectively, `address`, `address`, and `uint256`. As such, the actual definition of the `Transfer` event looks like this: `Transfer(address, address, uint256)`.
 :::
 
 ## Define and Bind Event Handler(s)
@@ -135,14 +135,14 @@ The processor exposes methods to "attach" functions that will "handle" specific 
 
 ### Managing the EVM contract
 
-It is worth pointing out, at this point, that some important auxiliary code like constants and helper functions to manage the EVM contract is defined in the `src/contracts.ts` file. Here's a summary of what is in it:
+It is worth pointing out, at this point, that some important auxiliary code like constants and helper functions to manage the EVM contract are defined in the `src/contracts.ts` file. Here's a summary of what is in it:
 
 - Define the chain node endpoint (optional but useful)
 - Create a contract interface to store information such as the address and ABI
 - Define functions to fetch a contract entity from the database or create one
 - Define the `processTransfer` EVM log handler, implementing logic to track token transfers
 
-In order to adapt the template to the scope of this guide, we need to apply a couple of changes:
+In order to adapt the template to the scope of this guide, we need to apply a few changes:
 
 1. Edit the `CHAIN_NODE` constant to the endpoint URL of Astar network (e.g. `wss://astar.api.onfinality.io/public-ws`)
 2. Edit the hexadecimal address used to create the `contract` constant (we are going to use [this token](https://blockscout.com/astar/token/0xd59fC6Bfd9732AB19b03664a45dC29B8421BDA9a/token-transfers) for the purpose of this guide)
@@ -293,7 +293,7 @@ The `lookupArchive` function is used to consult the [archive registry](https://g
 
 ## Launch and Set Up the Database
 
-When running the project locally, as it is the case for this guide, it is possible to use the `docker-compose.yml` file that comes with the template to launch a PostgreSQL container. To do so, run the following command in your terminal:
+When running the project locally, as is the case for this guide, it is possible to use the `docker-compose.yml` file that comes with the template to launch a PostgreSQL container. To do so, run the following command in your terminal:
 
 ```bash
 docker-compose up -d
@@ -363,7 +363,7 @@ query MyQuery {
 }
 ```
 
-Or this other one, looking up the tokens owned by a given owner:
+Or this other one, looking up the tokens owned by a given address:
 
 ```graphql
 query MyQuery {
@@ -393,8 +393,8 @@ You can view the [finalized and complete project on GitHub](https://github.com/s
 
 ## What's next
 
-Subsquid EVM template is the best starting point for EVM contract indexing. The template and this guide show how to index the `Transfer` event for ERC-721 tokens, but the same process can be applied to ERC-20 tokens as well. It is sufficient to import a new ABI interface, make the necessary changes to the `schema.graphql`, launch the `codegen` and `evm-typegen` tools, and finally adjust the helper and handler functions in `contract.ts`.
+Subsquid EVM template is the best starting point for EVM contract indexing. The template and this guide demonstrate how to index the `Transfer` event for ERC721 tokens, but the same process can be applied to ERC20 tokens as well. It is sufficient to import a new ABI interface, make the necessary changes to the `schema.graphql`, launch the `codegen` and `evm-typegen` tools, and finally adjust the helper and handler functions in `contract.ts`.
 
-[Subsquid's documentation](https://docs.subsquid.io/) contains informative material and it's the best place to start, if you are curious about some aspects that were not fully explained in this guide.
+[Subsquid's documentation](https://docs.subsquid.io/) contains informative material and is the best place to start, if you are curious about any aspects of these examples that were not fully explained in this guide.
 
-You can finally join the [Telegram SquidDev group](https://t.me/HydraDevs) and the [Subsquid Discord server](https://discord.gg/dxR4wNgdjV), to join the community of builders.
+Finally, join the [Telegram SquidDev group](https://t.me/HydraDevs) and the [Subsquid Discord server](https://discord.gg/dxR4wNgdjV), to join the community of builders.

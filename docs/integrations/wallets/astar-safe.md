@@ -14,7 +14,7 @@ To get started, navigate to [Astar Safe].
 The current guide will focus on creating a MultiSig on Astar. Soon, we will add more networks to the list.
 :::
 
-### Connect Metamask
+### Connect MetaMask
 
 To create a wallet, ypu need to connect your wallet:
 

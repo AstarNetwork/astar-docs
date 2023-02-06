@@ -12,11 +12,11 @@ sidebar_position: 2
 
 ### Why do blockchains need oracles?
 
-Blockchains are great at providing immutable storage and deterministic verifiable computations. However, they cannot access trusted real-world information available outside their networks. Band Protocol enhances smart contract functionalities by granting access to reliable data without any central authority or points of failure.
+Blockchains are great at providing immutable storage and deterministic verifiable computations. However, they cannot access trusted real-world information available outside their networks. Band Protocol enhances smart contract functionality by granting access to reliable data without any central authority or points of failure.
 
 ## Use Band Protocol
 
-Developers have two ways to fetch prices from Band’s oracle infrastructure. On one hand, they can use Band’s smart contracts on Astar. Doing so, they access data that is on-chain and is updated either at regular intervals or when price slippage is more than a target amount (different for each token). Currently, **the interval is set at 10 minutes or a price slippage of 0.5%.** The second way for devs is to use the JavaScript helper library, which uses an API endpoint to fetch the data using similar functions as those from the smart contracts, but this implementation bypasses the blockchain entirely. This can be useful if your DApp front-end needs direct access to the data.
+dDevelopers have two ways to fetch prices from Band’s oracle infrastructure. The first option, is to use Band’s smart contracts on Astar. By doing so, developers can access on-chain data updated either at regular intervals, or when price slippage is more than a target amount (different for each token). Currently, **the interval is set at 10 minutes or a price slippage of 0.5%.** The second option, is for devs to use the JavaScript helper library, which uses an API endpoint to fetch data using similar functions compared to those used with the smart contracts, but this implementation bypasses the blockchain entirely. This can be useful if your dApp front-end needs direct access to data.
 
 The Aggregator Contract address can be found in the following table:
 
@@ -55,7 +55,7 @@ We provide feeds for the following assets:
 
 ## Get Data Using Smart Contracts
 
-To query prices from Band's oracle through smart contracts, the contract looking to use the price values should reference Band's `StdReference` contract. This contract exposes `getReferenceData`  and `getReferenceDataBulk` functions.
+To query prices from Band's oracle through smart contracts, the contract requiring the price values should reference Band's `StdReference` contract. This contract exposes `getReferenceData`  and `getReferenceDataBulk` functions.
 
 `getReferenceData` takes two strings as the inputs, the base and quote symbol, respectively. It then queries the `StdReference` contract for the latest rates for those two tokens and returns a `ReferenceData` struct, shown below.
 
@@ -67,7 +67,7 @@ struct ReferenceData {
 }
 ```
 
-`getReferenceDataBulk` instead takes two lists, one of the base tokens, and one of the quotes. It then proceeds to similarly queries the price for each base/quote pair at each index, and returns an array of `ReferenceData` structs.
+`getReferenceDataBulk` instead takes two lists, one of the base tokens, and one of the quotes. It then proceeds to similarly query the price for each base/quote pair at each index, and returns an array of `ReferenceData` structs.
 
 For example, if we call `getReferenceDataBulk` with `['BTC','BTC','ETH']` and `['USD','ETH','BNB']`, the returned ReferenceData array will contain information regarding the pairs:
 

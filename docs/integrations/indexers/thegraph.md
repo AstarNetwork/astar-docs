@@ -12,17 +12,17 @@ sidebar_position: 4
 
 ## Prerequisites
 
-Before you run The Graph node in a server, you must install:
+Before you run The Graph node on a server, you will need to install:
 
 - [Docker](https://docs.docker.com/get-docker/): Containerization platform for software solutions
 - [`docker-compose`](https://docs.docker.com/compose/install/) : Used to automate interactions between docker containers
 - [JQ](https://stedolan.github.io/jq/download/): JSON processor for graph requests
 
-In this guide, you will learn how to run an Astar node for getting more insight into the transactions of blockchain, providing indexing data to The Graph node.
+In this guide, we will demonstrate how to run an Astar node for getting more insight into the transactions on the blockchain, by providing indexing data to The Graph node.
 
 ## Running Graph node
 
-After successfully running an [RPC node](https://docs.astar.network/docs/nodes/archive-node/), The Graph node needs to be installed and configured to connect to a separate computer. If you are running a self-signed RPC node, you need to set up an extra environment variable for allowance.
+After successfully running an [RPC node](https://docs.astar.network/docs/nodes/archive-node/), The Graph node will need to be installed and configured to connect to a separate computer. If you are running a self-signed RPC node, you will need to set up an extra environment variable for allowance.
 
 The first step is to clone the [Graph Node repository](https://github.com/graphprotocol/graph-node/):
 
@@ -31,7 +31,7 @@ git clone <https://github.com/graphprotocol/graph-node/> \\
 && cd graph-node/docker
 ```
 
-Next, execute the `setup.sh` file. This will pull all the necessary Docker images and write the necessary information in the `docker-compose.yml` file. Make sure you have `docker-compose` and `jq` are installed.
+Next, execute the `setup.sh` file. This will pull all the necessary Docker images and write the necessary information to the `docker-compose.yml` file. Do ensure that `docker-compose` and `jq` are installed.
 
 ```sh
 sudo bash ./setup.sh
@@ -41,7 +41,7 @@ After running the command, the tail end of the command should show similar logs 
 
 ![8](img/8.png)
 
-Once everything is set up, you need to modify the "Ethereum environment" inside the `docker-compose.yml` file, so that The Graph node points to the endpoint of the RPC that you are connecting with. Note that the `setup.sh` file detects RPC's Host IP and writes its value, so you'll need to modify it accordingly.
+Once everything is set up, you will need to modify the "Ethereum environment" inside the `docker-compose.yml` file, so that The Graph node points to the endpoint of the RPC that you are connecting with. Note that the `setup.sh` file detects the RPC's Host IP and writes its value, so you'll need to modify it accordingly.
 
 ## Modifying the Ethereum environment
 
@@ -75,7 +75,7 @@ nano docker-compose.yml
 ethereum: 'shibuya:https://<IP address or domain>:<PORT>'
 ```
 
-For example, if you are building The Graph node for Shiden, the entire `docker-compose.yml` now should look like this below:
+For example, if you are building The Graph node for Shiden, the entire `docker-compose.yml` now should appear as below:
 
 ```yaml
 version: '3'
@@ -126,6 +126,6 @@ Run the following command:
 sudo docker-compose up
 ```
 
-When everything is set up you will see the log like this:
+When everything is set up the log will appear as below:
 
 ![9](img/9.png)

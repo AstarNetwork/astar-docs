@@ -20,7 +20,7 @@ To get started, sign up for an [API Key](https://www.covalenthq.com/platform/?ut
 
 ![6](img/6.webp)
 
-The Covalent API is RESTful and offers the following out-of-the-box for Astar:
+The Covalent API is RESTful and offers the following out-of-the-box features for Astar:
 ​
 
 - **Response formats**: JSON and CSV

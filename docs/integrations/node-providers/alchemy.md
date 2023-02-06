@@ -13,7 +13,7 @@ description: "Alchemy is a developer platform that helps companies to build scal
 ## Overview
 
 ### Step 1　
-Log in or sign up to your Alchemy account via [the link](https://auth.alchemyapi.io/?redirectUrl=https%3A%2F%2Fdashboard.alchemyapi.io%2Fsignup%2F).
+Log in or sign up for your Alchemy account via [the link](https://auth.alchemyapi.io/?redirectUrl=https%3A%2F%2Fdashboard.alchemyapi.io%2Fsignup%2F).
 
 ![10](img/10.png)
 

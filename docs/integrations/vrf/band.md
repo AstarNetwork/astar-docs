@@ -44,7 +44,7 @@ For `VRFProvider` and other contract addresses on Astar, please refer to the [Su
 
 ## Example Usage
 
-The contract below demonstrates an example of a simple VRF consumer contract written in Solidity.
+The contract below is an example of a simple VRF consumer contract written in Solidity.
 
 ```ts
 contract MockVRFConsumer {

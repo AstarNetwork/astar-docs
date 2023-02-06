@@ -47,7 +47,7 @@ This is the address that you should use when you withdraw ASTR tokens from excha
 
 ## How to bridge assets from Ethereum to Astar EVM
 
-In this tutorial we will demonstrate how to bridge USDC from Ethereum to Astar. By doing so, you will be adding liquidity to our network, which benefits the ecosystem overall, and for which Astar team convey their immense gratitude.
+In this tutorial we will demonstrate how to bridge USDC from Ethereum to Astar. By doing so, you will be adding liquidity to our network, which benefits the ecosystem overall, and for which we convey our deepest gratitude.
 
 Visit cBridge <https://cbridge.celer.network/#/transfer> and input a currency you would like to transfer.
 
