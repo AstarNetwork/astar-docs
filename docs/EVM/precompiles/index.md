@@ -4,8 +4,8 @@ sidebar_position: 1
 
 # Precompiles
 
-A precompile means a common functionality for smart contracts which has been compiled, so that Ethereum nodes can run this efficiently. From a contract's perspective, this is just a single command like an opcode.
-The Frontier EVM used in Astar provides several useful precompiled contracts. These contracts are implemented in our ecosystem as a native implementation. The precompiled contracts `0x01` through `0x08` are the same as those in Ethereum (see list below). Astar additionally implements precompiled contracts start from `0x5001`, and support new Astar features.
+A precompile is a common functionality used in smart contracts that has been compiled in advance, so Ethereum nodes can run it more efficiently. From a contract's perspective, this is a single command like an opcode.
+The Frontier EVM used on Astar network provides several useful precompiled contracts. These contracts are implemented in our ecosystem as a native implementation. The precompiled contracts `0x01` through `0x08` are the same as those in Ethereum (see list below). Additionally, Astar implements precompiled contracts starting from `0x5001`, that support new Astar features.
 
 ## Ethereum Native Precompiles
 
@@ -36,7 +36,7 @@ The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork
 
 # Usage example
 
-Here we'll see how to interact with dApp Staking precompile using Remix IDE. Other precompiles can be accessed in a similar manner.
+Here we'll demonstrate how to interact with dApp staking precompile using Remix IDE. Other precompiles can be accessed in a similar manner.
 
 
 ```
@@ -59,9 +59,9 @@ Example use: check `current era` and `total staked amount` in the `pallet-dapps-
 2. Compile the dAppStaking contract:
 ![](https://i.imgur.com/6Wgg9rf.jpg)
 
-3. The precompile does not need to be deployed since it is already on the network, but you need to tell Remix where to find it.
+3. The precompile does not need to be deployed since it is already on the network, but you will need to tell Remix where to find it.
 After you connect your EVM wallet to Shiden Network (same applies for Astar Network and for Shibuya Testnet) follow these steps:
-    1. Go to Deploy tab
+    1. Open the Deploy tab
     2. Use injected Web3 environment. It should point to Shiden Mainnet with `ChainId 336`
     3. Make sure you have the selected dAppStaking contract
     4. Provide the address of the precompiled contract `0x0000000000000000000000000000000000005001`

@@ -7,7 +7,7 @@ sidebar_position: 3
 Deploying and interacting with EVM-based smart contracts on Astar is as easy as any other EVM-compatable network. Usually, getting set up requires two steps:
 
 1. Configuring (and funding) your Ethereum account on the respective network
-2. Adding Astar's networks to your Ethereum client
+2. Adding Astar networks to your Ethereum client
 
 :::caution
 For Astar and Shiden applications, we *highly* recommend [running your own network node](../nodes/index.md) and not relying on our RPC endpoints. This further decentralizes the network, and puts you in control of your uptime requirements.
@@ -88,7 +88,7 @@ Once your accounts are funded, you can deploy the sample contract to Shibuya wit
 
 ## Truffle
 
-### Create Ethereum Account
+### Create an Ethereum Account
 
 We recommend using the `@truffle/hdwallet-provider` package for key management. Instructions can be found [here](https://github.com/trufflesuite/truffle/blob/develop/packages/hdwallet-provider/README.md).
 
@@ -132,20 +132,22 @@ Deploy/Migrate by running `truffle migrate --network shibuya`, replacing `shibuy
 
 ## Your own RPC server
 
-For EVM developers and projects, it is reasonable to have their own managed EVM endpoints. Relying on public endpoints introduces, introduces the risk of relying on centralized endpoints which can become single point of failure.
-
-Astar team officially recommends projects to use their own managed EVM endpoints.
-
-Fortunately, launching Astar Network endpoint is not that difficult.
+For EVM developers and projects, it is not an unreasonable expectation that they have managed EVM endpoints. Relying on public endpoints can introduce additional risks such as centralizaion or improper maintenance, which can make them single points of failure.
 
 :::note
-By default EVM RPC server is disabled, to turn it on please add `--enable-evm-rpc` flag into the launch string.
+Astar team highly recommends that projects use and maintain their own EVM endpoints.
+:::
+
+Launching an Astar Network endpoint is easy.
+
+:::note
+The EVM RPC server is disabled by default. To enable it, append the `--enable-evm-rpc` flag to the launch string.
 :::
 
 ```
 astar-collator --chain=shiden --enable-evm-rpc --unsafe-rpc-external --unsafe-ws-external
 ```
 
-Launch string above will start Astar Collator for Shiden network. HTTP endpoint becomes available on port `9933` and WS on port `9944`.
+The launch string above will start an Astar Collator on Shiden network, open up an HTTP endpoint on port `9933`, and a WS endpoint on port `9944`.
 
-We also recommend to pay attention to the `--ws-max-connections` parameter. By default it relatively small and you will probably want to increase it to couple of thousands.
+We also recommend paying attention to the `--ws-max-connections` parameter. By default this value is relatively small, so it may be beneficial to increase it to a few thousand.

@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-# Configure Metamask
+# Configure MetaMask
 
-## Add Network to your Metamask
+## Add Network to MetaMask
 
-It's easy to configure your Metamask to interact with Astar/Shiden network family. Open Metamask, click network tab, and click the Custom RPC. In the screen shown, please enter the necessary information as follows:
+It's easy to configure MetaMask to interact with the Astar/Shiden network family. To do so, open MetaMask, click the Network tab, and click Custom RPC. In the screen shown, please enter the information shown below:
 
 | Properties                    | Network Details                |
 | ----------------------------- | ------------------------------ |
@@ -16,19 +16,19 @@ It's easy to configure your Metamask to interact with Astar/Shiden network famil
 | Currency Symbol               | ASTL                           |
 | Block Explorer URL (Optional) |                                |
 
-## Get your local token on Metamask
-Since Astar Network is building a multi-VM smart contract hub, we support both EVM and WASM with two different account systems, H160 and SS58 respectively.
+## Get your local token on MetaMask
+Since Astar Network has built a multi-VM smart contract hub that supports both EVM and Wasm virtual machines, we need to support two different account types, H160 and SS58 respectively.
 
-In order to send the asset to an H160 address (address B) from the Substrate-native SS58 address (address A), we need to convert the H160 address to its mapped Substrate-native SS58 address (address B) and send the asset directly from address A to address B via [Polkadot.js](https://polkadot.js.org/apps/).
+In order to send an asset to an H160 account (address B) from a Substrate-native ss58 account (address A), we will need to convert the H160 account address to its mapped Substrate-native ss58 account address (address B), before we can send the asset directly from address A to address B via [Polkadot.js](https://polkadot.js.org/apps/).
 
-Convert the destination H160 address to its mapped Substrate-native SS58 address by using our [address converter](https://hoonsubin.github.io/evm-substrate-address-converter/).
+You can convert the destination H160 address to its mapped Substrate-native ss58 address by using our [address converter](https://hoonsubin.github.io/evm-substrate-address-converter/).
     
 ![Untitled](img/10.png)
 
-OK, now you are ready to receive some local tokens on your Metamask! Go to account page on the explorer and click the send button of Alice. In the screen shown, you can input your SS58 address in `send to address` field and designate the amount to send. Then click the `Make Transfer` button.
+Now, you are ready to receive some local tokens within MetaMask! Visit the Account page on the explorer and click the send button beside Alice. In the screen shown, you can input your ss58 address in the `send to address` field, and choose an amount to send. Then click the `Make Transfer` button.
 
 ![4](img/4.png)
 
-Congratulations!  Now you see your local token on Metamask. And you are almost ready to deploy your first smart contract on Shiden local network now!
+Congratulations!  You should now see your local tokens within MetaMask, and are one step closer to being able to deploy your first smart contract on Shiden local network.
 
 ![5](img/5.png)

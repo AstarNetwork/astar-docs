@@ -1,6 +1,6 @@
 # XCM
 
-XCM Precompile provides the following functions to handle specific XCM operations.
+The XCM Precompile provides the following functions to handle specific XCM operations.
 
 | Function | Description |
 | -------- | -------- |

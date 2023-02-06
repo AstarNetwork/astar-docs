@@ -4,9 +4,9 @@ sidebar_position: 9
 
 # Client Applications
 
-In this chapter, we will examine how we can use TypeScript to interact with the XCM pallet and construct XCM transactions. With this information, you will be able to create an XCM dApp, or bridge.
+In this chapter, we will examine how to use TypeScript to interact with the XCM pallet and construct XCM transactions. Using this information, you will be able to create an XCM dApp, or bridge.
 
-While interacting with the XCM pallet via the Substrate RPC, we will use the [`polkadot/api`](https://github.com/polkadot-js/api) package, throughout this chapter.
+While interacting with the XCM pallet via the Substrate RPC, we will make use of the [`polkadot/api`](https://github.com/polkadot-js/api) package, throughout this chapter.
 
 First, you will need to initialize the API as you would with any Substrate application.
 
@@ -24,7 +24,7 @@ const myApp = async () => {
 };
 ```
 
-In Astar Network, we use the [Substrate Assets pallet](https://github.com/paritytech/substrate/tree/master/frame/assets) to handle the XCM multi-asset representation. Let’s retrieve the list of assets from the network.
+On Astar Network, we use the [Substrate Assets pallet](https://github.com/paritytech/substrate/tree/master/frame/assets) to handle the XCM multi-asset representation. Let’s retrieve the list of assets from the network.
 
 ```js
  
@@ -66,9 +66,9 @@ interface ChainAsset extends AssetDetails {
 
 Running this function will produce a list of assets that are registered on the chain. This is useful when you want to create a UI that lists all possible assets, including XCM-compatible assets.
 
-Next, let’s execute a cross-consensus function. Parachains will have a pallet called `polkadotXcm`, while Relay Chains will use the pallet `xcmPallet`. Both of them will have the same function and syntax for sending XCM transactions.
+Next, let’s execute a cross-consensus function. Parachains will have a pallet called `polkadotXcm`, while Relay Chains will use the pallet `xcmPallet`. Both of them will use the same functions and syntax for sending XCM transactions.
 
-For this example, we will send the Relay Chain asset to the parachain, like we've done in previous chapters, but this time, we’ll be using TypeScript.
+For this example, we will send the Relay Chain asset to the parachain, as we've done in previous chapters, but this time, we’ll use TypeScript.
 
 Let’s create two API instances, one for the parachain and another for the Relay Chain. Although for our example, we will only call the extrinsic from the Relay Chain, and initialize the parachain API instance to dynamically obtain the parachain ID.
 

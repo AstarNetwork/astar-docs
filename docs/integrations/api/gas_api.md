@@ -6,11 +6,11 @@ sidebar_position: 2
 
 ## Overview
 
-Gas is the unit of measure for how much computational work is required to process transactions and smart contracts. Essentially a transaction fee, the term originates from Ethereum, in which context it refers to computation undertaken on the Ethereum Virtual Machine (EVM). Since Ethereum was founded, numerous EVM-compatible networks have emerged and adopted similar models.
+Gas is the unit of measure for the amount of computational resources will be required to process transactions and smart contracts. Essentially a transaction fee, the term originated from Ethereum, in which context it refers to computation undertaken on the Ethereum Virtual Machine (EVM). Since Ethereum was founded, numerous EVM-compatible networks have emerged and adopted similar models.
 
 The term can be considered analogous to the gas that powers a car engine: it's the fluctuating, occasionally expensive cost of operation. More complex smart contracts require more gas to power their computation, just as a bigger, more powerful car takes more gas to run.
 
-Gas price api is a service that allows you to get the various gas prices of the astar network for various transaction times. Gas fee are provided in wei.
+The gas price api is a service that allows you to obtain the various gas prices of the Astar network for various transaction times. Gas fee are provided in wei.
 
 ## API
 
@@ -42,9 +42,9 @@ Gas price api is a service that allows you to get the various gas prices of the 
 
 ## Response parameters
 
-- slow: The gas price for a transaction that takes a long time to execute.
-- average: The gas price for a transaction that takes a medium time to execute.
-- fast: The gas price for a transaction that takes a short time to execute.
+- slow: The gas price for a transaction that will take a long time to execute.
+- average: The gas price for a transaction that will take a medium amount of time to execute.
+- fast: The gas price for a transaction that will take a short amount of time to execute.
 
 - eip1559:
 

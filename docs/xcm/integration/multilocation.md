@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Asset MultiLocation
 
-You can use these `MultiLocation` to add our native token assets to other parachains foreign token list and other assets minted on our chain.
+You can use these `MultiLocation` values to add our native token assets to other parachains foreign token lists, along with other assets minted on our chain.
 
 ## Rococo Astar
 
@@ -35,5 +35,5 @@ You can use these `MultiLocation` to add our native token assets to other parach
 
 `{ parents: 1, interior: X3(Parachain(2006/7), PalletInstance(36), GeneralIndex(*asset_id*) }`
 
-- Do note that these assets can be created by any user.
-- Asset metadata (if available) can be found on-chain or by consulting the asset owner. Or look at our [official asset list](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/xcm/xcm-asset-list).
+- Please note that these assets can be created by any user.
+- Asset metadata (if available) can be found on-chain, by consulting the asset owner, or in our [official asset list](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/xcm/xcm-asset-list).

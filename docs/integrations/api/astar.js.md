@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Overview
 
-Astar.js library provides application developers the ability to query a node and interact with the astar/shiden/shibuya chains using Javascript/Typescript.
+The Astar.js library provides application developers the ability to query nodes and interact with Astar/Shiden/Shibuya chains using Javascript/Typescript.
 
 # Getting Started
 
