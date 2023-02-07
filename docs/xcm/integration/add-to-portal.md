@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Once a channel is opened between parachains and assets have been registered, developers can create a PR on [Astar Portal](https://github.com/AstarNetwork/astar-apps) Github, to have their assets added. Here’s what you need to know about the integration of the XCM assets into Astar Portal.
 
-## Define the parachain information
+## Define the Parachain Information
 
 1. Add the `Chain name` for the [Chain](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/models/XcmModels.ts#L2) enum.
 2. Add the `parachain id` for the [parachainIds](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/models/XcmModels.ts#L17) enum.
@@ -40,7 +40,7 @@ Once a channel is opened between parachains and assets have been registered, dev
   }
 ```
 
-## Define the assets information
+## Define the Asset Information
 
 Add the asset information for the [xcmToken](https://github.com/AstarNetwork/astar-apps/blob/main/src/modules/xcm/tokens/index.ts#L15) object variable.
 
@@ -89,16 +89,16 @@ const xcmToken = {
 }
 ```
 
-## Define the methods for the XCM transferring and the getter for fetching asset balance
+## Define Methods for XCM Transfers and Fetching Asset Balances
 
-1. Create a class (Repository) that inherits from [XcmRepository](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/repositories/implementations/XcmRepository.ts) class and define the logic under `getTransferCall` and `getTokenBalance` methods [(e.g.)](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/repositories/implementations/xcm/AcalaXcmRepository.ts).
+1. Create a class (Repository) that inherits from the [XcmRepository](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/repositories/implementations/XcmRepository.ts) class and define the logic under `getTransferCall` and `getTokenBalance` methods [(e.g.)](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/repositories/implementations/xcm/AcalaXcmRepository.ts).
 2. Export the Repository class in [/src/v2/repositories/implementations/index.ts](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/repositories/implementations/index.ts)
 3. Add the Repository at [XcmRepositoryConfiguration](https://github.com/AstarNetwork/astar-apps/blob/main/src/v2/config/xcm/XcmRepositoryConfiguration.ts#L11) object variable.
 
 ## Requirements for creating a PR
 
-1. Deposit and withdrawal transactions have each been tested on Astar Portal.
-2. Deposit and withdrawal transactions have additionally been tested with the `minBridgeAmount`.
-3. Developers have tested withdrawing assets to wallet accounts that have 0 balance of the assets being withdrawn (to check whether `minBridgeAmount` is higher than `Existential Deposit` defined on the origin chain).
-4. Submit the Subscan link for transaction details of the XCM transfers for all assets you've registered.
-5. Deploy the forked app and submit the staging URL([ref](../../builder-guides/integration_toolings/deploy-astar-portal.md)).
+1. You've tested deposit and withdrawal functions on Astar Portal.
+2. Deposit and withdrawal functions have additionally been tested with the `minBridgeAmount`.
+3. You've tested withdrawal of assets to accounts that have 0 balance of the assets being withdrawn (to check whether `minBridgeAmount` is higher than `Existential Deposit` defined on the origin chain).
+4. You've included Subscan link(s) to the XCM transaction details, for each of the assets you've registered.
+5. And finally, have deployed the forked app, and submitted the staging URL([ref](../../builder-guides/integration_toolings/deploy-astar-portal.md)).

@@ -35,7 +35,7 @@ We have created a template that you can use to post your proposal. You can find 
 
 ### Create Proposal
 
-After creating your proposal, we will inform our community, and it is expected that you follow up, in case the community has questions. To continue with the next step you will need to be approved by our council (governance), which will be done via poll on our forum.
+After creating your proposal, we will inform our community, and it is expected that you follow up in case there are any questions. To continue with the next step you will need to be approved by our council (governance), which will be done via poll on our forum.
 
 ### Mapping Asset
 

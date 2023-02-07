@@ -5,7 +5,7 @@ sidebar_position: 6
 # Integration Testing with Zombienet
 
 :::note
-This page is inteded for developers & builders.
+This page is intended for developers & builders.
 :::
 
 ## The Problem

@@ -68,7 +68,7 @@ Running this function will produce a list of assets that are registered on the c
 
 Next, let’s execute a cross-consensus function. Parachains will have a pallet called `polkadotXcm`, while Relay Chains will use the pallet `xcmPallet`. Both of them will use the same functions and syntax for sending XCM transactions.
 
-For this example, we will send the Relay Chain asset to the parachain, as we've done in previous chapters, but this time, we’ll use TypeScript.
+In this example, we will send the Relay Chain asset to the parachain, as we've done in previous chapters, but this time, we’ll use TypeScript.
 
 Let’s create two API instances, one for the parachain and another for the Relay Chain. Although for our example, we will only call the extrinsic from the Relay Chain, and initialize the parachain API instance to dynamically obtain the parachain ID.
 
@@ -166,7 +166,7 @@ const myApp = async () => {
 };
 ```
 
-The first half of the function is about loading the account that will send the KSM and initialize the API. The real magic happens in the latter half of the function.
+To summarize, the first half of the function loads the account that will send the KSM and initialize the API. The real magic happens in the latter half of the function.
 
 ```js
     // the target parachain connected to the current relaychain
@@ -215,7 +215,7 @@ The first half of the function is about loading the account that will send the K
     };
 ```
 
-As you can see, the `dest` refers to the destination or target chain that will receive the asset identified by the parachain ID. The `beneficiary` refers to the account within the parachain that will receive the token. Finally, the `assets` parameter simply refers to the amount you wish to send. Finally, we can sign the transaction with the following function:
+As you can see, the `dest` refers to the destination or target chain that will receive the asset identified by the parachain ID. The `beneficiary` refers to the account within the parachain that will receive the token. Finally, the `assets` parameter refers to the amount you wish to send. Finally, we can sign the transaction with the following function:
 
 ```js
 // This can be zero
@@ -253,6 +253,6 @@ console.log(assetBalance);
 
 Now, you should be able to transfer the asset from the Relay Chain to the parachain, and check to see if it was successful by listing all the assets within the asset pallet that the current account holds.
 
-Please note that the gas will be deducted from the amount transferred, so it should be adjusted accordingly, based on the estimated gas fee. Please refer to [Gas Price API](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/~/changes/aJQFFWQNMjlao1SSjj4a/build/api/gas-price-api) if needed for specific use cases.
+Please note that the gas fee will be deducted from the amount transferred, so it should be adjusted accordingly, based on the estimated gas fee. Please refer to the [Gas Price API](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/~/changes/aJQFFWQNMjlao1SSjj4a/build/api/gas-price-api) if required, for specific use cases.
 
-You can find the whole project that integrates similar functionality in [this repository](https://github.com/AstarNetwork/astar-xcm-tools).
+You can find an entire project that integrates similar functionality in [this repository](https://github.com/AstarNetwork/astar-xcm-tools).
