@@ -6,20 +6,20 @@ sidebar_position: 4
 
 ## OpenBrush
 
-[OpenBrush] is a library for smart contract development on ink! maintained by the [Brushfam] team. It intends to be like OpenZeppellin for Solidity.
+[OpenBrush] is a library for smart contract development on ink! maintained by the [Brushfam] team, and is inspired by OpenZeppellin for Solidity.
 
-It provides standard contracts based on [PSPs], as well as useful contracts and Rust macros to help you build ink! smart contracts.
+Openbrush provides standard contracts based on [PSPs], as well as other useful contracts and Rust macros that help developers build ink! smart contracts.
 
-Why use this OpenBrush?
+Why use OpenBrush?
 
-- To make contracts **interoperable** to do **safe** cross-contracts calls (by having the same function's signature among every contract)
-- To ensure the usage of [Polkadot Standards Proposals][PSPs]
-- To ensure the usage of the **latest and most secure** implementation
-- Useful contracts that provide custom logic to be implemented in contracts
-- To **save time** by not writing boilerplate code
-- Useful features which can simplify development
+- To create **interoperable** smart contracts, that perform **safe** cross-contracts calls (by maintaining consistent signatures across contracts).
+- To comply with [Polkadot Standards Proposals][PSPs].
+- To ensure usage of the **latest and most secure** implementation.
+- Templates provide customizable logic that can be implemented easily in smart contracts.
+- To **save time** by not having to write boilerplate code.
+- Other useful features further simplify the development experience.
 
-Which standard tokens and useful contracts does it provide?
+Which token standards and useful contracts does OpenBrush provide?
 
 - **PSP22** - Fungible Token (*ERC20 equivalent*) with extensions
 - **PSP34** - Non-Fungible Token (*ERC721 equivalent*) with extensions
@@ -33,11 +33,11 @@ Which standard tokens and useful contracts does it provide?
 
 ### Generic Trait Implementation
 
-More importantly, OpenBrush adds support for generic Trait implementation so you can split Trait and Impls into different files, which will increase the readability and maintainability of your smart-contract code base (see detailed description [here](https://github.com/727-Ventures/openbrush-contracts/blob/main/docs/docs/smart-contracts/example/setup_project.md))
+More importantly, OpenBrush adds support for generic Trait implementation, so you can split Trait and Impls into different files, which will increase the readability and maintainability of your smart contract code base (see detailed description [here](https://github.com/727-Ventures/openbrush-contracts/blob/main/docs/docs/smart-contracts/example/setup_project.md)).
 
 ### Wrapper around Traits
 
-Defining a Trait definition is sufficient (a contract that implements that Trait is not needed anymore) to call methods of that Trait from some contract in the network (do a cross contract call). It makes cross-contract calls easier.
+Defining a Trait definition is sufficient enough (a contract that implements that Trait is not needed anymore) to call methods of that Trait from another contract on the network (do a cross contract call). This makes cross-contract calls easier.
 
 ### Documentation
 

@@ -46,7 +46,7 @@ std = [
 ink-as-dependency = []
 ```
 
-In the library file - ink! has some minimum requirements:
+In the library file - ink! has a few minimum requirements:
 
 - `#![cfg_attr(not(feature = "std"), no_std)]` at the beginning of each contract file link
 - a module with `#[ink::contract]`
