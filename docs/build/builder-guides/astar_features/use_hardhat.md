@@ -167,4 +167,4 @@ Happy Hacking!
 ## Reference
 
 - Official Document for Hardhat: [https://hardhat.org/hardhat-runner/docs/getting-started#overview](https://hardhat.org/hardhat-runner/docs/getting-started#overview)
-- Astar Document for Hardhat: [https://docs.astar.network/docs/EVM/developer-tooling/#hardhat](https://docs.astar.network/docs/EVM/developer-tooling/#hardhat)
+- Astar Document for [Hardhat](/docs/build/EVM/developer-tooling/#hardhat)
