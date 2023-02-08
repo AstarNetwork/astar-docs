@@ -1,9 +1,9 @@
 # Node Providers
  
-The free endpoints mentioned in the [Quickstart section](../../quickstart/) are rate limited and designed for end users to be used to interact with dApps, or deploy/call smart contracts. They are not suitable for usage by dApp UIs that scrape blockchain data continuously, or indexers (like the Graph).
+The free endpoints mentioned in the [Quickstart section](../../quickstart/) are rate limited and designed for end users to be able to interact with dApps, or deploy/call smart contracts. They are not suitable for usage by dApp UIs that scrape blockchain data continuously, or indexers (like the Graph).
 
 
-Please create your own endpoint for development or production, referring to the how to [run an archive node](/docs/nodes/archive-node/) section, or get your own API key for a free/paid tier from one of our infra providers listed below:
+If you are an active developer you should consider creating your own endpoint, and it is mandatory to do so for production deployments. Refer to [how run an archive node](/docs/nodes/archive-node/) for more information, or obtain an API key from one of our infrastructure providers, listed below:
 
 
 ```mdx-code-block

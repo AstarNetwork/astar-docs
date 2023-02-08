@@ -4,11 +4,11 @@ description: "Alchemy is a developer platform that helps companies to build scal
 ---
 
 # Alchemy
-[Alchemy] is a developer platform that helps companies to build scalable and reliable decentralized applications without the difficulty of managing blockchain infrastructure in-house.
+[Alchemy] is a developer-focused platform that helps companies build scalable and reliable decentralized applications, without the difficulty of managing blockchain infrastructure in-house.
 
 - Alchemy Supernode offers the most reliable, scalable and accurate way to connect and build on the Astar blockchain.
-- Alchemy SDK gives Astar developers the easiest way to connect their dApp to the blockchain with just two lines of code.
-- Websockets & Webhooks allows to subscribe and get notified for any address activity events as well as mined and dropped transactions.
+- Alchemy SDK gives Astar developers the easiest way to connect their dApps to the blockchain with just two lines of code.
+- Websockets & Webhooks allows you to subscribe and get notified for any address activity events as well as mined and dropped transactions.
 
 ## Overview
 
@@ -28,7 +28,7 @@ Select Chain and Network.
 ![12](img/12.png)
 
 ### Step 4
-Congrats! Now endpoint is generated as well as URL and API key.
+Congrats! Now an endpoint has been generated as well as the URL and API key.
 
 ![13](img/13.png)
 

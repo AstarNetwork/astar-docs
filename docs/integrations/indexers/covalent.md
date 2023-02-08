@@ -8,7 +8,7 @@ sidebar_position: 3
 
 ## Introduction
 
-[Covalent​] provides a unified API to bring full transparency and visibility to assets across all blockchain networks including Astar.
+Covalent​ provides a unified API to bring full transparency and visibility to assets across all blockchain networks including Astar.
 
 To get started, sign up for an [API Key](https://www.covalenthq.com/platform/?utm_source=astar&utm_medium=partner-docs).
 
@@ -20,16 +20,16 @@ To get started, sign up for an [API Key](https://www.covalenthq.com/platform/?ut
 
 ![6](img/6.webp)
 
-The Covalent API is RESTful and offers the following out-of-the-box features for Astar:
+The Covalent API is RESTful and offers the following out-of-box features for Astar:
 ​
 
-- **Response formats**: JSON and CSV
-- **Real time response**: 2 blocks
-- **Batch response**: 30 minutes
-- **Request volume limit**: None
-- **Request rate limit**: 5 requests per second
+- **Response formats**: JSON and CSV.
+- **Real time response**: 2 blocks.
+- **Batch response**: 30 minutes.
+- **Request volume limit**: None.
+- **Request rate limit**: 5 requests per second.
 - **Base URL**: (<https://api.covalenthq.com/v1/>)
-​​- **Networks & `chain_id`**
+- **Networks & `chain_id`**
   - Mainnet Astar - 592
   - Mainnet Shiden - 336
   - Testnet - 81
@@ -42,7 +42,9 @@ The Covalent API is RESTful and offers the following out-of-the-box features for
     - [Log Events (Contract Address)](https://www.covalenthq.com/docs/api/#/0/Get%20log%20events%20by%20contract%20address/USD/592/?utm_source=astar&utm_medium=partner-docs)
     - [Log Events (Topic Hash)](https://www.covalenthq.com/docs/api/#/0/Get%20log%20events%20by%20topic%20hash(es)/USD/592/?utm_source=astar&utm_medium=partner-docs)
 
-Try the supported endpoints directly in your browser from our [API Reference](https://covalenthq.com/docs/api/?utm_source=astar&utm_medium=partner-docs) or use the following code examples. `The JSON response format is the same for all endpoints`:
+You can try out the supported endpoints directly in your browser from our [API Reference](https://covalenthq.com/docs/api/?utm_source=astar&utm_medium=partner-docs) or use the following code examples: 
+
+**Note: The JSON response format is the same for all endpoints**
 
 ```json
 ❴
@@ -108,7 +110,7 @@ The Covalent API supports a broad range of Web3 data use cases including:
 
 ![7](img/7.png)
 
-Check out their collection of ready-to-ship [Code Templates](https://github.com/covalenthq/web3-resources?utm_source=astar&utm_medium=partner-docs) that you can use to build your Web3 data-powered dApps.
+Covalent also provides a collection of ready-to-ship [Code Templates](https://github.com/covalenthq/web3-resources?utm_source=astar&utm_medium=partner-docs) that you can use to build your Web3 data-powered dApps.
 
 ## Resources
 

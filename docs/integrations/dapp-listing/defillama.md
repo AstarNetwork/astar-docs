@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Defi Llama provides inclusive, non-biased, and community-driven statistics for the decentralized finance industry.
 
-Astar/ Shiden is live on Defi Llama. Defi Llama maintains homepages for the top DeFi apps under [Astar Defi](https://defillama.com/chain/Astar) and [Shiden Defi](https://defillama.com/chain/Shiden).
+Astar and Shiden are live on Defi Llama, and you can find homepages for top DeFi apps in the Astar ecosystem under [Astar Defi](https://defillama.com/chain/Astar) and [Shiden Defi](https://defillama.com/chain/Shiden).
 
 ## How to list an Astar/Shiden DeFi project on Defi Llama
 
@@ -16,32 +16,32 @@ To list on Defi Llama:
 2. Add a new folder with the same name as the project to `projects/`.
 3. Write an [SDK adapter](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/dapp-listing/defillama#how-to-write-an-sdk-adapter) (or a [fetch adapter](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/dapp-listing/defillama#how-to-write-a-fetch-adapter) if you cant use the SDK for this project) in the new folder.
 4. Make a Pull Request with the changes on your fork, to the main Defi Llama Adapters repo, with a brief explanation of what you changed.
-5. Wait for someone to either comment on or merge your Pull Request. There is no need to ask for someone to check your PR as there a monitored regularly.
-6. Once your PR has been merged, please give 24 hours for the front-end team to load your listing onto the UI.
+5. Wait for someone to either comment on or merge your Pull Request. There is no need to ask for someone to check your PR as they are monitored actively.
+6. Once your PR has been merged, please allow 24 hours for the front-end team to load your listing onto the UI.
 
-## How to build an adapter
+## How to Build an Adapter
 
 An adapter is just some code that:
 
-1. Collects data on a protocol by calling some endpoints or making some blockchain calls
-2. Computes the TVL of a protocol and returns it
+1. Collects data on a protocol by calling some endpoints or making some blockchain calls.
+2. Computes the TVL of a protocol and returns it.
 
-### Types of adapters
+### Types of Adapters
 
 Right now there are two types of adapters co-existing within the repository:
 
-- [Fetch adapters](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/dapp-listing/defillama#how-to-write-a-fetch-adapter): These calculate the TVL directly and just export a fetch method
-- [SDK adapters](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/dapp-listing/defillama#how-to-write-an-sdk-adapter): These use the SDK and return all the assets locked along with their balances
+- [Fetch adapters](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/dapp-listing/defillama#how-to-write-a-fetch-adapter): These calculate the TVL directly and exports a fetch method.
+- [SDK adapters](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/dapp-listing/defillama#how-to-write-an-sdk-adapter): These use the SDK and return all the assets locked along with their balances.
 
-### Which adapter type should I develop?
+### Which Adapter Type should I Develop?
 
 Right now Defi Llama SDK only supports EVM chains, so if your project is in any of these chains you should develop an SDK-based adapter, while if your project is on another chain a fetch adapter is likely the way to go. If your project is not on an EVM chain but you are able to give us historical data, we can help support this if you message us in Discord.
 
-## How to write an SDK adapter
+## How to Write an SDK Adapter
 
-### Basic adapter
+### Basic Adapter
 
-Below, you can see the one AstridDAO used on Astar Network (ASTR). Let's walk through it to get a better understanding of how it works.
+Below, you can see an example of the one AstridDAO used on Astar Network (ASTR). Let's walk through it to get a better understanding of how it works.
 
 ```js
 const { sumTokens } = require('../helper/unwrapLPs')
@@ -75,26 +75,26 @@ module.exports = {
 };
 ```
 
-The adapter consists of 3 main sections. First, any dependencies we want to use. Next, an async function containing the code for calculating TVL (where the bulk of the code usually is). Finally, the module exports.
+This adapter consists of 3 main sections. First, listing any dependencies we want to use. Next, an async function containing the code for calculating TVL (where the bulk of the code usually is). Finally, the module exports.
 
 **Line 13 - Input Parameters**
 
 1. The first param taken by the function (line 13) will be a timestamp. In your testing, this will be the current timestamp, but when we backfill chart data for your protocol, past timestamps will also be input.
 2. Next is the mainnet block height corresponding to the timestamp in the first param.
 
-**Line 15 - Initialising The Balances Object**
+**Line 15 - Initializing The Balances Object**
 
-SDK adapters always export balance objects, which is a dictionary where all the keys are either token addresses or Coingecko token IDs. On this line, we just initialize the balance object to be empty.
+SDK adapters always export balance objects, which is a dictionary where all the keys are either token addresses or Coingecko token IDs. On this line, we initialize the balance object to be empty.
 
 If a token balance has an address key, the Defi Llama SDK will manage any raw to real amount conversion for you (so you don't need to worry about ERC20 decimals). If a token balance has a Coingecko ID key, you will need to process the decimals and use a real token amount in the balances object.
 
 :::caution
-If you export token addresses in your balances object that isn't on CoinGecko, Defi Llama won't be able to fetch prices for the tokens. You can check which addresses are supported by going to the token on CoinGecko and checking the 'Contract' field on the right (pictured above).
+If you export token addresses in your balances object that aren't on CoinGecko, Defi Llama won't be able to fetch prices for the tokens. You can check which addresses are supported by visiting the token page on CoinGecko and checking the 'Contract' field on the right (pictured above).
 :::
 
 **Line 17 - Adding Data To The Balances Object**
 
-In the SDK we have utilities to add data to the balances dictionary. sdk.util.sumSingleBalance() takes 3 parameters:
+In the SDK there are utilities to add data to the balances dictionary. sdk.util.sumSingleBalance() takes 3 parameters:
 
 1. The object you want to add token balances to.
 2. The token key you want to add to. We will transform the token address.
@@ -125,13 +125,13 @@ If the adapter runs successfully, the console will show you a breakdown of your 
 
 ## Submit
 
-Just submit a PR to the [adapter repository on Github](https://github.com/DefiLlama/DefiLlama-Adapters)!
+Submit a PR to the [adapter repository on Github](https://github.com/DefiLlama/DefiLlama-Adapters)!
 
 ---
 
-## How to write a fetch adapter
+## How to Write a Fetch Adapter
 
-Fetch adapters export a function, called `fetch`, which returns a project's total TVL (in USD) as a number. The following basic adapter would just always return a TVL of $100:
+Fetch adapters export a function, called `fetch`, which returns a project's total TVL (in USD) as a number. The following basic adapter would always return a TVL of $100:
 
 ```js
 async function fetch() {

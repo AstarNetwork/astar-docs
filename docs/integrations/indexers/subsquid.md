@@ -14,8 +14,9 @@ Subsquid has native and full support for both the Ethereum Virtual Machine and S
 
 This guide will explain how to create a Subsquid project (also known as a "*Squid*") that indexes ERC721 token transfers on the Astar network. As such, you'll be looking at the `Transfer` EVM event topics. This guide can be adapted for Shiden network and other types of tokens as well.
 
-Prerequisites
-For a Squid project to be able to run, you will need to have the following installed:
+## Prerequisites
+
+For a Squid project to run, you will need to have the following installed:
 
 - [Node.js](https://nodejs.org/en/download/): version 16 or later
 - Docker
@@ -24,9 +25,9 @@ For a Squid project to be able to run, you will need to have the following insta
 
 You can create a project by using the template repository made available by Subsquid. To get started, you can take the following steps:
 
-1. Vist the [`squid-evm-template` repository on GitHub](https://github.com/subsquid/squid-evm-template)
-2. Click the **Use this template** button
-3. Select the account and repository name for your project
+1. Vist the [`squid-evm-template` repository on GitHub](https://github.com/subsquid/squid-evm-template).
+2. Click the **Use this template** button.
+3. Select the account and repository name for your project.
 4. Clone the created repository (be careful of changing `account` with your own GitHub account):
 
 ```bash
@@ -49,9 +50,9 @@ The EVM template already contains a schema that defines the exact entities we ne
 
 To index ERC721 token transfers, we will need to track:
 
-- Token transfers
-- Ownership of tokens
-- Contracts and their minted tokens
+- Token transfers.
+- Ownership of tokens.
+- Contracts and their minted tokens.
 
 The `schema.graphql` file defines them like this:
 
@@ -91,9 +92,9 @@ type Transfer @entity {
 
 It's worth noting a few things in this [schema definition](https://docs.subsquid.io/develop-a-squid/schema-file/):
 
-- **@entity** - signals that this type will be translated into an ORM model that is going to be persisted in the database
-- **@derivedFrom** - signals the field will not be persisted on the database, it will rather be derived
-- **type references** (i.e. `from: Owner`) - establishes a relation between two entities
+- **@entity** - signals that this type will be translated into an ORM model that is going to be persisted in the database.
+- **@derivedFrom** - signals the field will not be persisted on the database, it will rather be derived.
+- **type references** (i.e. `from: Owner`) - establishes a relation between two entities.
 
 The template already has automatically generated TypeScript classes for this schema definition. They can be found under `src/model/generated`.
 Whenever changes are made to the schema, new TypeScript entity classes have to be generated, and to do that you'll have to run the `codegen` tool:
@@ -113,7 +114,7 @@ Once again, the template repository already includes interfaces for ERC721 contr
 First of all, it is necessary to obtain the definition of its Application Binary Interface (ABI). This can be obtained in the form of a JSON file, which will be imported into the project.
 
 1. It is advisable to copy the JSON file in the `src/abis` subfolder.
-2. To automatically generate TypeScript interfaces from an ABI definition, and decode event data, simply run this command from the project's root folder
+2. To automatically generate TypeScript interfaces from an ABI definition, and decode event data, simply run this command from the project's root folder.
 
 ```bash
 npx squid-evm-typegen --abi src/abi/ERC721.json --output src/abi/erc721.ts
@@ -240,14 +241,14 @@ For the event handler, it is also possible to bind an arrow function to the proc
 
 ### Configure Processor and Attach Handler
 
-The `src/processor.ts` file is where the template project instantiates the `SubstrateEvmProcessor` class, configures it for execution, and attaches the handler functions(s).
-Luckily for us, most of the job is already done. It is important to note that, since the template was built for the `moonriver` network, there are a couple of things to change:
+The `src/processor.ts` file is where the project template instantiates the `SubstrateEvmProcessor` class, configures it for execution, and attaches the handler functions(s).
+Luckily for us, most of the job is already done. It is important to note that, since the template was built for the `moonriver` network, there are some things we should change:
 
-1. Change the name argument passed to `SubstrateEvmProcessor` constructor (not necessary, but good practice)
+1. Change the name argument passed to `SubstrateEvmProcessor` constructor (not necessary, but good practice).
 2. Change the archive parameter of the `setDataSource` function to fetch the Archive URL for Astar.
 3. Change the argument passed to the `setTypesBundle` function to `"astar"`.
 
-Look at this code snippet for the end result:
+Check out this code snippet for the end result:
 
 ```ts
 // src/processor.ts
@@ -288,7 +289,7 @@ processor.run();
 ```
 
 :::info
-The `lookupArchive` function is used to consult the [archive registry](https://github.com/subsquid/archive-registry) and yield the archive address, given a network name. Network names should be in lowercase.
+The `lookupArchive` function is used to consult the [archive registry](https://github.com/subsquid/archive-registry) and yield the archive address, when given a network name. Network names should be in lowercase.
 :::
 
 ## Launch and Set Up the Database

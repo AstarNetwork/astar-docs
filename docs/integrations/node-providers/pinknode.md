@@ -13,12 +13,13 @@ description: "Pinknode is a Polkadot-focused Infrastructure-as-a-Service platfor
 
 Pinknode is a Polkadot-focused Infrastructure-as-a-Service platform offering RPC service through globally distributed node architecture coupled with Kubernetes clustering and geo-location routing for increased reliability and reduced latency. You will be able to integrate into the Astar ecosystem with Pinknode API services within minutes.
 
-Pinknode provides RPC and WSS endpoints for the Astar ecosystem. You will be able to connect via
-
-- Public endpoints (May be subjected to increased rate limits during high network load)
-- Custom API endpoints on ​
-
 ## Public Endpoints
+
+Pinknode provides RPC and WSS endpoints for the Astar ecosystem. You will be able to connect via:
+
+- Public endpoints (May be subject to increased rate limits during high network load)
+- Custom API endpoints on:
+
 
 | Network | RPC Endpoint | WSS Endpoint|
 |----|----|---|

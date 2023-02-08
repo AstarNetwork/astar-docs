@@ -4,17 +4,16 @@ sidebar_position: 1
 
 # Celer cBridge
 
-A guide on how to transfer assets from Ethereum & Binance smart chain to the Astar ecosystem.
+## Overview
+
+A guide on how to transfer assets from Ethereum & Binance Smart Chain to the Astar ecosystem. Make sure you have some ASTR to pay gas fees before bridging. You can buy ASTR token on exchanges.
+
+<https://www.coingecko.com/en/coins/astar>
 
 ## Product Page
 
 <https://cbridge.celer.network/#/transfer>
 
-## Overview
-
-A guide on how to transfer assets from Ethereum & Binance to the Astar ecosystem.
-
-<https://www.coingecko.com/en/coins/astar>
 
 ## Contracts
 
@@ -35,7 +34,7 @@ CRV: 0x7756a83563f0f56937A6FdF668E7D9F387c0D199
 
 ## How to withdraw ASTR from Exchanges
 
-First, visit [Astar Portal](https://portal.astar.network/#/balance/wallet) with Polkadot.js. If you don't have it, you can get the Polkadot.js extension [here](https://polkadot.js.org/extension/).
+First, visit [Astar Portal](https://portal.astar.network/#/balance/wallet) with Polkadot.js. If you don't have Polkadot.js extension, you can get it [here](https://polkadot.js.org/extension/).
 
 ![1](img/1.png)
 
