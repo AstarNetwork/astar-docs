@@ -93,7 +93,7 @@ Gas Model | [fixed price per instruction] | [weight] + [storage fees][storage] +
 Smart Contract DSLs | Solidity and Vyper | [ink!] (Rust) and [ask!] (AssemblyScript)
 Standards | [EIPs] | [PSPs]
 
-[weight]: https://docs.substrate.io/v3/concepts/weight/
+[weight]: https://docs.substrate.io/reference/how-to-guides/weights/
 [PSP22]: https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md
 [PSP34]: https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md
 [set_code_hash]: https://paritytech.github.io/ink/ink_env/fn.set_code_hash.html
@@ -103,7 +103,7 @@ Standards | [EIPs] | [PSPs]
 [pallet-contract]: https://github.com/paritytech/substrate/tree/master/frame/contracts
 [fixed price per instruction]: https://ethereum.github.io/yellowpaper/paper.pdf
 [frontier]: https://github.com/paritytech/frontier
-[weight]: https://docs.substrate.io/v3/concepts/weight/
+[weight]: https://docs.substrate.io/reference/how-to-guides/weights/
 [storage]: https://github.com/paritytech/substrate/blob/c00ed052e7cd72cfc4bc0e00e38722081b789ff5/frame/contracts/src/lib.rs#L351
 [loading fees]: https://github.com/paritytech/substrate/blob/97ae6be11b0132224a05634c508417f048894670/frame/contracts/src/lib.rs#L331-L350
 [EIPs]: https://eips.ethereum.org/
