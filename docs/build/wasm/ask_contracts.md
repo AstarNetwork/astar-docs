@@ -1,8 +1,6 @@
-# Ask! Environment
+# Ask! Smart Contracts
 
-## TL;DR
-
-This guide will suppot you to set up your local environment and deploy a simple Ask! contract on our testnet.
+This guide will support you to set up your local environment and deploy a simple Ask! contract on our testnet.
 
 ---
 
@@ -86,7 +84,7 @@ We run the command below which build the template contract.
 yarn && yarn build flipper.ts
 ```
 
-The above command will generate WASM code and the metadata file of the contract in `metadata.json` and `flipper.opstimized.wasm` resepectively.
+The above command will generate WASM code and the metadata file of the contract in `metadata.json` and `flipper.optimized.wasm` respectively.
 
 ![08](img/08a.png)
 

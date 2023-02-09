@@ -1,5 +1,8 @@
 # Tools and libraries
 
-## Wallets
+```mdx-code-block
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-## Astar.js
+<DocCardList items={useCurrentSidebarCategory().items}/>
+```
