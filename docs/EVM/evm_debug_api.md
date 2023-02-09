@@ -2,11 +2,11 @@
 sidebar_position: 7
 ---
 
-# Debug EVM transactions 
+# Debug EVM Transactions 
 
 Geth's debug APIs and OpenEthereum's trace module provide non-standard RPC methods for getting a deeper insight into transaction processing.
 
-> Thanks to the PureStake team, the Polkadot ecosystem has tracing capabilities similar to that of Geth, and OpenEthereum. Astar Network implements the same approach for Astar EVM tracing, due to it being the best solution we have at the moment, in the Polkadot ecosystem.
+> Thanks to the PureStake team, the Polkadot ecosystem has tracing capabilities similar to that of Geth, and OpenEthereum. Astar Network implements the same approach for Astar EVM tracing, due to it being the best solution we have at the moment, for the Polkadot ecosystem.
 
 ## Supported RPC Methods
 
@@ -31,7 +31,7 @@ There are some default values that you should be aware of:
 
 To change the default values you can add CLI flags when spinning up your tracing node.
 
-## Run a debug node
+## Run a Debugging Node
 
 
 To use the supported RPC methods, you need to run a node in debug mode, which is slightly different than running a full node. Additional flags will also need to be used to tell the node which of the non-standard features to support.
@@ -53,7 +53,7 @@ For example, launch node with debug RPC enabled on Shibuya testnet.
 astar-collator --ethapi=debug --chain=shibuya
 ```
 
-### Using debug/tracing API
+### Using the Debug/Tracing API
 
 Once you have a running tracing node, you can open your terminal to run curl commands and start to call any of the available JSON RPC methods.
 

@@ -2,33 +2,33 @@
 sidebar_position: 2
 ---
 
-# Running local network
+# Running Local Network
 
 Now, let's spin up a local network on a standalone node.
 
-## Get the latest binary
+## Get the Latest Binary
 
-You can obtain the binary in one of the following ways:
+You can obtain the latest binary in one of the following ways:
 
-- Download the latest binary from Github
-- Build it from source
+- Download the latest binary from Github.
+- Build it from source.
 
 If you would like to download the binary, visit the [Release page of the Astar Github repository](https://github.com/AstarNetwork/Astar/releases). There, you will find the pre-built binaries for MacOS and Ubuntu, as well as Docker images.  If you would like to build it from source, [this readme](https://github.com/AstarNetwork/Astar#building-from-source) will guide you through the process.
 
-itAfter you obtain the binary, you can rename the binary file to `astar` and add execution permission to it by running the following command:
+After you obtain the binary, you can rename the file to `astar`, and add execution permission by running the following command:
 
 ```sh
 chmod +x ./astar
 ```
 
-Then you will be able to execute the binary.  To see whether you can run the node, let's check the binary version.
+You should then be able to execute the binary.  To see whether you can run the node, let's check the binary version.
 
 ```sh
 ./astar --version
 # astar-collator xxx
 ```
 
-## Run the local network
+## Run the Local Network
 
 You are now ready to run the local network, using the following command:
 
@@ -62,7 +62,7 @@ When you have successfully lauched the local network, you will see the following
 
 OK! Let's explore your local network now.
 
-## Access your local network via Explorer
+## Access Your Local Network via Polkadot.js Apps Portal
 
 Visit the following URL:
 
