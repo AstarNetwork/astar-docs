@@ -4,11 +4,12 @@ sidebar_position: 6
 
 # Basic Contract
 
-Each contract should be in its **own crate**. In a folder create two files:
+Each contract should be in its **own crate**. In a folder, create two files:
 
-- Cargo.toml: The manifest
-- lib.rs: The default library file
-Inside the Cargo.toml specify the `[package]`, `[dependencies]` , `[lib]` type and `[features]`
+- Cargo.toml: The manifest.
+- lib.rs: The default library file.
+
+Inside the Cargo.toml you will need to specify parameters in the `[package]`, `[dependencies]`, `[lib]` type, and `[features]` sections:
 
 ```toml
 [package]
@@ -48,11 +49,11 @@ ink-as-dependency = []
 
 In the library file - ink! has a few minimum requirements:
 
-- `#![cfg_attr(not(feature = "std"), no_std)]` at the beginning of each contract file link
-- a module with `#[ink::contract]`
-- a (storage) struct - that can be empty - with `#[ink(storage)]`
-- at least one constructor with `#[ink(constructor)]`
-- at least one fn with `#[ink(message)]`
+- `#![cfg_attr(not(feature = "std"), no_std)]` at the beginning of each contract file link.
+- a module with `#[ink::contract]`.
+- a (storage) struct - that can be empty - with `#[ink(storage)]`.
+- at least one constructor with `#[ink(constructor)]`.
+- at least one fn with `#[ink(message)]`.
 
 In the lib.rs the minimum implementation is:
 

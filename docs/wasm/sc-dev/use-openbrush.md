@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## OpenBrush
 
-[OpenBrush] is a library for smart contract development on ink! maintained by the [Brushfam] team, and is inspired by OpenZeppellin for Solidity.
+[OpenBrush] is a library for smart contract development on ink! maintained by the [BrushFam] team, and is inspired by OpenZeppellin for Solidity.
 
 Openbrush provides standard contracts based on [PSPs], as well as other useful contracts and Rust macros that help developers build ink! smart contracts.
 
@@ -20,10 +20,10 @@ Why use OpenBrush?
 
 Which token standards and contracts does OpenBrush provide?
 
-- **PSP22** - Fungible Token (*ERC20 equivalent*) with extensions.
-- **PSP34** - Non-Fungible Token (*ERC721 equivalent*) with extensions.
+- **PSP22**: Fungible Token (*ERC20 equivalent*) with extensions.
+- **PSP34**: Non-Fungible Token (*ERC721 equivalent*) with extensions.
 - **PSP37**: *ERC1155 equivalent* with extensions.
-- **Ownable** Restrict access to action for non-owners.
+- **Ownable**: Restrict access to action for non-owners.
 - **Access Control**: Define a set of roles and restrict access to an action by roles.
 - **Reentrancy Guard**: Prevent reentrant calls to a function.
 - **Pausable**: Pause/Unpause the contract to disable/enable some operations.

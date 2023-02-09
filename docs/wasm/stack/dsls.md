@@ -14,7 +14,7 @@ EDSLs can also provide features such as error checking, debugging, and testing, 
 
 Ink! is an eDSL written in Rust and developed by Parity. It specifically targets Substrate’s `pallet-contracts` API.
 
-Ink! offers Rust [procedural macros](https://doc.rust-lang.org/reference/procedural-macros.html#procedural-macro-hygiene) and a list of crates to facilitate development and avoid boilerplate code.
+Ink! offers Rust [procedural macros](https://doc.rust-lang.org/reference/procedural-macros.html#procedural-macro-hygiene) and a list of crates to help facilitate development, and save time by avoiding boilerplate code.
 
 Check out the official documentation [here](https://ink.substrate.io/why-rust-for-smart-contracts) and `Ink!` GitHub repo [here](https://github.com/paritytech/ink).
 
@@ -22,6 +22,6 @@ Check out the official documentation [here](https://ink.substrate.io/why-rust-fo
 
 Ask! is a framework for AssemblyScript developers that allows them to write Wasm smart contracts for `pallet-contracts`. Its syntax is similar to TypeScript.
 
-This project is funded by the Polkadot treasury - link [here](https://polkadot.polkassembly.io/post/949), and is still under development - no release is available at the moment.
+This project is funded by the Polkadot treasury - link [here](https://polkadot.polkassembly.io/post/949), and is still under development.
 
-Check the official GitHub [here](https://github.com/ask-lang/ask).
+Check out the official GitHub [here](https://github.com/ask-lang/ask).

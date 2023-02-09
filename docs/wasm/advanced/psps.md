@@ -6,11 +6,11 @@ sidebar_position: 1
 
 The Polkadot ecosystem has its own set of standards to fulfill ecosystem needs. Visit [Polkadot Standards Proposals (PSPs) Github][PSPs] to learn more.
 
-These standards go through several rounds of approvals before being accepted, and engagement of the entire community is required in order to build valuable and resilient, future-proof standards. All teams that benefit from shared standards should be aware of them, and agree on the scope of what they cover. 
+These standards go through several rounds of approvals before being accepted, and engagement of the entire community is required in order to build valuable, resilient, future-proof standards. All teams that benefit from shared standards should be aware of them, and agree on the scope of what they cover. 
 
 ## PSP22 - Fungible Token Standard
 
-The [PSP22 Fungible Token standard][PSP22] is inspired by the ERC20 on Ethereum. PSP22 targets every parachain that integrates pallet-contract to enable Wasm smart contracts. It is defined at ABI level, so it can be used for any language that compiles to Wasm (and is not restricted to ink! specifically).
+The [PSP22 Fungible Token standard][PSP22] is inspired by the ERC20 on Ethereum. PSP22 targets every parachain that integrates `pallet-contracts` and supports Wasm smart contracts. It is defined at ABI level, so it can be used for any language that compiles to Wasm (and is not restricted to ink! specifically).
 
 PSP22 will have a double impact:
 

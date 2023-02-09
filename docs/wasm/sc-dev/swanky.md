@@ -10,36 +10,36 @@ Swanky Suite aims to be an "all-in-one" tool for Wasm smart contract developers.
 
 Swanky Suite offers an extensible set of features, allowing developers to:
 
-- Quickly spin up a local contract development node with instant finality (Swanky Node)
+- Quickly spin up a local contract development node with instant finality (Swanky Node).
 - Easily scaffold new projects using templates for both smart contracts and front-end dApps. ie. Truffle for ink!
-- Compile projects in various languages (like Ink!, Ask-Lite, …)
-- Facilitate RPC and integration testing via npm for interacting with smart contracts on the client-side
-- Handle and manage network accounts
-- Deploy smart contracts within the Polkadot ecosystem to networks that support `pallet-contracts`
-- Make arbitrary calls to live smart contracts
+- Compile projects in various languages (like Ink!, Ask-Lite, …).
+- Facilitate RPC and integration testing via npm for interacting with smart contracts on the client-side.
+- Handle and manage network accounts.
+- Deploy smart contracts within the Polkadot ecosystem to networks that support `pallet-contracts`.
+- Make arbitrary calls to live smart contracts.
 
-## Architecture overview
+## Architecture Overview
 
 The Swanky Suite consists of two parts, Swanky CLI and Swanky Node.
 
 The source code for both Swanky CLI and Swanky Node are hosted on GitHub:
 
-- [Swanky CLI](https://github.com/AstarNetwork/swanky-cli)
+- [Swanky CLI](https://github.com/AstarNetwork/swanky-cli).
 - [Swanky Node](https://github.com/AstarNetwork/swanky-node).
 
-The architecture envisioned for Swanky CLI and Swanky Node (Local developer node)
+The architecture envisioned for Swanky CLI and Swanky Node (Local developer node):
 
 ![Project Diagram Canvas](img/SwankySuiteAstar.png)
 
 ## Swanky CLI
 
-Swanky CLI is a Node.js CLI app that uses Polkadot.js API on the backend, alongside many existing tools, such as the cargo contract CLI. In the future, there will be many additional features to support developers, such as Wasm dApp bootstrapping via smart contract and UI scaffolding, integration tests, management of local nodes, account management, connecting and deploying contracts to both local and remote networks, compiling for various languages from a single CLI app, compatibility checks between the contract pallet and compiler, and much more.
+Swanky CLI is a Node.js CLI app that uses Polkadot.js API on the backend, alongside many existing tools, such as the `cargo` contract CLI. In the future, there will be many additional features to support developers, such as Wasm dApp bootstrapping via smart contract and UI scaffolding, integration tests, management of local nodes, account management, connecting and deploying contracts to both local and remote networks, compiling for various languages from a single CLI app, compatibility checks between the contract pallet and compiler, and much more.
 
 ### Installing
 
 The CLI can be installed in two ways:
 
-#### Recommended Method: Download the precompiled Binaries
+#### Recommended Method: Download the Precompiled Binaries
 
 This is the recommended method - which includes all the dependencies (even Node.js), and will support auto-updates in the future.
 
@@ -53,6 +53,9 @@ This is the recommended method - which includes all the dependencies (even Node.
 >
 > `ln -s /Users/my_name/software/swanky-cli/bin/swanky /usr/local/bin`
 
+> Example on Ubuntu 22.04:
+>
+> `ln -s /home/my_name/swanky-cli/bin/swanky /usr/local/bin`
 
 #### Globally with npm
 
@@ -282,11 +285,11 @@ Swanky Node is a Substrate based blockchain configured to enable `pallet-contrac
 - [pallet-assets](https://github.com/paritytech/substrate/tree/master/frame/assets).
 - [pallet-rmrk](https://github.com/AstarNetwork/rmrk-substrate/tree/polkadot-v0.9.27) (core, equip, market) and Chain Extensions for pallet-rmrk-core.
 
-Swanky Node is optimized for local development, while removing unnecessary components such as P2P. Additional features and pallets ,such as to interact between (Contract <-> Runtime), will be added in the future.
+Swanky Node is optimized for local development, while removing unnecessary components such as P2P. Additional features and pallets, such as to interact between (Contract <-> Runtime), will be added in the future.
 
-## Compatible ink! versions
+## Compatible ink! Versions
 
-ink! version `3.3.1` or lower is supported by the pallet-contract polkadot-0.9.27 branch.
+Ink! version `3.3.1` or lower is supported by [`pallet-contracts`] on polkadot-0.9.27 branch.
 
 ## Installation
 
@@ -334,9 +337,9 @@ Purge the development chain's state.
 ./target/release/swanky-node purge-chain
 ```
 
-> Development **alice** account will be authority and sudo account as declared in the
+> The **alice** development account will be the authority and sudo account as declared in the
 > [genesis state](https://github.com/AstarNetwork/swanky-node/blob/main/node/src/chain_spec.rs#L44).
-> At the same time, the following accounts will be pre-funded:
+> While at the same time, the following accounts will be pre-funded:
 >
 > - Alice
 > - Bob
@@ -364,7 +367,7 @@ See the ink! [FAQ](https://ink.substrate.io/faq/#how-do-i-print-something-to-the
 Once the Swanky Node is running locally, you will be able to connect to it from the **Polkadot-JS Apps** front-end,
 in order to interact with your chain. [Click
 here](https://polkadot.js.org/apps/#/explorer?rpc=ws://localhost:9944) connecting the Apps to your
-local swanky node.
+local Swanky Node.
 
 ### Run in Docker
 

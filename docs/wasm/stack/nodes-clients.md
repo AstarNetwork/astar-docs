@@ -10,19 +10,19 @@ sidebar_position: 3
 
 Swanky Node is a local development node tracking the Shiden network.
 
-Swanky Node is the best choice if you would like to develop your contract & test it in your local environment, prior to deployment on Astar/Shiden mainnet.
+Swanky Node is the best choice if you would like to develop your contract & test it in your local environment, prior to deploying it on Astar/Shiden mainnet.
 
 Features:
 
 - Consensus: `instant-seal` and `manual-seal`
 - dApp staking enabled
-- Chain-extensions
+- Chain Extensions
 
 You can find the Github repo [here](https://github.com/AstarNetwork/swanky-node).
 
 ### Substrate Contract Node
 
-Substrate contract node targets Substrate master. It is the best choice if you would like to try the latest features, or unstable features, of ink! and/or pallet-contracts.
+Substrate contract node targets Substrate master. It is the best choice if you would like to try the latest (or unstable) features of ink! and/or pallet-contracts.
 
 Features:
 
