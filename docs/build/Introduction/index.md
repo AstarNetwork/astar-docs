@@ -1,5 +1,5 @@
 # Introduction
-
+![banner](../assets/gradient4.jpg)
 To make use of this documentation effectively, you should possess a general understanding of programming basics. The programming languages used throughout are mainly Rust, Solidity, and JavaScript, for which previous knowledge is not necessary, but would be highly beneficial. In conjunction with improving your understanding of the material contained within these guides, we recommend additionally that you review supplemental material covering these languages, in order to improve your overall understanding of the topics, and practical code examples provided. 
 
 Check out the following links for more information about [Rust](https://www.rust-lang.org/learn) and [Javascript](https://www.freecodecamp.org/).
