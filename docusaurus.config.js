@@ -74,6 +74,12 @@ const config = {
                         label: "Docs",
                     },
                     {
+                        type: 'doc',
+                        docId: 'build/index',
+                        position: 'left',
+                        label: 'Start Building',
+                    },
+                    {
                         to: "https://medium.com/astar-network",
                         label: "Medium",
                         position: "left",
