@@ -1,8 +1,8 @@
-# Setup Development Environment
-When you are starting the development you do not need to know about all use all of these developments environments. However take a look at all of these to understand what is possible.
+# Setup the Development Environment
+Prior to commencing development, you do not need to know how to set up these environments. However, you may want to review the following sections to become more familiar with what they do, and their specific requirements.
 
-For Example, to build ink! smart contracts you will mostly use
-Ink! Environment with Swanky node. When you are ready for production you can check provided RPC endpoint.
+For Example, to build ink! smart contracts you will mostly use an
+Ink! Environment with Swanky node, and when you are ready to deploy your application to production, you can learn about setting up your own RPC endpoint.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
