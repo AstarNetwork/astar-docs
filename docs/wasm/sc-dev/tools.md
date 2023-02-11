@@ -16,10 +16,10 @@ sidebar_position: 5
 
 How it works? You simply input your code to Solidity and in a few seconds get your ink! smart contract. Since the code was produced automatically, it is always good idea to check it by a human (and build it) to find some potential flaws, but the hardest part (rewriting the code) is already done!
 
-## Typechian-Polkadot
-[Typechain-Polkadot] is also one of [Brushfam] maintaned tools, created to improve developers’ experience with frontend usage of ink! smart contracts and also a deployment and integration testing by providing typescript types for ink! smart contracts.
+## Typechain-Polkadot
+[Typechain-Polkadot] is also one of [Brushfam] maintained tools, created to improve developers’ experience with frontend usage of ink! smart contracts and also deployment and integration testing by providing typescript types for ink! smart contracts.
 
-This tool can build your contracts, then create the artifcats and based on that, it will create the typescript classes which you can integrate in your UI or typescript tests.
+This tool can build your contracts, then create the artifacts and based on that, it will create the typescript classes which you can integrate in your UI or typescript tests.
 
 ## Solang
 [Solang](https://solang.readthedocs.io/en/latest/) is a Solidity Compiler for Solana and Substrate. Using Solang, you can compile smart contracts written in Solidity for Solana and [Parity Substrate](https://substrate.io/). It uses the [llvm](https://www.llvm.org/) compiler framework to produce WebAssembly (WASM) or BPF contract code. As result, the output is highly optimized, which saves you in gas costs or compute units.
