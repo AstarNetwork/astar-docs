@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## TL;DR
 
-Compared with using Shibuya testnet, testing on a local Astar blockchain can provide higher throughput, quicker response, and more privacy since the only node of the network runs on your local device. Building a local Astar blockchain is essential for relatively large project development and testing.
+Building a local Astar blockchain is essential for large project development and testing. Compared with using Shibuya testnet, testing on a local Astar blockchain provides higher throughput, quicker response, and more privacy since the only node of the network runs on your local device.
 
 In this guide, we will walk you through the process of setting up a local Astar node, running the local blockchain, accessing the blockchain via your local explorer, and configuring the local blockchain in other developer tools.
 
@@ -14,7 +14,7 @@ In this guide, we will walk you through the process of setting up a local Astar 
 
 ## What is a local Astar blockchain
 
-A local Astar blockchain is a **single-node network** running on your local device which can simulate the on-chain environment of Astar Network and be used for local testing without needing any network connections. You can set up a local blockchain by downloading the latest Astar collator node code from [Github](https://github.com/AstarNetwork/Astar) and building from source, or directly run the binary built for your environment.
+A local Astar blockchain is a **single-node network** running on your local device which can simulate the on-chain environment of Astar Network. It's essential for developers because it allows local testing without needing a network connections. You can set up a local blockchain by downloading the latest Astar collator node code from [Github](https://github.com/AstarNetwork/Astar) and building from source, or directly run the binary built for your environment.
 
 :::info
 Running a local blockchain is common for smart contract development and testing.
@@ -24,7 +24,7 @@ Running a local blockchain is common for smart contract development and testing.
 
 Compared to the Shibuya testnet, running a local Astar blockchain will have the following benefits:
 
-- Higher throughput and quicker response compared to using Shibuya testnet, which may save you a lot of testing time.
+- Higher throughput and quicker response compared to using Shibuya testnet, saving you a lot of time during testing.
 - Privacy of testing data and development history since the only node is on your local device and only you have access to the network.
 - Self-customized release version and testing conditions. By using a local blockchain for testing and development, you will be able to choose the node release version and customize the testing conditions, e.g. rolling back the network for 10000 blocks.
 
@@ -44,14 +44,14 @@ Download the latest release of [the Astar collator](https://github.com/AstarNetw
 Please make sure you are running a macOS or Ubuntu with the appropriate version. For macOS, please use a version above MacOS 12.0.
 :::
 :::info
-Please rename the binary file to `astar`, for illustration purposes the consistency of the command lines in this tutorial.
+Make sure to rename the binary file to `astar` to match the command lines illustrated in this tutorial.
 :::
 
 ---
 
 ### Add execution permission to the binary file
 
-- Change the directory to the folder containing the `astar` binary file
+- Change the directory to the folder containing the `astar` binary file:
     
     ```jsx
     cd local-astar-cookbook
@@ -61,7 +61,7 @@ Please rename the binary file to `astar`, for illustration purposes the consiste
     **Note**: if you are using a Mac, you may need an extra step to configure the security settings:
     - Go to Apple menu > System Settings > Privacy & Security.
     - Under security, add the `astar` binary file that you just downloaded to the whitelist.
-    - Continue with the following command.
+    - Continue with the following command:
     
     ```jsx
     chmod +x ./astar
@@ -90,11 +90,11 @@ Run the local network with the following configurations:
 ./astar --port 30333 --ws-port 9944 --rpc-port 9933 --rpc-cors all --alice --dev
 ```
     
-You will be able to see the local Astar collator node info and new blocksafter successfully running it.
+You will be able to see the local Astar collator node info and new blocks after successfully running the local network.
 ![Untitled](img-localchain-cookbook/Untitled%201.png)
 ![Untitled](img-localchain-cookbook/Untitled%202.png)
     
-You can check a full list of subcommand and explanation using the following command:
+You can check a full list of subcommands and explanations by using the following command:
     
 ```jsx
 ./astar help
@@ -106,7 +106,7 @@ You can check a full list of subcommand and explanation using the following comm
 ### Access the local blockchain via explorer
 
 - Go to [local explorer](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer)
-- You will be able to to view the recent blocks, accounts info, etc. as the on-chain environment of Astar Network
+- You will be able to to view local information (such as the recent blocks or accounts info) as the on-chain environment of Astar Network
     
 ![Untitled](img-localchain-cookbook/Untitled%203.png)
     
@@ -115,7 +115,7 @@ You can check a full list of subcommand and explanation using the following comm
 
 ### Configure the local blockchain in other dev tools
 
-When using the local blockchain with other dev tools including MetaMask, Hardhat, Remix, Truffle, please configure the network with the following info to connect with the local blockchain:
+When using the local blockchain with other dev tools, such as MetaMask, Hardhat, Remix, or Truffle, configure the network with the following info to connect with the local blockchain:
 
 | Network Name | Local Astar Testnet 0 |
 | --- | --- |
@@ -125,9 +125,7 @@ When using the local blockchain with other dev tools including MetaMask, Hardhat
 
 ---
 
-## Appendix: useful subcommand in smart contract testings
-
-When using the local blockchain with other dev tools including MetaMask, Hardhat, Remix, Truffle, please configure the network with the following info to connect with the local blockchain:
+## Appendix: useful subcommands in smart contract testings
 
 - `build-spec`: build a chain specification
 - `check-block`: validate blocks

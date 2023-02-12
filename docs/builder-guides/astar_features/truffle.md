@@ -10,7 +10,7 @@ This cookbook gives you a basic idea of how to use Truffle and deploy a simple t
 
 ## What is Truffle?
 
-Truffle is a popular development framework for Ethereum based blockchain. It offers a suite of tools that make it easier to develop and deploy smart contracts on the EVM(Ethereum Virtual Machine) blockchain. Some of the key features of Truffle include:
+Truffle is a popular development framework for Ethereum based blockchain. It offers a suite of tools that make it easier to develop and deploy smart contracts on the EVM (Ethereum Virtual Machine) blockchain. Some of the key features of Truffle include:
 
 - A suite of development and testing tools, including a code compiler, a testing framework, and a debugger.
 - Support for popular programming languages, including Solidity and JavaScript.
@@ -22,7 +22,7 @@ Overall, Truffle is designed to make it easier for developers to build and deplo
 ## Builders Guide
 ### Step 1: Project Setup
 
-Let’s set up a project folder first. We create a project directory and navigate into that directory:
+Let’s set up a project folder first. Create a project directory and, then, navigate into that directory:
 
 ```bash
 mkdir truffleApp
@@ -44,13 +44,13 @@ We initialize Truffle to create our project:
 truffle init
 ```
 
-Now we see something like below to confirm the project is initialized:
+If you see a message like this, then the project is initialized:
 <div style={{textAlign: 'center'}}>
 
 ![1](img-Truffle-cookbook/1.png)
 </div>
 
-Make sure you install HDWalletProvider which we will use later:
+Use the following command to install HDWalletProvider. We will use it later:
 
 ```bash
 npm install @truffle/hdwallet-provider --save
@@ -60,13 +60,13 @@ npm install @truffle/hdwallet-provider --save
 
 ### Step 2: Start Coding
 
-Now, we would see the following file structure:
+Now, we have the following file structure:
 <div style={{textAlign: 'center'}}>
 
 ![2](img-Truffle-cookbook/2.png)
 </div>
 
-From here, we create a file for smart contract called **HelloShibuya.sol** inside the **contracts** directory:
+To begin coding, we need to create a file for our smart contract. Let's call it **HelloShibuya.sol** and put it inside the **contracts** directory:
 
 ```jsx
 pragma solidity ^0.8.15;
@@ -76,7 +76,7 @@ contract HelloShibuya {
 }
 ```
 
-We need to add a migration file called **1_deploy_contract.js** inside the **migrations** directory:
+We also need to add a migration file called **1_deploy_contract.js** inside the **migrations** directory:
 
 ```jsx
 var HelloShibuya = artifacts.require("HelloShibuya");
@@ -90,8 +90,8 @@ module.exports = function (deployer) {
 
 ### Step 3: Configure Settings
 
-Now we add information for the Shibuya testnet in **truffle-config.js**. 
-For the endpoint, take a look and use one of Shibuya endpoints provided [here](https://docs.astar.network/docs/quickstart/endpoints/). 
+Next we add information for the Shibuya testnet in **truffle-config.js**. 
+Use one of Shibuya endpoints provided [here](https://docs.astar.network/docs/quickstart/endpoints/) to fill in your endpoint provider. We use BlastAPI in the example below.
 
 ```jsx
 require('dotenv').config();
@@ -112,7 +112,7 @@ module.exports = {
     
 ```
 
-Be aware that we need to declare mnemonic which is used by **HDWalletProvider** in the **truffle-config.js** file to verify the account supplying funds during contract deployment. To set mnemonic variable, you would set it as an environment variable in **.env** file in the root directory.
+Be aware that we need to declare the mnemonic which is used by **HDWalletProvider** in the **truffle-config.js** file to verify the account supplying funds during contract deployment. We will set the mnemonic as an environment variable in **.env** file in the root directory.
 
 ```bash
 npm i dotenv
@@ -122,13 +122,13 @@ npm i dotenv
 MNEMONIC="(Your secret recovery phase)"
 ```
 
-We can find our secret recovery phase for our account in the Metamask by going through **Settings**, **Security & Privacy**, and then **Reveal Secret Recovery Phrase**.
+You can find your secret recovery phase for your account in Metamask by navigating to **Settings**, **Security & Privacy**, and then **Reveal Secret Recovery Phrase**.
 
 ---
 
 ### Step 4: Deployment
 
-Finally, we have everything ready and we can compile the smart contract we made:
+Finally, we have everything ready. Let's compile the smart contract we made:
 
 ```bash
 truffle compile
@@ -138,12 +138,14 @@ truffle compile
 truffle migrate --network shibuya
 ```
 
-We would see something like below to confirm our smart contract is deployed on Shibuya testnet.
+You will see something similar to the image below, which confirms that our smart contract is deployed on Shibuya testnet.
 <div style={{textAlign: 'center'}}>
 
 ![3](img-Truffle-cookbook/3.png)
 </div>
-We can confirm this also by looking at the explorer [Subscan](https://shibuya.subscan.io/).
+
+You can also confirm that your smart contract is deployed to Shibuya by looking at the explorer [Subscan](https://shibuya.subscan.io/).
+
 <div style={{textAlign: 'center'}}>
 
 ![4](img-Truffle-cookbook/4.png)

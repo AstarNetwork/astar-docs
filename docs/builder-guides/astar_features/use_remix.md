@@ -1,24 +1,26 @@
-# How to use Remix IDE to deploy an on-chain storage contract on Astar EVM
+# How to use Remix IDE to deploy an on-chain storage contract on Shibuya
 
 ## TL;DR
 
-Remix is a powerful open-source toolset for developing, deploying, debugging, and testing EVM-compatible smart contracts. Remix IDE is part of the Remix Project, which includes the Remix Plugin Engine and Remix Libraries: low-level tools for wider use.
+Remix is a powerful open-source toolset for developing, deploying, debugging, and testing EVM-compatible smart contracts. Remix IDE is part of the Remix Project, which includes the Remix Plugin Engine and Remix Libraries. These are low-level tools for wider use.
 
-Since Astar Network is a multi-VM smart contract hub, we support both WASM and EVM, which means you can use Ethereum dev tools, including Remix, to interact with Astar EVM’s API directly and deploy Solidity-based smart contracts on Astar EVM.
+Since Astar Network is a multi-VM network, we support both Wasm and EVM smart contracts. You can use Ethereum tooling, including Remix, to directly interact with Astar EVM’s API and deploy Solidity smart contracts on Astar.
 
-In this cookbook, we will guide you on creating a Solidity-based on-chain storage smart contract with Remix Online IDE, compiling and deploying the contract to the Shibuya testnet, and how interacting with the contract to write the value on our blockchain and retrieve the value.
+In this cookbook, we will guide you through:
+
+- Creating a Solidity-based on-chain storage smart contract with Remix Online IDE.
+- Compiling and deploying the contract to the Shibuya testnet.
+- Interacting with the contract to write the value on our blockchain and retrieve the value.
 
 ---
 
 ## What is Astar EVM?
 
-As a multi-VM smart contract hub, Astar Network supports both WASM and EVM, which means Solidity smart contracts and WASM-based smart contracts can be deployed on Astar Network. 
+Astar Network supports both Wasm and EVM virtual machines, which means both Solidity and WASM-based smart contracts can be deployed on Astar Network.
 
-And Solidity developers can directly use Ethereum dev tools, including Hardhat, Remix, MetaMask, to directly interact with Astar EVM’s API and deploy Solidity smart contracts on Astar EVM.
+Solidity developers can use Ethereum dev tools, including Hardhat, Remix, and MetaMask, to directly interact with Astar EVM’s API and deploy Solidity smart contracts on Astar EVM.
 
-## What is Remix?
-
-Remix is a powerful open-source toolset for developing, deploying, debugging, and testing EVM-compatible smart contracts. Remix IDE is part of the Remix Project, which includes the Remix Plugin Engine and Remix Libraries: low-level tools for wider use.
+In this guide we will use Shibuya Network, the testnet for Astar and Shiden.
 
 ---
 
@@ -26,7 +28,7 @@ Remix is a powerful open-source toolset for developing, deploying, debugging, a
 
 - Visit [https://remix.ethereum.org/](https://remix.ethereum.org/) for online Remix IDE
     - or install the Remix IDE Desktop from [https://github.com/ethereum/remix-**desktop**/releases](https://github.com/ethereum/remix-desktop/releases).
-- Create a new workspace by clicking the “+” beside “Workspace” and use the “Blank” template.
+- Create a new workspace by clicking the “+” beside “Workspace” and choose a “Blank” template.
 
 ![Untitled](img-Remix-cookbook/Untitled.png)
 
@@ -71,7 +73,7 @@ Remix is a powerful open-source toolset for developing, deploying, debugging, a
 
 ## Compile the Solidity contract for deployment
 
-Before smart contracts can be deployed, the Solidity code must be compiled to bytecode for the EVM (Ethereum Virtual Machine), which will eventually be deployed on the blockchain. The compilation also generates an ABI (Application Binary Interface), an interface between operating systems and user programs.
+Before smart contracts can be deployed, the Solidity code must be compiled to bytecode for the EVM, which will eventually be deployed to the blockchain. The compilation also generates an ABI (Application Binary Interface), an interface between operating systems and user programs.
 
 - Clicking the Solidity icon in the icon panel brings you to the Solidity Compiler.
 
@@ -81,13 +83,13 @@ Before smart contracts can be deployed, the Solidity code must be compiled to by
 
 ![Untitled](img-Remix-cookbook/Untitled%203.png)
 
-- After the compilation, you will be able to check the contract ABI and bytecode in the “ABI” and “Bytecode” sections under the “Compilation Details”. You will also find the “Storage.json” file in your workspace, which may be useful for your contract verification on block explorers.
+- After the compilation, you will be able to check the contract ABI and bytecode in the “ABI” and “Bytecode” sections under the “Compilation Details”. You will also find the “Storage.json” file in your workspace, which may be useful to verify your contract on block explorers.
 
 ---
 
 ## Deploy the Solidity contract to Shibuya testnet
 
-- Before the deployment on the Shibuya testnet, which is the testnet of Astar Network and Shiden Network:
+- Before the deployment on the Shibuya testnet:
     - Please ensure that you have added Shibuya Network to your MetaMask wallet with the following configuration [https://docs.astar.network/docs/quickstart/endpoints/#public-endpoints](https://docs.astar.network/docs/quickstart/endpoints/#public-endpoints).
         - Network name: Shibuya Network
         - New RPC URL: [https://evm.shibuya.astar.network](https://evm.shibuya.astar.network/)
@@ -102,7 +104,7 @@ Before smart contracts can be deployed, the Solidity code must be compiled to by
 
 ![Untitled](img-Remix-cookbook/Untitled%205.png)
 
-- Now, your first Solidity contract on the Shibuya testnet is deployed! Please feel free to copy the deployed contract address from “Deployed Contracts” and view it in the block explorer. BlockScout for Shibuya: [https://blockscout.com/shibuya](https://blockscout.com/shibuya)
+- Now, your first Solidity contract on the Shibuya testnet is deployed! Please feel free to copy the deployed contract address from “Deployed Contracts” and view it in the block explorer: [https://blockscout.com/shibuya](https://blockscout.com/shibuya)
 
 ![Untitled](img-Remix-cookbook/Untitled%206.png)
 
@@ -112,11 +114,11 @@ Before smart contracts can be deployed, the Solidity code must be compiled to by
 
 You will also be able to interact with the contract that you just deployed on Shibuya via Remix IDE.
 
-- Scroll down the contract details under the “Deployed Contracts” section on the “DEPLOY & RUN TRANSACTIONS” page.
+- Scroll down the contract details. Under the “Deployed Contracts” section on the “DEPLOY & RUN TRANSACTIONS” page you will have two options:
 
 ![Untitled](img-Remix-cookbook/Untitled%207.png)
 
-- You will be able to call the methods in the deployed contract.
+- You will be able to call the methods in the deployed contract:
     - `store()`: to store a value in a variable deployed on-chain.
     - `retrieve()`: read-only, to retrieve a value in a variable deployed on-chain.
 
@@ -126,7 +128,7 @@ You will also be able to interact with the contract that you just deployed on Sh
 
 ## FAQ
 
-Please feel free to our Discord at [https://discord.com/invite/Z3nC9U4](https://discord.com/invite/Z3nC9U4) for technical support.
+Please feel free to visit our Discord at [https://discord.com/invite/Z3nC9U4](https://discord.com/invite/Z3nC9U4) for technical support.
 
 ## Reference
 
