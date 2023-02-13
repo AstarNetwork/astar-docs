@@ -4,10 +4,10 @@ sidebar_position: 3
 
 # Developer Tooling
 
-Deploying and interacting with EVM-based smart contracts on Astar is as easy as any other EVM-compatable network. Usually, getting set up requires two steps:
+Deploying and interacting with EVM-based smart contracts on Astar is as easy as any other EVM-compatible network. Getting started requires just two steps:
 
-1. Configuring (and funding) your Ethereum account on the respective network
-2. Adding Astar's networks to your Ethereum client
+1. Configuring (and funding) your Ethereum account on the respective network.
+2. Adding Astar networks to your Ethereum client.
 
 :::caution
 For Astar and Shiden applications, we *highly* recommend [running your own network node](../nodes/index.md) and not relying on our RPC endpoints. This further decentralizes the network, and puts you in control of your uptime requirements.
@@ -15,22 +15,22 @@ For Astar and Shiden applications, we *highly* recommend [running your own netwo
 
 ## Hardhat
 
-### Initialize your project
+### Initialize Your Project
 
-If you're starting your Hardhat project from scratch, we recommend reading the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start#overview) page.
+If you're starting your Hardhat project from scratch, we recommend you read the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start#overview) page.
 
-### Setting up your account
+### Setting up Your Account
 
-The quickest way to get Hardhat to deploy contracts to a non-local testnet is to export and use an existing Metamask account.
+The quickest way to get Hardhat to deploy contracts to a non-local testnet, is to export and use an existing MetaMask account.
 
-To get an account's private key from Metamask:
+To get an account's private key from MetaMask:
 
-1. Open Metamask
-2. Select the account you want to export
-3. Click the three dots on the right side
-4. Select "Account Details"
-5. Select "Export Private Key"
-6. Enter your password and select "Confirm"
+1. Open MetaMask.
+2. Select the account you want to export.
+3. Click the three dots on the right side.
+4. Select "Account Details".
+5. Select "Export Private Key".
+6. Enter your password and select "Confirm".
 
 You should see a 64-character hex string similar to the following:
 
@@ -88,7 +88,7 @@ Once your accounts are funded, you can deploy the sample contract to Shibuya wit
 
 ## Truffle
 
-### Create Ethereum Account
+### Create an Ethereum Account
 
 We recommend using the `@truffle/hdwallet-provider` package for key management. Instructions can be found [here](https://github.com/trufflesuite/truffle/blob/develop/packages/hdwallet-provider/README.md).
 
@@ -130,22 +130,24 @@ module.exports = {
 
 Deploy/Migrate by running `truffle migrate --network shibuya`, replacing `shibuya` with your chosen network. If `--network` is not specified, the network values under`development` will be used.
 
-## Your own RPC server
+## Your Own RPC Server
 
-For EVM developers and projects, it is reasonable to have their own managed EVM endpoints. Relying on public endpoints introduces, introduces the risk of relying on centralized endpoints which can become single point of failure.
-
-Astar team officially recommends projects to use their own managed EVM endpoints.
-
-Fortunately, launching Astar Network endpoint is not that difficult.
+For EVM developers and projects, it is not an unreasonable expectation that they should have their own managed EVM endpoints. Relying on public endpoints can introduce additional risk due to centralizaion or improper maintenance, and make them single points of failure.
 
 :::note
-By default EVM RPC server is disabled, to turn it on please add `--enable-evm-rpc` flag into the launch string.
+Astar team highly recommends that projects use and maintain their own EVM endpoints.
+:::
+
+Launching an Astar Network endpoint is easy.
+
+:::note
+The EVM RPC server is disabled by default. To enable it, append the `--enable-evm-rpc` flag to the launch string.
 :::
 
 ```
 astar-collator --chain=shiden --enable-evm-rpc --unsafe-rpc-external --unsafe-ws-external
 ```
 
-Launch string above will start Astar Collator for Shiden network. HTTP endpoint becomes available on port `9933` and WS on port `9944`.
+The launch string above will start an Astar Collator on Shiden network, open up an HTTP endpoint on port `9933`, and a WS endpoint on port `9944`.
 
-We also recommend to pay attention to the `--ws-max-connections` parameter. By default it relatively small and you will probably want to increase it to couple of thousands.
+We also recommend paying attention to the `--ws-max-connections` parameter. By default this value is relatively small, so it may be beneficial to increase it to a few thousand.

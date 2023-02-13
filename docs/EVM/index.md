@@ -1,6 +1,6 @@
 # EVM
 
-Solidity smart contracts can be deployed on the Astar and Shiden networks.
+Solidity smart contracts can be deployed on Astar and Shiden networks.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

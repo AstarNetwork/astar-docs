@@ -6,25 +6,25 @@ sidebar_position: 2
 
 ## What is SubQuery?
 
-SubQuery’s goal is to become an Omni indexer for both EVM/substrate-native smart contract infrastructure in the Polkadot ecosystem. Connecting directly to substrate with WebSocket, developers can get an insight into their smart contracts from Subquery’s indexing mechanism by detecting smart contract events in a more native way without running separate RPC nodes for HTTP connection. The insights are often used for recent trades in DEXes, yield reserves tracking in money markets, NFT transfers, and many more. In this tutorial, we will look at how to set up a substrate native indexer for frontier EVM tracking ERC20 token transfers.
+SubQuery’s goal is to become an Omni-chain indexer for both EVM/Substrate-native smart contract infrastructure in the Polkadot ecosystem. Connecting directly to Substrate with WebSocket, developers can get an insight into their smart contracts from Subquery’s indexing mechanism by detecting smart contract events in a more native way without running separate RPC nodes for HTTP connection. The insights are often used for recent trades in DEXes, yield reserves tracking in money markets, NFT transfers, and many more. In this tutorial, we will look at how to set up a Substrate native indexer for frontier EVM tracking ERC20 token transfers.
 
-SubQuery has an advantage over Graph in that it requires javascript or typescript while each subgraph requires AssemblyScript, which is a more focused native-friendly language and may have unexpected behavior. It also tracks EVM calls so that developers can still make insight out of calls without adding event code. For deployment workflow, since Subgraph is made for the public, it requires developers to add Subgraphs one by one, but Subquery just needs one command to build a dedicated indexer.
+SubQuery has an advantage over the Graph in that it requires Javascript or TypeScript, while each subgraph requires AssemblyScript, a more focused native-friendly language and may have unexpected behavior. It also tracks EVM calls so that developers can still make insight out of calls without adding event code. For deployment workflow, since Subgraph is made for the public, it requires developers to add Subgraphs one by one, but Subquery just needs one command to build a dedicated indexer.
 
-## Prerequisite
+## Prerequisites
 
 [Docker]: https://docs.docker.com/get-docker/
 [docker-compose]: https://docs.docker.com/compose/install/
 [GraphQL]: https://graphql.org/
 
-Before you setup SubQuery for your platform, you need:
+Before you setup SubQuery for your platform, you will need:
 
--[Docker] : Containerization platform for software solutions
--[docker-compose] : Used to automate interactions between docker containers
--[GraphQL]: Simple knowledge on how to propose entity and query it is required
+[Docker] : Containerization platform for software solutions
+[docker-compose] : Used to automate interactions between docker containers
+[GraphQL]: Simple knowledge on how to propose entity and query it is required
 
 ## Getting started
 
-First of all, clone the boilerplate for setting up the indexer:
+First, clone the boilerplate code for setting up the indexer:
 
 ```bash
 git clone https://github.com/AstarNetwork/astar-evm-example.git
@@ -32,9 +32,9 @@ cd astar-evm-example
 yarn
 ```
 
-### Setting up typedef for connecting to parachain
+### Setting up typedef for Connecting to a Parachain
 
-To connect to parachain with websocket, type definitions, typedef in short, is used to encode data for communication. `chainTypes.ts` manages the manifest of the types of data that will be shared between the parachain and the indexer. As Astar.js goes through an upgrade of type definitions, `chainTypes.ts` has to be updated with the latest typedefs to be fully able to connect to parachain.
+To connect to a parachain with websocket, type definitions, or typedef for short, are used to encode data for communication. `chainTypes.ts` manages the manifest of the types of data that will be shared between the parachain and the indexer. As Astar.js goes through an upgrade of type definitions, `chainTypes.ts` will need to be updated with the latest typedefs to be able to fully connect to parachains.
 
 ```ts
 import type { OverrideBundleDefinition } from "@polkadot/types/types";
@@ -75,9 +75,9 @@ const definitions: OverrideBundleDefinition = {
 export default { typesBundle: definitions };
 ```
 
-### Setup entity for storing event topics
+### Setup Entity for Storing Event Topics
 
-SubQuery indexer filters event topics from the connected parachain and then stores them in its database for search. A topic is a unit of event data on a Solidity smart contract that is used for giving updates to its state. `Entity` declares the shape of data which event data is stored in the indexer database through the handler. To declare an entity to store event topics, you can edit `schema.graphql` in the root directory with GraphQL syntax.
+SubQuery indexer filters event topics from the connected parachain and stores them in its database for searchability. A topic is a unit of event data on a Solidity smart contract that is used for providing updates about its state. `Entity` declares the shape of data, and which event data is stored in the indexer database through the handler. To declare an entity to store event topics, you can edit `schema.graphql` in the root directory with GraphQL syntax.
 
 ```graphql
 type Transfer @entity {
@@ -91,7 +91,7 @@ type Transfer @entity {
 }
 ```
 
-After declaring entity, you can run command `yarn codegen` to generate model types for handling events in handler code. Then, `src` directory will have types ready for the handler to add indexing logic. `types` is the directory which declares data entities as models for handler to manage.
+After declaring an entity, you can run the command `yarn codegen` to generate model types for handling events in the handler code. Then, the `src` directory will have types ready for the handler to add indexing logic. `types` is the directory which declares data entities as models for handler to manage.
 
 ```
 src/
@@ -106,9 +106,9 @@ src/
         └── index.ts**
 ```
 
-### Setup handler for indexing
+### Setup Handler for Indexing
 
-Now that storage is declared, we can use handler to declare how to add data on each event emission. `mappings` directory stores handlers mapping solidity event topic to SubQuery data entity. In this tutorial, we will see how erc20 transfer event is handled.
+Now that storage has been declared, we can use the handler to declare how to add data on each event emission. The `mappings` directory stores handlers mapping solidity event topics, to a SubQuery data entity. In this tutorial, we will examine how an ERC20 transfer event is handled.
 
 ```ts
 // import model from types
@@ -150,7 +150,7 @@ export async function handleERC20Transfer(
 }
 ```
 
-SubQuery indexer can also track calls for solidity precompiles which event is hard to track.
+SubQuery indexer can also track calls for Solidity precompiles, that are normally difficult to track.
 
 ```ts
 import { Transfer } from "../types";
@@ -182,7 +182,7 @@ export async function handleERC20TransferCall(
 }
 ```
 
-Once the handler is built, run `yarn build` to compile codes into a deployable format. Confirm `dist` directory is formed in the root directory.
+Once the handler is built, run `yarn build` to compile the code into deployable format. You will want to confirm that the `dist` folder has been created under the root folder, as it is below:
 
 ```
 astar-evm-example
@@ -200,17 +200,17 @@ astar-evm-example
 └── yarn.lock
 ```
 
-### Deploy indexer
+### Deploy Indexer
 
-SubQuery indexer is a multi-container solution that runs with 3 different containers.
+SubQuery indexer is a multi-container solution that runs in three different containers.
 
-- `postgres` : Database which stores all data from indexer
-- `subquery-node` : Event subscriber which detects EVM call/event from connected blockchain then writes in the database
-- `graphql-engine` : GraphQL engine which indexes stored data in the database
+- `postgres` : Database which stores data from the indexer.
+- `subquery-node` : Event subscriber which detects EVM calls or events on the connected blockchain, and writes them in the database.
+- `graphql-engine` : GraphQL engine which indexes data within the database.
 
-`docker-compose.yml` already handles specification of how they are connected, but `project.yaml` has to be edited to give information to `subquery-node` on what to track in its container.
+The `docker-compose.yml` file handles specifics about how they are connected, but `project.yaml` will need to be edited to provide information to `subquery-node` about what to track in its container.
 
-Here is the each necessary information in `project.yaml` which needs to be adjusted.
+Here are the parameters in `project.yaml` that need to be configured:
 
 ```yaml
 # metadata
@@ -281,15 +281,15 @@ dataSources:
             from: '0x6bd193ee6d2104f14f94e2ca6efefae561a4334b'
 ```
 
-After editing project.yaml , execute docker-compose to pull the latest containers and deploy
+After editing project.yaml , execute docker-compose to pull the latest containers, and deploy.
 
 ```sh
 docker-compose pull && docker-compose up
 ```
 
-### Exploring collected data
+### Exploring the Indexed Data
 
-After you run `docker-compose`, SubQuery supports GraphiQL playground to explore indexed data. You can explore the data by sending GraphQL queries at `http://localhost:3000`
+After you run `docker-compose`, SubQuery supports the GraphiQL playground to explore the indexed data. You can explore the data by sending GraphQL queries to `http://localhost:3000`
 
 ![4](img/4.png)
 
@@ -297,12 +297,12 @@ After you run `docker-compose`, SubQuery supports GraphiQL playground to explore
 
 ### Topic
 
-A unit of event subscription data on a Solidity smart contract is used for giving updates to its state.
+A unit of event subscription data on a Solidity smart contract that's used for providing updates to its state.
 
 ### Entity
 
-A distinctive data structure that is used to store event topics in the database of SubQuery indexer
+A distinctive data structure that is used to store event topics in the database of the SubQuery indexer.
 
 ### GraphQL
 
-An indexing tool for aggregated data
+An indexing tool for aggregated data.

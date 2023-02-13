@@ -8,15 +8,15 @@ sidebar_position: 2
 
 ## Overview
 
-[Band Protocol] is a cross-chain data oracle aggregating and connecting real-world data and APIs to smart contracts.
+[Band Protocol] is a cross-chain data oracle that aggregates and connects real-world data and APIs, to smart contracts.
 
-### Why do blockchains need oracles?
+### Why do Blockchains Require Oracles?
 
-Blockchains are great at providing immutable storage and deterministic verifiable computations. However, they cannot access trusted real-world information available outside their networks. Band Protocol enhances smart contract functionalities by granting access to reliable data without any central authority or points of failure.
+Blockchains are great at providing immutable storage and deterministically verifiable computations. However, they cannot access trusted real-world information available outside their networks. Band Protocol enhances smart contract functionality by granting access to reliable data, without relying on centralized authorities, or points of failure.
 
-## Use Band Protocol
+## Using Band Protocol
 
-Developers have two ways to fetch prices from Band’s oracle infrastructure. On one hand, they can use Band’s smart contracts on Astar. Doing so, they access data that is on-chain and is updated either at regular intervals or when price slippage is more than a target amount (different for each token). Currently, **the interval is set at 10 minutes or a price slippage of 0.5%.** The second way for devs is to use the JavaScript helper library, which uses an API endpoint to fetch the data using similar functions as those from the smart contracts, but this implementation bypasses the blockchain entirely. This can be useful if your DApp front-end needs direct access to the data.
+Decentralized application developers have two ways to fetch prices from Band’s oracle infrastructure. The first option, is to use Band’s smart contracts on Astar. By doing so, developers can access on-chain data updated either at regular intervals, or when price slippage is greater than a threshold amount (different for each token). Currently, **the interval is set at 10 minutes, or price slippage of 0.5%.** The second option, allows developers to use the JavaScript helper library, which relies on an API endpoint to fetch data using similar functions as those used with the smart contracts, to obtain price quotes off-chain. This can be useful if your dApp front-end needs direct access to data.
 
 The Aggregator Contract address can be found in the following table:
 
@@ -28,7 +28,7 @@ Smart Contract (Aggregator): 0xDA7a001b254CD22e46d3eAB04d937489c93174C3
 
 Smart Contract (Aggregator): 0xDA7a001b254CD22e46d3eAB04d937489c93174C3
 
-## Supported Token
+## Supported Tokens
 
 Price queries with any denomination are available as long as the base and quote symbols are supported (base/quote). For example:
 
@@ -53,11 +53,11 @@ We provide feeds for the following assets:
 - USDT
 - WBTC
 
-## Get Data Using Smart Contracts
+## Obtain Data Using Smart Contracts
 
-To query prices from Band's oracle through smart contracts, the contract looking to use the price values should reference Band's `StdReference` contract. This contract exposes `getReferenceData`  and `getReferenceDataBulk` functions.
+To query prices from Band's oracle through smart contracts, the contract requiring the price values should reference Band's `StdReference` contract. This contract exposes the `getReferenceData`  and `getReferenceDataBulk` functions.
 
-`getReferenceData` takes two strings as the inputs, the base and quote symbol, respectively. It then queries the `StdReference` contract for the latest rates for those two tokens and returns a `ReferenceData` struct, shown below.
+`getReferenceData` takes two strings as inputs, the base and quote symbol, respectively. It then queries the `StdReference` contract for the latest rates for those two tokens, and returns a `ReferenceData` struct, shown below:
 
 ```rust
 struct ReferenceData {
@@ -67,9 +67,9 @@ struct ReferenceData {
 }
 ```
 
-`getReferenceDataBulk` instead takes two lists, one of the base tokens, and one of the quotes. It then proceeds to similarly queries the price for each base/quote pair at each index, and returns an array of `ReferenceData` structs.
+`getReferenceDataBulk` instead takes two lists, one of the base tokens, and one of the quotes. It then queries the price for each base/quote pair at each index, and returns an array of `ReferenceData` structs.
 
-For example, if we call `getReferenceDataBulk` with `['BTC','BTC','ETH']` and `['USD','ETH','BNB']`, the returned ReferenceData array will contain information regarding the pairs:
+For example, if we call `getReferenceDataBulk` with `['BTC','BTC','ETH']` and `['USD','ETH','BNB']`, the ReferenceData array returned will contain information regarding the pairs:
 
 - `BTC/USD`
 - `BTC/ETH`
@@ -144,4 +144,4 @@ contract DemoOracle {
 
 ## Full Documentation
 
-[Band Protocol Documentation](https://docs.bandchain.org/)
+You can find the Band Protocol official documentation [here](https://docs.bandchain.org/).

@@ -4,24 +4,25 @@ sidebar_position: 4
 
 # AstarBase
 
-There are couple of facts for Astar ecosystem:
+A few important facts about the Astar ecosystem:
 
-- Majority of the crowdloan participants used their Polkadot native addresses (ss58) and these users are the majority of dApps-Staking participants.
-- While Astar is building multi virtual Machine future, today most of the dApps are using Ethereum Virtual Machine (EVM) which uses Ethereum address space, usually referred as MetaMask accounts or H160.
-- Astar's unique feature is dApps Staking which provides basic income for developers and a staking mechanism for the users. Both dApps developers and users benefit from it.
+- The majority of crowdloan participants used their Polkadot native addresses (ss58 format), and also make up the majority of dApp staking participants.
+- Although Astar has built a Wasm smart contract platform, most dApps still use the Ethereum Virtual Machine (EVM) and address format (H160), native to MetaMask accounts.
+- DApp staking, which simultaneaously provides a basic income for developers, and staking mechanism for users, is a system which both dApp developers and users benefit from.
 
-The goals of AstarBase product is:
+AstarBase aims to:
 
 - Bring more users to EVM dApps;
 - Create more opportunities for end users to participate in the Astar ecosystem;
-- Enable EVM dApps to attract and reward users even though they have majority of their funds staked on dApps Staking;
-- Encourage users to stake and use dApps Staking mechanism.
+- Allow EVM dApps to attract attention and reward users, even though their funds may be illiquid, and locked in dApp Staking;
+- Encourage users to stake and use the dApp Staking mechanism.
 
-AstarBase is an on-chain EVM database. AstarBase contains a mapping of users's EVM and Native ss58 address. Such mapping on it's own does not bring any benefit to the projects since anyone can register this address pair. What brings the value is the call `checkStakerStatus()` which checks if the ss58 address of the pair is an active staker. The AstarBase contracts are available on each of Shibuya/Shiden/Astar Networks. The deploy addresses can be found in the [AstarBase github repository](https://github.com/AstarNetwork/astarbase/blob/main/contract/deployment-info.md).
+AstarBase is an on-chain EVM database, which contains a mapping between a user's EVM, and Astar Native ss58 address. Such mapping on its own does not bring any value to ecosystem projects, since anyone can register an address pair, but the `checkStakerStatus()` call, which checks to see if the ss58 address of the pair is an active staker, does. 
+The AstarBase contracts are available on each of the Shibuya/Shiden/Astar Networks, and deployment addresses can be found in the [AstarBase github repository](https://github.com/AstarNetwork/astarbase/blob/main/contract/deployment-info.md).
 
-There are 3 interface functions that can be used.
+There are 3 functions that can be used to interact with AstarBase.
 
-- `isRegistered()` checks if the given address was registered in AstarBase
+- `isRegistered()` checks to see if the given address is registered in AstarBase
 
 ```
 function isRegistered(address evmAddress) 
@@ -29,7 +30,7 @@ function isRegistered(address evmAddress)
     returns (bool);
 ```
 
-- `checkStakerStatus()` Checks if pair of addresses (ss58, evm) is an active staker in dApps-staking and returns staked amount
+- `checkStakerStatus()` Checks to see if a pair of addresses (ss58, evm) is an active staker in dApp staking, and returns the staked amount
 
 ```
 function checkStakerStatus(address evmAddress)
@@ -37,7 +38,7 @@ function checkStakerStatus(address evmAddress)
     returns (uint128);
 ```
 
-`checkStakerStatusOnContract()` Checks if pair of addresses (ss58, evm) is an active staker in dApps-staking on the specified contract and returns staked amount
+`checkStakerStatusOnContract()` Checks to see if a pair of addresses (ss58, evm) is an active staker in dApp staking on the specified contract, and returns the staked amount
 
 ```
 function checkStakerStatusOnContract(address evmAddress, address stakingContract)
@@ -47,10 +48,11 @@ function checkStakerStatusOnContract(address evmAddress, address stakingContract
 
 The interface file `IAstarBase.sol` can be found in the [ERC20 example](https://github.com/AstarNetwork/astarbase/tree/main/contract/example).
 
-## Use from Client side
+## How to Use AstarBase From the Client Side
 
 The `abi` for the contract can be found in [AstarBase Github repository](https://github.com/AstarNetwork/astarbase/tree/main/public/config).
-The following is an example usage of the Astarbase from the client side.
+
+The following is an example usage of Astarbase from the client side:
 
 ```js
 if (metamaskIsInstalled) {
@@ -75,9 +77,9 @@ if (metamaskIsInstalled) {
 }
 ```
 
-### Read native address for H160 address
+### How to Determine the Native Address From an H160 Address
 
-To read the address mapping do following:
+To read the address mapping perform the following:
 
 ```js
 const abi = [
@@ -88,11 +90,11 @@ const native = await contract.addressMap(evmAddress);
 console.log(native);
 ```
 
-The complete script to read address mapping is in the example folder on [Github repo](https://github.com/AstarNetwork/astarbase/tree/main/contract/example).
+The complete script to read the address mapping is in the example folder on [Github repo](https://github.com/AstarNetwork/astarbase/tree/main/contract/example).
 
-## Use from Contract side
+## How to Use AstarBase From the Contract Side
 
-The following is an example usage when EVM contract wants to check staker status for H160 address
+The following is an example usage for when an EVM contract wants to check dApp staking status for an H160 address:
 
 ```sol
 import "./IAstarBase.sol"
@@ -109,28 +111,28 @@ contract A {
 }
 ```
 
-## Example use case: NFT discount price
+## Example Use Case: Discount Price on an NFT
 
-In the [minting-dapp Github repository](https://github.com/AstarNetwork/minting-dapp/blob/main/contract/contracts/ShidenPass_flat.sol) you will find example NFT minting dApp which uses AstarBase to mint free NFT for active dApp-stakers. The same example could be easily adapted to give discount price instead of free NFT.
+In the [minting-dapp Github repository](https://github.com/AstarNetwork/minting-dapp/blob/main/contract/contracts/ShidenPass_flat.sol) you will find an example NFT minting dApp, which uses AstarBase to mint a free NFT for active dApp stakers. The same example could easily be adapted to issue a discount price instead of a free NFT.
 
-## Example use case: ERC20 airdrop claim
+## Example Use Case: Permissioned Claim for an ERC20 Airdrop
 
-A new project coming to Astar ecosystem would like to attract users by ERC20 token airdrop. But they want users who are active participants in the ecosystem and not one-time users who will disappear once the airdrop is claimed. AstarBase can be used to allow airdrop claim only to registered users.
+A new project coming to Astar ecosystem would like to attract users by issuing an ERC20 token airdrop, but they want to qualify users who are active participants in the ecosystem only, not one-time users who will disappear after the airdrop is claimed. AstarBase can be used to create a permissioned airdrop claim, and make it available to dApp stakers, only.
 
 `if ASTARBASE.checkStakerStatus(user) > 0;`
 
-## Example use case: Rewards for stakers
+## Example Use Case: Rewards for Participants
 
-A project is using dApps-staking as basic income but would also like to reward stakers who are staking on them. Since those stakes use their native Astar address (s58) for staking and this project is based on EVM, there was no way to give EVM based rewards. Astarbase gives the possibility to reward such users if they are registered in AstarBase
+A project is using dApp staking as basic income, and would like to reward staking participants who are specifically staking on their dApp. Since those stakers use their native Astar address (s58),and the project is based on EVM, there is no way to issue EVM-based rewards. Astarbase, though, gives them the opportunity to do so, as long as they are registered for an AstarPass.
 
 `if ASTARBASE.checkStakerStatusOnContract(address evmAddress, address stakingContract) > 0;`
 
-See the [example ERC20 contract](https://github.com/AstarNetwork/astarbase/tree/main/contract/example) on the Github which allows minting only for the specified contract stakers.
+See the [example ERC20 contract](https://github.com/AstarNetwork/astarbase/tree/main/contract/example) on Github, which mints rewards only to stakers of a specified contract. 
 
-## Example use case: Bot protection
+## Example Use Case: Bot Protection
 
-There is no absolute protection against bots, but at least their usage might be financially questionable. The registered accounts which are also stakers will need to have the minimum staked amount for the dApps-staking and there is also unbound period. This will limit the bots creating unlimited number of addresses to claim the rewards or buy your NFTs. By using AstarBase you force bots to use active stakers' address in case they want to reap your project's rewards.
+There is no absolute protection against bots, but at the very least, their activity can be disincentivized. In this example, the registered accounts will need to have the minimum staked amount in dApp staking, and there is also a configurable unbonding period. This will eliminate a bots ability to create an unlimited number of addresses, in order to claim rewards or buy NFTs. By using AstarBase, bots are forced to stake actively with the minimum amount, in the event they want to reap your project's rewards.
 
-## ECDSA address registration
+## ECDSA Address Registration
 
-Besides SS58 address scheme, the [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) addresses are also supported.
+Besides the ss58 address scheme, [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) addresses are also supported.

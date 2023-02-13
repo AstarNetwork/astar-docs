@@ -1,6 +1,6 @@
 # Integrations
 
-Integrations shares common services available while building a dApp on Astar/Shiden. It includes configurations and how-tos for many important infrastructure pieces, and includes:
+Here you will find some common services available to developers building dApps on Astar/Shiden, including sample configurations, and guides for many important elements of our infrastructure, including:
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

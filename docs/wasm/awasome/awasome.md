@@ -4,5 +4,5 @@ sidebar_position: 2
 
 # aWASoMe
 
-An aWASoMe list of all things related to WASM contract development in the Dotsama community.
+An aWASoMe list of all things related to Wasm smart contract development in the Polkadot ecosystem.
 [aWASoMe Github link](https://github.com/AstarNetwork/aWASoMe)
