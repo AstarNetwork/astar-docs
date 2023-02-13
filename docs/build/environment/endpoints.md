@@ -7,6 +7,14 @@ sidebar_position: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+
+## What is RPC Node?
+* RPC nodes can be queried for information and used to initiate transactions.
+* The purpose of RPC nodes is to allow decentralized applications and clients to communicate with a Blockchain network.
+* RPC nodes listen for requests, respond with the necessary data, or execute the requested transaction. 
+* Common usage of RPC nodes includes querying the Blockchain for information, sending transactions, and executing smart contract functions.
+* RPC nodes are important for decentralized applications to function and interact with a Blockchain network, allowing for decentralized exchange and other use cases.
+
 ## Public Endpoints
 
 :::info
