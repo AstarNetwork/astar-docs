@@ -61,7 +61,7 @@ There are several benefits of decoupling the contract code from the address/stor
 
 ### For More Information About `pallet-contracts`
 
-- [`pallet-contracts` in Substrate documentation](https://docs.substrate.io/v3/runtime/smart-contracts/)
+- [`pallet-contracts` in Rust docs](https://docs.rs/pallet-contracts/14.0.0/pallet_contracts/index.html)
 - [`pallet-contracts` on Github](https://github.com/paritytech/substrate/tree/master/frame/contracts)
 
 ## Client APIs
@@ -87,7 +87,7 @@ Standards | [EIPs] | [PSPs]
 [weight]: https://docs.substrate.io/reference/how-to-guides/weights/
 [PSP22]: https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md
 [PSP34]: https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md
-[set_code_hash]: https://paritytech.github.io/ink/ink_env/fn.set_code_hash.html
+[set_code_hash]: https://docs.rs/ink_env/4.0.0-rc/ink_env/fn.set_code_hash.html
 [ink!]: https://github.com/paritytech/ink
 [ask!]: https://github.com/ask-lang/ask
 [EVM]: https://ethereum.org/en/developers/docs/evm/
