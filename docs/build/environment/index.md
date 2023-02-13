@@ -1,4 +1,6 @@
 # Setup the Development Environment
+![banner](../assets/gradient6.jpg)
+
 Prior to commencing development, you do not need to know how to set up these environments. However, you may want to review the following sections to become more familiar with what they do, and their specific requirements.
 
 For Example, to build ink! smart contracts you will mostly use an

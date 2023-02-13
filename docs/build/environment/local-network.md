@@ -58,7 +58,7 @@ You can see the full list of the command options using the `help` subcommand:
 
 When you have successfully launched the local network, you will see the following messages in your terminal:
 
-![1](img/1.png)
+![1](img/1n.png)
 
 OK! Let's explore your local network now.
 
@@ -70,11 +70,11 @@ Visit the following URL:
 
 There, you will see the following screen:
 
-![2](img/2.png)
+![2](img/2n.png)
 
 This represents your local network. In this local network, some native tokens have already been issued to a few accounts. Let's visit the [Account page](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/accounts) from the Accounts Tab.
 
-![3](img/3.png)
+![3](img/3n.png)
 
 Here, you can see that ALICE and BOB have around 1,000 tokens. In the following section, you will deploy your smart contract and interact with it by paying the transaction fees using these tokens.
 
