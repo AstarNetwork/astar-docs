@@ -5,20 +5,20 @@ sidebar_position: 6
 # Integration Testing with Zombienet
 
 :::note
-This page is inteded for developers & builders.
+This page is intended for developers & builders.
 :::
 
 ## The Problem
 
-Finding the right environment for testing XCM features, both standalone or with smart contracts, can be difficult since it requires at least two parachains with open HRMP channels and a relaychain. The parachains need to have the features we rely on in testing.
+Finding the right environment for testing XCM features, both standalone or with smart contracts, can be difficult since it requires at least two parachains with open HRMP channels and a Relay Chain. The parachains need to have the features we rely on in testing.
 
-At the moment, only production networks, like `Astar` or `Shiden`, have access to a great number of HRMP channels with various parachains. Testing in production isn't a good idea though and should be avoided. A possible alternative is to use `Rococo` as a relay chain and the connected parachains, if they are available. Not all projects deploy a testnet on Rococo.
+At the moment, only production networks, like `Astar` or `Shiden`, have access to a great number of HRMP channels with various parachains. Testing in production isn't a good idea though and should be avoided. A possible alternative is to use `Rococo` as a Relay Chain and the connected parachains, if they are available. Not all projects deploy a testnet on Rococo.
 
 ## Zombienet
 
-The approach that gives users the most control is to setup a local test network, with both the relay chain and parachain(s). This is very simple & easy to do using the [zombienet](https://github.com/paritytech/zombienet) tool provided by Parity. Simply put, users can download arbitrary relay-chain and parachain binaries (or use images) to setup a configurable local test network. Users will have access to all privileged actions on the relay-chain and on the parachains which makes testing much easier.
+The approach that gives users the most control is to setup a local test network, with both the Relay Chain and parachain(s). This is very simple & easy to do using the [zombienet](https://github.com/paritytech/zombienet) tool provided by Parity. Simply put, users can download arbitrary Relay Chain and parachain binaries (or use images) to setup a configurable local test network. Users will have access to all privileged actions on the Relay Chain and on the parachains which makes testing much easier.
 
-For example, user can download `polkadot` binary together with `astar-collator` and `cumulus-parachain` to spin up a testnetwork with `polkadot` as relay chain, `astar` as one parachain and `statemint` as the second parachain.
+For example, user can download `polkadot` binary together with `astar-collator` and `cumulus-parachain` to spin up a testnetwork with `polkadot` as Relay Chain, `astar` as one parachain and `statemint` as the second parachain.
 
 `Zombienet` documentation can be found [here](https://paritytech.github.io/zombienet/), including the installation instructions, CLI usage, guide with examples and many more. Users are advised to consult this document to get a better understanding of the tool.
 
@@ -26,9 +26,9 @@ For example, user can download `polkadot` binary together with `astar-collator` 
 
 ### Overview
 
-A quick reminder - `Shibuya` is a test network with no market value used by `Astar & Shiden` team to test features before deploying into production. It uses a custom **Rococo** based relay chain. `Shiden` is a production canary-type network connected to `Kusama`. These two parachains aren't aware of one another and do not communicate in live networks.
+A quick reminder - `Shibuya` is a test network with no market value used by `Astar & Shiden` team to test features before deploying into production. It uses a custom **Rococo** based Relay Chain. `Shiden` is a production canary-type network connected to `Kusama`. These two parachains aren't aware of one another and do not communicate in live networks.
 
-However, using `zombienet`, users can setup a local test network where one parachain would be `Shibuya` and the other would be `Shiden` with **HRMP** channels opened between them. This is incredibly useful for testing & integration because it gives users the option for cross-chain communication between two smart-contract oriented parachains which support WASM smart contracts, amongst many other features.
+However, using `zombienet`, users can setup a local test network where one parachain would be `Shibuya` and the other would be `Shiden` with **HRMP** channels opened between them. This is incredibly useful for testing & integration because it gives users the option for cross-chain communication between two smart-contract oriented parachains which support Wasm smart contracts, amongst many other features.
 
 The following instructions will explain how to setup & configure local _Shibuya - Shiden test network_.
 
@@ -48,9 +48,9 @@ For users who already know what they are doing, please check [this](https://gith
 
 6. Lots of useful information will be printed, like commands used to generate chain specifications and commands used to start the network (useful for extracting RPC ports). At the end, a table with direct links to node's `polkadot-js page` will be created. Use this to interact with chain from your browser.
 
-7. After a minute or two, block production on both `Shibuya` and `Shiden` should start. This will usually happen after **relay-chain** reaches block 11, which will trigger a new session. HRMP channels will automatically be configured between the parachains (check the configuration file).
+7. After a minute or two, block production on both `Shibuya` and `Shiden` should start. This will usually happen after **Relay Chain** reaches block 11, which will trigger a new session. HRMP channels will automatically be configured between the parachains (check the configuration file).
 
-8. The test network is running and users can interract with relay chain and both parachains. It is now possible to deploy EVM and WASM smart contracts, send XCM instructions and do everything else what is possible on live chains. In addition, users have direct access to `Alice` account, which has `sudo` privileges.
+8. The test network is running and users can interract with Relay Chain and both parachains. It is now possible to deploy EVM and Wasm smart contracts, send XCM instructions and do everything else what is possible on live chains. In addition, users have direct access to `Alice` account, which has `sudo` privileges.
 
 > We will provide automated way of performing these setup actions in the future.
 

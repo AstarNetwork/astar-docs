@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ## Overview
 
-DIA is a cross-chain, end-to-end, open-source data and oracle platform for Web3. DIA is an ecosystem for open financial data in a financial smart contract ecosystem. The target of DIA is to bring together data analysts, data providers, and data users. In general, DIA provides a reliable and verifiable bridge between off-chain data from various sources and on-chain smart contracts that can be used to build a variety of financial dApps. DIA is setup as a hybrid system with off-chain components for storing and processing large amounts of data and on-chain components providing data sources for financial smart contracts.
+DIA is a cross-chain, end-to-end, open-source data and oracle platform for Web3. DIA is an ecosystem for open financial data in a financial smart contract ecosystem. The goal of DIA is to bring together data analysts, data providers, and data users. In general, DIA provides a reliable and verifiable bridge between off-chain data from various sources and on-chain smart contracts that can be used to build a variety of financial dApps. DIA is setup as a hybrid system with off-chain components for storing and processing large amounts of data and on-chain components providing data sources for financial smart contracts.
 
 ## DIA's API
 
@@ -60,7 +60,7 @@ The oracle contains information about crypto assets. You can access a price quot
    3. The [UNIX timestamp](https://www.unixtimestamp.com/) of the last oracle update.
    4. The short name of the asset, e.g., `BTC` for Bitcoin.
 
-As of now, the following list of quotations is available in this development oracle:
+The development oracle supports price quotations for, at the very least, the following assets:
 
 - BTC
 - ETH

@@ -6,19 +6,19 @@ sidebar_position: 2
 
 ## Instructions
 
-### Check on the Portal
+### Visit the Portal
 
-When you go to the [Assets page](https://portal.astar.network/#/assets), log in with your MetaMask account to see all your assets.
+Visit the [Assets page](https://portal.astar.network/#/assets), and log in with your MetaMask account to view your assets.
 
 ![6](img/6.png)
 
-As you can see in the screenshot above, we have DOT assets in our EVM wallet. Now let's add the asset to our MetaMask.
+As you can see in the screenshot above, there is DOT in our EVM wallet. Let's add the asset to MetaMask.
 
-### Import assets on MetaMask
+### Import assets to MetaMask
 
-Open your MetaMask and connect your wallet with DOT assets. Make sure you are connected to the Astar Network. If not, you can find all Network Details under the Integration page.
+Open MetaMask and connect the account with DOT. Make sure you are connected to the Astar Network. If not, you will find the Network Details in the Integration section.
 
-When you are connected you can import tokens into your wallet. Click on Import tokens and use the following information:
+After the account is connected, you will be able to import tokens into the wallet. Click on Import tokens and use the following information:
 
 - Token Contract Address: 0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF
 - Token Symbol: DOT
@@ -26,4 +26,4 @@ When you are connected you can import tokens into your wallet. Click on Import t
 
 ![7](img/7.png)
 
-When you are done with adding and importing the DOT asset you can see them in your wallet. You can find the full list of [supported XCM assets here](../asset-list.md).
+When you are finished adding and importing DOT, you will see them in your wallet. You can find the full list of supported XCM assets [here](../asset-list.md).

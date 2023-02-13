@@ -4,9 +4,9 @@ sidebar_position: 5
 
 # XC20 via Smart Contracts
 
-So far we’ve successfully transferred assets from Kusama to Shiden and we’ve shown we can access those assets the same as any other via MetaMask. Now we take it one step further and demonstrate how to use these assets from the Smart Contracts.
+So far we’ve successfully transferred assets from Kusama to Shiden and shown how we can access those assets the same as any other within MetaMask. Now we will take it one step further and demonstrate how to use these assets with smart contracts.
 
-Here is the example staking contract we’ll be using for the demonstration (for DOT, you replace `ksm` by dot`):`
+Here is an example staking contract we’ll be using for the demonstration (for DOT, replace `ksm` with `dot`):
 
 ```js
 // SPDX-License-Identifier: MIT
@@ -39,13 +39,13 @@ contract XC20_Demo {
 }
 ```
 
-Using the partial ERC20 interface (all methods are actually supported), we can check what is the balance of the account we’ve used previously: `0x107bAe763DC63e0686C574FdE1B58115c7d19280`
+Using the partial ERC20 interface (all methods are actually supported), we can check the balance of the account we used previously: `0x107bAe763DC63e0686C574FdE1B58115c7d19280`
 
 ![14](img/14.png)
 
-The amount shown is the same one we’ve seen in MetaMask, **15 KSM** in total.
+The amount shown is the same amount we see in MetaMask, **15 KSM** in total.
 
-Now we try to stake 5 KSM in our simple staking dApp. The first step is to approve the staking demo contract `0x62425e07119144B5D5A16D96430c31aD0E17A877` for the transfer, using the IERC20 interface:
+Now, Lets stake 5 KSM in our simple staking dApp. The first step will be to approve the staking demo contract `0x62425e07119144B5D5A16D96430c31aD0E17A877` for the transfer, using the IERC20 interface:
 
 ![15](img/15.png)
 
@@ -59,8 +59,8 @@ After the operation is complete, we can check the staked amount.
 
 We’ve successfully staked 5 KSM!
 
-To summarize what we’ve achieved so far:
+To summarize what we’ve done so far:
 
-1. We transferred KSM tokens from Kusama to Shiden
-2. We verified we can see and interact with those tokens via MetaMask
-3. We manipulated transferred tokens the same as any other ERC20 via a smart contract.
+1. Transferred KSM tokens from Kusama to Shiden.
+2. Verified the tokens are present within MetaMask.
+3. Confirmed we are able to manipulate the XC20 tokens in the same way as other ERC20 tokens, via smart contract.

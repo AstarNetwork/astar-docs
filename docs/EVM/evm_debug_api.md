@@ -2,11 +2,11 @@
 sidebar_position: 7
 ---
 
-# Debug EVM transactions 
+# Debug EVM Transactions 
 
 Geth's debug APIs and OpenEthereum's trace module provide non-standard RPC methods for getting a deeper insight into transaction processing.
 
-> Thanks to the PureStake team the Polkadot ecosystem have similar to Geth and OpenEthereum EVM tracing capabilities. Astar Network implements same approach for Astar EVM tracing as the best solution in Polkadot ecosystem we have at the moment.
+> Thanks to the PureStake team, the Polkadot ecosystem has tracing capabilities similar to that of Geth, and OpenEthereum. Astar Network implements the same approach for Astar EVM tracing, due to it being the best solution we have at the moment, for the Polkadot ecosystem.
 
 ## Supported RPC Methods
 
@@ -24,14 +24,14 @@ The following RPC methods are available:
   - `after(uint offset)` - default offset is 0. Trace offset (or starting) number
   - `count(uint numberOfTraces)` - number of traces to display in a batch
 
-There are a couple default values that you should be aware of:
+There are some default values that you should be aware of:
 
 * The maximum number of trace entries a single request of `trace_filter` is allowed to return is `500`. A request exceeding this limit will return an error
-* Blocks processed by requests are temporarily stored on cache for `300` seconds, after which they are deleted.
+* Blocks processed by requests are temporarily stored in cache for `300` seconds, after which they are deleted.
 
 To change the default values you can add CLI flags when spinning up your tracing node.
 
-## Run a debug node
+## Run a Debugging Node
 
 
 To use the supported RPC methods, you need to run a node in debug mode, which is slightly different than running a full node. Additional flags will also need to be used to tell the node which of the non-standard features to support.
@@ -53,7 +53,7 @@ For example, launch node with debug RPC enabled on Shibuya testnet.
 astar-collator --ethapi=debug --chain=shibuya
 ```
 
-### Using debug/tracing API
+### Using the Debug/Tracing API
 
 Once you have a running tracing node, you can open your terminal to run curl commands and start to call any of the available JSON RPC methods.
 

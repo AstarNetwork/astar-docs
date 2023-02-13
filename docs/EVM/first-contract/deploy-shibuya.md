@@ -4,26 +4,26 @@ sidebar_position: 5
 
 # Deploy Contract on Shibuya and Shiden
 
-Your journey is almost finished. At last, you will deploy your smart contract on Shibuya and Shiden respectively.
+Your journey is almost finished. At last, you will deploy a smart contract on Shibuya and Shiden respectively.
 
-## Get SBY token from Faucet
+## Obtain SBY token from the Faucet
 
-To deploy your contract on Shibuya, you need to get SBY token from Faucet first. The following page explains well how to get SBY tokens from the faucet. Please follow the instructions on [the faucet page](../../quickstart/faucet.md).
+To deploy a contract on Shibuya, you will need to obtain some SBY tokens from the Faucet, which is explained on the [the faucet page](../../quickstart/faucet.md).
 
-If succeeded, you can see some SBY tokens available on Metamask. Please do not forget to change the network to Shibuya on Metamask.
+Once successful, you will see some SBY tokens available within MetaMask, if not, double-check to ensure Shibuya is selected as your current network.
 
 ![9](img/9.png)
 
 ## Deploy Contract on Shibuya
 
-Now it's time to deploy your contract on Shibuya! But it's exactly the same as the local network deployment. Go to Remix, compile your code and deploy your contract. Please make sure that you can see the Custom (81) network under the environment field when you deploy.
+Now it's time to deploy a smart contract on Shibuya, and we'll be following the exact same process as for a local network deployment. Open Remix, compile your code, and deploy your contract. Do ensure that you see the Custom (81) network under the environment field when you deploy.
 
-After a few seconds, you can see that your contract has successfully been deployed on Shibuya 🎉You can also add deployed ERC20 token to Metamask.
+After a few seconds, you will see that the contract has been successfully deployed on Shibuya 🎉 and you will also be able to add the newly deployed ERC20 token to MetaMask.
 
 ## Deploy Contract on Shiden
 
-The last step is to deploy your contract on Shiden. But it is completely the same as the local and Shibuya network deployment. Please note that there is no faucet for Shiden because SDN, a native token of Shiden, has its economic value. The easiest way to get SDN is to buy it on crypto exchanges.
+The last step will be to deploy a smart contract on Shiden, again using the same process as the local and Shibuya network deployments. Do note, though, that there is no faucet for Shiden due to SDN token having real economic value, so the easiest way to obtain SDN tokens is to purchase them from crypto exchanges.
 
 ## Next Step
 
-Now you are the Dapps Developer on Astar/Shiden network 😎. To enjoy your journey as the dApps developer on Astar/Shiden, we recommend you to look over our official document. Also, please join our Discord to discuss the tech topic with other developers.
+Congratulations! You are now a dApp developer on Astar/Shiden network 😎 To better make use of and expand on your new skills as a smart contract developer, we recommend you dive further into our official documentation and builders guides, and join our Discord to share ideas with other developers or get technical support.

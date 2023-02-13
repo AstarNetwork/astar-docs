@@ -4,20 +4,20 @@ sidebar_position: 1
 
 # Astar/Shiden Network Family
 
-Before starting the development, it's important to understand Astar/Shiden Network family. You should change the network based on what you want to do. Currently, we have 3 networks available, Shiden, Shibuya, and Local network. All networks support own standard Substrate RPC and EVM RPC.
+Before commencing development, it's important to understand the Astar/Shiden Network family, and choose an appropriate network based on what you would like to do. Currently, there are three networks available, Shiden, Shibuya, and the Local network which runs exclusively within your development environment. All networks support standard Substrate and EVM RPCs.
 
 ## Astar and Shiden
 
-Astar is the network that aims to be the parachain of Polkadot. Shiden is the sister network of Astar which is the parachain of Kusama. Basically, Astar and Shiden share the same code base. The biggest difference is the economic impact. As there is a huge difference in economic value between KSM and DOT, Astar and Shiden will have the same relationship. Astar has won Polkadot parachain slot on December 17, 2021 and is already available. Please note that Shiden has its real economic value. So you need to pay in SDN, the native token of Shiden, when you execute transactions. You can buy SDN on crypto exchanges.
+Astar has been a parachain on Polkadot network since winning a slot on December 17th, 2021, and Shiden its sister parachain network, on Kusama. Essentially, Astar and Shiden share the same code base, with the largest difference between them being economic impact, due to the sigificant difference in value between KSM and DOT, for which Astar and Shiden share the same relationship. Do note that Shiden has real economic value, so users need to pay for network resources in SDN, the network native token, when they execute transactions. ASTR and SDN tokens are available on cryptocurrency exchanges.
 
 ## Shibuya
 
-Shibuya is the test network of Shiden and is connected to our own Relaychain. So Shibuya behaves almost the same as Shiden. Any new features are tested on Shibuya first and then deployed on Shiden. SBY, the native token of Shibuya, has no economic value and is available through our [faucet](../../quickstart/faucet.md). So we recommend testing your smart contract on Shibuya before deploying it on Shiden to check whether your smart contract works well or not.
+Shibuya is the test network of Shiden, and is connected to our own Relay Chain, so it behaves in a similar way to Shiden. New features are deployed and tested on Shibuya first, and then deployed on Shiden. SBY, the native token of Shibuya, has no economic value and is available through our [faucet](../../quickstart/faucet.md). We recommend testing your smart contract on Shibuya first before deploying it on Shiden, to see whether it behaves as expected. 
 
 ## Local Network
 
-We, of course, offer a local network to allow you to check your smart contract repeatedly in the local environment. We will let you know how to run the local standalone development network in the following section.
+Astar also offers a local network to allow smart contracts to be deployed and tested repeatedly in the local environment. We will explain how to run a local standalone development network in the following section.
 
 :::info
-If you want to know the network details, please check out [this page](../../quickstart/endpoints.md).
+If you would like to know the connection details for each network, they can be found [here](../../quickstart/endpoints.md).
 :::

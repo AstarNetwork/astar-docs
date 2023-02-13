@@ -14,7 +14,7 @@ To get started, navigate to [Astar Safe].
 The current guide will focus on creating a MultiSig on Astar. Soon, we will add more networks to the list.
 :::
 
-### Connect Metamask
+### Connect MetaMask
 
 To create a wallet, ypu need to connect your wallet:
 
@@ -28,7 +28,7 @@ If you're not already signed into MetaMask, you will be prompted to sign in or d
 
 1. Select an account and connect to the Safe. You'll want to select at least 2 of the 3 owner accounts and then click Next. You may need to add additional accounts to your **MetaMask Address Book** For this example, two of the accounts have all been selected.
 2. Connect to the selected accounts by clicking Connect.
-3. If you are not connected to Astar Network, and you don't have the network added to your MetaMask, add Astar Network as a custom network by clicking Approve.
+3. If you are not connected to Astar Network, and you don't have the network added to your MetaMask, add it as a custom network by clicking Approve.
 4. Switch the network to Astar Network by clicking Switch Network.
 
 ![3](img/3.png)
@@ -39,22 +39,22 @@ Your wallet is now connected and connected to the correct network. Let's continu
 
 ## Create New Safe
 
-To create a new Safe on Astar, click **Continue**. You will be taken to a wizard that will walk you through creating your new Safe. By going through these steps and creating your Safe, you are consenting to the terms of use and the privacy policy.
+To create a new Safe on Astar, click **Continue**. You will be taken to a wizard that will walk you through the process of creating your new Safe. By following these steps and creating your Safe, you are consenting to the terms of use and the privacy policy.
 
 Let's begin by giving your Safe a name:
 
-1. Enter the name of your new Safe, you can use `my-astar-safe`.
+1. Enter the name of your new Safe, for example `my-astar-safe`.
 2. Click **Continue**
 
 ![5](img/5.png)
 
-Next up is the owners and confirmations section of the wizard. In this section, you will add the owners of the Safe and specify the threshold. The threshold determines how many of the owners are required to confirm a transaction before the transaction gets executed.
+Next up is the owners, and confirmations section of the wizard. In this section, you will add the owners of the Safe and specify the signing threshold. The threshold determines how many of the owners are required to confirm a transaction before the transaction gets executed.
 
-There are many different setups that can be used when creating a Safe. There can be 1 or more owners of the Safe as well as varying threshold levels. Please note that it is not advised to create a Safe with just 1 owner as it creates the possibility of a single point of failure.
+There are a few options that can set when creating a Safe, such as number of owners, and varying signing threshold levels. Do note that it is not advised to create a Safe with a single owner, as it will be a single point of failure.
 
-For this guide, you will create a MultiSig setup that has 2 owners and requires a threshold of 2, so at least 2 out of the 3 owners keys are required to execute transactions through the Safe.
+In this guide, you will create a MultiSig setup that has three owners, and requires a threshold of 2, so at least 2 out of the 3 owners keys are required to execute transactions through the Safe.
 
-Your account will automatically be prefilled in as the first owner, however, this can be changed if you would like to use different accounts. For this example, Owner 1 account has been prefilled. In addition to Owner 1, you can also add `Owner 2` and `Owner 3` as owners:
+Your account information, as Owner 1, will be completed automatically, however, this can be modified if you would like to use a different account. In this example, the Owner 1 account has been prefilled. In addition to Owner 1, you can also add `Owner 2` and `Owner 3` as owners:
 
 1. Click **Add another owner**
 2. Enter **Owner 2** as the second owner, along with his address: `0x612c7623732d756FBb7a2eAb904Cd8989116C41F`
@@ -64,56 +64,56 @@ Your account will automatically be prefilled in as the first owner, however, thi
 
 ![6](img/6.png)
 
-Finally, you can review all of the build Safe and owner details and if everything looks ok:
+Finally, review and confirm the Safe and owner details before clicking **Continue** then:
 
 1. Click **Create** to create your new Safe. The creation of the Safe will cost approximately less than .001 ASTR tokens on Astar Network. MetaMask will pop up and prompt you to confirm the transaction.
 2. Click **Confirm** to send the transaction and create the Safe
 ![7](img/7.png)
 
-It will take a moment to process the transaction and create the Safe, but once it has been created you should see a message saying "**Your Safe was created successfully**". From there, you can click **Get Started** to load your Safe and start interacting with it.
+It will take a moment to process the transaction and create the Safe, and once it done you should see a message saying "**Your Safe was created successfully**". From there, click **Get Started** to load your Safe and start interacting with it.
 
 ![8](img/8.png)
 ![9](img/9.png)
 
 ## Configure Safe
 
-You can always manage your Safe and change some of the parameters set. To do you can click on the **Settings** option on the left-hand side menu.
+You can manage your Safe at any time, and change the parameters. To do so, click on the **Settings** option on the left-hand side menu.
 
 ![10](img/10.png)
 
-In there you have the following options:
+In there you should see the following options:
 
 - **Safe Details** — allows you to change the Safe name. This is a local action that requires no on-chain interaction.
 - **Owners** — allows you to initiate an on-chain proposal to add/remove owners to the Safe.
 - **Policies** — allows you to initiate an on-chain proposal to change the MultiSig threshold to execute the proposal as a transaction
 - **Advanced** — allows you to check other parameters from the Safe, such as the nonce, modules, and transaction guard.
 
-## Receive and Send Native Assets
+## Send and Receive Native Assets
 
-### Receive native Asset
+### Receive native Assets
 
-You can now start interacting with your Safe. You can send funds to the Safe from any account with **ASTR** tokens. For this example, we use Owner 1 account. Hover over ASTR in the list of assets to reveal the **Send** and **Receive** buttons. Then click **Receive**.
+You can now start interacting with your Safe, and can send funds to it from any account with **ASTR** tokens. In this example, we will use the Owner 1 account. Hover over ASTR in the list of assets to reveal the **Send** and **Receive** buttons. Then click **Receive**.
 
 ![11](img/11.png)
 ![12](img/12.png)
 
-Next, open up your MetaMask to initiate a transaction. Send your ASTR tokens to the MultiSig wallet. After the transaction is sent your balance for ASTR tokens will be updated on the Safe.
+Next, open up MetaMask, and send some ASTR tokens to the MultiSig wallet. Once the transaction is complete, the balance of ASTR tokens will be updated within the Safe.
 
-### Sent Native Assets
+### Send Native Assets
 
-Now that you have funds in the Safe, you can send funds from the Safe to another account. For this example, you can send **1 ASTR** token to the `Owner 2` address. Hover over **ASTR** in the list of assets, and this time click on **Send**. Fill in all the information and click **Review**. Double check all the information and click on **Submit**.
+Now that there are some funds in the Safe, they can sent to another account. In this example, we will send **1 ASTR** token to the `Owner 2` address. Hover over **ASTR** in the list of assets, and this time click on **Send**. Fill in all the information and click **Review**. Double check all the information and click on **Submit**.
 
 :::caution
-MetaMask will pop-up and you'll notice that instead of sending a transaction, you're sending a message. Click **Sign** to sign the message.
+MetaMask will pop-up where you may notice that instead of signing a transaction, it's requesting that you sign a message. Click **Sign** to sign the message.
 :::
 
-If you go back to the Safe, under the **Transactions** tab, you should be able to see that there has been a transaction proposal initiated to send 1 ASTR token to Ower 2 address. However, you should also see that only 1 out of 2 confirmations have been received and that 1 more owner is required to confirm the transaction before it gets executed.
+Now, return to the Safe, where under the **Transactions** tab, you should see that there has been a transaction proposal initiated to send 1 ASTR token to the Owner 2 address. However, you should also see that only 1 out of 2 confirmations have been received, and that one more owner is required to confirm the transaction, before it gets executed.
 
-### Transaction Confirmation
+### Confirm MultiSig Safe Transaction
 
 The process of confirming (or rejecting) a transaction proposal is similar for all the use cases of a MultiSig Safe. One of the owners initiates the proposal to execute an action. The other owners can approve or reject the proposal. Once the signature threshold is reached, any owner can execute the transaction proposal if approved, or discard the transaction proposal if rejected.
 
-In this example, if 2 of the 3 owners decided to reject the proposal, then the assets would remain in the Safe. However, in this case, you can confirm the transaction from either `Owner 2` or `Owner 3` account.
+In this example, if two of the three owners decide to reject the proposal, then the assets would remain in the Safe. However, in this case, you can confirm the transaction from either `Owner 2` or `Owner 3` account.
 
 Switch accounts in MetaMask to `Owner 2` account (or Owner 3). Then go back to the Safe connected as Owner 2. The **Confirm** button should now be enabled. As Owner 2, click **Confirm** to meet the threshold and send the transaction.
 
@@ -128,25 +128,25 @@ The transaction will be removed from the **QUEUE** tab and a record of the trans
 
 ![17](img/17.png)
 
-## Receive and Send Other Assets
+## Send and Receive Other Assets
 
 ### Receive Other Assets
 
-Next up is to receive and send other assets to and from the Safe. In this part we will send DOT from one account to the Astar Safe. Open up MetaMask:
+Next, we will send and receive some other assets from the Safe. In this example we will send some DOT to the Astar Safe. Open up MetaMask:
 
 1. Switch to the Assets tab and select DOT from the list.
 2. Click Send.
-3. Paste in the Safe's address
-4. Enter amount of DOTs to send. Click Next
+3. Paste in the Safe's address.
+4. Enter amount of DOTs to send. Click Next.
 5. Review the transaction details and then click Confirm to send the transaction.
 
 ![19](img/19.png)
 
-If you navigate back to the Safe, in the list of **Assets** you should now see **DOT** and a balance of 1 DOT. It could take a few minutes for **DOT** to appear, but there is nothing for you to do to add the asset, it will appear on it's own.
+If you navigate back to the Safe, in the list of **Assets** you should now see **DOT**, and a balance of 1 DOT. It could take a few minutes for the **DOT** to appear, but will do so on it's own.
 
 ### Send Other Assets
 
-Now that you have loaded your Safe with DOTs, you can send some from the Safe to another account. You can use the same workflow as [sending and confirming native assets](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/wallets/astar-safe-gnosis-safe#send-tokens).
+Now that you have loaded your Safe with DOT, you can send some from the Safe to another account. You can use the same workflow as [sending and confirming native assets](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/integration/wallets/astar-safe-gnosis-safe#send-tokens).
 
 ## Smart contract interaction
 

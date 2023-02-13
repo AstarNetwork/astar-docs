@@ -1,6 +1,6 @@
 # Substrate ECDSA
 
-Substrate ECDSA precompile provides an interface to verify a message signed with ECDSA algorithm.
+The Substrate ECDSA precompile provides an interface to verify a message signed with ECDSA algorithm.
 
 > Most cryptocurrencies, including Bitcoin and Ethereum, currently use ECDSA signatures on the secp256k1 curve. This curve is considered much more secure than NIST curves, which have possible backdoors from the NSA. The Curve25519 is considered possibly even more secure than this one and allows for easier implementation of Schnorr signatures. A recent patent expiration on it has made it the preferred choice for use in Polkadot.
 
