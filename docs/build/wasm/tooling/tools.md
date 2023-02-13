@@ -2,17 +2,7 @@
 sidebar_position: 3
 ---
 
-# Tools (TODO)
-
-## Swanky Suite
-[Swanky Suite](../swanky.md) aims to be an "all-in-one" tool for Wasm smart contract developers. It is based on existing tools like` cargo contract CLI` and `polkadot.js` but extends their functionality with many additional features such as smart contract templates, and an instant finality (Swanky) node,  which reduces the contract development lifecycle. [Swanky Suite](../swanky.md) is a tool that provides Web3 developers with a development experience that's more in-line with what they're familiar with, compared to popular tooling for EVM.
-
-## OpenBrush
-
-[OpenBrush] is a library for smart contract development on ink! maintained by the [BrushFam] team, and is inspired by OpenZeppellin for Solidity.
-
-Openbrush provides standard contracts based on [PSPs], as well as other useful contracts and Rust macros that help developers build ink! smart contracts.
-
+# Other
 
 ## Sol2Ink
 [Sol2ink] is another tool maintained by the [BrushFam] team, used for easy migration of smart contracts from Solidity to ink! and Rust, that helps developers migrate smart contracts from EVM platforms, to Polkadot.

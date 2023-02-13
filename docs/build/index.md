@@ -1,37 +1,33 @@
-# Quick Start
+# Build on Astar
+![banner](assets/gradient1.jpg)
 
-Astar has a collection of networks and tools providing:
+## Why Build on Astar
+Astar is the most flexible and interoperable decentralized application (dApp) platform in the Polkadot ecosystem, supporting both Wasm and EVM smart contracts, and hybrid Cross-VM dApps able to call into one another. Astar network provides native access to the Polkadot ecosystem through its parachain slot, and asset bridges and general message passing protocols integrated with the ecosystem  provide routes to other major blockchains, including [Ethereum](https://cbridge.celer.network/#/transfer), [BSC](https://cbridge.celer.network/#/transfer), Cosmos, Polygon, and more. Astar network's innovative dApp staking program allows developers to earn a basic income while they build out their products and communities; and Foundation, in coordination with the community, may also provide direct funding to projects through a variety of ecosystem incubation initiatives, such as #MVP2Earn.
 
-- Native support for Wasm and EVM-compatable smart contracts
-- Advanced cross-chain features through Polkadot's XCMP
-- [**Swanky Suite**](wasm/swanky.md) - the developer tool for writing Wasm smart contracts in ink! or ask!
+## Wasm Smart Contracts
+Wasm smart contracts empower developers, and bridge the gap between Web2 and Web3 development, allowing them to build complex dApps with tools and languages they already know. Wasm provides direct access to the runtime in a number of ways, so developers can build dApps that aren't possible on the Ethereum Virtual Machine. Any programming language that compiles to Wasm is supported, making Astar network a secure and versatile environment for deployment of highly-optimized smart contracts. See the [Wasm chapter](/docs/build/wasm) for more information.
 
-## Our Networks
+## EVM Smart contracts
+Solidity developers will feel right at home building on Astar EVM, as it provides an equivalent environment, but simultaneously allows them to fragment smart contracts and offload logic selectively to the Wasm Virtual Machine for applications that may demand higher performance, security, or lower operating costs. See the [EVM chapter.](/docs/build/evm) for more information.
 
-The Astar ecosystem has two mainnets and a testnet:
+## DApp Staking (#Build2Earn)
+On Astar Network, users are able to support projects by staking on them, which adds to the passive income developers earn. DApp staking encourages projects to stand out and provide value directly to the end-users. See the [dApp staking](/docs/dapp-staking/#dapp-staking--web3) section for more information.
 
-- **Astar** - a parachain connected to the Polkadot Relay Chain
-- **Shiden** - a parachain connected to the Kusama Relay Chain
-- **Shibuya** - a standalone testnet
+## XVM - The Cross Virtual Machine
+The Cross Virtual Machine allows developers to call smart contracts from one VM to another (e.g. Wasm to EVM), and `XVM`, the innovative protocol that makes creation of these hybrid cross-VM dApps possible, is *only* available on Astar network.
 
-You can connect and interact with our networks via HTTPS or Websocket endpoints on the network nodes. Check out [Network Endpoints](environment/endpoints.md) to get your own endpoint and API key from one of the supported providers.
+## Secured by Polkadot
+The Polkadot Relay Chain provides the best security for Layer 1 blockchains in the industry, and facilitates creation of true multi-chain smart contracts able to communicate trustlessly with one another across chains.
 
-## Faucet
+## Cross Chain Connectivity
+Astar network is connected to the Relay Chain and a variety of other parachains in the Polkadot ecosystem through the message transport system, XCMP, using vertical channels (VMP + DMP) to the Relay Chain, and parachain-parachain communication operating horizontally, often referred to as HRMP channels.
 
-The faucet is accessable via the [Astar portal](https://portal.astar.network), instructions can be found [here](./environment/faucet.md). <br />
-Developers can also use chaindrop faucet [here](https://chaindrop.org), instructions can be found [here](environment/faucet.md).
+## Powered by Substrate
+Astar is built with Substrate, a framework for building custom blockchain solutions more intuitively using the Rust programming language. Substrate's modular architecture makes it easy for developers to utilize only the components they need to support their networks and decentralized applications such as consensus, smart contracts, and storage, and reduces the need to focus on low-level implementation details. 
 
-## Astar account scheme
+Some benefits of using Subtrate to build blockchain networks include: forkless upgrades, cross-language compatibility using WebAssemby, deterministic finality that is light client-friendly, and seamless integration with other blockchains.
 
-Astar is the only smart contract parachain in the Polkadot ecosystem that supports multi-virtual machines (Wasm and EVM). Managing multiple types of accounts is complex, and exciting. Read more about [Astar's account structure](https://docs.astar.network/docs/user-guides/create-wallet/#astar-accounts) in our documentation.
-
----
-
-## Ready?
-
-If this is your first time writing a Wasm smart contract, you need to set up an environment. We encourage you to begin with [Swanky Suite](wasm/swanky.md), the tool for Wasm smart contract developers.
-
-Now that you have an environment to build swanky dApps, check out these pages to learn how to connect and interact with our networks:
+Polkadot itself is reliant on the Substrate framework, and use of which is similarly fundamental for blockchains such as Astar network that wish to easily interface with the Polkadot network directly, without the need for intermediaries.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

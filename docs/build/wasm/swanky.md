@@ -275,33 +275,27 @@ COMMANDS
 
 Swanky Node is a Substrate based blockchain configured to enable `pallet-contracts` (a smart contract module), and other features that assist local development of Wasm smart contracts.
 
-## Features
-
-- [pallet-contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts) (polkadot-0.9.27) and its unstable-feature are enabled by default.
-- `grandpa` & `aura` consensus have been removed, and `instant-seal` & `manual-seal` are used instead.
-  Blocks are authored (1) as soon as transactions enter the pool (2) when `engine_createBlock` RPC is called.
-  Blocks are finalized when `engine_finalizeBlock` RPC is called.
-- [pallet-dapps-staking](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.27/frame/dapps-staking) and the Chain Extension to interact with it.
-- [pallet-assets](https://github.com/paritytech/substrate/tree/master/frame/assets).
-- [pallet-rmrk](https://github.com/AstarNetwork/rmrk-substrate/tree/polkadot-v0.9.27) (core, equip, market) and Chain Extensions for pallet-rmrk-core.
+### Features
+- [pallet-contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts) (polkadot-0.9.33) and its unstable-feature are enabled by default.
+- `grandpa` & `aura` consensus were removed. Instead, `instant-seal` & `manual-seal` are used.
+  Blocks are authored & finalized (1) as soon as a transaction get in the pool (2) when `engine_createBlock` `engine_finalizeBlock` RPC called respectively.
+- [pallet-dapps-staking](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.33/frame/dapps-staking) and ChainExtension to interact with it.
+- [pallet-assets](https://github.com/paritytech/substrate/tree/polkadot-v0.9.33/frame/assets).
+- Pallet-assets chain-extension
+- dApps-staking chain-extension
 
 Swanky Node is optimized for local development, while removing unnecessary components such as P2P. Additional features and pallets, such as to interact between (Contract <-> Runtime), will be added in the future.
 
-## Compatible ink! Versions
+### Compatible ink! version
+ink! `v4.0.0-beta` or lower is supported by pallet-contract polkadot-0.9.33 branch.
 
-Ink! version `3.3.1` or lower is supported by [`pallet-contracts`] on polkadot-0.9.27 branch.
-
-## Installation
-
-### Download Binary
-
+### Installation
+#### Download Binary
 The easiest method of installation is by downloading and executing a precompiled binary from the [Release Page](https://github.com/AstarNetwork/swanky-node/releases)
 
-### Build Locally
-
+#### Build Locally
 If you would like to build the source locally, you should first complete the [basic Rust setup instructions](https://github.com/AstarNetwork/swanky-node/blob/main/docs/rust-setup.md).
 Once Rust is installed and configured, you will be able to build the node with:
-
 ```bash
 cargo build --release
 ```
@@ -315,16 +309,12 @@ subcommands:
 ./target/release/swanky-node -h
 ```
 
-## Usage
-
+### Usage
 This command will start the single-node development chain with a persistent state.
-
 ```bash
 ./target/release/swanky-node
 ```
-
 If you would prefer to run the node in non-persistent mode, use tmp option.
-
 ```
 ./target/release/swanky-node --tmp
 # or
@@ -332,7 +322,6 @@ If you would prefer to run the node in non-persistent mode, use tmp option.
 ```
 
 Purge the development chain's state.
-
 ```bash
 ./target/release/swanky-node purge-chain
 ```
@@ -354,9 +343,11 @@ Purge the development chain's state.
 > - Eve//stash
 > - Ferdie//stash
 
-### Show Errors Only and Contract Debug Output
-
+### Show only Errors and Contract Debug Output
 To print errors and contract debug output to the console log, supply `-lerror,runtime::contracts=debug` when starting the node.
+```
+-lerror,runtime::contracts=debug
+```
 
 Important: Debug output is only printed for RPC calls or off-chain tests ‒ not for transactions.
 
@@ -397,8 +388,7 @@ by appending your own. A few useful commands are shown below:
 ./scripts/docker_run.sh cargo check
 ```
 
-## Consensus (Manual Seal & Instant Seal)
-
+### Consensus (Manual Seal & Instant Seal)
 Unlike other blockchains, Swanky Node adopts block authoring and finality gadgets referred to as Manual Seal and Instant Seal, consensus mechanisms suitable for contract development and testing.
 
 Manual seal - Blocks are authored whenever RPC is called.
@@ -406,8 +396,7 @@ Instant seal - Blocks are authored as soon as transactions enter the pool, most 
 
 Swanky Node enables both Manual seal and Instant seal.
 
-### Manual Sealing via RPC call
-
+#### Manual Sealing via RPC call
 We can tell the node to author a block by calling the `engine_createBlock` RPC.
 
 ```bash
@@ -420,7 +409,6 @@ $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d
 ```
 
 #### Params
-
 - **Create Empty**
   `create_empty` is a Boolean value indicating whether empty blocks may be created. Setting `create-empty` to true does not mean that an empty block will necessarily be created. Rather, it means that the engine should go ahead creating a block even if no transactions are present. If transactions are present in the queue, they will be included regardless of the value of `create_empty`.
 
@@ -431,7 +419,6 @@ $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d
   `parent_hash` is an optional hash of a block to use as a parent. To set the parent, use the format `"0x0e0626477621754200486f323e3858cd5f28fcbe52c69b2581aecb622e384764"`. To omit the parent, use `null`. When the parent is omitted the block will be built on the current best block. Manually specifying the parent is useful for constructing fork scenarios, and demonstrating chain reorganizations.
 
 #### Finalizing Blocks Manually
-
 In addition to finalizing blocks at the time of creating them, they may also be finalized later by using the RPC call `engine_finalizeBlock`.
 
 ```bash
