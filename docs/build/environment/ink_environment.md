@@ -2,7 +2,10 @@
 sidebar_position: 1
 ---
 
-# Set up your ink! Environment
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# ink! Environment
 ## Overview
 
 This guide is designed for those who are getting started with ink! or Wasm smart contracts in the Astar ecosystem. Before you can get started you need to make sure your environment supports Rust.
@@ -29,26 +32,63 @@ source ~/.cargo/env
 
 This will download a script and start the installation. If you are using Windows, visit the [Rust website](https://www.rust-lang.org/tools/install) and follow the instructions to install Rust. Configure source control to pull the latest stable release and add nightly + Wasm target.
 
-```rust
+```bash
 rustup default stable
 rustup update
 rustup update nightly
+rustup component add rust-src
+rustup component add rust-src --toolchain nightly
 rustup target add wasm32-unknown-unknown --toolchain nightly
 ```
 
-### Ink! CLI[](https://use.ink/getting-started/setup#ink-cli)
+### Ink! [CLI](https://use.ink/getting-started/setup#ink-cli)
 
 The first and most important tool we will be installing is [cargo-contract](https://github.com/paritytech/cargo-contract), a CLI tool for setting up and managing WebAssembly smart contracts written with ink! 
 
 As a prerequisite, you will need to install the [binaryen](https://github.com/WebAssembly/binaryen) package, used to optimize WebAssembly contract bytecode.
 
-```rust
-There are ready-to-install packages for many platforms:
-* Debian/Ubuntu: apt-get install binaryen
-* Homebrew: brew install binaryen
-* Arch Linux: pacman -S binaryen
-* Windows: binary releases at https://github.com/WebAssembly/binaryen/releases
+<Tabs>
+<TabItem value="Debian/Ubuntu" label="Debian/Ubuntu" default>
+
+- Using `apt-get`
+```sh
+apt-get update
+apt-get -y install binaryen
 ```
+
+- Using `apt`
+```sh
+apt update
+apt -y install binaryen
+```
+
+</TabItem>
+
+<TabItem value="Arch Linux" label="ArchLinux" default>
+
+```sh
+pacman -S binaryen
+```
+
+</TabItem>
+
+<TabItem value="MacOS" label="MacOS" default>
+
+```sh
+brew install binaryen
+```
+
+</TabItem>
+
+<TabItem value="Windows" label="Windows" default>
+
+binary releases at https://github.com/WebAssembly/binaryen/releases
+
+</TabItem>
+
+</Tabs>
+
+---
 
 Two other dependencies need to be satisfied to link the ink! contract, for example to warn users about using API's in a way that could lead to security issues.
 
