@@ -328,7 +328,7 @@ Purge the development chain's state.
 ./target/release/swanky-node purge-chain
 ```
 
-The **alice** development account will be the authority and sudo account as declared in the
+> The **alice** development account will be the authority and sudo account as declared in the
 > [genesis state](https://github.com/AstarNetwork/swanky-node/blob/main/node/src/chain_spec.rs#L44).
 > While at the same time, the following accounts will be pre-funded:
 >
