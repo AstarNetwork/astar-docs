@@ -19,6 +19,8 @@ Ink! offers a broad range of features such as:
 - [Chain Extensions](https://github.com/paritytech/ink/tree/master/examples/rand-extension) (interact with Substrate pallets inside a contract)
 - Off-chain Testing - `#[ink(test)]`
 
+Installation procedures are available in [ink! Environment](/docs/build/environment/ink_environment.md) section.
+
 ## Documentation
 - [Ink! Github repo](https://github.com/paritytech/ink)
 - [Ink! Intro repo](https://paritytech.github.io/ink/)
