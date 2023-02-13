@@ -273,7 +273,7 @@ COMMANDS
 
 ## Swanky Node
 
-Swanky node is a Substrate based blockchain configured to enable `pallet-contracts` (a smart contract module) and more features to help WASM smart contract development locally.
+Swanky Node is a Substrate based blockchain configured to enable `pallet-contracts` (a smart contract module), and other features that assist local development of Wasm smart contracts.
 
 ### Features
 - [pallet-contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts) (polkadot-0.9.33) and its unstable-feature are enabled by default.
@@ -286,19 +286,18 @@ Swanky node is a Substrate based blockchain configured to enable `pallet-contrac
 - Pallet-assets chain-extension
 - dApps-staking chain-extension
 
-It is optimized to local development purpose while removing unnecessary components such as P2P.
-More features and pallets to interact with (Contract <-> Runtime) will be added.
+Swanky Node is optimized for local development, while removing unnecessary components such as P2P. Additional features and pallets, such as to interact between (Contract <-> Runtime), will be added in the future.
 
 ### Compatible ink! version
 ink! `v4.0.0-beta` or lower is supported by pallet-contract polkadot-0.9.33 branch.
 
 ### Installation
 #### Download Binary
-The easiest way is to download a binary release from [Release Page](https://github.com/AstarNetwork/swanky-node/releases)
+The easiest method of installation is by downloading and executing a precompiled binary from the [Release Page](https://github.com/AstarNetwork/swanky-node/releases)
 
 #### Build Locally
-First, complete the [basic Rust setup instructions](/docs/build/environment/ink_environment.md#rust-and-cargo).
-After that, you can build node via
+If you would like to build the source locally, you should first complete the [basic Rust setup instructions](https://github.com/AstarNetwork/swanky-node/blob/main/docs/rust-setup.md).
+Once Rust is installed and configured, you will be able to build the node with:
 ```bash
 cargo build --release
 ```
@@ -313,11 +312,11 @@ subcommands:
 ```
 
 ### Usage
-This command will start the single-node development chain with persistent state.
+This command will start the single-node development chain with a persistent state.
 ```bash
 ./target/release/swanky-node
 ```
-If you want to run the node with non-persist mode, use tmp option.
+If you would prefer to run the node in non-persistent mode, use tmp option.
 ```
 ./target/release/swanky-node --tmp
 # or
@@ -329,9 +328,10 @@ Purge the development chain's state.
 ./target/release/swanky-node purge-chain
 ```
 
-> Development **alice** account will be authority and sudo account as declared in the
+The **alice** development account will be the authority and sudo account as declared in the
 > [genesis state](https://github.com/AstarNetwork/swanky-node/blob/main/node/src/chain_spec.rs#L44).
-> At the same time the following accounts will be pre-funded:
+> While at the same time, the following accounts will be pre-funded:
+>
 > - Alice
 > - Bob
 > - Charlie
@@ -346,22 +346,21 @@ Purge the development chain's state.
 > - Ferdie//stash
 
 ### Show only Errors and Contract Debug Output
-To have only errors and contract debug output show up on the console you can supply
+To print errors and contract debug output to the console log, supply `-lerror,runtime::contracts=debug` when starting the node.
 ```
 -lerror,runtime::contracts=debug
 ```
-when starting the node.
 
 Important: Debug output is only printed for RPC calls or off-chain tests ‒ not for transactions.
 
-See ink! [FAQ](https://ink.substrate.io/faq/#how-do-i-print-something-to-the-console-from-the-runtime) for more details: How do I print something to the console from the runtime?.
+See the ink! [FAQ](https://ink.substrate.io/faq/#how-do-i-print-something-to-the-console-from-the-runtime) for more details: How do I print something to the console from the runtime?.
 
 ### Connect with Polkadot-JS Apps Front-end
 
-Once the swanky node is running locally, you can connect it with **Polkadot-JS Apps** front-end
-to interact with your chain. [Click
+Once the Swanky Node is running locally, you will be able to connect to it from the **Polkadot-JS Apps** front-end,
+in order to interact with your chain. [Click
 here](https://polkadot.js.org/apps/#/explorer?rpc=ws://localhost:9944) connecting the Apps to your
-local swanky node.
+local Swanky Node.
 
 ### Run in Docker
 
@@ -375,10 +374,10 @@ mkdir .local # this is mounted by container
 ./scripts/docker_run.sh
 ```
 
-This command will firstly compile your code, and then start a local development network. You can
+This command will compile the code, and then start a local development network. You can
 also replace the default command
 (`cargo build --release && ./target/release/swanky-node --dev --ws-external`)
-by appending your own. A few useful ones are as follow.
+by appending your own. A few useful commands are shown below:
 
 ```bash
 # Run Substrate node without re-compiling
@@ -392,14 +391,14 @@ by appending your own. A few useful ones are as follow.
 ```
 
 ### Consensus (Manual Seal & Instant Seal)
-Unlike other blockchains, Swanky node adopts block authioring and finalized gadget called Manual Seal and Instant Seal, consensus which is suitable for contracts development and testing.
+Unlike other blockchains, Swanky Node adopts block authoring and finality gadgets referred to as Manual Seal and Instant Seal, consensus mechanisms suitable for contract development and testing.
 
-Manual seal - Blocks are authored whenever RPC called.
-Instant seal - Block are authored as soon as transactions get inside the pool, most often one transaction per block.
+Manual seal - Blocks are authored whenever RPC is called.
+Instant seal - Blocks are authored as soon as transactions enter the pool, most often resulting in one transaction per block.
 
-Swanky node enables both Manual seal and Instant seal.
+Swanky Node enables both Manual seal and Instant seal.
 
-#### Manual Seal RPC calls
+#### Manual Sealing via RPC call
 We can tell the node to author a block by calling the `engine_createBlock` RPC.
 
 ```bash
@@ -413,16 +412,16 @@ $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d
 
 #### Params
 - **Create Empty**
-`create_empty` is a Boolean value indicating whether empty blocks may be created. Setting `create-empty` to true does not mean that an empty block will necessarily be created. Rather it means that the engine should go ahead creating a block even if no transaction are present. If transactions are present in the queue, they will be included regardless of `create_empty`'s value.'
+  `create_empty` is a Boolean value indicating whether empty blocks may be created. Setting `create-empty` to true does not mean that an empty block will necessarily be created. Rather, it means that the engine should go ahead creating a block even if no transactions are present. If transactions are present in the queue, they will be included regardless of the value of `create_empty`.
 
 - **Finalize**
-`finalize` is a Boolean indicating whether the block (and its ancestors, recursively) should be finalized after creation.
+  `finalize` is a Boolean value indicating whether the block (and its ancestors, recursively) should be finalized after creation.
 
 - **Parent Hash**
-`parent_hash` is an optional hash of a block to use as a parent. To set the parent, use the format `"0x0e0626477621754200486f323e3858cd5f28fcbe52c69b2581aecb622e384764"`. To omit the parent, use `null`. When the parent is omitted the block is built on the current best block. Manually specifying the parent is useful for constructing fork scenarios and demonstrating chain reorganizations.
+  `parent_hash` is an optional hash of a block to use as a parent. To set the parent, use the format `"0x0e0626477621754200486f323e3858cd5f28fcbe52c69b2581aecb622e384764"`. To omit the parent, use `null`. When the parent is omitted the block will be built on the current best block. Manually specifying the parent is useful for constructing fork scenarios, and demonstrating chain reorganizations.
 
-#### Manually Finalizing Blocks
-In addition to finalizing blocks while creating them, they can be finalized later by using the second provided RPC call, `engine_finalizeBlock`.
+#### Finalizing Blocks Manually
+In addition to finalizing blocks at the time of creating them, they may also be finalized later by using the RPC call `engine_finalizeBlock`.
 
 ```bash
 $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d   '{
