@@ -31,6 +31,11 @@ Please try:
 ```bash
 $ rustup default nightly
 ```
+to switch default Rust toolchain to nightly, or
+```
+$ cargo +nightly contract build
+```
+to use nightly toolchain explicitly.
 
 Then, you get the full package and code for Flipper.
 Let’s dive into the structure.
