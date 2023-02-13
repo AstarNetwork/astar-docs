@@ -14,19 +14,16 @@ Inside the Cargo.toml you will need to specify parameters in the `[package]`, `[
 ```toml
 [package]
 name = "my_contract"
-version = "3.0.0"
+version = "4.0.0-rc"
 authors = ["Your Name <name@email.com>"]
 edition = "2021"
 
 [dependencies]
-ink_primitives = { tag = "v3.0.0", git = "<https://github.com/paritytech/ink>", default-features = false }
-ink_metadata = { tag = "v3.0.0", git = "<https://github.com/paritytech/ink>", default-features = false, features = ["derive"], optional = true }
-ink_env = { tag = "v3.0.0", git = "<https://github.com/paritytech/ink>", default-features = false }
-ink_storage = { tag = "v3.0.0", git = "<https://github.com/paritytech/ink>", default-features = false }
-ink_lang = { tag = "v3.0.0", git = "<https://github.com/paritytech/ink>", default-features = false }
+ink = { version = "~4.0.0-rc", default-features = false}
+ink_metadata = { version = "~4.0.0-rc", features = ["derive"], optional = true }
 
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
-scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
+scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
 
 [lib]
 name = "my_contract"
@@ -36,13 +33,11 @@ crate-type = ["cdylib"]
 [features]
 default = ["std"]
 std = [
-    "ink_primitives/std",
+    "ink/std",
+    "ink_metadata",
     "ink_metadata/std",
-    "ink_env/std",
-    "ink_storage/std",
-    "ink_lang/std",
     "scale/std",
-    "scale-info/std",
+    "scale-info/std"
 ]
 ink-as-dependency = []
 ```
