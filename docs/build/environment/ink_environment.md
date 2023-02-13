@@ -88,6 +88,7 @@ binary releases at https://github.com/WebAssembly/binaryen/releases
 
 </Tabs>
 
+---
 
 Two other dependencies need to be satisfied to link the ink! contract, for example to warn users about using API's in a way that could lead to security issues.
 
