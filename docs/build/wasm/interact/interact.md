@@ -4,7 +4,7 @@
 
 ## Astar.js
 
-Astar.js is a JavaScript library for interacting with the Astar blockchain. It is a collection of modules that allow you to interact with the Astar blockchain through a local or remote node. It can be used in the browser or in Node.js.
+Astar.js https://github.com/AstarNetwork/astar.js/wiki is a JavaScript library for interacting with the Astar blockchain. It is a collection of modules that allow you to interact with the Astar blockchain through a local or remote node. It can be used in the browser or in Node.js.
 
 ### Installation
 
