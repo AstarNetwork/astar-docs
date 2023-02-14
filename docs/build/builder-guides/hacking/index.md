@@ -4,10 +4,10 @@ Welcome to Web3!
 ## What is this Guide all about?
 This guide will navigate you through the Astar Documentation to jump start your development journey. We are aware of the complexity of the subject and want to encourage and support you on your Web3 journey.
 This Astar Hacker Guide can be used for:
-* General Dev onboarding on Astar
-* Preparing participants for Astar centric hackathons
-* Onboarding new team members for teams building on Astar
-* Onboarding new Astar team members
+* General Dev onboarding on Astar.
+* Preparing participants for Astar centric hackathons.
+* Onboarding new team members for teams building on Astar.
+* Onboarding new Astar team members.
 
 
 ## Your Developer Background
