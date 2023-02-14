@@ -5,13 +5,13 @@ sidebar_position: 1
 # General
 ![banner](../../assets/gradient5.jpg)
 
-Please read the linked chapter and try to answer questions. If you do not know the answer, go to Discord Developer Support and ask in general channel.
+Please read the linked chapter and try to answer questions. If you cant find the answer, go to the Discord Developer Support and ask in general channel.
 
 ## Introduction
 ### Polkadot relay [chapter](/docs/build/introduction/polkadot_relay)
-* What would be the most valuable features that a relay chain provides to all connected parachains?
+* What would be the most valuable features that a Relay Chain provides to all connected parachains?
 * Is Kusama a parachain?
-* Is Astar a parachain on Polkadot relay chain?
+* Is Astar a parachain on the Polkadot Relay Chain?
 * Does Astar use Substrate pallets as building blocks?
 * What is the pallet/module name which enables execution of Wasm smart contracts in a Substrate node?
 
@@ -28,8 +28,8 @@ Connect to Astar Network using Polkadot-JS UI,
 * Please note that you can use this account on Polkadot, Kusama and all parachains, but the address format will be different depending on the network prefix used. Connect to Polkadot and then to Astar Network on Polkadot-JS UI to observe the addresses change for same account.
 
 ### Astar Network Family [chapter](/docs/build/introduction/astar_family)
-* Is Shiden a parachain on Kusama relay chain?
-* Is Shiden a parachain on Astar relay chain?
+* Is Shiden a parachain on Kusama Relay Chain?
+* Is Shiden a parachain on Astar Relay Chain?
 * Is Kusama a parachain on Polkadot?
 * Using the native account you created in Accounts chapters, go to [Astar portal](https://portal.astar.network/), connect to Shibuya testnet and claim faucet tokens. You will later need these tokens to pay the gas fee and deploy contracts on Shibuya.
 * Where can you sell SBY tokens? What is the value od SBY (Shibuya network token)?
