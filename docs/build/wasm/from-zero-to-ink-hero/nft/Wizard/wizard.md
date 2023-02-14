@@ -219,7 +219,7 @@ The file is located in this folder:
 ls target/ink/shiden34/
 ```
 
-To deploy your contract using Polkadot.js you can follow guide at `/docs/build/wasm/tooling/polkadotjs`. Other easy way to deploy your contract is by using the [contracts-ui](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network).
+To deploy your contract using the Polkadot.js apps portal, follow the previous guide, or use the [contracts-ui](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network).
 
 You can start interacting with your contract. You will notice that one token is already minted. This is due to the `mint()` call in the contract's constructor `new()`.
 * Try minting another token by calling `mint()`.

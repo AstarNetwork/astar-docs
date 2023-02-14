@@ -8,7 +8,7 @@ for **PRODUCTION** environment. Please consider [ink!](dsls#ink) if you are buil
 
 :::
 
-This guide will support you to set up your local environment and deploy a simple Ask! contract on our testnet.
+This guide will help you set up your local environment and deploy a simple Ask! contract on our testnet, Shibuya.
 
 ---
 
@@ -18,7 +18,9 @@ We will setup the local environment for developing ask! smart contract and deplo
 
 ## What is Ask!?
 
-Ask! is a framework for AssemblyScript developers to write WASM smart contracts for `pallet-contracts`. Its syntax is similar to TypeScript. [Current project](https://polkadot.polkassembly.io/post/949) is funded by Polkadot treasury. Please keep in mind that Ask! is still under development and can be quite buggy and restrictive.
+Ask! is a framework for AssemblyScript developers to write Wasm smart contracts for `pallet-contracts`, otherwise known as the Wasm Virtual Machine. Its syntax is similar to TypeScript. The [current project](https://polkadot.polkassembly.io/post/949) is funded by Polkadot treasury, and still under active development. 
+
+---
 
 ## Prerequisites
 
@@ -216,14 +218,13 @@ env().emitEvent(event);
 
 ## Build
 
-We run the command below which build the template contract.
-
+Run the command below, which will build the template contract.
 ```bash
 # Install dependencies and Build the template contract
 yarn && yarn build flipper.ts
 ```
 
-The above command will generate WASM code and the metadata file of the contract in `metadata.json` and `flipper.optimized.wasm` respectively.
+The above command will generate the Wasm code and metadata file for the contract in `flipper.optimized.wasm`, and `metadata.json`, respectively.
 
 ```
 ask-template
@@ -260,4 +261,4 @@ If you have any questions, please feel free to ask us in our [official discord c
 
 ## Reference
 
-- [Official document for Ask!](https://github.com/ask-lang/ask)
+- [Official documentation for ask!](https://github.com/ask-lang/ask)

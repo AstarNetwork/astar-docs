@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Pair Storage and Getters
 
-If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/start) and open it in your IDE.
+If you are  tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/start) and open it in your IDE.
 
-## 1. Logics crate
+## 1. Logics Crate
 
-As described in [File & Folder structure](../Structure/file-structure.md), Pair business logic will be in the uniswapv2 logics crate.
+As described in the [File & Folder structure](../Structure/file-structure.md) section, the Pair business logic will be in the uniswap-v2 logics crate.
 Let's create (empty) files and folders so your project looks like this:
 
 ```bash
@@ -78,7 +78,7 @@ std = [
 ```
 *./uniswap-v2/logics/Cargo.toml*
 
-The `lib.rs` file should contain conditional compilation attribute. It should also export `impls` and `traits`
+The `lib.rs` file should contain a conditional compilation attribute. It should also export `impls` and `traits`
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
 
@@ -89,7 +89,7 @@ pub mod traits;
 
 ## 2. Pair Storage
 
-The uniswap v2 Pair contract has those [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L18) in Solidity that we should implemented:
+The Uniswap V2 Pair contract has [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L18) in Solidity that we should implement as shown below:
 
 ```solidity
 address public factory;
@@ -105,7 +105,7 @@ uint public price1CumulativeLast;
 uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
 ```
 
-ink! uses most substrate primitives types. This is the table of conversion between Solidity and ink! types:
+ink! uses most Substrate primitive types. Here is a conversion table between Solidity and ink! types:
 
 | Solidity                                | ink!                                                                                      |
 |-----------------------------------------|-------------------------------------------------------------------------------------------|
@@ -131,8 +131,8 @@ pub struct Data {
 }
 ```
 
-Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with specified storage key (storage key is a required input argument of the macro).
-To generate a unique key Openbrush provides [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is base on the name of the struct and its file path. Let's add this to our struct and import required fields.
+Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with the specified storage key (storage key is a required input argument of the macro).
+To generate a unique key Openbrush provides the [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is based on the name of the struct and its file path. Let's add this to our struct and import the required fields.
 
 ```rust
 use openbrush::traits::{
@@ -161,8 +161,8 @@ pub struct Data {
 
 ## 3. Trait for Getters
 
-Unlike Solidity that will automatically create getters for the storage items, you should add it yourself in ink!. For this we will create a trait and add generic implementation.
-in the *./logics/traits/pair.rs*  file, let's create a trait with the getters functions and make them callable with `#[ink(message)]` :
+Unlike Solidity that will automatically create getters for the storage items, you need to add them yourself in ink!. For this we will create a trait and add generic implementation.
+in the *./logics/traits/pair.rs* file, let's create a trait with the getters functions and make them callable with `#[ink(message)]` :
 
 ```rust
 pub trait Pair {
@@ -180,7 +180,7 @@ pub trait Pair {
 }
 ```
 
-Openbrush provide `#[openbrush::trait_definition]` that will make sure your trait (and its default implementation) will be generated in the contract. Also, you can create a wrapper arroud this trait to use this trait for cross-contract calls (so no need to import the contract as ink-as-dependancy). Import what is needed from openbrush:
+Openbrush provides `#[openbrush::trait_definition]` that will make sure your trait (and its default implementation) will be generated in the contract. Also, you can create a wrapper around this trait so it can be used for cross-contract calls (so no need to import the contract as ink-as-dependancy). Import what is needed from Openbrush:
 
 ```rust
 use openbrush::traits::{
@@ -209,8 +209,8 @@ pub trait Pair {
 ```
 *./logics/traits/pair.rs*
 
-Last thing is the Error enum. Each contract should use its own error enum. As it will be used in function arguments it should implement Scale encode & decode.
-For the moment we don't need a proper error so just add `Error` as field
+The last thing to add will be the Error enum, and each contract should use its own. As it will be used in function arguments it should implement Scale encode & decode.
+For the moment we don't need a proper error so just add `Error` as field:
 
 ```rust
 ...
@@ -224,7 +224,7 @@ pub enum PairError {
 
 ## 4. Implement Getters
 
-in *./logics/impls/pair/pair.rs* add and impl block for generic type `data::Data`. We wrap the Data struct in Storage trait to add it as trait bound.
+in *./logics/impls/pair/pair.rs* add an impl block for generic type `data::Data`. We wrap the Data struct in Storage trait to add it as trait bound.
 
 ```rust
 impl<T: Storage<data::Data>> Pair for T {}
@@ -232,7 +232,7 @@ impl<T: Storage<data::Data>> Pair for T {}
 
 **get_reserves**
 
-This function should return a tuple of reserves & timestamp of type `(Balance, Balance, Timestamp)`. It takes `&self` as it should access to Data storage struct but will not modify it hence no need of a mutable ref.
+This function should return a tuple of reserves & timestamp of type `(Balance, Balance, Timestamp)`. It takes `&self` as it should access to Data storage struct but will not modify it hence no need for a mutable ref.
 ```rust
 fn get_reserves(&self) -> (Balance, Balance, Timestamp) {
     (
@@ -245,7 +245,7 @@ fn get_reserves(&self) -> (Balance, Balance, Timestamp) {
 
 **initialize**
 
-This method is more of a setter as it will set token address in storage. That's why it takes a `&mut self` as first argument.    
+This method is more of a setter as it will set token address in storage. That's why it takes a `&mut self` as the first argument.    
 As a general rule if a function only takes `&self` then it will not modify the state so it will only be called as a query.
 If the functions takes an `&mut self` it will make state change so can be called as a transaction, and should return a Result<T, E>.
 Only factory can call this [function](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67), but we will add `only_owner` modifier later in this tutorial.
@@ -264,7 +264,7 @@ fn initialize(
 
 **get_token**
 
-These two functions returns the accountId of the tokens
+These two functions return the accountId of the tokens
 
 ```rust
 fn get_token_0(&self) -> AccountId {
@@ -369,7 +369,7 @@ And just below the storage struct impl Pair trait for the PairContract:
 ```
 
 And that's it!    
-You learned how to create a trait, its generic implementation and implented it in Pair contract. Check your Pair contract with (to run in contract folder):
+In this section we've gone over how to create a trait and its generic implementation, and added them to the Pair contract. Check your Pair contract with (run from the contract folder):
 ```console
 cargo contract build
 ```

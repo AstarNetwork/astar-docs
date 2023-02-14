@@ -4,19 +4,19 @@ sidebar_position: 6
 
 # Modifiers
 
-Modifiers basically checks a condition prior to entering a function. By defining modifiers you will reduce code redundancy (keep it DRY) and increase its readability as you will not have to add guards for each of your functions.     
-Pair contract defines and uses [lock](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L31) modifier that prevents from reentrancy. In **initialize** it also ensure that the [caller is the factory](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67), it can be used as modifier.
+Modifiers ensure certain conditions are fulfilled prior to entering a function. By defining modifiers, you will reduce code redundancy (keep it DRY), and increase its readability as you will not have to add guards for each of your functions.     
+The Pair contract defines and uses a [lock](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L31) modifier that prevents reentrancy attacks. During **initialization**, it also ensures that the [caller is the Factory](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67), so it can be used as modifier.
 
-## 1. Reentrancy guard
+## 1. Reentrancy Guard
 
-To protect callable functions from reentrancy we will use [reentrancy guard](https://github.com/Supercolony-net/openbrush-contracts/blob/d6e29f05fd462e4e027de1f2f9177d594a5a0f05/contracts/src/security/reentrancy_guard/mod.rs#L54) modifier from openbrush. It save the lock status in storage (either `ENTERED` or `NOT_ENTERED`) and prevents reentrancy.
-In *./contracts/pair/Cargo.toml* add `"reentrancy_guard"` feature to Openbrush dependency:
+To protect callable functions from reentrancy attacks, we will use the [reentrancy guard](https://github.com/Supercolony-net/openbrush-contracts/blob/d6e29f05fd462e4e027de1f2f9177d594a5a0f05/contracts/src/security/reentrancy_guard/mod.rs#L54) modifier from Openbrush, which saves the lock status in storage (either `ENTERED` or `NOT_ENTERED`) to prevent reentrancy.
+In the *./contracts/pair/Cargo.toml* file, add the `"reentrancy_guard"` feature to the Openbrush dependencies:
 
 ```toml
 openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "reentrancy_guard"] }
 ```
 
-In *./contracts/pair/lib.rs* add import statement and add the reentrancy field in the Storage field:
+In the *./contracts/pair/lib.rs* file, add an import statement, and reentrancy_guard as a Storage field:
 ```rust
 ...
 use openbrush::{
@@ -44,13 +44,13 @@ pub struct PairContract {
 ...
 ```
 
-In *./logics/Cargo.toml* add `"reentrancy_guard"` feature to openbrush dependency:
+In the *./logics/Cargo.toml* file, add the `"reentrancy_guard"` feature as an Openbrush dependency:
 ```toml
 openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "reentrancy_guard"] }
 ```
 
-Modifiers should be added in the impl block on top of the function as an attribute macro. 
-In *./logics/impls/pair/pair.rs* add `"reentrancy_guard"` add import statements and add the modifier on top of **mint**, **burn** and **swap** as well as the `Storage<reentrancy_guard::Data>` trait bound: 
+Modifiers should be added in the impl block on top of the function, as an attribute macro. 
+In the *./logics/impls/pair/pair.rs* file, add `"reentrancy_guard"`, import statements, and modifier on top of **mint**, **burn** and **swap** as well as the `Storage<reentrancy_guard::Data>` trait bound: 
 ```rust
 ...
 use openbrush::{
@@ -82,7 +82,7 @@ impl<T: Storage<data::Data> + Storage<psp22::Data> + Storage<reentrancy_guard::D
 ...
 ```
 
-Lastly `non_reentrant` modifier returns `ReentrancyGuardError`. So let's impl `From` `ReentrancyGuardError` for `PairError`:
+Finally, the `non_reentrant` modifier returns `ReentrancyGuardError`. So let's impl `From` `ReentrancyGuardError` for `PairError`:
 ```rust
 use openbrush::{
     contracts::{
@@ -111,16 +111,15 @@ impl From<ReentrancyGuardError> for PairError {
 }
 ```
 
-## 2. Only owner
+## 2. Only Owner
 
-In **initialize** there is a guard that ensure [caller is the factory](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67). We can use [ownable modifier](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/access/ownable/mod.rs) that will store the deployer address on storage and restrict function access to this address.
-In *./contracts/pair/Cargo.toml* add `"ownable"` feature to Openbrush dependency:
+In **initialize** there is a guard that ensures the [caller is the Factory](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67). We can use the [ownable modifier](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/access/ownable/mod.rs) to store the deployer address in storage, and restrict function access to this address only.
+In the *./contracts/pair/Cargo.toml* file, add the `"ownable"` feature to the Openbrush dependency:
 
 ```toml
 openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "ownable", "reentrancy_guard"] }
 ```
 
-In *./contracts/pair/lib.rs* add import statement and add the ownable field in the Storage field. Also, you should update the constructor as owner should be initialized (and as deployer will only be factory we can set factory field address as the caller). You should implement `Ownable` trait that will expose [useful callable functions](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/traits/ownable/mod.rs#L32):
 ```rust
 ...
 use openbrush::{
@@ -164,13 +163,13 @@ impl PairContract {
 }
 ```
 
-In *./logics/Cargo.toml* add `"ownable"` feature to openbrush dependency:
+In the *./logics/Cargo.toml* file, add the `"ownable"` feature to openbrush dependency:
 ```toml
 openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "ownable", "reentrancy_guard"] }
 ```
 
-Modifiers should be added in the impl block on top of the function as an attribute macro.
-In *./logics/impls/pair/pair.rs* add `"ownable"` add import statements and add the modifier on top of **initialize**, as well as the `Storage<ownable::Data>` trait bound:
+Modifiers should be added in the impl block on top of the function, as an attribute macro.
+In the *./logics/impls/pair/pair.rs* file, add `"ownable"`, the import statements, and modifier on top of **initialize**, as well as the `Storage<ownable::Data>` trait bound:
 ```rust
 ...
 use openbrush::{
@@ -203,7 +202,7 @@ impl<
 ...
 ```
 
-Lastly `ownable` modifier returns `OwnableError`. So let's impl `From` `OwnableError` for `PairError`:
+Finally, the `ownable` modifier returns `OwnableError`. So let's impl `From` `OwnableError` for `PairError`:
 ```rust
 use openbrush::{
     contracts::{
@@ -236,8 +235,8 @@ impl From<OwnableError> for PairError {
 
 And that's it!    
 
-You learned how to import and use modifiers from openbrush. You can also implement your own modifier, check this [tutorial](https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76).      
-Check your Pair contract with (to run in contract folder):
+By following along with these examples you will have implemented modifiers from Openbrush, and should also be able to implement your own by using information contained in this [tutorial](https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76).      
+Check your Pair contract with (run in contract folder):
 ```console
 cargo contract build
 ```

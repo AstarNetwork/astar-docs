@@ -7,8 +7,8 @@ sidebar_position: 2
 Unfortunately at the moment there is no way to generate randomness using ink!
 The available options are:
 
-* Creating an VRF oracle contract that will generate randomness 
-  * (DIA is working on it for Astar)
-* On runtime level add pallet RandomnessCollectiveFlip chain-extension to be accessible in ink! contracts
-  * Astar team is working on this
-* Add a call in ink_env to get current block hash and previous block hash and create randomness from it.
+* Creating a VRF oracle contract that will generate randomness.
+  * (DIA is working on it for Astar.)
+* On the runtime level, adding a Chain Extension to the RandomnessCollectiveFlip pallet so it's accessible within ink! contracts.
+  * Astar team is working on this.
+* Add a function in the ink_env to retrieve the current and previous block hashes, on which to base randomness.

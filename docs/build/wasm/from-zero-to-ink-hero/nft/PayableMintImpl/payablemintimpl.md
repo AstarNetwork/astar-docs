@@ -1,12 +1,13 @@
 # PayableMint Trait Implementation
 In this section we will: 
-* Define new data type. 
-* Implement methods defined in the PayableMint trait from previous section.
-* Update contract's constructor to accept new parameters.
-* Write unit test for `mint()`.
+* Define a new data type. 
+* Implement functions defined in the PayableMint trait from the previous section.
+* Update the contract's constructor to accept new parameters.
+* Write a unit test for `mint()`.
 
-## Data type definition
-Since our contract will now accept new parameters we need storage to keep them. Let's create new file `logics/impls/types.rs` and add:
+## Data Type Definition
+Since the contract is able to accept new parameters, we will need storage to log them. Let's create a new file called `logics/impls/types.rs` and add:
+
 ```rust
 use openbrush::traits::{
     Balance,
@@ -21,18 +22,24 @@ pub struct Data {
     pub price_per_mint: Balance,
 }
 ```
-Do not forget to update `mod.rs` file with:
+
+Don't forget to update the `mod.rs` file with:
+
 ```rust
 pub mod types;
 ```
-Since we introduced data storage we need to add a trait bond.
+
+Since we introduced data storage, we will need to add a trait bond:
+
 ```rust
 impl<T> PayableMint for T
 where
     T: Storage<Data>
     {...}
 ```
-To keep our methods easy to read let's introduce Internal trait with helper methods.
+
+To keep our functions easy to read, let's introduce an `Internal` trait with helper functions.
+
 ```rust
 pub trait Internal {
     /// Check if the transferred mint values is as expected
@@ -47,7 +54,8 @@ pub trait Internal {
 ```
 
 ## Mint Implementation
-There are several checks we need to do before proceeding with the token mint. We have implemented these methods in the `internal` trait.
+There are several checks that need to be performed before the token mint can proceed, and functions that perform these checks are implemented as part of the `Internal` trait.
+
 ### Check Transferred Funds and Overflow
 ```rust
 default fn check_value(
@@ -86,7 +94,7 @@ default fn check_amount(&self, mint_amount: u64) -> Result<(), PSP34Error> {
 }
 ```
 
-### Implementation
+### Mint Implementation
 ```rust
 default fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34Error> {
     self.check_value(Self::env().transferred_value(), mint_amount)?;
@@ -105,8 +113,9 @@ default fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34E
     Ok(())
 }
 ```
-## Withdraw Implementation
-Enable contract owner to be able to withdraw funds from contract by implementing withdraw method:
+## Withdrawal Implementation
+Allow the contract owner to initiate withdrawal of funds from the contract by implementing a withdraw function:
+
 ```rust
 /// Withdraws funds to contract owner
 #[modifiers(only_owner)]
@@ -124,7 +133,9 @@ default fn withdraw(&mut self) -> Result<(), PSP34Error> {
 }
 ```
 ## Set `base_uri` and get `token_uri`
-Let's first create `token_exist` check and place it in the Internal trait:
+
+Let's create a `token_exist` function and add it to the `Internal` trait:
+
 ```rust
 /// Check if token is minted
 default fn token_exists(&self, id: Id) -> Result<(), PSP34Error> {
@@ -134,6 +145,7 @@ default fn token_exists(&self, id: Id) -> Result<(), PSP34Error> {
     Ok(())
 }
 ```
+
 Implement `set_base_uri`:
 ```rust
 /// Set new value for the baseUri
@@ -147,6 +159,7 @@ default fn set_base_uri(&mut self, uri: PreludeString) -> Result<(), PSP34Error>
     Ok(())
 }
 ```
+
 Implement `token_uri`:
 ```rust
 /// Get URI from token ID
@@ -164,16 +177,18 @@ default fn token_uri(&self, token_id: u64) -> Result<PreludeString, PSP34Error> 
 ```
 
 ## Update Contract
-Since we have added new type `Data` let's import it:
+Since we have added a new type `Data`, let's import it:
 ```rust
 use payable_mint::impls::payable_mint::*;
 ```
+
 Add a new element in the `struct Contract`:
 ```rust
 #[storage_field]
 payable_mint: types::Data,
 ```
-Update constructor to accept new parameters:
+
+Update the constructor to accept new parameters:
 ```rust
 #[ink(constructor)]
 pub fn new(
@@ -196,9 +211,9 @@ pub fn new(
 }
 ```
 
-## Write unit test
-Let's write a simple unit test to check `mint()` method. In ink! contract the unit test is placed inside the contract module. By default Alice creates the contract.
-After all imports let's write helper method to initiate contract:
+## Compose Unit Test
+Let's write a simple unit test to check the `mint()` function. In ink! contracts, the unit test needs to be placed inside the contract module, and by default, Alice creates the contract.
+After all imports, let's write a helper method to initiate the contract:
 ```rust
 #[cfg(test)]
 mod tests {
@@ -222,7 +237,8 @@ mod tests {
     }
 }
 ```
-Test minting 5 tokens to Bob's account. Call to `mint()` is from Bob's account. 
+
+Test minting 5 tokens to Bob's account. Call to `mint()` will be from Bob's account:
 ```rust
 #[ink::test]
 fn mint_multiple_works() {
@@ -259,4 +275,5 @@ Run unit test:
 ```bash
 cargo test
 ```
-After this step your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/payablemint-step5).
+
+At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/payablemint-step5).

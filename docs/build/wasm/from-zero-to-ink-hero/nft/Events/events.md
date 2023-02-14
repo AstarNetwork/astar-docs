@@ -1,17 +1,18 @@
 # Events
-Last missing piece for our contract is event handling.
+The last thing our contract will need at this point is an event handler.
 
-## What is an event for smart contract?
-Events are important for smart contracts because they facilitate communication between smart contracts and their user interfaces. In traditional web development, a server response is provided in a callback to the frontend. In blockchain, when a transaction is executed, smart contracts can emit events to the blockchain that the frontend can then process. 
+## What are Events for Smart Contracts?
+Events are important for smart contracts because they facilitate communication between the contract itself and the user interface. In traditional Web2 development, a server response is provided in a callback to the frontend. In Web3, when a transaction is executed, smart contracts emit events to the blockchain that the frontend is able to process. 
 
 ## Minting Event
-In our contract there is one occasion where an event should be emitted and that is when token is minted.
-One could expect that by calling Openbrush `_mint_to()`, and event will be emitted but upon closer examination we can see that `_emit_transfer_event()` has empty default [implementation](https://github1s.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/token/psp34/psp34.rs#L151-L152). This gives flexibility to create events for our needs.
+In our contract, an event should be emitted when a token is minted.
+One could expect that by calling the Openbrush `_mint_to()` function an event will be emitted, but upon closer examination we can see that `_emit_transfer_event()` has an empty default [implementation](https://github1s.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/token/psp34/psp34.rs#L151-L152). This grants developers flexibility to create events that are suitable for their own needs.
 
 ```rust
 default fn _emit_transfer_event(&self, _from: Option<AccountId>, _to: Option<AccountId>, _id: Id) {}
 ```
-Let's define two events that are needed for token handling, *Transfer* and *Approve*. This needs to be done in the contracts's `lib.rs`. Please note that there is no `Mint` event. `Mint` is covered by *Transfer* event where `from` will be the contract address.
+
+Let's define two events that are required for token handling, *Transfer* and *Approve*, in the contracts's `lib.rs` file. Please note that there is no `Mint` event, as it's covered by the *Transfer* event, in which case `from` will be the contract address.
 ```rust
 use ink_lang::codegen::{
     EmitEvent,
@@ -41,7 +42,8 @@ pub struct Approval {
     approved: bool,
 }
 ```
-And override event emission methods:
+
+Override the default event emission function:
 ```rust
 impl psp34::Internal for Shiden34Contract {
     fn _emit_transfer_event(&self, from: Option<AccountId>, to: Option<AccountId>, id: Id) {
@@ -66,16 +68,18 @@ impl psp34::Internal for Shiden34Contract {
 ```
 
 ## Update Unit Test
-As a last check let's add event check at the end of our unit test. Since our test minted 5 tokens we expect 5 events to be emitted.
+As a final check let's add an event check at the end of our unit test. Since our test minted 5 tokens, we should expect 5 events to be emitted.
 ```rust
 assert_eq!(5, ink_env::test::recorded_events().count());
 ```
 
-After this step your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/events).
-## Next step
-Congratulations on the successful completion of this tutorial!
-As a next step check the code from [main](https://github.com/swanky-dapps/nft/) branch for the repository used for this tutorial. There you can enhance your knowledge on:
-- Better unit test coverage.
-- Several new methods.
-- End-to-end test.
-- Better error handling.
+At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/events).
+
+## Next Step
+Congratulations! You've made it through all the steps required to build your NFT Contract!
+
+As a next step, review the code in the [main](https://github.com/swanky-dapps/nft/) branch for the repository used for this tutorial. There you can enhance your knowledge about:
+- Improving the unit test coverage.
+- Adding new useful functions.
+- End-to-end testing.
+- Improving error handling.

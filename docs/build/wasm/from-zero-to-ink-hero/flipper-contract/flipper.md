@@ -3,16 +3,16 @@ sidebar_position: 2
 ---
 
 # Flipper Contract
-This is step-by-step explanation of ink! smart contract by using the most simple app, which is flipper. You will understand the basic structure of ink! smart-contract.
+This is step-by-step explanation of the process behind building an ink! smart contract, using a simple app called Flipper. The examples provided within this guide will help you develop an understanding of the basic elements and structure of ink! smart contracts.
 
 ## What is Flipper?
-Flipper is a very basic smart contract. It has only one boolean in the storage (`true` or `false`), and when you flip, the value will be changed in to the other.
+Flipper is a basic smart contract that allows the user to toggle a boolean value located in storage to either `true` or `false`. When the flip function is called, the value will change from one to the other.
 
-## Preparation
-Please refer to [Prerequisites](./flipper-contract.md)
+## Prerequisites
+Please refer to the [previous section](./flipper-contract.md) for the list of prerequisites.
 
 ## Flipper Smart Contract
-In a folder run:
+In a new project folder, execute the following:
 
 ```bash
 $ cargo contract new flipper # flipper is introduced from the beginning.
@@ -23,29 +23,29 @@ $ cd flipper/
 $ cargo contract build #build flipper app
 ```
 
-💡 If you get an error saying:
+💡 If you receive an error such as:
 ```bash
 ERROR: cargo-contract cannot build using the "stable" channel. Switch to nightly.
 ```
-Please try:
+Execute:
 ```bash
 $ rustup default nightly
 ```
-to switch default Rust toolchain to nightly, or
+to reconfigure the default Rust toolchain to use the nightly build, or
 ```
 $ cargo +nightly contract build
 ```
-to use nightly toolchain explicitly.
+to use the nightly build explicitly, which may be appropriate for developers working exclusively with ink!
 
-Then, you get the full package and code for Flipper.
-Let’s dive into the structure.
+Once the operation has finished, and the Flipper project environment has been initialized, we can perform an examination of the file and folder structure.
+Let’s dive a bit deeper into the project structure:
 
 ### The File Structure of Flipper
 
-- `target`: build info, binary info
-- `Cargo.lock`: lock file for dependency package
-- `Cargo.toml`: Package Config
-- `lib.rs`: Your contract logic
+- `target`: Contains build / binary information.
+- `Cargo.lock`: The lock file for dependency package.
+- `Cargo.toml`: The package configuration.
+- `lib.rs`: The contract logic.
 
 ### Flipper Contract `lib.rs`
 
@@ -136,16 +136,16 @@ use ink_lang as ink;
 #[ink::contract]
 mod flipper {
 
-		// This area is to define storage in the contract.
+		// This section defines storage for the contract.
     #[ink(storage)]
     pub struct Flipper {
     }
 
-		// This area is to define functional logic of the contract.
+		// This section defines the functional logic of the contract.
     impl Flipper {
     }
 
-		// This area is to test. You basically need this to make sure your contract is valid.
+		// This section is used for testing, in order to verify contract validity.
     #[cfg(test)]
     mod tests {
     }
@@ -180,7 +180,7 @@ Storage types:
     - `Mapping`
 - Custom data Structure [details](https://use.ink/datastructures/custom-datastructure)
 
-This means the contract(called Flipper) stores a single `bool` value on the storage.
+This means the contract (Flipper) stores a single `bool` value in storage.
 
 ```rust
 #[ink(storage)]
@@ -190,13 +190,13 @@ pub struct Flipper {
 ```
 
 ### Callable Functions
-This is when the contract is deployed and is responsible for **bootstrapping the initial contract state** into the storage, ([more details](https://use.ink/macros-attributes/constructor)).
+At the time the contract is deployed, a constructor is responsible for **bootstrapping the initial state** into storage. [For more information](https://use.ink/macros-attributes/constructor).
 
 ```rust
 #[ink(constructor)]
 ```
 
-Constructor that initializes the `bool` value to the given `init_value`.
+The addition of the following function will initialize `bool` to the specified `init_value`.
 
 ```rust
 #[ink(constructor)]
@@ -205,7 +205,7 @@ pub fn new(init_value: bool) -> Self {
 }
 ```
 
-Contracts are able to have multiple constructors. This is how to set default value of `bool`. As other language, default value of `bool` is `false`.
+Contracts can also contain multiple constructors. Here is a constructor that assigns a default value to `bool`. As other language, default value of `bool` is `false`.
 
 ```rust
 #[ink(constructor)]
@@ -214,13 +214,13 @@ pub fn default() -> Self {
 }
 ```
 
-This marks a function as **publicly dispatchable**, meaning that it is exposed in the contract interface to the outside world, ([more details](https://use.ink/4.0.0-alpha.1/macros-attributes/message)). Note that all public functions must use the `#[ink(message)]` attribute.
+The following will permit a function to be **publicly dispatchable**, meaning that it will be exposed in the contract interface to the outside world. [For more information](https://use.ink/4.0.0-alpha.1/macros-attributes/message)). Note that all public functions **must** use the `#[ink(message)]` attribute.
 
 ```rust
 #[ink(message)]
 ```
 
-`flip` function modify storage items and, `get` function get the storage item.
+The `flip` function modifies storage items, and `get` function retrieves a storage item.
 
 ```rust
 #[ink(message)]
@@ -234,7 +234,7 @@ pub fn get(&self) -> bool {
 }
 ```
 
-💡 If you are simply *reading* from the contract storage, you only need to pass `&self`. But if you want to *modify* storage items, you will need to explicitly mark it as mutable `&mut self`.
+💡 If you are simply *reading* from contract storage, you will only need to pass `&self`, but if you wish to *modify* storage items, you will need to explicitly mark it as mutable `&mut self`.
 
 ```rust
 impl Flipper {
@@ -297,7 +297,7 @@ impl Flipper {
     }
 ```
 
-### Compile, Deploy and interact with contracts
+### Compile, Deploy and Interact with Contracts
 
-Here is the guide how to deploy your contract. Once you deploy it, you can interact with the contracts there:
-[deploy using Polkadot UI](https://docs.astar.network/docs/wasm/sc-dev/polkadotjs-ui/).
+Follow this guide to deploy your contract [using Polkadot UI](https://docs.astar.network/docs/wasm/sc-dev/polkadotjs-ui/). Once deployed, you will be able to interact with it.
+
