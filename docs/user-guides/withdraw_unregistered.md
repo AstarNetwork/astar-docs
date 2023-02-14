@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 # Withdraw Stake From Unregistered Contract
