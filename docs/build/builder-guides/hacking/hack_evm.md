@@ -9,10 +9,10 @@ import Zombie from './img/zombie.png'
 
 Read the linked chapters or use tutorials to be able to answer following questions:
 
-## Setup Metamask and Remix
-* Did you install and connect your Metamask to Shibuya? Which `Chain Id` did you use to setup Shibuya Network in Metamask?
+## Setup MetaMask and Remix
+* Did you install and connect your MetaMask to Shibuya? Which `Chain Id` did you use to setup Shibuya Network in MetaMask?
 * Connect to browser IDE Remix using this [tutorial](/docs/build/builder-guides/astar_features/use_remix)
-* Does your Environment look like this:
+* Does your environment look like this:
 <img src={CustomNet} style={{width: 400}} />
 
 * Can you say what does `Custom (81) network` mean?
