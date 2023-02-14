@@ -32,7 +32,7 @@ This is a 2-step process.
 13. Click “Save”.
 ![image](https://user-images.githubusercontent.com/37278708/214498123-dab270e0-9534-410f-8115-e254ac707041.png)
 
-14. You will be prompted to save the json file. Please save the json file safely and you will need this in the next step.
+14. You will be prompted to save the json file. Please save the json file safely as you will need this in the next step.
 
 ## Step 2:
 1. Go to https://polkadot.js.org/extension/ to download and install the browser extension wallet.
