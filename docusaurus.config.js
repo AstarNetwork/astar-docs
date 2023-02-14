@@ -53,13 +53,9 @@ const config = {
     //Enable multilanguage support. Portuguese added as first language
     i18n: {
       defaultLocale: 'en',
-      locales: ['en', 'pt', 'fr', 'id', 'ja'],
+      locales: ['en'],
       localeConfigs: {
         en: {htmlLang: 'en-US',},
-        pt: {},
-        fr: {},
-        id: {},
-        ja: {},
       }
     },
     themeConfig:
@@ -76,6 +72,12 @@ const config = {
                         docId: "getting-started",
                         position: "left",
                         label: "Docs",
+                    },
+                    {
+                        type: 'doc',
+                        docId: 'build/index',
+                        position: 'left',
+                        label: 'Start Building',
                     },
                     {
                         to: "https://medium.com/astar-network",
