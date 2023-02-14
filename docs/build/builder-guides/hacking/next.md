@@ -4,33 +4,35 @@ sidebar_position: 4
 
 
 # Next step
-Here comes the fun!!! Time to build your own dApp.
-Here you will fins a list of ideas to implement in any of the smart contract environments.
+Here comes the fun! Time to build your own dApp.
+Here you will find a list of ideas to implement in any of the smart contract environments.
 
 
 ## Enter Community
 
-- Join Astar Discord and Post GM
-- Follow Twitter
-- Create an account on Stack Exchange
-- Create an account, Post Hi on Forum (A thread just for this purpose)
-- Subscribe to Astar Newsletter
+- Join Astar Discord and Post GM.
+- Follow Twitter.
+- Create an account on Stack Exchange.
+- Create an account, Post Hi on Forum (A thread just for this purpose).
+- Subscribe to Astar Newsletter.
 
 ## Ideas to build
 These ideas can be implemented as WASM or EVM smart contract. Main intention is for the ink! developers.
+
 ### Pool Together 
 Explore this [project](https://app.pooltogether.com/) and build your own version in ink!
 
 ### Voting
 Use ink4 from Swanky-node to develop a smart contract which allows people to vote The rules are:
 
-* Contract owner initializes a set of candidates (2-10) 
-* Lets anyone vote for the candidates
-* Each voter is limited to only one ote (per address) 
-* Displays the vote totals received by each candidate
+* Contract owner initializes a set of candidates (2-10). 
+* Lets anyone vote for the candidates.
+* Each voter is limited to only one ote (per address).
+* Displays the vote totals received by each candidate.
 
 ### Tamagotchi
-    1. Requirements TBA
+    1. Requirements TBA, WIP
+    
 ### Charity Raffle
 
 Use ink4 from Swanky-node to develop a smart contract which allows people to enter a charity raffle. The rules are:
