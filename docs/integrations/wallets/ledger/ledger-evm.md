@@ -31,12 +31,12 @@ Photos are taken using Nano S Plus device, and the example shows interaction wit
 
 If you already have this, feel free to skip this part.
 
-1. In MetaMask menu navigate to Settings → Networks, and click “Add a network”
+1. In the MetaMask menu navigate to Settings → Networks, and click “Add a network”
 2. Enter following details for Astar:
    1. Network name: `Astar Network Mainnet`
-   2. New RPC URL: 
-  `https://astar.public.blastapi.io/` 
-  `https://astar-rpc.dwellir.com/`
+   2. New RPC URL:<br />
+  `https://astar.public.blastapi.io/`<br />
+  `https://astar-rpc.dwellir.com/`<br />
   `https://astar.api.onfinality.io/public`
    3. Chain ID: `592`
    4. Currency Symbol: `ASTR`
@@ -44,9 +44,9 @@ If you already have this, feel free to skip this part.
 3. Click the “Save” button
 4. Repeat steps 1-3 for Shiden network with following details:
    1. Network name: `Shiden Network Mainnet`
-   2. New RPC URL: 
-    `https://shiden.public.blastapi.io`
-    `https://shiden-rpc.dwellir.com`
+   2. New RPC URL:<br />
+    `https://shiden.public.blastapi.io`<br />
+    `https://shiden-rpc.dwellir.com`<br />
     `https://shiden.api.onfinality.io/public`
    3. Chain ID: `336`
    4. Currency Symbol: `SDN`
@@ -80,7 +80,7 @@ After this step, you should have one or both of these apps:
 <img src={require('./img/evm/connect_hw_wallet.png').default} style={{height: "400px"}}/>
 </center>
 
-2. On the next screen select “Ledger” and click “Continue
+2. On the next screen select “Ledger” and click “Continue:
 
 <center>
 <img src={require('./img/evm/select_ledger.png').default} style={{height: "400px"}}/>
@@ -92,7 +92,7 @@ After this step, you should have one or both of these apps:
 <img src={require('./img/evm/pair_hid.png').default} style={{height: "400px"}}/>
 </center>
 
-4. Select an account you wish to connect and click “Unlock”
+4. Select an account you wish to connect and click “Unlock”:
 
 <center>
 <img src={require('./img/evm/select_acc.png').default} style={{height: "400px"}}/>
@@ -118,7 +118,7 @@ To receive tokens, copy the address of your connected account by clicking your a
 <img src={require('./img/evm/confirm_tx.png').default} style={{height: "400px"}}/>
 </center>
 
-4. When your Ledger device screen is showing “Application is ready”, click “Confirm” in MetaMask
+4. When your Ledger device screen is showing “Application is ready”, click “Confirm” in MetaMask:
 
 <center>
 <img src={require('./img/evm/3-ApplicationIsReady.jpg').default} style={{height: '200px',margin: '1px'}}/>
