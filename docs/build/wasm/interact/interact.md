@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Interact with Wasm Smart Contract
 
 ## Wallets
@@ -89,7 +93,7 @@ const { gasRequired, storageDeposit, result } = await contract.query.enter(
   {
     gasLimit: gasLimit,
     storageDepositLimit: null,
-    value: new BN('1000000000000000000')
+    value: new BN('1000000000000000000') // 1 Astar, or it could be value you want to send to the contract in title
   }
 )
 
