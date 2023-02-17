@@ -20,7 +20,7 @@ This section will guide you on how to register AstarPass/ShidenPass
 This section will guide you on how to unregister AstarPass
 <br />
 1. To unregister AstarPass, there will be a fee of 500 ASTR. You need to have 500 ASTR plus gas in the EVM wallet.
-2. For AstarPass unregistration, go [HERE](https://blockscout.com/astar/address/0x8E2fa5A4D4e4f0581B69aF2f8F2Ef2CF205aE8F0/write-proxy#address-tabs).
+2. Go [HERE](https://blockscout.com/astar/address/0x8E2fa5A4D4e4f0581B69aF2f8F2Ef2CF205aE8F0/write-proxy#address-tabs).
 3. On Row 11, enter `500` and click `Write`.
 
 ![image](https://user-images.githubusercontent.com/37278708/218657946-4e53e708-a68b-4571-ba24-4a935bb56086.png)
