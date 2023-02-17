@@ -12,7 +12,7 @@ Astar.js https://github.com/AstarNetwork/astar.js/wiki is a JavaScript library f
 yarn add @polkadot/api@9.13.6 @astar-network/astar-api@0.1.14
 ```
 
-Example: Here is a dapp example that uses Astar.js to interact with WASM smart contract. You can find the source code [here](github.com/astarNetwork/wasm-lottery)
+Example: Here is a dapp example that uses Astar.js to interact with WASM smart contract. You can find the source code [here](https://github.com/astarNetwork/wasm-lottery)
 This is a simple lottery dapp that allows users to enter and draw the lottery. The lottery is implemented as a WASM smart contract.
 
 ### Usage
