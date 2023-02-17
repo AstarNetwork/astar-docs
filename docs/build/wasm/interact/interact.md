@@ -4,7 +4,7 @@
 
 ## Astar.js
 
-Astar.js https://github.com/AstarNetwork/astar.js/wiki is a JavaScript library for interacting with the Astar blockchain. It is a collection of modules that allow you to interact with the Astar blockchain through a local or remote node. It can be used in the browser or in Node.js.
+[Astar.js](https://github.com/AstarNetwork/astar.js/wiki) is a JavaScript library for interacting with the Astar blockchain. It is a collection of modules that allow you to interact with the Astar blockchain through a local or remote node. It can be used in the browser or in Node.js.
 
 ### Installation
 
@@ -12,7 +12,7 @@ Astar.js https://github.com/AstarNetwork/astar.js/wiki is a JavaScript library f
 yarn add @polkadot/api@9.13.6 @astar-network/astar-api@0.1.14
 ```
 
-Example: Here is a dapp example that uses Astar.js to interact with WASM smart contract. You can find the source code [here](https://github.com/astarNetwork/wasm-lottery)
+Example: Here is a dapp example that uses Astar.js to interact with WASM smart contract. You can find the source code [dApp](https://github.com/astarNetwork/wasm-lottery)
 This is a simple lottery dapp that allows users to enter and draw the lottery. The lottery is implemented as a WASM smart contract.
 
 ### Usage
@@ -47,12 +47,13 @@ main()
 import { Abi, ContractPromise } from '@polkadot/api-contract'
 
 // After compiling the contract a ABI json is created in the artifacts. Import the ABI:
+// If you didn't use swanky the name will be metadata.json
 import ABI from './artifacts/lottery.json'
 
 const abi = new Abi(ABI, api.registry.getChainProperties())
 
 // Initialise the contract class
-const contract = new ContractPromise(api, abi, address)
+const contract = new ContractPromise(api, abi, address) // address is the deployed contract address
 ```
 
 #### Query Contract Messages
