@@ -4,9 +4,9 @@ sidebar_position: 11
 
 # Withdraw Stake From Unregistered Contract
 
-Occasionally but rare, some projects decided to change their contract address on the portal or projects get delisted. In this case, some stakes are not automatically removed. Stakers need to manually withdraw their stake. This tutorial will guide you on how to withdraw your stake from a dApp that has been removed from the portal.
+Occasionally, some projects decide to change their contract address on the portal or projects get delisted. In this case, some staked assets are not automatically removed. Stakers need to manually withdraw their stake. This tutorial will guide you on how to withdraw your stake from a dApp that has been removed from the portal.
 
-**Most easiest way**, is to connect to the portal with the address that is staking on the unregistered dApp and click on 'Claim'. The moment you click on claim, your bonded tokens will be unlocked and enter unbonding period. In case the above doesn't work, you can follow the guide below.
+**The easiest way**, is to connect to the portal with the address that is staking on the unregistered dApp and click on 'Claim'. The moment you click on claim, your bonded tokens will be unlocked and enter unbonding period. In case the above doesn't work, you can follow the guide below.
 
 ---
 
@@ -34,7 +34,7 @@ Occasionally but rare, some projects decided to change their contract address on
 15. Go to the info of each dApp that you are staked on and you can see the contract address.
 ![image](https://user-images.githubusercontent.com/37278708/199926265-f1913a1a-0635-4ed2-9f9b-91e7c8e0a2ec.png)
 
-16. Cross check the contract addresses with the ones you have on Polkadot.js web app. If you come across a contract address that is available on Polkadot.js web app but not available on Astar Portal, that is the contract address that has been removed, which is what you are looking for.
+16. Cross check the contract addresses with the ones you have on Polkadot.js web app. If you come across a contract address on Polkadot.js web app but not available on Astar Portal, that is the contract address that has been removed. This is what you are looking for.
 17. Copy that contract address and paste it on a notepad as a reference for the next steps.
 
 ---
@@ -47,8 +47,8 @@ Occasionally but rare, some projects decided to change their contract address on
 5. On the left dropdown menu, select `dappsStaking`.
 6. On the right dropdown menu, select `claimStaker`.
 7. On EVM: H160, paste the contract address that you have on the notepad e.g `0xaab44542c72f88f7b98fffda418e3efe94bc13af`.
-8. Submit transaction and add a tip before signing the transaction.
-9. If you have a huge backlog, you need to repeat this step many times until all the rewards are claimed. Otherwise, you won't be able to proceed with the next step.
+8. Submit the transaction and add a tip before signing.
+9. If you have a huge backlog, you need to repeat this step many times until all the rewards are claimed. Otherwise, you won't be able to proceed to the final step.
 ![image](https://user-images.githubusercontent.com/37278708/199938229-92e8eb7d-46fa-450f-a16f-d583da7bf48c.png)
 ---
 
