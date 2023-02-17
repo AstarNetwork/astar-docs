@@ -1,4 +1,4 @@
-# Interact with Smart Contract
+# Interact with Wasm Smart Contract
 
 ## Wallets
 
