@@ -33,7 +33,7 @@ This section will guide you on how to unregister AstarPass
 This section will guide you on how to unregister ShidenPass
 <br />
 1. To unregister ShidenPass, there will be a fee of 1 SDN. You need to have 1 SDN plus gas in the EVM wallet.
-2. Go [HERE](https://blockscout.com/shiden/address/0x25257be737210F72DA4F51aCB66903A7520e59d6/write-proxy#address-tabs)
+2. Go [HERE](https://blockscout.com/shiden/address/0x25257be737210F72DA4F51aCB66903A7520e59d6/write-proxy#address-tabs).
 3. On Row 12, enter `1` on Row 11 and click `Write`.
 
 ![image](https://user-images.githubusercontent.com/37278708/218659211-1d90fab0-89c2-4915-8ec4-aa5885b7fefd.png)
