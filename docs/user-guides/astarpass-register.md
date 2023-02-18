@@ -5,7 +5,6 @@ sidebar_position: 14
 # How To Register or Unregister AstarPass/ShidenPass
 
 This section will guide you on how to register AstarPass/ShidenPass
-<br />
 
 1. Before registration, you need to have both Native and EVM wallets.
 2. The EVM wallet must have at least 0.01 ASTR and 0.01 SDN respectively for AstarPas and ShidenPass. This is needed for the gas.
@@ -18,7 +17,6 @@ This section will guide you on how to register AstarPass/ShidenPass
 
 ## Unregister AstarPass
 This section will guide you on how to unregister AstarPass
-<br />
 1. To unregister AstarPass, there will be a fee of 500 ASTR. You need to have 500 ASTR plus gas in the EVM wallet.
 2. Go [HERE](https://blockscout.com/astar/address/0x8E2fa5A4D4e4f0581B69aF2f8F2Ef2CF205aE8F0/write-proxy#address-tabs).
 3. On Row 11, enter `500` and click `Write`.
@@ -31,7 +29,6 @@ This section will guide you on how to unregister AstarPass
 
 ## Unregister ShidenPass
 This section will guide you on how to unregister ShidenPass
-<br />
 1. To unregister ShidenPass, there will be a fee of 1 SDN. You need to have 1 SDN plus gas in the EVM wallet.
 2. Go [HERE](https://blockscout.com/shiden/address/0x25257be737210F72DA4F51aCB66903A7520e59d6/write-proxy#address-tabs).
 3. On Row 12, enter `1` on Row 11 and click `Write`.
