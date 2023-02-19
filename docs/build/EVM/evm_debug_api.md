@@ -8,6 +8,12 @@ Geth's debug APIs and OpenEthereum's trace module provide non-standard RPC metho
 
 > Thanks to the PureStake team, the Polkadot ecosystem has tracing capabilities similar to that of Geth, and OpenEthereum. Astar Network implements the same approach for Astar EVM tracing, due to it being the best solution we have at the moment, for the Polkadot ecosystem.
 
+::: note 
+
+Tracing features are currently available as part of pre-release v5.x.x of Astar
+
+:::
+
 ## Debugging RPC Methods
 
 The following RPC methods are available:
