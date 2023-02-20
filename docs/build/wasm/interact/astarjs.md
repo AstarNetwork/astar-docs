@@ -78,14 +78,7 @@ const { gasRequired, result, output } = await contract.query.pot(
 ### Send Contract Transaction
 
 Sending contract transaction normally is a 2 step process. First is to query the transaction and check for errors. We have a helper function to do this for you. The second step is to send the transaction. The helper function will return the transaction object which you can use to sign and send the transaction.
-The parameters for the helper function are:
 
-- api: The api instance
-- contract: The contract instance
-- message: The message to send
-- sender: The sender address
-- value: The value to send with the transaction
-- ...params: The parameters for the message
 
 ```js
 
@@ -98,6 +91,7 @@ try {
     'enter', // The message to send or transaction to call
     account.address, // The sender address
     new BN('1000000000000000000') // 1 TOKEN or it could be value you want to send to the contract in title
+    // The rest of the arguments are the arguments to the message
   )
 
   result.signAndSend(account.address, (res) => {
