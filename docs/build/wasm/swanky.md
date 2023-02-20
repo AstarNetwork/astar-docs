@@ -3,6 +3,8 @@ sidebar_position: 3
 ---
 
 import Figure from '/src/components/figure'
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
 # Swanky Suite
 
@@ -33,21 +35,24 @@ The architecture envisioned for Swanky CLI and Swanky Node (Local developer node
 
 ## Swanky CLI
 
-Swanky CLI is a Node.js CLI app that uses Polkadot.js API on the backend, alongside many existing tools, such as the `cargo` contract CLI. In the future, there will be many additional features to support developers, such as Wasm dApp bootstrapping via smart contract and UI scaffolding, integration tests, management of local nodes, account management, connecting and deploying contracts to both local and remote networks, compiling for various languages from a single CLI app, compatibility checks between the contract pallet and compiler, and much more.
+Swanky CLI is a Node.js CLI app that uses Polkadot.js API on the backend, alongside many existing tools, such as the `cargo contract` CLI. In the future, there will be many additional features to support developers, such as Wasm dApp bootstrapping via smart contract and UI scaffolding, integration tests, management of local nodes, account management, connecting and deploying contracts to both local and remote networks, compiling for various languages from a single CLI app, compatibility checks between the contract pallet and compiler, and much more.
 
 ### Installing
 
-The CLI can be used in a few ways.
+The CLI can be installed through:
+* dev-container
+* Binary download
+* npm package
 
 :::note
 Note that using the precompiled binaries, NPM, or compiling it yourself requires you to have the [local environment set up](../environment/ink_environment.md) correctly
 :::
 
-#### Recommended Method: Use dev container
+#### Dev container (Recommended)
 
-This is the recommended method - which includes all the environment setup, and will support auto-updates in the future.
+Using [dev container](docs/build/environment/dev-container) is the recommended method to use `swanky-cli`, it includes all the environment setup and will support auto-updates in the future.
 
-To run your project in the dev container follow the steps on [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container)
+To run your project in the dev container follow the steps on [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container).
 
 #### Download the Precompiled Binaries
 
@@ -57,17 +62,25 @@ To run your project in the dev container follow the steps on [swanky-dev-contain
 
 3. Add the `swanky` executable to your path variable by creating a symbolic link to it from a common `bin` directory or somewhere similar.
 
-> Example on MacOS:
->
-> `ln -s /Users/my_name/software/swanky-cli/bin/swanky /usr/local/bin`
+<Tabs>
+<TabItem value="MacOS" label="MacOS" default>
 
-> Example on Ubuntu 22.04:
->
-> `ln -s /home/my_name/swanky-cli/bin/swanky /usr/local/bin`
+```sh
+ln -s /Users/my_name/software/swanky-cli/bin/swanky /usr/local/bin
+```
+
+</TabItem>
+<TabItem value="Debian/Ubuntu" label="Debian/Ubuntu">
+
+```sh
+ln -s /home/my_name/swanky-cli/bin/swanky /usr/local/bin
+```
+</TabItem>
+</Tabs>
 
 #### Globally with npm
 
-This approach may seem simpler, but due to the nature of node.js dependency management, may result in version inconsistency or other errors.
+This approach may seem simpler, but due to the nature of `Node.js` dependency management, may result in version inconsistency or other errors.
 
 ```sh-session
 $ npm install -g @astar-network/swanky-cli
@@ -79,7 +92,7 @@ or
 $ npx @astar-network/swanky-cli [command]
 ```
 
-### Commands
+### Swanky-cli Commands
 
 #### `swanky help`
 
@@ -278,25 +291,26 @@ COMMANDS
 
 <Figure caption="Start a local node" src={require('./img/07-node_start.gif').default} />
 
+---
 ## Swanky Node
 
 Swanky Node is a Substrate based blockchain configured to enable `pallet-contracts` (a smart contract module), and other features that assist local development of Wasm smart contracts.
 
 ### Features
 
-- [pallet-contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts) (polkadot-0.9.33) and its unstable-feature are enabled by default.
+- [pallet-contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts)
 - `grandpa` & `aura` consensus were removed. Instead, `instant-seal` & `manual-seal` are used.
   Blocks are authored & finalized (1) as soon as a transaction get in the pool (2) when `engine_createBlock` `engine_finalizeBlock` RPC called respectively.
-- [pallet-dapps-staking](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.33/frame/dapps-staking) and ChainExtension to interact with it.
-- [pallet-assets](https://github.com/paritytech/substrate/tree/polkadot-v0.9.33/frame/assets).
-- Pallet-assets chain-extension
-- dApps-staking chain-extension
+- `pallet-dapps-staking`
+- `pallet-assets`
+- `pallet-assets` chain-extension
+- `pallet-dapps-staking` chain-extension
 
 Swanky Node is optimized for local development, while removing unnecessary components such as P2P. Additional features and pallets, such as to interact between (Contract <-> Runtime), will be added in the future.
 
 ### Compatible ink! version
 
-ink! `v4.0.0-beta` or lower is supported by pallet-contract polkadot-0.9.33 branch.
+ink! `v4.0.0` or lower is supported.
 
 ### Installation
 
@@ -343,23 +357,23 @@ Purge the development chain's state.
 ```bash
 ./target/release/swanky-node purge-chain
 ```
+### Development Accounts
+The **alice** development account will be the authority and sudo account as declared in the
+[genesis state](https://github.com/AstarNetwork/swanky-node/blob/main/node/src/chain_spec.rs#L44).
+While at the same time, the following accounts will be pre-funded:
 
-> The **alice** development account will be the authority and sudo account as declared in the
-> [genesis state](https://github.com/AstarNetwork/swanky-node/blob/main/node/src/chain_spec.rs#L44).
-> While at the same time, the following accounts will be pre-funded:
->
-> - Alice
-> - Bob
-> - Charlie
-> - Dave
-> - Eve
-> - Ferdie
-> - Alice//stash
-> - Bob//stash
-> - Charlie//stash
-> - Dave//stash
-> - Eve//stash
-> - Ferdie//stash
+- Alice
+- Bob
+- Charlie
+- Dave
+- Eve
+- Ferdie
+- Alice//stash
+- Bob//stash
+- Charlie//stash
+- Dave//stash
+- Eve//stash
+- Ferdie//stash
 
 ### Show only Errors and Contract Debug Output
 
@@ -453,10 +467,6 @@ $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d
       "params": ["0x0e0626477621754200486f323e3858cd5f28fcbe52c69b2581aecb622e384764", null]
     }'
 ```
-
-### More Details
-
-For more detailed documentation please visit the [`swanky-node` GitHub repo].
 
 ## Documentation
 
