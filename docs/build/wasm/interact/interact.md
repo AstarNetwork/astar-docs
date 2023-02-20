@@ -93,7 +93,7 @@ const { gasRequired, storageDeposit, result } = await contract.query.enter(
   {
     gasLimit: gasLimit,
     storageDepositLimit: null,
-    value: new BN('1000000000000000000') // 1 Astar, or it could be value you want to send to the contract in title
+    value: new BN('1000000000000000000') // amount of native token to transfer to the contract when it's a payable message (by default it's 0)
   }
 )
 
