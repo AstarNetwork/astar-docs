@@ -93,10 +93,10 @@ import { sendTransaction } from '@astar-network/astar-sdk-core';
 
 try {
   const result = await sendTransaction(
-    api,
-    contract,
-    'enter',
-    account.address,
+    api, // The api instance of type ApiPromise
+    contract, // The contract instance of type ContractPromise
+    'enter', // The message to send or transaction to call
+    account.address, // The sender address
     new BN('1000000000000000000') // 1 TOKEN or it could be value you want to send to the contract in title
   )
 
