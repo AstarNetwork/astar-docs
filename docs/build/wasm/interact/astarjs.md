@@ -92,7 +92,13 @@ The parameters for the helper function are:
 import { sendTransaction } from '@astar-network/astar-sdk-core';
 
 try {
-  const result = await sendTransaction(api, contract, 'enter', account.address, new BN('1000000000000000000'))
+  const result = await sendTransaction(
+    api,
+    contract,
+    'enter',
+    account.address,
+    new BN('1000000000000000000') // 1 TOKEN or it could be value you want to send to the contract in title
+  )
 
   result.signAndSend(account.address, (res) => {
     if (res.status.isInBlock) {
