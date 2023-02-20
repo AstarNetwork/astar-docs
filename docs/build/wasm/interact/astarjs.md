@@ -48,7 +48,6 @@ main()
 import { Abi, ContractPromise } from '@polkadot/api-contract'
 
 // After compiling the contract a ABI json is created in the artifacts. Import the ABI:
-// If you didn't use swanky the name will be metadata.json
 import ABI from './artifacts/lottery.json'
 
 const abi = new Abi(ABI, api.registry.getChainProperties())
