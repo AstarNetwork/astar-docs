@@ -2,9 +2,9 @@
 sidebar_position: 2
 ---
 
-# Create and manage a PSP22 asset on Shibuya
+# Create and manage a PSP22 assets on Shibuya
 ## TL;DR
-During this guide, we'll be guiding you in creating and managing your PSP22 asset. 
+This guide will be help you in create and manage your PSP22 assets.
 
 ---
 
@@ -33,7 +33,7 @@ Not available in the contract studio, but another utility is the [TokenTimelock]
 ## Compile your PSP22 contract
 When you decide on your PSP22 contract, you can download all files needed to compile by clicking on the ‘Download’ button on the top right. After downloading, unzip the files.
 :::caution
-Make sure your environment is set to compile ink! smart contract. If your environment is not set, follow the guide here.
+Make sure your environment is set to compile ink! smart contract. If your environment is not set, follow the guide [here](https://docs.astar.network/docs/builder-guides/xvm_wasm/setup_your_ink_environment).
 :::
 ### Step 1
 You can now open your Terminal and navigate to the folder with the downloaded files.
@@ -41,7 +41,7 @@ You can now open your Terminal and navigate to the folder with the downloaded fi
 ![02](img/02.png)
 
 ### Step 2
-Next is to compile your smart contract by using the:
+Next is to compile your smart contract by using this line:
 
 ```rust
 cargo +nightly contract build
@@ -54,10 +54,10 @@ You can find the files in your folder under `target > ink`.
 ---
 
 ### Deploy your PSP22 contract on Shibuya
-Astar ecosystem has 3 networks: Astar, our mainnet, connected to Polkadot; Shiden, our canary network; and Shibuya, our testnet. Deploying your contract and how to use it is the same on all our networks. 
+Astar ecosystem has 3 networks: Astar, our mainnet, connected to Polkadot; Shiden, our canary network; and Shibuya, our testnet. Deploying and using your contract is the same on all our networks. 
 
 ### Step 1
-Go to our testnet [Shibuya](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/accounts). In this guide, I will use [Polkadot.JS](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/accounts), but you can also use the contract UI or our Swanky all-in-one tool.
+Go to our testnet [Shibuya](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/accounts). In this guide, we will use [Polkadot.JS](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/accounts), but you can also use the contract UI or our Swanky all-in-one tool.
 
 :::caution
 Make sure you have an account on Shibuya with testnet tokens. You can get your testnet tokens through our faucet.
@@ -67,15 +67,15 @@ Navigate to the contract dashboard `Developer > Contracts`:
 ![04](img/04.png)
 
 ### Step 2
-We will now upload our contract and set the initial state. My PSP22 contract used in this guide has the metadata extension added to the contract. If you didn’t, you would not have the same screen as me in the guide.
+We will now upload our contract and set the initial state. The PSP22 contract used in this guide has the metadata extension added to the contract. If you didn’t add this, you will not have the same screen.
 
 ![05](img/05.png)
 
-Because of adding the metadata extension, I can now set all the information for my asset. To finish, click on ‘Deploy’ and ‘Sign’ your message.
+By adding the metadata extension, we can now set all the information for my asset. To finish, click on ‘Deploy’ and ‘Sign’ your message.
 
 ![06](img/06.png)
 
-When deployed, your contract will be visible with your other contracts.
+When deployed, your new contract will be visible with your other contracts.
 
 ![07](img/07.png)
 
