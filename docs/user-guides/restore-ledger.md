@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # How to restore Ledger wallet on Polkadot.js
 
-Some of you might have issues making transactions with Ledger wallet on the portal. Restoring the Ledger seed phrase on Polkadot.js may help the issue.  
+Some of you might have issues making transactions with Ledger wallet on the portal. This is because the Ledger App that you are using is a minimal version. For now, restoring the Ledger seed phrase on Polkadot.js may help the issue.  
 
 <br />
 

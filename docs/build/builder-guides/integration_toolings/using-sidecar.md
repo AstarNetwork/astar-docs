@@ -10,10 +10,12 @@ The Substrate API Sidecar is a REST service that makes it easy to interact with 
 
 ![diagram](img/sidecar-diagram.jpg)
 
-Instead of having to use the Substrate RPC directly and rely on libraries like `Astar.js` or `Polkadot.js`, you can set up a Substrate API server and interact with the blockchain like reading block history, listening to events, or submitting a transaction, all through a REST API server.
+Instead of having to use the Substrate RPC directly and rely on libraries like `Astar.js` or `Polkadot.js`, you can set up a Substrate API server and interact with the blockchain. For example, you can read block history, listen to events, or submit a transaction, all through a REST API server.
 
 The source code for the Substrate Sidecar API can be found here: <https://github.com/paritytech/substrate-api-sidecar>.
-Please refer to the README of the repository for more information.
+Please refer to the README of the repository for more information. 
+
+Below we will quickly walk through setting up a Substrate API Sidecar.
 
 ## Quick Start
 
@@ -25,7 +27,7 @@ npm install -g @substrate/api-sidecar
 yarn global add @substrate/api-sidecar
 ```
 
-Make sure that you are running a local Astar collator that the service can connect to.
+Make sure that you are running a local Astar collator for the service can connect to.
 
 Run the service from any directory on your machine:
 
@@ -33,7 +35,7 @@ Run the service from any directory on your machine:
 substrate-api-sidecar
 ```
 
-If everything worked well, the terminal should display something like this:
+If everything works well, the terminal should display something like this:
 
 ```bash
 SAS:
@@ -203,7 +205,7 @@ The result will look something like the following:
 
 You can find the full endpoint documentation from [this link](https://paritytech.github.io/substrate-api-sidecar/dist/).
 
-For signing transaction for the `/transaction` endpoint, please refer to the Polkadot documentation regarding [transaction construction](https://wiki.polkadot.network/docs/build-transaction-construction).
+For transaction signing for the `/transaction` endpoint, please refer to the Polkadot documentation regarding [transaction construction](https://wiki.polkadot.network/docs/build-transaction-construction).
 
 ## Connecting to a Remote Node
 

@@ -10,7 +10,7 @@ This cookbook will go through how to extract and analyze on-chain data of Astar 
 
 ## What is Covalent?
 
-Covalent leverages big-data technologies to create meaning from hundreds of billions of data points, delivering actionable insights to investors and allowing developers to allocate resources to higher-utility goals within their organization. Instead of pain-stakingly sourcing data from a small handful of chains, Covalent aggregates information from across dozens of sources including nodes, chains and data feeds. The Covalent API then sources end users with individualized data by wallet, including current and historical investment performance across all types of digital assets. Most importantly, Covalent returns this data in a rapid and consistent manner, incorporating all relevant data within one API interface.
+Covalent leverages big-data technologies to create meaning from hundreds of billions of data points, delivering actionable insights to investors and allowing developers to allocate resources to higher-utility goals within their organization. Instead of pain-stakingly sourcing data from a small handful of chains, Covalent aggregates information from across dozens of sources including nodes, chains, and data feeds. The Covalent API then sources end users with individualized data by wallet, including current and historical investment performance across all types of digital assets. Most importantly, Covalent returns this data in a rapid and consistent manner, incorporating all relevant data within one API interface.
 
 ## Analyzing ArthSwap pool balance
 
@@ -18,7 +18,7 @@ As an example in this cookbook, we will analyze the change in the balance of ceU
 
 Make sure to sign up for Covalent to get the API key needed to run the code. (You can register [here](https://www.covalenthq.com/))
 
-### Step1: Extract data
+### Step 1: Extract data
 
 Before we do any data transformation and analytics, we need a list of historical portfolio data of ceUSDC/ceUSDT pool contract as our first step. To get the information, we need to send the following request (see the reference section in this cookbook for more info on API format):
 
@@ -50,9 +50,9 @@ Below is a sample output:
 
 `{'data': {'address': '0xd72a602c714ae36d990dc835ea5f96ef87657d5e', 'updated_at': '2022-09-20T07:17:27.930341337Z', 'next_update_at': '2022-09-20T07:22:27.930341567Z', 'quote_currency': 'USD', 'chain_id': 592, 'items': [{'contract_decimals': 6, 'contract_name': 'USD Coin', 'contract_ticker_symbol': 'USDC', 'contract_address': '0x6a2d262d56735dba19dd70682b39f6be9a931d98', 'supports_erc': None, 'logo_url': '[https://logos.covalenthq.com/tokens/592/0x6a2d262d56735dba19dd70682b39f6be9a931d98.png](https://logos.covalenthq.com/tokens/592/0x6a2d262d56735dba19dd70682b39f6be9a931d98.png)', 'holdings': [{'timestamp': '2022-09-20T00:00:00Z', 'quote_rate': 0.9932833, 'open': {'balance': '391683183282', 'quote': 389052.34}, 'high': {'balance': '392123445379', 'quote': 389489.66}, 'low': {'balance': '316424219770', 'quote': 314298.88}, 'close': {'balance': '317469504720', 'quote': 315337.16}}, {'timestamp': '2022-09-19T00:00:00Z', 'quote_rate': 1.0022721, 'open': {'balance': '391991979278', 'quote': 392882.62}, 'high': {'balance': '392739045673', 'quote': 393631.4}, 'low': {'balance': '389667428685', 'quote': 390552.8}, 'close': {'balance': '391683183282', 'quote': 392573.16}},` ...
 
-### Step2: Transform the data into lists
+### Step 2: Transform the data into lists
 
-After data extraction is done in step 1, we will transform that data into a few lists so it can be easily handed when using Pandas which is a data analytics library for Python. A few functions are created in the code below to transform the data into lists.
+After data extraction is done in step 1, we will transform that data into three lists so it can be easily handled using Pandas, a data analytics library for Python. The code below creates a few functions that transform our data into lists.
 
 ```python
 import requests
@@ -91,7 +91,7 @@ print(usdc_token_balance_list)
 print(usdt_token_balance_list)
 ```
 
-The output will look as follows. The first list is a list of timestamps, second is liquidity of USDC (in USD), and the third is liquidity of USDT (in USD) in each day.
+The output will look as follows. The first list is a series of timestamps, the second is liquidity of USDC (in USD), and the third is liquidity of USDT (in USD) on each day.
 
 ```python
 ['08-21', '08-22', '08-23', '08-24', '08-25', '08-26', '08-27', '08-28', '08-29', '08-30', '08-31', '09-01', '09-02', '09-03', '09-04', '09-05', '09-06', '09-07', '09-08', '09-09', '09-10', '09-11', '09-12', '09-13', '09-14', '09-15', '09-16', '09-17', '09-18', '09-19', '09-20']
@@ -99,9 +99,9 @@ The output will look as follows. The first list is a list of timestamps, second 
 [317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368, 317368]
 ```
 
-### Step3: Transform the data to Pandas ****Dataframe****
+### Step 3: Transform the data to Pandas Dataframe
 
-Using the lists created in step2, we will transform them into Pandas Dataframe so that they can be turned into a graph in the next step.
+Now, let's transform the lists created in Step 2 into Pandas Dataframe so that they can be turned into a graph in next step.
 
 ```python
 import pandas as pd
@@ -141,7 +141,7 @@ lp_df = pd.DataFrame(data = [usdc_token_balance_list, usdt_token_balance_list], 
 print(lp_df.T)
 ```
 
-The output will look as follows and you can see that the lists have turned into a dataframe.
+The output will look as follows. You can see that the lists have turned into a dataframe.
 
 ```python
        USDC    USDT
@@ -178,9 +178,9 @@ The output will look as follows and you can see that the lists have turned into 
 09-20  391683  392573
 ```
 
-### Step4: Visualizing the data
+### Step 4: Visualizing the data
 
-As the final step, we will visualize the liquidity of USDC and USDT of the pool for each day using the dataframe from the previous step.
+In this final step, we will use our dataframe to visualize the liquidity of USDC and USDT in the pool for each day.
 
 ```python
 %matplotlib inline
@@ -227,9 +227,11 @@ The output will look as follows:
 
 ![1](img/1.png)
 
-After all the steps, we were able to visualize the historical balance of ceUSDC/ceUSDT pool on ArthSwap using Covalent and Python. From the graph you can see the liquidity for both USDT and USDC on 9/20 is $400K.
+That's it!
 
-This is just a simple example, but there is a lot of API opened by Covalent and endless ways to utilize those data to come out with useful insight.
+This guide demonstrated how we can easily visualize the historical balance of ceUSDC/ceUSDT pool on ArthSwap using Covalent and Python. Creating a graph like this can be a useful reference tool for your project. For example, anyone can use the graph in this eample to see the liquidity for both USDT and USDC on 9/20 was $400K. No need to go digging for specific on-chain data.
+
+This is just a simple example. There is a lot of API opened by Covalent and endless ways to use those data to create insightful graphs, and other reference resources.
 
 ## Reference
 
