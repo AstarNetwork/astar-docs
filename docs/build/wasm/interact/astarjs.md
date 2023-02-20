@@ -104,31 +104,7 @@ try {
     }
   })
 } catch (error) {
-  if (error.isErr) {
-    let display = ''
-    if (error.asErr.isModule) {
-      const dispatchError = api.registry.findMetaError(error.asErr.asModule)
-      console.log('error', dispatchError.name)
-      display = dispatchError.docs.length ? dispatchError.docs.concat().toString() : dispatchError.name
-    } else {
-      display = error.asErr.toString()
-    }
-
-    console.log(display)
-    return
-  }
-
-  if (error.isOk) {
-    const flags = error.asOk.flags.toHuman()
-    if (flags.includes('Revert')) {
-      console.log('Revert')
-      const type = contract.abi.messages[5].returnType
-      const typeName = type?.lookupName || type?.type || ''
-      const error = contract.abi.registry.createTypeUnsafe(typeName, [error.asOk.data]).toHuman()
-
-      console.log(error ? (error as any).Err : 'Revert')
-      return
-    }
-  }
+  // If there is an error, it will be thrown here
+  console.log(error)
 }
 ```
