@@ -27,6 +27,7 @@ This is a simple lottery dapp that allows users to enter and draw the lottery. T
 import { ApiPromise } from '@polkadot/api';
 import { WsProvider } from '@polkadot/rpc-provider';
 import { options } from '@astar-network/astar-api';
+import { sendTransaction } from '@astar-network/astar-sdk-core';
 
 async function main() {
     const provider = new WsProvider('ws://localhost:9944');
@@ -81,63 +82,24 @@ const { gasRequired, result, output } = await contract.query.pot(
 
 #### Send Contract Transaction
 
+Sending contract transaction normally is a 2 step process. First is to query the transaction and check for errors. We have a helper function to do this for you. The second step is to send the transaction. The helper function will return the transaction object which you can use to sign and send the transaction.
+The parameters for the helper function are:
+
+- api: The api instance
+- contract: The contract instance
+- message: The message to send
+- sender: The sender address
+- value: The value to send with the transaction
+- ...params: The parameters for the message
+
 ```js
-const gasLimit = api.registry.createType(
-  'WeightV2',
-  api.consts.system.blockWeights['maxBlock']
-)
 
-// First dry run the transaction to get the gas required and storage deposit
-const { gasRequired, storageDeposit, result } = await contract.query.enter(
-  account.address,
-  {
-    gasLimit: gasLimit,
-    storageDepositLimit: null,
-    value: new BN('1000000000000000000') // amount of native token to transfer to the contract when it's a payable message (by default it's 0)
-  }
-)
+import { sendTransaction } from '@astar-network/astar-sdk-core';
 
-console.log('gasRequired', gasRequired.toHuman())
-console.log('storageDeposit', storageDeposit.toHuman())
+try {
+  const result = await sendTransaction(api, contract, 'enter', account.address, new BN('1000000000000000000'))
 
-// Handle the error
-if (result.isErr) {
-  let error = ''
-  if (result.asErr.isModule) {
-    const dispatchError = api.registry.findMetaError(result.asErr.asModule)
-    console.log('error', dispatchError.name)
-    error = dispatchError.docs.length ? dispatchError.docs.concat().toString() : dispatchError.name
-  } else {
-    error = result.asErr.toString()
-  }
-
-  console.log(error)
-  return
-}
-
-// Handle the revert
-if (result.isOk) {
-  const flags = result.asOk.flags.toHuman()
-  if (flags.includes('Revert')) {
-    console.log('Revert')
-    console.log(result.toHuman())
-    const type = contract.abi.messages[5].returnType
-    const typeName = type?.lookupName || type?.type || ''
-    const error = contract.abi.registry.createTypeUnsafe(typeName, [result.asOk.data]).toHuman()
-
-    console.log(error ? (error as any).Err : 'Revert')
-    return
-  }
-}
-
-await contract.tx
-  .enter({
-    gasLimit: gasRequired,
-  // in case storage deposit is charged for the transaction set this as storageDeposit
-    storageDepositLimit:  storageDeposit.isCharge ? storageDeposit.asCharge.toString() : null,
-    value: new BN('1000000000000000000')
-  })
-  .signAndSend(account.address, (res) => {
+  result.signAndSend(account.address, (res) => {
     if (res.status.isInBlock) {
       console.log('in a block')
     }
@@ -146,4 +108,32 @@ await contract.tx
       console.log('Successfully entered in lottery!')
     }
   })
+} catch (error) {
+  if (error.isErr) {
+    let display = ''
+    if (error.asErr.isModule) {
+      const dispatchError = api.registry.findMetaError(error.asErr.asModule)
+      console.log('error', dispatchError.name)
+      display = dispatchError.docs.length ? dispatchError.docs.concat().toString() : dispatchError.name
+    } else {
+      display = error.asErr.toString()
+    }
+
+    console.log(display)
+    return
+  }
+
+  if (error.isOk) {
+    const flags = error.asOk.flags.toHuman()
+    if (flags.includes('Revert')) {
+      console.log('Revert')
+      const type = contract.abi.messages[5].returnType
+      const typeName = type?.lookupName || type?.type || ''
+      const error = contract.abi.registry.createTypeUnsafe(typeName, [error.asOk.data]).toHuman()
+
+      console.log(error ? (error as any).Err : 'Revert')
+      return
+    }
+  }
+}
 ```
