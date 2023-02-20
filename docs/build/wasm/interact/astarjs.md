@@ -2,15 +2,11 @@
 sidebar_position: 1
 ---
 
-# Interact with Wasm Smart Contract
-
-## Wallets
-
-## Astar.js
+# Astar.js for Wasm Smart Contracts
 
 [Astar.js](https://github.com/AstarNetwork/astar.js/wiki) is a JavaScript library for interacting with the Astar blockchain. It is a collection of modules that allow you to interact with the Astar blockchain through a local or remote node. It can be used in the browser or in Node.js.
 
-### Installation
+## Installation
 
 ```bash
 yarn add @polkadot/api@9.13.6 @astar-network/astar-api@0.1.14
@@ -19,9 +15,9 @@ yarn add @polkadot/api@9.13.6 @astar-network/astar-api@0.1.14
 Example: Here is a dapp example that uses Astar.js to interact with WASM smart contract. You can find the source code [dApp](https://github.com/astarNetwork/wasm-lottery)
 This is a simple lottery dapp that allows users to enter and draw the lottery. The lottery is implemented as a WASM smart contract.
 
-### Usage
+## Usage
 
-#### Connecting to API
+### Connecting to API
 
 ```js
 import { ApiPromise } from '@polkadot/api';
@@ -46,7 +42,7 @@ async function main() {
 main()
 ```
 
-#### Initialise Contract Class
+### Initialise Contract Class
 
 ```js
 import { Abi, ContractPromise } from '@polkadot/api-contract'
@@ -61,7 +57,7 @@ const abi = new Abi(ABI, api.registry.getChainProperties())
 const contract = new ContractPromise(api, abi, address) // address is the deployed contract address
 ```
 
-#### Query Contract Messages
+### Query Contract Messages
 
 ```js
 
@@ -80,7 +76,7 @@ const { gasRequired, result, output } = await contract.query.pot(
   )
 ```
 
-#### Send Contract Transaction
+### Send Contract Transaction
 
 Sending contract transaction normally is a 2 step process. First is to query the transaction and check for errors. We have a helper function to do this for you. The second step is to send the transaction. The helper function will return the transaction object which you can use to sign and send the transaction.
 The parameters for the helper function are:
