@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Interact with a WASM smart contract using Astar.js
 ## TL;DR
-Here we'll be guide you on how to interact with a Wasm smart contract using Astar.js.
+Here we'll guide you on how to interact with a Wasm smart contract using Astar.js.
 
 ## Working Example
 You can find a working example with flipper contract [here](https://github.com/AstarNetwork/wasm-flipper).
