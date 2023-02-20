@@ -39,7 +39,9 @@ Swanky CLI is a Node.js CLI app that uses Polkadot.js API on the backend, alongs
 
 The CLI can be used in a few ways.
 
-> Note that using the precompiled binaries, NPM, or compiling it yourself requires you to have the [local environment set up](../environment/ink_environment.md) correctly
+:::note
+Note that using the precompiled binaries, NPM, or compiling it yourself requires you to have the [local environment set up](../environment/ink_environment.md) correctly
+:::
 
 #### Recommended Method: Use dev container
 

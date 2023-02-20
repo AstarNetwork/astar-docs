@@ -85,7 +85,9 @@ The above (and more) can be automatically generated using the `swanky-cli` tool.
 
 After [setting up the environment](./basic-contract.md) follow the [instructions](https://docs.astar.network/docs/wasm/sc-dev/swanky/#installation) to install the `swanky` tool to your machine.
 
-> Note: If you're using the [swanky dev container](https://github.com/AstarNetwork/swanky-dev-container), swanky-cli tool is already installed
+:::note
+Note: If you're using the [swanky dev container](https://github.com/AstarNetwork/swanky-dev-container), swanky-cli tool is already installed
+:::
 
 To generate a new project, simply run
 
