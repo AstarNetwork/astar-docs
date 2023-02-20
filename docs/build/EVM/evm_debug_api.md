@@ -8,7 +8,13 @@ Geth's debug APIs and OpenEthereum's trace module provide non-standard RPC metho
 
 > Thanks to the PureStake team, the Polkadot ecosystem has tracing capabilities similar to that of Geth, and OpenEthereum. Astar Network implements the same approach for Astar EVM tracing, due to it being the best solution we have at the moment, for the Polkadot ecosystem.
 
-## Supported RPC Methods
+::: note 
+
+Tracing features are currently available as part of pre-release v5.x.x of Astar
+
+:::
+
+## Debugging RPC Methods
 
 The following RPC methods are available:
 
@@ -33,13 +39,13 @@ To change the default values you can add CLI flags when spinning up your tracing
 
 ## Run a Debugging Node
 
-
 To use the supported RPC methods, you need to run a node in debug mode, which is slightly different than running a full node. Additional flags will also need to be used to tell the node which of the non-standard features to support.
 
 Spinning up a debug or tracing node is similar to running a full node. However, there are some additional flags that you may want to enable specific tracing features:
 
 * `--ethapi=debug` - optional flag that enables `debug_traceTransaction`
 * `--ethapi=trace` - optional flag that enables `trace_filter`
+* `--ethapi=txpool` - optional flag that enables `txpool_content`, `txpool_inspect`, `txpool_status`
 * `--wasm-runtime-overrides=<path/to/overrides>` - required flag for tracing that specifies the path where the local Wasm runtimes are stored
 * `--runtime-cache-size 64` - required flag that configures the number of different runtime versions preserved in the in-memory cache to 64
 * `--ethapi-trace-max-count <uint>` - sets the maximum number of trace entries to be returned by the node. _The default maximum number of trace entries a single request of trace_filter returns is_ **500**
@@ -83,3 +89,22 @@ curl http://127.0.0.1:9933 -H "Content-Type:application/json;charset=utf-8" -d \
 ```
 
 The node responds with the trace information corresponding to the filter.
+
+### Using transaction pool API
+
+For example, launch node with txpool RPC enabled on Shibuya testnet.
+
+```
+astar-collator --ethapi=txpool --chain=shibuya
+```
+
+And then let's get pool status using `curl` HTTP POST request.
+
+```
+curl http://127.0.0.1:9933 -H "Content-Type:application/json;charset=utf-8" -d \
+  '{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"txpool_status", "params":[],"after":0,"count":20}]
+  }'
+```
