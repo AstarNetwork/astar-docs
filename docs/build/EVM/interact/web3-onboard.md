@@ -1,26 +1,35 @@
 ---
-sidebar_position: 8
+sidebar_position: 1
 ---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
 # Web3 EVM Wallet Library
 
-With a few lines of code you can now bring your app into the web3 world and connect to the Astar EVM networks
+With a few lines of code you can now bring your app into the web3 world and connect to the Astar EVM networks.
 
- Web3-Onboard is the quickest and easiest way to add multi-wallet and multi-chain support to your project. With built-in modules for more than 35 unique hardware and software wallets, Web3-Onboard saves you time and headaches.
+Web3-Onboard is the quickest and easiest way to add multi-wallet and multi-chain support to your project. With built-in modules for more than 35 unique hardware and software wallets, Web3-Onboard saves you time and headaches.
 
- Simply
+## Install
+<Tabs>
+<TabItem value="yarn" label="yarn" default>
 
- ```bash
+```bash
 yarn add @web3-onboard/core @web3-onboard/injected-wallets @web3-onboard/react ethers
- ```
+```
 
- or
+</TabItem>
+<TabItem value="npm" label="npm">
 
- ```bash
- npm i @web3-onboard/core @web3-onboard/injected-wallets @web3-onboard/react ethers
- ```
+```bash
+npm i @web3-onboard/core @web3-onboard/injected-wallets @web3-onboard/react ethers
+```
+</TabItem>
+</Tabs>
 
- Then just use this prepared config file.  Can be easilly adapted for VueJs and others frameworks.
+## Configure
+Use this prepared config file. It can be easilly adapted for VueJs and others frameworks.
 
  ```js
 import React from 'react'
@@ -98,8 +107,8 @@ let ethersProvider
 if (wallet) {
   ethersProvider = new ethers.providers.Web3Provider(wallet.provider, 'any')
 }
- ```
-
+```
+## Use
 Now you only need a button to connect and activate the wallet.
 
 ```jsx
