@@ -6,6 +6,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # ink! Environment
+
 ## Overview
 
 This guide is designed for those who are getting started with ink! or Wasm smart contracts in the Astar ecosystem. Before you can get started you need to make sure your environment supports Rust.
@@ -14,7 +15,7 @@ This guide is designed for those who are getting started with ink! or Wasm smart
 
 ## What is Ink!
 
-Ink! is a Rust eDSL developed by Parity, that specifically targets smart contract development for Substrate’s `pallet-contracts`. Ink! is not trying to invent a new programming language, but rather, adapting a subset of Rust to serve smart contract developers, specifically. If this isn't reason enough on its own to convince you to learn more about ink!, you can find many more [here](https://use.ink/why-rust-for-smart-contracts). 
+Ink! is a Rust eDSL developed by Parity, that specifically targets smart contract development for Substrate’s `pallet-contracts`. Ink! is not trying to invent a new programming language, but rather, adapting a subset of Rust to serve smart contract developers, specifically. If this isn't reason enough on its own to convince you to learn more about ink!, you can find many more [here](https://use.ink/why-rust-for-smart-contracts).
 
 Another frequently asked question when discussing Wasm smart contracts is: Why use WebAssembly for smart contracts? You can find all the answers [here](https://use.ink/why-webassembly-for-smart-contracts).
 
@@ -43,7 +44,7 @@ rustup target add wasm32-unknown-unknown --toolchain nightly
 
 ### Ink! [CLI](https://use.ink/getting-started/setup#ink-cli)
 
-The first and most important tool we will be installing is [cargo-contract](https://github.com/paritytech/cargo-contract), a CLI tool for setting up and managing WebAssembly smart contracts written with ink! 
+The first and most important tool we will be installing is [cargo-contract](https://github.com/paritytech/cargo-contract), a CLI tool for setting up and managing WebAssembly smart contracts written with ink!
 
 As a prerequisite, you will need to install the [binaryen](https://github.com/WebAssembly/binaryen) package, used to optimize WebAssembly contract bytecode.
 
@@ -51,12 +52,14 @@ As a prerequisite, you will need to install the [binaryen](https://github.com/W
 <TabItem value="Debian/Ubuntu" label="Debian/Ubuntu" default>
 
 - Using `apt-get`
+
 ```sh
 apt-get update
 apt-get -y install binaryen
 ```
 
 - Using `apt`
+
 ```sh
 apt update
 apt -y install binaryen
@@ -108,9 +111,16 @@ You can then use `cargo contract --help` to start exploring the commands made 
 
 ---
 
+## Dev container
+
+The above process can be automated by utilising a preinstalled and preconfigured dev container.
+
+Detailed instructions how to use and configure the dev container can be found on [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container)
+
 ## Reference
 
 - [Ink! Github repo](https://github.com/paritytech/ink)
 - [Ink! Intro repo](https://paritytech.github.io/ink/)
 - [Ink! Official Documentation](https://use.ink)
 - [Ink! Rust doc](https://paritytech.github.io/ink/ink_lang/)
+- [swanky-dev-container](https://github.com/AstarNetwork/swanky-dev-container)
