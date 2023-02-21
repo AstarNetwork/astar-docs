@@ -4,12 +4,12 @@ sidebar_position: 4
 
 # Burn
 
-If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
+If you are starting the tutorial from here, please check out this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
 
-## 1. Add Burn functions to Pair trait
-We will implement [burn](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L134) function of Pair contract.   
-In *./logics/traits/pair.rs* add the **burn** function to Pair trait as well as internal child function **_safe_transfer**.
-Also add the function to emit burn event that will have to be implemented in the contract:
+## 1. Add Burn Functions to Pair Trait
+At this stage, we will implement a [burn](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L134) function in the Pair contract.   
+In *./logics/traits/pair.rs* add the **burn** function to the Pair trait, as well as the internal child function **_safe_transfer**.
+Also, we will add a function to emit a burn event in the contract:
 
 ```rust
 pub trait Pair {
@@ -34,10 +34,10 @@ pub trait Pair {
 }
 ```
 
-## 2. Safe transfer
+## 2. Safe Transfer
 
-in Pair.sol contract, inside burn function there is [_safeTransfer](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L148). In PSP22 transfer is [safe by default](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#psp22receiver) if its implement `PSP22Receiver` which is the case for Openbrush PSP22 implementation (in [_do_safe_transfer_check](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L172))
-It will use a basic call to **transfer** of PSP22:
+In the Pair.sol contract, within the burn function, there is a [_safeTransfer](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L148) function. In PSP22, a transfer is [safe by default](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#psp22receiver) if it's implemented with `PSP22Receiver`, which is the case for the Openbrush PSP22 implementation (in [_do_safe_transfer_check](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L172))
+We will use a basic call to **transfer** the PSP22:
 ```rust
 impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
     ...
@@ -62,14 +62,14 @@ use ink_prelude::vec::Vec;
 
 ### 3. Burn
 
-First line of the function is the same as mint (as we get the same values). 
+The first line of this function is the same as mint (as we obtain the same values). 
 In the [line #147](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L147) `_burn(address(this), liquidity);` actually calls the burn of the internal ERC20 (as Pair is an extended ERC20).
 The flow of the function body:
-1. First get reserves, balances and liquidity
-2. mint_fee
-3. burn liquidity and transfer token from contract to `to`
-4. update reserves
-5. emit event
+1. First obtain the values for reserves, balances and liquidity.
+2. `mint_fee`
+3. Burn liquidity and transfer token from contract to `to`
+4. Update reserves.
+5. Emit an event.
 
 ```rust
 impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
@@ -126,7 +126,7 @@ impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
 }
 ```
 
-Add the empty implementation of **_emit_burn_event**. It should have `default` keyword as we will override this function in Pair contract:
+Add the empty implementation of **_emit_burn_event**. It should have the `default` keyword as we will override this function in the Pair contract:
 ```rust
 impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
     ...
@@ -176,7 +176,7 @@ pub enum PairError {
 
 ## 4. Implement Event
 
-in the contracts *./contracts/pair/lib.rs* add the Event struct and override the implementation of emit event:
+In the contracts *./contracts/pair/lib.rs* file, add the Event struct and override the implementation of emit event:
 ```rust
 ...
 #[ink(event)]
@@ -209,9 +209,8 @@ impl Pair for PairContract {
 ...
 ```
 
-And that's it!    
-You learned how to easily add advanced Rust & ink! implementation.
-Check your Pair contract with (to run in contract folder):
+And that's it! In these examples we have demonstrated how to easily build an advanced Rust & ink! implementation.
+Check your Pair contract with (run in contract folder):
 ```console
 cargo contract build
 ```

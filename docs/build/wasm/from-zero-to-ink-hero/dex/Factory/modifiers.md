@@ -4,12 +4,12 @@ sidebar_position: 3
 
 # Custom Modifier
 
-in factory contract prior entering **setFeeTo** and **setFeeToSetter** there is a [check](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L41) that caller is `feeToSetter`.
+In the Factory contract, prior to the **setFeeTo** and **setFeeToSetter** entries, there is a [check](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L41) that occurs, and the caller is `feeToSetter`.
 Let's create a custom modifier for it.
 
 ## `only_fee_setter`
 
-In *.logics/impls/factory/factory.rs* import `modifier_definition` and `modifiers`:
+In the *.logics/impls/factory/factory.rs* file, import `modifier_definition` and `modifiers`:
 ```rust
 use openbrush::{
     modifier_definition,
@@ -22,11 +22,11 @@ use openbrush::{
 };
 ```
 
-Let's define the generic modifier below the `impl` block. Some rules generic type parameters:
-- If it should use Storage structs - it should take it as type parameter
-- It should have the same return type - `Result<R, E>` where E is wrapped in From Trait
+Let's define the generic modifier below the `impl` block. Some rules for the generic type parameters:
+- If it should use Storage structs - it should accept a type parameter.
+- It should have the same return type - `Result<R, E>` where E is wrapped in From Trait.
 
-In the body of modifier we ensure that caller is the address stored as `fee_to_setter` and return an Error otherwise:
+In the body of the modifier we will ensure that the caller address is equal to `fee_to_setter`, otherwise return an Error:
 ```rust
 #[modifier_definition]
 pub fn only_fee_setter<T, F, R, E>(instance: &mut T, body: F) -> Result<R, E>
@@ -42,7 +42,7 @@ pub fn only_fee_setter<T, F, R, E>(instance: &mut T, body: F) -> Result<R, E>
 }
 ```
 
-Add the modifier on top of **set_fee_to** and **set_fee_to_setter**:
+Prepend the modifier to the top of the **set_fee_to** and **set_fee_to_setter** functions:
 ```rust
 #[modifiers(only_fee_setter)]
 fn set_fee_to(&mut self, fee_to: AccountId) -> Result<(), FactoryError> {
@@ -70,7 +70,7 @@ pub enum FactoryError {
 }
 ```
 
-And that's it! Check your Factory contract with (to run in contract folder):
+And that's it! Check your Factory contract with (run in the contract folder):
 ```console
 cargo contract build
 ```

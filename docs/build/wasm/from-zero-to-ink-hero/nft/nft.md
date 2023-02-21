@@ -4,8 +4,12 @@ sidebar_position: 1
 
 # Prerequisites
 
-This tutorial targets developers with an **intermediate** level in ink! and Rust.   
-Please follow this tutorial first:
+This tutorial is suitable for developers with **intermediate** knowledge of ink! and basic understanding of Rust. Using the examples provided, you will build and deploy a PSP34 NFT using ink! with functions commonly seen in NFT projects.
+- [PSP34 standard](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md)
+
+# Prerequisites
+
+Previous experience compiling and deploying an ink! smart contract will be beneficial, such as from following the previous Flipper contract guide:
 
 | Tutorial                                                                   | Difficulty                     |
 |----------------------------------------------------------------------------|--------------------------------|

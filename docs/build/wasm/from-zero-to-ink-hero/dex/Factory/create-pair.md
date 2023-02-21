@@ -4,15 +4,15 @@ sidebar_position: 2
 
 # Create Pair
 
-If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
+If you are starting the tutorial from here, please check out this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
 
 ## 1. Add Create Pair to Factory Trait
 
-We will implement [createPair](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L23) function of Factory contract.   
-In *./logics/traits/factory.rs* add the **create_pair** function to Factory trait as well as the internal child function **_instantiate_pair** that will have to be implemented in the contract crate.
-The reason why we need an internal **_instantiate_pair** here is because the instantiate builder is not part of `#[openbrush::wrapper]` so we need to use the one from ink! by importing Pair contract as `ink-as-dependancy`.
+We will implement the [createPair](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L23) function of the Factory contract.   
+In the *./logics/traits/factory.rs* file, add the **create_pair** function to the Factory trait, as well as the internal child function **_instantiate_pair** that will need to be implemented in the contract crate.
+The reason why we need an internal **_instantiate_pair** function here is because the instantiate builder is not part of the `#[openbrush::wrapper]`, so we will need to use the one from ink! by importing the Pair contract as an `ink-as-dependancy`.
 The **create_pair** message function returns the address of the instantiated Pair contract.
-Add also the function to emit create_pair event that will have to be implemented in the contract:
+The function that emits a create_pair event will also have to be implemented in the contract:
 ```rust
 pub trait Factory {
     ...
@@ -37,7 +37,7 @@ pub trait Factory {
 
 ## 2. Implement Create Pair
 
-In *./logics/impls/factory/factory.rs* let's implement **create_pair** function body:
+In the *./logics/impls/factory/factory.rs* file, let's implement the **create_pair** function body:
 #### 1. Checks that addresses are not identical
 
 AccountId derives `Eq` trait, so comparison operators can be used:
@@ -65,21 +65,21 @@ let token_pair = if token_a < token_b {
 };
 ```
 
-#### 3. Checks if first tuple address is not ZERO_ADDRESS
+#### 3. Check if the First Tuple Address is not the ZERO_ADDRESS
 ```rust
 if token_pair.0 == ZERO_ADDRESS.into() {
     return Err(FactoryError::ZeroAddress)
 }
 ```
 
-### 4. Instantiate Pair Contract     
-The [generate_address](https://github.com/paritytech/substrate/blob/982f5998c59bd2bd455808345ae1bd2b1767f353/frame/contracts/src/lib.rs#L187) function in `pallet_contract` is akin to the formula of ETH's CREATE2 opcode. There is no CREATE equivalent because CREATE2 is strictly more powerful. Formula: `hash(deploying_address ++ code_hash ++ salt)`
-Instantiation of a contract will determine deterministically the address of the instantiated contract with the concatenated hash of:
+### 4. Instantiate the Pair Contract     
+The [generate_address](https://github.com/paritytech/substrate/blob/982f5998c59bd2bd455808345ae1bd2b1767f353/frame/contracts/src/lib.rs#L187) function in `pallet_contracts` is akin to the formula of ETH's CREATE2 opcode. There is no CREATE equivalent because CREATE2 is strictly more powerful. Formula: `hash(deploying_address ++ code_hash ++ salt)`
+Instantiation of a contract will define its own contract address by using the concatenated hash of:
 - salt (in bytes)
 - address of deployer
 - code_hash    
 
-As `code_hash` and `deployer` (factory contract address) will be unchanged at each call, the `salt_bytes` must be unique for each call. As factory will instance an unique Pair contract for each pair, we can use hash of tokens address as unique salt:
+As the `code_hash` and `deployer` (Factory contract address) values will be unchanged during each call, the `salt_bytes` value must be unique for each call. As the Factory contract will instantiate a unique Pair contract for each pair, we will hash over the token address to produce a unique salt:
 ```rust
 let salt = Self::env().hash_encoded::<Blake2x256, _>(&token_pair);
 let pair_contract = self._instantiate_pair(salt.as_ref())?;
@@ -90,7 +90,7 @@ let pair_contract = self._instantiate_pair(salt.as_ref())?;
 PairRef::initialize(&pair_contract, token_pair.0, token_pair.1)?;
 ```
 
-#### 6. Save in storage mapping in both direction and push par address to all_pairs
+#### 6. Create Storage Mappings in Both Directions and Push the Pair Address to `all_pairs`
 ```rust
 self.data::<data::Data>()
     .get_pair
@@ -101,7 +101,7 @@ self.data::<data::Data>()
 self.data::<data::Data>().all_pairs.push(pair_contract);
 ```
 
-#### 6. Emit create_pair event
+#### 6. Emit a `create_pair` Event
 ```rust
 self._emit_create_pair_event(
     token_pair.0,
@@ -111,12 +111,12 @@ self._emit_create_pair_event(
 );
 ```
 
-#### 7. Return the address of the instantiated contract
+#### 7. Return the Address of the Instantiated Contract
 ```rust
 Ok(pair_contract)
 ```
 
-Full function should look like this:
+The entire function should look like this:
 ```rust
     fn create_pair(
     &mut self,
@@ -159,10 +159,10 @@ Full function should look like this:
 }
 ```
 
-Also implement **_instantiate_pair** with `unimplemented!()` macro in body to ensure it will be overridden in contract (so `default` keyword should be added):
+Implement an **_instantiate_pair** function with an `unimplemented!()` macro in the body, to ensure it will be overridden (`default` keyword should be added):
 ```rust
 default fn _instantiate_pair(&mut self, _salt_bytes: &[u8]) -> Result<AccountId, FactoryError> {
-    // need to be overridden in contract
+    // needs to be overridden in contract
     unimplemented!()
 }
 ```
@@ -185,7 +185,7 @@ use openbrush::traits::{
 
 ### 3. Implement Event
 
-In *./logics/impls/factory/factory.rs* add empty implementation of **_emit_create_pair_event**:
+In the *./logics/impls/factory/factory.rs* file, add empty implementation of **_emit_create_pair_event**:
 ```rust
 default fn _emit_create_pair_event(
     &self,
@@ -197,7 +197,7 @@ default fn _emit_create_pair_event(
 }
 ```
 
-in the contracts *./contracts/factory/lib.rs* add the `PairCreated` event struct and override the implementation of emit event:
+Within the contracts folder, in the *./contracts/factory/lib.rs* file, add a `PairCreated` event struct and override the implementation of emit event:
 ```rust
 ...
 use ink_lang::{
@@ -238,10 +238,10 @@ impl Factory for FactoryContract {
 }
 ```
 
-### 4. Override _instantiate_pair
+### 4. Override `_instantiate_pair`
 
-As you cannot call constructor of contract using `#[openbrush::wrapper]`, we need to use contract Ref from ink!.     
-If you want to import a contract as `ink-as-dependency` it should be built as a library crate `rlib`. Add this to the `Cargo.toml` of Pair contract in *./contracts/pair/Cargo.toml*:
+As it's not possible to call a constructor of a contract using `#[openbrush::wrapper]`, we will need to use a contract Ref from ink!.     
+If you would like to import a contract as an `ink-as-dependency`, it should be built as a library crate `rlib`. Add this to the `Cargo.toml` of the Pair contract in the *./contracts/pair/Cargo.toml* file:
 ```toml
 ...
 [lib]
@@ -254,7 +254,7 @@ crate-type = [
 ...
 ```
 
-Then import Pair contract as `ink-as-dependency` in Factory contract. Add dependency to the `Cargo.toml` of Factory contract in *./contracts/factory/Cargo.toml*:
+Then import the Pair contract as an `ink-as-dependency` in the Factory contract. Add the dependency to the `Cargo.toml` of the Factory contract in the *./contracts/factory/Cargo.toml* file:
 ```toml
 ...
 pair_contract = { path = "../pair", default-features = false, features = ["ink-as-dependency"] }
@@ -277,7 +277,7 @@ std = [
 ]
 ```
 
-In the contract crate  *./contracts/factory/lib.rs* add imports statements:
+In the contract crate *./contracts/factory/lib.rs* add import statements:
 ```rust
 ...
 use ink_lang::{
@@ -303,7 +303,7 @@ impl Factory for FactoryContract {
 ```
 
 #### 2. Instantiate Pair
-Use [create builder](https://github.com/paritytech/ink/blob/v3.4.0/crates/env/src/call/create_builder.rs) from ink!. we call **new** constructor from Pair and pass no endowment (as storage rent has been removed it is not needed). it returns the accountId back to the caller:
+Using [create builder](https://github.com/paritytech/ink/blob/v3.4.0/crates/env/src/call/create_builder.rs) from ink! we call a **new** constructor from Pair, and pass no endowment (as storage rent has been removed it is not needed). This returns the accountId back to the caller:
 ```rust
 ...
 let pair = PairContractRef::new()
@@ -334,9 +334,9 @@ fn _instantiate_pair(&mut self, salt_bytes: &[u8]) -> Result<AccountId, FactoryE
 }
 ```
 
-### 5. Implement Errros
+### 5. Implement Error Handling
 
-In *./logics/traits/factory.rs* implement `From` trait from `PairError` and add it to `FactoryError`. Also add Error variants used in create pair implementation:
+In the *./logics/traits/factory.rs* file, implement `From` trait from `PairError` and add it to `FactoryError`. Also add Error variants used in the create pair implementation:
 ```rust
 use crate::traits::pair::PairError;
 ...
@@ -357,7 +357,7 @@ impl From<PairError> for FactoryError {
 ```
 
 
-And that's it! Check your Factory contract with (to run in contract folder):
+And that's it! Check your Factory contract with (run in contract folder):
 ```console
 cargo contract build
 ```

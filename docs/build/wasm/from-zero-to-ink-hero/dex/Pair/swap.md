@@ -4,14 +4,14 @@ sidebar_position: 5
 
 # Swap
 
-If you start tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/burn_end) and open it in your IDE.
+If you are starting the tutorial from here, please check out this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/burn_end) and open it in your IDE.
 
-## 1. Add Swap functions to Pair trait
+## 1. Add Swap Functions to Pair Trait
 
-We will implement [swap](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L159) function of Pair contract.  
-[Swap](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps) is a way for traders to trade one PSP22 token for another in a simple way.    
-In *./logics/traits/pair.rs* add the **swap** function to Pair trait. As this function modify the state, it should take a `&mut self` as first argument.
-Also add the function to emit swap event that will have to be implemented in the contract:
+At this stage, we will implement a [swap](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L159) function in the Pair contract.  
+[Swap](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps) is a way for traders to exchange one PSP22 token for another one in a simple way.    
+In the *./logics/traits/pair.rs* file add the **swap** function to the Pair trait. As this function modifies the state, `&mut self` should be used as the first argument.
+Also, we will add a function to emit a swap event in the contract:
 
 ```rust
 pub trait Pair {
@@ -38,7 +38,7 @@ pub trait Pair {
 
 ## 2. Swap
 
-First check user inputs then *get_reserves* and check liquidity:
+First, check user inputs, then *get_reserves* and check liquidity:
 ```rust
 impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
     ...
@@ -60,7 +60,7 @@ impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
 }
 ```
 
-Then get `token_0` and `token_1` addresses and process the swap while ensuring amounts out are not `0`:
+Then, obtain the `token_0` and `token_1` addresses and process the swap. Ensure the amount transferred out is not `0`:
 ```rust
 ...
     let token_0 = self.data::<data::Data>().token_0;
@@ -78,7 +78,7 @@ Then get `token_0` and `token_1` addresses and process the swap while ensuring a
 ...
 ```
 
-Then gets the balance of the contract for both tokens that will be used to update the price:
+Then, obtain the balance of both token contracts, which will be used to update the price:
 ```rust
 ...
     let contract = Self::env().account_id();
@@ -87,10 +87,10 @@ Then gets the balance of the contract for both tokens that will be used to updat
 ...
 ```
 
-Then you need to ensure that no trade attempted to left the trading pair with less reserves than should be there. 
-`balance_0` and `balance_1` are the balances/reserves after the swap finished, `reserve_0` and `reserve_1` before that (swap is done first and then maybe reverted, when the requirements are not met).
-You need to check that the swap did not reduce the product of the reserves (otherwise liquidity from the pool can be stolen).
-That's why you check `balance_0 * balance_1 >= reserve_0 * reserve_1`.      
+Ensure that no swap attempted will leave the trading pair with less than the minimum amount of reserves. 
+`balance_0` and `balance_1` are the balances/reserves after the swap is finished, and `reserve_0` and `reserve_1` are the values previous to that (swap is done first and then possibly reverted, if the requirements are not met).
+We will need to check that the swap did not reduce the product of the reserves (otherwise liquidity from the pool can be stolen).
+Hence the reason why we check `balance_0 * balance_1 >= reserve_0 * reserve_1`.      
 `balance_0_adjusted` and `balance_1_adjusted` are adjusted with 0.3% swap [liquidity provider fees](https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/fees#liquidity-provider-fees).
 ```rust
 ...
@@ -157,7 +157,7 @@ That's why you check `balance_0 * balance_1 >= reserve_0 * reserve_1`.
     }
 ```
 
-Then update pool reserves and emit swap event:
+Then update the pool reserves, and emit a swap event:
 ```rust
         self._update(balance_0, balance_1, reserves.0, reserves.1)?;
 
@@ -172,7 +172,7 @@ Then update pool reserves and emit swap event:
         Ok(())
 ```
 
-Add the empty implementation of **_emit_swap_event**. It should have `default` keyword as we will override this function in Pair contract:
+Add the empty implementation of **_emit_swap_event**. It should have the `default` keyword, as we will override this function in the Pair contract:
 ```rust
 impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
     ...
@@ -190,7 +190,7 @@ impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
 }
 ```
 
-Adds the Error fields to `PairError` in *./logics/traits/pair.rs*:
+Add the Error fields to `PairError` in the *./logics/traits/pair.rs* file:
 ```rust
 #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
 #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]
@@ -244,7 +244,7 @@ pub enum PairError {
 
 ## 3. Implement Event
 
-in the contracts *./cotnracts/pair/lib.rs* add the Event struct and override the implementation of emit event:
+In the contracts *./cotnracts/pair/lib.rs* file, add the Event struct and override the implementation of emit event:
 ```rust
 ...
 #[ink(event)]
@@ -283,7 +283,7 @@ impl Pair for PairContract {
 ...
 ```
 
-And that's it! Check your Pair contract with (to run in contract folder):
+And that's it! Check your Pair contract with (run in contract folder):
 ```console
 cargo contract build
 ```

@@ -1,25 +1,25 @@
 # PayableMint Trait 
-So far our `mint()` method was very generic giving a freedom to a caller to mint any token, but at the same time not giving insight which tokens are already minted. In this section we will define `mint()` to be more ready for real life NFT project and add several utility methods that can often be found in NFT projects.
+So far, our `mint()` function is quite generic, giving freedom to a caller to mint any token, but at the same time not allowing insight into which tokens have already been minted. In this section we will more clearly define `mint()`, and add several utility functions commonly found in popular NFT projects, that will make this example contract more suitable for production release.
 
-## Extending Trait with utility methods
+## Extending the Trait with Utility Functions
 
 ### `mint(to: AccountId, mint_amount: u64)`
-The `mint()` method now takes receiver NFT account and amount of tokens to be minted.
-This will allow contract to be in charge which token will be minted next and allows minting more than one token at the time.
+The `mint()` function will now accept an NFT receiver account, and amount of tokens to be minted.
+This will allow the contract to control which token will be minted next, and minting of more than one token at a time.
 
 ### `set_base_uri(uri: PreludeString)`
-First we need to import `String` from `ink_prelude` and rename it not to be mixed with Openbrush String Implementation. The difference is that Openbrush String is in fact a vector of u8 elements. Since we expect users to use `utf-8` string we use String from prelude.
+First we need to import `String` from `ink_prelude` and rename it so as to not be confused with the Openbrush String Implementation. The difference is that Openbrush String is in fact a vector of u8 elements, and since we expect users to use `utf-8` strings, we will use String from prelude.
 ```rust
 use ink_prelude::string::String as PreludeString;
 ```
-This method can change `base_uri` for our collection. This is a not often used function but it can come handy in case collection metadata has an error and requires change. Initial `base_uri` will be set during the contract creation and that is described in next section of the tutorial.
+This function is able to change the `base_uri` for our collection. This function is not used frequently, but will come in handy if the collection metadata becomes corrupted and requires updating. The initial `base_uri` will be set during contract creation, which is described in next section.
 
 ### `withdraw()`
-Since our contract now takes native token fees for minting, the contract owner needs to be able to withdraw the funds. Otherwise funds will be forever locked in the contract. This method will have `only_owner` modifier and it allows only contract owner to withdraw funds. The funds will be sent to the owner's address.
+Since our contract accepts native token fees for minting, the owner needs to be able to withdraw the funds, otherwise they'll be locked in the contract forever. This function is set with an `only_owner` modifier, that restricts the ability to withdraw funds to the contract owner, only, which are then transferred to the owner's address.
 
 
 ### `token_uri(token_id: u64) -> PreludeString`
-Given the `token_id` this method will return full `uri` for token's metadata.
+Given the `token_id` this method will return the full `uri` for token's metadata.
 
 ### `max_supply() -> u64;`
 Read the max supply of tokens for this collection.
@@ -27,7 +27,7 @@ Read the max supply of tokens for this collection.
 Read the token price.
 
 ## Full Trait Definition
-Your `logics/traits/payable_mint.rs` will look like this:
+At this stage, your `logics/traits/payable_mint.rs` file should look something like this:
 ```rust
 use ink_prelude::string::String as PreludeString;
 

@@ -1,6 +1,6 @@
 # Custom Trait
 
-As a next step we want to expand contract with more utility methods to have more control over the NFT creation, minting, payments and all that most of the NFT projects will need.
+Next, we will expand the contract with more utility methods to have more control over the NFT creation, minting, payments and all that most of the NFT projects will need.
 To start with we will move `mint()` from contract `lib.rs` to a custom trait `PayableMint`.
 
 ## Folder Structure for Custom Trait
@@ -93,7 +93,7 @@ std = [
 ```
 
 ## Define Custom Trait 
-In `logics/traits/payable_mint.rs` add trait definition for PayableMint.
+In the `logics/traits/payable_mint.rs` file, add a trait_definition for PayableMint.
 ```rust
 use openbrush::{
     contracts::{
@@ -115,10 +115,10 @@ pub trait PayableMint {
 }
 ```
 
-You may notice a couple of new macro commands used. More details on these and other macros can be found throughout the advanced tutorial for DEX.
+You may have noticed some unusual macro commands in these examples. They will be explained in greater detail in the next section as we go over the process of building a DEX. 
 
-## Move `mint()` to Custom Trait Implementation
-Now let's move `mint()` method from the contract's `lib.rs` to the newly created `logics/impls/payable_mint.rs` file. We do not want to have duplicated calls in the contract.
+## Move `mint()` Function to Custom Trait Implementation
+Let's move the `mint()` function from the contract's `lib.rs` to the newly created `logics/impls/payable_mint.rs` file, as we do not want any duplicated calls in the contract.
 
 ```rust
 pub use crate::traits::payable_mint::PayableMint;
@@ -149,7 +149,9 @@ where
     }
 }
 ```
-Last remaining step is to import and implement `PayableMint` for our contract:
+
+The last remaining step is to import and implement `PayableMint` in our contract:
+
 ```rust
 use payable_mint::{
     traits::payable_mint::*,
@@ -160,7 +162,8 @@ use payable_mint::{
 impl PayableMint for Contract {}
 ```
 
-Your contract with all changes should now look like this:
+The contract with all its changes should now appear something like this:
+
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
 #![feature(min_specialization)]
@@ -213,4 +216,4 @@ pub mod shiden34 {
 }
 ```
 
-After this step your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/trait-step3).
+At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/trait-step3).
