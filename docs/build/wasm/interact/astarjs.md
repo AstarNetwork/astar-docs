@@ -132,7 +132,7 @@ try {
 
 ### Send Contract Transaction the hard way
 
-If you want to have more control over the transaction, you can use the 2 step process. First is to query the transaction and check for errors. The second step is to send the transaction.
+If you want to have more control over the transaction, you can use the two steps process. The first step is to dry-run the transaction and check for errors. The second step is to sign and send the transaction.
 
 
 ```js
