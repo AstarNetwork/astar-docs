@@ -184,7 +184,8 @@ if (result.isOk) {
 }
 
 // Gas require is more than gas returned in the query
-// To be safe, we double the gas required
+// To be safe, we double the gasLimit.
+// Note, doubling gasLimit will not cause spending more gas for the Tx
 const estimatedGas = api.registry.createType(
   'WeightV2',
   {
