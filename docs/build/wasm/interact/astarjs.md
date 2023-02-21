@@ -219,7 +219,7 @@ const unsub = await contract.tx
 The above is the current interface for estimating the gas used for a transaction. However, the Substrate runtime has a new interface for estimating the weight of a transaction. This is available on the `api.tx.contracts.call` interface. The interface is the same as the above, however the `gasLimit` is now specified as a `refTime` and  `proofSize`. `refTime` is the time it takes to execute a transaction with a proof size of 1. `proofSize` is the size of the proof in bytes. The `gasLimit` is calculated as `refTime * proofSize`. The `refTime` and `proofSize` can be retrieved from the `api.consts.system.blockWeights` interface.
 
 ### Events
-On the current version of the API, any events raised by the contract will be transparently decoded with the relevant ABI and will be made available on the `result` (from `.signAndSend(alicePair, (result) => {...}`) as `contractEvents`.
+On the current version of the API, any event raised by the contract will be transparently decoded with the relevant ABI and will be made available on the `result` (from `.signAndSend(alicePair, (result) => {...}`) as `contractEvents`.
 
 When no events are emitted this value would be `undefined`, however should events be emitted, the array will contain all the decoded values.
 
