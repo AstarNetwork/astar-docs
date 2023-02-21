@@ -64,7 +64,7 @@ Add the token contract to your MetaMask. Click below in the screen of MetaMask o
 
 ![9](img/9.png)
 
-if you don't know how to connect Astar Network via MetaMask, please refer to [this page](../../quickstart/endpoints.md).
+if you don't know how to connect Astar Network via MetaMask, please refer to [this page](/docs/build/environment/endpoints.md).
 
 ## Support
 

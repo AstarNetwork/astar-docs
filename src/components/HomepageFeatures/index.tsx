@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Start Building</Translate>,
-    link: '/docs/quickstart/',
+    link: '/docs/build/',
     iconClass: 'wrench',
     description: (
       <>
@@ -53,7 +53,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Use EVM</Translate>,
-    link: '/docs/EVM/',
+    link: '/docs/build/evm/',
     iconClass: 'evm',
     description: (
       <>
@@ -63,7 +63,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Use WASM with Swanky</Translate>,
-    link: '/docs/wasm/',
+    link: '/docs/build/wasm/',
     iconClass: 'wasm',
     description: (
       <>
@@ -113,7 +113,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Builder Guides</Translate>,
-    link: '/docs/builder-guides/',
+    link: '/docs/build/builder-guides/',
     iconClass: 'docs',
     description: (
       <>

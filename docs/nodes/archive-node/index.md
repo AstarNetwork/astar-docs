@@ -5,15 +5,15 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-An **archive node** stores the history of past blocks. It plays a vital role on our network: it connects users and dApps to the blockchain through WS and RPC endpoints. For example, our [public endpoints](/docs/quickstart/endpoints) run archive nodes for anyone to quickly connect to Astar.
+An **archive node** stores the history of past blocks. It plays a vital role on our network: it connects users and dApps to the blockchain through WS and RPC endpoints. For example, our [public endpoints](/docs/build/environment/endpoints.md) run archive nodes for anyone to quickly connect to Astar.
 
 **DApp projects** need to run their own archive node to the retrieve necessary blockchain data and not to rely on public infrastructure. Public endpoints respond slower because of the large amount of users connected.
 
 :::caution
-Be careful not to confuse with a **full node** that has a prunned database: a full node only stores the current state and most recent blocks (256 blocks by default) and uses much less storage space.
+Be careful not to confuse with a **full node** that has a pruned database: a full node only stores the current state and most recent blocks (256 blocks by default) and uses much less storage space.
 :::
 
-We manitain 3 different networks: the testnet Shibuya, Shiden as a parachain of Kusama, and Astar as a parachain of Polkadot.
+We maintain 3 different networks: the testnet Shibuya, Shiden as a parachain of Kusama, and Astar as a parachain of Polkadot.
 
 | Astar chain | Relay Chain | Name | Token |
 |---|---|---|---|
@@ -64,7 +64,7 @@ We manitain 3 different networks: the testnet Shibuya, Shiden as a parachain of 
 </Tabs>
 
 ### Ports
-The Astar node runs in parachain configuration, meaning they will listen at different ports by default for both the parachain and the embeeded relay chain.
+The Astar node runs in parachain configuration, meaning they will listen at different ports by default for both the parachain and the embedded relay chain.
 
 |Description| Parachain Port | Relaychain Port | Custom Port Flag |
 |---|---|---|---|
