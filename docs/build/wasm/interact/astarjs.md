@@ -94,7 +94,7 @@ Underlying the above `.query.<messageName>` is using the `api.rpc.contracts.call
 
 ### Send Contract Transaction the easy way
 
-Sending contract transaction normally is a 2 step process. First is to query the transaction and check for errors. We have a helper function to do this for you. The second step is to send the transaction. The helper function will return the transaction object which you can use to sign and send the transaction.
+Sending contract transaction is normally two steps process. The first step is to dry-run the transaction and check for errors. Astar.js has a helper function to do this. This helper function will return the transaction object which you can use to sign and send the transaction.
 
 
 ```js
