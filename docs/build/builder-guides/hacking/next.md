@@ -23,7 +23,7 @@ These ideas can be implemented as WASM or EVM smart contract. Main intention is 
 Explore this [project](https://app.pooltogether.com/) and build your own version in ink!
 
 ### Voting
-Use ink4 from Swanky-node to develop a smart contract which allows people to vote The rules are:
+Use Ink! v4 with Swanky-node to develop a smart contract which allows people to vote The rules are:
 
 * Contract owner initializes a set of candidates (2-10). 
 * Lets anyone vote for the candidates.
@@ -31,11 +31,17 @@ Use ink4 from Swanky-node to develop a smart contract which allows people to vot
 * Displays the vote totals received by each candidate.
 
 ### Tamagotchi
-    1. Requirements TBA, WIP
+Use Ink! v4 with Swanky-node to create a virtual pet smart contract, allowing users to create, interact with, and trade virtual pets securely and transparently on the blockchain.
+Create Tamagotchi: The smart contract should allow users to create a Tamagotchi object with attributes such as hunger, happiness, and energy levels.
+
+* Interact with Tamagotchi: Users should be able to interact with the Tamagotchi object by calling functions to modify its attributes, such as "feed", "play", and "rest".
+* Implement Rules: The smart contract should enforce rules and restrictions to prevent users from overfeeding, neglecting, or exploiting the Tamagotchi object.
+* Track Lifespan: The smart contract should track the Tamagotchi object's lifespan and trigger events such as death, rebirth, or evolution based on its age, level, and behavior.
+* Support Multiple Tamagotchis: The smart contract should support multiple Tamagotchi objects, each with its own set of attributes and state, and allow users to own, trade, or exchange them.
     
 ### Charity Raffle
 
-Use ink4 from Swanky-node to develop a smart contract which allows people to enter a charity raffle. The rules are:
+Use Ink! v4 from Swanky-node to develop a smart contract which allows people to enter a charity raffle. The rules are:
 
 * A user can send in anywhere between 0.01 and 0.1 tokens.
 * A user can only play once.
