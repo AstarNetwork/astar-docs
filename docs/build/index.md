@@ -1,5 +1,5 @@
 # Build on Astar
-![banner](assets/build.png)
+![Documentation of all the resources builders need in order to start testing, deploying and interacting with smart contracts on the Astar network](assets/build.png)
 
 ## Why Build on Astar
 Astar is the most flexible and interoperable decentralized application (dApp) platform in the Polkadot ecosystem, supporting both Wasm and EVM smart contracts, and hybrid Cross-VM dApps able to call into one another. Astar network provides native access to the Polkadot ecosystem through its parachain slot, and asset bridges and general message passing protocols integrated with the ecosystem  provide routes to other major blockchains, including [Ethereum](https://cbridge.celer.network/#/transfer), [BSC](https://cbridge.celer.network/#/transfer), Cosmos, Polygon, and more. Astar network's innovative dApp staking program allows developers to earn a basic income while they build out their products and communities; and Foundation, in coordination with the community, may also provide direct funding to projects through a variety of ecosystem incubation initiatives, such as #MVP2Earn.
