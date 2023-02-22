@@ -1,5 +1,5 @@
 # Builder Guides
-![banner](../assets/gradient5.jpg)
+![banner](../assets/builderguides.png)
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
