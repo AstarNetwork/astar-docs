@@ -23,6 +23,7 @@ To follow this tutorial you will need:
 ## What will be used?
 - [ink! v4.0.0](https://github.com/paritytech/ink/tree/v4.0.0)   
 - [Openbrush 3.0.0](https://github.com/727-Ventures/openbrush-contracts/tree/3.0.0)
+- cargo-contract 2.0.0
 
 ## What will you learn?
 - Full implementation of NFT project in ink!.
