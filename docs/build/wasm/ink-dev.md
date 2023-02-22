@@ -14,7 +14,7 @@ Ink! offers a broad range of features such as:
 
 - idiomatic Rust code
 - Ink! Macros & Attributes - [#[ink::contract]](https://use.ink/macros-attributes/contract)
-- [`Trait` support](https://paritytech.github.io/ink/ink_lang/attr.trait_definition.html)
+- [`Trait` support](https://use.ink/3.x/basics/trait-definitions)
 - Upgradeable contracts - [Delegate Call](https://github.com/paritytech/ink/tree/master/examples/upgradeable-contracts)
 - [Chain Extensions](https://github.com/paritytech/ink/tree/master/examples/rand-extension) (interact with Substrate pallets inside a contract)
 - Off-chain Testing - `#[ink(test)]`
