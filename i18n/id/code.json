@@ -11,7 +11,7 @@
   "Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives.": {
     "message": "Masuk ke dalam ekosistem kami dan pelajari lebih lanjut mengenai Polkadot, Substrate dan inisiatif lainnya."
   },
-  "Start Building": {
+  "Build": {
     "message": "Mulai Membangun"
   },
   "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.": {
@@ -23,14 +23,8 @@
   "Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking.": {
     "message": "Daftarkan dApp anda pada dApp Staking dan dapatkan penghasilan dasar melalui mekanisme staking kami."
   },
-  "Use EVM": {
-    "message": "Penggunaan EVM"
-  },
   "Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles.": {
     "message": "Lebih dalam mengenai EVM pada Astar dan penjelasan bagaimana kontrak EVM dapat berinteraksi dengan modul non-EVM melalui precompiles."
-  },
-  "Use WASM with Swanky": {
-    "message": "Menggunakan WASM dengan Swanky"
   },
   "Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework.": {
     "message": "Menggunakan Swanky Suite untuk memulai membangun smart contract WASM. Dapatkan sekilas pandangan tentang ink! dan ask! WASM contract frameworks dan contoh untuk setiap framework."
@@ -58,9 +52,6 @@
   },
   "Learn how to create different types of wallets, obtain tokens, and manage your assets.": {
     "message": "Mempelajari bagaimana menciptakan beragam tipe wallet, mendapatkan token dan mengatur aset-aset anda."
-  },
-  "'Builder Guides'": {
-    "message": "Panduan Builder"
   },
   "Learn how to use tools and build projects in Astar ecosystem.": {
     "message": "Mempelajari bagaimana menggunakan peralatan (tools) dan mengembangkan proyek dalam ekosistem Astar."
