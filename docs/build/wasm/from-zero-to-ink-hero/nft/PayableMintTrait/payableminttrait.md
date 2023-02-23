@@ -29,7 +29,7 @@ Read the token price.
 ## Full Trait Definition
 At this stage, your `logics/traits/payable_mint.rs` file should look something like this:
 ```rust
-use ink_prelude::string::String as PreludeString;
+use ink::prelude::string::String as PreludeString;
 
 use openbrush::{
     contracts::psp34::PSP34Error,
