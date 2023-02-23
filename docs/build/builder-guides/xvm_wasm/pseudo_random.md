@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 3
 ---
 
 # How to Generate Pseudo-Random Numbers in Ink! Smart Contract
