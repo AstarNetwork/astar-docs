@@ -5,13 +5,13 @@
 You may have noticed while using the Openbrush wizard, that prior to adding the Security -> Ownable trait, the contract will not have the `mint()` function overridden, so anyone is able to mint new tokens, by default.
 
 ```rust
-impl PSP34Mintable for Contract { }
+impl PSP34Mintable for Shiden34 { }
 ```
 
 However, after including the *Ownable* trait, the default `mint()` function will be overridden, and restricted to being called by the contract owner, only. 
 
 ```rust
-impl PSP34Mintable for Contract {
+impl PSP34Mintable for Shiden34 {
     #[ink(message)]
     #[openbrush::modifiers(only_owner)]
     fn mint(
@@ -66,5 +66,15 @@ pub fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error> {
     self._mint_to(account, id)
 }
 ```
+
+Format your code with:
+```bash
+cargo fmt --all
+```
+
+Check if code compiles
+```bash
+cargo +nightly check
+````
 
 At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/mint-step2).
