@@ -1,5 +1,5 @@
 # Builder Guides
-![banner](../assets/builderguides.png)
+![Additional information to help developing on Astar Network](../assets/builderguides.png)
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

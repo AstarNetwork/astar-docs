@@ -1,5 +1,5 @@
 # Setup the Development Environment
-![banner](../assets/environment.png)
+![Development Environment](../assets/environment.png)
 
 Prior to commencing development, you do not need to know how to set up these environments. However, you may want to review the following sections to become more familiar with what they do, and their specific requirements.
 
