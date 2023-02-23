@@ -14,10 +14,7 @@ default fn _emit_transfer_event(&self, _from: Option<AccountId>, _to: Option<Acc
 
 Let's define two events that are required for token handling, *Transfer* and *Approve*, in the contracts's `lib.rs` file. Please note that there is no `Mint` event, as it's covered by the *Transfer* event, in which case `from` will be the contract address.
 ```rust
-use ink_lang::codegen::{
-    EmitEvent,
-    Env,
-};
+use ink::codegen::{EmitEvent, Env};
 
 /// Event emitted when a token transfer occurs.
 #[ink(event)]
@@ -45,7 +42,7 @@ pub struct Approval {
 
 Override the default event emission function:
 ```rust
-impl psp34::Internal for Shiden34Contract {
+impl psp34::Internal for Shiden34 {
     fn _emit_transfer_event(&self, from: Option<AccountId>, to: Option<AccountId>, id: Id) {
         self.env().emit_event(Transfer { from, to, id });
     }
@@ -70,7 +67,16 @@ impl psp34::Internal for Shiden34Contract {
 ## Update Unit Test
 As a final check let's add an event check at the end of our unit test. Since our test minted 5 tokens, we should expect 5 events to be emitted.
 ```rust
-assert_eq!(5, ink_env::test::recorded_events().count());
+assert_eq!(5, ink::env::test::recorded_events().count());
+```
+Format your code with:
+```bash
+cargo fmt --all
+```
+
+Run unit test:
+```bash
+cargo +nightly test
 ```
 
 At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/events).
