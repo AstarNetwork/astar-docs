@@ -72,7 +72,7 @@ Format your code with:
 cargo fmt --all
 ```
 
-Check if code compiles
+Check if code compiles:
 ```bash
 cargo +nightly check
 ````
