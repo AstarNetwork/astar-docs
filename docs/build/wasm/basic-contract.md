@@ -26,9 +26,7 @@ scale = { package = "parity-scale-codec", version = "3", default-features = fals
 scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
 
 [lib]
-name = "my_contract"
 path = "lib.rs"
-crate-type = ["cdylib"]
 
 [features]
 default = ["std"]

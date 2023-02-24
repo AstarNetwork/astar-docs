@@ -26,7 +26,7 @@ Before starting to add code we need to prepare the scene for the external trait.
 ```
 
 ## Module Linking
-With the extended structure we need to link all new modules. Let's start from `logics` folder.   
+With the extended structure we need to link all new modules. Let's start from `logics` folder.
 The crate's `lib.rs` needs to point to `impls` and `trait` folders and since it is top module for this crate it needs a few macros:
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
@@ -54,7 +54,6 @@ openbrush = { tag = "3.0.0", git = "https://github.com/727-Ventures/openbrush-co
 
 [lib]
 path = "lib.rs"
-crate-type = ["rlib"]
 
 [features]
 default = ["std"]
@@ -81,7 +80,7 @@ std = [
 ]
 ```
 
-## Define Custom Trait 
+## Define Custom Trait
 In the `logics/traits/payable_mint.rs` file, add a trait_definition for PayableMint.
 ```rust
 use openbrush::{
@@ -104,7 +103,7 @@ pub trait PayableMint {
 }
 ```
 
-You may have noticed some unusual macro commands in these examples. They will be explained in greater detail in the next section as we go over the process of building a DEX. 
+You may have noticed some unusual macro commands in these examples. They will be explained in greater detail in the next section as we go over the process of building a DEX.
 
 ## Move `mint()` Function to Custom Trait Implementation
 Let's move the `mint()` function from the contract's `lib.rs` to the newly created `logics/impls/payable_mint.rs` file, as we do not want any duplicated calls in the contract.

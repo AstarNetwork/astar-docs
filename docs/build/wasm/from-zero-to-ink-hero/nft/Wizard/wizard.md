@@ -92,12 +92,7 @@ scale-info = { version = "2.3", default-features = false, features = ["derive"],
 openbrush = { tag = "3.0.0", git = "https://github.com/727-Ventures/openbrush-contracts", default-features = false, features = ["psp34", "ownable"] }
 
 [lib]
-name = "shiden34"
 path = "lib.rs"
-crate-type = [
-    # Used for normal contract Wasm blobs.
-    "cdylib",
-]
 
 [features]
 default = ["std"]
@@ -139,7 +134,7 @@ And your folder structure will look like:
         ├── Cargo.toml
         └── lib.rs
 ```
-You are now ready to check if all is set.   
+You are now ready to check if all is set.
 Run in root project folder:
 ```bash
 cargo +nightly check
@@ -152,7 +147,7 @@ Since Openbrush uses `#![feature(min_specialization)]` which is unstable feature
 Check [Setup environment chapter](/docs/build/environment/ink_environment#rust-and-cargo) to instal nightly toolchain.
 :::
 
-## Examine Openbrush Traits 
+## Examine Openbrush Traits
 Let's examine what we have inside module `shiden34` (lib.rs) so far:
 * Defined structure `Shiden34` for contract storage.
 * Implemented constructor `new()` for `Shiden34` structure.
@@ -170,7 +165,7 @@ Each of implemented traits will enrich `shiden34` contract with a set of methods
     * `total_supply()`
 * Openbrush [Metadata](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/metadata.rs)
     * `get_attribute()`
-* Openbrush [Mintable](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/mintable.rs) 
+* Openbrush [Mintable](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/mintable.rs)
     * `mint()`
 * Openbrush [Enumerable](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/enumerable.rs)
     * `owners_token_by_index()`
@@ -194,7 +189,7 @@ Build your contract:
 cd contracts/shiden34
 cargo +nightly contract build --release
 ```
-Use ***shiden34.contract*** target to deploy contract.   
+Use ***shiden34.contract*** target to deploy contract.
 The file is located in this folder:
 ```
 ls target/ink/shiden34/
