@@ -14,9 +14,9 @@ If you are caught in this situation, this tutorial will guide you on how to clai
 
 **Step 1: Identify the contract address that you are staked on**
 1. Go to [Astar Portal](https://portal.astar.network/) and connect to the desired network.
-2. Go to dApp Staking and turn off 'Re-Stake after claiming'.
+2. Go to dApp Staking and turn off `Re-Stake after claiming`.
 ![image](https://user-images.githubusercontent.com/37278708/201064005-8f8f6a84-f509-46d4-b0a0-493dba981957.png)
-3. Go to My dApps. 
+3. Go to `My dApps`. 
 4. You can see the list of dApps that you are staked on.
 5. Go to the info of each dApp that you are staked on and copy the contract address.
 6. Save the contract address as a reference for the next steps.
