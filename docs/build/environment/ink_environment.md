@@ -90,7 +90,6 @@ binary releases at https://github.com/WebAssembly/binaryen/releases
 </TabItem>
 
 </Tabs>
-
 ---
 
 Two other dependencies need to be satisfied to link the ink! contract, for example to warn users about using API's in a way that could lead to security issues.
@@ -106,6 +105,11 @@ cargo install cargo-contract --force --locked
 ```
 
 Use `--force` to ensure you are updated to the most recent `cargo-contract` version.
+
+If you need to install older version of `cargo-contract` use following command (add your version):
+```bash
+cargo install cargo-contract --force --version 1.5.1
+```
 
 You can then use `cargo contract --help` to start exploring the commands made available to you.
 
