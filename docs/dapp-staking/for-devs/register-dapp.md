@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Register dApp
 
-How to register your dApp in our dApp staking mechanism. First, you have to make sure that you meet the [requirements](https://docs.astar.network/docs/dapp-staking/for-devs/requirements). **dApp staking is for all live projects in our ecosystem.** To receive support, the fastest way is to contact a member of [SpaceLabs](https://astar.network/spacelabs/).
+How to register your dApp in our dApp staking mechanism. First, you have to make sure that you meet the [requirements](https://docs.astar.network/docs/dapp-staking/for-devs/requirements). **dApp staking is for all live projects in our ecosystem.** To receive support, the fastest way is to contact a member of [SpaceLabs](https://astarnetwork.notion.site/Astar-SpaceLabs-bee19d9d13ab41ba8d113347ae56448f).
 
 :::info
 - To register a dApp, you need to have 100 SDN or 1000 ASTR tokens + gas fee in your developer's wallet. On our testnet Shibuya you also need to have 100 SBY tokens.
