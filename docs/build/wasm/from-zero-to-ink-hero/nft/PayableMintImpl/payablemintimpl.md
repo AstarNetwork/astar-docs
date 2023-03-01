@@ -1,7 +1,7 @@
 # PayableMint Trait Implementation
 In this section we will: 
 * Define a new data type. 
-* Implement functions defined in the PayableMint trait from the previous section.
+* Implement functions defined in the `PayableMint` trait from the previous section.
 * Update the contract's constructor to accept new parameters.
 * Write a unit test for `mint()`.
 
@@ -35,6 +35,10 @@ Since we introduced data storage, we will need to add a trait bond:
 impl<T> PayableMint for T
 where
     T: Storage<Data>
+        + Storage<psp34::Data<enumerable::Balances>>
+        + Storage<ownable::Data>
+        + Storage<metadata::Data>
+        + psp34::Internal
     {...}
 ```
 
@@ -179,10 +183,10 @@ default fn token_uri(&self, token_id: u64) -> Result<PreludeString, PSP34Error> 
 ## Update Contract
 Since we have added a new type `Data`, let's import it:
 ```rust
-use payable_mint::impls::payable_mint::*;
+use payable_mint_pkg::impls::payable_mint::*;
 ```
 
-Add a new element in the `struct Contract`:
+Add a new element in the `struct Shiden34`:
 ```rust
 #[storage_field]
 payable_mint: types::Data,
@@ -198,7 +202,7 @@ pub fn new(
     max_supply: u64,
     price_per_mint: Balance,
 ) -> Self {
-    ink_lang::codegen::initialize_contract(|instance: &mut Contract|{
+        let mut instance = Self::default();
         instance._init_with_owner(instance.env().caller());
         let collection_id = instance.collection_id();
         instance._set_attribute(collection_id.clone(), String::from("name"), name);
@@ -207,7 +211,7 @@ pub fn new(
         instance.payable_mint.max_supply = max_supply;
         instance.payable_mint.price_per_mint = price_per_mint;
         instance.payable_mint.last_token_id = 0;
-    })
+        instance
 }
 ```
 
@@ -219,8 +223,7 @@ After all imports, let's write a helper method to initiate the contract:
 mod tests {
     use super::*;
     use crate::shiden34::PSP34Error::*;
-    use ink_env::test;
-    use ink_lang as ink;
+    use ink::env::test;
     
     const PRICE: Balance = 100_000_000_000_000_000;
     
@@ -248,7 +251,7 @@ fn mint_multiple_works() {
     let num_of_mints: u64 = 5;
 
     assert_eq!(sh34.total_supply(), 0);
-    test::set_value_transferred::<ink_env::DefaultEnvironment>(
+    test::set_value_transferred::<ink::env::DefaultEnvironment>(
         PRICE * num_of_mints as u128,
     );
     assert!(sh34.mint(accounts.bob, num_of_mints).is_ok());
@@ -265,15 +268,14 @@ fn mint_multiple_works() {
     );
 }
 
-
 fn set_sender(sender: AccountId) {
-    ink_env::test::set_caller::<Environment>(sender);
+    ink::env::test::set_caller::<Environment>(sender);
 }
 ```
 
 Run unit test:
 ```bash
-cargo test
+cargo +nightly test
 ```
 
 At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/payablemint-step5).
