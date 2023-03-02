@@ -107,12 +107,12 @@ cargo install cargo-contract --force --locked
 
 Use `--force` to ensure you are updated to the most recent `cargo-contract` version.
 
-If you need to install older version of `cargo-contract` use following command (add your version):
+If you need to install an older version of `cargo-contract` use the following command by adding your desired version:
 ```bash
 cargo install cargo-contract --force --version 1.5.1
 ```
 
-You can then use `cargo contract --help` to start exploring the commands made available to you.
+You can then use `cargo contract --help` to start exploring all available commands.
 
 ---
 
