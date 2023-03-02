@@ -387,7 +387,7 @@ Important: Debug output is only printed for RPC calls or off-chain tests ‒ not
 
 See the ink! [FAQ](https://ink.substrate.io/faq/#how-do-i-print-something-to-the-console-from-the-runtime) for more details: How do I print something to the console from the runtime?.
 
-### Connect with Polkadot-JS Apps Front-end
+### Connect with Polkadot.js Apps Portal
 
 Once the Swanky Node is running locally, you will be able to connect to it from the **Polkadot-JS Apps** front-end,
 in order to interact with your chain. [Click
