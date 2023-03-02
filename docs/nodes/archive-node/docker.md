@@ -28,7 +28,7 @@ In this guide, we will start a container for both WS and RPC endpoints. If you o
 Launch the docker node in detached mode:
 
 :::tip
-Please make sure to change ${NODE_NAME}
+Please make sure to change {NODE_NAME}
 :::
 
 <Tabs>
@@ -45,13 +45,16 @@ docker run -d \
 staketechnologies/astar-collator:latest \
 astar-collator \
 --pruning archive \
---name ${NODE_NAME} \
+--rpc-cors all \
+--name {NODE_NAME} \
 --chain astar \
---execution Wasm \
---base-path /data \
---rpc-cors=all \
+--base-path /var/lib/astar \
 --rpc-external \
---ws-external
+--ws-external \
+--rpc-methods Safe \
+--rpc-max-request-size 1 \
+--rpc-max-response-size 1 \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -69,13 +72,16 @@ docker run -d \
 staketechnologies/astar-collator:latest \
 astar-collator \
 --pruning archive \
---name ${NODE_NAME} \
---chain shiden \
---execution Wasm \
---base-path /data \
---rpc-cors=all \
+--rpc-cors all \
+--name {NODE_NAME} \
+--chain astar \
+--base-path /var/lib/astar \
 --rpc-external \
---ws-external
+--ws-external \
+--rpc-methods Safe \
+--rpc-max-request-size 1 \
+--rpc-max-response-size 1 \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -93,13 +99,16 @@ docker run -d \
 staketechnologies/astar-collator:latest \
 astar-collator \
 --pruning archive \
---name ${NODE_NAME} \
---chain shibuya \
---execution Wasm \
---base-path /data \
---rpc-cors=all \
+--rpc-cors all \
+--name {NODE_NAME} \
+--chain astar \
+--base-path /var/lib/astar \
 --rpc-external \
---ws-external
+--ws-external \
+--rpc-methods Safe \
+--rpc-max-request-size 1 \
+--rpc-max-response-size 1 \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -145,7 +154,7 @@ docker logs -f -n 100 $(docker ps -aq --filter name="astar-container")
 
 To access data from indexers (lke The Graph) or Oracles (like Chainlink), you need to add the debug flags below to the node launch command, after the `astar-collator` line:
 
-`-l evm=debug,ethereum=debug,rpc=debug`
+`--ethapi=debug`
 
 ### Upgrade node
 
@@ -177,10 +186,7 @@ where `CHAIN` is `astar`, `shiden`, or `shibuya`.
 
 Then start a new container by following the instructions under the [Start Docker node](/docs/nodes/archive-node/docker#start-docker-node) section.
 
-### Relay Chain snapshot
+### Snapshot
 
-If you run a collator it not only needs to sync the mainnet chain but also the complete relay chain from Polkadot/Kusama. This can take up to 3-4 days. Alternatively, you can use a [snapshot of Polkadot/Kusama](https://polkashots.io/) to save a lot of time.
-
-:::caution
-Only use snapshots if you are familiar with how to use them! You can learn more about Polkadot's snapshot services [**here**](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#database-snapshot-services).
+Please refer to [**snapshot page**](/docs/nodes/snapshots/).
 :::
