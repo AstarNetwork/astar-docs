@@ -19,13 +19,11 @@ Collators are responsible for the network stability, it is very important to be 
 ```sh
 ./astar-collator \
   --collator \
-  --rpc-cors all \
-  --name {NODE_NAME} \
-  --base-path {DB_PATH} \
-  --trie-cache-size 0 \
-  --prometheus-external \
+  --name {COLLATOR_NAME} \
   --chain astar \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --base-path /var/lib/astar \
+  --trie-cache-size 0 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -33,14 +31,13 @@ Collators are responsible for the network stability, it is very important to be 
 
 ```sh
 ./astar-collator \
+  --pruning archive \
   --collator \
-  --rpc-cors all \
-  --name {NODE_NAME} \
-  --base-path {DB_PATH} \
-  --trie-cache-size 0 \
-  --prometheus-external \
+  --name {COLLATOR_NAME} \
   --chain shiden \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --base-path /var/lib/astar \
+  --trie-cache-size 0 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -48,14 +45,13 @@ Collators are responsible for the network stability, it is very important to be 
 
 ```sh
 ./astar-collator \
+  --pruning archive \
   --collator \
-  --rpc-cors all \
-  --name {NODE_NAME} \
-  --base-path {DB_PATH} \
-  --trie-cache-size 0 \
-  --prometheus-external \
+  --name {COLLATOR_NAME} \
   --chain shibuya \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --base-path /var/lib/astar \
+  --trie-cache-size 0 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>

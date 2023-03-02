@@ -26,7 +26,7 @@ If you don't have a domain name, you will have to generate a self-signed certifi
 ## Installation
 
 :::info
-In the following steps, don't forget to update ${SUB_DOMAIN} with your full sub domain name.
+In the following steps, don't forget to update {SUB_DOMAIN} with your full sub domain name.
 Example: ws.astar.awesomedappproject.io
 :::
 
@@ -43,14 +43,14 @@ Create and enable the site:
 
 ```sh
 cd /etc/nginx/sites-available
-sudo cp default ${SUB_DOMAIN}
-sudo ln -s /etc/nginx/sites-available/${SUB_DOMAIN} /etc/nginx/sites-enabled/
+sudo cp default {SUB_DOMAIN}
+sudo ln -s /etc/nginx/sites-available/{SUB_DOMAIN} /etc/nginx/sites-enabled/
 ```
 
 Edit the site file:
 
 ```sh
-sudo nano ${SUB_DOMAIN}
+sudo nano {SUB_DOMAIN}
 ```
 
 Change the `root` and `server_name` to get a file like this:
@@ -60,10 +60,10 @@ server {
     listen 80;
     listen [::]:80;
 
-    root /var/www/${SUB_DOMAIN}/html;
+    root /var/www/{SUB_DOMAIN}/html;
     index index.html index.htm index.nginx-debian.html;
 
-    server_name ${SUB_DOMAIN};
+    server_name {SUB_DOMAIN};
 
     location / {
             try_files $uri $uri/ =404;
@@ -86,7 +86,7 @@ Certbot will issue the SSL certificate into `/etc/letsencrypt/live`.
 Edit again the site file:
 
 ```ssh
-sudo nano ${SUB_DOMAIN}
+sudo nano {SUB_DOMAIN}
 ```
 
 Delete the existing lines and set the content as below:
@@ -104,11 +104,11 @@ server {
     listen 443 ssl;
     listen [::]:443 ssl;
 
-    root /var/www/${SUB_DOMAIN}/html;
+    root /var/www/{SUB_DOMAIN}/html;
 
-    server_name ${SUB_DOMAIN};
-    ssl_certificate /etc/letsencrypt/live/${SUB_DOMAIN}/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/${SUB_DOMAIN}/privkey.pem; # managed by Certbot
+    server_name {SUB_DOMAIN};
+    ssl_certificate /etc/letsencrypt/live/{SUB_DOMAIN}/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/{SUB_DOMAIN}/privkey.pem; # managed by Certbot
     ssl_session_timeout 5m;
     ssl_protocols SSLv2 SSLv3 TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers   HIGH:!aNULL:!MD5;
@@ -144,11 +144,11 @@ sudo systemctl restart nginx
 
 This is it, your arcive node is set and available from outside.
 
-If you set a WS endpoint, you can explore the chain from the [Polkadot.js](https://polkadot.js.org/apps) portal using the format wss://${SUB_DOMAIN}
+If you set a WS endpoint, you can explore the chain from the [Polkadot.js](https://polkadot.js.org/apps) portal using the format wss://{SUB_DOMAIN}
 
 ![2](img/2.png)
 
-If you set a **RPC endpoint**, you can it through <https://${SUB_DOMAIN}>
+If you set a **RPC endpoint**, you can it through <https://{SUB_DOMAIN}>
 
 ## Self-signed certificate
 
@@ -167,4 +167,4 @@ ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
 ssl_dhparam /etc/ssl/certs/dhparam.pem;
 ```
 
-In all steps, the ${SUB_DOMAIN} value will be the node server ip address.
+In all steps, the {SUB_DOMAIN} value will be the node server ip address.
