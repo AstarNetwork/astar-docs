@@ -8,21 +8,21 @@ In this tutorial we will guide you through the process of sending and receiving 
 
 <br />
 
-- [Create Astar Accounts(Native and EVM)](#create-astar-accountsnative-and-evm)
+- [Create Astar Accounts(Native and EVM)](#how-to-create-astar-accounts-native-and-evm)
 
-- [Sending ASTR/SDN to Astar Network from Central Exchanges](#sending-astrsdn-to-astar-network-from-central-exchanges)
+- [Sending ASTR/SDN to Astar Network from Central Exchanges](#sending-astrsdn-to-centralized-exchanges-from-astar-network)
 
-- [Sending ASTR/SDN to Central Exchanges from Astar Network](#sending-astrsdn-to-central-exchanges-from-astar-network)
+- [Sending ASTR/SDN to Central Exchanges from Astar Network](#sending-astrsdn-to-centralized-exchanges-from-astar-network)
 
 - [Sending ASTR/SDN to Astar EVM from Astar Native](#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
 
-- [Sending ASTR/SDN to Astar Native from Astar EVM](#sending-astrsdn-to-astar-native-from-astar-evm)
+- [Sending ASTR/SDN to Astar Native from Astar EVM](#sending-astrsdn-to-astar-native-accounts-from-astar-evm)
 
-- [Cross-chain Transfer(XCM)](#cross-chain-transferxcm)
+- [Cross-chain Transfer(XCM)](#cross-chain-transfer-xcm)
 
-- [Transferring cross-chain(XCM) assets into Astar Network](#transferring-cross-chainxcm-assets-into-astar-network)
+- [Transferring cross-chain(XCM) assets into Astar Network](#transferring-cross-chain-xcm-assets-to-astar-network)
 
-- [Transferring cross-chain(XCM) assets to other chains from Astar Network](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+- [Transferring cross-chain(XCM) assets to other chains from Astar Network](#transferring-cross-chain-xcm-assets-to-other-chains-from-astar-network)
 
 - [Cross Virtual Machine Transfer Of ERC20 Tokens(XVM)](#cross-virtual-machine-transfer-of-erc20-tokensxvm)
 
