@@ -8,8 +8,8 @@ This section will guide you on how to register AstarPass/ShidenPass
 
 1. Before registration, you need to have both Native and EVM wallets.
 2. The EVM wallet must have at least 0.01 ASTR and 0.01 SDN respectively for AstarPas and ShidenPass. This is needed for the gas.
-3. For AstarPass, go [HERE](https://astarpass.astar.network/#/register).
-4. For ShidenPass, go [HERE](https://shidenpass.astar.network/#/register).
+3. For AstarPass, go [HERE](https://astarpass.astar.network/register).
+4. For ShidenPass, go [HERE](https://shidenpass.astar.network/register).
 5. Connect both Native and EVM wallets as required.
 6. You will be prompted to sign the transaction on the EVM wallet.
 7. When the transaction is complete, your registration status will be displayed on the screen.

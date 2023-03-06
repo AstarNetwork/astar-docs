@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ### Visit the Portal
 
-Visit the [Assets page](https://portal.astar.network/#/assets), and log in with your MetaMask account to view your assets.
+Visit the [Assets page](https://portal.astar.network/assets), and log in with your MetaMask account to view your assets.
 
 ![6](img/6.png)
 
