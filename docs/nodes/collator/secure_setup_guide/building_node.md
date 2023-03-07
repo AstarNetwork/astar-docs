@@ -150,7 +150,7 @@ cd /usr/local/bin
 </Tabs>
 
 :::tip
-Type in the place of **${COLLATOR\_NAME}**, what you would like to call your node.
+Type in the place of **{COLLATOR\_NAME}**, what you would like to call your node.
 :::
 
 See your node syncing on [https://telemetry.polkadot.io/](https://telemetry.polkadot.io/#list/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6).
@@ -190,13 +190,13 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
   --collator \
-  --rpc-cors all \
-  --name ${COLLATOR_NAME} \
+  --name {COLLATOR_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
+  --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm
 
 Restart=always
 RestartSec=120
@@ -217,13 +217,13 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
   --collator \
-  --rpc-cors all \
-  --name ${COLLATOR_NAME} \
+  --name {COLLATOR_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
+  --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm
 
 Restart=always
 RestartSec=120
@@ -244,13 +244,13 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
   --collator \
-  --rpc-cors all \
-  --name ${COLLATOR_NAME} \
+  --name {COLLATOR_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
+  --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm
 
 Restart=always
 RestartSec=120
@@ -280,13 +280,11 @@ Enable the service:
 sudo systemctl enable astar.service
 ```
 
-## Relay Chain snapshot
+### Snapshot
 
-If you run a collator it not only needs to sync the mainnet chain but also the complete relay chain from Polkadot/Kusama. This can take up to 3-4 days. Alternatively, you can use a [snapshot of Polkadot/Kusama](https://polkashots.io/) to save a lot of time.
-
-:::caution
-Only use snapshots if you are familiar with how to use them! You can learn more about Polkadot's snapshot services [**here**](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#database-snapshot-services).
+Please refer to [**snapshot page**](/docs/nodes/snapshots/).
 :::
+
 
 ## Finalizing
 

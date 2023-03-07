@@ -6,26 +6,8 @@ sidebar_position: 1
 
 ## Overview
 
-A collator usually deploys nodes on remote servers. You can choose your preferred provider for dedicated servers and operating system. You will find our recommendations on this page.
-
-## Hardware requirements
-
-We will provide a basic configuration for reference, which guarantees that all blocks can process in time. If the hardware is inferior to that, there will be malfunctions.
-
-**Mainnet minimum requirements:**
-
-- System: Ubuntu 20.04
-- A dedicated server dedicated to the collator node
-- CPU: 8 cores
-- Memory: 16 GB
-- Hard Disk: 400 GB SSD (storage space will increase with time)
-
-**Basic minimum testnet configuration:**
-
-- System: Ubuntu 20.04
-- CPU: 4 cores
-- Memory: 8 GB
-- Hard Disk: 100 GB (storage space will increase with time)
+A collator deploys its node on a remote server. You can choose your preferred provider for dedicated servers and operating system. Generally speaking, we recommand you to select a provider/server in your region, this will increase decentralization of the network.
+You can choose your preferred operating system, though we highly recommend Linux.
 
 :::tip
 Shibuya is the perfect network to test out your knowledge about running nodes in the Astar ecosystem. To join the collator set on Shibuya you need to apply for a 32k SBY fund.

@@ -25,22 +25,25 @@ Make sure you are connected to the correct network.
 
 ### Stake
 
-Look for your favorite project. The staked TVL is available on the top of the page. Click on the project cards to get more information, go to their communities or check the team accounts. Another great resource is looking in our [forum](https://forum.astar.network/), check [DefilLama](https://defillama.com/) or [DappRadar](https://dappradar.com/).
+
+1. Look for your favorite project. The staked TVL is available on the top of the page. Click on the project cards to get more information, go to their communities or check the team accounts. Another great resource is looking in our [forum](https://forum.astar.network/), check [DefilLama](https://defillama.com/) or [DappRadar](https://dappradar.com/).
+
 
 <div style={{textAlign: 'center'}}>
 
 ![18_projects](img/18_projects.png)
 </div>
 
-To add your staking amount, just press the `Stake` button and go to Staking page.
+2. To add your staking amount, click the `Stake` button and go to Staking page.
 
 <div style={{textAlign: 'center'}}>
 
 ![19_Staking](img/19_Staking.png)
 </div>
 
-- You can either use your funds from the  `Transferable Balance` or other projects you have staked with through [nomination transfer](nomination-transfer)
-- Place the amount you wish to stake and confirm.
+3. You can either use your funds from the `Transferable Balance` or other projects you have staked with through [nomination transfer](nomination-transfer)
+4. Place the amount you wish to stake and confirm. The minimum amount to stake per dApp is 50 SDN/500 ASTR.
+5. Leave 1-2 SDN/2-5 ASTR as transferrable balance in your wallet since it is needed for gas to manage the claiming and re-staking transactions. 
 
 ---
 ---
@@ -63,7 +66,7 @@ Once you have staked, new options to manage your dApp staking will appear on `My
 
 **Unbonding Panel:**
 
-The unbonding panel is where you can see the progress of unbonding and withdraw. Once it’s unbonding we cannot know which dApp you have unbonded from but remain as `Chunks`. There is a unbonding period of 10 ERAs for Astar and 5 EARs on Shiden. After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unbonding](unbonding).
+The unbonding panel is where you can see the progress of unbonding and withdraw. Once it’s unbonding we cannot know which dApp you have unbonded from but remain as `Chunks`. There is a unbonding period of 10 ERAs for Astar and 5 ERAs on Shiden. After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unbonding](unbonding).
 
 ----
 

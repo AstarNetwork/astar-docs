@@ -4,68 +4,36 @@ sidebar_position: 4
 
 # Snapshots
 
-## Shiden
+Generally speaking, using database snapshots is is discouraged, it is a best practice to synchronize database from scratch.
+In some particular cases, it may be needed to use a parachain snapshot. Stakecraft is providing snapshots for Astar and Shiden at <https://snapshots.stakecraft.com/>.
 
-You can download a daily snapshot of Shiden at <https://snapshots.stakecraft.com/>
-
-### Instructions
+## Stakecraft snapshots usage
 
 ```sh
-# remove your Shiden folder in case you already have one
-rm -rf ~/.local/share/astar-collator/chains/shiden/db/full
+# remove your Astar database directory in case you already have one
+rm -rf {BASE_PATH}/chains/{CHAIN}/db
 
 # in case you haven't started a node yet, you need to make the following dir
-mkdir -p ~/.local/share/astar-collator/chains/shiden/db/full
+mkdir -p {BASE_PATH}/chains/{CHAIN}/db/full
 
 # browse the directory
-cd ~/.local/share/astar-collator/chains/shiden/db/full
+cd {BASE_PATH}/chains/{CHAIN}/db/full
 
 # download latest snapshot
-wget -O - COPYURL_FROM_WEBISTE | tar xf -
+wget -O - {STAKECRAFT_WEBSITE_SNAPSHOT} | tar xf -
 ```
 
-## Kusama Relaychain
+Note: `{BASE_PATH}` is the path specified for chain data in the node command
+* The best practice is to set it to `/var/lib/astar`
+* The default path if you don't specify any is `~/.local/share/astar-collator`
 
-You can download the snapshot from <https://polkashots.io/>
+## Relay chain
 
-### Instructions
+Since the introduction of warp sync, it is not necessary and discouraged to use a relay chain snapshot.
+This method downloads finality proofs and state in priority, it allows the relay node to be up with data necessary to the parachain node in less that 15 minutes.
 
-```sh
-# navigate to ksmcc3
-cd /var/lib/astar/shiden-db/polkadot/chains/ksmcc3
-
-# if folder doesn't excist create and go navigate to the folder
-sudo mkdir /var/lib/astar/shiden-db/polkadot/chains/ksmcc3 && cd /var/lib/astar/shiden-db/polkadot/chains/ksmcc3
-
-# download the latest snapshot
-wget https://ksm-rocksdb.polkashots.io/snapshot -O kusama.RocksDb.tar.lz4
-
-# extract snapshot (this can take some time) - make sure you have permission in the directory
-sudo lz4 -c -d kusama.RocksDb.tar.lz4 | tar -x -C /var/lib/astar/shiden-db/polkadot/chains/ksmcc3
-
-# remove file
-rm -v kusama.RocksDb.tar.lz4
-```
-
-## Polkadot Relaychain
-
-You can download the snapshot from <https://polkashots.io/>
-
-### Instructions
+To sync the relay chain in warp mode, just add this at the end of the node command:
 
 ```sh
-# navigate to ksmcc3
-cd /var/lib/astar/astar-db/polkadot/chains/polkadot
-
-# if folder doesn't excist create and go navigate to the folder
-sudo mkdir /var/lib/astar/astar-db/polkadot/chains/polkadot && cd /var/lib/astar/astar-db/polkadot/chains/polkadot
-
-# download the latest snapshot
-wget https://dot-rocksdb.polkashots.io/snapshot -O polkadot.RocksDb.tar.lz4
-
-# extract snapshot (this can take some time) - make sure you have permission in the directory
-lz4 -c -d polkadot.RocksDb.tar.lz4 | tar -x -C /var/lib/astar/astar-db/polkadot/chains/polkadot
-
-# remove file
-rm -v polkadot.RocksDb.tar.lz4
+-- --sync warp
 ```
