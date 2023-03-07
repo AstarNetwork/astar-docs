@@ -26,6 +26,7 @@ Make sure you are connected to the correct network.
 ### Stake
 
 Look for your favorite project. The staked TVL is available on the top of the page. Click on the project cards to get more information, go to their communities or check the team accounts. Another great resource is looking in our [forum](https://forum.astar.network/), check [DefilLama](https://defillama.com/) or [DappRadar](https://dappradar.com/).
+
 <div style={{textAlign: 'center'}}>
 
 ![18_projects](img/18_projects.png)
