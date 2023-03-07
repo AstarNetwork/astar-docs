@@ -299,5 +299,5 @@ impl Flipper {
 
 ### Compile, Deploy and Interact with Contracts
 
-Follow this guide to deploy your contract [using Polkadot UI](https://docs.astar.network/docs/wasm/sc-dev/polkadotjs-ui/). Once deployed, you will be able to interact with it.
+Follow this guide to deploy your contract [using Polkadot UI](https://docs.astar.network/docs/build/wasm/tooling/polkadotjs/). Once deployed, you will be able to interact with it.
 

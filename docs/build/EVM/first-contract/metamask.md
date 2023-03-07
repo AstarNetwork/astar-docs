@@ -6,6 +6,8 @@ sidebar_position: 3
 
 ## Add Network to MetaMask
 
+ >**_NOTE:_** Before  following the instructions below ensure you run a local node on your machine. Follow the instructions [here](https://docs.astar.network/docs/build/environment/local-network/#run-the-local-network).
+
 It's easy to configure MetaMask to interact with the Astar/Shiden network family. To do so, open MetaMask, click the Network tab, and click Custom RPC. In the screen shown, please enter the information shown below:
 
 | Properties                    | Network Details                |
