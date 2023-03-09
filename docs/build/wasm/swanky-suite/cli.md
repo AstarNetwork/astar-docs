@@ -105,7 +105,7 @@ swanky init CONTRACT_NAME
 
 The resulting folder structure should look something like this:
 
-<Figure caption="Folder structure" src={require('../img/01a-folder_structure.png').default} />
+<Figure caption="Folder structure" src={require('../img/swanky-folder-structure.png').default} />
 
 ### Check dependencies and compatibility
 
