@@ -29,7 +29,7 @@ The CLI can be installed and used in different ways:
 - as an npm package
 
 :::note
-Note that using the precompiled binaries, NPM, or compiling it yourself requires you to have the [local environment set up](../environment/ink_environment.md) correctly
+Note that using the precompiled binaries, NPM, or compiling it yourself requires you to have the [local environment set up](../../environment/ink_environment.md) correctly
 :::
 
 ### Dev container (Recommended)
