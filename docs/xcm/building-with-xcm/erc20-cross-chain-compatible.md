@@ -30,9 +30,9 @@ Please note that minting and burning requires certain priviliges - read about **
 
 :::caution
 
-Please not that the `burn()` function in **XC20+** is inhereting the behaviour of `pallet-assets` `burn()` function. Calling `pallet-assets` `burn()` function with a amount higher than the current balance will result in a burn of the amount available, and returning success. 
+Please note that the `burn()` function in **XC20+** is inhereting the behaviour of `pallet-assets` `burn()` function. Calling `pallet-assets` `burn()` function with a amount higher than the current balance will result in a burn of the amount available, and returning success. 
 
-In contracts, the `burn()` implementation in [`ERC20Burnable.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/3214f6c2567f0e7938f481b0a6b5cd2fe3b13cdb/contracts/token/ERC20/ERC20.sol#L283) will burn amount if it is lower or equal to the account's balance.
+In contracts, the `burn()` implementation in [`ERC20Burnable.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/3214f6c2567f0e7938f481b0a6b5cd2fe3b13cdb/contracts/token/ERC20/ERC20.sol#L283) will burn the amount if it is lower or equal to the account's balance.
 
 :::
 
