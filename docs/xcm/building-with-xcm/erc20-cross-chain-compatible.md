@@ -28,6 +28,14 @@ The aforementioned list could be extended in the future.
 
 Please note that minting and burning requires certain priviliges - read about **XC20** assets to learn more.
 
+:::caution
+
+Please note that the `burn()` function in **XC20+** is inhereting the behaviour of `pallet-assets` `burn()` function. Calling `pallet-assets` `burn()` function with a amount higher than the current balance will result in a burn of the amount available, and returning success. 
+
+In contracts, the `burn()` implementation in [`ERC20Burnable.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/3214f6c2567f0e7938f481b0a6b5cd2fe3b13cdb/contracts/token/ERC20/ERC20.sol#L283) will burn the amount if it is lower or equal to the account's balance.
+
+:::
+
 ## Wrapped Tokens
 A wrapped token is a token whose value is tied to an underlying cryptocurrency. An amount of the original token is locked in a digital vault, and in return allows an equivalent amount of wrapped tokens to be minted.
 
