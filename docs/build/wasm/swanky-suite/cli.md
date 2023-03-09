@@ -6,7 +6,7 @@ import Figure from '/src/components/figure'
 import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
-## Swanky CLI
+# Swanky CLI
 
 Swanky CLI is a Node.js CLI app that uses Polkadot.js API on the backend, alongside many existing tools, such as the `cargo contract` CLI. In the future, there will be many additional features to support developers, such as Wasm dApp bootstrapping via smart contract and UI scaffolding, integration tests, management of local nodes, account management, connecting and deploying contracts to both local and remote networks, compiling for various languages from a single CLI app, compatibility checks between the contract pallet and compiler, and much more.
 
@@ -107,12 +107,12 @@ DESCRIPTION
   Generate a new smart contract environment
 ```
 
-<Figure caption="Initiate a project" src={require('./img/01-init.gif').default} />
+<Figure caption="Initiate a project" src={require('../img/01-init.gif').default} />
 
 After responding to the prompts, Swanky will modify the templates, download the node, and run the appropriate installation scripts.
 The resulting folder structure should look something like this:
 
-<Figure caption="Folder structure" src={require('./img/01a-folder_structure.png').default} />
+<Figure caption="Folder structure" src={require('../img/01a-folder_structure.png').default} />
 
 #### `swanky check`
 
@@ -126,7 +126,7 @@ DESCRIPTION
   Check installed package versions and compatibility
 ```
 
-<Figure caption="Verify dependencies" src={require('./img/02-check.gif').default} />
+<Figure caption="Verify dependencies" src={require('../img/02-check.gif').default} />
 
 :::note
 For now, you will need to be be in a project folder to run this command.
@@ -152,7 +152,7 @@ Be careful not to use a dev account on live networks.
 
 To generate a new mnemonic seed, use `-g` or `--generate` flag.
 
-<Figure caption="Generate account" src={require('./img/06-account_generate.gif').default} />
+<Figure caption="Generate account" src={require('../img/06-account_generate.gif').default} />
 
 #### `swanky contract`
 
@@ -187,7 +187,7 @@ DESCRIPTION
   Compile the smart contract(s) in your contracts directory
 ```
 
-<Figure caption="Compile a contract" src={require('./img/03-compile.gif').default} />
+<Figure caption="Compile a contract" src={require('../img/03-compile.gif').default} />
 
 #### `swanky contract deploy`
 
@@ -210,7 +210,7 @@ DESCRIPTION
   Deploy contract to a running node
 ```
 
-<Figure caption="Deploy a contract" src={require('./img/08-deploy.gif').default} />
+<Figure caption="Deploy a contract" src={require('../img/08-deploy.gif').default} />
 
 #### `swanky contract new`
 
@@ -264,4 +264,4 @@ COMMANDS
   node start  Start a local node
 ```
 
-<Figure caption="Start a local node" src={require('./img/07-node_start.gif').default} />
+<Figure caption="Start a local node" src={require('../img/07-node_start.gif').default} />

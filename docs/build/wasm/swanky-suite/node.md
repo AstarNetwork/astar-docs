@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-## Swanky Node
+# Swanky Node
 
 Swanky Node is a Substrate based blockchain configured to enable `pallet-contracts` (a smart contract module), and other features that assist local development of Wasm smart contracts.
 
