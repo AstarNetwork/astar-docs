@@ -8,27 +8,37 @@ import TabItem from '@theme/TabItem'
 
 # Swanky CLI
 
-Swanky CLI is a Node.js CLI app that uses Polkadot.js API on the backend, alongside many existing tools, such as the `cargo contract` CLI. In the future, there will be many additional features to support developers, such as Wasm dApp bootstrapping via smart contract and UI scaffolding, integration tests, management of local nodes, account management, connecting and deploying contracts to both local and remote networks, compiling for various languages from a single CLI app, compatibility checks between the contract pallet and compiler, and much more.
+Swanky CLI is a Node.js based CLI application that abstracts away and extends the functionality of Polkadot.js, `cargo contract`, and other WASM developer tools.
+It aims to ease development of and interaction with WASM smart contracts and provides simple tools to bootstrap contract environment (project) with contract and integration tests templates, manage local node and accounts, language agnostic compile, deploy contracts to both local and remote networks, compatibility checks between the contract pallet and compiler...
 
-### Installing
+With all of the features mentioned above, even more is in active or planned development. The whole project is public, and everyone is welcome to contribute or suggest features:
 
-The CLI can be installed through:
+- [Swanky CLI repo](https://github.com/AstarNetwork/swanky-cli)
+- [Swanky CLI project](https://github.com/orgs/AstarNetwork/projects/3)
 
-- dev-container
-- Binary download
-- npm package
+:::note
+Templates provided in the current version of swanky-cli, as well as environment and supported tools target ink! v4, and use `cargo contract` v2
+:::
+
+## Installing
+
+The CLI can be installed and used in different ways:
+
+- using a preconfigured environment of a dev-container
+- downloading a precompiled binary
+- as an npm package
 
 :::note
 Note that using the precompiled binaries, NPM, or compiling it yourself requires you to have the [local environment set up](../environment/ink_environment.md) correctly
 :::
 
-#### Dev container (Recommended)
+### Dev container (Recommended)
 
 Using [dev container](docs/build/environment/dev-container) is the recommended method to use `swanky-cli`, it includes all the environment setup and will support auto-updates in the future.
 
 To run your project in the dev container follow the steps on [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container).
 
-#### Download the Precompiled Binaries
+### Download the Precompiled Binaries
 
 1. Download the correct archive for your platform from the [releases section of swanky-cli github page](https://github.com/AstarNetwork/swanky-cli/releases).
 
@@ -53,7 +63,7 @@ ln -s /home/my_name/swanky-cli/bin/swanky /usr/local/bin
 </TabItem>
 </Tabs>
 
-#### Globally with npm
+### Globally with npm
 
 This approach may seem simpler, but due to the nature of `Node.js` dependency management, may result in version inconsistency or other errors.
 
@@ -67,72 +77,49 @@ or
 $ npx @astar-network/swanky-cli [command]
 ```
 
-### Swanky-cli Commands
+## Using swanky-cli
 
-#### `swanky help`
+If you're using a dev container, or have followed the installation instructions, you should have `swanky` command available in your terminal.
 
-Display help and usage examples for Swanky commands and subcommands.
+Running it without any arguments (or with `-h`/`--help`) will provide you with a list of top-level commands and the app version.
 
-```
-USAGE
-  $ swanky help [COMMAND] [-n]
+Passing `help` as an argument and providing it `-n`/`--nested-commands` flag will show full list of commands, including nested ones:
 
-ARGUMENTS
-  COMMAND  Command to show help for.
-
-FLAGS
-  -n, --nested-commands  Include all nested commands in the output.
-
-DESCRIPTION
-  Display help for swanky.
+```bash
+swanky help --nested-commands
 ```
 
-#### `swanky init`
+<Figure caption="Full list of commands" src={require('../img/swanky-help.png').default} />
 
-Scaffold a new Wasm project.
+### Bootstrap a new project
+
+Using the `swanky init` command, you'll be prompted for a series of answers to define your project and the first smart contract within it.
+
+After gathering all the required information, the app will proceed to check your environment, scaffold the project, download and install (optionally) swanky node and the project dependencies.
 
 ```
-USAGE
-  $ swanky init [PROJECTNAME] [--swanky-node] [--template blank|flipper|psp22] [-v]
-
-ARGUMENTS
-  PROJECTNAME  directory name of new project
-
-FLAGS
-  -v, --verbose
-  --swanky-node
-  --template=<option>  <options: blank|flipper|psp22>
-
-DESCRIPTION
-  Generate a new smart contract environment
+swanky init CONTRACT_NAME
 ```
 
-<Figure caption="Initiate a project" src={require('../img/01-init.gif').default} />
+<Figure caption="Full list of commands" src={require('../img/swanky-init.png').default} />
 
-After responding to the prompts, Swanky will modify the templates, download the node, and run the appropriate installation scripts.
 The resulting folder structure should look something like this:
 
 <Figure caption="Folder structure" src={require('../img/01a-folder_structure.png').default} />
 
-#### `swanky check`
+### Check dependencies and compatibility
 
-Verify the dependencies needed to run the Swanky project.
+You can quickly check the presence and versions of required dependencies by running `swanky check` command.
 
-```
-USAGE
-  $ swanky check
-
-DESCRIPTION
-  Check installed package versions and compatibility
-```
-
-<Figure caption="Verify dependencies" src={require('../img/02-check.gif').default} />
+<Figure caption="Verify dependencies" src={require('../img/swanky-check.png').default} />
 
 :::note
 For now, you will need to be be in a project folder to run this command.
+
+This command will be updated to fix that, and provide more useful information.
 :::
 
-#### `swanky account`
+### Manage accounts
 
 Create and manage accounts used for contract interaction.
 
