@@ -16,6 +16,9 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt install -y adduser libfontconfig1
 ```
+:::note
+the last command (related to ```libfontconfig1```) is optional and required if you want install Grafana in the later sections of Secure Setup Guide).
+:::
 
 ## Build the node
 
@@ -29,25 +32,23 @@ To build a collator node, you have 3 different options
 
 Building a node from source code is the most complicated path, but will also provide the best optimized node version for your server.
 
-Make sure your server is ready to build a collator:
+Make sure your server is ready to build a collator. The instructions that follow do not go into details which you can find in official [Substrate Docs](https://docs.substrate.io/install/linux/)  
 
 ```
+## Prerequisites (Software required for compilation)
+##
+sudo apt install build-essential
+sudo apt install --assume-yes git clang curl llvm protobuf-compiler
+sudo apt update
+
 ## Install Rust
 ##
-curl https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup update nightly
 rustup target add wasm32-unknown-unknown --toolchain nightly
-
-## Compilation required software
-##
-bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
-sudo apt install cmake 
-sudo apt install git 
-sudo apt install build-essential
-sudo apt update
-sudo apt install clang
 ```
+
 
 Clone the Astar repository:
 
