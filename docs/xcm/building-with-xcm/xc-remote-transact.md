@@ -101,18 +101,6 @@ To simplify the API via which EVM smart contracts send the `Transact` instructio
 
 `DescendOrigin` will ensure that the origin is correctly set to be the smart contract's derived ss58 address.
 
-For example, let's assume you have a contract deployed on Shibuya and are calling the XCM precompile `remote_transact` with the intention of sending an XCM sequence to a sibling parachain. This sibling parachain uses the same address derivation as do our runtimes. The address derivation path will look like this:
-
-| Name | Address |
-| ---- | ------- |
-| Contract H160 Address | `0x48DD0a20a199f96B56eCE7e994D83614A148aA63` |
-| Contract Derived SS58 Address | `agn53DdEuRgQsvgxqj5M1AecxB6LpbXT7T1R1hjVcoEBR6M` |
-| SS58 Address Public Key | `0xd219fe1b02545c7dd7e718b1530b4e32b23288351f61e5975c7dc49b004ff119` |
-| Caller Multilocation | `{ parents: 1, interior: X2 ( Parachain(2000), AccountId32 {network: NetworkId::Any, id: 0xd219f...f119 } ) }` |
-| Derived Account32Hash Address | `5FrhDFydxUwbWyXT1XDBhRUUYpQtiJJ6skB6n2XV4NubC9fP` |
-
-This means that the following instructions like `WithdrawAsset` and `Transact` will be executed as if origin was address `5FrhDFydxUwbWyXT1XDBhRUUYpQtiJJ6skB6n2XV4NubC9fP`.
-
 `WithdrawAsset` at the moment requires that asset representation is present in our runtimes. However, it is expected that the remote chain's derived address will be funded so it can pay for XCM execution.
 
 `BuyExecution` will use the previously withdrawn assets. The `weight_limit` will be set to `Unlimited`. This isn't too important for the instruction sequence being used, since the user controls the maximum allowed weight via the amount of withdrawn assets. However, the funds should be sufficient to pay for both the XCM sequence execution, and the encoded remote call.
@@ -123,7 +111,7 @@ There are no refunds at the end of sequence. Unused weight will be handled by th
 
 ### Remotely Derived Contract Address
 
-For example, let's assume you have a contract deployed on Shibuya and are calling the XCM precompile `remote_transact` with the intention of sending an XCM sequence to a **sibling parachain**. This sibling parachain uses the same address derivation as do our runtimes (described above). The address derivation path will look like this:
+For example, let's assume you have a contract deployed on Shibuya and are calling the XCM precompile `remote_transact` with the intention of sending an XCM sequence to a sibling parachain. This sibling parachain uses the same address derivation as do our runtimes. The address derivation path will look like this:
 
 | Name | Address |
 | ---- | ------- |
@@ -133,7 +121,7 @@ For example, let's assume you have a contract deployed on Shibuya and are callin
 | Caller Multilocation | `{ parents: 1, interior: X2 ( Parachain(2000), AccountId32 {network: NetworkId::Any, id: 0xd219f...f119 } ) }` |
 | Derived Account32Hash Address | `5FrhDFydxUwbWyXT1XDBhRUUYpQtiJJ6skB6n2XV4NubC9fP` |
 
-This means that the instructions like `WithdrawAsset` and `Transact` will be executed on remote chain as if origin was the address `5FrhDFydxUwbWyXT1XDBhRUUYpQtiJJ6skB6n2XV4NubC9fP`.
+This means that the instructions like `WithdrawAsset` and `Transact` will be executed as if origin was address `5FrhDFydxUwbWyXT1XDBhRUUYpQtiJJ6skB6n2XV4NubC9fP`.
 
 ### Precompiles API
 
