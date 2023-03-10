@@ -102,12 +102,12 @@ The following steps are suitable for **binary** usage (built from source or down
 In case you want to run a Docker container, you will have to adapt those.
 :::
 
-Create a dedicated user for the node and move the **node binary**:
+Create a dedicated user for the node and move the **node binary** (in this example, username is ```astar```):
 
 ```
 sudo useradd --no-create-home --shell /usr/sbin/nologin astar
 sudo cp ./astar-collator /usr/local/bin
-chmod +x astar-collator*.tar.gz
+chmod +x /usr/local/bin/astar-collator
 ```
 
 Create a dedicated directory for the **chain storage data**:
@@ -125,7 +125,7 @@ Now, let's go to our binary directory and start the collator manually:
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain astar --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
+sudo -u astar ./astar-collator --collator --chain astar --pruning archive --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -134,7 +134,7 @@ cd /usr/local/bin
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain shiden --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
+sudo -u astar ./astar-collator --collator --chain shiden --pruning archive --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -143,7 +143,7 @@ cd /usr/local/bin
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain shibuya --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
+sudo -u astar ./astar-collator --collator --chain shibuya --pruning archive --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -190,11 +190,11 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
   --collator \
   --name {COLLATOR_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
+  --pruning archive \
   --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 
@@ -217,11 +217,11 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
+  --pruning archive \
   --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 
@@ -244,11 +244,11 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
+  --pruning archive \
   --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 
@@ -283,7 +283,6 @@ sudo systemctl enable astar.service
 ### Snapshot
 
 Please refer to [**snapshot page**](/docs/nodes/snapshots/).
-:::
 
 
 ## Finalizing
@@ -295,4 +294,6 @@ To finalize your collator you need to:
 * Set up your session key
 * Verify your identity
 * Bond tokens
+
+this part is covered in chapter [Spin up a Collator](../spinup_collator.md)
 
