@@ -38,7 +38,7 @@ Using [dev container](docs/build/environment/dev-container) is the recommended m
 
 To run your project in the dev container follow the steps on [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container).
 
-### Download the Precompiled Binaries
+### Download the precompiled binaries
 
 1. Download the correct archive for your platform from the [releases section of swanky-cli github page](https://github.com/AstarNetwork/swanky-cli/releases).
 
@@ -91,6 +91,8 @@ swanky help --nested-commands
 
 <Figure caption="Full list of commands" src={require('../img/swanky-help.png').default} />
 
+Note that every command and subcommand also supports `-h`/`--help` flags to display their usage instructions.
+
 ### Bootstrap a new project
 
 Using the `swanky init` command, you'll be prompted for a series of answers to define your project and the first smart contract within it.
@@ -121,27 +123,25 @@ This command will be updated to fix that, and provide more useful information.
 
 ### Manage accounts
 
-Create and manage accounts used for contract interaction.
+Create and list accounts used for contract interaction.
 
-```
-USAGE
-  $ swanky account COMMAND
+These are the accounts stored inside your `swanky.config.json`, so the command needs to be ran from within the project directory.
 
-COMMANDS
-  account create  Create a new dev account in config
-  account list    List dev accounts stored in config
-  account ls      List dev accounts stored in config
-```
+During account creation you'll have an option of passing your own mnemonic, or have Swanky generate one for you by passing `-g` flag.
 
-When creating a new account with `swanky account create`, you will be asked if you're creating a dev account.
-If you answer YES, the mnemonic seed for that account will not be encrypted, and you will not be asked to create a password, nor input it when interacting with a contract.
-Be careful not to use a dev account on live networks.
+You can also mark the account as "production" which will require you to set a password and encrypt the mnemonic.
 
-To generate a new mnemonic seed, use `-g` or `--generate` flag.
+<Figure caption="Create account with generated mnemonic" src={require('../img/swanky-acc-create.png').default} />
 
-<Figure caption="Generate account" src={require('../img/06-account_generate.gif').default} />
+<Figure caption="Create account with custom mnemonic" src={require('../img/swanky-acc-create-manual.png').default} />
 
-#### `swanky contract`
+Be careful not to use a dev account on live networks, as their mnemonic is stored in plain text in the config!
+
+:::note
+Newly generated accounts that are not the preconfigured dev accounts (Alice, Bob, Charlie...) will have no funds initially, so you'll have to transfer some manually.
+:::
+
+### Interact with contracts
 
 Compile, deploy, call a command on a given contract, or scaffold a new contract inside the project.
 
