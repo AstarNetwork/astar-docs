@@ -143,7 +143,17 @@ Newly generated accounts that are not the preconfigured dev accounts (Alice, Bob
 
 ### Interact with contracts
 
-Compile, deploy, call a command on a given contract, or scaffold a new contract inside the project.
+`swanky contract` command offers several subcommands for different interactions with your contracts.
+
+<Figure caption="Different `contract` subcommands" src={require('../img/swanky-contract-commands.png').default} />
+
+The command names are self explanatory, and to get more detailed information on using a specific command, you can use the help flag with it:
+
+```
+swanky contract SUB_COMMAND --help
+```
+
+#### Compile
 
 ```
 USAGE
