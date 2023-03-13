@@ -38,7 +38,7 @@ Make sure your server is ready to build a collator. The instructions that follow
 ## Prerequisites (Software required for compilation)
 ##
 sudo apt install build-essential
-sudo apt install --assume-yes git clang curl llvm protobuf-compiler
+sudo apt install --assume-yes git clang curl cmake llvm protobuf-compiler
 sudo apt update
 
 ## Install Rust
