@@ -4,23 +4,23 @@ sidebar_position: 1
 
 # Chain Extensions
 
-Chain extension is a way to extend contracts API to add contracts to runtime pallet interaction. By default, contracts can only do cross-contract calls within their environment (pallet-contracts). Chain-extension allows to add custom callable pallet functions.
+Chain extension is a way to extend contracts API to add contracts to runtime pallet interaction. By default, contracts can only do cross-contract calls within their environment (pallet-contracts). Chain extension allows to add custom callable pallet functions.
 
 ![ink-ce](../../img/ink-ce.png)
 
-### What chain-extensions are available ?
+### What chain extensions are available ?
 
 #### XVM
 
-This chain-extension enable usage of XVM in your contracts. More info in the [ink! XVM SDK repo](https://github.com/AstarNetwork/ink-xvm-sdk).
+This chain extension enable usage of XVM in your contracts. More info in the [ink! XVM SDK repo](https://github.com/AstarNetwork/ink-xvm-sdk).
 
 #### Dapps Staking
 
-This chain-extension adds call to `pallet_dapps_staking` so that you can use Dapp Staking in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
+This chain extension adds call to `pallet_dapps_staking` so that you can use Dapp Staking in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
 
 #### Assets
 
-This chain-extension adds call to `pallet_assets` so that you can use Assets in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
+This chain extension adds call to `pallet_assets` so that you can use Assets in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
 
 ### Availability in networks
 
@@ -38,7 +38,7 @@ There is two implementations: one in the runtime and one in ink! side.
 
 #### Runtine
 
-Implementation of the chain-extension on runtime side is available on [astar-frame repository](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.37/chain-extensions)
+Implementation of the chain extension on runtime side is available on [astar-frame repository](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.37/chain-extensions)
 
 #### ink! implementation
 

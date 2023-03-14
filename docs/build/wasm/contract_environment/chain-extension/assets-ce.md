@@ -52,7 +52,7 @@ The same applies for `fn set_metadata()` but it depends on the bytes size you ar
 
 #### Destroy an asset
 
-As destroy functions are not part of the chain-extension, please implement `fn transfer_ownership()` in your contract. And call it to set an external account as owner that will call the _destroy_ extrinsics on his behalf.
+As destroy functions are not part of the chain extension, please implement `fn transfer_ownership()` in your contract. And call it to set an external account as owner that will call the _destroy_ extrinsics on his behalf.
 
 #### Only call on behalf of the contract is implemented
 
