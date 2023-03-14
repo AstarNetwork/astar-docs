@@ -200,7 +200,15 @@ serve PATH_TO_REPORTS
 
 #### Deploy your contract
 
-When your contr
+When your contract is compiled and tested, you can deploy it to a local node or a remote network.
+
+You will need to supply account you wish to deploy the contract from (`-account`), max amount of gas to be used (`-g`), and any arguments required by your contract's constructor (`-a`).
+
+By default, your contract will be deployed to a local node, but you can pass a custom network via `-n`/`--network` flag. Available networks are configured in `swanky.config.json` file.
+
+<Figure caption="Deploying the contract" src={require('../img/swanky-deploy.png').default} width="65%"/>
+
+Successfully running the `deploy` command will print out the address your contract is deployed to, as well as save it into `swanky.config.json`
 
 #### Run queries and transactions
 
