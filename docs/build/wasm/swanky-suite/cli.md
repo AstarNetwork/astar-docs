@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+# Display h2 to h5 headings
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 import Figure from '/src/components/figure'
@@ -89,9 +92,11 @@ Passing `help` as an argument and providing it `-n`/`--nested-commands` flag wil
 swanky help --nested-commands
 ```
 
-<Figure caption="Full list of commands" src={require('../img/swanky-help.png').default} />
+<Figure caption="Full list of commands" src={require('../img/swanky-help.png').default} width="65%" />
 
 Note that every command and subcommand also supports `-h`/`--help` flags to display their usage instructions.
+
+Likewise, most of the commands support `-v` /`--verbose` flag, which you can use to get more detailed output (useful for debugging and reporting errors).
 
 ### Bootstrap a new project
 
@@ -100,20 +105,20 @@ Using the `swanky init` command, you'll be prompted for a series of answers to d
 After gathering all the required information, the app will proceed to check your environment, scaffold the project, download and install (optionally) swanky node and the project dependencies.
 
 ```
-swanky init CONTRACT_NAME
+swanky init PROJECT_NAME
 ```
 
-<Figure caption="Full list of commands" src={require('../img/swanky-init.png').default} />
+<Figure caption="Init process" src={require('../img/swanky-init.png').default} width="65%" />
 
 The resulting folder structure should look something like this:
 
-<Figure caption="Folder structure" src={require('../img/swanky-folder-structure.png').default} />
+<Figure caption="Folder structure" src={require('../img/swanky-folder-structure.png').default} width="65%" />
 
 ### Check dependencies and compatibility
 
 You can quickly check the presence and versions of required dependencies by running `swanky check` command.
 
-<Figure caption="Verify dependencies" src={require('../img/swanky-check.png').default} />
+<Figure caption="Verify dependencies" src={require('../img/swanky-check.png').default} width="65%" />
 
 :::note
 For now, you will need to be be in a project folder to run this command.
@@ -131,11 +136,9 @@ During account creation you'll have an option of passing your own mnemonic, or h
 
 You can also mark the account as "production" which will require you to set a password and encrypt the mnemonic.
 
-<Figure caption="Create account with generated mnemonic" src={require('../img/swanky-acc-create.png').default} />
-
-<Figure caption="Create account with custom mnemonic" src={require('../img/swanky-acc-create-manual.png').default} />
-
 Be careful not to use a dev account on live networks, as their mnemonic is stored in plain text in the config!
+
+<Figure caption="Creating and listing accounts" src={require('../img/swanky-acc-create.png').default} width="65%" />
 
 :::note
 Newly generated accounts that are not the preconfigured dev accounts (Alice, Bob, Charlie...) will have no funds initially, so you'll have to transfer some manually.
@@ -145,7 +148,7 @@ Newly generated accounts that are not the preconfigured dev accounts (Alice, Bob
 
 `swanky contract` command offers several subcommands for different interactions with your contracts.
 
-<Figure caption="Different `contract` subcommands" src={require('../img/swanky-contract-commands.png').default} />
+<Figure caption="Different `contract` subcommands" src={require('../img/swanky-contract-commands.png').default} width="65%" />
 
 The command names are self explanatory, and to get more detailed information on using a specific command, you can use the help flag with it:
 
@@ -155,57 +158,15 @@ swanky contract SUB_COMMAND --help
 
 #### Compile
 
-```
-USAGE
-  $ swanky contract COMMAND
+Depending on the contracts definition in `swanky.config.json`, calling `swanky contract compile CONTRACT_NAME` will run either cargo-contract or ask! compiler (via npm script).
 
-COMMANDS
-  contract call     Call a method on a smart contract
-  contract compile  Compile the smart contract(s) in your contracts directory
-  contract deploy   Deploy contract to a running node
-  contract new      Generate a new smart contract template inside a project
-```
+If you have multiple contracts and wish to compile them all at once, you can pass the `--all` flag instead of the contract name.
 
-#### `swanky contract compile`
+Likewise, if you're compiling for production, you need to pass the `--prod` flag.
 
-```
-Compile the smart contract(s) in your contracts directory
+<Figure caption="Compile all contracts" src={require('../img/swanky-compile.png').default} width="65%"/>
 
-USAGE
-  $ swanky contract compile [CONTRACTNAME] [-v]
-
-ARGUMENTS
-  CONTRACTNAME  Name of the contract to compile
-
-FLAGS
-  -v, --verbose  Display additional compilation output
-
-DESCRIPTION
-  Compile the smart contract(s) in your contracts directory
-```
-
-<Figure caption="Compile a contract" src={require('../img/03-compile.gif').default} />
-
-#### `swanky contract deploy`
-
-Deploy a compiled contract to a running node.
-
-```
-USAGE
-  $ swanky contract deploy [CONTRACTNAME] --account <value> -g <value> [-a <value>] [-n <value>]
-
-ARGUMENTS
-  CONTRACTNAME  Name of the contract to deploy
-
-FLAGS
-  -a, --args=<value>...
-  -g, --gas=<value>      (required)
-  -n, --network=<value>  Network name to connect to
-  --account=<value>      (required) Alias of account to be used
-
-DESCRIPTION
-  Deploy contract to a running node
-```
+#### Deploy and call
 
 <Figure caption="Deploy a contract" src={require('../img/08-deploy.gif').default} />
 
