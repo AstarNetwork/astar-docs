@@ -14,7 +14,7 @@ This guide will also work for ASTR and SDN assets on Astar and Shiden networks.
 
 ## Astar Portal
 
-To access the faucet visit [the portal](https://portal.astar.network/#/assets), and click on the `Faucet` button.
+To access the faucet visit [the portal](https://portal.astar.network/assets), and click on the `Faucet` button.
 
 ![1](img/1.png)
 
