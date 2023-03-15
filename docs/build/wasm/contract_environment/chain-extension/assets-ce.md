@@ -61,7 +61,7 @@ As ink! contract verification is not mature enough for now, only calls on behalf
 
 #### Usage in your contract
 
-:::note
+::: note
 Your contract should be in ink! 4.0.0   
 :::
 
