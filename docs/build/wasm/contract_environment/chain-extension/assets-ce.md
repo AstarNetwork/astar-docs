@@ -47,7 +47,7 @@ fn transfer_keep_alive()
 
 #### Storage deposit
 
-Creating an asset within the smart contract with `fn create()` will reserve `approvalDeposit` amount of contract balance. Either transfer funds to contract or make this function payable.
+Creating an asset within a smart contract with `fn create()` will reserve `approvalDeposit` amount of contract balance. Either transfer funds to contract or make this function payable.
 The same applies for `fn set_metadata()` but it depends on the bytes size you are storing on-chain.
 
 #### Destroy an asset
