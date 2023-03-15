@@ -292,6 +292,26 @@ _Resources:_
 
 ### Interact with a local node
 
-Manage a local node.
+If you have chosen to download and use the Swanky Node during init step, you can use `swanky node` commands to start and manage it.
+
+Simply running `swanky node start` will start the node, and the node will preserve the state across restarts.
+
+If you want to reset the node state, use the `swanky node purge` command.
+
+:::info
+Note that node needs to be running if you are using a default local network with `deploy`, `query` and `tx` commands.
+:::
+
+:::tip
+If you want to use an external UI to interact with the node, you might run into some CORS issues.
+
+This can be solved by passing a custom array of whitelisted urls using the `--rpcCors` flag.
+:::
+
+<Figure caption="Starting the swanky node" src={require('../img/swanky-node-start.png').default} width="65%"/>
+
+_Resources:_
+
+- [_`swanky node` commands usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-node-purge)
 
 ## Using plugins
