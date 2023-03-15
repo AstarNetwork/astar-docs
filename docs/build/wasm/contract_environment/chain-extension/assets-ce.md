@@ -81,7 +81,7 @@ std = [
 ]
 ```
 
-2. Add use statement in your contract module
+2. Add `use` statement in your contract module
 ```rust
 use assets_extension::*;
 
