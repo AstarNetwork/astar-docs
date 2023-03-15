@@ -38,7 +38,7 @@ There are two implementations: one in the runtime and one in ink! side.
 
 #### Runtine
 
-Implementation of the chain extension on runtime side is available on [astar-frame repository](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.37/chain-extensions)
+Implementation of the chain extension on runtime side is available on [astar-frame repository](https://github.com/AstarNetwork/astar-frame/), under `chain-extensions` folder
 
 #### ink! implementation
 
