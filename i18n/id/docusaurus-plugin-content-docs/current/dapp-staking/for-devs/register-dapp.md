@@ -22,7 +22,7 @@ Luncurkan sebuah smart contract di dalam ekosistem kami dan verifikasikan contra
 
 ## Langkah 2
 
-Masuk ke [portal kami](https://portal.astar.network/#/store/discover-dapps) dan klik pada `+ Register dApp`:
+Masuk ke [portal kami](https://portal.astar.network/store/discover-dapps) dan klik pada `+ Register dApp`:
 
 Sertakan semua informasi dalam pop-up window dan tekan register. Harap diingat semua akun anda butuh untuk **disetujui terlebih dahulu oleh kami**, dan kamu mempunyai token yang dibutuhkan di dalam wallet untuk pendaftaran dApp.
 

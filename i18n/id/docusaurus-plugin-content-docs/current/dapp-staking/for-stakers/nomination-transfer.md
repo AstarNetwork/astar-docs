@@ -10,7 +10,7 @@ Dapp Staking didesain untuk mendukung proyek dan para developer dalam ekosistem 
 
 ## Instruksi
 
-Ketika anda membuka [halaman dApp staking kami](https://portal.astar.network/#/dapp-staking/discover), anda akan menemukan semua dApp yang terdaftar dalam mekanisme dApp Staking kami. Petunjuk instruksi semuanya sama dalam Astar Network.
+Ketika anda membuka [halaman dApp staking kami](https://portal.astar.network/dapp-staking/discover), anda akan menemukan semua dApp yang terdaftar dalam mekanisme dApp Staking kami. Petunjuk instruksi semuanya sama dalam Astar Network.
 
 Fungsi ini hanya tersedia bagi para staker yang sudah melakukan staking dalam sebuah dApp. Apabila ini pertama kalinya anda melakukan staking dalam mekanisme dApp Staking, anda dapat membuka [panduan di sini](staking)
 

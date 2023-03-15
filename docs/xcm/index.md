@@ -11,11 +11,11 @@
 
 ## Basic information
 
-XCM, the Cross(X)-Consensus Message format, is a generalized messaging protocol used for communication between blockchain networks of varied consensus models, not exclusive to Polkadot Parachains. XCM facilitates interoperability between different chains by supporting arbitrary message passing, asset transfer, and remote function calls; and can not only be used to build Parachain-native dApps, with no cross-chain functionality at all, but also true multi-chain dApps, that exist in the liminal space between blockchains.
+XCM, the Cross(X)-Consensus Message format, is a messaging protocol that enables communication between blockchain networks with different consensus models, not just Polkadot Parachains. XCM supports arbitrary message passing, asset transfer, and remote function calls, facilitating interoperability between different chains. This means that developers can use XCM to build not only Parachain-native dApps, but also true multi-chain dApps that span multiple blockchains.
 
-Using XCM, developers can create decentralized applications that are able to execute functions across multiple chains, allowing them to improve the user experience, and create new opportunities for cooperation and integration with other projects. XCM opens up new possibilities for development of multi-chain dApps, such as cross-chain DEXs, and future applications that will require communication across multiple blockchain networks.
+With XCM, developers can create decentralized applications that execute functions across multiple chains, improving the user experience and creating new opportunities for cooperation and integration with other projects. XCM enables the development of cross-chain DEXs and other applications that require communication across multiple blockchain networks.
 
-XCM is only one message format of any number that can be supported by the Polkadot network. XCMP (sometimes known as HRMP) the main transport system for horizontal message passing between parachains, is highly scalable and protocol agnostic, and supports all arbitrary messages. VMP (Vertical Message Passing), on the other hand, is message passing between the Relay Chain itself and a parachain, where all the message data exists on the Relay Chain, including both upward and downward messages. This is far less scalable,
+While XCM is only one message format supported by the Polkadot network, it offers significant benefits over other message passing systems. For example, XCMP (sometimes known as HRMP) is a highly scalable and protocol-agnostic transport system for horizontal message passing between parachains that supports all arbitrary messages. In contrast, VMP (Vertical Message Passing) involves message passing between the Relay Chain and a parachain, where all message data exists on the Relay Chain. This makes VMP less scalable than XCMP.
 
 ## External References
 
