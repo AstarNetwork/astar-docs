@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Initiatives
+# Community
 
 [Astar SpaceLabs](https://astar.network/spacelabs/):
 The Astar SpaceLabs is a separate arm within the BizDev department. The Astar SpaceLabs is led by our Community Leaders. This initiative aims to do due diligence on each project and support young developers & projects to launch in the Astar ecosystem. We have picked the Astar Community Leaders on their commitment to the Astar ecosystem and have adequate experience in the crypto industry. 
