@@ -57,7 +57,7 @@ As destroy functions are not part of the chain extension, please implement `fn t
 #### Only call on behalf of the contract is implemented
 
 Chain extension allow to set the orgin of the call as the contract or as the caller. The caller is this case is the address that calls the contract (it can be an user or a contract in case of a cross-contract-call). But allowing call on behalf of the caller means user need to only interact with verified contract. Calling a non verified contract can have a risk for user funds.      
-As ink! contract verification is not mature enough for now, only calls on behalf of the contract is implemented. We are still using an `Origin` enum that has `Address` (address of the contract) or `Caller` (address of the caller) fields. But for now only `Origin::Address` is supported, and `Origin::Caller` will return `OriginCannotBeCaller` Error. So that, in the future, call on behalf of the `Caller` will be activated without any change in the API.
+As ink! contract verification is not mature enough for now, only calls on behalf of the contract are implemented. We are still using an `Origin` enum that has `Address` (address of the contract) or `Caller` (address of the caller) fields. But for now only `Origin::Address` is supported, and `Origin::Caller` will return `OriginCannotBeCaller` Error. So that, in the future, call on behalf of the `Caller` will be activated without any change in the API.
 
 #### Usage in your contract
 
