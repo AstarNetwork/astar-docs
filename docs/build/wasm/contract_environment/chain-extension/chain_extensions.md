@@ -34,7 +34,7 @@ This chain extension adds call to `pallet_assets` so that you can use Assets in 
 
 ### Implementations
 
-There is two implementations: one in the runtime and one in ink! side.  
+There are two implementations: one in the runtime and one in ink! side.  
 
 #### Runtine
 
