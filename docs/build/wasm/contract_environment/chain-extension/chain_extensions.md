@@ -43,7 +43,7 @@ Implementation of the chain extension on runtime side is available on [astar-fra
 #### ink! implementation
 
 On contract side the implementation is made using [ChainExtensionMethod](https://github.com/paritytech/ink/blob/db7a906522a7e97ed5057b193df1253b33e99ee4/crates/env/src/chain_extension.rs#L77) that uses a custom environment
-(so it can be used with other libraries that use custom environment like OpenBrush). It is implementing as a crate that you can import in you contract. It can be found in [chain-extension contracts repository](https://github.com/swanky-dapps/chain-extension-contracts)
+(so it can be used with other libraries that use custom environment like OpenBrush). It is implemented as a crate that you can import in you contract. It can be found in [chain-extension contracts repository](https://github.com/swanky-dapps/chain-extension-contracts)
 
 #### Contracts examples
 
