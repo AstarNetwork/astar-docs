@@ -228,6 +228,10 @@ serve PATH_TO_REPORTS
 
 <Figure caption="Web based test report" src={require('../img/swanky-test-report.png').default} width="65%"/>
 
+_Resources:_
+
+- [_`swanky contract test` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-test-contractname)
+
 #### Deploy your contract
 
 When your contract is compiled and tested, you can deploy it to a local node or a remote network.
@@ -240,25 +244,54 @@ By default, your contract will be deployed to a local node, but you can pass a c
 
 Successfully running the `deploy` command will print out the address your contract is deployed to, as well as save it into `swanky.config.json`
 
+_Resources:_
+
+- [_`swanky contract deploy` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-deploy-contractname)
+
 #### Run queries and transactions
 
 Once your contract is deployed, you can call it from the CLI using `query` or `tx` commands.
 
+Use `query` for read-only calls, and `tx` for the calls that change the chain state and require signing (and a gas fee).
+
+Both commands require `CONTRACT_NAME` and `MESSAGE_NAME` parameters, and for `tx` a caller account needs to be provided too. (`-a`/`--account`).
+
+If the message you're calling requires arguments to be passed, you can do that using `-p`/`--param` flag.
+
+<Figure caption="Calling a query on a contract" src={require('../img/swanky-contract-query.png').default} width="65%"/>
+
+<Figure caption="Calling a transaction on a contract" src={require('../img/swanky-contract-tx.png').default} width="65%"/>
+
+Result of a `query` is straight forward, `OK` followed by what ever the response is.
+
+The transaction (`tx`) is a bit more raw though. Important to note are the `dispatchError` and `internalError` fields, plus the `status` field.
+If the errors are `undefined`, and the status `finalized`, your transaction has been successful.
+
+:::tip
+Gas fee for `tx` is calculated and applied automatically, but you can provide a gas limit manually by using the `-g`/`--gas` flag.
+
+Keep in mind that the transaction will fail if you provide too low a value.
+:::
+
+_Resources:_
+
+- [_`swanky contract query` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-query-contractname-messagename)
+- [_`swanky contract tx` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-tx-contractname-messagename)
+
 #### Add a new contract from template
 
-Generate a new smart contract template inside a project.
+You can create additional contracts in the same project, using the `contract new` command and selecting from predefined templates.
+
+The contract will be referred by `name` when using the relevant contract commands, and you can check the details in `swanky.config.json`
+
+<Figure caption="Adding a new contract" src={require('../img/swanky-contract-new.png').default} width="65%"/>
+
+_Resources:_
+
+- [_`swanky contract new` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-new-contractname)
 
 ### Interact with a local node
 
 Manage a local node.
 
-```
-USAGE
-  $ swanky node COMMAND
-
-COMMANDS
-  node purge  Purge local chain state
-  node start  Start a local node
-```
-
-<Figure caption="Start a local node" src={require('../img/07-node_start.gif').default} />
+## Using plugins
