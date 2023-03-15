@@ -298,20 +298,32 @@ Simply running `swanky node start` will start the node, and the node will preser
 
 If you want to reset the node state, use the `swanky node purge` command.
 
+<Figure caption="Starting the swanky node" src={require('../img/swanky-node-start.png').default} width="65%"/>
+
 :::info
 Note that node needs to be running if you are using a default local network with `deploy`, `query` and `tx` commands.
 :::
 
-:::tip
+:::caution
 If you want to use an external UI to interact with the node, you might run into some CORS issues.
 
 This can be solved by passing a custom array of whitelisted urls using the `--rpcCors` flag.
 :::
-
-<Figure caption="Starting the swanky node" src={require('../img/swanky-node-start.png').default} width="65%"/>
 
 _Resources:_
 
 - [_`swanky node` commands usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-node-purge)
 
 ## Using plugins
+
+Swanky CLI's functionality can be extended by the use of plugins, and it's a way to add new, case specific commands without modifying the core codebase.
+
+One WIP example is the [Phala plugin](https://github.com/AstarNetwork/swanky-plugin-phala)
+
+:::info
+If you are interested in developing a plugin, you can refer to the Phala example, and the [Oclif plugin documentation](https://oclif.io/docs/plugins), or you can post a request in [swanky-cli repo](https://github.com/AstarNetwork/swanky-cli/issues)'s issues.
+:::
+
+_Resources:_
+
+- [_`swanky plugin` commands usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-plugins)
