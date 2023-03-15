@@ -61,7 +61,10 @@ As ink! contract verification is not mature enough for now, only calls on behalf
 
 #### Usage in your contract
 
+:::note
 Your contract should be in ink! 4.0.0   
+:::
+
 
 1. add `assets_extension` in your `Cargo.toml` and to the `std` `features`
 ```toml
