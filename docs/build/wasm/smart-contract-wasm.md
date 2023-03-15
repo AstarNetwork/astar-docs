@@ -37,6 +37,7 @@ A caller of a contract will pay a deposit to each contract in which new storage 
 :::
 
 [Ink! 3.0 Blog Post by Parity](https://www.parity.io/blog/ink-3-0-paritys-rust-based-language-gets-a-major-update)
+[Ink! 4.0 Blog Post by Parity](https://www.parity.io/we-just-released-ink-4-0)
 
 ### Execution Engine
 
