@@ -10,7 +10,7 @@ Swanky Suite offers an extensible set of features, allowing developers to:
 
 - Quickly spin up a local contract development node with instant finality (Swanky Node).
 - Easily scaffold new projects using templates for both smart contracts and (soon) front-end dApps.
-- Compile projects in various languages that target WASM (ink! Ask-Lite).
+- Compile projects in various languages that target Wasm (ink! Ask-Lite).
 - provide Typescript based integration testing simulating interaction from the client-side.
 - Handle and manage network accounts.
 - Deploy smart contracts within the Polkadot ecosystem to networks that support `pallet-contracts`.
