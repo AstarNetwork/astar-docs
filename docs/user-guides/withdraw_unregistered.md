@@ -25,7 +25,7 @@ Occasionally, some projects decide to change their contract address on the porta
 ![image](https://user-images.githubusercontent.com/37278708/199924710-61d994f3-ddae-4dfb-b4c3-f186138d86de.png)
 
 10. Leave that page as it is.
-11. Open another browser tab and go to [Astar Portal](https://portal.astar.network/astar/dapp-staking/discover).
+11. Open another browser tab and go to [Astar Portal](https://portal.astar.network).
 12. Connect using the same wallet.
 13. Go to dApp Staking -> My dApps.
 14. You can see the list of dApps that you are staked on.

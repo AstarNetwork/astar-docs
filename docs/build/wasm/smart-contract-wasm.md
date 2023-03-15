@@ -16,10 +16,12 @@ After compilation, a Wasm blob can then be deployed and stored on-chain.
 
 #### Weight
 
-As is also the case with Substrate, `pallet-contracts` uses [weight][weight] to charge execution fees.
+As is also the case with Substrate, `pallet-contracts` uses [weightV2][weight] to charge execution fees. It is composed of `refTime` and `proofSize` :
+- refTime: The amount of computational time that can be used for execution, in picoseconds.
+- proofSize: The amount of storage space that can be used (also called storage bandwidth), in bytes. So access storage assume that it will grow the gas fees. 
 
 :::info
-One gas is equivalent to one weight, defined as one picosecond of execution time on the runtime's reference machine.
+Gas = Weight = (refTime, proofSize)
 :::
 
 [Transaction Weight in Substrate Documentation][weight]
@@ -35,10 +37,7 @@ A caller of a contract will pay a deposit to each contract in which new storage 
 :::
 
 [Ink! 3.0 Blog Post by Parity](https://www.parity.io/blog/ink-3-0-paritys-rust-based-language-gets-a-major-update)
-
-#### The Loading from Storage Weight
-In order to protect against a theoretical PoV attack, should a contract's Wasm blob be loaded from storage and sent via the network for validation of state changes (included into PoV), a [weight per byte](https://github.com/paritytech/substrate/blob/97ae6be11b0132224a05634c508417f048894670/frame/contracts/src/lib.rs#L331-L350) of code will be charged.
-
+[Ink! 4.0 Blog Post by Parity](https://www.parity.io/we-just-released-ink-4-0)
 
 ### Execution Engine
 
