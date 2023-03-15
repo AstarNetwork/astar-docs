@@ -28,7 +28,7 @@ This chain extension adds call to `pallet_assets` so that you can use Assets in 
 | Chain extension | Swanky | Shibuya | Shiden | Astar |
 |---|---|---|---|---|
 | XVM | :white_large_square: | :white_check_mark: | :white_large_square: | :white_large_square: |
-| Dapps Staking |  :white_check_mark:| :white_check_mark: | :white_large_square: | :white_large_square: |
+| Dapp Staking |  :white_check_mark:| :white_check_mark: | :white_large_square: | :white_large_square: |
 | Assets | :white_large_square: | :white_large_square: | :white_large_square: | :white_large_square: |
 
 
