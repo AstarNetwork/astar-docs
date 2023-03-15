@@ -16,7 +16,7 @@ This chain extension enables usage of XVM in your contracts. More info in the [i
 
 #### Dapps Staking
 
-This chain extension adds call to `pallet_dapps_staking` so that you can use Dapp Staking in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
+This chain extension adds call to `pallet_dapps_staking` so that you can use dApps Staking in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
 
 #### Assets
 
