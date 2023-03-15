@@ -14,7 +14,7 @@ Chain extension is a way to extend contracts API to add contracts to runtime pal
 
 This chain extension enables usage of XVM in your contracts. More info in the [ink! XVM SDK repo](https://github.com/AstarNetwork/ink-xvm-sdk).
 
-#### Dapps Staking
+#### DApp Staking
 
 This chain extension adds call to `pallet_dapps_staking` so that you can use dApp Staking in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
 
