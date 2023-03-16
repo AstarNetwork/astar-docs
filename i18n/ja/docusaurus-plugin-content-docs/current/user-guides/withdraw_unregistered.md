@@ -23,7 +23,7 @@ sidebar_position: 9
 9. これで、あなたがステーキングしているすべてのコントラクトを見ることができます。 ![image](https://user-images.githubusercontent.com/37278708/199924710-61d994f3-ddae-4dfb-b4c3-f186138d86de.png)
 
 10. そのページはそのままにしておきます。
-11. 別のブラウザタブを開き、 [Astar Portal](https://portal.astar.network/#/astar/dapp-staking/discover) に移動します。
+11. 別のブラウザタブを開き、 [Astar Portal](https://portal.astar.network/astar/dapp-staking/discover) に移動します。
 12. 同じウォレットを使用して接続します。
 13. dApp Staking -> My dApps. に移動します。
 14. あなたがステーキングしているdAppsのリストを見ることができます。 ![image](https://user-images.githubusercontent.com/37278708/199926165-909fa598-d9b2-4811-8619-f3ae414b9fb3.png)

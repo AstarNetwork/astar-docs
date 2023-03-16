@@ -5,7 +5,7 @@ To make use of this documentation effectively, you should possess a general unde
 ### Do I need blockchain knowledge to follow this documentation?
 Your blockchain knowledge will be useful but if you are reading this that means you are on the right track.
 
-### I'm Dotsama builder, do I need this?
+### I'm a Polkadot builder, do I need this?
 If you are already a builder on Polkadot/Kusama ecosystem you can most likely skip Introduction chapter. But it is recommended that you read about available Networks.
 
 ### Do I need to be a developer to understand Introduction chapter?
