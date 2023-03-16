@@ -57,7 +57,7 @@ impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
 
 and add the import statement for Vec:
 ```rust
-use ink_prelude::vec::Vec;
+use ink::prelude::vec::Vec;
 ```
 
 ### 3. Burn

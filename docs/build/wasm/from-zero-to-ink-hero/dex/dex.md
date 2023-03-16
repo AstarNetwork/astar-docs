@@ -25,8 +25,8 @@ In this tutorial we will build and deploy the following Solidity implementations
 - [Factory](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol)
 
 ### What Version of Ink! Will I Need?
-[ink! 3.4.0 (latest)](https://github.com/paritytech/ink/tree/v3.4.0)   
-[Openbrush 2.3.0 (latest)](https://github.com/Supercolony-net/openbrush-contracts/tree/v2.3.0)
+[ink! 4.0.0](https://github.com/paritytech/ink/tree/v4.0.0)   
+[OpenBrush 3.0.0](https://github.com/727-Ventures/openbrush-contracts/tree/3.0.0)
 
 ### What Topics Will Be Covered in This Guide?
 - The full implementation of Uniswap V2 DEX.

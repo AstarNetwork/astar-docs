@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Pair Storage and Getters
 
-If you are  tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/start) and open it in your IDE.
+If you are tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/psp22) and open it in your IDE.
 
 ## 1. Logics Crate
 
@@ -42,17 +42,12 @@ authors = ["Stake Technologies <devops@stake.co.jp>"]
 edition = "2021"
 
 [dependencies]
-ink_primitives = { version = "3.4.0", default-features = false }
-ink_metadata = { version = "3.4.0", default-features = false, features = ["derive"], optional = true }
-ink_env = { version = "3.4.0", default-features = false }
-ink_storage = { version = "3.4.0", default-features = false }
-ink_lang = { version = "3.4.0", default-features = false }
-ink_prelude = { version = "3.4.0", default-features = false }
+ink = { version = "4.0.0", default-features = false}
 
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
-scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
+scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
 
-openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22"] }
+openbrush = { git = "https://github.com/727-Ventures/openbrush-contracts", version = "3.0.0", default-features = false, features = ["psp22"] }
 
 [lib]
 name = "uniswap_v2"
@@ -64,14 +59,8 @@ crate-type = [
 [features]
 default = ["std"]
 std = [
-    "ink_primitives/std",
-    "ink_metadata",
-    "ink_metadata/std",
-    "ink_env/std",
-    "ink_storage/std",
-    "ink_lang/std",
+    "ink/std",
     "scale/std",
-    "scale-info",
     "scale-info/std",
     "openbrush/std",
 ]
@@ -143,7 +132,7 @@ use openbrush::traits::{
 
 pub const STORAGE_KEY: u32 = openbrush::storage_unique_key!(Data);
 
-#[derive(Default, Debug)]
+#[derive(Debug)]
 #[openbrush::upgradeable_storage(STORAGE_KEY)]
 pub struct Data {
     pub factory: AccountId,
@@ -158,6 +147,26 @@ pub struct Data {
 }
 ```
 *./logics/impls/pair/data.rs*
+
+And impl `Default` for the `Data` struct:
+```rust
+...
+impl Default for Data {
+    fn default() -> Self {
+        Self {
+            factory: ZERO_ADDRESS.into(),
+            token_0: ZERO_ADDRESS.into(),
+            token_1: ZERO_ADDRESS.into(),
+            reserve_0: 0,
+            reserve_1: 0,
+            block_timestamp_last: 0,
+            price_0_cumulative_last: Default::default(),
+            price_1_cumulative_last: Default::default(),
+            k_last: Default::default(),
+        }
+    }
+}
+```
 
 ## 3. Trait for Getters
 
@@ -328,14 +337,8 @@ In *./contracts/pair/Cargo.toml* import the uniswap-v2 logics crate and add it t
 uniswap_v2 = { path = "../../logics", default-features = false }
 ...
 std = [
-"ink_primitives/std",
-"ink_metadata",
-"ink_metadata/std",
-"ink_env/std",
-"ink_storage/std",
-"ink_lang/std",
+"ink/std",
 "scale/std",
-"scale-info",
 "scale-info/std",
 "openbrush/std",
 "uniswap_v2/std"
@@ -354,7 +357,7 @@ use uniswap_v2::{
 Add the `Data` storage struct to the contract storage struct:
 ```rust
 #[ink(storage)]
-#[derive(Default, SpreadAllocate, Storage)]
+#[derive(Default, Storage)]
 pub struct PairContract {
     #[storage_field]
     psp22: psp22::Data,
