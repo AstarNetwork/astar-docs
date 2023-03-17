@@ -47,7 +47,7 @@ That's why the Factory Storage should save the Pair contract `code_hash` in orde
     pub pair_contract_code_hash: Hash,
 ```
 
-OpenBrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with the specified storage key (storage key is a required input argument of the macro).
+OpenBrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/727-Ventures/openbrush-contracts/blob/35aae841cd13ca4e4bc6d63be96dc27040c34064/lang/macro/src/lib.rs#L466). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with the specified storage key (storage key is a required input argument of the macro).
 To generate a unique key, Openbrush provides a [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is based on the name of the struct and its file path. Let's add this to our struct and import the required fields:
 ```rust
 use ink::{
