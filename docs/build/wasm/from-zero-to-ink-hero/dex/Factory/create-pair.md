@@ -174,7 +174,7 @@ pub use crate::{
     impls::factory::*,
     traits::factory::*,
 };
-use ink_env::hash::Blake2x256;
+use ink::env::hash::Blake2x256;
 use openbrush::traits::{
     AccountId,
     Storage,
@@ -200,11 +200,12 @@ default fn _emit_create_pair_event(
 Within the contracts folder, in the *./contracts/factory/lib.rs* file, add a `PairCreated` event struct and override the implementation of emit event:
 ```rust
 ...
-use ink_lang::{
+use ink::{
     codegen::{
         EmitEvent,
         Env,
     },
+    ToAccountId,
 };
 ...
 #[ink(event)]
@@ -262,30 +263,21 @@ pair_contract = { path = "../pair", default-features = false, features = ["ink-a
 [features]
 default = ["std"]
 std = [
-"ink_primitives/std",
-"ink_metadata",
-"ink_metadata/std",
-"ink_env/std",
-"ink_storage/std",
-"ink_lang/std",
+"ink/std",
 "scale/std",
-"scale-info",
 "scale-info/std",
-"pair_contract/std",
 "openbrush/std",
-"uniswap_v2/std"
+"uniswap_v2/std",
+"pair_contract/std",
 ]
 ```
 
 In the contract crate *./contracts/factory/lib.rs* add import statements:
 ```rust
 ...
-use ink_lang::{
-    codegen::{
-        EmitEvent,
-        Env,
-    },
-    ToAccountId,
+use openbrush::traits::{
+    Storage,
+    ZERO_ADDRESS,
 };
 use pair_contract::pair::PairContractRef;
 ```
@@ -303,15 +295,18 @@ impl Factory for FactoryContract {
 ```
 
 #### 2. Instantiate Pair
-Using [create builder](https://github.com/paritytech/ink/blob/v3.4.0/crates/env/src/call/create_builder.rs) from ink! we call a **new** constructor from Pair, and pass no endowment (as storage rent has been removed it is not needed). This returns the accountId back to the caller:
+Using [create builder](https://github.com/paritytech/ink/blob/ad4f5e579e39926704e182736af4fa945982ac2b/crates/env/src/call/create_builder.rs#L269) from ink! we call a **new** constructor from Pair, and pass no endowment (as storage rent has been removed it is not needed). This returns the accountId back to the caller:
 ```rust
 ...
-let pair = PairContractRef::new()
+let pair = match PairContractRef::new()
     .endowment(0)
     .code_hash(pair_hash)
     .salt_bytes(&salt_bytes[..4])
-    .instantiate()
-    .map_err(|_| FactoryError::PairInstantiationFailed)?;
+    .try_instantiate()
+{
+    Ok(Ok(res)) => Ok(res),
+    _ => Err(FactoryError::PairInstantiationFailed),
+}?;
 ```
 
 #### 3. Return Pair Address
@@ -324,12 +319,15 @@ Full function:
 ```rust
 fn _instantiate_pair(&mut self, salt_bytes: &[u8]) -> Result<AccountId, FactoryError> {
     let pair_hash = self.factory.pair_contract_code_hash;
-    let pair = PairContractRef::new()
+    let pair = match PairContractRef::new()
         .endowment(0)
         .code_hash(pair_hash)
         .salt_bytes(&salt_bytes[..4])
-        .instantiate()
-        .map_err(|_| FactoryError::PairInstantiationFailed)?;
+        .try_instantiate()
+    {
+        Ok(Ok(res)) => Ok(res),
+        _ => Err(FactoryError::PairInstantiationFailed),
+    }?;
     Ok(pair.to_account_id())
 }
 ```

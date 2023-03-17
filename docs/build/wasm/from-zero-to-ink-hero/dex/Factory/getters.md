@@ -47,19 +47,24 @@ That's why the Factory Storage should save the Pair contract `code_hash` in orde
     pub pair_contract_code_hash: Hash,
 ```
 
-Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with the specified storage key (storage key is a required input argument of the macro).
+OpenBrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/727-Ventures/openbrush-contracts/blob/35aae841cd13ca4e4bc6d63be96dc27040c34064/lang/macro/src/lib.rs#L466). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with the specified storage key (storage key is a required input argument of the macro).
 To generate a unique key, Openbrush provides a [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is based on the name of the struct and its file path. Let's add this to our struct and import the required fields:
 ```rust
-use ink_env::Hash;
-use ink_prelude::vec::Vec;
+use ink::{
+    prelude::vec::Vec,
+    primitives::Hash,
+};
 use openbrush::{
     storage::Mapping,
-    traits::AccountId,
+    traits::{
+        AccountId,
+        ZERO_ADDRESS,
+    },
 };
 
 pub const STORAGE_KEY: u32 = openbrush::storage_unique_key!(Data);
 
-#[derive(Default, Debug)]
+#[derive(Debug)]
 #[openbrush::upgradeable_storage(STORAGE_KEY)]
 pub struct Data {
     pub fee_to: AccountId,
@@ -67,6 +72,18 @@ pub struct Data {
     pub get_pair: Mapping<(AccountId, AccountId), AccountId>,
     pub all_pairs: Vec<AccountId>,
     pub pair_contract_code_hash: Hash,
+}
+
+impl Default for Data {
+    fn default() -> Self {
+        Self {
+            fee_to: ZERO_ADDRESS.into(),
+            fee_to_setter: ZERO_ADDRESS.into(),
+            get_pair: Default::default(),
+            all_pairs: Default::default(),
+            pair_contract_code_hash: Default::default(),
+        }
+    }
 }
 ```
 *./logics/impls/factory/data.rs*
@@ -209,35 +226,23 @@ authors = ["Stake Technologies <devops@stake.co.jp>"]
 edition = "2021"
 
 [dependencies]
-ink_primitives = { version = "3.4.0", default-features = false }
-ink_metadata = { version = "3.4.0", default-features = false, features = ["derive"], optional = true }
-ink_env = { version = "3.4.0", default-features = false }
-ink_storage = { version = "3.4.0", default-features = false }
-ink_lang = { version = "3.4.0", default-features = false }
-ink_prelude = { version = "3.4.0", default-features = false }
+ink = { version = "4.0.0", default-features = false}
 
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
-scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
+scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
 
-openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false }
+openbrush = { git = "https://github.com/727-Ventures/openbrush-contracts", version = "3.0.0", default-features = false }
 uniswap_v2 = { path = "../../logics", default-features = false }
 
 [lib]
-name = "factory_contract"
 path = "lib.rs"
 crate-type = ["cdylib"]
 
 [features]
 default = ["std"]
 std = [
-    "ink_primitives/std",
-    "ink_metadata",
-    "ink_metadata/std",
-    "ink_env/std",
-    "ink_storage/std",
-    "ink_lang/std",
+    "ink/std",
     "scale/std",
-    "scale-info",
     "scale-info/std",
     "openbrush/std",
     "uniswap_v2/std"
@@ -260,7 +265,6 @@ Also import everything (with `*`) from `impls::factory` and `traits::factory`:
 
 #[openbrush::contract]
 pub mod factory {
-    use ink_storage::traits::SpreadAllocate;
     use openbrush::traits::{
         Storage,
         ZERO_ADDRESS,
@@ -274,8 +278,8 @@ pub mod factory {
 Add the [storage struct](https://use.ink/macros-attributes/storage) and Factory field (that we defined in traits):
 
 ```rust
-#[ink(storage)]
-#[derive(Default, SpreadAllocate, Storage)]
+    #[ink(storage)]
+#[derive(Default, Storage)]
 pub struct FactoryContract {
     #[storage_field]
     factory: data::Data,
@@ -292,11 +296,11 @@ Add an `impl` block for the contract, and add the constructor. The constructor t
     impl FactoryContract {
     #[ink(constructor)]
     pub fn new(fee_to_setter: AccountId, pair_code_hash: Hash) -> Self {
-        ink_lang::codegen::initialize_contract(|instance: &mut Self| {
-            instance.factory.pair_contract_code_hash = pair_code_hash;
-            instance.factory.fee_to_setter = fee_to_setter;
-            instance.factory.fee_to = ZERO_ADDRESS.into();
-        })
+        let mut instance = Self::default();
+        instance.factory.pair_contract_code_hash = pair_code_hash;
+        instance.factory.fee_to_setter = fee_to_setter;
+        instance.factory.fee_to = ZERO_ADDRESS.into();
+        instance
     }
 }
 ```
