@@ -235,7 +235,6 @@ openbrush = { git = "https://github.com/727-Ventures/openbrush-contracts", versi
 uniswap_v2 = { path = "../../logics", default-features = false }
 
 [lib]
-name = "factory_contract"
 path = "lib.rs"
 crate-type = ["cdylib"]
 
