@@ -211,7 +211,7 @@ pub fn default() -> Self {
 }
 ```
 
-The following will permit a function to be **publicly dispatchable**, meaning that it will be exposed in the contract interface to the outside world. [For more information](https://use.ink/macros-attributes/message)). Note that all public functions **must** use the `#[ink(message)]` attribute.
+The following will permit a function to be **publicly dispatchable**, meaning that  the function can be called through a message, which is a way for contracts and external accounts to interact with the contract. Find more information [here](https://use.ink/macros-attributes/message)). Note that all public functions **must** use the `#[ink(message)]` attribute.
 
 ```rust
 #[ink(message)]
