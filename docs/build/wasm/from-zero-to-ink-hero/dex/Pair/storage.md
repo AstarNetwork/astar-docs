@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Pair Storage and Getters
 
-If you are tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/psp22) and open it in your IDE.
+If you are starting the tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/psp22) and open it in your IDE.
 
 ## 1. Logics Crate
 

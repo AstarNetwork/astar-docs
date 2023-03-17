@@ -308,7 +308,7 @@ Import Vec from `ink::prelude`:
  use ink::prelude::vec::Vec;
 ```
 
-And that's it! You implemented PSP22, its event and override its default implementation. Check your Pair contract with (run in contract folder):
+And that's it! You implemented PSP22, its event and overrode its default implementation. Check your Pair contract (run in contract folder):
 ```console
 cargo contract build
 ```
