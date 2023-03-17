@@ -175,7 +175,7 @@ Storage types:
   - `Hash`
 - ink! storage type
   - `Mapping`
-- Custom data Structure [details](https://use.ink/datastructures/custom-datastructure)
+- Custom data structure [details](https://use.ink/datastructures/custom-datastructure)
 
 This means the contract (Flipper) stores a single `bool` value in storage.
 
