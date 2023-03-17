@@ -85,7 +85,7 @@ In *./logics/impls/pair/pair.rs* import this contract `FactoryRef`:
 use crate::traits::factory::FactoryRef;
 ```
 
-And in the body of **_mint_fee** we will obtain the `fee_to` with a cross-contract call to Factory. When using Openrush wrapper around a trait, the first argument of the function should be the contract address you call. So add this line as it is shown below:
+And in the body of **_mint_fee** we will obtain the `fee_to` with a cross-contract call to Factory. When using OpenBrush wrapper around a trait, the first argument of the function should be the contract address you call. So add this line as it is shown below:
 ```rust
     fn _mint_fee(
         &mut self,
