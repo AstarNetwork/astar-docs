@@ -10,7 +10,7 @@ Le DApp staking est conçu pour soutenir les projets et les développeurs de not
 
 ## Instructions
 
-Lorsque vous allez sur notre page de [dApp](https://portal.astar.network/#/dapp-staking/discover), vous trouverez tous les dApps listés dans notre mécanisme dApp Staking . Les instructions écrites sont les mêmes pour tous les réseaux Astar.
+Lorsque vous allez sur notre page de [dApp](https://portal.astar.network/dapp-staking/discover), vous trouverez tous les dApps listés dans notre mécanisme dApp Staking . Les instructions écrites sont les mêmes pour tous les réseaux Astar.
 
 Cette fonction n'est disponible que pour les stakers qui sont déjà stakers dans une dApp. Si c'est la première fois que vous stakez dans notre mécanisme dApp Staking , vous pouvez trouver un guide étape par étape [ici](staking)
 

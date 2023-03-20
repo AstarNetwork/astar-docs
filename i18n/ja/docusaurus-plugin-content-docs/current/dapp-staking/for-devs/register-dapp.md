@@ -21,7 +21,7 @@ dApp StakingにあなたのdAppを登録する方法を説明します。 最初
 
 ## ステップ２
 
-[ポータル](https://portal.astar.network/#/store/discover-dapps) に行き、 `+Register dApp`をクリックしてください:
+[ポータル](https://portal.astar.network/store/discover-dapps) に行き、 `+Register dApp`をクリックしてください:
 
 ポップアップウィンドウ内のすべての情報を入力し、登録ボタンを押します。 最初にあなたのアカウントが **承認されている**必要があることに注意してください。次にdAppを登録しようとするウォレットに十分なトークンが必要です。
 
