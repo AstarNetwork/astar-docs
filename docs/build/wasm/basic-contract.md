@@ -75,20 +75,4 @@ The [flipper](https://github.com/paritytech/ink/blob/master/examples/flipper/lib
 
 # Using Swanky
 
-The `swanky-cli` tool can generate multiple simple ink! smart contracts for you.
-
-After [setting up the environment](/docs/build/environment/ink_environment) follow the [instructions](/docs/build/wasm/swanky) to install the `swanky-cli` tool to your machine.
-
-:::note
-Note: If you're using the [swanky dev container](https://github.com/AstarNetwork/swanky-dev-container), swanky-cli tool is already installed
-:::
-
-To generate a new project, simply run
-
-```bash
-swanky init PROJECT_NAME
-```
-
-For a most basic starter contract, when prompted, choose `flipper` template, and give it a name.
-
-Swanky simplifies compiling, deploying and calling the contract from the CLI. For usage instructions refer to the [docs page](./swanky.md) and [swanky-cli Github repo](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli).
+You can also use Swanky Suite to fast track your development efforts when setting up the project. Go to this section to learn how to [bootstrap a smart contract using Swanky](/docs/build/wasm/swanky-suite/cli#bootstrap-a-new-project)
