@@ -16,10 +16,10 @@ This tutorial targets developers with no experience in ink! and a **basic** leve
 - Basic Rust knowledge. [Learn Rust](https://www.rust-lang.org/learn).
 
 ### What will we do?
-In this tutorial we will implement the most basic contract: [Flipper](https://github.com/paritytech/ink/blob/v3.3.0/examples/flipper/lib.rs) in ink!.
+In this tutorial we will implement the most basic contract: [Flipper](https://github.com/paritytech/ink/blob/v4.0.0/examples/flipper/lib.rs) in ink!.
 
 ### What will we use?
-- [ink! 3.3.0](https://github.com/paritytech/ink/tree/v3.3.0)
+- [ink! 4.0.0](https://github.com/paritytech/ink/tree/v4.0.0)
 
 ### What will you learn?
 - Anatomy of an ink! contract
