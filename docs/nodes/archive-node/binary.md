@@ -58,7 +58,7 @@ sudo nano /etc/systemd/system/astar.service
 ## Service parameters
 
 :::tip
-Please make sure to change **${NODE_NAME}**
+Please make sure to change **{NODE_NAME}**
 :::
 
 <Tabs>
@@ -75,12 +75,15 @@ Group=astar
 ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --rpc-cors all \
-  --name ${NODE_NAME} \
+  --name {NODE_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
-  --execution Wasm \
   --rpc-external \
-  --ws-external
+  --ws-external \
+  --rpc-methods Safe \
+  --rpc-max-request-size 1 \
+  --rpc-max-response-size 1 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 
 Restart=always
 RestartSec=10
@@ -103,12 +106,15 @@ Group=astar
 ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --rpc-cors all \
-  --name ${NODE_NAME} \
+  --name {NODE_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
-  --execution Wasm \
   --rpc-external \
-  --ws-external
+  --ws-external \
+  --rpc-methods Safe \
+  --rpc-max-request-size 1 \
+  --rpc-max-response-size 1 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 
 Restart=always
 RestartSec=10
@@ -131,12 +137,15 @@ Group=astar
 ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --rpc-cors all \
-  --name ${NODE_NAME} \
+  --name {NODE_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
-  --execution Wasm \
   --rpc-external \
-  --ws-external
+  --ws-external \
+  --rpc-methods Safe \
+  --rpc-max-request-size 1 \
+  --rpc-max-response-size 1 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 
 Restart=always
 RestartSec=10
@@ -204,7 +213,7 @@ journalctl -fu astar-collator -n100
 
 To access data from indexers (e.g. The Graph) or Oracles (e.g. Chainlink), you need to add the debug flags below to the node launch command, after the `astar-collator` line:
 
-`-l evm=debug,ethereum=debug,rpc=debug`
+`--ethapi=debug`
 
 ### Upgrade node
 
@@ -235,10 +244,7 @@ sudo rm -R /var/lib/astar/chains/astar/db*
 sudo systemctl start astar.service
 ```
 
-### Relay Chain snapshot
+### Snapshot
 
-If you run a collator it not only needs to sync the mainnet chain but also the complete relay chain from Polkadot/Kusama. This can take up to 3-4 days. Alternatively, you can use a [snapshot of Polkadot/Kusama](https://polkashots.io/) to save a lot of time.
-
-:::caution
-Only use snapshots if you are familiar with how to use them! You can learn more about Polkadot's snapshot services [**here**](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#database-snapshot-services).
+Please refer to [**snapshot page**](/docs/nodes/snapshots/).
 :::

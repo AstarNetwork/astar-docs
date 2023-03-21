@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-Users can connect to Astar portal using both EVM and Substrate based wallets. Below are the basic steps and important links needed to integrate a new wallet into the [Astar portal](https://portal.astar.network/#/astar/assets).
+Users can connect to Astar portal using both EVM and Substrate based wallets. Below are the basic steps and important links needed to integrate a new wallet into the [Astar portal](https://portal.astar.network/astar/assets).
 
 ![22](img/22.png)
 

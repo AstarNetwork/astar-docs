@@ -8,21 +8,21 @@ In this tutorial we will guide you through the process of sending and receiving 
 
 <br />
 
-- [Create Astar Accounts(Native and EVM)](#create-astar-accountsnative-and-evm)
+- [Create Astar Accounts(Native and EVM)](#how-to-create-astar-accounts-native-and-evm)
 
-- [Sending ASTR/SDN to Astar Network from Central Exchanges](#sending-astrsdn-to-astar-network-from-central-exchanges)
+- [Sending ASTR/SDN to Astar Network from Central Exchanges](#sending-astrsdn-to-centralized-exchanges-from-astar-network)
 
-- [Sending ASTR/SDN to Central Exchanges from Astar Network](#sending-astrsdn-to-central-exchanges-from-astar-network)
+- [Sending ASTR/SDN to Central Exchanges from Astar Network](#sending-astrsdn-to-centralized-exchanges-from-astar-network)
 
 - [Sending ASTR/SDN to Astar EVM from Astar Native](#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
 
-- [Sending ASTR/SDN to Astar Native from Astar EVM](#sending-astrsdn-to-astar-native-from-astar-evm)
+- [Sending ASTR/SDN to Astar Native from Astar EVM](#sending-astrsdn-to-astar-native-accounts-from-astar-evm)
 
-- [Cross-chain Transfer(XCM)](#cross-chain-transferxcm)
+- [Cross-chain Transfer(XCM)](#cross-chain-transfer-xcm)
 
-- [Transferring cross-chain(XCM) assets into Astar Network](#transferring-cross-chainxcm-assets-into-astar-network)
+- [Transferring cross-chain(XCM) assets into Astar Network](#transferring-cross-chain-xcm-assets-to-astar-network)
 
-- [Transferring cross-chain(XCM) assets to other chains from Astar Network](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+- [Transferring cross-chain(XCM) assets to other chains from Astar Network](#transferring-cross-chain-xcm-assets-to-other-chains-from-astar-network)
 
 - [Cross Virtual Machine Transfer Of ERC20 Tokens(XVM)](#cross-virtual-machine-transfer-of-erc20-tokensxvm)
 
@@ -83,6 +83,7 @@ Most centralized exchanges only list 'Astar Network' as a destination, which mea
 
 - **Use an Astar Native account to send tokens to exchanges that support Astar Network**
 - **Use an Astar EVM account to send tokens to exchanges that support Astar EVM**
+- **DO NOT attempt to send from EVM to the exchange native deposit address as this might result in the lost of funds.** 
 
 :::
 
@@ -94,7 +95,7 @@ In addition to the instructions below, please carefully read the instructions pr
 
 1. Copy a deposit address from an exchange you wish to make a transfer to.
 2. Visit the Astar [Portal](https://portal.astar.network/) and change the network to either Astar or Shiden (Astar Network uses ASTR token and Shiden uses SDN).
-3. Connect your wallet (Native or EVM will depend on the exchange) - if you have not done this yet please revisit [Create Astar Accounts].
+3. Connect your wallet (Native or EVM will depend on the exchange) - if you have not done this yet please revisit [Create Astar Accounts](https://docs.astar.network/docs/user-guides/create-wallet/).
 4. Click transfer button.
    <img width="1000" alt="Native-Asset-transfer" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png"/>
 5. Add the destination address of the exchange and the amount you wish to transfer.

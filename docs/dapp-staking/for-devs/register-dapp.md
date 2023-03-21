@@ -22,7 +22,7 @@ Deploy a smart contract in our ecosystem and verify the contract in our explorer
 
 ## Step 2
 
-Go to our [portal](https://portal.astar.network/#/store/discover-dapps) and click on `+ Register dApp`:
+Go to our [portal](https://portal.astar.network/store/discover-dapps) and click on `+ Register dApp`:
 
 Provide all the information in the pop-up window and press register. Keep in mind that your account needs to be **approved first**, and you have the needed tokens in the wallet that is registering the dApp.
 

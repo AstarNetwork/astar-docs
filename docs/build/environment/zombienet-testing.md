@@ -65,12 +65,12 @@ For all steps, encoded call data will be provided to simplify the process for th
 
 1. In the local `Shibuya polkadot-js` explorer, create a new asset for the cross-chain SDN wrapper. Configure it to be sufficient and payable.
 ```
-0x63000b02102401910100d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d0102093d002410910114786353444e14786353444e12003600010101005d1f91013601010101005d1f02286bee
+0x0b000c630024015000d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d010463003600010101005d1f5063003601010101005d1f070010a5d4e8
 ```
 
 2. In the local `Shiden polkadot-js` explorer, create a new asset for the cross-chain SBY wrapper. Same concept as in the previous step.
 ```
-0x63000b02102401210300d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d0102093d00241021031478635342591478635342591200360001010100411f2103360101010100411f02286bee
+0x0b000c630024015000d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d01046300360001010100411f506300360101010100411f070010a5d4e8
 ```
 
 3. In the local `Shibuya polkadot-js` explorer, send **1000 SBY** to `Alice` on Shiden.
@@ -90,7 +90,7 @@ For all steps, encoded call data will be provided to simplify the process for th
 After completing the previous steps, cross-chain SDN and SBY wrappers are configured as payable and sufficient assets.
 The following steps will explain how to execute a cross-chain remote call. `Alice` will send an instruction from `Shiden` to execute `System::remark_with_event` on `Shibuya`.
 
-`Alice` isn't able to directly control `Alice` on the destination chain, instead a new account will be derived. More information can be found [here](/docs/xcm/building-with-xcm/xc-remote-transact.md# derived-remote-accounts).
+`Alice` isn't able to directly control `Alice` on the destination chain, instead a new account will be derived. More information can be found [here](/docs/xcm/building-with-xcm/xc-remote-transact.md#derived-remote-accounts).
 
 1. Calculate `Alice's` derived account on `Shibuya` when sending instructions from `Shiden`.
 ```
@@ -102,6 +102,6 @@ The following steps will explain how to execute a cross-chain remote call. `Alic
 
 3. On `Shiden`, as `Alice`, send an XCM sequence instructing `Shibuya` to execute `System::remark_with_event`.
 ```
-0x330001010100411f021400040000000013000064a7b3b6e00d130000000013000064a7b3b6e00d00060102286bee140a0808abba140d010004000101002611a3b92e2351f8b6c98b7b0654dc1daab45b2619ea357a848d4fe2b5ae1863
+0x330001010100411f021400040000000013000064a7b3b6e00d130000000013000064a7b3b6e00d00060102286bee200a07144173746172140d010004000101002611a3b92e2351f8b6c98b7b0654dc1daab45b2619ea357a848d4fe2b5ae1863
 ```
 4. Observe successful XCM execution on `Shibuya` and inspect the block to observe `remark` event.

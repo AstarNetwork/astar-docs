@@ -5,29 +5,29 @@ sidebar_position: 4
 # Tokenomics & Inflation Model
 
 :::note
-This includes advanced content.
+This section includes advanced content.
 :::
 
 :::tip
-Models for Astar & Shiden are the same but some configuration differences are possible.
-In the following chapters, we will only mention Astar and ASTR token but same applies for Shiden and its SDN token.
+Astar and Shiden share the same economic model, however some configuration differences are possible.
+Following chapters only focus on Astar and ASTR but also apply to Shiden and its SDN token.
 :::
 
 [Astar Network]: https://astar.network/
 
-[Astar Network] tokenomics model is built around supporting developers via dApps staking. At its core, ASTR tokens have multiple roles:
+[Astar Network] tokenomics model is built around supporting developers via dApp staking. At its core, ASTR token has multiple roles:
 
 1. Payment for transaction fees
 2. Staking dApps
-3. dApps staking rewards & collator rewards
+3. dApp staking rewards & collator rewards
 
 ## Inflation Model
 
 ### Overview
 
-Previous chapters defined initial ASTR token distribution. However, Astar uses an inflationary tokenomics model (unbound supply) where tokens are issued each time a new block is produced. These tokens drive the dApps staking system and are used to reward stakers and collators.
+Previous chapters defined initial ASTR token distribution. However, Astar uses an inflationary tokenomics model (unbound supply) where tokens are issued each time a new block is produced. These tokens drive the dApp staking system and are used to reward stakers and collators.
 
-For each produced block, Astar will issue a fixed number of tokens. Initially, these numbers were picked to achieve approximate 10% inflation of the initial supply.
+For each produced block, Astar issues a fixed number of tokens. Initially, these numbers were picked to achieve approximate 10% inflation of the initial supply.
 
 Since January 2023, Astar inflation has been reduced by 5% to ~665,000,000 ASTR yearly.
 
@@ -55,11 +55,11 @@ For **Astar**, **20%** of the fees & tips are burned, and the rest is paid to th
 
 #### > On-chain Treasury
 
-Treasury receives a variable portion of block reward. It is primarily used as reserve for parachain auction and to support various projects and activities accross Astar ecosystem.
+Treasury receives a variable portion of block reward. It is then allocated to a range of initiatives across the Astar ecosystem. This includes building reserves for parachain auctions, as well as supporting various projects and activities that help grow and strengthen our network. 
 
-#### > dApps Staking
+#### > dApp Staking
 
-`dApps staking`, Astar's innovative developer incentive mechanism, receives a variable portion of the block rewards depending on current **total value locked** (or **TVL** in further text) in dApps staking.
+`dApp staking`, Astar's innovative developer incentive mechanism, receives a variable portion of the block rewards depending on current **total value locked** (or **TVL** in further text) in dApps staking.
 
 Part of it is dedicated for supporting dApp developers while another part goes towards stakers who locked their ASTR to *stake* or *vote* for a dApp.
 
@@ -73,7 +73,7 @@ There are two main things to understand before diving deeper into the model - **
 
 #### TVL
 
-The main variable in the system that fluctuates from block to block, based on user actions, is **TVL** from dApps staking. 
+The main variable in the system that fluctuates from block to block, based on user actions, is **TVL** from dApp staking. 
 :::note
 TVL in this context does not consider non-ASTR tokens locked by other protocols built on top of Astar (e.g. DeFi protocols) and as such has no effect on the reward distribution schema.
 :::
@@ -113,7 +113,7 @@ t&otal_{treasury} = base_{treasury} + (adjustable_{\%} - adjustable_{staker})
 \end{aligned}
 $$
 
-As more tokens are staked and TVL increases, the portion of staker rewards will increase to compensate for the fact that otherwise staking would be a *zero-sum-game*. This increase is linear up to a certain threshold, $TVL_{ideal}$, after which it saturates. Any further increase in TVL will not result in increase to stakers rewards.
+As more tokens are staked and TVL increases, the portion of staker rewards increases in proportion to the growth of the network. This approach helps to compensate for the *zero-sum* nature of staking and incentivize more users to participate in securing the network. It's important to note that this reward increase is linear up to a certain threshold, known as the $TVL_{ideal}$ point. Once this threshold is reached, the reward increase will saturate, meaning that any further increase in TVL will not result in an increase in staker rewards. This ensures a fair and sustainable reward system that benefits all members of the Astar community.
 
 Note that in Polkadot's model, when ideal TVL is reached, staker rewards drop exponentially. In our case, they only become saturated, making it a *zero-sum-game*. Motivation behind our approach is simplicity.
 

@@ -29,16 +29,16 @@ User=astar
 Group=astar
 
 ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
   --collator \
-  --rpc-cors all \
-  --name ${COLLATOR_NAME} \
+  --name {COLLATOR_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
+  --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm
 
 Restart=always
-RestartSec=120
+RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
@@ -56,16 +56,16 @@ User=astar
 Group=astar
 
 ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
   --collator \
-  --rpc-cors all \
-  --name ${COLLATOR_NAME} \
+  --name {COLLATOR_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
+  --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm
 
 Restart=always
-RestartSec=120
+RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
@@ -83,16 +83,16 @@ User=astar
 Group=astar
 
 ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
   --collator \
-  --rpc-cors all \
-  --name ${COLLATOR_NAME} \
+  --name {COLLATOR_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
+  --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm
 
 Restart=always
-RestartSec=120
+RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
@@ -114,12 +114,13 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
+--pruning archive \
 --collator \
---name ${COLLATOR_NAME} \
+--name {COLLATOR_NAME} \
 --chain astar \
---execution wasm \
---base-path /data \
---rpc-cors=all
+--base-path /var/lib/astar \
+--trie-cache-size 0 \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -133,12 +134,13 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
+--pruning archive \
 --collator \
---name ${COLLATOR_NAME} \
+--name {COLLATOR_NAME} \
 --chain shiden \
---execution wasm \
---base-path /data \
---rpc-cors=all
+--base-path /var/lib/astar \
+--trie-cache-size 0 \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -152,12 +154,13 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
+--pruning archive \
 --collator \
---name ${COLLATOR_NAME} \
+--name {COLLATOR_NAME} \
 --chain shibuya \
---execution wasm \
---base-path /data \
---rpc-cors=all
+--base-path /var/lib/astar \
+--trie-cache-size 0 \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -165,7 +168,7 @@ astar-collator \
 
 ---
 
-## Archive node (RPC/WS endpoint)
+## Archive node as RPC endpoint
 ### Binary
 
 <Tabs>
@@ -182,12 +185,15 @@ Group=astar
 ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --rpc-cors all \
-  --name ${NODE_NAME} \
+  --name {NODE_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
-  --execution Wasm \
   --rpc-external \
-  --ws-external
+  --ws-external \
+  --rpc-methods Safe \
+  --rpc-max-request-size 1 \
+  --rpc-max-response-size 1 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
   
 Restart=always
 RestartSec=10
@@ -210,12 +216,15 @@ Group=astar
 ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --rpc-cors all \
-  --name ${NODE_NAME} \
+  --name {NODE_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
-  --execution Wasm \
   --rpc-external \
-  --ws-external
+  --ws-external \
+  --rpc-methods Safe \
+  --rpc-max-request-size 1 \
+  --rpc-max-response-size 1 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
   
 Restart=always
 RestartSec=10
@@ -238,12 +247,15 @@ Group=astar
 ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --rpc-cors all \
-  --name ${NODE_NAME} \
+  --name {NODE_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
-  --execution Wasm \
   --rpc-external \
-  --ws-external
+  --ws-external \
+  --rpc-methods Safe \
+  --rpc-max-request-size 1 \
+  --rpc-max-response-size 1 \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 
 Restart=always
 RestartSec=10
@@ -271,13 +283,16 @@ docker run -d \
 staketechnologies/astar-collator:latest \
 astar-collator \
 --pruning archive \
---name ${NODE_NAME} \
+--rpc-cors all \
+--name {NODE_NAME} \
 --chain astar \
---execution Wasm \
---base-path /data \
---rpc-cors=all \
+--base-path /var/lib/astar \
 --rpc-external \
---ws-external
+--ws-external \
+--rpc-methods Safe \
+--rpc-max-request-size 1 \
+--rpc-max-response-size 1 \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -294,13 +309,16 @@ docker run -d \
 staketechnologies/astar-collator:latest \
 astar-collator \
 --pruning archive \
---name ${NODE_NAME} \
---chain shiden \
---execution Wasm \
---base-path /data \
---rpc-cors=all \
+--rpc-cors all \
+--name {NODE_NAME} \
+--chain astar \
+--base-path /var/lib/astar \
 --rpc-external \
---ws-external
+--ws-external \
+--rpc-methods Safe \
+--rpc-max-request-size 1 \
+--rpc-max-response-size 1 \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -317,13 +335,16 @@ docker run -d \
 staketechnologies/astar-collator:latest \
 astar-collator \
 --pruning archive \
---name ${NODE_NAME} \
---chain shibuya \
---execution Wasm \
---base-path /data \
---rpc-cors=all \
+--rpc-cors all \
+--name {NODE_NAME} \
+--chain astar \
+--base-path /var/lib/astar \
 --rpc-external \
---ws-external
+--ws-external \
+--rpc-methods Safe \
+--rpc-max-request-size 1 \
+--rpc-max-response-size 1 \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
 
 </TabItem>
@@ -333,9 +354,21 @@ astar-collator \
 
 ## Specific cases command args
 
-### EVM Debug log
+### EVM management
+
+Enable EVM medhods on RPC node
 ```
--l evm=debug,ethereum=debug,rpc=debug
+--enable-evm-rpc
+```
+
+Enable EVM debug log
+```
+--ethapi=debug
+```
+
+Enable EVM tracing log
+```
+--ethapi=trace
 ```
 
 ### External monitoring

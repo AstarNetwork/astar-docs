@@ -5,9 +5,10 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-An **archive node** stores the history of past blocks. It plays a vital role on our network: it connects users and dApps to the blockchain through WS and RPC endpoints. For example, our [public endpoints](/docs/build/environment/endpoints.md) run archive nodes for anyone to quickly connect to Astar.
+An **archive node** stores the history of past blocks. Most of times, an archive node is used as **RPC endpoint**.
+RPC plays a vital role on our network: it connects users and dApps to the blockchain through WebSocket and HTTP endpoints. For example, our [public endpoints](/docs/build/environment/endpoints.md) run archive nodes for anyone to quickly connect to Astar chains.
 
-**DApp projects** need to run their own archive node to the retrieve necessary blockchain data and not to rely on public infrastructure. Public endpoints respond slower because of the large amount of users connected.
+**DApp projects** need to run their own RPC node as archive to the retrieve necessary blockchain data and not to rely on public infrastructure. Public endpoints respond slower because of the large amount of users connected and are rate limited.
 
 :::caution
 Be careful not to confuse with a **full node** that has a pruned database: a full node only stores the current state and most recent blocks (256 blocks by default) and uses much less storage space.
@@ -36,7 +37,7 @@ We maintain 3 different networks: the testnet Shibuya, Shiden as a parachain of 
 | System | Ubuntu 20.04 |
 | CPU | 8 cores |
 | Memory | 16 GB |
-| Hard Disk | 400 GB SSD NVMe |
+| Hard Disk | 500 GB SSD (NVMe preferable) |
 
 </TabItem>
 
@@ -47,7 +48,7 @@ We maintain 3 different networks: the testnet Shibuya, Shiden as a parachain of 
 | System | Ubuntu 20.04 |
 | CPU | 8 cores |
 | Memory | 16 GB |
-| Hard Disk | 400 GB SSD NVMe |
+| Hard Disk | 500 GB SSD (NVMe preferable) |
 
 </TabItem>
 
@@ -58,7 +59,7 @@ We maintain 3 different networks: the testnet Shibuya, Shiden as a parachain of 
 | System | Ubuntu 20.04 |
 | CPU | 4 cores |
 | Memory | 8 GB |
-| Hard Disk | 100 GB SSD NVMe |
+| Hard Disk | 200 GB SSD (NVMe preferable) |
 
 </TabItem>
 </Tabs>

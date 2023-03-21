@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ## Installation of Node Monitoring
 
-In this chapter, we will walk you through the setup of local monitoring for your validator node.
+In this chapter, we will walk you through the setup of local monitoring for your collator node.
 
 ## Installation
 

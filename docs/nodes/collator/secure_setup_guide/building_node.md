@@ -16,6 +16,9 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt install -y adduser libfontconfig1
 ```
+:::note
+the last command (related to ```libfontconfig1```) is optional and required if you want install Grafana in the later sections of Secure Setup Guide).
+:::
 
 ## Build the node
 
@@ -29,25 +32,23 @@ To build a collator node, you have 3 different options
 
 Building a node from source code is the most complicated path, but will also provide the best optimized node version for your server.
 
-Make sure your server is ready to build a collator:
+Make sure your server is ready to build a collator. The instructions that follow do not go into details which you can find in official [Substrate Docs](https://docs.substrate.io/install/linux/)  
 
 ```
+## Prerequisites (Software required for compilation)
+##
+sudo apt install build-essential
+sudo apt install --assume-yes git clang curl cmake llvm protobuf-compiler
+sudo apt update
+
 ## Install Rust
 ##
-curl https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup update nightly
 rustup target add wasm32-unknown-unknown --toolchain nightly
-
-## Compilation required software
-##
-bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
-sudo apt install cmake 
-sudo apt install git 
-sudo apt install build-essential
-sudo apt update
-sudo apt install clang
 ```
+
 
 Clone the Astar repository:
 
@@ -102,12 +103,12 @@ The following steps are suitable for **binary** usage (built from source or down
 In case you want to run a Docker container, you will have to adapt those.
 :::
 
-Create a dedicated user for the node and move the **node binary**:
+Create a dedicated user for the node and move the **node binary** (in this example, username is ```astar```):
 
 ```
 sudo useradd --no-create-home --shell /usr/sbin/nologin astar
 sudo cp ./astar-collator /usr/local/bin
-chmod +x astar-collator*.tar.gz
+chmod +x /usr/local/bin/astar-collator
 ```
 
 Create a dedicated directory for the **chain storage data**:
@@ -125,7 +126,7 @@ Now, let's go to our binary directory and start the collator manually:
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain astar --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
+sudo -u astar ./astar-collator --collator --chain astar --pruning archive --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -134,7 +135,7 @@ cd /usr/local/bin
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain shiden --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
+sudo -u astar ./astar-collator --collator --chain shiden --pruning archive --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -143,14 +144,14 @@ cd /usr/local/bin
 ```
 cd /usr/local/bin
 
-./astar-collator --collator --chain shibuya --name COLLATOR_NAME --rpc-cors all --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --execution wasm
+sudo -u astar ./astar-collator --collator --chain shibuya --pruning archive --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
 </Tabs>
 
 :::tip
-Type in the place of **${COLLATOR\_NAME}**, what you would like to call your node.
+Type in the place of **{COLLATOR\_NAME}**, what you would like to call your node.
 :::
 
 See your node syncing on [https://telemetry.polkadot.io/](https://telemetry.polkadot.io/#list/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6).
@@ -191,12 +192,12 @@ Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
   --collator \
-  --rpc-cors all \
-  --name ${COLLATOR_NAME} \
+  --name {COLLATOR_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
+  --pruning archive \
+  --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm
 
 Restart=always
 RestartSec=120
@@ -218,12 +219,12 @@ Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
   --collator \
-  --rpc-cors all \
-  --name ${COLLATOR_NAME} \
+  --name {COLLATOR_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
+  --pruning archive \
+  --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm
 
 Restart=always
 RestartSec=120
@@ -245,12 +246,12 @@ Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
   --collator \
-  --rpc-cors all \
-  --name ${COLLATOR_NAME} \
+  --name {COLLATOR_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
+  --pruning archive \
+  --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
-  --execution wasm
 
 Restart=always
 RestartSec=120
@@ -280,13 +281,10 @@ Enable the service:
 sudo systemctl enable astar.service
 ```
 
-## Relay Chain snapshot
+### Snapshot
 
-If you run a collator it not only needs to sync the mainnet chain but also the complete relay chain from Polkadot/Kusama. This can take up to 3-4 days. Alternatively, you can use a [snapshot of Polkadot/Kusama](https://polkashots.io/) to save a lot of time.
+Please refer to [**snapshot page**](/docs/nodes/snapshots/).
 
-:::caution
-Only use snapshots if you are familiar with how to use them! You can learn more about Polkadot's snapshot services [**here**](https://wiki.polkadot.network/docs/maintain-guides-how-to-validate-polkadot#database-snapshot-services).
-:::
 
 ## Finalizing
 
@@ -297,4 +295,6 @@ To finalize your collator you need to:
 * Set up your session key
 * Verify your identity
 * Bond tokens
+
+this part is covered in chapter [Spin up a Collator](../spinup_collator.md)
 

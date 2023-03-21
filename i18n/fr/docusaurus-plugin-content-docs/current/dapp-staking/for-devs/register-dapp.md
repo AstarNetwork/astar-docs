@@ -22,7 +22,7 @@ Déployez un contrat intelligent dans notre écosystème et vérifiez le contrat
 
 ## Etape 2
 
-Rendez-vous sur notre portail [](https://portal.astar.network/#/store/discover-dapps) et cliquez sur `+ Enregistrer dApp`:
+Rendez-vous sur notre portail [](https://portal.astar.network/store/discover-dapps) et cliquez sur `+ Enregistrer dApp`:
 
 Fournissez toutes les informations dans la fenêtre pop-up et dans l'éditeur du registre. Gardez à l'esprit que votre compte doit être **approuvé en premier**, et disposer des jetons nécessaires dans le portefeuille qui enregistre la dApp.
 

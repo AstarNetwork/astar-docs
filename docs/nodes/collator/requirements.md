@@ -48,14 +48,19 @@ Onboarding takes **n+1** session.
 
 ### System requirements
 
-A collator usually deploys its nodes on cloud servers. You can choose your preferred operating system, though we highly recommend Linux.
+A collator deploys its node on a remote server. You can choose your preferred provider for dedicated servers and operating system. Generally speaking, we recommand you to select a provider/server in your region, this will increase decentralization of the network.
+You can choose your preferred operating system, though we highly recommend Linux.
 
 **Hardware requirements**
 
-Use the charts below to find the basic configuration, which guarantees that all blocks can process in time. If the hardware doesn't meet these requirements, there is a chance it will malfunction and you will be automatically kicked out from the active set.
+Use the charts below to find the basic configuration, which guarantees that all blocks can process in time. If the hardware doesn't meet these requirements, there is a high chance it will malfunction and you risk be automatically **kicked out and slashed** from the active set.
 
-:::note
-Make sure your server is only dedicated to the collator node.
+:::caution
+Make sure your server is a **bare metal only dedicated to the collator node**, any unnecessary other process running on it will significantly decrease the collator performance.
+**We strongly discourage using a VPS** to run a collator because of their low performances.
+
+Collators are the nodes which require the most powerful and fast machine, because they only have a very short time frame to assemble a block and collate it to the relay chain.
+To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz per core** and a **NVMe SSD disk** (SATA SSD are not suitable for collators because they are too slow).
 :::
 
 <Tabs>
@@ -64,9 +69,9 @@ Make sure your server is only dedicated to the collator node.
 | Component | Requirement |
 |---|---|
 | System | Ubuntu 20.04 |
-| CPU | 8 cores |
+| CPU | 8 cores - minimum 4 Ghz per core |
 | Memory | 16 GB |
-| Hard Disk | 400 GB SSD NVMe |
+| Hard Disk | 500 GB SSD NVMe |
 
 </TabItem>
 
@@ -75,9 +80,9 @@ Make sure your server is only dedicated to the collator node.
 | Component | Requirement |
 |---|---|
 | System | Ubuntu 20.04 |
-| CPU | 8 cores |
+| CPU | 8 cores - minimum 4 Ghz per core |
 | Memory | 16 GB |
-| Hard Disk | 400 GB SSD NVMe |
+| Hard Disk | 500 GB SSD NVMe |
 
 </TabItem>
 
@@ -86,9 +91,9 @@ Make sure your server is only dedicated to the collator node.
 | Component | Requirement |
 |---|---|
 | System | Ubuntu 20.04 |
-| CPU | 4 cores |
+| CPU | 4 cores - minimum 3.5 Ghz per core |
 | Memory | 8 GB |
-| Hard Disk | 100 GB SSD NVMe |
+| Hard Disk | 200 GB SSD NVMe |
 
 </TabItem>
 </Tabs>
