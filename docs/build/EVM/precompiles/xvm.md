@@ -14,14 +14,20 @@ Please note that XVM is still in its alpha.
         bytes calldata context,
         bytes calldata to,
         bytes calldata input,
-    ) external;
+    ) external returns (bool success, uint64 gas_spent, bytes memory data);
 ```
 
 Since the interface is abstract and extensible, and each VM treats its parameters differently, the only way to provide a future-proof API is to use byte strings. Under the hood it uses XVM Codec based on SCALE.
 
+### Input parameters
+
 - `context` is a set of data built by caller that is specific to a particular execution environment. Depending on a VM it may contain the id of a virtual machine and its exexcution environment, gas limits and execution tickets, apparent value, continuation info and other information.
 - `to` is an abstraction of an address, anything can be viewed as a destination of a XVM call
 - `input` is a SCALE encoded input parameters specific to this particular call which is created by a sender
+
+### Output data
+- `success` is a boolean outcome flag. If `true`, then XVM call was dispatched successfully and `data` contains data returned from the callee. If `false`, then `data` contains error data. In both cases, the contents and the format of `data` is specific to a particular backend.
+- `gas_spent` contains amount of gas/weight that was spent by a backend during the dispatch.
 
 Please note that this is a low-level interface that is not expected to be used directly. Instead, library authors use such an API to build idiomatic wrappers for specific execution environments.
 
