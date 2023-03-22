@@ -12,7 +12,7 @@ EDSLs can also provide features such as error checking, debugging, and testing, 
 
 ## `Ink!`
 
-Ink! is an eDSL written in Rust and developed by Parity. It specifically targets Substrate’s `pallet-contracts` API.
+Ink! is an eDSL written in Rust and developed by Parity. It specifically targets Substrate’s `pallet-contracts` [API](https://docs.rs/pallet-contracts/latest/pallet_contracts/api_doc/trait.Current.html).
 
 Ink! offers Rust [procedural macros](https://doc.rust-lang.org/reference/procedural-macros.html#procedural-macro-hygiene) and a list of crates to help facilitate development, and save time by avoiding boilerplate code.
 
