@@ -18,7 +18,7 @@ Requirements for running any node are similar to what we recommend for archive n
 
 ## Node launch 
 
-Tracing node setup in general is equal to [Full Node setup](/docs/node/full-node.md). Except binary location and additional launch flags.
+Tracing node setup in general is equal to [Full Node setup](/docs/nodes/full-node.md). Except binary location and additional launch flags.
 
 :::info 
 
