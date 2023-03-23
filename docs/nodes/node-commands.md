@@ -368,7 +368,8 @@ Enable EVM debug log
 
 Enable EVM tracing log
 ```
---ethapi=trace
+--ethapi=txpool,debug,trace
+--wasm-runtime-overrides /var/lib/astar/wasm
 ```
 
 ### External monitoring
