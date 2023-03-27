@@ -9,11 +9,11 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-This guide is designed for those who are getting started with ink! or Wasm smart contracts in the Astar ecosystem. Before you begin, you should ensure your environment supports Rust.
+This guide is designed for those who are new to ink! or Wasm smart contracts in the Astar ecosystem. Before you begin, ensure your environment supports Rust.
 
 ---
 
-## What is Ink!
+## What is ink!
 
 Ink! is a Rust eDSL developed by Parity, that specifically targets smart contract development for Substrate’s `pallet-contracts`. Ink! is not reinventing a programming language, rather, adapting a subset of Rust to serve smart contract developers, specifically. If this isn't reason enough on its own to convince you to learn more about ink!, you can find many more [here](https://use.ink/why-rust-for-smart-contracts).
 
