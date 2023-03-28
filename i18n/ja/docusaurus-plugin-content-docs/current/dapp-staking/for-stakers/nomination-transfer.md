@@ -10,7 +10,7 @@ dApp Staking は、エコシステムのプロジェクトと開発者をサポ�
 
 ## 手順
 
-[dApp Stakingページ](https://portal.astar.network/#/dapp-staking/discover)に移動すると、dApp Stakingメカニズムに記載されているすべてのdAppが表示されます。 記載されている手順はすべてAstar Networkにあり、同じです。
+[dApp Stakingページ](https://portal.astar.network/dapp-staking/discover)に移動すると、dApp Stakingメカニズムに記載されているすべてのdAppが表示されます。 記載されている手順はすべてAstar Networkにあり、同じです。
 
 この機能は、dAppで既にステーキングしているステーカーのみ使用できます。 あなたが初めてdApp Stakingメカニズムのステーキングをするのであれば、[こちら](staking)のステップーバイーステップガイド を参照してください。
 

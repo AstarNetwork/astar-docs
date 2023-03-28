@@ -22,6 +22,7 @@ Collators are responsible for the network stability, it is very important to be 
   --name {COLLATOR_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
+  --pruning archive \
   --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
@@ -31,11 +32,11 @@ Collators are responsible for the network stability, it is very important to be 
 
 ```sh
 ./astar-collator \
-  --pruning archive \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
+  --pruning archive \
   --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
@@ -45,11 +46,11 @@ Collators are responsible for the network stability, it is very important to be 
 
 ```sh
 ./astar-collator \
-  --pruning archive \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
+  --pruning archive \
   --trie-cache-size 0 \
   --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
@@ -85,11 +86,11 @@ The result will look like this (you just need to copy the key):
 
 #### Set session keys
 
-Go to the Polkadot.js portal: _**Developper > Extrinsic**_
+Go to the Polkadot.js portal and connect to respective network (Astar, Shiden or Shibuya).
 
-Select your **collator account** and extrinsic type: _**session / setKeys**_
+Go to _**Developper > Extrinsic**_ and select your **collator account** and extrinsic type: _**session / setKeys**_
 
-Enter the **session keys** and set proof to `0x00`
+Enter the **session keys** and set proof to `0x00`:
 
 <center>
 <img src="https://i.imgur.com/fXfqGal.png" border="1"></img>
@@ -101,15 +102,15 @@ Submit the transaction.
 
 #### Set identity
 
-Go to the Polkadot.js portal: **Accounts**
+On the Polkadot.js portal select _**Accounts**_.
 
-Open the 3 dots next to your collators address: **Set on-chain Identity**
+Open the 3 dots next to your collators address: **Set on-chain Identity**:
 
 <center>
 <img src="https://i.imgur.com/YIIWINt.png" border="1"></img>
 </center>
 
-Enter all fields you want to set.
+Enter all fields you want to set:
 
 <center>
 <img src="https://i.imgur.com/pkC4glq.png" border="1"></img>
@@ -119,9 +120,9 @@ Send the transaction.
 
 #### Request judgment
 
-Go to the Polkadot.js portal: _**Developer > Extrinsic**_
+On the Polkadot.js portal select _**Developer > Extrinsic**_.
 
-Select your **collator account** and extrinsic type: _**identity / requestJudgment**_
+Select your **collator account** and extrinsic type: _**identity / requestJudgment**_.
 
 Send the transaction.
 
@@ -129,9 +130,9 @@ Send the transaction.
 
 To start collating, you need to have **32 000 SDN** tokens for Shiden or **3 200 000 ASTR** tokens for Astar.
 
-Go to the Shibuya Polkadot.js portal: _**Developer > Extrinsic**_
+On the Polkadot.js portal select _**Developer > Extrinsic**_.
 
-Select your **collator account** and extrinsic type: _**CollatorSelection / registerAsCandidate**_
+Select your **collator account** and extrinsic type: _**CollatorSelection / registerAsCandidate**_:
 
 <center>
 <img src="https://i.imgur.com/3YvdJbt.png" border="1"></img>
@@ -142,7 +143,7 @@ Submit the transaction.
 ### Production blocks
 
 :::info
-Onboarding takes place at `n+1` session
+Onboarding takes place at `n+1` session.
 :::
 
 Once your collator is active, you will see your name inside **Network** tab every time you produce a block:

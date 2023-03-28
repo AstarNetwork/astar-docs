@@ -1,7 +1,8 @@
-# Swanky dev container
+# Swanky Dev Container
 
-You can get the whole environment preinstalled and preconfigured inside a Docker container, together with with the `swanky-cli` tool.
 
-You will need Visual Studio Code, and a Docker engine running.
+Together with the `swanky-cli` tool, you can have the entire environment preinstalled and preconfigured inside a Docker container.
 
-Detailed instructions how to use and configure the dev container can be found on [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container).
+To use this setup, you need Visual Studio Code and a running Docker engine. 
+
+Detailed instructions on how to configure and utilize the Dev Container can be found on the [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container)."

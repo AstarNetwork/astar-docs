@@ -22,7 +22,7 @@ Criar um contrato inteligente no nosso ecossistema e verificar o contrato em nos
 
 ## Etapa 2
 
-Vá para nosso [portal](https://portal.astar.network/#/store/discover-dapps) e clique em `+ Registrar dApp`:
+Vá para nosso [portal](https://portal.astar.network/store/discover-dapps) e clique em `+ Registrar dApp`:
 
 Forneça todas as informações na janela pop-up e pressione registrar. Tenha em mente que sua conta precisa ser **aprovada primeiro**, e você tem os tokens necessários na carteira que está registrando o dApp.
 

@@ -34,7 +34,7 @@ CRV: 0x7756a83563f0f56937A6FdF668E7D9F387c0D199
 
 ## How to withdraw ASTR from Exchanges
 
-First, visit [Astar Portal](https://portal.astar.network/#/balance/wallet) with Polkadot.js. If you don't have Polkadot.js extension, you can get it [here](https://polkadot.js.org/extension/).
+First, visit [Astar Portal](https://portal.astar.network/balance/wallet) with Polkadot.js. If you don't have Polkadot.js extension, you can get it [here](https://polkadot.js.org/extension/).
 
 ![1](img/1.png)
 

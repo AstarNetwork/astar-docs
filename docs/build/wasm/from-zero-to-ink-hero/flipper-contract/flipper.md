@@ -52,8 +52,6 @@ Let’s dive a bit deeper into the project structure:
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
 
-use ink_lang as ink;
-
 #[ink::contract]
 mod flipper {
 
@@ -61,7 +59,7 @@ mod flipper {
     /// Add new fields to the below struct in order
     /// to add new static storage fields to your contract.
     #[ink(storage)]
-			    pub struct Flipper {
+    pub struct Flipper {
         /// Stores a single `bool` value on the storage.
         value: bool,
     }
@@ -103,9 +101,6 @@ mod flipper {
     mod tests {
         /// Imports all the definitions from the outer scope so we can use them here.
         use super::*;
-
-        /// Imports `ink_lang` so we can use `#[ink::test]`.
-        use ink_lang as ink;
 
         /// We test if the default constructor does its job.
         #[ink::test]
@@ -162,23 +157,25 @@ mod flipper {
 ```
 
 This annotates a struct that represents the **contract's internal state.** ([details](https://use.ink/macros-attributes/storage)):
+
 ```rust
 #[ink(storage)]
 ```
 
 Storage types:
+
 - Rust primitives types
-    - `bool`
-    - `u{8,16,32,64,128}`
-    - `i{8,16,32,64,128}`
-    - `String`
+  - `bool`
+  - `u{8,16,32,64,128}`
+  - `i{8,16,32,64,128}`
+  - `String`
 - Substrate specific types
-    - `AccountId`
-    - `Balance`
-    - `Hash`
+  - `AccountId`
+  - `Balance`
+  - `Hash`
 - ink! storage type
-    - `Mapping`
-- Custom data Structure [details](https://use.ink/datastructures/custom-datastructure)
+  - `Mapping`
+- Custom data structure [details](https://use.ink/datastructures/custom-datastructure)
 
 This means the contract (Flipper) stores a single `bool` value in storage.
 
@@ -214,7 +211,7 @@ pub fn default() -> Self {
 }
 ```
 
-The following will permit a function to be **publicly dispatchable**, meaning that it will be exposed in the contract interface to the outside world. [For more information](https://use.ink/4.0.0-alpha.1/macros-attributes/message)). Note that all public functions **must** use the `#[ink(message)]` attribute.
+The following will permit a function to be **publicly dispatchable**, meaning that  the function can be called through a message, which is a way for contracts and external accounts to interact with the contract. Find more information [here](https://use.ink/macros-attributes/message)). Note that all public functions **must** use the `#[ink(message)]` attribute.
 
 ```rust
 #[ink(message)]
@@ -238,7 +235,7 @@ pub fn get(&self) -> bool {
 
 ```rust
 impl Flipper {
-       
+
         #[ink(constructor)]
         pub fn new(init_value: bool) -> Self {
             Self { value: init_value }
@@ -298,6 +295,7 @@ impl Flipper {
 ```
 
 ### Compile, Deploy and Interact with Contracts
+
 
 Follow this guide to deploy your contract [using Polkadot UI](https://docs.astar.network/docs/build/wasm/tooling/polkadotjs/). Once deployed, you will be able to interact with it.
 

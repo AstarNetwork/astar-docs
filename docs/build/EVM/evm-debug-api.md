@@ -8,12 +8,6 @@ Geth's debug APIs and OpenEthereum's trace module provide non-standard RPC metho
 
 > Thanks to the PureStake team, the Polkadot ecosystem has tracing capabilities similar to that of Geth, and OpenEthereum. Astar Network implements the same approach for Astar EVM tracing, due to it being the best solution we have at the moment, for the Polkadot ecosystem.
 
-::: note 
-
-Tracing features are currently available as part of pre-release v5.x.x of Astar
-
-:::
-
 ## Debugging RPC Methods
 
 The following RPC methods are available:
@@ -39,6 +33,12 @@ To change the default values you can add CLI flags when spinning up your tracing
 
 ## Run a Debugging Node
 
+:::caution
+
+EVM tracing features available from Astar 5.1 release.
+
+:::
+
 To use the supported RPC methods, you need to run a node in debug mode, which is slightly different than running a full node. Additional flags will also need to be used to tell the node which of the non-standard features to support.
 
 Spinning up a debug or tracing node is similar to running a full node. However, there are some additional flags that you may want to enable specific tracing features:
@@ -51,19 +51,24 @@ Spinning up a debug or tracing node is similar to running a full node. However, 
 * `--ethapi-trace-max-count <uint>` - sets the maximum number of trace entries to be returned by the node. _The default maximum number of trace entries a single request of trace_filter returns is_ **500**
 * `--ethapi-trace-cache-duration <uint>` - sets the duration (in seconds) after which the cache of `trace_filter`, for a given block, is discarded. _The default amount of time blocks are stored in the cache is **300** seconds_
 
-> EVM debug RPC available in Astar Collator **v5.0 and later**.
+:::info
 
-For example, launch node with debug RPC enabled on Shibuya testnet.
+EVM tracing node installation manual available [on this page](/docs/nodes/evm-tracing-node.md). 
 
-```
-astar-collator --ethapi=debug --chain=shibuya
-```
+:::
+
 
 ### Using the Debug/Tracing API
 
 Once you have a running tracing node, you can open your terminal to run curl commands and start to call any of the available JSON RPC methods.
 
 For example, for the `debug_traceTransaction` method, you can make the following JSON RPC request in your terminal:
+
+:::caution
+
+`--ethapi=debug` flag as tracing node argument required to expose this API.
+
+:::
 
 ```
 curl http://127.0.0.1:9933 -H "Content-Type:application/json;charset=utf-8" -d \
@@ -92,13 +97,13 @@ The node responds with the trace information corresponding to the filter.
 
 ### Using transaction pool API
 
-For example, launch node with txpool RPC enabled on Shibuya testnet.
+Let's get pool status using `curl` HTTP POST request.
 
-```
-astar-collator --ethapi=txpool --chain=shibuya
-```
+:::caution
 
-And then let's get pool status using `curl` HTTP POST request.
+`--ethapi=txpool` flag as tracing node argument required to expose this API.
+
+:::
 
 ```
 curl http://127.0.0.1:9933 -H "Content-Type:application/json;charset=utf-8" -d \

@@ -23,7 +23,7 @@ Occassionnellement mais rarement, certains projets ont décidé de modifier leur
 9. Vous pouvez maintenant voir tous les contrats sur lesquels vous êtes en staking. ![image](https://user-images.githubusercontent.com/37278708/199924710-61d994f3-ddae-4dfb-b4c3-f186138d86de.png)
 
 10. Laissez cette page telle qu'elle est.
-11. Ouvrez un autre onglet du navigateur et allez sur [le portail d'Astar](https://portal.astar.network/#/astar/dapp-staking/discover).
+11. Ouvrez un autre onglet du navigateur et allez sur [le portail d'Astar](https://portal.astar.network/astar/dapp-staking/discover).
 12. Se connecter en utilisant le même portefeuille.
 13. Allez dans dApp Staking -> Mes dApps.
 14. Vous pouvez maintenant voir toutes les dApps sur lesquels vous êtes en staking. ![image](https://user-images.githubusercontent.com/37278708/199926165-909fa598-d9b2-4811-8619-f3ae414b9fb3.png)

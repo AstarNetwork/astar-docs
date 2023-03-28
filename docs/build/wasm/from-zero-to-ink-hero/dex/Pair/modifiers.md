@@ -13,7 +13,7 @@ To protect callable functions from reentrancy attacks, we will use the [reentran
 In the *./contracts/pair/Cargo.toml* file, add the `"reentrancy_guard"` feature to the Openbrush dependencies:
 
 ```toml
-openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "reentrancy_guard"] }
+openbrush = { git = "https://github.com/727-Ventures/openbrush-contracts", version = "3.0.0", default-features = false, features = ["psp22", "reentrancy_guard"] }
 ```
 
 In the *./contracts/pair/lib.rs* file, add an import statement, and reentrancy_guard as a Storage field:
@@ -22,17 +22,14 @@ In the *./contracts/pair/lib.rs* file, add an import statement, and reentrancy_g
 use openbrush::{
     contracts::{
         ownable::*,
-        psp22::{
-            Internal,
-            *,
-        },
+        psp22::*,
         reentrancy_guard,
     },
     traits::Storage,
 };
 ...
 #[ink(storage)]
-#[derive(Default, SpreadAllocate, Storage)]
+#[derive(Default, Storage)]
 pub struct PairContract {
     #[storage_field]
     psp22: psp22::Data,
@@ -46,7 +43,7 @@ pub struct PairContract {
 
 In the *./logics/Cargo.toml* file, add the `"reentrancy_guard"` feature as an Openbrush dependency:
 ```toml
-openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "reentrancy_guard"] }
+openbrush = { git = "https://github.com/727-Ventures/openbrush-contracts", version = "3.0.0", default-features = false, features = ["psp22", "reentrancy_guard"] }
 ```
 
 Modifiers should be added in the impl block on top of the function, as an attribute macro. 
@@ -125,10 +122,7 @@ openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrus
 use openbrush::{
     contracts::{
         ownable::*,
-        psp22::{
-            Internal,
-            *,
-        },
+        psp22::*,
         reentrancy_guard,
     },
     traits::Storage,
@@ -154,18 +148,26 @@ impl Ownable for PairContract {}
 impl PairContract {
     #[ink(constructor)]
     pub fn new() -> Self {
-        ink_lang::codegen::initialize_contract(|instance: &mut Self| {
-            let caller = instance.env().caller();
-            instance._init_with_owner(caller);
-            instance.pair.factory = caller;
-        })
+        let mut instance = Self::default();
+        let caller = instance.env().caller();
+        instance._init_with_owner(caller);
+        instance.pair.factory = caller;
+        instance
     }
 }
 ```
 
+Update `Internal` Trait to `psp22::Internal`:
+```rust
+...
+    impl psp22::Internal for PairContract {
+...
+    }
+```
+
 In the *./logics/Cargo.toml* file, add the `"ownable"` feature to openbrush dependency:
 ```toml
-openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22", "ownable", "reentrancy_guard"] }
+openbrush = { git = "https://github.com/727-Ventures/openbrush-contracts", version = "3.0.0", default-features = false, features = ["psp22", "ownable", "reentrancy_guard"] }
 ```
 
 Modifiers should be added in the impl block on top of the function, as an attribute macro.

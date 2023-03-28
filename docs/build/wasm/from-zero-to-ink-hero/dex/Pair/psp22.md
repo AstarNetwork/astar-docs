@@ -21,17 +21,12 @@ authors = ["Stake Technologies <devops@stake.co.jp>"]
 edition = "2021"
 
 [dependencies]
-ink_primitives = { version = "3.4.0", default-features = false }
-ink_metadata = { version = "3.4.0", default-features = false, features = ["derive"], optional = true }
-ink_env = { version = "3.4.0", default-features = false }
-ink_storage = { version = "3.4.0", default-features = false }
-ink_lang = { version = "3.4.0", default-features = false }
-ink_prelude = { version = "3.4.0", default-features = false }
+ink = { version = "4.0.0", default-features = false}
 
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
-scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
+scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
 
-openbrush = { tag = "v2.3.0", git = "https://github.com/Supercolony-net/openbrush-contracts", default-features = false, features = ["psp22"] }
+openbrush = { git = "https://github.com/727-Ventures/openbrush-contracts", version = "3.0.0", default-features = false, features = ["psp22"] }
 
 [lib]
 name = "pair_contract"
@@ -43,14 +38,8 @@ crate-type = [
 [features]
 default = ["std"]
 std = [
-    "ink_primitives/std",
-    "ink_metadata",
-    "ink_metadata/std",
-    "ink_env/std",
-    "ink_storage/std",
-    "ink_lang/std",
+    "ink/std",
     "scale/std",
-    "scale-info",
     "scale-info/std",
     "openbrush/std",
 ]
@@ -61,6 +50,7 @@ overflow-checks = false
 
 [profile.release]
 overflow-checks = false
+
 ```
 *contracts/pair/Cargo.toml*
 
@@ -73,7 +63,6 @@ As reminder the `#![cfg_attr(not(feature = "std"), no_std)]` attribute is for [c
 
 #[openbrush::contract]
 pub mod pair {
-    use ink_storage::traits::SpreadAllocate;
     use openbrush::{
         contracts::{
             psp22::{
@@ -91,7 +80,7 @@ Add the [storage struct](https://use.ink/macros-attributes/storage) and add the 
 
 ```rust
 #[ink(storage)]
-#[derive(Default, SpreadAllocate, Storage)]
+#[derive(Default, Storage)]
 pub struct PairContract {
     #[storage_field]
     psp22: psp22::Data,
@@ -110,7 +99,7 @@ Add an `impl` block for the contract and add the constructor:
 impl PairContract {
     #[ink(constructor)]
     pub fn new() -> Self {
-        ink_lang::codegen::initialize_contract(|instance: &mut Self| {})
+        Self { psp22: Default::default() }
     }
 }
 ```
@@ -126,7 +115,6 @@ cargo contract build
 
 #[openbrush::contract]
 pub mod pair {
-    use ink_storage::traits::SpreadAllocate;
     use openbrush::{
         contracts::{
             psp22::{
@@ -138,7 +126,7 @@ pub mod pair {
     };
 
     #[ink(storage)]
-    #[derive(Default, SpreadAllocate, Storage)]
+    #[derive(Default, Storage)]
     pub struct PairContract {
         #[storage_field]
         psp22: psp22::Data,
@@ -149,7 +137,7 @@ pub mod pair {
     impl PairContract {
         #[ink(constructor)]
         pub fn new() -> Self {
-            ink_lang::codegen::initialize_contract(|instance: &mut Self| {})
+            Self { psp22: Default::default() }
         }
     }
 }
@@ -162,9 +150,11 @@ You should add an [events struct](https://use.ink/macros-attributes/event) to yo
 Import what's needed for editing events:
 
 ```rust
-use ink_lang::codegen::{
-    EmitEvent,
-    Env,
+use ink::{
+    codegen::{
+        EmitEvent,
+        Env,
+    }
 };
 ```
 
@@ -312,13 +302,13 @@ impl PSP22 for PairContract {
 }
 ```
 
-Import Vec from `ink_prelude`:
+Import Vec from `ink::prelude`:
 
 ```rust
- use ink_prelude::vec::Vec;
+ use ink::prelude::vec::Vec;
 ```
 
-And that's it! You implemented PSP22, its event and overrided its default implementation. Check your Pair contract with (run in contract folder):
+And that's it! You implemented PSP22, its event and overrode its default implementation. Check your Pair contract (run in contract folder):
 ```console
 cargo contract build
 ```

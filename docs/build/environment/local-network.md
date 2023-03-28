@@ -13,7 +13,7 @@ You can obtain the latest binary in one of the following ways:
 - Download the latest binary from Github.
 - Build it from source.
 
-If you would like to download the binary, visit the [Release page of the Astar Github repository](https://github.com/AstarNetwork/Astar/releases). There, you will find the pre-built binaries for MacOS and Ubuntu, as well as Docker images.  If you would like to build it from source, [this readme](https://github.com/AstarNetwork/Astar#building-from-source) will guide you through the process.
+If you would like to download the binary, visit the [Release page of the Astar Github repository](https://github.com/AstarNetwork/Astar/releases). There, you can find the pre-built binaries for MacOS and Ubuntu, as well as Docker images.  If you prefer to build it from the source, [this readme](https://github.com/AstarNetwork/Astar#building-from-source) can guide you through the process.
 
 After you obtain the binary, you can rename the file to `astar`, and add execution permission by running the following command:
 
