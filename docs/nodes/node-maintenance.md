@@ -6,19 +6,19 @@ sidebar_position: 5
 
 ## Backup
 
-Maintaining a backup node always sync for a collator is vital to make sure you always produce blocks and avoid being slashed. We highly recommend to have it on a different location and hosted on a different provider.
+Maintaining a backup node that is in sync with a collator is vital to ensuring continuous and interrupted block production, and to avoid the possibility of being slashed. We highly recommend the backup node be hosted in a different physical location, with a different provider.
 
-The collator session keys are stored into `/var/lib/astar/chains/{NETWORK}/keystore`.
+Note: The collator session keys are stored in `/var/lib/astar/chains/{NETWORK}/keystore`.
 
 :::info
 
-You may need to install rsync package depending on your distro (using `sudo apt-get install rsync` or similar)
+You may need to install the rsync package depending on your distro (using `sudo apt-get install rsync` or similar)
 
 :::
 
 :::caution
 
-Make sure you save the content of this directory in a backup directory on your local machine:
+Ensure you create a backup of the keystore folder on your local machine using the following command:
 
 `rsync --rsync-path="sudo rsync" -r {MAIN_SERVER_IP}:/var/lib/astar/chains/{NETWORK}/keystore .`
 
@@ -54,9 +54,9 @@ To get the last 100 lines from the node logs, use the following command:
 journalctl -fu astar-collator -n100
 ```
 
-## Upgrade node
+## Upgrade node / Update node
 
-When an upgrade is necessary, builders are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk) and in the [Astar Upgrade Elements channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org).
+When a node update is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), [Astar Discord](https://discord.gg/Z3nC9U4), and the [Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow these channels to receive the latest updates about nodes and runtimes.
 
 Download the [latest release](https://github.com/AstarNetwork/Astar/releases/latest) from Github:
 
@@ -76,11 +76,11 @@ sudo systemctl restart {NETWORK}.service
 ## Purge node
 
 :::danger
-Do **never purge chain data of an active collator**, it not produce blocks anymore during all the sync process and harm the chain block production rate.
-Instead, switch to your backup node and purge only once the backup is **actively collating**.
+**Never purge the chain data on an active collator** or it will not produce blocks during the sync process, and therefore reduce the block production rate of the chain.
+Instead, switch to your backup node and *only* purge the chain data after it is **actively collating**.
 :::
 
-To start a node from scratch without any chain data, just wipe the chain data directory:
+To start a node from scratch without any existing chain data, simply wipe the chain data directory:
 
 ```sh
 sudo systemctl stop {NETWORK}.service
