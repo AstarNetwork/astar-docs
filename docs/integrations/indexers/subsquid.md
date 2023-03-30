@@ -118,7 +118,9 @@ If you want to serve the scraped data over GraphQL you will need to start a sepa
 ```bash
 sqd serve
 ```
-The server will listen at localhost:4350, with a [GraphiQL](https://github.com/graphql/graphiql) playground available at [http://localhost:4350/graphql](http://localhost:4350/graphql).
+The server will listen at localhost:4350, with a [GraphiQL](https://github.com/graphql/graphiql) playground available at [http://localhost:4350/graphql](http://localhost:4350/graphql):
+
+![GraphiQL playground](</subsquidGraphiql.png>)
 
 ## Next steps
 
