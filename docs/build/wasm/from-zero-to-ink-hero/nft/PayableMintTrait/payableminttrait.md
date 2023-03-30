@@ -2,6 +2,7 @@
 So far, our `mint()` function is quite generic, giving freedom to a caller to mint any token, but at the same time not allowing insight into which tokens have already been minted. In this section we will more clearly define `mint()`, and add several utility functions commonly found in popular NFT projects, that will make this example contract more suitable for production release.
 
 ## Extending the Trait with Utility Functions
+Changes are applied in the `logics/traits/payable_mint.rs` file.
 
 ### `mint(to: AccountId, mint_amount: u64)`
 The `mint()` function will now accept an NFT receiver account, and amount of tokens to be minted.
