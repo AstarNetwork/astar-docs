@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ## Backup
 
-Maintaining a backup node that is in sync with a collator is vital to ensuring continuous and interrupted block production, and to avoid the possibility of being slashed. We highly recommend the backup node be hosted in a different physical location, with a different provider.
+Maintaining a backup node that is in sync with a collator is vital to ensuring continuous and uninterrupted block production, and avoiding the possibility of being slashed. We highly recommend locating a backup node in a different physical location, with a different provider.
 
 Note: The collator session keys are stored in `/var/lib/astar/chains/{NETWORK}/keystore`.
 
@@ -54,9 +54,9 @@ To get the last 100 lines from the node logs, use the following command:
 journalctl -fu astar-collator -n100
 ```
 
-## Upgrade node / Update node
+## Upgrade node
 
-When a node update is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), [Astar Discord](https://discord.gg/Z3nC9U4), and the [Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow these channels to receive the latest updates about nodes and runtimes.
+When a node upgrade is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), [Astar Discord](https://discord.gg/Z3nC9U4), and [Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow any of these channels to receive news about node updates and node upgrades.
 
 Download the [latest release](https://github.com/AstarNetwork/Astar/releases/latest) from Github:
 

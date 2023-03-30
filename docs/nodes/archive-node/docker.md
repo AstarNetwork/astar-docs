@@ -155,9 +155,9 @@ To access data from indexers (like The Graph) or Oracles (like Chainlink), add t
 
 `--ethapi=debug`
 
-## Upgrade node / Update node
+## Upgrade node
 
-When a node update is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), [Astar Discord](https://discord.gg/Z3nC9U4), and the [Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow these channels to receive the latest updates about nodes and runtimes.
+When a node upgrade is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), [Astar Discord](https://discord.gg/Z3nC9U4), and [Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow any of these channels to receive news about node updates and node upgrades.
 
 To upgrade to the latest node version, stop and remove the actual container:
 
