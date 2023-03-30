@@ -131,3 +131,5 @@ Once you're done customizing your squid, you can run it on your own infrastructu
 sqd deploy .
 ```
 after [authenticating with Aquarium](https://docs.subsquid.io/squid-cli/#1-obtain-an-aquarium-deployment-key). For more complex scenarios see the [Deploy a Squid](https://docs.subsquid.io/deploy-squid/) section of the framework documentation.
+
+Subsquid team can be reached via [Telegram](https://t.me/HydraDevs) and [Discord](https://discord.gg/dxR4wNgdjV). Feel free to stop by and chat!
