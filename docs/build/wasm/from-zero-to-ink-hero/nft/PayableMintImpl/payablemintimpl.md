@@ -5,8 +5,8 @@ In this section we will:
 * Update the contract's constructor to accept new parameters.
 * Write a unit test for `mint()`.
 
-## Data Type Definition
-Since the contract is able to accept new parameters, we will need storage to log them. Let's create a new file called `logics/impls/payable_mint/types.rs` and add:
+## New Type Definition
+Since the contract is able to accept new parameters, we will need storage to log them. Let's create a new file called `logics/impls/payable_mint/types.rs` and add new type `Data`:
 
 ```rust
 use openbrush::traits::{
@@ -45,11 +45,10 @@ where
     {...}
 ```
 
-## Mint Implementation
-There are several checks that need to be performed before the token mint can proceed. To keep our `mint` function easy to read, let's introduce an `Internal` trait with helper functions in our implementation file `logics/impls/payable_mint/payable_mint.rs` and add two helper functions `check_value` and `check_amount`:
+## `mint()` Implementation
+There are several checks that need to be performed before the token mint can proceed. To keep our `mint()` function easy to read, let's introduce an `Internal` trait with helper functions in our implementation file `logics/impls/payable_mint/payable_mint.rs` and add two helper functions `check_value()` and `check_amount()` by defining traits and implementing them in the same file:
 
 ```rust
-...
 pub trait Internal {
     /// Check if the transferred mint values is as expected
     fn check_value(&self, transferred_value: u128, mint_amount: u64) -> Result<(), PSP34Error>;
@@ -57,7 +56,7 @@ pub trait Internal {
     /// Check amount of tokens to be minted
     fn check_amount(&self, mint_amount: u64) -> Result<(), PSP34Error>;
 }
-...
+
 impl<T> Internal for T
 where
     T: Storage<Data> + Storage<psp34::Data<enumerable::Balances>>,
@@ -90,7 +89,7 @@ where
 }
 
 ```
-Using helper functions our `mint()` implementation will look like this:
+Using these helper functions our `mint()` implementation will look like this:
 ```rust
 default fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34Error> {
     self.check_value(Self::env().transferred_value(), mint_amount)?;
@@ -109,7 +108,7 @@ default fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34E
     Ok(())
 }
 ```
-## Withdrawal Implementation
+## `withdraw()` Implementation
 This trait allows the contract owner to initiate withdrawal of funds from the contract by implementing a withdraw function:
 
 ```rust
@@ -128,20 +127,20 @@ default fn withdraw(&mut self) -> Result<(), PSP34Error> {
     Ok(())
 }
 ```
-## Set `base_uri` and get `token_uri`
+## `set_base_uri()` and `token_uri()` Implementation
 
-Let's create a `token_exist` function and add it to the `Internal` trait:
+To make the code cleaner, let's create additional helper function `token_exist()` and add it to the `Internal` trait:
 
 ```rust
-...
 pub trait Internal {
-...
+    ...
     /// Check if token is minted
     fn token_exists(&self, id: Id) -> Result<(), PSP34Error>;
 }
-...
+
 impl<T> Internal for T...
 {
+    ...
     /// Check if token is minted
     default fn token_exists(&self, id: Id) -> Result<(), PSP34Error> {
         self.data::<psp34::Data<enumerable::Balances>>()
@@ -151,8 +150,9 @@ impl<T> Internal for T...
 }
 ```
 
-Implement `set_base_uri`:
+Now the implementation of `set_base_uri()` and `token_uri()` will look like this:
 ```rust
+...
 /// Set new value for the baseUri
 #[modifiers(only_owner)]
 default fn set_base_uri(&mut self, uri: PreludeString) -> Result<(), PSP34Error> {
@@ -163,10 +163,6 @@ default fn set_base_uri(&mut self, uri: PreludeString) -> Result<(), PSP34Error>
         ._set_attribute(id, String::from("baseUri"), uri.into_bytes());
     Ok(())
 }
-```
-
-Implement `token_uri`:
-```rust
 /// Get URI from token ID
 default fn token_uri(&self, token_id: u64) -> Result<PreludeString, PSP34Error> {
     self.token_exists(Id::U64(token_id))?;
@@ -181,20 +177,22 @@ default fn token_uri(&self, token_id: u64) -> Result<PreludeString, PSP34Error> 
 }
 ```
 
-## Update Contract
-Since we have added a new type `Data`, let's import it:
+## Update Shiden34 Contract
+Since we have added a new type `Data`, let's import it into our `Shiden34` contract:
 ```rust
 use payable_mint_pkg::impls::payable_mint::*;
 ```
 
 Add a new element in the `struct Shiden34`:
 ```rust
+...
 #[storage_field]
 payable_mint: types::Data,
 ```
 
 Update the constructor to accept new parameters:
 ```rust
+...
 #[ink(constructor)]
 pub fn new(
     name: String,
