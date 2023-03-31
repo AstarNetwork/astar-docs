@@ -23,12 +23,12 @@ sudo chown astar:astar /var/lib/astar
 
 ## Start Docker node
 
-In this guide, we will start a container for both WS and RPC endpoints. If you only want one type of endpoint then just remove the unnecessary port and command.
+This guide goes over the process of starting a container with both WS and RPC endpoints. For a single type of endpoint, simply remove the unnecessary port and command.
 
 Launch the docker node in detached mode:
 
 :::tip
-Please make sure to change {NODE_NAME}
+Make sure to change the {NODE_NAME}
 :::
 
 <Tabs>
@@ -114,7 +114,7 @@ astar-collator \
 </TabItem>
 </Tabs>
 
-You can test the node health through the RPC port with this command:
+Test the node health via the RPC port with this command:
 
 ```sh
 curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9933
@@ -122,21 +122,20 @@ curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"sy
 
 ## Next steps
 
-For any usage, wait for the chain to be fully sync by checking the [node log](/docs/nodes/archive-node/binary#get-node-logs).
+In any case, wait for the chain to be fully synchronized by checking the [node log](/docs/nodes/archive-node/binary#get-node-logs).
 
-It all depends on what you plan to do with your archive node.
-
-- In most cases, you will want to access node from outside. In this case, [nginx server](/docs/nodes/archive-node/nginx) is the recommended option.
-- If you run your dApp on the same server as the node, then you can access it directly with the `localhost` address. This setup is recommended for testing purpose only.
-- If you run the node locally for testing purpose, you can switch the network in [Polkadot.js portal](https://polkadot.js.org/apps) and explore the chain:
+How the archive node will be used will largely determine what steps to follow next: 
+- If accessing the node publicly, running an [nginx server](/docs/nodes/archive-node/nginx) is the recommended option.
+- If the dApp is running on the same server as the node, then it can be accessed directly with the `localhost` address. This setup is recommended for testing purposes only.
+- If running the node locally for testing purposes, switch networks in [Polkadot.js portal](https://polkadot.js.org/apps) to explore the chain:
 
 ![1](img/1.png)
 
-## Extra operations
+## Extra Operations
 
 ### Get node logs
 
-To get the last 100 lines from the node logs, use the following command:
+To obtain the last 100 lines from the node logs, use the following command:
 
 ```sh
 docker logs -f -n 100 $(docker ps -aq --filter name="{CHAIN}-container")
@@ -150,15 +149,15 @@ eg.
 docker logs -f -n 100 $(docker ps -aq --filter name="astar-container")
 ```
 
-### Indexers and oracles
+### Indexers and Oracles
 
-To access data from indexers (lke The Graph) or Oracles (like Chainlink), you need to add the debug flags below to the node launch command, after the `astar-collator` line:
+To access data from indexers (like The Graph) or Oracles (like Chainlink), add the follwing debug flags to the node launch command, after the `astar-collator` line:
 
 `--ethapi=debug`
 
-### Upgrade node
+## Upgrade node
 
-When an upgrade is necessary, node operators are be notified in our [Discord](https://discord.gg/Z3nC9U4) and Element group.
+When a node upgrade is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), [Astar Discord](https://discord.gg/Z3nC9U4), and [Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow any of these channels to receive news about node updates and node upgrades.
 
 To upgrade to the latest node version, stop and remove the actual container:
 
@@ -175,7 +174,7 @@ Then start a new container with the information under "Start Docker Node". Chain
 
 ### Purge node
 
-To start a new container from scratch without any chain data, just remove the container and wipe the chain data directory:
+To start a new container from scratch without any chain data, simply remove the container and wipe the chain data directory:
 
 ```sh
 docker rm -f $(docker ps -a -q --filter name="CHAIN-container")
