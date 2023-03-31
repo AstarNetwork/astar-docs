@@ -27,7 +27,7 @@ Since the interface is abstract and extensible, and each VM treats its parameter
 
 ### Output data
 - `success` is a boolean outcome flag. If `true`, then XVM call was dispatched successfully and `data` contains data returned from the callee. If `false`, then `data` contains error data. In both cases, the contents and the format of `data` are specific to a particular backend.
-- `gas_spent` contains amount of gas/weight that was spent by a backend during the dispatch.
+- `gas_spent` contains amount of gas/weight spent by a backend during the dispatch.
 
 Please note that this is a low-level interface that is not expected to be used directly. Instead, library authors use such an API to build idiomatic wrappers for specific execution environments.
 
