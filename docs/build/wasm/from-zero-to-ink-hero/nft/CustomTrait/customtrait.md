@@ -40,7 +40,7 @@ The crate's `Cargo.toml` will import all ink! and Openbrush crates and it will b
 ```toml
 [package]
 name = "payable_mint_pkg"
-version = "0.3.0"
+version = "3.0.0"
 authors = ["Astar builder"]
 edition = "2021"
 
@@ -54,6 +54,7 @@ openbrush = { tag = "3.0.0", git = "https://github.com/727-Ventures/openbrush-co
 
 [lib]
 path = "lib.rs"
+crate-type = ["rlib"]
 
 [features]
 default = ["std"]
@@ -141,13 +142,11 @@ where
 The last remaining step is to import and implement `PayableMint` in our contract:
 
 ```rust
-use payable_mint::{
-    traits::payable_mint::*,
-};
+use payable_mint_pkg::traits::payable_mint::*;
 
 ...
 
-impl PayableMint for Contract {}
+impl PayableMint for Shiden34 {}
 ```
 
 The contract with all its changes should now appear as something like this:

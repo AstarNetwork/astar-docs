@@ -1,12 +1,12 @@
 # PayableMint Trait Implementation
 In this section we will: 
 * Define a new data type. 
-* Implement functions defined in the `PayableMint` trait from the previous section.
+* Implement functions defined in the `PayableMint` trait from the previous section in file `logics/impl/payable_mint.rs`.
 * Update the contract's constructor to accept new parameters.
 * Write a unit test for `mint()`.
 
-## Data Type Definition
-Since the contract is able to accept new parameters, we will need storage to log them. Let's create a new file called `logics/impls/types.rs` and add:
+## New Type Definition
+Since the contract is able to accept new parameters, we will need storage to log them. Let's create a new file called `logics/impls/payable_mint/types.rs` and add new type `Data`:
 
 ```rust
 use openbrush::traits::{
@@ -23,15 +23,18 @@ pub struct Data {
 }
 ```
 
-Don't forget to update the `mod.rs` file with:
+Don't forget to update the `logics/impls/payable_mint/mod.rs` file with:
 
 ```rust
 pub mod types;
 ```
 
-Since we introduced data storage, we will need to add a trait bond:
+Since we introduced data storage, we will need to add a trait bound `Storage<Data>` in `logics/impls/payable_mint/payable_mint.rs`:
 
 ```rust
+use crate::impls::payable_mint::types::Data;
+
+...
 impl<T> PayableMint for T
 where
     T: Storage<Data>
@@ -42,7 +45,8 @@ where
     {...}
 ```
 
-To keep our functions easy to read, let's introduce an `Internal` trait with helper functions.
+## `mint()` Implementation
+There are several checks that need to be performed before the token mint can proceed. To keep our `mint()` function easy to read, let's introduce an `Internal` trait with helper functions in our implementation file `logics/impls/payable_mint/payable_mint.rs` and add two helper functions `check_value()` and `check_amount()` by defining traits and implementing them in the same file:
 
 ```rust
 pub trait Internal {
@@ -51,54 +55,41 @@ pub trait Internal {
 
     /// Check amount of tokens to be minted
     fn check_amount(&self, mint_amount: u64) -> Result<(), PSP34Error>;
-
-    /// Check if token is minted
-    fn token_exists(&self, id: Id) -> Result<(), PSP34Error>;
 }
-```
 
-## Mint Implementation
-There are several checks that need to be performed before the token mint can proceed, and functions that perform these checks are implemented as part of the `Internal` trait.
-
-### Check Transferred Funds and Overflow
-```rust
-default fn check_value(
-    &self,
-    transferred_value: u128,
-    mint_amount: u64,
-) -> Result<(), PSP34Error> {
-    if let Some(value) = (mint_amount as u128).checked_mul(self.data::<Data>().price_per_mint) {
-        if transferred_value == value {
-            return Ok(())
+impl<T> Internal for T
+where
+    T: Storage<Data> + Storage<psp34::Data<enumerable::Balances>>,
+{
+    /// Check if transferred funds are sufficient for minting the desired nunmber of tokens. 
+    default fn check_value(
+        &self,
+        transferred_value: u128,
+        mint_amount: u64,
+    ) -> Result<(), PSP34Error> {
+        if let Some(value) = (mint_amount as u128).checked_mul(self.data::<Data>().price_per_mint) {
+            if transferred_value == value {
+                return Ok(());
+            }
         }
+        return Err(PSP34Error::Custom(String::from("BadMintValue")));
     }
-    return Err(PSP34Error::Custom(String::from(
-        Shiden34Error::BadMintValue.as_str(),
-    )))
-}
-```
-
-### Check Amount of Tokens to be Minted
-```rust
-/// Check amount of tokens to be minted
-default fn check_amount(&self, mint_amount: u64) -> Result<(), PSP34Error> {
-    if mint_amount == 0 {
-        return Err(PSP34Error::Custom(String::from(
-            Shiden34Error::CannotMintZeroTokens.as_str(),
-        )))
-    }
-    if let Some(amount) = self.data::<Data>().last_token_id.checked_add(mint_amount) {
-        if amount <= self.data::<Data>().max_supply {
-            return Ok(())
+    /// Check if amount of tokens to be minted does not overflow max supply. 
+    default fn check_amount(&self, mint_amount: u64) -> Result<(), PSP34Error> {
+        if mint_amount == 0 {
+            return Err(PSP34Error::Custom(String::from("CannotMintZeroTokens")));
         }
+        if let Some(amount) = self.data::<Data>().last_token_id.checked_add(mint_amount) {
+            if amount <= self.data::<Data>().max_supply {
+                return Ok(());
+            }
+        }
+        return Err(PSP34Error::Custom(String::from("CollectionIsFull")));
     }
-    return Err(PSP34Error::Custom(String::from(
-        Shiden34Error::CollectionIsFull.as_str(),
-    )))
 }
-```
 
-### Mint Implementation
+```
+Using these helper functions our `mint()` implementation will look like this:
 ```rust
 default fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34Error> {
     self.check_value(Self::env().transferred_value(), mint_amount)?;
@@ -117,8 +108,8 @@ default fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34E
     Ok(())
 }
 ```
-## Withdrawal Implementation
-Allow the contract owner to initiate withdrawal of funds from the contract by implementing a withdraw function:
+## `withdraw()` Implementation
+This trait allows the contract owner to initiate withdrawal of funds from the contract by implementing a withdraw function:
 
 ```rust
 /// Withdraws funds to contract owner
@@ -136,22 +127,32 @@ default fn withdraw(&mut self) -> Result<(), PSP34Error> {
     Ok(())
 }
 ```
-## Set `base_uri` and get `token_uri`
+## `set_base_uri()` and `token_uri()` Implementation
 
-Let's create a `token_exist` function and add it to the `Internal` trait:
+To make the code cleaner, let's create additional helper function `token_exist()` and add it to the `Internal` trait:
 
 ```rust
-/// Check if token is minted
-default fn token_exists(&self, id: Id) -> Result<(), PSP34Error> {
-    self.data::<psp34::Data<enumerable::Balances>>()
-        .owner_of(id)
-        .ok_or(PSP34Error::TokenNotExists)?;
-    Ok(())
+pub trait Internal {
+    ...
+    /// Check if token is minted
+    fn token_exists(&self, id: Id) -> Result<(), PSP34Error>;
+}
+
+impl<T> Internal for T...
+{
+    ...
+    /// Check if token is minted
+    default fn token_exists(&self, id: Id) -> Result<(), PSP34Error> {
+        self.data::<psp34::Data<enumerable::Balances>>()
+            .owner_of(id)
+            .ok_or(PSP34Error::TokenNotExists)?;
+        Ok(())
 }
 ```
 
-Implement `set_base_uri`:
+Now the implementation of `set_base_uri()` and `token_uri()` will look like this:
 ```rust
+...
 /// Set new value for the baseUri
 #[modifiers(only_owner)]
 default fn set_base_uri(&mut self, uri: PreludeString) -> Result<(), PSP34Error> {
@@ -162,10 +163,6 @@ default fn set_base_uri(&mut self, uri: PreludeString) -> Result<(), PSP34Error>
         ._set_attribute(id, String::from("baseUri"), uri.into_bytes());
     Ok(())
 }
-```
-
-Implement `token_uri`:
-```rust
 /// Get URI from token ID
 default fn token_uri(&self, token_id: u64) -> Result<PreludeString, PSP34Error> {
     self.token_exists(Id::U64(token_id))?;
@@ -180,20 +177,22 @@ default fn token_uri(&self, token_id: u64) -> Result<PreludeString, PSP34Error> 
 }
 ```
 
-## Update Contract
-Since we have added a new type `Data`, let's import it:
+## Update Shiden34 Contract
+Since we have added a new type `Data`, let's import it into our `Shiden34` contract:
 ```rust
 use payable_mint_pkg::impls::payable_mint::*;
 ```
 
 Add a new element in the `struct Shiden34`:
 ```rust
+...
 #[storage_field]
 payable_mint: types::Data,
 ```
 
 Update the constructor to accept new parameters:
 ```rust
+...
 #[ink(constructor)]
 pub fn new(
     name: String,
