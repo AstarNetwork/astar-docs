@@ -8,21 +8,21 @@ Neste tutorial, vamos te guiar como transferir tokens usando o Portal e enviar t
 
 <br />
 
-- [Criar Contas Astar (Nativa e EVM)](#create-astar-accountsnative-and-evm)
+- [Criar Contas Astar (Nativa e EVM)] (#create-astar-accountsnative-and-evm)
 
-- [Enviando ASTR/SDN para a Astar Network através de Corretoras](#sending-astrsdn-to-astar-network-from-central-exchanges)
+- [Enviando ASTR/SDN para a Astar Network através de Corretoras] (#sending-astrsdn-to-astar-network-from-central-exchanges)
 
-- [Enviando ASTR/SDN para Corretoras de rede Astar Network](#sending-astrsdn-to-central-exchanges-from-astar-network)
+- [Enviando ASTR/SDN para Corretoras de rede Astar Network] (#sending-astrsdn-to-central-exchanges-from-astar-network)
 
-- [Enviando ASTR/SDN para Astar EVM de Astar Nativa](#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
+- [Enviando ASTR/SDN para Astar EVM de Astar Nativa] (#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
 
-- [Enviando ASTR/SDN para Astar Nativa de Astar EVM](#sending-astrsdn-to-astar-native-from-astar-evm)
+- [Enviando ASTR/SDN para Astar Nativa de Astar EVM] (#sending-astrsdn-to-astar-native-from-astar-evm)
 
-- [Transferência Cross-chain (XCM)](#cross-chain-transferxcm)
+- [Transferência Cross-chain (XCM)] (#cross-chain-transferxcm)
 
-- [Transferindo ativos cross-chain(XCM) para a Rede Astar](#transferring-cross-chainxcm-assets-into-astar-network)
+- [Transferindo ativos cross-chain(XCM) para a Rede Astar] (#transferring-cross-chainxcm-assets-into-astar-network)
 
-- [Transferindo ativos cross-chain(XCM) para outras cadeias de Rede Astar](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+- [Transferindo ativos cross-chain(XCM) para outras cadeias de Rede Astar] (#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
 <br />
 
@@ -33,9 +33,9 @@ Astar tem dois endereços em formatos diferentes.
 - Um endereço nativo de Astar - para o dApps Staking e interagir com os projetos WASM
 - Um endereço Astar EVM - para interagir com os projetos EVM
 
-Se você precisa criar uma conta nativa de Astar, [esta página](create-wallet.md) irá ajudá-lo a criar as contas.
+Se você precisa criar uma conta nativa de Astar, [esta página] (create-wallet.md) irá ajudá-lo a criar as contas.
 
-Se você não adicionou a rede Astar à MetaMask, é muito simples - por favor, vá para nosso [Portal](https://portal.astar.network/) e escolha MetaMask. MetaMask irá lhe pedir permissão para adicionar Astar Network. Como alternativa, consulte [aqui](setup-metamask.md) para mais detalhes da Rede.
+Se você não adicionou a rede Astar à MetaMask, é muito simples - por favor, vá para nosso [Portal] (https://portal.astar.network/) e escolha MetaMask. MetaMask irá lhe pedir permissão para adicionar Astar Network. Como alternativa, consulte [aqui] (setup-metamask.md) para mais detalhes da Rede.
 
 <br />
 
@@ -55,13 +55,13 @@ A maioria das corretoras mencionam apenas a rede Astar o que significa que a red
 
 :::
 
-1. Vá para o nosso [Portal](https://portal.astar.network/).
+1. Vá para o nosso [Portal] (https://portal.astar.network/).
 
 2. Conecte a rede à Astar/Shiden (Astar Network para ASTR e Shiden para SDN token).
 
 <img width="1000" alt="rede" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Conecte sua carteira Polkadot.js - se você ainda não a fez, por favor volte para [Criar Contas Astar](#create-wallet/#astar-accounts).
+3. Conecte sua carteira Polkadot.js - se você ainda não a fez, por favor volte para [Criar Contas Astar] (#create-wallet/#astar-accounts).
 
 <img width="1000" alt="carteira" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
@@ -91,7 +91,7 @@ Em conformidade com as instruções abaixo, por favor, leia cuidadosamente todas
 :::
 
 1. Copie o endereço da corretora para o qual você deseja fazer uma transferência.
-2. Vá para [Portal](https://portal.astar.network/) e conecte a rede à Astar/Shiden (Astar Network para ASTR e Shiden Network para SDN token).
+2. Vá para [Portal] (https://portal.astar.network/) e conecte a rede à Astar/Shiden (Astar Network para ASTR e Shiden Network para SDN token).
 3. Conecte sua carteira (Nativa ou EVM depende da corretora) - se você ainda não fez isso, por favor volte para [Criar Contas Astar].
 4. Clique no botão de transferência. <img width="1000" alt="Transferência-Ativos-Nativos" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png" />
 5. Adicione o endereço de destino da corretora e a quantia que você deseja transferir. <img width="1000" alt="Endereço-destino-local-nativo" src="https://user-images.githubusercontent.com/77480847/188531182-9222121b-1c4b-4515-992f-407462a5ae42.png" />
@@ -102,7 +102,7 @@ Em conformidade com as instruções abaixo, por favor, leia cuidadosamente todas
 
 Como mencionado acima, a maioria das corretoras só suportam Astar Nativa e você precisará transferir tokens ASTR para Astar EVM se você quiser interagir com os projetos EVM.
 
-1. Vá para [Portal](https://portal.astar.network/) e copie o endereço de Astar EVM. <img width="1000" alt="conta-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
+1. Vá para [Portal] (https://portal.astar.network/) e copie o endereço de Astar EVM. <img width="1000" alt="conta-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
 
 2. Alternativamente, verifique a extensão MetaMask e copie o endereço. <img width="355" alt="MM" src="https://user-images.githubusercontent.com/77480847/188531287-20dfc966-076d-44fc-805a-502f326708cc.png" />
 
@@ -120,7 +120,7 @@ Por favor, siga os passos abaixo quando você quiser transferir tokens ASTR/SDN 
 
 :::caution
 
-xcAssets (tokens XCM compatíveis com EVM) atualmente são incapazes de serem transferidos de volta para uma conta nativa (até mesmo se tiver sido transferido de uma conta nativa). Você precisará transferir cross-chain (XCM) para as cadeias de origem e fazer outra transferência XCM para Astar Nativa. Por favor, siga [os passos aqui](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+xcAssets (tokens XCM compatíveis com EVM) atualmente são incapazes de serem transferidos de volta para uma conta nativa (até mesmo se tiver sido transferido de uma conta nativa). Você precisará transferir cross-chain (XCM) para as cadeias de origem e fazer outra transferência XCM para Astar Nativa. Por favor, siga [os passos aqui] (#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
 :::  
 :::danger
@@ -129,7 +129,7 @@ xcAssets (tokens XCM compatíveis com EVM) atualmente são incapazes de serem tr
 
 :::
 
-1. Vá para o [Portal](https://portal.astar.network/) e conecte à conta Astar Nativa para copiar o endereço que você deseja usar. <img width="1000" alt="Copiar-Conta" src="https://user-images.githubusercontent.com/77480847/188532843-8be68dcf-edce-4c72-b8c9-4877f45c72d2.png" />
+1. Vá para o [Portal] (https://portal.astar.network/) e conecte à conta Astar Nativa para copiar o endereço que você deseja usar. <img width="1000" alt="Copiar-Conta" src="https://user-images.githubusercontent.com/77480847/188532843-8be68dcf-edce-4c72-b8c9-4877f45c72d2.png" />
 
 2. Conecte à conta EVM de Astar ao mudar as cadeias no botão do cabeçalho. <img width="1000" alt="Alternar-para-EVM" src="https://user-images.githubusercontent.com/77480847/188532949-3ae37836-acd2-424b-b398-8e06ad76271c.png" />
 
@@ -163,7 +163,7 @@ Há alguns pontos que você precisa se preparar antes de fazer uma transferênci
 
 ## Transferindo ativos cross-chain(XCM) para Astar Nework
 
-1. Vá para [Portal](https://portal.astar.network/) e conecte à conta Nativa de Astar **(Depósito em Astar EVM só é possível através da conta Nativa de Astar) **
+1. Vá para [Portal] (https://portal.astar.network/) e conecte à conta Nativa de Astar **(Depósito em Astar EVM só é possível através da conta Nativa de Astar) **
 
 2. Escolha o token que você deseja depositar em Astar Network.
 
@@ -173,7 +173,7 @@ Como a conta Nativa de Astar que é criada na Polkadot.js tem todos endereços c
 
 :::caution
 
-Definimos o valor DOT Min.balance de Polkadot para 1.1DOT e estabelecemos Min.Transferência para 1.1. Você terá que ter pelo menos 2.2DOT + gás para fazer uma transferência mínima. Isto é para proteger os fundos do usuário de serem cortados pelo Depósito Existencial(ED) (mais informações sobre ED, por favor acesse [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
+Definimos o valor DOT Min.balance de Polkadot para 1.1DOT e estabelecemos Min.Transferência para 1.1. Você terá que ter pelo menos 2.2DOT + gás para fazer uma transferência mínima. Isto é para proteger os fundos do usuário de serem cortados pelo Depósito Existencial(ED) (mais informações sobre ED, por favor acesse [Polkadot Wiki] (https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
 
 :::
 
@@ -192,7 +192,7 @@ Definimos o valor DOT Min.balance de Polkadot para 1.1DOT e estabelecemos Min.Tr
 
 ## Transferindo ativos cross-chain(XCM) de Astar Network para outras cadeias
 
-1. Vá para [Portal](https://portal.astar.network/) e copie o endereço de Astar EVM.
+1. Vá para [Portal] (https://portal.astar.network/) e copie o endereço de Astar EVM.
 
 :::tip
 
@@ -204,7 +204,7 @@ Se você deseja mover os ativos cross-chain(XCM) para contas Nativas Astar a par
 
 3. Clique em Transferir e vá para a Página de Transferência. Escolha a aba Transferência Cross-chain (XCM).
 
-4. Se você estiver em Astar EVM, coloque o endereço de destino. Você precisará do [endereço da cadeia de origem](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
+4. Se você estiver em Astar EVM, coloque o endereço de destino. Você precisará do [endereço da cadeia de origem] (https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
 5. Se você estiver em Astar Nativa e feliz em transferir o token dentro da mesma conta quando você não precisa alterar aqui, mas apenas reverter o pedido, você pode inserir manualmente o endereço de outra conta. <img width="1000" alt="XCM-reverso" src="https://user-images.githubusercontent.com/77480847/188535198-27aaf6e9-6b15-4e6f-bc6a-84febcd78de0.png" />
 

@@ -3,9 +3,9 @@
 ## Use the Wizard to generate generic PSP34 code
 
 To create a smart contract which follows PSP34 standard use Openbrush Wizard:
-1. Open [Openbrush.io](https://openbrush.io/) website and go to bottom of the page.
+1. Open [Openbrush.io] (https://openbrush.io/) website and go to bottom of the page.
 2. Select PSP34.
-3. Select the version to match the rest of the tutorial. Check *What will be used* in the [opening chapter](/docs/build/wasm/from-zero-to-ink-hero/nft/#what-will-be-used).
+3. Select the version to match the rest of the tutorial. Check *What will be used* in the [opening chapter] (/docs/build/wasm/from-zero-to-ink-hero/nft/#what-will-be-used).
 4. Name your contract. In this tutorial we will use `Shiden34`.
 5. Add your symbol name. In this tutorial we will use `SH34`.
 6. Select extensions: *Metadata*, *Mintable*, *Enumerable*.
@@ -144,7 +144,7 @@ If you are using stable rustc compiler you will get:
 `error[E0554]: #![feature] may not be used on the stable release channel`
 
 Since Openbrush uses `#![feature(min_specialization)]` which is unstable feature, you need to use `cargo +nightly`.
-Check [Setup environment chapter](/docs/build/environment/ink_environment#rust-and-cargo) to instal nightly toolchain.
+Check [Setup environment chapter] (/docs/build/environment/ink_environment#rust-and-cargo) to instal nightly toolchain.
 :::
 
 ## Examine Openbrush Traits
@@ -155,7 +155,7 @@ Let's examine what we have inside module `shiden34` (lib.rs) so far:
 * Overridden `mint()` method from trait *Mintable*. More about this in next section.
 
 Each of implemented traits will enrich `shiden34` contract with a set of methods. To examine which methods you now have available check:
-* Openbrush [PSP34 trait](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/psp34.rs) brings all familiar functions from ERC721 plus a few extra:
+* Openbrush [PSP34 trait] (https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/psp34.rs) brings all familiar functions from ERC721 plus a few extra:
     * `collection_id()`
     * `balance_of()`
     * `owner_of()`
@@ -163,14 +163,14 @@ Each of implemented traits will enrich `shiden34` contract with a set of methods
     * `approve()`
     * `transfer()`
     * `total_supply()`
-* Openbrush [Metadata](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/metadata.rs)
+* Openbrush [Metadata] (https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/metadata.rs)
     * `get_attribute()`
-* Openbrush [Mintable](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/mintable.rs)
+* Openbrush [Mintable] (https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/mintable.rs)
     * `mint()`
-* Openbrush [Enumerable](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/enumerable.rs)
+* Openbrush [Enumerable] (https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/extensions/enumerable.rs)
     * `owners_token_by_index()`
     * `token_by_index()`
-* Openbrush [Ownable](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/access/ownable/mod.rs)
+* Openbrush [Ownable] (https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/access/ownable/mod.rs)
     * `renounceOwnership ()`
     * `transferOwnership()`
     * `owner()`
@@ -181,7 +181,7 @@ Major differences when compared with ERC721 are:
 
 We could have used `Burnable` trait as well but for simplicity it is skipped in this tutorial since burning can be performed by sending a token to address 0x00.
 
-After this step your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/wizard-step1).
+After this step your code should look like [this] (https://github.com/swanky-dapps/nft/tree/tutorial/wizard-step1).
 
 ## Build, Deploy and Interact with the Contract
 Build your contract:
@@ -195,7 +195,7 @@ The file is located in this folder:
 ls target/ink/shiden34/
 ```
 
-To deploy your contract using the Polkadot.js apps portal, follow the previous guide, or use the [contracts-ui](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network).
+To deploy your contract using the Polkadot.js apps portal, follow the previous guide, or use the [contracts-ui] (https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network).
 
 You can start interacting with your contract. You will notice that one token is already minted. This is due to the `mint()` call in the contract's constructor `new()`.
 * Try minting another token by calling `mint()`.

@@ -16,7 +16,7 @@ Klik tombol “Connect Wallet”.
 
 Sebelum anda menjelajah beragam fitur dari XY Finance, anda harus menghubungkan wallet anda dahulu. XY Finance saat ini mendukung Metamask dan WalletConnect pada browser di komputer desktop, dengan lebih banyak tipe wallet yang didukung dalam perangkat mobile.
 
-![26](img/26.png)
+![26] (img/26.png)
 
 ## Pertukaran Token (Swap Token)
 
@@ -26,20 +26,20 @@ Pilih token yang hendak anda tukar dari blockchain asal dan token yang hendak an
 
 Masukkan jumlah USDT yang ingin ditukar.
 
-![27](img/27.png)
+![27] (img/27.png)
 
 Cek kembali address penerima. XY Finance akan menampilkan address wallet yang terhubung dan memungkinan anda untuk mengganti address penerima.
 
-![28](img/28.png)
+![28] (img/28.png)
 
 Klik tombol “Approve to Swap”,dan anda harus memberi konfirmasi tindakan ini pada wallet anda.
 
-![29](img/29.png)
+![29] (img/29.png)
 
 # Penukaran (Swap)
 
 Klik tombol “ Swap”, dan wallet anda akan meminta konfirmasi anda kembali. Beri konfirmasi tentang transaksi ini dalam wallet anda.
 
-![30](img/30.png)
+![30] (img/30.png)
 
 Anda akan menerima token ASTR anda di Astar Network dalam beberapa saat.

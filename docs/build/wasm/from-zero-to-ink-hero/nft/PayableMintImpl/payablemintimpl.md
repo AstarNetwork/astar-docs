@@ -278,4 +278,4 @@ Run unit test:
 cargo +nightly test
 ```
 
-At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/payablemint-step5).
+At this stage, your code should look something like [this] (https://github.com/swanky-dapps/nft/tree/tutorial/payablemint-step5).

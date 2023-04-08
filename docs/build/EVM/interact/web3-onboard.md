@@ -117,7 +117,7 @@ Now you only need a button to connect and activate the wallet.
   </button>
 ```
 
-And of course if you want to know how to tweak this library more, just look at the [Web3-Onboard documentation](https://onboard.blocknative.com/docs/overview/introduction).
+And of course if you want to know how to tweak this library more, just look at the [Web3-Onboard documentation] (https://onboard.blocknative.com/docs/overview/introduction).
 
-You can also play with a live demo on [Repl.it](https://replit.com/@gluneau/Astar-web3-onboard-EVM-Demo#src/App.jsx)
-![web3-onboard-on-replit](img/web3-onboard-on-replit.png)
+You can also play with a live demo on [Repl.it] (https://replit.com/@gluneau/Astar-web3-onboard-EVM-Demo#src/App.jsx)
+![web3-onboard-on-replit] (img/web3-onboard-on-replit.png)

@@ -17,18 +17,18 @@ Depuis le passage à la V2 du dApp Staking, la première nouveauté est la péri
 
 Si vous avez staké sur l'une des dApps, vous pouvez maintenant cliquer sur Unbond pour rendre vos jetons transférables.
 
-![3](img/3.png)
+![3] (img/3.png)
 
 Sélectionnez le montant que vous voulez **Unbond**, et cliquez sur **Max** pour unbond l'entiereté de vos jetons stakés. Pour signer votre transaction, cliquez sur **Start Unbonding**.
 
-![4](img/4.png)
+![4] (img/4.png)
 
 Vérifiez vos **Chunks**
 
-![5](img/5.png) ![6](img/6.png)
+![5] (img/5.png) ![6] (img/6.png)
 
 Qu'est-ce qu'un chunk? Un chunk est le nombre de différentes ERA pendant lesquelles vos jetons seront en unbonding. Les chunks ne correspondent pas au montant de unbonding sur les dApps que vous avez demandé, mais au nombre de différentes ERA pour lesquelles vos jetons sont unbonded.
 
 Retirez vos "Chunks". Lorsque votre période d'unbonding est terminée, vous devez retirer vos fonds en cliquant sur le bouton withdraw. Signez la transaction et vos jetons seront transférables dans votre portefeuille.
 
-![7](img/7.png)
+![7] (img/7.png)

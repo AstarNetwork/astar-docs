@@ -8,4 +8,4 @@ La fonction de récompenses composées permet aux stakers de réclamer des réco
 
 La fonction d'intérets composés est activée par défaut. Vous pouvez désactiver cette fonctionnalité via le portail.
 
-![8](img/8.png)
+![8] (img/8.png)

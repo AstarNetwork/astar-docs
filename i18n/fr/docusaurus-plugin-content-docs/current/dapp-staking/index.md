@@ -60,7 +60,7 @@ Avec le dApp staking, les développeurs peuvent gagner un revenu de base tout en
 
 ## Programme Build2Earn
 
-Notre initiative de dApp staking sur Astar est fondamentale pour notre programme #Build2Earn et est la suite naturelle de notre campagne [#Stake2Earn](https://medium.com/astar-network/stake2earn-festival-411cb712a380). #Build2Earn est notre programme d'incitations financières dont le but est de fournir un revenu de base aux développeurs pour la construction de dApps utiles sur Astar/Shiden.
+Notre initiative de dApp staking sur Astar est fondamentale pour notre programme #Build2Earn et est la suite naturelle de notre campagne [#Stake2Earn] (https://medium.com/astar-network/stake2earn-festival-411cb712a380). #Build2Earn est notre programme d'incitations financières dont le but est de fournir un revenu de base aux développeurs pour la construction de dApps utiles sur Astar/Shiden.
 
 Dans les prochains jours, nous annoncerons plus de détails sur les projets importants en cours de construction sur Astar/Shiden Network. Nous partagerons également les détails étape par étape sur la façon de mettre en jeu vos jetons Astar/Shiden afin que vous aussi puissiez participer au dApp staking, et aider à construire le Web3, internet de demain.
 

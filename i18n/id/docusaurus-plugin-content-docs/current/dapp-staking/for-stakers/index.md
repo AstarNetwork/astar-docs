@@ -11,7 +11,7 @@ Berikut persyaratan untuk melakukan staking yang perlu menjadi perhatian:
 - Ada periode pelapasan token yang anda staking sekitar 5 hari untuk Shiden dan 10 hari untuk Astar. Mohon diperhatikan bahwa perhitungan pelepasan ini berdasarkan produksi per block untuk dengan durasi 12 detik setiap penciptaan block baru. Apabila ada hambatan yang sedang terjadi, periode pelepasan anda akan memakan waktu lebih lama.
 - Hasil imbalan diperlihatkan dalam bentuk APY secara otomatis. APY akan terlihat untuk para staker yang mengikuti compounding dengan fitur 'Re-stake after claiming" dalam keadaan ON. Selain itu, bentuk APR akan diperlihatkan kepada para staker yang belum atau tidak melakukan compounding. Perbedaannya APR mewakili bunga tahunan sederhana dari penghitungan sederhana penghasilan staking anda, sebaliknya APY mengikutsertakan compounding ke dalam penghitungan.
 
-![12](img/12.png)
+![12] (img/12.png)
 
 Hal terkait yang bisa anda perhatikan:
 

@@ -19,28 +19,28 @@ First, we will deploy the contract:
 1. Open PolkadotJS Apps in your browser and connect to Shibuya testnet. For connectivity instructions check the Integration chapter within this doc.
 2. Go to page `Developers —> Contracts`
 
-![1](img/1.png)
+![1] (img/1.png)
 
 3. Upload the contract
 
-![2](img/2.png)
+![2] (img/2.png)
 
 4. From the pop-up window upload the `.contract` file:
 
-![3](img/3.png)
+![3] (img/3.png)
 
 5. Set values for the constructor and deploy the contract:
 
-![4](img/4.png)
+![4] (img/4.png)
 
 6. Now you can interact with the contract:
 
-![5](img/5.png)
+![5] (img/5.png)
 
 ## Deploy a contract from an existing `code hash`
 
 To deploy from an existing `code hash`, you will need to have the `code hash` on hand, then click `Add an existing code hash`.
 
-![6](img/6.png)
-![7](img/7.png)
-![8](img/8.png)
+![6] (img/6.png)
+![7] (img/7.png)
+![8] (img/8.png)

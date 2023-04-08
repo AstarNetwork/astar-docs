@@ -11,7 +11,7 @@ sidebar_position: 3
 MetamaskにAstar Networkを追加するのはとても簡単です。
 <br />
 
-1. [Portal](https://portal.astar.network/) にアクセスし、Metamaskを接続してみてください。
+1. [Portal] (https://portal.astar.network/) にアクセスし、Metamaskを接続してみてください。
 
 <img width="1000" alt="Screenshot 2022-09-06 at 14 08 21" src="https://user-images.githubusercontent.com/77480847/188554147-02f09f39-6051-4f7f-8e6f-d263867afb88.png" /><br />
 <br />

@@ -21,4 +21,4 @@ Certains d'entre vous peuvent ne pas pouvoir exécuter certaines fonctions, par 
 2. Vider le cache, redémarrer le navigateur et connecter à nouveau le portefeuille au portail.
 3. En haut à droite, basculez vers un endpoint différent.
 
-Si aucun des éléments ci-dessus n'est utile, veuillez contacter les membres de l'équipe ou les ambassadeurs sur [Discord](https://discord.gg/2FGq5KqwBh).
+Si aucun des éléments ci-dessus n'est utile, veuillez contacter les membres de l'équipe ou les ambassadeurs sur [Discord] (https://discord.gg/2FGq5KqwBh).

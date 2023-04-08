@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Smart Contract Runtime Environment
 
-Astar & Shiden runtimes are based on Substrate, and both networks incorporate `pallet-contracts`, a sandboxed environment used to deploy and execute WebAssembly smart contracts. Any language that compiles to Wasm may be deployed and run on this Wasm Virtual Machine, however, the code should be compatible with the `pallet-contracts` [API](https://docs.rs/pallet-contracts/latest/pallet_contracts/api_doc/trait.Current.html).
+Astar & Shiden runtimes are based on Substrate, and both networks incorporate `pallet-contracts`, a sandboxed environment used to deploy and execute WebAssembly smart contracts. Any language that compiles to Wasm may be deployed and run on this Wasm Virtual Machine, however, the code should be compatible with the `pallet-contracts` [API] (https://docs.rs/pallet-contracts/latest/pallet_contracts/api_doc/trait.Current.html).
 
 To avoid unnecessary complexity, and writing boilerplate code, the most appropriate method of building will involve the use of an eDSL specifically targeting `pallet-contracts`, such as [ink!] (based on Rust), or [ask!] (based on AssemblyScript), or possibly others as the ecosystem grows.
 
@@ -36,12 +36,12 @@ The *automatic deposit collection* can be simplified as follows:
 A caller of a contract will pay a deposit to each contract in which new storage is created, as a result of an executed call. Conversely, a caller will receive a refund from each of the contracts that a call removes storage from.
 :::
 
-[Ink! 3.0 Blog Post by Parity](https://www.parity.io/blog/ink-3-0-paritys-rust-based-language-gets-a-major-update)
-[Ink! 4.0 Blog Post by Parity](https://www.parity.io/we-just-released-ink-4-0)
+[Ink! 3.0 Blog Post by Parity] (https://www.parity.io/blog/ink-3-0-paritys-rust-based-language-gets-a-major-update)
+[Ink! 4.0 Blog Post by Parity] (https://www.parity.io/we-just-released-ink-4-0)
 
 ### Execution Engine
 
-Pallet-contracts uses [wasmi](https://github.com/paritytech/wasmi) as a Wasm interpreter to execute Wasm smart contract blobs. Although there is a faster JIT interpreter such as [wasmtime](https://github.com/bytecodealliance/wasmtime) available in the native runtime, smart contracts are an untrusted environment which require a higher degree of correctness of interpretation, which makes wasmi a more suitable option.
+Pallet-contracts uses [wasmi] (https://github.com/paritytech/wasmi) as a Wasm interpreter to execute Wasm smart contract blobs. Although there is a faster JIT interpreter such as [wasmtime] (https://github.com/bytecodealliance/wasmtime) available in the native runtime, smart contracts are an untrusted environment which require a higher degree of correctness of interpretation, which makes wasmi a more suitable option.
 
 ### Two-step Deployment of Contracts
 
@@ -60,24 +60,24 @@ There are several benefits of decoupling the contract code from the address/stor
 
 ### For More Information About `pallet-contracts`
 
-- [`pallet-contracts` in Rust docs](https://docs.rs/pallet-contracts/14.0.0/pallet_contracts/index.html)
-- [`pallet-contracts` on Github](https://github.com/paritytech/substrate/tree/master/frame/contracts)
+- [`pallet-contracts` in Rust docs] (https://docs.rs/pallet-contracts/14.0.0/pallet_contracts/index.html)
+- [`pallet-contracts` on Github] (https://github.com/paritytech/substrate/tree/master/frame/contracts)
 
 ## Client APIs
 
-The only library available to communicate with smart contracts is [Polkadot.js API](https://github.com/polkadot-js/api).
+The only library available to communicate with smart contracts is [Polkadot.js API] (https://github.com/polkadot-js/api).
 
 :::info
 This API provides application developers the ability to query a node and interact with the Polkadot or Substrate chains using Javascript.
 :::
 
-Parity also developed a web application to interact with contracts called [contracts-ui](https://github.com/paritytech/contracts-ui).
+Parity also developed a web application to interact with contracts called [contracts-ui] (https://github.com/paritytech/contracts-ui).
 
 ## The Wasm Stack vs. Ethereum
 
 | | Ethereum | Astar |
 | --- | --- | --- |
-| L1 Architecture | [Ethereum clients](https://ethereum.org/en/developers/docs/nodes-and-clients/) | [Substrate](https://substrate.io/)
+| L1 Architecture | [Ethereum clients] (https://ethereum.org/en/developers/docs/nodes-and-clients/) | [Substrate] (https://substrate.io/)
 Smart Contract Runtime Environment | [EVM] | Wasm [pallet-contract] + EVM [frontier]
 Gas Model | [fixed price per instruction] | [weight] + [storage fees][storage] + [loading fees]
 Smart Contract DSLs | Solidity and Vyper | [ink!] (Rust) and [ask!] (AssemblyScript)

@@ -4,19 +4,19 @@ sidebar_position: 1
 
 # 必要条件
 
-**あなたがプロジェクトオーナーで、dApp Stakingで報酬を得たい場合は、** これらのガイドラインをよくお読みください。 すべての要件を満たしている場合は、 [このフォーム](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) に記入を完了することで、dAppを掲載することができます。
+**あなたがプロジェクトオーナーで、dApp Stakingで報酬を得たい場合は、** これらのガイドラインをよくお読みください。 すべての要件を満たしている場合は、 [このフォーム] (https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) に記入を完了することで、dAppを掲載することができます。
 
 ShidenまたはAstarのdApp Stakingに参加したい場合は、 要件を満たしているかどうかを確認するために注意してお読みください:
 
 :::info
-Astarは数年後にDAOに移行することを目指しています。 DAOに移行することを目指しているため、dApp Stakingに掲載するためには、カウンシルを通過する条件も含まれます。 以下の要件を満たした後、 [フォーラム](https://forum.astar.network/c/initiatives/dapp-staking-applications/21) でdApp Stakingに参加する提案を作成して下さい。
+Astarは数年後にDAOに移行することを目指しています。 DAOに移行することを目指しているため、dApp Stakingに掲載するためには、カウンシルを通過する条件も含まれます。 以下の要件を満たした後、 [フォーラム] (https://forum.astar.network/c/initiatives/dapp-staking-applications/21) でdApp Stakingに参加する提案を作成して下さい。
 :::
 
 ## Astar Network
 
 - あなたのdAppは **Astar Network上にデプロイされており** 、動作している。
-- あなたのプロジェクトは Astar TVL に貢献できるか確認する。 [DefilLama](../../integrations/dapp-listing/defillama) にリストされていることを確認する。
-- [DappRadar](../../integrations/dapp-listing/dappradar) にプロジェクトを掲載する。
+- あなたのプロジェクトは Astar TVL に貢献できるか確認する。 [DefilLama] (../../integrations/dapp-listing/defillama) にリストされていることを確認する。
+- [DappRadar] (../../integrations/dapp-listing/dappradar) にプロジェクトを掲載する。
 
 ### インフラパートナーの場合
 

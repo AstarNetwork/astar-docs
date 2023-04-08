@@ -14,7 +14,7 @@ In this guide, we will walk you through the process of setting up a local Astar 
 
 ## What is a local Astar blockchain
 
-A local Astar blockchain is a **single-node network** running on your local device which can simulate the on-chain environment of Astar Network and be used for local testing without needing any network connections. You can set up a local blockchain by downloading the latest Astar collator node code from [Github](https://github.com/AstarNetwork/Astar) and building from source, or directly run the binary built for your environment.
+A local Astar blockchain is a **single-node network** running on your local device which can simulate the on-chain environment of Astar Network and be used for local testing without needing any network connections. You can set up a local blockchain by downloading the latest Astar collator node code from [Github] (https://github.com/AstarNetwork/Astar) and building from source, or directly run the binary built for your environment.
 
 :::info
 Running a local blockchain is common for smart contract development and testing.
@@ -35,11 +35,11 @@ Compared to the Shibuya testnet, running a local Astar blockchain will have the 
 
 A binary file is an executable program that is already compiled with a specific environment. In this guide, we will demonstrate how to build the local blockchain using binary files since it is the most widely used approach. 
 
-If you prefer building from source code with your local environment, follow the guide [here](https://github.com/AstarNetwork/Astar#building-from-source).
+If you prefer building from source code with your local environment, follow the guide [here] (https://github.com/AstarNetwork/Astar#building-from-source).
 
-Download the latest release of [the Astar collator](https://github.com/AstarNetwork/Astar/releases) for macOS for Ubuntu: 
+Download the latest release of [the Astar collator] (https://github.com/AstarNetwork/Astar/releases) for macOS for Ubuntu: 
     
-![Untitled](img-localchain-cookbook/Untitled.png)
+![Untitled] (img-localchain-cookbook/Untitled.png)
 :::tip
 Please make sure you are running a macOS or Ubuntu with the appropriate version. For macOS, please use a version above MacOS 12.0.
 :::
@@ -91,8 +91,8 @@ Run the local network with the following configurations:
 ```
     
 You will be able to see the local Astar collator node info and new blocksafter successfully running it.
-![Untitled](img-localchain-cookbook/Untitled%201.png)
-![Untitled](img-localchain-cookbook/Untitled%202.png)
+![Untitled] (img-localchain-cookbook/Untitled%201.png)
+![Untitled] (img-localchain-cookbook/Untitled%202.png)
     
 You can check a full list of subcommand and explanation using the following command:
     
@@ -105,10 +105,10 @@ You can check a full list of subcommand and explanation using the following comm
 
 ### Access the local blockchain via explorer
 
-- Go to [local explorer](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer)
+- Go to [local explorer] (https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer)
 - You will be able to to view the recent blocks, accounts info, etc. as the on-chain environment of Astar Network
     
-![Untitled](img-localchain-cookbook/Untitled%203.png)
+![Untitled] (img-localchain-cookbook/Untitled%203.png)
     
 
 ---
@@ -146,4 +146,4 @@ When using the local blockchain with other dev tools including MetaMask, Hardhat
 
 ## Reference
 
-- [Astar Github](https://github.com/AstarNetwork/Astar)
+- [Astar Github] (https://github.com/AstarNetwork/Astar)

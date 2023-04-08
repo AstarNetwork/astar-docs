@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Create Pair
 
-If you are starting the tutorial from here, please check out this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
+If you are starting the tutorial from here, please check out this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
 
 ## 1. Add Create Pair to Factory Trait
 
-We will implement the [createPair](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L23) function of the Factory contract.   
+We will implement the [createPair] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L23) function of the Factory contract.   
 In the *./logics/traits/factory.rs* file, add the **create_pair** function to the Factory trait, as well as the internal child function **_instantiate_pair** that will need to be implemented in the contract crate.
 The reason why we need an internal **_instantiate_pair** function here is because the instantiate builder is not part of the `#[openbrush::wrapper]`, so we will need to use the one from ink! by importing the Pair contract as an `ink-as-dependancy`.
 The **create_pair** message function returns the address of the instantiated Pair contract.
@@ -73,7 +73,7 @@ if token_pair.0 == ZERO_ADDRESS.into() {
 ```
 
 ### 4. Instantiate the Pair Contract     
-The [generate_address](https://github.com/paritytech/substrate/blob/982f5998c59bd2bd455808345ae1bd2b1767f353/frame/contracts/src/lib.rs#L187) function in `pallet_contracts` is akin to the formula of ETH's CREATE2 opcode. There is no CREATE equivalent because CREATE2 is strictly more powerful. Formula: `hash(deploying_address ++ code_hash ++ salt)`
+The [generate_address] (https://github.com/paritytech/substrate/blob/982f5998c59bd2bd455808345ae1bd2b1767f353/frame/contracts/src/lib.rs#L187) function in `pallet_contracts` is akin to the formula of ETH's CREATE2 opcode. There is no CREATE equivalent because CREATE2 is strictly more powerful. Formula: `hash(deploying_address ++ code_hash ++ salt)`
 Instantiation of a contract will define its own contract address by using the concatenated hash of:
 - salt (in bytes)
 - address of deployer
@@ -295,7 +295,7 @@ impl Factory for FactoryContract {
 ```
 
 #### 2. Instantiate Pair
-Using [create builder](https://github.com/paritytech/ink/blob/ad4f5e579e39926704e182736af4fa945982ac2b/crates/env/src/call/create_builder.rs#L269) from ink! we call a **new** constructor from Pair, and pass no endowment (as storage rent has been removed it is not needed). This returns the accountId back to the caller:
+Using [create builder] (https://github.com/paritytech/ink/blob/ad4f5e579e39926704e182736af4fa945982ac2b/crates/env/src/call/create_builder.rs#L269) from ink! we call a **new** constructor from Pair, and pass no endowment (as storage rent has been removed it is not needed). This returns the accountId back to the caller:
 ```rust
 ...
 let pair = match PairContractRef::new()
@@ -359,4 +359,4 @@ And that's it! Check your Factory contract with (run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_create_pair_end).
+It should now look like this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_create_pair_end).

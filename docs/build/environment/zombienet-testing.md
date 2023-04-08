@@ -16,11 +16,11 @@ At the moment, only production networks, like `Astar` or `Shiden`, have access t
 
 ## Zombienet
 
-The approach that gives users the most control is to setup a local test network, with both the Relay Chain and parachain(s). This is very simple & easy to do using the [zombienet](https://github.com/paritytech/zombienet) tool provided by Parity. Simply put, users can download arbitrary Relay Chain and parachain binaries (or use images) to setup a configurable local test network. Users will have access to all privileged actions on the Relay Chain and on the parachains which makes testing much easier.
+The approach that gives users the most control is to setup a local test network, with both the Relay Chain and parachain(s). This is very simple & easy to do using the [zombienet] (https://github.com/paritytech/zombienet) tool provided by Parity. Simply put, users can download arbitrary Relay Chain and parachain binaries (or use images) to setup a configurable local test network. Users will have access to all privileged actions on the Relay Chain and on the parachains which makes testing much easier.
 
 For example, user can download `polkadot` binary together with `astar-collator` and `cumulus-parachain` to spin up a testnetwork with `polkadot` as Relay Chain, `astar` as one parachain and `statemint` as the second parachain.
 
-`Zombienet` documentation can be found [here](https://paritytech.github.io/zombienet/), including the installation instructions, CLI usage, guide with examples and many more. Users are advised to consult this document to get a better understanding of the tool.
+`Zombienet` documentation can be found [here] (https://paritytech.github.io/zombienet/), including the installation instructions, CLI usage, guide with examples and many more. Users are advised to consult this document to get a better understanding of the tool.
 
 ## Shibuya - Shiden Test Network
 
@@ -34,15 +34,15 @@ The following instructions will explain how to setup & configure local _Shibuya 
 
 ### Basic Setup Instructions
 
-For users who already know what they are doing, please check [this](https://github.com/AstarNetwork/Astar/tree/master/third-party/zombienet) folder in `Astar` repository for _ready-to-use_ `zombienet` configurations.
+For users who already know what they are doing, please check [this] (https://github.com/AstarNetwork/Astar/tree/master/third-party/zombienet) folder in `Astar` repository for _ready-to-use_ `zombienet` configurations.
 
 1. For the sake of simplicity, prepare a folder called `zombienet` into which **ALL** binaries and config files will be placed.
 
 2. Download `zombienet` binary appropriate for your operating system (or install it in any way you prefer).
 
-3. Download `polkadot` binary and `astar-collator` binary. They can be found as part of release in official [polkadot](https://github.com/paritytech/polkadot/releases) and [Astar](https://github.com/AstarNetwork/Astar/releases) repositories.
+3. Download `polkadot` binary and `astar-collator` binary. They can be found as part of release in official [polkadot] (https://github.com/paritytech/polkadot/releases) and [Astar] (https://github.com/AstarNetwork/Astar/releases) repositories.
 
-4. Use the configuration file `multi_parachains.toml` which can be found [here](https://github.com/AstarNetwork/Astar/tree/master/third-party/zombienet). Make sure to check the file to get a sense of which parameters are being used.
+4. Use the configuration file `multi_parachains.toml` which can be found [here] (https://github.com/AstarNetwork/Astar/tree/master/third-party/zombienet). Make sure to check the file to get a sense of which parameters are being used.
 
 5. Start the network. This is a command example: `./zombienet-linux -p native spawn multi_parachains.toml`. However, you can start the network in your preferred way (e.g. using `podman` or `kubernetes`).
 
@@ -90,7 +90,7 @@ For all steps, encoded call data will be provided to simplify the process for th
 After completing the previous steps, cross-chain SDN and SBY wrappers are configured as payable and sufficient assets.
 The following steps will explain how to execute a cross-chain remote call. `Alice` will send an instruction from `Shiden` to execute `System::remark_with_event` on `Shibuya`.
 
-`Alice` isn't able to directly control `Alice` on the destination chain, instead a new account will be derived. More information can be found [here](/docs/xcm/building-with-xcm/xc-remote-transact.md#derived-remote-accounts).
+`Alice` isn't able to directly control `Alice` on the destination chain, instead a new account will be derived. More information can be found [here] (/docs/xcm/building-with-xcm/xc-remote-transact.md#derived-remote-accounts).
 
 1. Calculate `Alice's` derived account on `Shibuya` when sending instructions from `Shiden`.
 ```

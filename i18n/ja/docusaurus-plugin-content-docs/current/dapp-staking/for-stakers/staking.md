@@ -17,15 +17,15 @@ sidebar_position: 1
 - **Astar Network**: mainnet for Polkadot
 :::
 
-![1](img/1.png)
+![1] (img/1.png)
 
 ### ステーク
 
-お気に入りのプロジェクトを探してください。 名前をクリックすると、プロジェクトの詳細情報を確認できます。 他に、Astar Networkの[Forum](https://forum.astar.network/)や、[DefilLama](#defillama-en-page-id) 、[DappRadar](#dappradar-en-page-id)で豊富な情報を確認できます。
+お気に入りのプロジェクトを探してください。 名前をクリックすると、プロジェクトの詳細情報を確認できます。 他に、Astar Networkの[Forum] (https://forum.astar.network/)や、[DefilLama] (#defillama-en-page-id) 、[DappRadar] (#dappradar-en-page-id)で豊富な情報を確認できます。
 
 ステーキング額を追加するには、お気に入りのプロジェクトのボックスの「Stake」をクリックしてください。
 
-![2](img/2.png)
+![2] (img/2.png)
 
 ### dApp Staking の管理
 
@@ -37,4 +37,4 @@ sidebar_position: 1
 
 **Claim** （ページのトップ）: あなたがステークしたすべてのdAppから報酬を受け取ります。 あなたはERA毎に報酬を要求することができますが、私たちは毎週1回これを行うことをお勧めします。
 
-**Re-stake after claiming** （ページのトップ）: ステークしたdAppの、請求された報酬の自動複利機能のオン・オフを設定することができます。 詳細は[こちら](compound-rewards)をご確認ください。
+**Re-stake after claiming** （ページのトップ）: ステークしたdAppの、請求された報酬の自動複利機能のオン・オフを設定することができます。 詳細は[こちら] (compound-rewards)をご確認ください。

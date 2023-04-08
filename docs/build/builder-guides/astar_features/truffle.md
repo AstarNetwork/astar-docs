@@ -47,7 +47,7 @@ truffle init
 Now we see something like below to confirm the project is initialized:
 <div style={{textAlign: 'center'}}>
 
-![1](img-Truffle-cookbook/1.png)
+![1] (img-Truffle-cookbook/1.png)
 </div>
 
 Make sure you install HDWalletProvider which we will use later:
@@ -63,7 +63,7 @@ npm install @truffle/hdwallet-provider --save
 Now, we would see the following file structure:
 <div style={{textAlign: 'center'}}>
 
-![2](img-Truffle-cookbook/2.png)
+![2] (img-Truffle-cookbook/2.png)
 </div>
 
 From here, we create a file for smart contract called **HelloShibuya.sol** inside the **contracts** directory:
@@ -91,7 +91,7 @@ module.exports = function (deployer) {
 ### Step 3: Configure Settings
 
 Now we add information for the Shibuya testnet in **truffle-config.js**. 
-For the endpoint, take a look and use one of Shibuya endpoints provided [here](/docs/build/environment/endpoints/). 
+For the endpoint, take a look and use one of Shibuya endpoints provided [here] (/docs/build/environment/endpoints/). 
 
 ```jsx
 require('dotenv').config();
@@ -141,18 +141,18 @@ truffle migrate --network shibuya
 We would see something like below to confirm our smart contract is deployed on Shibuya testnet.
 <div style={{textAlign: 'center'}}>
 
-![3](img-Truffle-cookbook/3.png)
+![3] (img-Truffle-cookbook/3.png)
 </div>
-We can confirm this also by looking at the explorer [Subscan](https://shibuya.subscan.io/).
+We can confirm this also by looking at the explorer [Subscan] (https://shibuya.subscan.io/).
 <div style={{textAlign: 'center'}}>
 
-![4](img-Truffle-cookbook/4.png)
+![4] (img-Truffle-cookbook/4.png)
 </div>
 
-If you have any questions, please feel free to ask us in our [official discord channel](https://discord.gg/GhTvWxsF6S).
+If you have any questions, please feel free to ask us in our [official discord channel] (https://discord.gg/GhTvWxsF6S).
 
 ---
 
 ## Reference
 
-- [Official Document for Truffle](https://trufflesuite.com/docs/)
+- [Official Document for Truffle] (https://trufflesuite.com/docs/)

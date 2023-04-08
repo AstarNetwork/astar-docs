@@ -8,12 +8,12 @@ Este tutorial serve como um guia para criar uma carteira de substrato multisig.
 
 ## Adicionar contatos
 
-1. Acesse [https://polkadot .js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts)
+1. Acesse [https://polkadot .js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts] (https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts)
 2. Vá para Accounts -> Address Book
 3. Clique em `+ Add Contact` e adicione todos os endereços de contato que deseja incluir na carteira multisig.
 4. Por exemplo; Bob, Charlie e Dave
 
-![12](img/12.png)
+![12] (img/12.png)
 
 ## Criar nova carteira
 
@@ -23,7 +23,7 @@ Este tutorial serve como um guia para criar uma carteira de substrato multisig.
 4. Dê um nome à carteira multisig.
 5. Clique em "Create".
 
-![13](img/13.png)
+![13] (img/13.png)
 
 ## Teste a carteira
 

@@ -128,6 +128,6 @@ Le graphique suivant est une visualisation du modèle décrit.
 
 <Figure caption="Tokenomics Model" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" />
 
-Vous pouvez vérifier le modèle et le configurer vous-même [ici](https://www.desmos.com/calculator/cjjkt6smk5).
+Vous pouvez vérifier le modèle et le configurer vous-même [ici] (https://www.desmos.com/calculator/cjjkt6smk5).
 
 [résau Astar]: https://astar.network/

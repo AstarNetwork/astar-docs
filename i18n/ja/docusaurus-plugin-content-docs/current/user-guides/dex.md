@@ -25,7 +25,7 @@ ASTRを購入するには、スワップに使用できる他のアセットが�
 5. 「Transfer」をクリックすると、Astar Network上にUSDTを移動できます。
 6. ブリッジ料金を支払う必要があります。また、Astar Networkでトランザクションに必要なガス代のASTRトークンも受け取ります。
 
-![25](img/25.png)
+![25] (img/25.png)
 
 ## Arthswapでスワップ
 

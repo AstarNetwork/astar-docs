@@ -64,7 +64,7 @@ At last, we install Hardhat and create a Hardhat project.
 npm install hardhat
 ```
 
-![1](img/1.png)
+![1] (img/1.png)
 
 
 ---
@@ -124,13 +124,13 @@ module.exports = {
 
 Now, we can manually add Shibuya test net in MetaMask like below.
 
-![2](img/2.png)
+![2] (img/2.png)
 
 ---
 ### Claim Shibuya testnet tokens from the Discord faucet
 
 Now, we need gas fee to deploy smart contract.
-For this purpose, we use our Shibuya faucet from our [discord](https://discord.gg/astarnetwork) like below.
+For this purpose, we use our Shibuya faucet from our [discord] (https://discord.gg/astarnetwork) like below.
 
 We need to type something like below.
 
@@ -138,11 +138,11 @@ We need to type something like below.
 /drip network: Your Shibuya Address
 ```
 
-![3](img/3.png)
+![3]  (img/3.png)
 
 We can confirm we got some Shibuya token now.
 
-![4](img/4.png)
+![4] (img/4.png)
 
 ---
 ### Deploy the smart contract on Shibuya
@@ -155,16 +155,16 @@ npx hardhat run --network shibuya scripts/sample-script.js
 
 Thats’s it! We see smart contract is successfully deployed.
 
-![5](img/5.png)
+![5] (img/5.png)
 
-You can also confirm that the contract was deployed successfully by checking [Blackscout](https://blockscout.com/shibuya/).
+You can also confirm that the contract was deployed successfully by checking [Blackscout] (https://blockscout.com/shibuya/).
 
-![6](img/6.png)
+![6] (img/6.png)
 
 Happy Hacking!
 
 ---
 ## Reference
 
-- Official Document for Hardhat: [https://hardhat.org/hardhat-runner/docs/getting-started#overview](https://hardhat.org/hardhat-runner/docs/getting-started#overview)
-- Astar Document for [Hardhat](/docs/build/EVM/developer-tooling/#hardhat)
+- Official Document for Hardhat: [https://hardhat.org/hardhat-runner/docs/getting-started#overview] (https://hardhat.org/hardhat-runner/docs/getting-started#overview)
+- Astar Document for [Hardhat] (/docs/build/EVM/developer-tooling/#hardhat)

@@ -71,8 +71,8 @@ mod my_contract {
 }
 ```
 
-The [flipper](https://github.com/paritytech/ink/blob/master/examples/flipper/lib.rs) smart contract is most basic example provided by ink! team.
+The [flipper] (https://github.com/paritytech/ink/blob/master/examples/flipper/lib.rs) smart contract is most basic example provided by ink! team.
 
 # Using Swanky
 
-You can also use Swanky Suite to fast track your development efforts when setting up the project. Go to this section to learn how to [bootstrap a smart contract using Swanky](/docs/build/wasm/swanky-suite/cli#bootstrap-a-new-project)
+You can also use Swanky Suite to fast track your development efforts when setting up the project. Go to this section to learn how to [bootstrap a smart contract using Swanky] (/docs/build/wasm/swanky-suite/cli#bootstrap-a-new-project)

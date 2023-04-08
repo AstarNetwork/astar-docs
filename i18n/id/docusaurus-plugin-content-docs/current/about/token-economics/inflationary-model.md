@@ -119,6 +119,6 @@ Grafik selanjutnya akan menjelaskan visualisasi dari model tersebut.
 
 <Figure caption="Tokenomics & Model Inflasi" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" />
 
-Pembaca dapat langsung melihat dan mengkonfigurasikan sendiri [di sini](https://www.desmos.com/calculator/cjjkt6smk5).
+Pembaca dapat langsung melihat dan mengkonfigurasikan sendiri [di sini] (https://www.desmos.com/calculator/cjjkt6smk5).
 
 [Astar Network]: https://astar.network/

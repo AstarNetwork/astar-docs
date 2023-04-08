@@ -25,7 +25,7 @@ Untuk membeli ASTR, anda harus memiliki aset lain untuk penukaran. Salah satunya
 5. Klik “Transfer” dan USDT anda akan berada dalam Astar Network.
 6. Anda harus membayar biaya untuk bridge dan anda juga akan menerima sejumlah token ASTR sebagai gas fee yang dibutuhkan untuk berinteraksi dengan Astar Network.
 
-![25](img/25.png)
+![25] (img/25.png)
 
 ## Pembelian Di Arthswap
 

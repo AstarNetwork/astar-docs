@@ -10,14 +10,14 @@ Deploying and interacting with EVM-based smart contracts on Astar is as easy as 
 2. Adding Astar networks to your Ethereum client.
 
 :::caution
-For Astar and Shiden applications, we *highly* recommend [running your own network node](../../nodes/index.md) and not relying on our RPC endpoints. This further decentralizes the network, and puts you in control of your uptime requirements.
+For Astar and Shiden applications, we *highly* recommend [running your own network node] (../../nodes/index.md) and not relying on our RPC endpoints. This further decentralizes the network, and puts you in control of your uptime requirements.
 :::
 
 ## Hardhat
 
 ### Initialize Your Project
 
-If you're starting your Hardhat project from scratch, we recommend you read the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start#overview) page.
+If you're starting your Hardhat project from scratch, we recommend you read the [Hardhat Quick Start] (https://hardhat.org/getting-started/#quick-start#overview) page.
 
 ### Setting up Your Account
 
@@ -90,7 +90,7 @@ Once your accounts are funded, you can deploy the sample contract to Shibuya wit
 
 ### Create an Ethereum Account
 
-We recommend using the `@truffle/hdwallet-provider` package for key management. Instructions can be found [here](https://github.com/trufflesuite/truffle/blob/develop/packages/hdwallet-provider/README.md).
+We recommend using the `@truffle/hdwallet-provider` package for key management. Instructions can be found [here] (https://github.com/trufflesuite/truffle/blob/develop/packages/hdwallet-provider/README.md).
 
 ### Add Networks to `truffle-config.js`
 

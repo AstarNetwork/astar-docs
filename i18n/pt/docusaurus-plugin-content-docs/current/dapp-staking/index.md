@@ -60,7 +60,7 @@ Com dApp staking, os desenvolvedores podem ganhar um rendimento básico ao const
 
 ## Programa Build2Earn
 
-Nossa inciativa de dApp staking na Astar é fundamental para o nosso programa #Build2Ganhe, uma continuação natural da nossa campanha [#Stake2Earn](https://medium.com/astar-network/stake2earn-festival-411cb712a380). #Build2Ganhe é nosso programa de incentivo financeiro cujo objetivo é fornecer uma renda básica aos desenvolvedores para a construção de dApps úteis em Astar/Shiden.
+Nossa inciativa de dApp staking na Astar é fundamental para o nosso programa #Build2Ganhe, uma continuação natural da nossa campanha [#Stake2Earn] (https://medium.com/astar-network/stake2earn-festival-411cb712a380). #Build2Ganhe é nosso programa de incentivo financeiro cujo objetivo é fornecer uma renda básica aos desenvolvedores para a construção de dApps úteis em Astar/Shiden.
 
 Nos próximos dias, anunciaremos mais detalhes sobre projectos importantes que estão a ser construídos na Rede Astar/Shiden. Nós também compartilharemos detalhes passo a passo sobre como fazer staking de seus tokens Astar/Shiden para que você também possa fazer parte e ajudar a construir o futuro da Web3.
 

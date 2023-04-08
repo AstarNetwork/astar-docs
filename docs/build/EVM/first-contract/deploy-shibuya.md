@@ -8,11 +8,11 @@ Your journey is almost finished. At last, you will deploy a smart contract on Sh
 
 ## Obtain SBY token from the Faucet
 
-To deploy a contract on Shibuya, you will need to obtain some SBY tokens from the Faucet, which is explained on [the faucet page](/docs/build/environment/faucet.md).
+To deploy a contract on Shibuya, you will need to obtain some SBY tokens from the Faucet, which is explained on [the faucet page] (/docs/build/environment/faucet.md).
 
 Once successful, you will see some SBY tokens available within MetaMask, if not, double-check to ensure Shibuya is selected as your current network.
 
-![9](img/9.png)
+![9] (img/9.png)
 
 ## Deploy Contract on Shibuya
 

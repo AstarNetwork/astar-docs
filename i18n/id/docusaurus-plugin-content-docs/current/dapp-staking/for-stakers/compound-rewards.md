@@ -8,4 +8,4 @@ Fitur kami yaitu Compound Rewards (Gabungan Imbalan) memungkinkan para staker me
 
 Fitur ini dalam keadaan aktif secara otomatis. Anda dapat mematikan fitur ini melalui portal kami.
 
-![8](img/8.png)
+![8] (img/8.png)

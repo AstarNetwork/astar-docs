@@ -21,4 +21,4 @@ Beberapa dari anda mungkin tidak dapat melakukan tindakan dengan fungsi tertentu
 2. Lakukan Clear Cache pada browser anda, kemudian restart browser dan hubungkan kembali wallet dengan portal.
 3. Pada sudut kanan atas, pilih endpoint yang berbeda.
 
-Apabila langkah diatas tidak membantu, silahkan kontak salah satu member tim kami ataupun ambasador kami dalam [Discord](https://discord.gg/2FGq5KqwBh).
+Apabila langkah diatas tidak membantu, silahkan kontak salah satu member tim kami ataupun ambasador kami dalam [Discord] (https://discord.gg/2FGq5KqwBh).

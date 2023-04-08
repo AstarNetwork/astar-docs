@@ -135,6 +135,6 @@ O gráfico a seguir é uma visualização do modelo descrito.
 
 <Figure caption="Tokenomics & Modelo de Inflação" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" />
 
-Você pode verificar o modelo e configurá-lo [aqui](https://www.desmos.com/calculator/cjjkt6smk5).
+Você pode verificar o modelo e configurá-lo [aqui] (https://www.desmos.com/calculator/cjjkt6smk5).
 
 [Astar Network]: https://astar.network/

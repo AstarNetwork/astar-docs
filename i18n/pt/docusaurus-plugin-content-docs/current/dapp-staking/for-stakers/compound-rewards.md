@@ -8,4 +8,4 @@ Recompensas Compostas permite que os participantes reivindiquem recompensas que 
 
 A funcionalidade de recompensas compostas está habilitada por padrão. Você pode desativar esse recurso através do portal.
 
-![8](img/8.png)
+![8] (img/8.png)

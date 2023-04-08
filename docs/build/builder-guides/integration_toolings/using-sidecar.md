@@ -8,7 +8,7 @@ sidebar_position: 4
 
 The Substrate API Sidecar is a REST service that makes it easy to interact with Astar and Shiden.
 
-![diagram](img/sidecar-diagram.jpg)
+![diagram] (img/sidecar-diagram.jpg)
 
 Instead of having to use the Substrate RPC directly and rely on libraries like `Astar.js` or `Polkadot.js`, you can set up a Substrate API server and interact with the blockchain. For example, you can read block history, listen to events, or submit a transaction, all through a REST API server.
 
@@ -203,16 +203,16 @@ The result will look something like the following:
 }
 ```
 
-You can find the full endpoint documentation from [this link](https://paritytech.github.io/substrate-api-sidecar/dist/).
+You can find the full endpoint documentation from [this link] (https://paritytech.github.io/substrate-api-sidecar/dist/).
 
-For transaction signing for the `/transaction` endpoint, please refer to the Polkadot documentation regarding [transaction construction](https://wiki.polkadot.network/docs/build-transaction-construction).
+For transaction signing for the `/transaction` endpoint, please refer to the Polkadot documentation regarding [transaction construction] (https://wiki.polkadot.network/docs/build-transaction-construction).
 
 ## Connecting to a Remote Node
 
 By default, the Sidecar API will connect to the local node (`ws://127.0.0.1:9944`).
 But you can configure the service to connect to a remote node endpoint.
 
-First, start by cloning the [Sidecar API repository](https://github.com/paritytech/substrate-api-sidecar) to your system.
+First, start by cloning the [Sidecar API repository] (https://github.com/paritytech/substrate-api-sidecar) to your system.
 
 Move to the root of the project folder and use the following command to create the configuration file:
 

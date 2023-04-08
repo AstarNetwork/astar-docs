@@ -91,7 +91,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Integrate Toolings</Translate>,
-    link: '/docs/integrations/',
+    link: '/docs/build/integrations/',
     iconClass: 'tool',
     description: (
       <>

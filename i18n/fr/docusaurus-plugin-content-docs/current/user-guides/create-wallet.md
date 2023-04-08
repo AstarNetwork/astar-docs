@@ -36,23 +36,23 @@ Le plugin Polkadot{.js} offre un équilibre raisonnable entre sécurité et util
 
 ### Installer le Plugin sur votre navigateur
 
-Le plugin est disponible pour [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (et les navigateurs basés sur Chromium comme Brave) et [FireFox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension). Après avoir installé le plugin, vous devriez voir le logo Polkadot{.js} en orange et blanc dans la barre de menu de votre navigateur.
+Le plugin est disponible pour [Google Chrome] (https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (et les navigateurs basés sur Chromium comme Brave) et [FireFox] (https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension). Après avoir installé le plugin, vous devriez voir le logo Polkadot{.js} en orange et blanc dans la barre de menu de votre navigateur.
 
-![4](img/4.png)
+![4] (img/4.png)
 
 ### Créer un Compte
 
 Ouvrez l'extension de navigateur Polkadot{.js} en cliquant sur le logo dans la barre supérieure de votre navigateur. Vous verrez une fenêtre popup.
 
-![6](img/6.png)
+![6] (img/6.png)
 
 Cliquez sur le gros bouton plus - "Créer un nouveau compte". Le plugin Polkadot{.js} utilisera alors un système aléatoire pour créer une nouvelle clef pour vous et vous l'afficher sous la forme de douze mots.
 
-![7](img/7.png)
+![7] (img/7.png)
 
 Vous devriez sauvegarder ces mots. Veuillez stocker la clef privée dans un endroit sûr, secret et sécurisé. Si vous ne pouvez pas accéder à votre compte via Polkadot{.js} pour une raison quelconque, vous pouvez ré-entrer votre clef dans le menu "Ajouter un compte" en sélectionnant "Importer le compte à partir de la clef préexistante".
 
-![8](img/8.png)
+![8] (img/8.png)
 
 Mieux vaut créer un compte autorisé sur n'importe quelle chaîne de l'écosystème Polkadot. Ce compte peut ensuite être utilisé pour Polkadot et Kusama. Votre compte changera automatiquement de format lorsque vous serez connecté à une autre chaîne.
 
@@ -70,7 +70,7 @@ Après avoir cliqué sur "Ajouter le compte avec la clef générée", votre comp
 
 Retournez sur le [Portail d'Astar ][] et actualisez la page. Vous verrez une popup Polkadot JS qui doit être autorisée pour être utilisée sur notre portail. Donnez la permission à l'extension pour le faire!
 
-![9](img/9.png)
+![9] (img/9.png)
 
 Lorsque vous avez donné l'autorisation à l'extension, connectons le portefeuille. Une popup s'affichera avec toutes les extensions possibles. Nous avons juste créé un nouveau compte avec Polkadot JS, alors sélectionnons cette extension.
 

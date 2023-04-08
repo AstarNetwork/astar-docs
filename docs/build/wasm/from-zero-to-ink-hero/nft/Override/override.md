@@ -77,4 +77,4 @@ Check if code compiles:
 cargo +nightly check
 ````
 
-At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/mint-step2).
+At this stage, your code should look something like [this] (https://github.com/swanky-dapps/nft/tree/tutorial/mint-step2).

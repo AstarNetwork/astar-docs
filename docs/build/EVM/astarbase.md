@@ -18,7 +18,7 @@ AstarBase aims to:
 - Encourage users to stake and use the dApp Staking mechanism.
 
 AstarBase is an on-chain EVM database, which contains a mapping between a user's EVM, and Astar Native ss58 address. Such mapping on its own does not bring any value to ecosystem projects, since anyone can register an address pair, but the `checkStakerStatus()` call, which checks to see if the ss58 address of the pair is an active staker, does. 
-The AstarBase contracts are available on each of the Shibuya/Shiden/Astar Networks, and deployment addresses can be found in the [AstarBase github repository](https://github.com/AstarNetwork/astarbase/blob/main/contract/deployment-info.md).
+The AstarBase contracts are available on each of the Shibuya/Shiden/Astar Networks, and deployment addresses can be found in the [AstarBase github repository] (https://github.com/AstarNetwork/astarbase/blob/main/contract/deployment-info.md).
 
 There are 3 functions that can be used to interact with AstarBase.
 
@@ -46,11 +46,11 @@ function checkStakerStatusOnContract(address evmAddress, address stakingContract
     returns (uint128);
 ```
 
-The interface file `IAstarBase.sol` can be found in the [ERC20 example](https://github.com/AstarNetwork/astarbase/tree/main/contract/example).
+The interface file `IAstarBase.sol` can be found in the [ERC20 example] (https://github.com/AstarNetwork/astarbase/tree/main/contract/example).
 
 ## How to Use AstarBase From the Client Side
 
-The `abi` for the contract can be found in [AstarBase Github repository](https://github.com/AstarNetwork/astarbase/tree/main/public/config).
+The `abi` for the contract can be found in [AstarBase Github repository] (https://github.com/AstarNetwork/astarbase/tree/main/public/config).
 
 The following is an example usage of Astarbase from the client side:
 
@@ -90,7 +90,7 @@ const native = await contract.addressMap(evmAddress);
 console.log(native);
 ```
 
-The complete script to read the address mapping is in the example folder on [Github repo](https://github.com/AstarNetwork/astarbase/tree/main/contract/example).
+The complete script to read the address mapping is in the example folder on [Github repo] (https://github.com/AstarNetwork/astarbase/tree/main/contract/example).
 
 ## How to Use AstarBase From the Contract Side
 
@@ -113,7 +113,7 @@ contract A {
 
 ## Example Use Case: Discount Price on an NFT
 
-In the [minting-dapp Github repository](https://github.com/AstarNetwork/minting-dapp/blob/main/contract/contracts/ShidenPass_flat.sol) you will find an example NFT minting dApp, which uses AstarBase to mint a free NFT for active dApp stakers. The same example could easily be adapted to issue a discount price instead of a free NFT.
+In the [minting-dapp Github repository] (https://github.com/AstarNetwork/minting-dapp/blob/main/contract/contracts/ShidenPass_flat.sol) you will find an example NFT minting dApp, which uses AstarBase to mint a free NFT for active dApp stakers. The same example could easily be adapted to issue a discount price instead of a free NFT.
 
 ## Example Use Case: Permissioned Claim for an ERC20 Airdrop
 
@@ -127,7 +127,7 @@ A project is using dApp staking as basic income, and would like to reward stakin
 
 `if ASTARBASE.checkStakerStatusOnContract(address evmAddress, address stakingContract) > 0;`
 
-See the [example ERC20 contract](https://github.com/AstarNetwork/astarbase/tree/main/contract/example) on Github, which mints rewards only to stakers of a specified contract. 
+See the [example ERC20 contract] (https://github.com/AstarNetwork/astarbase/tree/main/contract/example) on Github, which mints rewards only to stakers of a specified contract. 
 
 ## Example Use Case: Bot Protection
 
@@ -135,4 +135,4 @@ There is no absolute protection against bots, but at the very least, their activ
 
 ## ECDSA Address Registration
 
-Besides the ss58 address scheme, [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) addresses are also supported.
+Besides the ss58 address scheme, [ECDSA] (https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) addresses are also supported.

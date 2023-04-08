@@ -13,7 +13,7 @@ Ce tutoriel sert de guide pour créer un portefeuille multi-signatures sur Subst
 3. Cliquez sur `+ Ajouter un contact` et ajoutez toutes les adresses de contact que vous souhaitez inclure dans le portefeuille multi-signatures.
 4. Par exemple : Bob, Charlie et Dave
 
-![12](img/12.png)
+![12] (img/12.png)
 
 ## Créer un nouveau portefeuille
 
@@ -23,7 +23,7 @@ Ce tutoriel sert de guide pour créer un portefeuille multi-signatures sur Subst
 4. Donnez un nom au portefeuille multi-signatures.
 5. Cliquez sur "Créer".
 
-![13](img/13.png)
+![13] (img/13.png)
 
 ## Tester le portefeuille
 

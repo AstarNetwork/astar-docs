@@ -2,9 +2,9 @@
 
 :::caution
 
-Ask! eDSL has many [limitations and issues](https://github.com/ask-lang/ask/issues/)
+Ask! eDSL has many [limitations and issues] (https://github.com/ask-lang/ask/issues/)
 which are actively worked upon but at this moment it is not recommended
-for **PRODUCTION** environment. Please consider [ink!](dsls#ink) if you are building a contract for production.
+for **PRODUCTION** environment. Please consider [ink!] (dsls#ink) if you are building a contract for production.
 
 :::
 
@@ -18,7 +18,7 @@ We will setup the local environment for developing ask! smart contract and deplo
 
 ## What is Ask!?
 
-Ask! is a framework for AssemblyScript developers to write Wasm smart contracts for `pallet-contracts`, otherwise known as the Wasm Virtual Machine. Its syntax is similar to TypeScript. The [current project](https://polkadot.polkassembly.io/post/949) is funded by Polkadot treasury, and still under active development. 
+Ask! is a framework for AssemblyScript developers to write Wasm smart contracts for `pallet-contracts`, otherwise known as the Wasm Virtual Machine. Its syntax is similar to TypeScript. The [current project] (https://polkadot.polkassembly.io/post/949) is funded by Polkadot treasury, and still under active development. 
 
 ---
 
@@ -31,7 +31,7 @@ Prior knowledge of using/setting up typescript/javascript project is helpful but
 
 #### Install yarn package manager.
 
-We will be using `yarn` package manager to manage our ask! project. For installation instructions [read here](https://classic.yarnpkg.com/lang/en/docs/install)
+We will be using `yarn` package manager to manage our ask! project. For installation instructions [read here] (https://classic.yarnpkg.com/lang/en/docs/install)
 
 ```
 npm install --global yarn
@@ -169,7 +169,7 @@ export class Flipper {
 ```
 
 The `Flipper` class is our contract's storage. The `@spreadLayout` and `@packedLayout` are used to describe how it will
-be stored internally, see for more details - [here](https://use.ink/3.x/datastructures/spread-storage-layout).
+be stored internally, see for more details - [here] (https://use.ink/3.x/datastructures/spread-storage-layout).
 
 #### Callable functions
 
@@ -240,25 +240,25 @@ ask-template
 
 Now we will deploy this smart contract on our testnet.
 
-We will access [polkadot.js](https://polkadot.js.org/apps/) and deploy the smart contract. Select Shibuya testnet and pick `metadata.json` for “json for either ABI or .contract bundle” section and pick `flipper.optimized.wasm` for “compiled contract WASM” section.
+We will access [polkadot.js] (https://polkadot.js.org/apps/) and deploy the smart contract. Select Shibuya testnet and pick `metadata.json` for “json for either ABI or .contract bundle” section and pick `flipper.optimized.wasm` for “compiled contract WASM” section.
 
-![09](img/09a.png)
+![09] (img/09a.png)
 
-![10](img/10.png)
+![10] (img/10.png)
 
-![11](img/11.png)
+![11] (img/11.png)
 
-![12](img/12.png)
+![12] (img/12.png)
 
 After following the steps above. We can confirm that the contract is deployed on Shibuya testnet.
 
-![12](img/12.png)
+![12] (img/12.png)
 
 That’s a wrap!
-If you have any questions, please feel free to ask us in our [official discord channel](https://discord.gg/GhTvWxsF6S).
+If you have any questions, please feel free to ask us in our [official discord channel] (https://discord.gg/GhTvWxsF6S).
 
 ---
 
 ## Reference
 
-- [Official documentation for ask!](https://github.com/ask-lang/ask)
+- [Official documentation for ask!] (https://github.com/ask-lang/ask)

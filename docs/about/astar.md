@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Astar Network is the future of smart contracts platform for multichain. The network supports the building of dApps with EVM and WASM smart contracts and offers developers true interoperability, with cross-consensus messaging (XCM). We are made by developers and for developers. Astar’s unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the code they write and dApps they build.
 
-Astar Network focuses on making the best smart contract platform so that dApps developers on Polkadot do not need to pay much attention to infrastructure and can focus more on their dApp. Ideally, the developers can build whatever applications on Astar Network without having to consider its scalability. [Astar Network](https://astar.network/) solves prominent issues: scalability
+Astar Network focuses on making the best smart contract platform so that dApps developers on Polkadot do not need to pay much attention to infrastructure and can focus more on their dApp. Ideally, the developers can build whatever applications on Astar Network without having to consider its scalability. [Astar Network] (https://astar.network/) solves prominent issues: scalability
 interoperability and lack of developer incentive.
 
 ## Scalability

@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Factory Storage and Getters
 
-If you are starting the tutorial from here, please check out this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/modifiers_end) and open it in your IDE.
+If you are starting the tutorial from here, please check out this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/modifiers_end) and open it in your IDE.
 
 ## 1. Factory Storage
 
-The Factory contract has [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L7) implemented in Solidity that we will need to implement in our contract(s):
+The Factory contract has [storage fields] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L7) implemented in Solidity that we will need to implement in our contract(s):
 
 ```solidity
     address public feeTo;
@@ -22,11 +22,11 @@ Ink! uses most Substrate primitive types. Here is a table of conversion between 
 
 | Solidity                                | ink!                                                                                      |
 |-----------------------------------------|-------------------------------------------------------------------------------------------|
-| uint256                                 | [U256](https://docs.rs/primitive-types/latest/primitive_types/struct.U256.html)           |          
+| uint256                                 | [U256] (https://docs.rs/primitive-types/latest/primitive_types/struct.U256.html)           |          
 | any other uint                          | u128 (or lower)                                                                           |
 | address                                 | AccountId                                                                                 |
-| mapping(key => value)                   | [Mapping(key, value)](https://docs.rs/ink_storage/latest/ink_storage/struct.Mapping.html) |
-| mapping(key1 => mapping(key2 => value)) | [Mapping((key1 ,key2), value)](https://substrate.stackexchange.com/a/3993/567)            |
+| mapping(key => value)                   | [Mapping(key, value)] (https://docs.rs/ink_storage/latest/ink_storage/struct.Mapping.html) |
+| mapping(key1 => mapping(key2 => value)) | [Mapping((key1 ,key2), value)] (https://substrate.stackexchange.com/a/3993/567)            |
 
 Let's create a storage struct in the *./logics/impls/factory/data.rs* file. Name the struct `Data` and add the required fields:
 ```rust
@@ -38,7 +38,7 @@ pub struct Data {
 }
 ```
 
-The Factory contract will deploy instances of the Pair contract . In Substrate, the contract deployment process is split into [two steps](https://use.ink/getting-started/deploy-your-contract):
+The Factory contract will deploy instances of the Pair contract . In Substrate, the contract deployment process is split into [two steps] (https://use.ink/getting-started/deploy-your-contract):
 1. Deploying your contract code to the blockchain (the Wasm blob will be uploaded and has a unique `code_hash`).
 2. Creating an instance of your contract (by calling a constructor).
 
@@ -47,8 +47,8 @@ That's why the Factory Storage should save the Pair contract `code_hash` in orde
     pub pair_contract_code_hash: Hash,
 ```
 
-OpenBrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/727-Ventures/openbrush-contracts/blob/35aae841cd13ca4e4bc6d63be96dc27040c34064/lang/macro/src/lib.rs#L466). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with the specified storage key (storage key is a required input argument of the macro).
-To generate a unique key, Openbrush provides a [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is based on the name of the struct and its file path. Let's add this to our struct and import the required fields:
+OpenBrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage] (https://github.com/727-Ventures/openbrush-contracts/blob/35aae841cd13ca4e4bc6d63be96dc27040c34064/lang/macro/src/lib.rs#L466). It implements all [required traits] (https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with the specified storage key (storage key is a required input argument of the macro).
+To generate a unique key, Openbrush provides a [openbrush::storage_unique_key!] (https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is based on the name of the struct and its file path. Let's add this to our struct and import the required fields:
 ```rust
 use ink::{
     prelude::vec::Vec,
@@ -257,7 +257,7 @@ overflow-checks = false
 ```
 
 In the `lib.rs` file, create a factory module with Openbrush contract. Import the `Storage` trait from Openbrush (as well as `ZERO_ADDRESS`) and `SpreadAllocate` from ink!
-As reminder the `#![cfg_attr(not(feature = "std"), no_std)]` attribute is for [conditional compilation](https://use.ink/faq#what-does-the-cfg_attrnotfeature--std-no_std-at-the-beginning-of-each-contract-mean) and the `#![feature(min_specialization)]` is the feature needed to enable [specialization](../Structure/file-structure.md).
+As reminder the `#![cfg_attr(not(feature = "std"), no_std)]` attribute is for [conditional compilation] (https://use.ink/faq#what-does-the-cfg_attrnotfeature--std-no_std-at-the-beginning-of-each-contract-mean) and the `#![feature(min_specialization)]` is the feature needed to enable [specialization] (../Structure/file-structure.md).
 Also import everything (with `*`) from `impls::factory` and `traits::factory`:
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
@@ -275,7 +275,7 @@ pub mod factory {
     };
 ```
 
-Add the [storage struct](https://use.ink/macros-attributes/storage) and Factory field (that we defined in traits):
+Add the [storage struct] (https://use.ink/macros-attributes/storage) and Factory field (that we defined in traits):
 
 ```rust
     #[ink(storage)]
@@ -309,4 +309,4 @@ And that's it! Check your Factory contract with (run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_storage).
+It should now look like this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_storage).

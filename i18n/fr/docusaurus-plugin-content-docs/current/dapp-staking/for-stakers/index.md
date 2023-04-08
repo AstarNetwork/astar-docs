@@ -11,7 +11,7 @@ Veuillez prendre en considération les paramètres suivants :
 - Il y a une période de bonding pendant environ 5 jours sur Shiden et 10 jours sur Astar. Veuillez noter que ceci est basé sur une production de blocs précise de 12s. En cas de retard, votre période de unbonding peut être un peu plus longue.
 - Les récompenses de staking sont affichées dans APY par défaut. L'option APY est disponible pour les stakers qui ont autorisé le compounding en activant 'Re-stake after claiming'. D'autre part, l'option APR est disponible pour les stakers qui n'ont pas activé le compounding. La différence est que l'APR représente le taux annuel pour votre simple staking, mais l'APY prend en compte la composition des intérets.
 
-![12](img/12.png)
+![12] (img/12.png)
 
 Autres pages qui peuvent être intéressantes :
 

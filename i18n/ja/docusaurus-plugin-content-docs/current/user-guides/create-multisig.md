@@ -13,7 +13,7 @@ sidebar_position: 2
 3. `+ Add Contact` をクリックし、マルチシグウォレットに含めたいすべてのアドレスを追加する
 4. 例：Bob、Charlie、Dave
 
-![12](img/12.png)
+![12] (img/12.png)
 
 ## 新しいウォレットを作成
 
@@ -23,7 +23,7 @@ sidebar_position: 2
 4. マルチシグウォレットに名前を付ける。
 5. 「Create」をクリックする。
 
-![13](img/13.png)
+![13] (img/13.png)
 
 ## ウォレットのテスト
 

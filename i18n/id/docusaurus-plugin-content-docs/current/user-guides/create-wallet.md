@@ -36,23 +36,23 @@ Plugin Polkadot{.js} plugin menyediakan keseimbangan antara kegunaan dan keamana
 
 ### Memasang Plugin Browser
 
-Plugin browser tersedia baik untuk [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (dan browser berbasis Chromium seperti Brave) dan [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension). Setelah memasang plugin, anda seharusnya dapat melihat logo Polkadot{.js} berwarna oranye dan putih pada menu browser anda.
+Plugin browser tersedia baik untuk [Google Chrome] (https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (dan browser berbasis Chromium seperti Brave) dan [Firefox] (https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension). Setelah memasang plugin, anda seharusnya dapat melihat logo Polkadot{.js} berwarna oranye dan putih pada menu browser anda.
 
-![4](img/4.png)
+![4] (img/4.png)
 
 ### Menciptakan Akun
 
 Buka extension Polkadot{.js} dengan klik pada logo di bagian atas browser anda. Anda akan melihat penampakan sebuah menu.
 
-![6](img/6.png)
+![6] (img/6.png)
 
 Klik pada tombol plus - "Create new account". Polkadot{.js} kemudian akan menggunakan sistemasi acak untuk menciptakan kata kunci (seed) dan menampilkan dalam bentuk 12 kata.
 
-![7](img/7.png)
+![7] (img/7.png)
 
 Anda harus menyimpan kata-kata kunci tersebut. Simpanlah kata kunci tersebut di tempat yang aman dan rahasia. Apabila anda tidak dapat mengakses akun anda melalui Polkadot{.js} karena sesuatu hal, maka anda dapat memasukkan kata-kata kunci tersebut dengan cara "Add account menu" dan kemudian pilih "Import account from pre-existing seed".
 
-![8](img/8.png)
+![8] (img/8.png)
 
 Sebaiknya ciptakan sebuah akun yang dapat digunakan untuk semua parachain dalam ekosistem Polkadot. Akun ini kemudian dapat digunakan juga pada Polkadot dan Kusama. Format akun anda akan berubah secara otomatis apabila terhubung pada parachain tertentu.
 
@@ -70,7 +70,7 @@ Setelah klik pada "Add the account with the generated seed", maka akun anda akan
 
 Kembali ke [Astar Portal][] dan refresh halaman tersebut. Anda akan mendapatkan pesan pop up untuk melakukan otorisasi untuk Polkadot JS agar dapat digunakan dalam portal kami. Berikan izin kepada extension.
 
-![9](img/9.png)
+![9] (img/9.png)
 
 Saat anda sudah mengizinkan extension tersebut, mari kita hubungkan wallet anda. Pesan pop up akan muncul kembali dengan semua extension yang tersedia. Gunakan akun yang baru diciptakan dengan Polkadot JS, jadi kita pilih extension ini.
 

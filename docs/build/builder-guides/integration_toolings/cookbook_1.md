@@ -16,7 +16,7 @@ Covalent leverages big-data technologies to create meaning from hundreds of bill
 
 As an example in this cookbook, we will analyze the change in the balance of ceUSDC/ceUSDT pool on ArthSwap. We will be using Python in this cookbook. For non-devs who are not familiar to setting up local environment to run Python, we recommend using Jupyter Notebook.
 
-Make sure to sign up for Covalent to get the API key needed to run the code. (You can register [here](https://www.covalenthq.com/))
+Make sure to sign up for Covalent to get the API key needed to run the code. (You can register [here] (https://www.covalenthq.com/))
 
 ### Step 1: Extract data
 
@@ -48,7 +48,7 @@ print(portfolio_data)
 
 Below is a sample output:
 
-`{'data': {'address': '0xd72a602c714ae36d990dc835ea5f96ef87657d5e', 'updated_at': '2022-09-20T07:17:27.930341337Z', 'next_update_at': '2022-09-20T07:22:27.930341567Z', 'quote_currency': 'USD', 'chain_id': 592, 'items': [{'contract_decimals': 6, 'contract_name': 'USD Coin', 'contract_ticker_symbol': 'USDC', 'contract_address': '0x6a2d262d56735dba19dd70682b39f6be9a931d98', 'supports_erc': None, 'logo_url': '[https://logos.covalenthq.com/tokens/592/0x6a2d262d56735dba19dd70682b39f6be9a931d98.png](https://logos.covalenthq.com/tokens/592/0x6a2d262d56735dba19dd70682b39f6be9a931d98.png)', 'holdings': [{'timestamp': '2022-09-20T00:00:00Z', 'quote_rate': 0.9932833, 'open': {'balance': '391683183282', 'quote': 389052.34}, 'high': {'balance': '392123445379', 'quote': 389489.66}, 'low': {'balance': '316424219770', 'quote': 314298.88}, 'close': {'balance': '317469504720', 'quote': 315337.16}}, {'timestamp': '2022-09-19T00:00:00Z', 'quote_rate': 1.0022721, 'open': {'balance': '391991979278', 'quote': 392882.62}, 'high': {'balance': '392739045673', 'quote': 393631.4}, 'low': {'balance': '389667428685', 'quote': 390552.8}, 'close': {'balance': '391683183282', 'quote': 392573.16}},` ...
+`{'data': {'address': '0xd72a602c714ae36d990dc835ea5f96ef87657d5e', 'updated_at': '2022-09-20T07:17:27.930341337Z', 'next_update_at': '2022-09-20T07:22:27.930341567Z', 'quote_currency': 'USD', 'chain_id': 592, 'items': [{'contract_decimals': 6, 'contract_name': 'USD Coin', 'contract_ticker_symbol': 'USDC', 'contract_address': '0x6a2d262d56735dba19dd70682b39f6be9a931d98', 'supports_erc': None, 'logo_url': '[https://logos.covalenthq.com/tokens/592/0x6a2d262d56735dba19dd70682b39f6be9a931d98.png] (https://logos.covalenthq.com/tokens/592/0x6a2d262d56735dba19dd70682b39f6be9a931d98.png)', 'holdings': [{'timestamp': '2022-09-20T00:00:00Z', 'quote_rate': 0.9932833, 'open': {'balance': '391683183282', 'quote': 389052.34}, 'high': {'balance': '392123445379', 'quote': 389489.66}, 'low': {'balance': '316424219770', 'quote': 314298.88}, 'close': {'balance': '317469504720', 'quote': 315337.16}}, {'timestamp': '2022-09-19T00:00:00Z', 'quote_rate': 1.0022721, 'open': {'balance': '391991979278', 'quote': 392882.62}, 'high': {'balance': '392739045673', 'quote': 393631.4}, 'low': {'balance': '389667428685', 'quote': 390552.8}, 'close': {'balance': '391683183282', 'quote': 392573.16}},` ...
 
 ### Step 2: Transform the data into lists
 
@@ -225,7 +225,7 @@ lp_df.T.plot()
 
 The output will look as follows:
 
-![1](img/1.png)
+![1] (img/1.png)
 
 That's it!
 
@@ -236,6 +236,6 @@ This is just a simple example. There is a lot of API opened by Covalent and endl
 ## Reference
 
 - Covalent API resource
-    - [https://www.covalenthq.com/docs/api/#/0/0/USD/1](https://www.covalenthq.com/docs/api/#/0/0/USD/1)
+    - [https://www.covalenthq.com/docs/api/#/0/0/USD/1] (https://www.covalenthq.com/docs/api/#/0/0/USD/1)
 - Covalent docs
-    - [https://www.covalenthq.com/docs/](https://www.covalenthq.com/docs/)
+    - [https://www.covalenthq.com/docs/] (https://www.covalenthq.com/docs/)

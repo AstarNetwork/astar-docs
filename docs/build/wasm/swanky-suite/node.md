@@ -8,7 +8,7 @@ Swanky Node is a Substrate based blockchain configured to enable `pallet-contrac
 
 ### Features
 
-- [pallet-contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts)
+- [pallet-contracts] (https://github.com/paritytech/substrate/tree/master/frame/contracts)
 - `grandpa` & `aura` consensus were removed. Instead, `instant-seal` & `manual-seal` are used.
   Blocks are authored & finalized (1) as soon as a transaction get in the pool (2) when `engine_createBlock` `engine_finalizeBlock` RPC called respectively.
 - `pallet-dapps-staking`
@@ -26,11 +26,11 @@ ink! `v4.0.0` or lower is supported.
 
 #### Download Binary
 
-The easiest method of installation is by downloading and executing a precompiled binary from the [Release Page](https://github.com/AstarNetwork/swanky-node/releases)
+The easiest method of installation is by downloading and executing a precompiled binary from the [Release Page] (https://github.com/AstarNetwork/swanky-node/releases)
 
 #### Build Locally
 
-If you would like to build the source locally, you should first complete the [basic Rust setup instructions](/docs/build/environment/ink_environment#rust-and-cargo).
+If you would like to build the source locally, you should first complete the [basic Rust setup instructions] (/docs/build/environment/ink_environment#rust-and-cargo).
 Once Rust is installed and configured, you will be able to build the node with:
 
 ```bash
@@ -71,7 +71,7 @@ Purge the development chain's state.
 ### Development Accounts
 
 The **alice** development account will be the authority and sudo account as declared in the
-[genesis state](https://github.com/AstarNetwork/swanky-node/blob/main/node/src/chain_spec.rs#L44).
+[genesis state] (https://github.com/AstarNetwork/swanky-node/blob/main/node/src/chain_spec.rs#L44).
 While at the same time, the following accounts will be pre-funded:
 
 - Alice
@@ -97,19 +97,19 @@ To print errors and contract debug output to the console log, supply `-lerror,ru
 
 Important: Debug output is only printed for RPC calls or off-chain tests ‒ not for transactions.
 
-See the ink! [FAQ](https://ink.substrate.io/faq/#how-do-i-print-something-to-the-console-from-the-runtime) for more details: How do I print something to the console from the runtime?.
+See the ink! [FAQ] (https://ink.substrate.io/faq/#how-do-i-print-something-to-the-console-from-the-runtime) for more details: How do I print something to the console from the runtime?.
 
 ### Connect with Polkadot.js Apps Portal
 
 Once the Swanky Node is running locally, you will be able to connect to it from the **Polkadot-JS Apps** front-end,
 in order to interact with your chain. [Click
-here](https://polkadot.js.org/apps/#/explorer?rpc=ws://localhost:9944) connecting the Apps to your
+here] (https://polkadot.js.org/apps/#/explorer?rpc=ws://localhost:9944) connecting the Apps to your
 local Swanky Node.
 
 ### Run in Docker
 
-First, install [Docker](https://docs.docker.com/get-docker/) and
-[Docker Compose](https://docs.docker.com/compose/install/).
+First, install [Docker] (https://docs.docker.com/get-docker/) and
+[Docker Compose] (https://docs.docker.com/compose/install/).
 
 Then run the following command to start a single node development chain.
 

@@ -6,7 +6,7 @@ Events are important for smart contracts because they facilitate communication b
 
 ## Minting Event
 In our contract, an event should be emitted when a token is minted.
-One could expect that by calling the Openbrush `_mint_to()` function an event will be emitted, but upon closer examination we can see that `_emit_transfer_event()` has an empty default [implementation](https://github1s.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/token/psp34/psp34.rs#L151-L152). This grants developers flexibility to create events that are suitable for their own needs.
+One could expect that by calling the Openbrush `_mint_to()` function an event will be emitted, but upon closer examination we can see that `_emit_transfer_event()` has an empty default [implementation] (https://github1s.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/token/psp34/psp34.rs#L151-L152). This grants developers flexibility to create events that are suitable for their own needs.
 
 ```rust
 default fn _emit_transfer_event(&self, _from: Option<AccountId>, _to: Option<AccountId>, _id: Id) {}
@@ -79,12 +79,12 @@ Run unit test:
 cargo +nightly test
 ```
 
-At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/events).
+At this stage, your code should look something like [this] (https://github.com/swanky-dapps/nft/tree/tutorial/events).
 
 ## Next Step
 Congratulations! You've made it through all the steps required to build your NFT Contract!
 
-As a next step, review the code in the [main](https://github.com/swanky-dapps/nft/) branch for the repository used for this tutorial. There you can enhance your knowledge about:
+As a next step, review the code in the [main] (https://github.com/swanky-dapps/nft/) branch for the repository used for this tutorial. There you can enhance your knowledge about:
 - Improving the unit test coverage.
 - Adding new useful functions.
 - End-to-end testing.

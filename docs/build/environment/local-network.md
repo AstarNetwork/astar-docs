@@ -13,7 +13,7 @@ You can obtain the latest binary in one of the following ways:
 - Download the latest binary from Github.
 - Build it from source.
 
-If you would like to download the binary, visit the [Release page of the Astar Github repository](https://github.com/AstarNetwork/Astar/releases). There, you can find the pre-built binaries for MacOS and Ubuntu, as well as Docker images.  If you prefer to build it from the source, [this readme](https://github.com/AstarNetwork/Astar#building-from-source) can guide you through the process.
+If you would like to download the binary, visit the [Release page of the Astar Github repository] (https://github.com/AstarNetwork/Astar/releases). There, you can find the pre-built binaries for MacOS and Ubuntu, as well as Docker images.  If you prefer to build it from the source, [this readme] (https://github.com/AstarNetwork/Astar#building-from-source) can guide you through the process.
 
 After you obtain the binary, you can rename the file to `astar`, and add execution permission by running the following command:
 
@@ -58,7 +58,7 @@ You can see the full list of the command options using the `help` subcommand:
 
 When you have successfully launched the local network, you will see the following messages in your terminal:
 
-![1](img/1n.png)
+![1] (img/1n.png)
 
 OK! Let's explore your local network now.
 
@@ -70,11 +70,11 @@ Visit the following URL:
 
 There, you will see the following screen:
 
-![2](img/2n.png)
+![2] (img/2n.png)
 
-This represents your local network. In this local network, some native tokens have already been issued to a few accounts. Let's visit the [Account page](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/accounts) from the Accounts Tab.
+This represents your local network. In this local network, some native tokens have already been issued to a few accounts. Let's visit the [Account page] (https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/accounts) from the Accounts Tab.
 
-![3](img/3n.png)
+![3] (img/3n.png)
 
 Here, you can see that ALICE and BOB have around 1,000 tokens. In the following section, you will deploy your smart contract and interact with it by paying the transaction fees using these tokens.
 

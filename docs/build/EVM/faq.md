@@ -6,9 +6,9 @@ sidebar_position: 8
 
 ### Is there a step by step guide on how to deploy smart contract in the Astar ecosystem?
 
-Yes, you can follow [this tutorial](first-contract) within our documentation.
+Yes, you can follow [this tutorial] (first-contract) within our documentation.
 
-### Can I use [Remix](https://remix.ethereum.org) or [Hardhat](https://hardhat.org/) for smart contract deployment?
+### Can I use [Remix] (https://remix.ethereum.org) or [Hardhat] (https://hardhat.org/) for smart contract deployment?
 
 You sure can.
 
@@ -22,11 +22,11 @@ ASTR (Astar Network)
 
 ### How do I connect to Astar networks, RPCs, Network name, Chain ID?
 
-You can visit [this page](/docs/build/environment/endpoints.md).
+You can visit [this page] (/docs/build/environment/endpoints.md).
 
 ### How can I get test tokens (SBY)?
 
-Use [our faucet](/docs/build/environment/faucet.md).
+Use [our faucet] (/docs/build/environment/faucet.md).
 
 ### Is it possible to import Substrate (Polkadot) addresses to Metamask?
 

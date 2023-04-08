@@ -10,20 +10,20 @@ dApp Staking は、エコシステムのプロジェクトと開発者をサポ�
 
 ## 手順
 
-[dApp Stakingページ](https://portal.astar.network/dapp-staking/discover)に移動すると、dApp Stakingメカニズムに記載されているすべてのdAppが表示されます。 記載されている手順はすべてAstar Networkにあり、同じです。
+[dApp Stakingページ] (https://portal.astar.network/dapp-staking/discover)に移動すると、dApp Stakingメカニズムに記載されているすべてのdAppが表示されます。 記載されている手順はすべてAstar Networkにあり、同じです。
 
-この機能は、dAppで既にステーキングしているステーカーのみ使用できます。 あなたが初めてdApp Stakingメカニズムのステーキングをするのであれば、[こちら](staking)のステップーバイーステップガイド を参照してください。
+この機能は、dAppで既にステーキングしているステーカーのみ使用できます。 あなたが初めてdApp Stakingメカニズムのステーキングをするのであれば、[こちら] (staking)のステップーバイーステップガイド を参照してください。
 
 ## 使用例
 
 私は150のSDNを *Stake Technologies* にステークしましたが、*Community Reward* dAppも応援したいため、その一部を転送したいと考えています。
 
-![9](img/9.png)
+![9] (img/9.png)
 
 あなたはサポートしたいdAppの **Stake** ボタンをクリックして転送ウィンドウを開きます。 あなたは使用したい資金を、転送可能なウォレット内の資金か、ステーク先の別のdAppから選択し使用することができます。 この場合、 *Stake Technologies* から *Community Rewards* プログラムに資金を転送します。 転送したい金額を入力し（Shidenの場合、最小 50 SDN）、 **Stake**をクリックします。 あなたが最後にトランザクションへ署名することによってこのプロセスは完了します。
 
-![10](img/10.png)
+![10] (img/10.png)
 
 これで、トークンの結合を解除（unbond）することなく、ステークの一部を新しいdAppに転送したことがわかります。
 
-![11](img/11.png)
+![11] (img/11.png)

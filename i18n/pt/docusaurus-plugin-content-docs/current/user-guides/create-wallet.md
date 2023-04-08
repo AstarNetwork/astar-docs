@@ -36,23 +36,23 @@ O plug-in Polkadot{.js} oferece um equilíbrio razoável de segurança e usabili
 
 ### Instale o plug-in do navegador
 
-O plug-in do navegador está disponível para [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (e navegadores baseados em Chromium como o Brave) e [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension). Após instalar o plugin, você deverá ver o logotipo laranja e branco da Polkadot{.js} na barra de menu do seu navegador.
+O plug-in do navegador está disponível para [Google Chrome] (https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (e navegadores baseados em Chromium como o Brave) e [Firefox] (https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension). Após instalar o plugin, você deverá ver o logotipo laranja e branco da Polkadot{.js} na barra de menu do seu navegador.
 
-![4](img/4.png)
+![4] (img/4.png)
 
 ### Criar uma conta
 
 Abra a extensão do navegador Polkadot{.js} clicando no logotipo na barra superior do navegador. Você verá um pop-up do navegador.
 
-![6](img/6.png)
+![6] (img/6.png)
 
 Clique no grande botão de adição - "Create new account". O plug-in Polkadot{.js} usará a aleatoriedade do sistema para criar uma nova seed para você e exibi-la na forma de doze palavras.
 
-![7](img/7.png)
+![7] (img/7.png)
 
 Você deve fazer backup dessas palavras. Por favor, guarde a seed em algum lugar secreto e seguro. Se você não puder acessar sua conta via Polkadot{.js} por algum motivo, você pode reinserir sua seed através do menu "Add account" selecionando "Import account from pre-existing seed".
 
-![8](img/8.png)
+![8] (img/8.png)
 
 Melhor criar uma conta "allowed on any chain" do ecossistema Polkadot. Essa conta pode ser usada para Polkadot e Kusama. Sua conta mudará automaticamente de formato quando conectada a uma cadeia.
 
@@ -70,7 +70,7 @@ Após clicar em "Add the account with the generated seed", sua conta está criad
 
 Retorne ao [Portal Astar][] e atualize a página. Você receberá um popup que a Polkadot JS precisa ser autorizada a ser usada em nosso portal. Dê a permissão à extensão para fazê-la!
 
-![9](img/9.png)
+![9] (img/9.png)
 
 Quando você tiver dado a permissão da extensão, vamos conectar a carteira. Um popup irá aparecer com todas as extensões possíveis. Nós apenas criamos uma nova conta com a Polkadot JS, então vamos selecionar esta extensão.
 

@@ -15,15 +15,15 @@ This guide is designed for those who are new to ink! or Wasm smart contracts in 
 
 ## What is ink!
 
-Ink! is a Rust eDSL developed by Parity, that specifically targets smart contract development for Substrate’s `pallet-contracts`. Ink! is not reinventing a programming language, rather, adapting a subset of Rust to serve smart contract developers, specifically. If this isn't reason enough on its own to convince you to learn more about ink!, you can find many more [here](https://use.ink/why-rust-for-smart-contracts).
+Ink! is a Rust eDSL developed by Parity, that specifically targets smart contract development for Substrate’s `pallet-contracts`. Ink! is not reinventing a programming language, rather, adapting a subset of Rust to serve smart contract developers, specifically. If this isn't reason enough on its own to convince you to learn more about ink!, you can find many more [here] (https://use.ink/why-rust-for-smart-contracts).
 
-A frequently asked question when discussing Wasm is: Why use WebAssembly for smart contracts in the first place? You can find all the answers [here](https://use.ink/why-webassembly-for-smart-contracts).
+A frequently asked question when discussing Wasm is: Why use WebAssembly for smart contracts in the first place? You can find all the answers [here] (https://use.ink/why-webassembly-for-smart-contracts).
 
 ## Ink! Environment Setup
 
 ### Rust and Cargo
 
-Rust and Cargo are prerequisites for compiling Wasm smart contracts. The easiest way to obtain Cargo is by installing the current stable release of [Rust](https://www.rust-lang.org/) using [rustup](https://rustup.rs/). Installing Rust using `rustup` will also install `cargo`. On Linux and macOS systems, you can do that with the following:
+Rust and Cargo are prerequisites for compiling Wasm smart contracts. The easiest way to obtain Cargo is by installing the current stable release of [Rust] (https://www.rust-lang.org/) using [rustup] (https://rustup.rs/). Installing Rust using `rustup` will also install `cargo`. On Linux and macOS systems, you can do that with the following:
 
 ```rust
 curl https://sh.rustup.rs -sSf | sh
@@ -31,7 +31,7 @@ curl https://sh.rustup.rs -sSf | sh
 source ~/.cargo/env
 ```
 
-This will download a script and start the installation. If you are using Windows, visit the [Rust website](https://www.rust-lang.org/tools/install) and follow the instructions to install Rust. Configure source control to pull the latest stable release and add nightly + Wasm target with the following:
+This will download a script and start the installation. If you are using Windows, visit the [Rust website] (https://www.rust-lang.org/tools/install) and follow the instructions to install Rust. Configure source control to pull the latest stable release and add nightly + Wasm target with the following:
 
 ```bash
 rustup default stable
@@ -42,13 +42,13 @@ rustup component add rust-src --toolchain nightly
 rustup target add wasm32-unknown-unknown --toolchain nightly
 ```
 
-### Ink! [CLI](https://use.ink/getting-started/setup#ink-cli)
+### Ink! [CLI] (https://use.ink/getting-started/setup#ink-cli)
 
-The first and most important tool we will be installing is [cargo-contract](https://github.com/paritytech/cargo-contract), a CLI tool for setting up and managing WebAssembly smart contracts written with ink!
+The first and most important tool we will be installing is [cargo-contract] (https://github.com/paritytech/cargo-contract), a CLI tool for setting up and managing WebAssembly smart contracts written with ink!
 
-As a prerequisite using older versions of ink! you may need to install the [binaryen](https://github.com/WebAssembly/binaryen) package, used to optimize WebAssembly contract bytecode.
+As a prerequisite using older versions of ink! you may need to install the [binaryen] (https://github.com/WebAssembly/binaryen) package, used to optimize WebAssembly contract bytecode.
 
-Many package managers have it preinstalled, for example [Debian/Ubuntu](https://tracker.debian.org/pkg/binaryen), [Homebrew](https://formulae.brew.sh/formula/binaryen), and [Arch Linux](https://archlinux.org/packages/community/x86_64/binaryen/). 
+Many package managers have it preinstalled, for example [Debian/Ubuntu] (https://tracker.debian.org/pkg/binaryen), [Homebrew] (https://formulae.brew.sh/formula/binaryen), and [Arch Linux] (https://archlinux.org/packages/community/x86_64/binaryen/). 
 
 <Tabs>
 <TabItem value="Debian/Ubuntu" label="Debian/Ubuntu" default>
@@ -122,12 +122,12 @@ You can then use `cargo contract --help` to start exploring all available comm
 
 The above process can be automated by utilizing a preinstalled and preconfigured dev container.
 
-Detailed instructions about how to use and configure a dev container can be found on [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container)
+Detailed instructions about how to use and configure a dev container can be found on [swanky-dev-container Github] (https://github.com/AstarNetwork/swanky-dev-container)
 
 ## References
 
-- [Ink! Github repo](https://github.com/paritytech/ink)
-- [Ink! Intro repo](https://paritytech.github.io/ink/)
-- [Ink! Official Documentation](https://use.ink)
-- [Ink! Rust doc](https://paritytech.github.io/ink/ink_lang/)
-- [swanky-dev-container](https://github.com/AstarNetwork/swanky-dev-container)
+- [Ink! Github repo] (https://github.com/paritytech/ink)
+- [Ink! Intro repo] (https://paritytech.github.io/ink/)
+- [Ink! Official Documentation] (https://use.ink)
+- [Ink! Rust doc] (https://paritytech.github.io/ink/ink_lang/)
+- [swanky-dev-container] (https://github.com/AstarNetwork/swanky-dev-container)

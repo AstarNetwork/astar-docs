@@ -11,7 +11,7 @@ Dalam panduan ini kami akan membantu anda menambahkan Astar dan Shiden Network k
 Menambahkan Astar Network dalam Metamask sangatlah mudah.
 <br />
 
-1. Buka [Portal kami](https://portal.astar.network/) dan hubungkan dengan Metamask.
+1. Buka [Portal kami] (https://portal.astar.network/) dan hubungkan dengan Metamask.
 
 <img width="1000" alt="Screenshot 2022-09-06 at 14 08 21" src="https://user-images.githubusercontent.com/77480847/188554147-02f09f39-6051-4f7f-8e6f-d263867afb88.png" /><br />
 <br />

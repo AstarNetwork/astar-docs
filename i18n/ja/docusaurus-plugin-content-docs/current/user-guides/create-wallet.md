@@ -36,23 +36,23 @@ Polkadot{.js}プラグインは、セキュリティとユーザビリティの�
 
 ### ブラウザプラグインをインストール
 
-ブラウザプラグインは、 [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (および Brave などの Chromium ベースのブラウザ) と [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension) の両方で利用できます。 プラグインをインストールした後、ブラウザのメニューバーに、オレンジ色と白色の Polkadot{.js} ロゴが表示されます。
+ブラウザプラグインは、 [Google Chrome] (https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (および Brave などの Chromium ベースのブラウザ) と [Firefox] (https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension) の両方で利用できます。 プラグインをインストールした後、ブラウザのメニューバーに、オレンジ色と白色の Polkadot{.js} ロゴが表示されます。
 
-![4](img/4.png)
+![4] (img/4.png)
 
 ### アカウント作成
 
 ブラウザのトップバーにあるロゴをクリックして、Polkadot{.js}ブラウザ拡張機能を開いてください。 ブラウザポップアップ表示されます。
 
-![6](img/6.png)
+![6] (img/6.png)
 
 「Create new account」という大きなプラスボタンをクリックします。 Polkadot{.js}プラグインは、システムのランダム性を利用して、あなたのために新しいSeedを作り、12個の単語の形で表示します。
 
-![7](img/7.png)
+![7] (img/7.png)
 
 これらの言葉をバックアップするべきです。 安全な場所にSeedを保管してください。 何らかの理由でPolkadot{.js}からアカウントにアクセスできない場合は、「Add account menu」から「Import account from pre-existing seed」を選択することで、Seedを再入力することが可能です。
 
-![8](img/8.png)
+![8] (img/8.png)
 
 Polkadotエコシステム内のどのチェーンでも許可されるアカウントを作成するのがベストです。 このアカウントはPolkadotとKusamaで使用できます。 チェーンに接続すると、アカウントのフォーマットが自動的に変更されます。
 
@@ -70,7 +70,7 @@ Polkadotエコシステム内のどのチェーンでも許可されるアカウ
 
 [Astar Portal][] に戻り、ページを更新します。 Polkadot JSをPortalで使用するために認証が必要であるというポップアップが表示されます。 拡張機能に許可を与えてください！
 
-![9](img/9.png)
+![9] (img/9.png)
 
 拡張機能にアクセス許可を与えられたら、ウォレットを接続しましょう。 使用可能なすべての拡張機能のポップアップが表示されます。 Polkadot JSで新しいアカウントを作成しただけなので、この拡張機能を選択しましょう。
 

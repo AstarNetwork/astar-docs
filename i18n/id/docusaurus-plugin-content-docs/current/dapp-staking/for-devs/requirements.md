@@ -4,19 +4,19 @@ sidebar_position: 1
 
 # Persyaratan
 
-**Apakah anda developer yang ingin mendaftarkan dApp anda ke dalam mekanisme staking kami untuk mendapatkan imbalan?** Silahkan baca baik-baik panduan berikut. Apabila anda memenuhi semua persyaratannya, anda bisa langsung mengisi [form ini](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) dan kami bisa mendaftarkan dApp anda.
+**Apakah anda developer yang ingin mendaftarkan dApp anda ke dalam mekanisme staking kami untuk mendapatkan imbalan?** Silahkan baca baik-baik panduan berikut. Apabila anda memenuhi semua persyaratannya, anda bisa langsung mengisi [form ini] (https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) dan kami bisa mendaftarkan dApp anda.
 
 Anda tertarik untuk bergabung dengan dApp staking pada Astar atau Shiden? Bisa dibaca persyaratan berikut ini:
 
 :::info
-Astar bertujuan untuk menjadi sebuah DAO dalam beberapa tahun ke depan. Sembari bertujuan menjadi sebuah DAO, pendaftaran sebuah dApp pada dApp staking juga harus melalui proses pada council kami. Prosesnya adalah membuat sebuah proposal untuk bergabung dengan dApp staking pada [forum kami](https://forum.astar.network/c/initiatives/dapp-staking-applications/21) setelah memenuhi persyaratan di bawah ini.
+Astar bertujuan untuk menjadi sebuah DAO dalam beberapa tahun ke depan. Sembari bertujuan menjadi sebuah DAO, pendaftaran sebuah dApp pada dApp staking juga harus melalui proses pada council kami. Prosesnya adalah membuat sebuah proposal untuk bergabung dengan dApp staking pada [forum kami] (https://forum.astar.network/c/initiatives/dapp-staking-applications/21) setelah memenuhi persyaratan di bawah ini.
 :::
 
 ## Astar Network
 
 - Dapp anda telah **diluncurkan dan berjalan di atas Astar Network**
-- Apabila proyek anda memiliki kontribusi terhadap Astar TVL, pastikan anda terdaftar di [DefilLama](../../integrations/dapp-listing/defillama).
-- Daftarkan juga proyek anda di [DappRadar](../../integrations/dapp-listing/dappradar).
+- Apabila proyek anda memiliki kontribusi terhadap Astar TVL, pastikan anda terdaftar di [DefilLama] (../../integrations/dapp-listing/defillama).
+- Daftarkan juga proyek anda di [DappRadar] (../../integrations/dapp-listing/dappradar).
 
 ### Bagaimana dengan partner Infrastruktur?
 

@@ -17,18 +17,18 @@ Pada dApp Staking v2, implementasi terbarunya adalah periode pelepasan. Umumnya,
 
 Apabila anda telah melakukan staking pada salah satu dApp, anda sekarang dapat klik pada tombol Unbond untuk membuat token anda dapat ditransfer kembali.
 
-![3](img/3.png)
+![3] (img/3.png)
 
 Pilih jumlah yang hendak kamu **Unbond**, dan klik **Max** untuk melepas semua stake. Lakukan tindakan anda dengan klik **Start Unbonding**.
 
-![4](img/4.png)
+![4] (img/4.png)
 
 Cek kembali **Chunks** anda
 
-![5](img/5.png) ![6](img/6.png)
+![5] (img/5.png) ![6] (img/6.png)
 
 Apa itu Chunk? Chunk adalah sebuah nomor dari berbagai periode ERA pelepasan token anda. Chunk tidaklah sama dengan jumlah Unbond dari dApp yang anda minta tetapi jumlah berapa ERA lagi yang dibutuhkan hingga token anda dapat ditransfer kembali.
 
 WIthdraw 'Chunk' anda. Ketika periode pelepasan sudah berakhir, anda bisa klik tombol Withdraw. Kemudian sign transaksi anda dan token anda dapat ditransfer ke wallet anda.
 
-![7](img/7.png)
+![7] (img/7.png)

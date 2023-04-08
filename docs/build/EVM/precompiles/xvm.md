@@ -25,7 +25,7 @@ Since the interface is abstract and extensible, and each VM treats its parameter
 
 Please note that this is a low-level interface that is not expected to be used directly. Instead, library authors use such an API to build idiomatic wrappers for specific execution environments.
 
-For example, [ink! XVM SDK](https://github.com/AstarNetwork/ink-xvm-sdk) uses this API to provide XVM functionality for smart contracts written in ink!:
+For example, [ink! XVM SDK] (https://github.com/AstarNetwork/ink-xvm-sdk) uses this API to provide XVM functionality for smart contracts written in ink!:
 ```rust
     #[ink(message)]
     pub fn claim(&mut self) -> bool {

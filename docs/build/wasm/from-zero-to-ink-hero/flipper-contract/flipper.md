@@ -9,7 +9,7 @@ This is step-by-step explanation of the process behind building an ink! smart co
 Flipper is a basic smart contract that allows the user to toggle a boolean value located in storage to either `true` or `false`. When the flip function is called, the value will change from one to the other.
 
 ## Prerequisites
-Please refer to the [previous section](./flipper-contract.md) for the list of prerequisites.
+Please refer to the [previous section] (./flipper-contract.md) for the list of prerequisites.
 
 ## Flipper Smart Contract
 In a new project folder, execute the following:
@@ -156,7 +156,7 @@ mod flipper {
     }
 ```
 
-This annotates a struct that represents the **contract's internal state.** ([details](https://use.ink/macros-attributes/storage)):
+This annotates a struct that represents the **contract's internal state.** ([details] (https://use.ink/macros-attributes/storage)):
 
 ```rust
 #[ink(storage)]
@@ -175,7 +175,7 @@ Storage types:
   - `Hash`
 - ink! storage type
   - `Mapping`
-- Custom data structure [details](https://use.ink/datastructures/custom-datastructure)
+- Custom data structure [details] (https://use.ink/datastructures/custom-datastructure)
 
 This means the contract (Flipper) stores a single `bool` value in storage.
 
@@ -187,7 +187,7 @@ pub struct Flipper {
 ```
 
 ### Callable Functions
-At the time the contract is deployed, a constructor is responsible for **bootstrapping the initial state** into storage. [For more information](https://use.ink/macros-attributes/constructor).
+At the time the contract is deployed, a constructor is responsible for **bootstrapping the initial state** into storage. [For more information] (https://use.ink/macros-attributes/constructor).
 
 ```rust
 #[ink(constructor)]
@@ -211,7 +211,7 @@ pub fn default() -> Self {
 }
 ```
 
-The following will permit a function to be **publicly dispatchable**, meaning that  the function can be called through a message, which is a way for contracts and external accounts to interact with the contract. Find more information [here](https://use.ink/macros-attributes/message)). Note that all public functions **must** use the `#[ink(message)]` attribute.
+The following will permit a function to be **publicly dispatchable**, meaning that  the function can be called through a message, which is a way for contracts and external accounts to interact with the contract. Find more information [here] (https://use.ink/macros-attributes/message)). Note that all public functions **must** use the `#[ink(message)]` attribute.
 
 ```rust
 #[ink(message)]
@@ -297,5 +297,5 @@ impl Flipper {
 ### Compile, Deploy and Interact with Contracts
 
 
-Follow this guide to deploy your contract [using Polkadot UI](https://docs.astar.network/docs/build/wasm/tooling/polkadotjs/). Once deployed, you will be able to interact with it.
+Follow this guide to deploy your contract [using Polkadot UI] (https://docs.astar.network/docs/build/wasm/tooling/polkadotjs/). Once deployed, you will be able to interact with it.
 

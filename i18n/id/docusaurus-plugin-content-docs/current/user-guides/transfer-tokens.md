@@ -8,21 +8,21 @@ Dalam panduan ini kami akan mengajarkan kepada anda bagaimana cara memindahkan a
 
 <br />
 
-- [Membuat Akun Astar (Native dan EVM)](#create-astar-accountsnative-and-evm)
+- [Membuat Akun Astar (Native dan EVM)] (#create-astar-accountsnative-and-evm)
 
-- [Mengirim ASTR/SDN menuju Astar Network dari Bursa Tersentralisasi (Centralized Exchange/CEX)](#sending-astrsdn-to-astar-network-from-central-exchanges)
+- [Mengirim ASTR/SDN menuju Astar Network dari Bursa Tersentralisasi (Centralized Exchange/CEX)] (#sending-astrsdn-to-astar-network-from-central-exchanges)
 
-- [Mengirim ASTR/SDN dariAstar Network menuju Bursa Tersentralisasi (Centralized Exchange/CEX)](#sending-astrsdn-to-central-exchanges-from-astar-network)
+- [Mengirim ASTR/SDN dariAstar Network menuju Bursa Tersentralisasi (Centralized Exchange/CEX)] (#sending-astrsdn-to-central-exchanges-from-astar-network)
 
-- [Mengirim ASTR/SDN menuju Astar EVM dari Astar Native](#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
+- [Mengirim ASTR/SDN menuju Astar EVM dari Astar Native] (#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
 
-- [Mengirim ASTR/SDN dari Astar EVM menuju Astar Native](#sending-astrsdn-to-astar-native-from-astar-evm)
+- [Mengirim ASTR/SDN dari Astar EVM menuju Astar Native] (#sending-astrsdn-to-astar-native-from-astar-evm)
 
-- [Cross-chain Transfer(XCM)](#cross-chain-transferxcm)
+- [Cross-chain Transfer(XCM)] (#cross-chain-transferxcm)
 
-- [Mengirim aset lintas jaringan cross-chain (XCM) menuju Astar Network](#transferring-cross-chainxcm-assets-into-astar-network)
+- [Mengirim aset lintas jaringan cross-chain (XCM) menuju Astar Network] (#transferring-cross-chainxcm-assets-into-astar-network)
 
-- [Mengirim aset lintas jaringan cross-chain (XCM) dari Astar Network](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+- [Mengirim aset lintas jaringan cross-chain (XCM) dari Astar Network] (#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
 <br />
 
@@ -33,9 +33,9 @@ Astar mempunyai dua alamat dalam format yang berbeda.
 - Address Astar Native - untuk melakukan staking dalam dApp Staking dan interaksi dengan proyek WASM
 - Address Astar EVM - untuk interaksi dengan proyek EVM
 
-Apabila anda membutuhkan untuk membuat akun Astar Native, [panduan ini](create-wallet.md) akan membantu anda.
+Apabila anda membutuhkan untuk membuat akun Astar Native, [panduan ini] (create-wallet.md) akan membantu anda.
 
-Apabila anda belum menambahkan Astar Network dalam Metamask anda, cara mudahnya - buka [Portal kami](https://portal.astar.network/) dan pilih MetaMask. Metamask akan menanyakan ijin anda untuk menambahkan Astar Network. Selain itu, silahkan [lihat di sini](setup-metamask.md) untuk detail jaringan lebih lanjut.
+Apabila anda belum menambahkan Astar Network dalam Metamask anda, cara mudahnya - buka [Portal kami] (https://portal.astar.network/) dan pilih MetaMask. Metamask akan menanyakan ijin anda untuk menambahkan Astar Network. Selain itu, silahkan [lihat di sini] (setup-metamask.md) untuk detail jaringan lebih lanjut.
 
 <br />
 
@@ -55,13 +55,13 @@ Kebanyakan bursa hanya menyebut Astar Network yang artinya mereka hanya mendukun
 
 :::
 
-1. Buka [Portal Astar](https://portal.astar.network/).
+1. Buka [Portal Astar] (https://portal.astar.network/).
 
 2. Hubungkan Astar/Shiden (Astar Network untuk ASTR dan Shiden Network untuk SDN).
 
 <img width="1000" alt="network" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Hubungkan wallet Polkadot.js anda -apabila anda belum mempunyai silahkan lihat [di sini](#create-wallet/#astar-accounts).
+3. Hubungkan wallet Polkadot.js anda -apabila anda belum mempunyai silahkan lihat [di sini] (#create-wallet/#astar-accounts).
 
 <img width="1000" alt="wallet" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
@@ -91,7 +91,7 @@ Searah dengan panduan di bawah, mohon perhatikan dengan benar semua instruksi ya
 :::
 
 1. Salin address akun bursa tujuan anda.
-2. Buka [Portal](https://portal.astar.network/) dan hubungkan ke Astar/Shiden (ASTR untuk Astar Network dan SDN untuk Shiden Network).
+2. Buka [Portal] (https://portal.astar.network/) dan hubungkan ke Astar/Shiden (ASTR untuk Astar Network dan SDN untuk Shiden Network).
 3. Hubungkan wallet anda (tergantung yang diminta oleh bursa antara akun Astar Native atau Astar EVM) - Lihat kembali [Membuat Akun Astar] untuk keterangan lebih lanjut.
 4. Klik tombol Transfer. <img width="1000" alt="Native-Asset-transfer" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png" />
 5. Masukkan address akun bursa tujuan yang anda salin tadi dan masukkan jumlah yang hendak ditransfer. <img width="1000" alt="Native-local-destination-address" src="https://user-images.githubusercontent.com/77480847/188531182-9222121b-1c4b-4515-992f-407462a5ae42.png" />
@@ -102,7 +102,7 @@ Searah dengan panduan di bawah, mohon perhatikan dengan benar semua instruksi ya
 
 Seperti yang tertulis di atas, kebanyakan bursa hanya mendukung Astar Native dan anda harus memindahkan token ASTR ke akun Astar EVM apabila anda hendak berinteraksi dengan proyek EVM.
 
-1. Buka [Portal](https://portal.astar.network/) dan salin address Astar EVM anda. <img width="1000" alt="account-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
+1. Buka [Portal] (https://portal.astar.network/) dan salin address Astar EVM anda. <img width="1000" alt="account-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
 
 2. Atau, buka extension Metamask dan salin alamat anda. <img width="355" alt="MM" src="https://user-images.githubusercontent.com/77480847/188531287-20dfc966-076d-44fc-805a-502f326708cc.png" />
 
@@ -120,7 +120,7 @@ Ikuti langkah-langkah di bawah apabila anda hendak transfer token ASTR/SDN ke ak
 
 :::caution
 
-xcAssets (token XCM yang kompatibel dengan EVM network) saat ini belum dapat ditransfer kembali ke akun Native (walaupun anda sebelumnya mengirim dari akun Native anda sendiri). Anda membutuhkan cross-chain transfer (XCM) ke chain awalnya dan melakukan transfer XCM lagi menuju akun Astar Native anda. Ikuti [langkah-langkahnya di sini.](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+xcAssets (token XCM yang kompatibel dengan EVM network) saat ini belum dapat ditransfer kembali ke akun Native (walaupun anda sebelumnya mengirim dari akun Native anda sendiri). Anda membutuhkan cross-chain transfer (XCM) ke chain awalnya dan melakukan transfer XCM lagi menuju akun Astar Native anda. Ikuti [langkah-langkahnya di sini.] (#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
 :::  
 :::danger
@@ -129,7 +129,7 @@ xcAssets (token XCM yang kompatibel dengan EVM network) saat ini belum dapat dit
 
 :::
 
-1. Buka [Portal](https://portal.astar.network/) dan hubungkan akun Astar Native anda kemudian salin address anda. <img width="1000" alt="Account-copy" src="https://user-images.githubusercontent.com/77480847/188532843-8be68dcf-edce-4c72-b8c9-4877f45c72d2.png" />
+1. Buka [Portal] (https://portal.astar.network/) dan hubungkan akun Astar Native anda kemudian salin address anda. <img width="1000" alt="Account-copy" src="https://user-images.githubusercontent.com/77480847/188532843-8be68dcf-edce-4c72-b8c9-4877f45c72d2.png" />
 
 2. Hubungkan akun Astar EVM anda dengan melakukan switch chain dari tombol di atas halaman.<img width="1000" alt="Switch-to-EVM" src="https://user-images.githubusercontent.com/77480847/188532949-3ae37836-acd2-424b-b398-8e06ad76271c.png" />
 
@@ -163,7 +163,7 @@ Ada beberapa hal penting yang harus anda siapkan sebelum memulai sebuah transfer
 
 ## Mengirim aset lintas jaringan cross-chain (XCM) menuju Astar Network
 
-1. Buka [Portal Astar](https://portal.astar.network/) dan hubungkan akun Astar Native **(Deposit ke Astar EVM hanya mungkin terjadi melalui akun Astar Native) **
+1. Buka [Portal Astar] (https://portal.astar.network/) dan hubungkan akun Astar Native **(Deposit ke Astar EVM hanya mungkin terjadi melalui akun Astar Native) **
 
 2. Pilih token dan jaringan yang hendak anda pilih untuk anda pindahkan ke Astar Network.
 
@@ -173,7 +173,7 @@ Dengan akun Astar Native yang dibuat di Polkadot.js, maka akun tersebut juga dap
 
 :::caution
 
-Kami memberlakukan saldo minimal 1.1 DOT dan minimal jumlah transfer sebanyak 1.1 DOT. Artinya anda harus memiliki minimal 2.2 DOT + ditambah sedikit untuk gas fee agar dapat melakukan transfer. Ini kami berlakukan untuk melindungi dana user kami agar dana user kami tidak terkena kebijakan Existensial Deposit (ED) dari Polkadot Network (selanjutnya mengenai ED, silahkan pelajari di [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
+Kami memberlakukan saldo minimal 1.1 DOT dan minimal jumlah transfer sebanyak 1.1 DOT. Artinya anda harus memiliki minimal 2.2 DOT + ditambah sedikit untuk gas fee agar dapat melakukan transfer. Ini kami berlakukan untuk melindungi dana user kami agar dana user kami tidak terkena kebijakan Existensial Deposit (ED) dari Polkadot Network (selanjutnya mengenai ED, silahkan pelajari di [Polkadot Wiki] (https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
 
 :::
 
@@ -192,7 +192,7 @@ Kami memberlakukan saldo minimal 1.1 DOT dan minimal jumlah transfer sebanyak 1.
 
 ## Mengirim aset lintas jaringan cross-chain (XCM) dari Astar Network
 
-1. Buka [Portal Astar](https://portal.astar.network/) dan hubungkan akun Astar Native atau akun Astar EVM anda.
+1. Buka [Portal Astar] (https://portal.astar.network/) dan hubungkan akun Astar Native atau akun Astar EVM anda.
 
 :::tip
 
@@ -204,7 +204,7 @@ Apabila anda hendak memindahkan aset cross-chain(XCM) menuju akun Astar Native d
 
 3. Klik Transfer dan pindah ke halaman Transfer. Pilih tab Cross-chain Transfer (XCM).
 
-4. Apabila anda di dalam Astar EVM, masukan address tujuan. Anda akan membutuhkan [alamat chain awal (origin chain’s address)](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
+4. Apabila anda di dalam Astar EVM, masukan address tujuan. Anda akan membutuhkan [alamat chain awal (origin chain’s address)] (https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
 5. Apabila anda di Astar Native dan anda ingin transfer ke dalam akun yang sama anda tidak perlu merubah tetapi hanya menukar pilihannya dan juga anda dapat memasukkan address lain secara manual. <img width="1000" alt="XCM-reverse" src="https://user-images.githubusercontent.com/77480847/188535198-27aaf6e9-6b15-4e6f-bc6a-84febcd78de0.png" />
 

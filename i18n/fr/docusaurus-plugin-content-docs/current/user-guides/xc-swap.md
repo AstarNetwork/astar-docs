@@ -16,7 +16,7 @@ Cliquez sur le bouton « Connecter le portefeuille ».
 
 Avant d'explorer les fonctionnalités simples offertes par XY Finance, vous devrez connecter votre portefeuille. XY Finance prend actuellement en charge Metamask et WalletConnect sur les navigateurs, avec plus de types de portefeuilles pris en charge sur mobile.
 
-![26](img/26.png)
+![26] (img/26.png)
 
 ## Échanger des jetons
 
@@ -26,20 +26,20 @@ Choisissez le jeton que vous voulez échanger sur votre chaîne source et le jet
 
 Entrez le montant de USDT que vous souhaitez échanger.
 
-![27](img/27.png)
+![27] (img/27.png)
 
 Vérifiez l'adresse du destinataire. XY Finance affichera par défaut l'adresse de votre portefeuille connecté et vous permettra également de changer l'adresse du destinataire.
 
-![28](img/28.png)
+![28] (img/28.png)
 
 Cliquez sur le bouton « Approuver le swap » et votre portefeuille vous demandera de confirmer l'action.
 
-![29](img/29.png)
+![29] (img/29.png)
 
 # Swap
 
 Cliquez sur le bouton « Swap», et votre portefeuille vous demandera de confirmer l'action à nouveau. Confirmez cette transaction dans votre portefeuille.
 
-![30](img/30.png)
+![30] (img/30.png)
 
 Vous recevrez votre ASTR sur Astar Network dans quelques minutes.

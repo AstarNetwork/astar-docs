@@ -17,18 +17,18 @@ Passando para o dApp Staking v2, a primeira nova implementação é o período d
 
 Se você fez staking em um dos dApps, agora você pode clicar em Desvincular para tornar seus tokens transferíveis.
 
-![3](img/3.png)
+![3] (img/3.png)
 
 Selecione o valor que você deseja **Desvincular** e clique em **Max** para retirar sua participação completa. Para assinar sua transação, clique em **Desvincular**.
 
-![4](img/4.png)
+![4] (img/4.png)
 
 Verifique seus **Pedaços**
 
-![5](img/5.png) ![6](img/6.png)
+![5] (img/5.png) ![6] (img/6.png)
 
 O que é um Pedaço? Um pedaço é a quantidade de ERA diferente que você deseja desvincular seus tokens. Pedaços não são iguais à quantidade de desvinculação em dApps que você solicitou, mas a quantidade de diferentes ERAs que você desvinculou os seus tokens.
 
 Saque os seus 'Pedaços'. Quando o seu período de desvinculação acabar, você precisa sacar seus fundos clicando no botão para retirar. Assine a transação e seus tokens serão transferíveis em sua carteira.
 
-![7](img/7.png)
+![7] (img/7.png)

@@ -8,21 +8,21 @@ Dans ce tutoriel, nous allons vous guider sur la façon de transférer des jeton
 
 <br />
 
-- [Créer des comptes Astar (Natif et EVM)](#create-astar-accountsnative-and-evm)
+- [Créer des comptes Astar (Natif et EVM)] (#create-astar-accountsnative-and-evm)
 
-- [Envoi d'ASTR/SDN vers Astar Network depuis des exchanges centralisées (CEX)](#sending-astrsdn-to-astar-network-from-central-exchanges)
+- [Envoi d'ASTR/SDN vers Astar Network depuis des exchanges centralisées (CEX)] (#sending-astrsdn-to-astar-network-from-central-exchanges)
 
-- [Envoi d'ASTR/SDN vers des exchanges centralisées (CEX) depuis Astar Network](#sending-astrsdn-to-central-exchanges-from-astar-network)
+- [Envoi d'ASTR/SDN vers des exchanges centralisées (CEX) depuis Astar Network] (#sending-astrsdn-to-central-exchanges-from-astar-network)
 
-- [Envoi d'ASTR/SDN vers Astar EVM depuis Astar Natif](#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
+- [Envoi d'ASTR/SDN vers Astar EVM depuis Astar Natif] (#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
 
-- [Envoi d'ASTR/SDN vers Astar Natif depuis Astar EVM](#sending-astrsdn-to-astar-native-from-astar-evm)
+- [Envoi d'ASTR/SDN vers Astar Natif depuis Astar EVM] (#sending-astrsdn-to-astar-native-from-astar-evm)
 
-- [Cross-chain Transfer (XCM)](#cross-chain-transferxcm)
+- [Cross-chain Transfer (XCM)] (#cross-chain-transferxcm)
 
-- [Transfert d'actifs Cross-chain (XCM) vers le réseau Astar](#transferring-cross-chainxcm-assets-into-astar-network)
+- [Transfert d'actifs Cross-chain (XCM) vers le réseau Astar] (#transferring-cross-chainxcm-assets-into-astar-network)
 
-- [Transfert d'actifs Cross-chain (XCM) vers d'autres chaînes depuis Astar Network](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+- [Transfert d'actifs Cross-chain (XCM) vers d'autres chaînes depuis Astar Network] (#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
 <br />
 
@@ -33,9 +33,9 @@ Astar a deux adresses dans des formats différents.
 - Une adresse Astar native - pour utiliser le dApps Staking et interagir avec les projets WASM
 - Une adresse Astar EVM - pour interagir avec les projets EVM
 
-Si vous avez besoin de créer un compte Astar, [cette page](create-wallet.md) vous aidera à créer des comptes.
+Si vous avez besoin de créer un compte Astar, [cette page] (create-wallet.md) vous aidera à créer des comptes.
 
-Si vous n'avez pas ajouté Astar Network à MetaMask, c'est très simple - Allez sur notre [Portail](https://portal.astar.network/) et choisissez MetaMask. MetaMask vous demandera la permission d'ajouter Astar Network. Alternativement, veuillez consulter [ici](setup-metamask.md) pour plus de détails sur le réseau.
+Si vous n'avez pas ajouté Astar Network à MetaMask, c'est très simple - Allez sur notre [Portail] (https://portal.astar.network/) et choisissez MetaMask. MetaMask vous demandera la permission d'ajouter Astar Network. Alternativement, veuillez consulter [ici] (setup-metamask.md) pour plus de détails sur le réseau.
 
 <br />
 
@@ -55,13 +55,13 @@ La plupart des échanges ne mentionnent que Astar Network ce qui signifie que le
 
 :::
 
-1. Allez sur notre [Portail](https://portal.astar.network/).
+1. Allez sur notre [Portail] (https://portal.astar.network/).
 
 2. Connectez le réseau à Astar/Shiden (Astar Network est pour ASTR et Shiden Network est pour le jeton SDN).
 
 <img width="1000" alt="réseau" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Connectez votre portefeuille Polkadot.js - si vous ne l'avez pas encore fait, veuillez retourner sur [Créer des comptes Astar](#create-wallet/#astar-accounts).
+3. Connectez votre portefeuille Polkadot.js - si vous ne l'avez pas encore fait, veuillez retourner sur [Créer des comptes Astar] (#create-wallet/#astar-accounts).
 
 <img width="1000" alt="portefeuille" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
@@ -91,7 +91,7 @@ En accord avec les instructions ci-dessous, veuillez lire attentivement toutes l
 :::
 
 1. Copiez une adresse d'un exchange vers lequel vous souhaitez effectuer un transfert.
-2. Allez sur le [Portail](https://portal.astar.network/) et connectez le réseau à Astar/Shiden (Astar Network est pour ASTR et Shiden Network est pour le jeton SDN).
+2. Allez sur le [Portail] (https://portal.astar.network/) et connectez le réseau à Astar/Shiden (Astar Network est pour ASTR et Shiden Network est pour le jeton SDN).
 3. Connectez votre portefeuille (Native ou EVM dépend des exhanges) - si vous ne l'avez pas encore fait, veuillez revenir à [Créer des comptes Astar].
 4. Cliquez sur le bouton de transfert. <img width="1000" alt="Transfert-d'Asset-Natif" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png" />
 5. Ajoutez l'adresse de destination de l'exchange et le montant que vous souhaitez transférer. <img width="1000" alt="Adresse-de-destination-locale-Native" src="https://user-images.githubusercontent.com/77480847/188531182-9222121b-1c4b-4515-992f-407462a5ae42.png" />
@@ -102,7 +102,7 @@ En accord avec les instructions ci-dessous, veuillez lire attentivement toutes l
 
 Comme mentionné ci-dessus, La plupart des exchanges ne prennent en charge qu'Astar Natif et vous devrez transférer des jetons ASTR vers Astar EVM si vous souhaitez interagir avec les projets EVM.
 
-1. Allez sur le [Portail](https://portal.astar.network/) et copiez l'adresse EVM Astar. <img width="1000" alt="Compte-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
+1. Allez sur le [Portail] (https://portal.astar.network/) et copiez l'adresse EVM Astar. <img width="1000" alt="Compte-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
 
 2. Vous pouvez également ouvrir l'extension Metamask et copier l'adresse. <img width="355" alt="MM" src="https://user-images.githubusercontent.com/77480847/188531287-20dfc966-076d-44fc-805a-502f326708cc.png" />
 
@@ -120,7 +120,7 @@ Veuillez suivre les étapes ci-dessous lorsque vous souhaitez transférer des je
 
 :::caution
 
-xcAssets (jetons XCM compatibles avec le réseau EVM) ne peuvent pas être transférés vers un compte natif (même si vous les avez peut-être transféré depuis un compte natif). Vous devrez effectuer un transfert cross-chain (XCM) vers les chaînes d'origine et effectuer un nouveau transfert XCM vers Astar Native. Veuillez suivre [ces étapes](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+xcAssets (jetons XCM compatibles avec le réseau EVM) ne peuvent pas être transférés vers un compte natif (même si vous les avez peut-être transféré depuis un compte natif). Vous devrez effectuer un transfert cross-chain (XCM) vers les chaînes d'origine et effectuer un nouveau transfert XCM vers Astar Native. Veuillez suivre [ces étapes] (#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
 :::  
 :::danger
@@ -129,7 +129,7 @@ xcAssets (jetons XCM compatibles avec le réseau EVM) ne peuvent pas être trans
 
 :::
 
-1. Allez sur le [Portail](https://portal. astar. network/) et connectez-vous au compte Astar natif pour copier l'adresse que vous souhaitez utiliser. <img width="1000" alt="Copie-du-compte" src="https://user-images.githubusercontent.com/77480847/188532843-8be68dcf-edce-4c72-b8c9-4877f45c72d2.png" />
+1. Allez sur le [Portail] (https://portal. astar. network/) et connectez-vous au compte Astar natif pour copier l'adresse que vous souhaitez utiliser. <img width="1000" alt="Copie-du-compte" src="https://user-images.githubusercontent.com/77480847/188532843-8be68dcf-edce-4c72-b8c9-4877f45c72d2.png" />
 
 2. Connectez-vous au compte Astar EVM en changeant les chaînes à partir du bouton d'en-tête. <img width="1000" alt="Basculer-vers-EVM" src="https://user-images.githubusercontent.com/77480847/188532949-3ae37836-acd2-424b-b398-8e06ad76271c.png" />
 
@@ -163,7 +163,7 @@ Il y a quelques points que vous devez préparer avant d'effectuer un transfert.
 
 ## Transfert d'actifs Cross-chain (XCM) vers le réseau Astar
 
-1. Allez sur le [Portail](https://portal. astar. network/) et connectez-vous au compte Astar natif **(le dépôt vers Astar EVM est uniquement possible via le compte Astar Natif)**
+1. Allez sur le [Portail] (https://portal. astar. network/) et connectez-vous au compte Astar natif **(le dépôt vers Astar EVM est uniquement possible via le compte Astar Natif)**
 
 2. Choisissez le jeton que vous souhaitez déposer sur Astar Network.
 
@@ -173,7 +173,7 @@ Un compte Astar Natif, qui est fait à partir de Polkadot.js, a toutes les adres
 
 :::caution
 
-Nous avons défini le solde DOT Min.balance de Polkadot à 1.1DOT, et nous avons fixé le montant Min.Transfer de 1.1 DOT. Vous devrez avoir au moins 2.2DOT + gaz pour effectuer un transfert. Ceci est pour protéger les fonds de l'utilisateur contre la disparation dû au Dépôt Existentiel (ED) (pour plus d'informations sur l'ED, veuillez aller sur [le Wiki de Polkadot](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
+Nous avons défini le solde DOT Min.balance de Polkadot à 1.1DOT, et nous avons fixé le montant Min.Transfer de 1.1 DOT. Vous devrez avoir au moins 2.2DOT + gaz pour effectuer un transfert. Ceci est pour protéger les fonds de l'utilisateur contre la disparation dû au Dépôt Existentiel (ED) (pour plus d'informations sur l'ED, veuillez aller sur [le Wiki de Polkadot] (https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
 
 :::
 
@@ -192,7 +192,7 @@ Nous avons défini le solde DOT Min.balance de Polkadot à 1.1DOT, et nous avons
 
 ## Transfert d'actifs Cross-chain (XCM) vers d'autres chaînes depuis Astar Network
 
-1. Allez sur le [Portail](https://portal. astar. network/) et connectez-vous au compte natif ou EVM.
+1. Allez sur le [Portail] (https://portal. astar. network/) et connectez-vous au compte natif ou EVM.
 
 :::tip
 
@@ -204,7 +204,7 @@ Si vous souhaitez envoyer des actifs cross-chain(XCM) vers des comptes Astar Nat
 
 3. Cliquez sur Transfert et allez vers la page de transfert. Choisissez l’onglet Transfert Cross-chain (XCM).
 
-4. Si vous êtes sur Astar EVM, indiquez l'adresse de destination. Vous auriez besoin de l'adresse [de la chaîne d'origine](https://docs. astar. network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
+4. Si vous êtes sur Astar EVM, indiquez l'adresse de destination. Vous auriez besoin de l'adresse [de la chaîne d'origine] (https://docs. astar. network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
 5. Si vous êtes sur Astar Natif et que vous êtes satisfait de transférer le jeton vers le même compte, vous n’avez pas besoin de changer ici mais simplement d’inverser la commande. Cependant, vous pouvez entrer manuellement l’adresse d’un autre compte si vous le souhaitez. <img width="1000" alt="Inversion-XCM" src="https://user-images.githubusercontent.com/77480847/188535198-27aaf6e9-6b15-4e6f-bc6a-84febcd78de0.png" />
 

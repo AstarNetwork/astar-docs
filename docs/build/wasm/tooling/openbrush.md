@@ -32,7 +32,7 @@ Which token standards and contracts does OpenBrush provide?
 
 ### Generic Trait Implementation
 
-More importantly, OpenBrush adds support for generic Trait implementation, so you can split Trait and Impls into different files, which will increase the readability and maintainability of your smart contract code base (see detailed description [here](https://github.com/727-Ventures/openbrush-contracts/blob/main/docs/docs/smart-contracts/example/setup_project.md)).
+More importantly, OpenBrush adds support for generic Trait implementation, so you can split Trait and Impls into different files, which will increase the readability and maintainability of your smart contract code base (see detailed description [here] (https://github.com/727-Ventures/openbrush-contracts/blob/main/docs/docs/smart-contracts/example/setup_project.md)).
 
 ### Wrapper around Traits
 
@@ -40,11 +40,11 @@ Defining a Trait definition is sufficient enough (a contract that implements tha
 
 ### Documentation
 
-- [OpenBrush Github repo](https://github.com/727-Ventures/openbrush-contracts)
-- [Official Docs](https://docs.openbrush.io/)
-- [OpenBrush website](https://openbrush.io/)
-- [Substrate Seminar (Youtube)](https://www.youtube.com/watch?v=I5OFGNVvzOc)
-- [How to use modifiers](https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76)
+- [OpenBrush Github repo] (https://github.com/727-Ventures/openbrush-contracts)
+- [Official Docs] (https://docs.openbrush.io/)
+- [OpenBrush website] (https://openbrush.io/)
+- [Substrate Seminar (Youtube)] (https://www.youtube.com/watch?v=I5OFGNVvzOc)
+- [How to use modifiers] (https://medium.com/supercolony/how-to-use-modifiers-for-ink-smart-contracts-using-openbrush-7a9e53ba1c76)
 
 [OpenBrush]: https://github.com/727-Ventures/openbrush-contracts
 [PSPs]: https://github.com/w3f/PSPs

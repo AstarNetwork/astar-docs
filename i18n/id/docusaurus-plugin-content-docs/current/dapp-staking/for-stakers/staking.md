@@ -17,15 +17,15 @@ Pastikan terhubung pada network yang dituju.
 - **Astar Network**: mainnet pada Polkadot
 :::
 
-![1](img/1.png)
+![1] (img/1.png)
 
 ### Stake
 
-Cari proyek favorit anda. Klik pada nama proyek untuk melihat informasi terkait. Sumber informatif lainnya dapat dilihat pada [forum kami](https://forum.astar.network/), bisa juga pada [DefilLama](#defillama-en-page-id) atau [DappRadar](#dappradar-en-page-id).
+Cari proyek favorit anda. Klik pada nama proyek untuk melihat informasi terkait. Sumber informatif lainnya dapat dilihat pada [forum kami] (https://forum.astar.network/), bisa juga pada [DefilLama] (#defillama-en-page-id) atau [DappRadar] (#dappradar-en-page-id).
 
 Untuk memasukan jumlah stake anda, klik pada tombol 'Stake' pada proyek favorit anda.
 
-![2](img/2.png)
+![2] (img/2.png)
 
 ### Pengaturan dApp Staking
 
@@ -37,4 +37,4 @@ Saat anda sudah memulai stake, ada opsi baru untuk pengaturan mengenai dApp stak
 
 **Claim** (atas halaman): lakukan klaim atas imbalan anda dari semua proyek yang anda dukung. Setiap ERA anda dapat melakukan klaim atas imbalan anda, tetapi kami merekomendasikan ini sekali saja dalam seminggu.
 
-**Re-stake after claiming** (atas halaman): Anda dapat menyalakan atau mematikan fitur penggabungan imbalan (compound) otomatis. Informasi selanjutnya dapat dilihat [di sini](compound-rewards)
+**Re-stake after claiming** (atas halaman): Anda dapat menyalakan atau mematikan fitur penggabungan imbalan (compound) otomatis. Informasi selanjutnya dapat dilihat [di sini] (compound-rewards)

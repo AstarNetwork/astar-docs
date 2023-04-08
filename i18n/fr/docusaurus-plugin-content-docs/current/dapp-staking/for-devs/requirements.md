@@ -4,19 +4,19 @@ sidebar_position: 1
 
 # Pré-requis
 
-**Vous êtes propriétaire du projet et souhaitez lister votre dApp dans notre mécanisme de staking pour gagner des récompenses?** Veuillez lire attentivement ces guidelines. Si vous remplissez toutes les conditions, vous pouvez simplement continuer à remplir [ce formulaire](https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) afin que nous puissions lister votre dApp.
+**Vous êtes propriétaire du projet et souhaitez lister votre dApp dans notre mécanisme de staking pour gagner des récompenses?** Veuillez lire attentivement ces guidelines. Si vous remplissez toutes les conditions, vous pouvez simplement continuer à remplir [ce formulaire] (https://share.hsforms.com/1UFPFJXq6S1SN-j1lyMrNIgc2ryh) afin que nous puissions lister votre dApp.
 
 Êtes-vous intéressé à rejoindre le dApp staking sur Shiden ou Astar? Lisez attentivement pour voir si vous remplissez les conditions :
 
 :::info
-Astar vise à devenir une DAO dans quelques années. Tout en progressant vers devenir DAO notre intégration de dApp implique également de passer par notre conseil. Le processus est de créer votre proposition de rejoindre le dAppstaking également sur notre [forum](https://forum.astar.network/c/initiatives/dapp-staking-applications/21) après avoir rempli les conditions ci-dessous.
+Astar vise à devenir une DAO dans quelques années. Tout en progressant vers devenir DAO notre intégration de dApp implique également de passer par notre conseil. Le processus est de créer votre proposition de rejoindre le dAppstaking également sur notre [forum] (https://forum.astar.network/c/initiatives/dapp-staking-applications/21) après avoir rempli les conditions ci-dessous.
 :::
 
 ## Réseau Astar
 
 - Votre dApp est lancée **et en direct sur Astar Network**
-- Votre projet contribue-t-il à la TVL d'Astar, assurez-vous d'être listé sur [DefilLama](../../integrations/dapp-listing/defillama).
-- Lister votre projet sur [DappRadar](../../integrations/dapp-listing/dappradar).
+- Votre projet contribue-t-il à la TVL d'Astar, assurez-vous d'être listé sur [DefilLama] (../../integrations/dapp-listing/defillama).
+- Lister votre projet sur [DappRadar] (../../integrations/dapp-listing/dappradar).
 
 ### Qu'en est-il des partenaires d'infrastructure ?
 

@@ -67,14 +67,14 @@ return (
 
 ### Step 3:
 
-We use a Shibuya address for this example. Add the a necessary details available from [here](https://github.com/AstarNetwork/astarbase/blob/main/public/config/config.json) in App.js file.
+We use a Shibuya address for this example. Add the a necessary details available from [here] (https://github.com/AstarNetwork/astarbase/blob/main/public/config/config.json) in App.js file.
 
 ```jsx
-const web3 = new Web3(new Web3.providers.HttpProvider("[https://evm.shibuya.astar.network](https://evm.shibuya.astar.network/)"));
+const web3 = new Web3(new Web3.providers.HttpProvider("[https://evm.shibuya.astar.network] (https://evm.shibuya.astar.network/)"));
 ```
 
 ### Step 4:
-The ABI is available [here](https://github.com/AstarNetwork/astarbase/blob/main/public/config/register_abi.json), we can now add it in App.js file. For this, we put ABI in the same file to make is easy, but you can put it in a different folder to make your code cleaner.
+The ABI is available [here] (https://github.com/AstarNetwork/astarbase/blob/main/public/config/register_abi.json), we can now add it in App.js file. For this, we put ABI in the same file to make is easy, but you can put it in a different folder to make your code cleaner.
 
 ```jsx
 const abi = [
@@ -377,7 +377,7 @@ const abi = [
 ```
 
 ### Step 5:
-Finally, we add an example contract address available from [here](https://github.com/AstarNetwork/astarbase/blob/main/contract/deployment-info.md). In this example, we use the Shibuya version but you can use Astar version as well as Shiden version.
+Finally, we add an example contract address available from [here] (https://github.com/AstarNetwork/astarbase/blob/main/contract/deployment-info.md). In this example, we use the Shibuya version but you can use Astar version as well as Shiden version.
 
 ```jsx
 const address = "0xF183f51D3E8dfb2513c15B046F848D4a68bd3F5D";
@@ -398,6 +398,6 @@ That’s a wrap! Happy hacking!
 ## Reference
 
 - Official Document for AstarBase: 
-   - [/docs/build/evm/astarbase/](/docs/build/evm/astarbase/)
+   - [/docs/build/evm/astarbase/] (/docs/build/evm/astarbase/)
 - Official Document for creating a React app:
-   - [https://reactjs.org/docs/create-a-new-react-app.html](https://reactjs.org/docs/create-a-new-react-app.html)
+   - [https://reactjs.org/docs/create-a-new-react-app.html] (https://reactjs.org/docs/create-a-new-react-app.html)

@@ -12,7 +12,7 @@ Allez dans l'extension Metamask -> Paramètres -> Réseau -> Ajouter un réseau
 
 Utilisez ce RPC personnalisé ci-dessous:
 
-**Réseau**: Astar <br /> **RPC**: [https://evm.astar. etwork](https://evm.astar.network) <br /> **ID de chaîne**: 592 <br /> **Symbole**: ASTR <br /> **Explorer**: [https://blockscout. om/astar](https://blockscout.com/astar)
+**Réseau**: Astar <br /> **RPC**: [https://evm.astar. etwork] (https://evm.astar.network) <br /> **ID de chaîne**: 592 <br /> **Symbole**: ASTR <br /> **Explorer**: [https://blockscout. om/astar] (https://blockscout.com/astar)
 
 ## Transfert d'actifs Ethereum vers le réseau Astar à l'aide d'un Bridge
 
@@ -25,7 +25,7 @@ Pour acheter des ASTR, vous devez avoir d'autres actifs que vous pouvez utiliser
 5. Cliquez sur « Transfer» et vous aurez des USDT sur Astar Network.
 6. Vous devrez payer les frais du bridge et vous recevrez également des jetons ASTR pour les frais de gaz dont vous avez besoin lorsque vous interagissez sur Astar Network.
 
-![25](img/25.png)
+![25] (img/25.png)
 
 ## Échanger sur Arthswap
 

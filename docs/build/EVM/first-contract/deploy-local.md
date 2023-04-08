@@ -8,7 +8,7 @@ Finally, it's time to deploy your first smart contract on Astar/Shiden local net
 
 ## Preparation of Solidity Smart Contract on Remix
 
-Visit [Remix](https://remix.ethereum.org/) and create a new file. Within the new file, copy and paste the following Solidity code into the Remix editor.
+Visit [Remix] (https://remix.ethereum.org/) and create a new file. Within the new file, copy and paste the following Solidity code into the Remix editor.
 
 ```sol
 pragma solidity ^0.8.0;
@@ -26,7 +26,7 @@ This contract will issue an ERC20 token called 'TestToken', with ticker TST, and
 
 Click on the Deploy and Run Transactions tab, and change the environment to Injected Web3. Ensure that you can see the Custom (4369) network under the environment field. If you cannot, open and change your network on MetaMask. Now your screen should be similar to the following:
 
-![6](img/6.png)
+![6] (img/6.png)
 
 ## Deploy Contract on Local Network
 
@@ -34,7 +34,7 @@ Now press the Deploy button. You will see a popup window from MetaMask, where yo
 
 ...Congratulations🎉 Your first smart contract has been successfully deployed on Shiden local network! As evidence of that, you will see the EVM events in the explorer.
 
-![7](img/7.png)
+![7] (img/7.png)
 
 ## View your New Token within MetaMask
 
@@ -42,4 +42,4 @@ This token can be added to MetaMask because the contract is fully ERC20 compatib
 
 You should now see your newly minted ERC20 tokens that are deployed on Shiden local network, right within your MetaMask, and be able to transfer them to any other EVM account.
 
-![8](img/8.png)
+![8] (img/8.png)

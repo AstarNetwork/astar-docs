@@ -24,15 +24,15 @@ The Frontier EVM used on Astar network provides several useful precompiled contr
 
 | Precompile | Address |
 | -------- | -------- |
-| [DappsStaking](staking.md) | 0x0000000000000000000000000000000000005001     |
-| [Sr25519](sr25519.md) | 0x0000000000000000000000000000000000005002     |
-| [SubstrateEcdsa](substrate-ecdsa.md) | 0x0000000000000000000000000000000000005003     |
-| [XCM](xcm.md) | 0x0000000000000000000000000000000000005004     |
-| [assets-erc20](xc20.md) | ASSET_PRECOMPILE_ADDRESS_PREFIX |
-| [XVM](xvm.md) | 0x0000000000000000000000000000000000005005 |
+| [DappsStaking] (staking.md) | 0x0000000000000000000000000000000000005001     |
+| [Sr25519] (sr25519.md) | 0x0000000000000000000000000000000000005002     |
+| [SubstrateEcdsa] (substrate-ecdsa.md) | 0x0000000000000000000000000000000000005003     |
+| [XCM] (xcm.md) | 0x0000000000000000000000000000000000005004     |
+| [assets-erc20] (xc20.md) | ASSET_PRECOMPILE_ADDRESS_PREFIX |
+| [XVM] (xvm.md) | 0x0000000000000000000000000000000000005005 |
 
-The interface descriptions for these precompiles can be found in the `precompiles` folder: [astar-frame repo](https://github.com/AstarNetwork/astar-frame/).
-The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.
+The interface descriptions for these precompiles can be found in the `precompiles` folder: [astar-frame repo] (https://github.com/AstarNetwork/astar-frame/).
+The Addresses can be checked in the [Astar repo] (https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.
 
 # Usage Example
 
@@ -53,13 +53,13 @@ contract A {
 
 Example use: check `current era` and `total staked amount` in the `pallet-dapps-staking` for Shiden Network. For this example we will use Remix.
 
-1. Copy `DappsStaking.sol` from [astar-frame repo](https://github.com/AstarNetwork/astar-frame/) and create new contract in Remix:
+1. Copy `DappsStaking.sol` from [astar-frame repo] (https://github.com/AstarNetwork/astar-frame/) and create new contract in Remix:
 
-![](https://i.imgur.com/mr0TcLq.png)
+![] (https://i.imgur.com/mr0TcLq.png)
 
 2. Compile the dAppStaking contract:
 
-![](https://i.imgur.com/6Wgg9rf.jpg)
+![] (https://i.imgur.com/6Wgg9rf.jpg)
 
 3. The precompile does not need to be deployed since it is already on the network, but you will need to tell Remix where to find it.
 After you connect your EVM wallet to Shiden Network (same applies for Astar Network and for Shibuya Testnet) follow these steps:
@@ -69,10 +69,10 @@ After you connect your EVM wallet to Shiden Network (same applies for Astar Netw
     4. Provide the address of the precompiled contract `0x0000000000000000000000000000000000005001`.
     5. The dApp Staking contract will appear under Deployed contracts.
 
-![](https://i.imgur.com/6RnQlkb.jpg)
+![] (https://i.imgur.com/6RnQlkb.jpg)
 
 4. Interact with the contract.
     1. Check the current era.
     2. Use the current era as input to check total staked amount on the network.
 
-![precompile-interact](https://user-images.githubusercontent.com/34627453/159696985-19f67e95-807e-4c20-b74c-c9f4944ada32.jpg)
+![precompile-interact] (https://user-images.githubusercontent.com/34627453/159696985-19f67e95-807e-4c20-b74c-c9f4944ada32.jpg)

@@ -16,7 +16,7 @@ The following RPC methods are available:
   - `disableStorage(boolean)` - (default: false) setting this to true disables storage capture
   - `disableMemory(boolean)` - (default: false) setting this to true disables memory capture
   - `disableStack(boolean)` - (default: false) setting this to true disables stack capture
-* [trace_filter](https://openethereum.github.io/JSONRPC-trace-module#trace_filter) - optional parameters:
+* [trace_filter] (https://openethereum.github.io/JSONRPC-trace-module#trace_filter) - optional parameters:
   - `fromBlock(uint blockNumber)` - either block number (hex), earliest which is the genesis block or latest (default) best block available. Trace starting block
   - `toBlock(uint blockNumber)` - either block number (hex), earliest which is the genesis block or latest best block available. Trace ending block
   - `fromAddress(array addresses)` - filter transactions done from these addresses only. If an empty array is provided, no filtering is done with this field
@@ -53,7 +53,7 @@ Spinning up a debug or tracing node is similar to running a full node. However, 
 
 :::info
 
-EVM tracing node installation manual available [on this page](/docs/nodes/evm-tracing-node.md). 
+EVM tracing node installation manual available [on this page] (/docs/nodes/evm-tracing-node.md). 
 
 :::
 

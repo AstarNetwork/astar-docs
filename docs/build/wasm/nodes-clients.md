@@ -18,7 +18,7 @@ Features:
 - dApp staking enabled
 - Chain Extensions
 
-You can find the Github repo [here](https://github.com/AstarNetwork/swanky-node).
+You can find the Github repo [here] (https://github.com/AstarNetwork/swanky-node).
 
 ### Substrate Contract Node
 
@@ -29,7 +29,7 @@ Features:
 - Targets the latest Substrate master
 - Consensus: `instant-seal`
 
-The Github repository can be found [here](https://github.com/paritytech/substrate-contracts-node).
+The Github repository can be found [here] (https://github.com/paritytech/substrate-contracts-node).
 
 ## Testnet Node: Shibuya
 

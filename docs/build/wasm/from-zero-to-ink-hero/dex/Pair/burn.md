@@ -4,10 +4,10 @@ sidebar_position: 4
 
 # Burn
 
-If you are starting the tutorial from here, please check out this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
+If you are starting the tutorial from here, please check out this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
 
 ## 1. Add Burn Functions to Pair Trait
-At this stage, we will implement a [burn](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L134) function in the Pair contract.   
+At this stage, we will implement a [burn] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L134) function in the Pair contract.   
 In *./logics/traits/pair.rs* add the **burn** function to the Pair trait, as well as the internal child function **_safe_transfer**.
 Also, we will add a function to emit a burn event in the contract:
 
@@ -36,7 +36,7 @@ pub trait Pair {
 
 ## 2. Safe Transfer
 
-In the Pair.sol contract, within the burn function, there is a [_safeTransfer](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L148) function. In PSP22, a transfer is [safe by default](https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#psp22receiver) if it's implemented with `PSP22Receiver`, which is the case for the Openbrush PSP22 implementation (in [_do_safe_transfer_check](https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L172))
+In the Pair.sol contract, within the burn function, there is a [_safeTransfer] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L148) function. In PSP22, a transfer is [safe by default] (https://github.com/w3f/PSPs/blob/master/PSPs/psp-22.md#psp22receiver) if it's implemented with `PSP22Receiver`, which is the case for the Openbrush PSP22 implementation (in [_do_safe_transfer_check] (https://github.com/Supercolony-net/openbrush-contracts/blob/e366f6ff1e5892c6a624833dd337a6da16a06baa/contracts/src/token/psp22/psp22.rs#L172))
 We will use a basic call to **transfer** the PSP22:
 ```rust
 impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
@@ -63,7 +63,7 @@ use ink::prelude::vec::Vec;
 ### 3. Burn
 
 The first line of this function is the same as mint (as we obtain the same values). 
-In the [line #147](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L147) `_burn(address(this), liquidity);` actually calls the burn of the internal ERC20 (as Pair is an extended ERC20).
+In the [line #147] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L147) `_burn(address(this), liquidity);` actually calls the burn of the internal ERC20 (as Pair is an extended ERC20).
 The flow of the function body:
 1. First obtain the values for reserves, balances and liquidity.
 2. `mint_fee`
@@ -214,5 +214,5 @@ Check your Pair contract with (run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/burn_end).
+It should now look like this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/burn_end).
 

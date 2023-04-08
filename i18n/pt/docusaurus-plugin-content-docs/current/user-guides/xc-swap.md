@@ -16,7 +16,7 @@ Clique no botão "Connect Wallet".
 
 Antes de explorar os recursos simples oferecidos pela XY Finance, você precisará conectar sua carteira. XY Finance atualmente suporta Metamask e WalletConnect nos navegadores desktop, com mais tipos de carteiras suportadas em dispositivos móveis.
 
-![26](img/26.png)
+![26] (img/26.png)
 
 ## Swap token
 
@@ -26,20 +26,20 @@ Escolha o token que você deseja fazer o swap na cadeia de origem e o token que 
 
 Introduza a quantia de USDT que deseja fazer o swap.
 
-![27](img/27.png)
+![27] (img/27.png)
 
 Verifique o endereço do destinatário. XY Finance irá exibir seu endereço de carteira conectado por padrão e ela também permite que você mude o endereço do destinatário.
 
-![28](img/28.png)
+![28] (img/28.png)
 
 Clique no botão "Approve to Swap", e sua carteira irá pedir para você confirmar a ação.
 
-![29](img/29.png)
+![29] (img/29.png)
 
 # Swap
 
 Clique no botão "Swap", e sua carteira irá pedir para você confirmar a ação novamente. Confirme sua transação de sua carteira.
 
-![30](img/30.png)
+![30] (img/30.png)
 
 Você receberá seu ASTR em Astar Network em alguns minutos.

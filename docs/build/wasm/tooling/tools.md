@@ -15,11 +15,11 @@ How does it work? Simply input your Solidity code, and in a few seconds Sol2Ink 
 This tool will build contracts, create the artifcats, and then create the TypeScript classes which can then be integrated into your UI or TypeScript tests.
 
 ## Solang
-[Solang](https://solang.readthedocs.io/en/latest/) is a Solidity Compiler for Solana and Substrate. Using Solang, you can compile smart contracts written in Solidity for Solana and [Parity Substrate](https://substrate.io/). Solang uses the [llvm](https://www.llvm.org/) compiler framework to produce WebAssembly (Wasm) or BPF contract code. As result, the output is highly optimized, which saves you in gas costs or compute units.
+[Solang] (https://solang.readthedocs.io/en/latest/) is a Solidity Compiler for Solana and Substrate. Using Solang, you can compile smart contracts written in Solidity for Solana and [Parity Substrate] (https://substrate.io/). Solang uses the [llvm] (https://www.llvm.org/) compiler framework to produce WebAssembly (Wasm) or BPF contract code. As result, the output is highly optimized, which saves you in gas costs or compute units.
 
 ## parity-common
 
-[`parity-common`](https://github.com/paritytech/parity-common) is a collection of crates that you can use in your ink! contracts.
+[`parity-common`] (https://github.com/paritytech/parity-common) is a collection of crates that you can use in your ink! contracts.
 
 It offers all Ethereum types and is useful if you would like to port Solidity code to ink!.
 

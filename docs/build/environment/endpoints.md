@@ -22,7 +22,7 @@ The free endpoints below are dedicated to end users, they can be used to interac
 <b>They limit the rate of API calls</b>, so they are not suitable for high demand, such as a dApp UI constantly scraping blockchain data or an indexer.
 :::
 :::tip
-To meet the demands of a production dApp you can [run an archive node](/docs/nodes/archive-node/) **or** get your own API key from one of our [infra partners](/docs/integrations/node-providers/)
+To meet the demands of a production dApp you can [run an archive node] (/docs/nodes/archive-node/) **or** get your own API key from one of our [infra partners] (/docs/integrations/node-providers/)
 :::
 
 <Tabs>
@@ -34,19 +34,19 @@ To meet the demands of a production dApp you can [run an archive node](/docs/nod
 | Parent chain | Polkadot |
 | ParachainID | 2006 |
 | HTTPS | Astar Team: https://evm.astar.network |
-|         | Alchemy: Get started [here](https://www.alchemy.com/astar) |
+|         | Alchemy: Get started [here] (https://www.alchemy.com/astar) |
 |         | BlastAPI: https://astar.public.blastapi.io |
 |         | Dwellir: https://astar-rpc.dwellir.com |
 |         | OnFinality: https://astar.api.onfinality.io/public |
-|         | Pinknode: Get started [here](https://www.pinknode.io/) |
-|         | Automata 1RPC: https://1rpc.io/astr, get started [here](https://www.1rpc.io) |
+|         | Pinknode: Get started [here] (https://www.pinknode.io/) |
+|         | Automata 1RPC: https://1rpc.io/astr, get started [here] (https://www.1rpc.io) |
 | Websocket | Astar Team: wss://rpc.astar.network |
-|           | Alchemy: Get started [here](https://www.alchemy.com/astar) |
+|           | Alchemy: Get started [here] (https://www.alchemy.com/astar) |
 |           | BlastAPI: wss://astar.public.blastapi.io |
 |           | Dwellir: wss://astar-rpc.dwellir.com |
 |           | OnFinality: wss://astar.api.onfinality.io/public-ws |
-|           | Pinknode: Get started [here](https://www.pinknode.io/) |
-|           | Automata 1RPC: wss://1rpc.io/astr, get started [here](https://www.1rpc.io) |
+|           | Pinknode: Get started [here] (https://www.pinknode.io/) |
+|           | Automata 1RPC: wss://1rpc.io/astr, get started [here] (https://www.1rpc.io) |
 | chainID | 592 |
 | Symbol | ASTR |
 
@@ -63,12 +63,12 @@ To meet the demands of a production dApp you can [run an archive node](/docs/nod
 |         | BlastAPI: https://shiden.public.blastapi.io |
 |         | Dwellir: https://shiden-rpc.dwellir.com |
 |         | OnFinality: https://shiden.api.onfinality.io/public |
-|         | Pinknode: Get started [here](https://www.pinknode.io/) |
+|         | Pinknode: Get started [here] (https://www.pinknode.io/) |
 | Websocket |  Astar Team: wss://rpc.shiden.astar.network |
 |           | BlastAPI: wss://shiden.public.blastapi.io |
 |           | Dwellir: wss://shiden-rpc.dwellir.com |
 |           | OnFinality: wss://shiden.api.onfinality.io/public-ws |
-|           | Pinknode: Get started [here](https://www.pinknode.io/) |
+|           | Pinknode: Get started [here] (https://www.pinknode.io/) |
 | chainID | 336 |
 | Symbol | SDN |
 

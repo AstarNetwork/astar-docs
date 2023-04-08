@@ -20,7 +20,7 @@ Here you will find a list of ideas to implement in any of the smart contract env
 These ideas can be implemented as WASM or EVM smart contract. Main intention is for the ink! developers.
 
 ### Pool Together 
-Explore this [project](https://app.pooltogether.com/) and build your own version in ink!
+Explore this [project] (https://app.pooltogether.com/) and build your own version in ink!
 
 ### Voting
 Use Ink! v4 with Swanky-node to develop a smart contract which allows people to vote The rules are:

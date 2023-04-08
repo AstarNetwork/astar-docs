@@ -2,13 +2,13 @@
 
 Welcome to Astar Docs GitHub Repo.
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus 2] (https://docusaurus.io/), a modern static website generator.
 
 ## Instructions on how to contribute to Astar Docs using local instance of Docusaurus engine
 
 ### Prereqs
 
-  - Make sure `git` and `yarn` exist as commands in your terminal/vscode: [https://yarnpkg.com/](https://yarnpkg.com/) **(NOTE: Please make sure you use yarn 1 (classic) by using command `yarn set version classic`**
+  - Make sure `git` and `yarn` exist as commands in your terminal/vscode: [https://yarnpkg.com/] (https://yarnpkg.com/) **(NOTE: Please make sure you use yarn 1 (classic) by using command `yarn set version classic`**
   - Git/Github: understand what the following commands do
       - managing branches (`git checkout main` and `git checkout -b feat/your-new-branch`
       - Commits (`git add .` and `git commit`, `git push -u origin feat/your-new-branch`)
@@ -33,7 +33,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
       - Create a new branch (`git checkout -b feat/new-feature-name-here`)
   - Create/update the docs as you please
       - Spin up live docs (`yarn start`)
-        - If you are working on a translation of a document use `yarn start --locale IT` (example for Italian) (checkout [Docusaurus docs or further reference](https://docusaurus.io/docs/i18n/tutorial)
+        - If you are working on a translation of a document use `yarn start --locale IT` (example for Italian) (checkout [Docusaurus docs or further reference] (https://docusaurus.io/docs/i18n/tutorial)
       - Add new page/tweaks/etc
       - When you’re happy with it, ensure `yarn build` runs without errors
   - PR and staging environment
@@ -46,7 +46,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
   - Please import and use tag `<Figure/>` instead of `![image]` as this enables smoother translation of docs to other languages (automatic reference to original images, no need to copy images to translated subfolders)
     
-    - Example - as seen [here](https://github.com/AstarNetwork/astar-docs/blob/d530139ca7a5ab034a783981d313542e02fdfb54/docs/about/token-economics/inflationary-model.md):
+    - Example - as seen [here] (https://github.com/AstarNetwork/astar-docs/blob/d530139ca7a5ab034a783981d313542e02fdfb54/docs/about/token-economics/inflationary-model.md):
       
       top of file:
       ```
@@ -63,7 +63,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 ### Deploy to production
 
   - When PR is ready for merge, merge it by clicking the button at the bottom saying **Merge and Close**
-  - Should be soon available at `[https://docs.astar.network](https://docs.astar.network)`
+  - Should be soon available at `[https://docs.astar.network] (https://docs.astar.network)`
     
 ### HELP SOMETHING IS BROKEN
 

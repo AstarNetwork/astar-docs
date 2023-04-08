@@ -8,21 +8,21 @@ sidebar_position: 4
 
 <br />
 
-- [Astarのアカウント(Native と EVM)を作成](#create-astar-accountsnative-and-evm)
+- [Astarのアカウント(Native と EVM)を作成] (#create-astar-accountsnative-and-evm)
 
-- [中央主権型取引所（CEX）から Astar Network にASTR/SDNを送信](#sending-astrsdn-to-astar-network-from-central-exchanges)
+- [中央主権型取引所（CEX）から Astar Network にASTR/SDNを送信] (#sending-astrsdn-to-astar-network-from-central-exchanges)
 
-- [Astar Network から中央主権型取引所（CEX）にASTR/SDNを送信](#sending-astrsdn-to-central-exchanges-from-astar-network)
+- [Astar Network から中央主権型取引所（CEX）にASTR/SDNを送信] (#sending-astrsdn-to-central-exchanges-from-astar-network)
 
-- [Astar Native から Astar EVM にASTR/SDNを送信](#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
+- [Astar Native から Astar EVM にASTR/SDNを送信] (#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
 
-- [Astar EVM から Astar Native にASTR/SDNを送信](#sending-astrsdn-to-astar-native-from-astar-evm)
+- [Astar EVM から Astar Native にASTR/SDNを送信] (#sending-astrsdn-to-astar-native-from-astar-evm)
 
-- [クロスチェーン転送（XCM）](#cross-chain-transferxcm)
+- [クロスチェーン転送（XCM）] (#cross-chain-transferxcm)
 
-- [クロスチェーン（XCM）資産を Astar Network に転送](#transferring-cross-chainxcm-assets-into-astar-network)
+- [クロスチェーン（XCM）資産を Astar Network に転送] (#transferring-cross-chainxcm-assets-into-astar-network)
 
-- [Astar Network から他のチェーンにクロスチェーン（XCM）資産を転送](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+- [Astar Network から他のチェーンにクロスチェーン（XCM）資産を転送] (#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
 <br />
 
@@ -33,9 +33,9 @@ Astarは異なるフォーマットで2つのアドレスを持っています�
 - Astar Native アドレスー dApps Staking やWASMプロジェクトと連携するためのアドレス
 - Astar EVM アドレスー EVMプロジェクトと連携するためのアドレス
 
-あなたが Astar Native アカウントを作成する必要がある場合は、 [こちらのページ](create-wallet.md) でアカウントを作成することができます。
+あなたが Astar Native アカウントを作成する必要がある場合は、 [こちらのページ] (create-wallet.md) でアカウントを作成することができます。
 
-もし、MetamaskにAstar Network を追加していない場合は、とてもシンプルです ー [Portal](https://portal.astar.network/) に行き、Metamaskを選択してください。 Metamaskは、Astar Network の追加許可を求めてくるでしょう。 別の方法や、ネットワーク追加の詳細については、 [こちら](setup-metamask.md) を参照してください。
+もし、MetamaskにAstar Network を追加していない場合は、とてもシンプルです ー [Portal] (https://portal.astar.network/) に行き、Metamaskを選択してください。 Metamaskは、Astar Network の追加許可を求めてくるでしょう。 別の方法や、ネットワーク追加の詳細については、 [こちら] (setup-metamask.md) を参照してください。
 
 <br />
 
@@ -55,13 +55,13 @@ Astar(EVM)をサポートするGate.ioを除き、ほとんどの取引所はAst
 
 :::
 
-1. [Portal](https://portal.astar.network/) に移動します。
+1. [Portal] (https://portal.astar.network/) に移動します。
 
 2. ネットワークをAstar/Shidenに接続します(Astar NetworkはASTR用、Shiden NetworkはSDN用)。
 
 <img width="1000" alt="network" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Poladot.js ウォレットを接続してください ー まだ完了していない場合は、 [Astar アカウントを作成](#create-wallet/#astar-accounts) に戻ってください。
+3. Poladot.js ウォレットを接続してください ー まだ完了していない場合は、 [Astar アカウントを作成] (#create-wallet/#astar-accounts) に戻ってください。
 
 <img width="1000" alt="wallet" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
@@ -91,7 +91,7 @@ Astar(EVM)をサポートするGate.ioを除き、ほとんどの取引所はAst
 :::
 
 1. 転送先の取引所からアドレスをコピーします。
-2. [Portal](https://portal.astar.network/) に移動し、ネットワークをAstar/Shidenに接続します(Astar NetworkはASTR用、Shiden NetworkはSDN用)。
+2. [Portal] (https://portal.astar.network/) に移動し、ネットワークをAstar/Shidenに接続します(Astar NetworkはASTR用、Shiden NetworkはSDN用)。
 3. ウォレットを接続します(NativeかEVMかは取引所によって異なります)。まだウォレットを作成していない場合は、[ Astarのアカウント(Native と EVM) の作成 ] へ戻ってください。
 4. 「Transfer」ボタンをクリックしてください。 <img width="1000" alt="Native-Asset-transfer" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png" />
 5. 取引所の宛先アドレスと転送したい額を追加してください。 <img width="1000" alt="Native-local-destination-address" src="https://user-images.githubusercontent.com/77480847/188531182-9222121b-1c4b-4515-992f-407462a5ae42.png" />
@@ -102,7 +102,7 @@ Astar(EVM)をサポートするGate.ioを除き、ほとんどの取引所はAst
 
 前述の通り、ほとんどの取引所は Astar Native のみをサポートしており、EVMプロジェクトとやり取りしたい場合はASTRをAstar EVMに転送する必要があります。
 
-1. [Portal](https://portal.astar.network/) に移動し、Astar EVMアドレスをコピーします。 <img width="1000" alt="account-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
+1. [Portal] (https://portal.astar.network/) に移動し、Astar EVMアドレスをコピーします。 <img width="1000" alt="account-EVM" src="https://user-images.githubusercontent.com/77480847/188531249-c6b3299b-7520-4136-9651-429b420fded7.png" />
 
 2. １の他の方法として、Metamaskのエクステンションをチェックしてアドレスをコピーしてもかまいません。 <img width="355" alt="MM" src="https://user-images.githubusercontent.com/77480847/188531287-20dfc966-076d-44fc-805a-502f326708cc.png" />
 
@@ -120,7 +120,7 @@ ASTR/SDNをAstar Nativeに転送する場合は、以下の手順に従ってく
 
 :::caution
 
-XcAssets (EVMネットワークで互換性のあるXCMトークン) は現在、Native アカウントに戻すことができません (たとえあなたがNative アカウントから転送した場合も同様です)。 オリジンチェーンにクロスチェーン（XCM）転送を行い、さらに Astar Nativeに別のXCM転送を行う必要があります。 [ここの手順](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network) に従ってください
+XcAssets (EVMネットワークで互換性のあるXCMトークン) は現在、Native アカウントに戻すことができません (たとえあなたがNative アカウントから転送した場合も同様です)。 オリジンチェーンにクロスチェーン（XCM）転送を行い、さらに Astar Nativeに別のXCM転送を行う必要があります。 [ここの手順] (#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network) に従ってください
 
 :::  
 :::danger
@@ -129,7 +129,7 @@ XcAssets (EVMネットワークで互換性のあるXCMトークン) は現在�
 
 :::
 
-1. [Portal](https://portal.astar.network/) に移動し、Astar Native アカウントに接続して使用したいアドレスをコピーします。 <img width="1000" alt="Account-copy" src="https://user-images.githubusercontent.com/77480847/188532843-8be68dcf-edce-4c72-b8c9-4877f45c72d2.png" />
+1. [Portal] (https://portal.astar.network/) に移動し、Astar Native アカウントに接続して使用したいアドレスをコピーします。 <img width="1000" alt="Account-copy" src="https://user-images.githubusercontent.com/77480847/188532843-8be68dcf-edce-4c72-b8c9-4877f45c72d2.png" />
 
 2. ヘッダーボタンからチェーンを切り替えて、Astar EVMアカウントに接続します。 <img width="1000" alt="Switch-to-EVM" src="https://user-images.githubusercontent.com/77480847/188532949-3ae37836-acd2-424b-b398-8e06ad76271c.png" />
 
@@ -163,7 +163,7 @@ XcAssets (EVMネットワークで互換性のあるXCMトークン) は現在�
 
 ## クロスチェーン（XCM）資産を Astar Network に転送
 
-1. [Portal](https://portal.astar.network/) にアクセスし、Astar Native アカウントに接続します。**(Astar EVM からの入金は、Astar Native アカウントを通じてのみ可能です) **
+1. [Portal] (https://portal.astar.network/) にアクセスし、Astar Native アカウントに接続します。**(Astar EVM からの入金は、Astar Native アカウントを通じてのみ可能です) **
 
 2. Astar Networkに入金したいトークンを選択します。
 
@@ -173,7 +173,7 @@ Polkadot.jsで作られたAstar Native アカウントでは、すべてのPolka
 
 :::caution
 
-PolkadotのDOTの Min.balance を1.1DOTに設定し、Min.Transfer 量を1.1に設定しました。 最小の転送を行うには、少なくとも2.2DOT +ガスが必要です。 これは、実存残高（Existential Deposit = ED）の仕組みによってユーザーの資金が奪われるのを防ぐためです（EDの詳細については、[Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)を参照してください）。
+PolkadotのDOTの Min.balance を1.1DOTに設定し、Min.Transfer 量を1.1に設定しました。 最小の転送を行うには、少なくとも2.2DOT +ガスが必要です。 これは、実存残高（Existential Deposit = ED）の仕組みによってユーザーの資金が奪われるのを防ぐためです（EDの詳細については、[Polkadot Wiki] (https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-)を参照してください）。
 
 :::
 
@@ -192,7 +192,7 @@ PolkadotのDOTの Min.balance を1.1DOTに設定し、Min.Transfer 量を1.1に�
 
 ## Astar Network から他のチェーンにクロスチェーン（XCM）資産を転送
 
-1. [Portal](https://portal.astar.network/) に移動し、Native または EVM アカウントに接続します。
+1. [Portal] (https://portal.astar.network/) に移動し、Native または EVM アカウントに接続します。
 
 :::tip
 
@@ -204,7 +204,7 @@ PolkadotのDOTの Min.balance を1.1DOTに設定し、Min.Transfer 量を1.1に�
 
 3. 「Transfer」をクリックし、「転送ページ」に移動します。 「 Cross-chain Transfer（XCM）」タブを選択します。
 
-4. Astar EVMを使用しているとき、宛先EVMアドレスを入力します。 あなたは[オリジンチェーンのアドレス](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses)が必要です。 <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
+4. Astar EVMを使用しているとき、宛先EVMアドレスを入力します。 あなたは[オリジンチェーンのアドレス] (https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses)が必要です。 <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
 5. もし、Astar Nativeを使用しているのであれば、順序を逆にするだけで、同じアカウント内でトークンを転送することができ、他のアカウントのアドレスに転送するのであれば手動で入力することもできます。 <img width="1000" alt="XCM-reverse" src="https://user-images.githubusercontent.com/77480847/188535198-27aaf6e9-6b15-4e6f-bc6a-84febcd78de0.png" />
 

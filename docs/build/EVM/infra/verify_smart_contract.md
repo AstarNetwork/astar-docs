@@ -32,29 +32,29 @@ Due to compiler constraints, contracts **with OpenZeppelin-related source contra
 In this section, we will go through the process of verifying a smart contract **without OpenZeppelin-related source contracts.** 
 In the previous guide, we went through the process of using Remix IDE to deploy a smart contract on Astar EVM. Let's start from there:
 
-[How to use Remix IDE to deploy an on-chain storage contract on Astar EVM | Astar Docs](/docs/build/builder-guides/astar_features/use_remix.md)
+[How to use Remix IDE to deploy an on-chain storage contract on Astar EVM | Astar Docs] (/docs/build/builder-guides/astar_features/use_remix.md)
 
 Copy the deployed contract address under the `Deployed Contracts` section
 
-![Untitled](img-verification-cookbook/Untitled.png)
+![Untitled] (img-verification-cookbook/Untitled.png)
 
 Search for the contract on Blockscout and click `Verify and Publish` under the `Code` page
 
-![Untitled](img-verification-cookbook/Untitled%201.png)
+![Untitled] (img-verification-cookbook/Untitled%201.png)
     
 Choose `Via standard input JSON`
     
-![Untitled](img-verification-cookbook/Untitled%202.png)
+![Untitled] (img-verification-cookbook/Untitled%202.png)
     
 Fill in the contract name and Solidity compiler version and upload the standard input JSON file
 - You can find the standard input JSON file under contracts/artifacts/build-info. Only use the `input` object in the JSON file.
 - You can also find the Solidity compiler version in the same JSON file under `solcVersion`
     
-    ![Untitled](img-verification-cookbook/Untitled%203.png)
+    ![Untitled] (img-verification-cookbook/Untitled%203.png)
     
 - Click “Verify & Publish”, then you are all set!
     
-    ![Untitled](img-verification-cookbook/Untitled%204.png)
+    ![Untitled] (img-verification-cookbook/Untitled%204.png)
     
 
 ---
@@ -66,14 +66,14 @@ Due to compiler constraints, contracts **with OpenZeppelin-related source contra
 I have already deployed an ERC20 token contract using OpenZepplin library import, and will demonstrate how to verify it on Blockscout using **Flattener** plugin in Remix IDE.
 
 - Install **Flattener** plugin in the `plugin manager`.
-    ![Untitled](img-verification-cookbook/Untitled%205.png)
+    ![Untitled] (img-verification-cookbook/Untitled%205.png)
 
 - Use **Flattener** plugin to flatten the ERC20 contract deployed.
-    ![Untitled](img-verification-cookbook/Untitled%206.png)
+    ![Untitled] (img-verification-cookbook/Untitled%206.png)
 
 - Go to Blockscout and on the verification page choose the `Via flattened source code` method
-    ![Untitled](img-verification-cookbook/Untitled%207.png)
+    ![Untitled] (img-verification-cookbook/Untitled%207.png)
 
 - Paste the copied flattened source code from **Flattener** into the `Enter the Solidity Contract Code`”` field and click `“`Verify & Publis`.
-    ![Untitled](img-verification-cookbook/Untitled%208.png)
+    ![Untitled] (img-verification-cookbook/Untitled%208.png)
 

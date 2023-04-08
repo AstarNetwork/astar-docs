@@ -13,7 +13,7 @@ Tutorial ini sebagai panduan dalam menciptakan wallet multisig substrate.
 3. Klik `+ Add Contact` dan tambahkan semua contact addresses yang hendak anda inginkan dalam wallet multisig tersebut.
 4. Sebagai contoh; Bob, Charlie and Dave
 
-![12](img/12.png)
+![12] (img/12.png)
 
 ## Buat wallet baru
 
@@ -23,7 +23,7 @@ Tutorial ini sebagai panduan dalam menciptakan wallet multisig substrate.
 4. Beri nama pada multisig wallet tersebut.
 5. Klik "Create".
 
-![13](img/13.png)
+![13] (img/13.png)
 
 ## Test wallet
 

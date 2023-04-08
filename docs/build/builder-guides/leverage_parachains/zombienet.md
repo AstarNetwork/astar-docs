@@ -24,7 +24,7 @@ In this guide, we are setting up a local testnet environment with Polkadot relay
 
 ## Set up Zombienet CLI
 
-In this section, we will set up Zombienet CLI using a binary. You can also set up Zombienet with docker, kubernetes, and more using the guide [here](https://github.com/paritytech/zombienet#requirements-by-provider).
+In this section, we will set up Zombienet CLI using a binary. You can also set up Zombienet with docker, kubernetes, and more using the guide [here] (https://github.com/paritytech/zombienet#requirements-by-provider).
 
 - Let’s create a folder in the root directory to hold the binaries
     
@@ -33,9 +33,9 @@ In this section, we will set up Zombienet CLI using a binary. You can also set u
     cd cookbook-zombienet
     ```
     
-- Go to [Zombienet](https://github.com/paritytech/zombienet/releases) and download the binary built for your local environment.
+- Go to [Zombienet] (https://github.com/paritytech/zombienet/releases) and download the binary built for your local environment.
     - Please don’t forget to replace the release version number in the command line to the latest release.
-    - In this cookbook, we are using [Zombienet v1.3.22](https://github.com/paritytech/zombienet/releases/download/v1.3.22/zombienet-macos)
+    - In this cookbook, we are using [Zombienet v1.3.22] (https://github.com/paritytech/zombienet/releases/download/v1.3.22/zombienet-macos)
 - Move the binary to our guide folder.
     
     ```jsx
@@ -111,7 +111,7 @@ In order to spawn a testnet with a relaychain and two parachains, we need the co
 
 ### Download `astar-collator` binary file
 
-- Download the latest release of the [astar-collator](https://github.com/AstarNetwork/Astar/releases) for macOS or Ubuntu from https://github.com/AstarNetwork/Astar/releases
+- Download the latest release of the [astar-collator] (https://github.com/AstarNetwork/Astar/releases) for macOS or Ubuntu from https://github.com/AstarNetwork/Astar/releases
 
 :::note
 Please make sure you are running a macOS or Ubuntu with the appropriate version. For macOS, please use the versions above MacOS 12.0.
@@ -137,9 +137,9 @@ Please make sure you are running a macOS or Ubuntu with the appropriate version.
 
 ### Download the configuration file for Zombienet
 
-In order to spawn the Zombienet, we need to add a configuration file to specify the configurations. We have a configuration file ready that is configured to two parachains named `shiden-dev` and `shibuya-dev`, and a relaychain named `rococo-local`: [here](https://github.com/AstarNetwork/Astar/tree/master/third-party/zombienet).
+In order to spawn the Zombienet, we need to add a configuration file to specify the configurations. We have a configuration file ready that is configured to two parachains named `shiden-dev` and `shibuya-dev`, and a relaychain named `rococo-local`: [here] (https://github.com/AstarNetwork/Astar/tree/master/third-party/zombienet).
 
-- Download the configuration file from [here](https://github.com/AstarNetwork/Astar/blob/master/third-party/zombienet/multi_parachains.toml).
+- Download the configuration file from [here] (https://github.com/AstarNetwork/Astar/blob/master/third-party/zombienet/multi_parachains.toml).
     
  ```jsx
  curl -o multi_parachains.toml https://raw.githubusercontent.com/AstarNetwork/Astar/master/third-party/zombienet/multi_parachains.toml
@@ -157,7 +157,7 @@ In order to spawn the Zombienet, we need to add a configuration file to specify 
     
 - After starting the Zombienet successfully, you will be able to see the local testnet endpoint and explorer link as shown below:
 
-    ![Untitled](img-zombienet-cookbook/Untitled.png)
+    ![Untitled] (img-zombienet-cookbook/Untitled.png)
 
 ---
 
@@ -167,14 +167,14 @@ The HRMP channels between `shiden-dev` and `shibuya-dev` are opened as configure
 
 To proceed to the next step of XCM testing, we only need to register the native assets of `shiden-dev` and `shibuya-dev` on each other to pay for XCM execution on the remote chain.
 
-- Go to [Polkadot.JS Explorer](https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:51931#/explorer) (or the link specified in `Direct Link` of `collator1` )
+- Go to [Polkadot.JS Explorer] (https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:51931#/explorer) (or the link specified in `Direct Link` of `collator1` )
     - Click `Developer → Extrinsics → Decode` and input the following call data, to register `xcSDN` on `shibuya-dev`. Please make sure to submit the extrinsics via `Alice`'s account which have enough `SBY` balance.
     
     ```jsx
     0x63000b02102401910100d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d0102093d002410910114786353444e14786353444e12003600010101005d1f91013601010101005d1f02286bee
     ```
     
-- Go to [Polkadot.JS Explorer](https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:51934#/explorer) (or the link specified in `Direct Link` of `collator2` )
+- Go to [Polkadot.JS Explorer] (https://polkadot.js.org/apps/?rpc=ws://127.0.0.1:51934#/explorer) (or the link specified in `Direct Link` of `collator2` )
     - Click `Developer → Extrinsics → Decode` and input the following call data, to register `xcSBY` on `shiden-dev`. Please make sure to submit the extrinsics via `Alice`'s account which have enough `SDN` balance.
     
     ```jsx
@@ -192,7 +192,7 @@ For more details on how to create a remote execution call and how the derived ac
 - Send some `SBY` to Alice’s derived account on **Shibuya** - `5Cvcv8RvSsp6go2pQ8FRXcGLAzNp5eyC8Je7KLHz5zFwuUyT` to pay for the gas fee of executing `System::remark_with_event`.
     - The remote call won’t be executed via Alice's account on Shibuya directly, but with a new derived account. Thus, we need to send `SBY` to the derived account.
     
-    ![Untitled](img-zombienet-cookbook/Untitled%201.png)
+    ![Untitled] (img-zombienet-cookbook/Untitled%201.png)
     
 - Initiate the remote call by inputting the following call data in **Shiden’s** `Developer → Extrinsics → Decode`.
     
@@ -202,19 +202,19 @@ For more details on how to create a remote execution call and how the derived ac
     
 - After 2 blocks, you will be able to observe the executed `System::remark_with_event` in **Shibuya’s** explore under the recent blocks.
     
-    ![Untitled](img-zombienet-cookbook/Untitled%202.png)
+    ![Untitled] (img-zombienet-cookbook/Untitled%202.png)
     
-    ![Untitled](img-zombienet-cookbook/Untitled%203.png)
+    ![Untitled] (img-zombienet-cookbook/Untitled%203.png)
     
 
 ---
 
 ## FAQ
 
-Please join our [Discord](https://discord.com/invite/Z3nC9U4) for technical support.
+Please join our [Discord] (https://discord.com/invite/Z3nC9U4) for technical support.
 
 ## Reference
 
-- [Zombienet](https://github.com/paritytech/zombienet)
-- [Astar Documentation](https://docs.astar.network/docs/xcm/integration/zombienet-testing)
-- [Bruno Galvao](https://hackmd.io/@brunopgalvao/S1Ilj5zA5)
+- [Zombienet] (https://github.com/paritytech/zombienet)
+- [Astar Documentation] (https://docs.astar.network/docs/xcm/integration/zombienet-testing)
+- [Bruno Galvao] (https://hackmd.io/@brunopgalvao/S1Ilj5zA5)

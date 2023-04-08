@@ -6,7 +6,7 @@ sidebar_position: 1
 
 A rede Astar é o futuro da plataforma de contratos inteligentes para multichain. A rede suporta a construção de dApps com contratos inteligentes EVM e WASM e oferece aos desenvolvedores verdadeira interoperabilidade, com cross-consensus messaging (XCM), garantindo maior segurança na transferência de ativos. Nós somos feitos por desenvolvedores e para desenvolvedores. O modelo inovador de Build2Earn da Astar capacita os desenvolvedores a serem pagos com código que eles criaram através de um mecanismo de dapp staking.
 
-A rede Astar foca em fazer a melhor plataforma de contrato inteligente para que os desenvolvedores de dApps em Polkadot não precisem prestar muita atenção à infraestrutura e possam se concentrar mais no seu dApp. Idealmente, os desenvolvedores podem construir qualquer aplicativo na rede Astar sem precisar se preocupar com a sua escalabilidade. [ Astar Network](https://astar.network/) resolve problemas persistentes no setor: escalabilidade interoperabilidade e falta de incentivo ao desenvolvedor.
+A rede Astar foca em fazer a melhor plataforma de contrato inteligente para que os desenvolvedores de dApps em Polkadot não precisem prestar muita atenção à infraestrutura e possam se concentrar mais no seu dApp. Idealmente, os desenvolvedores podem construir qualquer aplicativo na rede Astar sem precisar se preocupar com a sua escalabilidade. [ Astar Network] (https://astar.network/) resolve problemas persistentes no setor: escalabilidade interoperabilidade e falta de incentivo ao desenvolvedor.
 
 ## Escalabilidade
 
