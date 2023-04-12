@@ -12,33 +12,6 @@ To avoid unnecessary complexity, and writing boilerplate code, the most appropri
 
 After compilation, a Wasm blob can then be deployed and stored on-chain.
 
-### Transaction Fees
-
-#### Weight
-
-As is also the case with Substrate, `pallet-contracts` uses [weightV2][weight] to charge execution fees. It is composed of `refTime` and `proofSize` :
-- refTime: The amount of computational time that can be used for execution, in picoseconds.
-- proofSize: The amount of storage space that can be used (also called storage bandwidth), in bytes. So access storage assume that it will grow the gas fees. 
-
-:::info
-Gas = Weight = (refTime, proofSize)
-:::
-
-[Transaction Weight in Substrate Documentation][weight]
-
-#### Automatic Deposit Collection
-
-Additionally, due to the weight, there is also a fee paid for on-chain storage called *automatic deposit collection*. This fee is paid additionally by the caller, and is calculated along with the price set for each storage item `DepositPerItem`, and for each byte of storage `DepositPerByte`.
-
-The *automatic deposit collection* can be simplified as follows:
-
-:::info
-A caller of a contract will pay a deposit to each contract in which new storage is created, as a result of an executed call. Conversely, a caller will receive a refund from each of the contracts that a call removes storage from.
-:::
-
-[Ink! 3.0 Blog Post by Parity](https://www.parity.io/blog/ink-3-0-paritys-rust-based-language-gets-a-major-update)
-[Ink! 4.0 Blog Post by Parity](https://www.parity.io/we-just-released-ink-4-0)
-
 ### Execution Engine
 
 Pallet-contracts uses [wasmi](https://github.com/paritytech/wasmi) as a Wasm interpreter to execute Wasm smart contract blobs. Although there is a faster JIT interpreter such as [wasmtime](https://github.com/bytecodealliance/wasmtime) available in the native runtime, smart contracts are an untrusted environment which require a higher degree of correctness of interpretation, which makes wasmi a more suitable option.
