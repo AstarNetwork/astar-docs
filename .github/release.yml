@@ -9,6 +9,7 @@ changelog:
         labels:
           - documentation
           - enhancement
+          - translation
           - bug
     - title: 📄 Documentation
       labels:
