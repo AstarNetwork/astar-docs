@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Gas Price API
+# Gas/Tip API
 
 ## Overview
 
@@ -12,11 +12,14 @@ The term can be considered analogous to the gas that powers a car engine: it's t
 
 The gas price api is a service that allows you to obtain the various gas prices of the Astar network for various transaction times. Gas fee are provided in wei.
 
-## API
+Tips are used for native transaction. Tips are an optional transaction fee that users can add. Tips are not part of the inclusion fee and are an incentive to block authors for prioritizing a transaction, and the entire tip goes directly to the block author.
 
-- Shibuya: <https://gas.astar.network/api/gasnow?network=shibuya>
-- Shiden: <https://gas.astar.network/api/gasnow?network=shiden>
-- Astar: <https://gas.astar.network/api/gasnow?network=astar>
+
+## GAS API
+
+- Shibuya: <https://gas.astar.network/api/gasnow?network=shibuya&type=gas>
+- Shiden: <https://gas.astar.network/api/gasnow?network=shiden&type=gas>
+- Astar: <https://gas.astar.network/api/gasnow?network=astar&type=gas>
 
 ## Response
 
@@ -57,3 +60,27 @@ EIP-1559's purpose is essentially to make gas fees more transparent and predicta
 
 - priorityFeePerGas: The variable part of the gas fee. Determined by the user.
 - baseFeePerGas: The fixed part of the gas fee. Determined by the network.
+
+### Tip API
+
+- Shibuya: <https://gas.astar.network/api/gasnow?network=shibuya&type=tip>
+- Shiden: <https://gas.astar.network/api/gasnow?network=shiden&type=tip>
+- Astar: <https://gas.astar.network/api/gasnow?network=astar&type=tip>
+
+Response
+```
+{
+    "code":200,
+    "data":{
+        "tip":{
+            "slow":"746510000000",
+            "average":"4119200000000",
+            "fast":"8501250000000"
+        }
+    }
+}
+```
+
+- **slow**: The tip for a transaction that takes a long time to execute.
+- **average**: The tip for a transaction that takes a medium time to execute.
+- **fast**: The tip for a transaction that takes a short time to execute.
