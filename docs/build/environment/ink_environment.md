@@ -56,7 +56,7 @@ targets = [ "wasm32-unknown-unknown" ]
 profile = "minimal"
 ```
 
-See more here - https://github.com/paritytech/cargo-contract/issues/1058
+See more [here](https://github.com/paritytech/cargo-contract/issues/1058)
 :::
 
 ### Ink! [CLI](https://use.ink/getting-started/setup#ink-cli)
