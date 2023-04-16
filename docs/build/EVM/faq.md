@@ -42,4 +42,4 @@ Contract size limits may differ between networks, so it is recommended to lower 
 
 ### During contract deployment I'm getting `HH110: Invalid JSON-RPC response received: 403 Forbidden` error.
 
-That means your requests are limited by Astar endpoints. You need to setup your own node or use another endpoint providers.  
+That means your requests are limited by Astar endpoints. You need to set up your own node or use another endpoint provider.  
