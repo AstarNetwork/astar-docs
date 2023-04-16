@@ -44,7 +44,7 @@ rustup target add wasm32-unknown-unknown --toolchain nightly
 
 :::caution
 Due to a bug in `cargo-contract`, building contracts with **rust nightly 1.70.0 or higher will fail**.
-It is advised to use rustc v1.69.0 or older till the issue is resolved from `cargo-contract` side.
+It is advised to use rustc v1.69.0 or older until the issue is resolved from `cargo-contract` side.
 For better dev experience it is advised to create a [rust-toolchain file](https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file)
 in the root of your project directory with following values.
 
