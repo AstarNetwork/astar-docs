@@ -39,3 +39,7 @@ Any Substrate account can call the EVM, and its Native address will be mapped to
 ### I was able to deploy contracts in other networks, but contracts deployed in this network show "out of gas" error with the error code of 0. How do I fix it?
 
 Contract size limits may differ between networks, so it is recommended to lower optimizer runs of the same smart contract and adjust it to a compatible size for the network. You may want to tune this on testnet.
+
+### During contract deployment I'm getting `HH110: Invalid JSON-RPC response received: 403 Forbidden` error.
+
+That means your requests are limited by Astar endpoints. You need to set up your own node or use another endpoint provider.  

@@ -106,19 +106,19 @@ module.exports = {
 
     // Shibuya faucet: use #shibuya-faucet room in https://discord.gg/astarnetwork
     shibuya: {
-      url: "https://rpc.shibuya.astar.network",
+      url: "https://evm.shibuya.astar.network",
       network_id: 81
     },
     
     // Astar community faucet (please don't abuse): https://as-faucet.xyz/en/astar#
     astar: {
-      url: "https://rpc.astar.network:8545",
+      url: "https://evm.astar.network",
       network_id: 592
     },
 
     // Shiden community faucet (please don't abuse): https://as-faucet.xyz/en/shiden#
     shiden: {
-      url: "https://rpc.shiden.astar.network:8545",
+      url: "https://evm.shiden.astar.network",
       network_id: 336
     }
   }
