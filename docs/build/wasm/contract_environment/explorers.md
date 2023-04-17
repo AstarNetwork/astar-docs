@@ -28,8 +28,10 @@ Block explorers are the Google for searching data on a blockchain. They give dev
 </TabItem>
 <TabItem value="shibuya" label="Shibuya Network">
 <p>Subscan is the most used explorer in the Polkadot ecosystem. With Subscan you can search the complete Astar Network. Subscan support Substrate and Ethereum API. BlockScout is the best explorer for developers who are building on Astar EVM, as it has all the features of EtherScan.</p>
+<p>Sirato is a contract explorer for ink! smart contracts. Sirato provides a contract verification service enabling users to decode information about contract code and instances that have been deployed using the Contracts Pallet. The service allows users to upload source code and metadata to the service which will verify it matches the on-chain. For instructions on how to use the service you can refer <a href="https://medium.com/sirato/how-to-verify-ink-smart-contracts-83fec5de81aa">here</a></p>.
 <p>Under certain circumstances, the Polkadot.js apps portal may also be used to explore blocks.</p>
 <p><b>Subscan:</b> <a href="https://shibuya.subscan.io">https://shibuya.subscan.io</a></p>
+<p><b>Sirato:</b> <a href="https://shibuya.sirato.xyz/">https://shibuya.sirato.xyz/</a></p>
 <p><b>Polkadot JS:</b> <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/explorer">https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/explorer</a></p>
 
 </TabItem>
