@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 12
 ---
 
 # Transaction Fees
@@ -8,11 +8,13 @@ sidebar_position: 2
 
 As is also the case with Substrate, `pallet-contracts` uses [weightV2][weight] to charge execution fees. It is composed of `refTime` and `proofSize` :
 - refTime: The amount of computational time that can be used for execution, in picoseconds.
-- proofSize: The amount of storage space that can be used (also called storage bandwidth), in bytes. So access storage assume that it will grow the gas fees.
+- proofSize: The size of data that needs to be included in the proof of validity in order for relay chain to verify transaction's state changes, in bytes. So access storage assume that it will grow the gas fees.
 
 :::info
 Gas = Weight = (refTime, proofSize)
 :::
+
+Note: Currently Astar only charge for refTime (execution time). ProofSize is a threshold (with a max value epr block) to prevents form PoV attack.
 
 [Transaction Weight in Substrate Documentation][weight]
 
@@ -22,7 +24,7 @@ Storage rent, also called as *Automatic Deposit Collection* is a **mechanism** t
 It prevents malicious actors from spamming the network with low-value transactions and to ensure that callers have a financial stake when storing data on-chain.
 
 Users will be charged for every byte stored on-chain and the call will transfer this fee from the free balance of the user to the reserved balance of the contract. Note that the contract itself is unable to spend this reserved balance (but it can expose a function that remove on-chain storage and the caller will get the funds) .
-It also incentives users to remove unused data from the chain by getting rent fees back. Any user can get back the rent fees if they remove on-chain data (not specifically the user that was first charged for).
+It also incentives users to remove unused data from the chain by getting rent fees back. Any user can get back the rent fees if they remove on-chain data (not specifically the user that was first charged for). It's up to the contract developers and users to understand how and if they can get their storage deposit back.
 
 ### Storage Rent Calculation
 
@@ -43,9 +45,10 @@ For example, if a user store a new entry in a `Mapping<u32, AccountId>` (`Accoun
 #### For users
 
 The first call to a dApp (one or several's smart contracts) will usually be more expensive than the following ones.
-This is because the first call will create a lot of new entries for the `AccountId`. From the second call it should be way cheaper (or free) because it will just update those items.
+This is because the first call will create a lot of new entries for the user (most of the time it is data related to the user `AccountId` like a Mapping of Balances). From the second call it should be way cheaper (or free) because it will just update those items.    
 
-As this is a `reserved balance`, user can't spend it. 
+If the consecutive calls only modify the existing database entry, the caller is only charged for the extra bytes they add to the entry. In the case they reduce the size of the DB entry, they will get storage rent back. What this means in practice is that user can increase their free balance after interacting with a smart contract!
+
 If a user want to get it back, it should remove on-chain data. It is only possible if the smart-contract expose a function that remove data from chain (like `remove_mapping_entry` in the example below).
 
 #### For smart-contracts developers
@@ -57,9 +60,13 @@ users will not be able to get back their reserved balance back (as it will be re
 ### StorageDepositLimit
 
 When doing a contract call one of the argument is `StorageDepositLimit`. This value is the maximum amount of storage rent that can be charged for a single call.    
-If it's set to `None` it allow contracts to charge arbitrary amount of funds to be drained from the caller's account. 
+:::important
+If `StorageDepositLimit` is set to `None`, it allows contracts to charge arbitrary amount of funds to be drained from the caller's account.
+:::
 So it is necessary to set a limit (first dry-run the call to get the storage deposit amount) to prevent malicious contracts from draining funds from a user's account.
-This especially applies for front end applications that triggers contracts calls.
+This especially applies for front end applications that triggers contracts calls or for calls send from contracts UI (like [contracts-UI](https://contracts-ui.substrate.io/) or [polkadot-js UI](https://polkadotjs-apps.web.app/?rpc=wss%3A%2F%2Frpc.astar.network#/contracts)).
+
+Users are responsible for ensuring gas limit & storage deposit limit. This is same as for EVM smart contracts, but instead of having only non-refundable gas, you also have to take note of `StorageDepositLimit`.
 
 ### Contract example on Astar
 
