@@ -47,10 +47,10 @@ sidebar_position: 2
  Programs built on top of layer 1 such as smart contracts or solutions to improve scalability, reduce transaction costs, and enhance the functionality of the blockchain network.
 
  ### Light client
- A client that does not download the full blockchain, and instead just downloads block headers. Connects to full nodes to query data.
+ A client that does not download the full blockchain, and instead downloads only block headers. Connects to full nodes to query data.
 
  ### Mainnet
- Short for "main network": the fully functional and acting chain that runs its own network.
+ Short for "main network": the fully functional production chain that runs its own network.
 
  ### Node
  A device connected to a blockchain network that stores a copy of the blockchain ledger and participates in validating transactions and maintaining the network's security and integrity.
@@ -91,7 +91,7 @@ sidebar_position: 2
  ### Substrate 
  A modular framework for building blockchains. Astar is built with Substrate.
 
- ### Swanky Suit 
+ ### Swanky Suite 
  A suite of tools for building Wasm smart contracts on Astar that simplifly compilation, deployment and testing.
 
  ### Testnet 
