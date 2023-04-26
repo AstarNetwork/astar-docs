@@ -1,7 +1,7 @@
 # Build on Astar
 ![Documentation of all the resources builders need in order to start testing, deploying and interacting with smart contracts on the Astar network](assets/build.png)
 
-## Why build on Astar
+## Why build on Astar?
 Astar is the most flexible smart contract platform in the Polkadot ecosystem, supporting both Wasm and EVM smart contracts, and interoperability between them using a unique cross-virtual machine. Astar network provides native access to the Polkadot ecosystem through its parachain slot, and asset bridges and general message passing protocols provide routes to other major blockchains, including [Ethereum](https://cbridge.celer.network/#/transfer), [BSC](https://cbridge.celer.network/#/transfer), Cosmos, Polygon, and more. 
 
 The shared security of Polkadot, coupled with Astar XVM, allows developers to build smart contracts in ways they never have before, and by building ion a platform conducive to interoperability of features and cooperation across multiple blockchains, complex synergies can be formed, and lead to realization of truly innovative and future-proof solutions that can't be replicated in other environments.
