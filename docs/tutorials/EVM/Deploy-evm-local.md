@@ -2,9 +2,17 @@
 sidebar_position: 4
 ---
 
-# Deploy EVM Smart Contract on Local Network
+# EVM on Astar
 
 Finally, it's time to deploy your first smart contract on Astar/Shiden local network! In this tutorial, you will deploy a basic ERC20 token using Remix.
+
+### Goals
+#### Set up EVM environment
+#### 
+### Prerequisites
+####
+####
+### Project repo
 
 ## Preparation of Solidity Smart Contract on Remix
 

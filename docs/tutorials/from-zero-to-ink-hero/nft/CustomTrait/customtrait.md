@@ -81,7 +81,7 @@ std = [
 ```
 
 ## Define Custom Trait
-In the `logics/traits/payable_mint.rs` file, add a trait_definition for PayableMint.
+In the `logics/traits/payable_mint.rs` file, add a `trait_definition` for `PayableMint`.
 ```rust
 use openbrush::{
     contracts::{

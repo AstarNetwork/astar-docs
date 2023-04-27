@@ -25,7 +25,7 @@ Source code for both Swanky CLI and Swanky Node are hosted on GitHub:
 - [Swanky CLI] (https://github.com/AstarNetwork/swanky-cli).
 - [Swanky Node] (https://github.com/AstarNetwork/swanky-node).
 
-<Figure caption="The architecture envisioned for Swanky CLI and Swanky Node (Local developer node)" src={require('../img/SwankySuiteAstar.png').default} width="100%"/>
+`<Figure caption="The architecture envisioned for Swanky CLI and Swanky Node (Local developer node)" src={require('../img/SwankySuiteAstar.png').default} width="100%"/>`
 
 :::note
 The actual state deviates slightly from the above diagram as both the cli and the node are constantly iterated upon and updated, but it illustrates the general idea behind the suite.

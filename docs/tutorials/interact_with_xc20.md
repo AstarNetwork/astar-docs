@@ -1,6 +1,6 @@
 # How to create and interact with a mintable XC20 asset via Solidity smart contract
 
-## TL;DR
+## Overview
 
 XC20 is an asset standard that enables users and developers to interact with them through a familiar [ERC20 interface] (https://github.com/PureStake/moonbeam/blob/master/precompiles/assets-erc20/ERC20.sol) via a precompile contract (Ethereum API) while having XCM cross-chain compatibility as native Substrate assets. Since ERC20 assets can not be transferred via XCM in the Polkadot/Kusama ecosystem, you will need XC20 if you want to build cross-chain compatible assets usable in EVM.
 
