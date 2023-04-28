@@ -30,7 +30,7 @@ sidebar_position: 4
 
 Astarは異なるフォーマットで2つのアドレスを持っています。
 
-- Astar Native アドレスー dApps Staking やWASMプロジェクトと連携するためのアドレス
+- Astar Native アドレスー dApps Staking やWasmプロジェクトと連携するためのアドレス
 - Astar EVM アドレスー EVMプロジェクトと連携するためのアドレス
 
 あなたが Astar Native アカウントを作成する必要がある場合は、 [こちらのページ] (create-wallet.md) でアカウントを作成することができます。

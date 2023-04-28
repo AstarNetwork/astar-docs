@@ -26,8 +26,8 @@
   "Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles.": {
     "message": "AstarのEVMを深く掘り下げ、EVMコントラクトがプリコンパイルによって他の非EVMモジュールとどのように相互作用するかを説明します。"
   },
-  "Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework.": {
-    "message": "オールインワンのSwanky Suiteを使って、WASMスマートコントラクトの構築を始めます。ink! および ask! WASMコントラクトフレームワークの概要と、各フレームワークの例を知ることができます。"
+  "Use all-in-one Swanky Suite to start building Wasm smart contracts. Get an overview of ink! and ask! Wasm contract frameworks and examples for each framework.": {
+    "message": "オールインワンのSwanky Suiteを使って、Wasmスマートコントラクトの構築を始めます。ink! および ask! Wasmコントラクトフレームワークの概要と、各フレームワークの例を知ることができます。"
   },
   "Run A Node": {
     "message": "ノードの実行"

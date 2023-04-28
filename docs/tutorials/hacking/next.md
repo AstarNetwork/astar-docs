@@ -17,7 +17,7 @@ Here you will find a list of ideas to implement in any of the smart contract env
 - Subscribe to Astar Newsletter.
 
 ## Ideas to build
-These ideas can be implemented as WASM or EVM smart contract. Main intention is for the ink! developers.
+These ideas can be implemented as Wasm or EVM smart contract. Main intention is for the ink! developers.
 
 ### Pool Together 
 Explore this [project] (https://app.pooltogether.com/) and build your own version in ink!

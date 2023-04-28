@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Asset MultiLocation
+# Use Asset MultiLocation
 
 You can use these `MultiLocation` values to add Astar native assets to a parachains' foreign token list, along with other assets minted on our chain.
 

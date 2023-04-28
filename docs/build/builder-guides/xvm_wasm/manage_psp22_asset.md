@@ -3,13 +3,13 @@ sidebar_position: 2
 ---
 
 # Create and manage a PSP22 assets on Shibuya
-## TL;DR
+## Overview
 This guide will be help you in create and manage your PSP22 assets.
 
 ---
 
 ## What is a PSP22 asset?
-The PSP22 Fungible Token standard was inspired by ERC20. It targets every parachain that integrates with pallet contracts to enable WASM smart contracts. Defined at an ABI level, any language that compiles to WASM (and isn’t explicitly restricted to ink!) can use it. What PSP22 is on Polkadot is what ERC20 is on Ethereum.
+The PSP22 Fungible Token standard was inspired by ERC20. It targets every parachain that integrates with pallet contracts to enable Wasm smart contracts. Defined at an ABI level, any language that compiles to Wasm (and isn’t explicitly restricted to ink!) can use it. What PSP22 is on Polkadot is what ERC20 is on Ethereum.
 
 ## Create a PSP22 contract
 In this guide, we will use [OpenBrush] (https://openbrush.io/) and their contract studio to build our PSP22 contract. OpenBrush contract studio is the fastest and easiest way to create your smart contract. It allows you to add extensions that will fit your needs for your asset.

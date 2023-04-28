@@ -1,6 +1,6 @@
 # How to set up a Zombienet for XCM testing
 
-## TL;DR
+## Overview
 
 Zombienet is a testing framework for Substrate-based blockchains, providing a simple CLI tool that allows users to spawn any Substrate-based blockchains including Astar, with the Polkadot relaychain. The assertions used in the tests can include on-chain storage, metrics, logs, and custom javascript scripts that interact with the chain.
 

@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ### Format d'adresse
 
-Le format d'adresse utilisé par les chaînes basées sur Substrate comme Astar est le SS58. SS58 est une modification de la vérification de la base 58 de Bitcoin avec quelques modifications mineures. Notamment, le format contient un préfixe du type d'adresse qui identifie une adresse comme appartenant à un réseau spécifique. L'écosystème Astar est une parachain spéciale de l'écosystème Polkadot, car c'est la seule parachain qui supporte EVM comme contrat intelligent WASM. Avec l'utilisation de deux machines virtuelles différentes vient deux types d'adresses différentes.
+Le format d'adresse utilisé par les chaînes basées sur Substrate comme Astar est le SS58. SS58 est une modification de la vérification de la base 58 de Bitcoin avec quelques modifications mineures. Notamment, le format contient un préfixe du type d'adresse qui identifie une adresse comme appartenant à un réseau spécifique. L'écosystème Astar est une parachain spéciale de l'écosystème Polkadot, car c'est la seule parachain qui supporte EVM comme contrat intelligent Wasm. Avec l'utilisation de deux machines virtuelles différentes vient deux types d'adresses différentes.
 
 - Une adresse Astar native ou une adresse SS58
 - Une adresse Astar EVM ou H160 qui commence par 0x
@@ -16,7 +16,7 @@ Le format d'adresse utilisé par les chaînes basées sur Substrate comme Astar 
 <img width="800" alt="1" src="https://user-images.githubusercontent.com/77480847/186840773-5874ba05-a067-4204-b72f-3f1017de85b7.png" />
 <img width="800" alt="2" src="https://user-images.githubusercontent.com/77480847/186840936-692dc1f3-c5a8-450f-813c-6067c60f8cc2.png" />
 
-Vous interagirez avec une adresse native Astar lorsque vous utiliserez des dApps WASM ou en utilisant la page de dApps Staking . L'utilisation de cette adresse nécessite une autre extension que Metamask. Nous vous recommandons d'utiliser l'extension Polkadot JS si vous êtes nouveau dans l'écosystème.
+Vous interagirez avec une adresse native Astar lorsque vous utiliserez des dApps Wasm ou en utilisant la page de dApps Staking . L'utilisation de cette adresse nécessite une autre extension que Metamask. Nous vous recommandons d'utiliser l'extension Polkadot JS si vous êtes nouveau dans l'écosystème.
 
 ## Portail d'Astar
 

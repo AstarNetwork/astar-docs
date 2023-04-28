@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Astarが解決する問題
 
-Astar Networkは、マルチチェーン向けスマートコントラクトプラットフォームの未来です。 このネットワークは、EVMおよびWASMスマートコントラクトを用いたdAppsの構築をサポートし、cross-consensus messaging (XCM) を用いて、開発者に真の相互運用性を提供します。 私たちは、開発者による、開発者のためのプロジェクトです。 AstarのBuild2Earnモデルはユニークです。開発者が書いたコードや構築したdAppに対して、dApp Stakingメカニズムを通じて報酬を与えます。
+Astar Networkは、マルチチェーン向けスマートコントラクトプラットフォームの未来です。 このネットワークは、EVMおよびWasmスマートコントラクトを用いたdAppsの構築をサポートし、cross-consensus messaging (XCM) を用いて、開発者に真の相互運用性を提供します。 私たちは、開発者による、開発者のためのプロジェクトです。 AstarのBuild2Earnモデルはユニークです。開発者が書いたコードや構築したdAppに対して、dApp Stakingメカニズムを通じて報酬を与えます。
 
 Astar Networkは、Polkadot上のdApps開発者がインフラに気を配る必要がなく、よりdAppに集中できるよう、最高のスマートコントラクトプラットフォームを作ることに焦点を当てています。 理想は、開発者がAstar Networkのスケーラビリティを考慮することなく、どんなアプリケーションでも構築できることです。 [Astar Network] (https://astar.network/) は、スケーラビリティ、相互運用性、開発者のインセンティブ不足という大きな問題を解決します。
 

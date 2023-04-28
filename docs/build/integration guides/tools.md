@@ -2,13 +2,13 @@
 sidebar_position: 4
 ---
 
-# XCM Tools
+# Use XCM Tools
 
 We've prepared an xcm-tools crate which provides an easy way for users to find a sovereign account or calculate an XC20 asset Id. This section is intended for developers or integrators who possess basic technical knowledge.
 
 ## Installation
 
-1. Make sure your machine is capable of compiling Substrate code. For more info, check [here] (https://docs.substrate.io/install/).
+1. Make sure you have Substrate installed on yout machine. For more info, check [here] (https://docs.substrate.io/install/).
 2. Clone [Astar repo] (https://github.com/AstarNetwork/Astar)
 3. Position yourself in repository root and run `cargo build --release -p xcm-tools`
 4. After compilation finishes, check the `./target/release` folder for the `xcm-tools` binary

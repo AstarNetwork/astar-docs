@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # How to run a local Astar blockchain for contract testing
 
-## TL;DR
+## Overview
 
 Compared with using Shibuya testnet, testing on a local Astar blockchain can provide higher throughput, quicker response, and more privacy since the only node of the network runs on your local device. Building a local Astar blockchain is essential for relatively large project development and testing.
 

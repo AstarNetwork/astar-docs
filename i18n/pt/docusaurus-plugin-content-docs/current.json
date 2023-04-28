@@ -39,9 +39,9 @@
     "message": "Seu Primeiro Contrato",
     "description": "The label for category Your First Contract in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Use WebAssembly(WASM)": {
-    "message": "Usar WebAssembly(WASM)",
-    "description": "The label for category Use WebAssembly(WASM) in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Use WebAssembly(Wasm)": {
+    "message": "Usar WebAssembly(Wasm)",
+    "description": "The label for category Use WebAssembly(Wasm) in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Astar Wasm Stack": {
     "message": "Astar Wasm Stack",

@@ -30,7 +30,7 @@ Dalam panduan ini kami akan mengajarkan kepada anda bagaimana cara memindahkan a
 
 Astar mempunyai dua alamat dalam format yang berbeda.
 
-- Address Astar Native - untuk melakukan staking dalam dApp Staking dan interaksi dengan proyek WASM
+- Address Astar Native - untuk melakukan staking dalam dApp Staking dan interaksi dengan proyek Wasm
 - Address Astar EVM - untuk interaksi dengan proyek EVM
 
 Apabila anda membutuhkan untuk membuat akun Astar Native, [panduan ini] (create-wallet.md) akan membantu anda.

@@ -39,12 +39,12 @@
     "message": "Votre premier contrat",
     "description": "The label for category Your First Contract in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Use WebAssembly(WASM)": {
-    "message": "Utiliser le WebAssembly(WASM)",
-    "description": "The label for category Use WebAssembly(WASM) in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Use WebAssembly(Wasm)": {
+    "message": "Utiliser le WebAssembly(Wasm)",
+    "description": "The label for category Use WebAssembly(Wasm) in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Astar Wasm Stack": {
-    "message": "La stack WASM sur Astar",
+    "message": "La stack Wasm sur Astar",
     "description": "The label for category Astar Wasm Stack in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Smart-contract development": {

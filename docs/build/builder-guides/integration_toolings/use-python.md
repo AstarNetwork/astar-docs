@@ -1,6 +1,6 @@
 # Query dApp Staking extrinsics and participating addresses with Python
 
-## TL;DR
+## Overview
 
 As a Substrate-based multi-VM blockchain, Astar nodes have all Polkadot or Substrate features. [Python Substrate Interface] (https://github.com/polkascan/py-substrate-interface) library allows developers to query Substrate-runtime-level metadata from an Astar node and interact with the node's Polkadot or Substrate features, including querying and composing extrinsics using a native Python interface.
 

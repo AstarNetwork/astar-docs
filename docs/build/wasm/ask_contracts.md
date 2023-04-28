@@ -240,7 +240,7 @@ ask-template
 
 Now we will deploy this smart contract on our testnet.
 
-We will access [polkadot.js] (https://polkadot.js.org/apps/) and deploy the smart contract. Select Shibuya testnet and pick `metadata.json` for “json for either ABI or .contract bundle” section and pick `flipper.optimized.wasm` for “compiled contract WASM” section.
+We will access [polkadot.js] (https://polkadot.js.org/apps/) and deploy the smart contract. Select Shibuya testnet and pick `metadata.json` for “json for either ABI or .contract bundle” section and pick `flipper.optimized.wasm` for “compiled contract Wasm” section.
 
 ![09] (img/09a.png)
 

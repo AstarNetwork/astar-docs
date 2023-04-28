@@ -1,10 +1,10 @@
 # How to use Remix IDE to deploy an on-chain storage contract on Astar EVM
 
-## TL;DR
+## Overview
 
 Remix is a powerful open-source toolset for developing, deploying, debugging, and testing EVM-compatible smart contracts. Remix IDE is part of the Remix Project, which includes the Remix Plugin Engine and Remix Libraries: low-level tools for wider use.
 
-Since Astar Network is a multi-VM smart contract hub, we support both WASM and EVM, which means you can use Ethereum dev tools, including Remix, to interact with Astar EVM’s API directly and deploy Solidity-based smart contracts on Astar EVM.
+Since Astar Network is a multi-VM smart contract hub, we support both Wasm and EVM, which means you can use Ethereum dev tools, including Remix, to interact with Astar EVM’s API directly and deploy Solidity-based smart contracts on Astar EVM.
 
 In this cookbook, we will guide you on creating a Solidity-based on-chain storage smart contract with Remix Online IDE, compiling and deploying the contract to the Shibuya testnet, and how interacting with the contract to write the value on our blockchain and retrieve the value.
 
@@ -12,7 +12,7 @@ In this cookbook, we will guide you on creating a Solidity-based on-chain storag
 
 ## What is Astar EVM?
 
-As a multi-VM smart contract hub, Astar Network supports both WASM and EVM, which means Solidity smart contracts and WASM-based smart contracts can be deployed on Astar Network. 
+As a multi-VM smart contract hub, Astar Network supports both Wasm and EVM, which means Solidity smart contracts and Wasm-based smart contracts can be deployed on Astar Network. 
 
 And Solidity developers can directly use Ethereum dev tools, including Hardhat, Remix, MetaMask, to directly interact with Astar EVM’s API and deploy Solidity smart contracts on Astar EVM.
 

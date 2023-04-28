@@ -9,6 +9,8 @@ import TabItem from '@theme/TabItem';
 
 
 ## What is RPC Node?
+* RPC short for Remote Procedure Call is a protocol  that a program uses to request a service from a program located on another computer in a network without having to understand the network details. 
+ 
 * RPC nodes can be queried for information and used to initiate transactions.
 * The purpose of RPC nodes is to allow decentralized applications and clients to communicate with a Blockchain network.
 * RPC nodes listen for requests, respond with the necessary data, or execute the requested transaction. 

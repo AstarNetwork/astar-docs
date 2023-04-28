@@ -4,7 +4,7 @@ description: "Alchemy is a developer platform that helps companies to build scal
 ---
 
 # Alchemy
-[Alchemy] is a developer-focused platform that helps companies build scalable and reliable decentralized applications, without the difficulty of managing blockchain infrastructure in-house.
+[Alchemy] is a developer-focused platform that helps projects build scalable and reliable decentralized applications, without the difficulty of managing blockchain infrastructure in-house.
 
 - Alchemy Supernode offers the most reliable, scalable and accurate way to connect and build on the Astar blockchain.
 - Alchemy SDK gives Astar developers the easiest way to connect their dApps to the blockchain with just two lines of code.

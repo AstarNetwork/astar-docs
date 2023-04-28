@@ -10,23 +10,23 @@ sidebar_position: 2
 
 [Band Protocol] is a cross-chain data oracle that aggregates and connects real-world data and APIs, to smart contracts.
 
-### Why do Blockchains Require Oracles?
-
-Blockchains are great at providing immutable storage and deterministically verifiable computations. However, they cannot access trusted real-world information available outside their networks. Band Protocol enhances smart contract functionality by granting access to reliable data, without relying on centralized authorities, or points of failure.
-
 ## Using Band Protocol
 
-Decentralized application developers have two ways to fetch prices from Band’s oracle infrastructure. The first option, is to use Band’s smart contracts on Astar. By doing so, developers can access on-chain data updated either at regular intervals, or when price slippage is greater than a threshold amount (different for each token). Currently, **the interval is set at 10 minutes, or price slippage of 0.5%.** The second option, allows developers to use the JavaScript helper library, which relies on an API endpoint to fetch data using similar functions as those used with the smart contracts, to obtain price quotes off-chain. This can be useful if your dApp front-end needs direct access to data.
+DApp developers have two ways to fetch prices with Band’s oracle infrastructure. 
+- Via Band’s smart contracts on Astar.
+ Developers can access on-chain data updated either at regular intervals, or when price slippage is greater than a threshold amount (different for each token). Currently, **the interval is set at 10 minutes, or price slippage of 0.5%.** 
+- With the JavaScript helper library.
+ The library relies on an API endpoint to fetch data using similar functions as those used with the smart contracts, to obtain price quotes off-chain. This can be useful if your dApp front-end needs direct access to data.
 
 The Aggregator Contract address can be found in the following table:
 
 ### Astar
 
-Smart Contract (Aggregator): 0xDA7a001b254CD22e46d3eAB04d937489c93174C3
+Smart Contract (Aggregator): `0xDA7a001b254CD22e46d3eAB04d937489c93174C3``
 
 ### Shiden
 
-Smart Contract (Aggregator): 0xDA7a001b254CD22e46d3eAB04d937489c93174C3
+Smart Contract (Aggregator): `0xDA7a001b254CD22e46d3eAB04d937489c93174C3`
 
 ## Supported Tokens
 
@@ -75,7 +75,7 @@ For example, if we call `getReferenceDataBulk` with `['BTC','BTC','ETH']` and `[
 - `BTC/ETH`
 - `ETH/BNB`
 
-## Example Usage
+## Example
 
 The contract code below demonstrates a simple usage of the new `StdReference` contract and the `getReferenceData` function.
 

@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # How to use Truffle to deploy on Shibuya
 
-## TL;DR
+## Overview
 
 This cookbook gives you a basic idea of how to use Truffle and deploy a simple test smart contract on our Shibuya testnet.
 

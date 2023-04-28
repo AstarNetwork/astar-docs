@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Overview
 
-Before two parachains can communicate directly with one another, they must open channels with one another. Since each channel is uni-directional, two of them must be opened; one in each direction.
+Before two parachains can communicate directly with one another, they must open channels with one another. Since each channel is uni-directional, two of them must be opened: one in each direction.
 
 ## Technical Instructions
 

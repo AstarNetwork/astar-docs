@@ -30,7 +30,7 @@ Neste tutorial, vamos te guiar como transferir tokens usando o Portal e enviar t
 
 Astar tem dois endereços em formatos diferentes.
 
-- Um endereço nativo de Astar - para o dApps Staking e interagir com os projetos WASM
+- Um endereço nativo de Astar - para o dApps Staking e interagir com os projetos Wasm
 - Um endereço Astar EVM - para interagir com os projetos EVM
 
 Se você precisa criar uma conta nativa de Astar, [esta página] (create-wallet.md) irá ajudá-lo a criar as contas.

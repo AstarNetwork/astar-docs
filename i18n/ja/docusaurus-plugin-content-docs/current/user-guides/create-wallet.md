@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ### アドレスフォーマット
 
-Astar のような Substrateベースチェーンで使用されるアドレス形式はSS58です。 SS58は、BitcoinのBase-58-checkに若干の修正を加えたものです。 注目すべきは、アドレスが特定のネットワークに属することを識別するための、アドレスタイププレフィックスを含むフォーマットを含むことです。 Astarエコシステムは、WASMスマートコントラクトとしてEVMをサポートする唯一のParachainであるため、Polkadotエコシステムの中でも特別なParachainとなっています。 2種類の仮想マシンを使用することで、2種類のアドレスが使われます。
+Astar のような Substrateベースチェーンで使用されるアドレス形式はSS58です。 SS58は、BitcoinのBase-58-checkに若干の修正を加えたものです。 注目すべきは、アドレスが特定のネットワークに属することを識別するための、アドレスタイププレフィックスを含むフォーマットを含むことです。 Astarエコシステムは、WasmスマートコントラクトとしてEVMをサポートする唯一のParachainであるため、Polkadotエコシステムの中でも特別なParachainとなっています。 2種類の仮想マシンを使用することで、2種類のアドレスが使われます。
 
 - Astarネイティブアドレス、もしくはSS58アドレス
 - 0xで始まるAstar EVMアドレス、もしくはH160アドレス
@@ -16,7 +16,7 @@ Astar のような Substrateベースチェーンで使用されるアドレス�
 <img width="800" alt="1" src="https://user-images.githubusercontent.com/77480847/186840773-5874ba05-a067-4204-b72f-3f1017de85b7.png" />
 <img width="800" alt="2" src="https://user-images.githubusercontent.com/77480847/186840936-692dc1f3-c5a8-450f-813c-6067c60f8cc2.png" />
 
-WASM dApps、またはdApps Stakingページを使用するときに、Astarネイティブアドレスを使用します。 このアドレスを使用するには、MetaMask以外の拡張機能が必要です。 エコシステムに慣れていない場合は、Polkadot JS extension を使用することをお勧めします。
+Wasm dApps、またはdApps Stakingページを使用するときに、Astarネイティブアドレスを使用します。 このアドレスを使用するには、MetaMask以外の拡張機能が必要です。 エコシステムに慣れていない場合は、Polkadot JS extension を使用することをお勧めします。
 
 ## Astar Portal
 

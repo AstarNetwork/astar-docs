@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Masalah Yang Hendak Diatasi Astar
 
-Astar Network adalah platform masa depan untuk kontrak pintar (smart contract) untuk beragam jaringan (multichain). Network kami mendukung pengembangan dApps dengan smart contract EVM dan WASM, menawarkan interoperabilitas yang sesungguhnya kepada para developer, dengan fitur Cross-consensus Messaging (XCM). Dibangun oleh para developer untuk sesama developer. Model unik dari Astar yaitu Build2Earn memberdayakan para developer untuk mendapatkan imbalan dengan sebuah mekanisme dApp Staking untuk program yang mereka buat dan dApp yang mereka bangun.
+Astar Network adalah platform masa depan untuk kontrak pintar (smart contract) untuk beragam jaringan (multichain). Network kami mendukung pengembangan dApps dengan smart contract EVM dan Wasm, menawarkan interoperabilitas yang sesungguhnya kepada para developer, dengan fitur Cross-consensus Messaging (XCM). Dibangun oleh para developer untuk sesama developer. Model unik dari Astar yaitu Build2Earn memberdayakan para developer untuk mendapatkan imbalan dengan sebuah mekanisme dApp Staking untuk program yang mereka buat dan dApp yang mereka bangun.
 
 Astar Network bertujuan untuk menjadi platform smart contract terbaik sehingga para developer dApp di atas Polkadot, tidak perlu lagi terlalu memikirkan infrastruktur dan lebih fokus untuk pembangunan dApp yang mereka bangun. Idealnya, para developer dapat membangun aplikasi apapun di atas Astar Network tanpa perlu memikirkan mengenai masalah skalabilitas. [Astar Network] (https://astar.network/) memecahkan isu yang selalu menjadi persoalan yaitu: skalabilitas, interoperabilitas dan insentif terhadap developer.
 

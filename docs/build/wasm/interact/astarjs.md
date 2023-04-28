@@ -18,7 +18,7 @@ You can find a working examples here:
 
 - Flipper contract [flipper] (https://github.com/AstarNetwork/wasm-flipper). This is a simple contract that allows users to flip a boolean value.
 
-- Lottery contract [lottery] (https://github.com/astarNetwork/wasm-lottery). Here is another dapp example that uses Astar.js to interact with WASM smart contract. This is a simple lottery dapp that allows users to enter and draw the lottery.
+- Lottery contract [lottery] (https://github.com/astarNetwork/wasm-lottery). Here is another dapp example that uses Astar.js to interact with Wasm smart contract. This is a simple lottery dapp that allows users to enter and draw the lottery.
 
 ## Usage
 

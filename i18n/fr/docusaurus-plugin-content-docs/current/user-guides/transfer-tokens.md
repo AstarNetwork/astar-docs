@@ -30,7 +30,7 @@ Dans ce tutoriel, nous allons vous guider sur la façon de transférer des jeton
 
 Astar a deux adresses dans des formats différents.
 
-- Une adresse Astar native - pour utiliser le dApps Staking et interagir avec les projets WASM
+- Une adresse Astar native - pour utiliser le dApps Staking et interagir avec les projets Wasm
 - Une adresse Astar EVM - pour interagir avec les projets EVM
 
 Si vous avez besoin de créer un compte Astar, [cette page] (create-wallet.md) vous aidera à créer des comptes.

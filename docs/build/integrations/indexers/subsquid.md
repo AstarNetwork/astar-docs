@@ -462,7 +462,7 @@ You can view the [finalized and complete project on GitHub] (https://github.com/
 
 Subsquid EVM template is the best starting point for EVM contract indexing. The template and this guide demonstrate how to index the `Transfer` event for ERC721 tokens, but the same process can be applied to ERC20 tokens as well. It is sufficient to import a new ABI interface, make the necessary changes to the `schema.graphql`, launch the `codegen` and `evm-typegen` tools, and finally adjust the helper and handler functions in `contract.ts`.
 
-Furthermore, Subsquid SDK supports Ink! contracts and with it, you'll be able to index WASM smart contracts. Head over to the [related section of the official documentation] (https://docs.subsquid.io/substrate-indexing/wasm-support/), for more information, and to find [a tutorial on this topic] (https://docs.subsquid.io/tutorials/create-a-wasm-processing-squid/).
+Furthermore, Subsquid SDK supports Ink! contracts and with it, you'll be able to index Wasm smart contracts. Head over to the [related section of the official documentation] (https://docs.subsquid.io/substrate-indexing/wasm-support/), for more information, and to find [a tutorial on this topic] (https://docs.subsquid.io/tutorials/create-a-wasm-processing-squid/).
 
 [Subsquid's documentation] (https://docs.subsquid.io/) contains informative material and is the best place to start, if you are curious about any aspects of these examples that were not fully explained in this guide.
 

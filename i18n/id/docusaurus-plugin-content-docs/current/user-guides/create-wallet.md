@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ### Format Alamat (Address)
 
-Format address dalam jaringan blockchain berbasis Substrate seperti Astar adalah SS58. SS58 adalah modifikasi dari Base-58-check dari Bitcoin dengan sedikit modifikasi. Khususnya, format berisi awalan (prefix) jenis address yang mengidentifikasi address sebagai milik network tertentu. Ekosistem Astar adalah parachain unik di ekosistem Polkadot karena hanya satu-satunya parachain yang mendukung smart contract EVM sebagai smart contract WASM. Dengan dua jenis Virtual Machine maka ada dua jenis address.
+Format address dalam jaringan blockchain berbasis Substrate seperti Astar adalah SS58. SS58 adalah modifikasi dari Base-58-check dari Bitcoin dengan sedikit modifikasi. Khususnya, format berisi awalan (prefix) jenis address yang mengidentifikasi address sebagai milik network tertentu. Ekosistem Astar adalah parachain unik di ekosistem Polkadot karena hanya satu-satunya parachain yang mendukung smart contract EVM sebagai smart contract Wasm. Dengan dua jenis Virtual Machine maka ada dua jenis address.
 
 - Address Astar Native atau SS58 Address
 - Address Astar EVM atau H160 yang dimulai dengan awalan 0x
@@ -16,7 +16,7 @@ Format address dalam jaringan blockchain berbasis Substrate seperti Astar adalah
 <img width="800" alt="1" src="https://user-images.githubusercontent.com/77480847/186840773-5874ba05-a067-4204-b72f-3f1017de85b7.png" />
 <img width="800" alt="2" src="https://user-images.githubusercontent.com/77480847/186840936-692dc1f3-c5a8-450f-813c-6067c60f8cc2.png" />
 
-Anda akan berinteraksi dengan address Astar Native ketika menggunakan dApp berbasis WASM yang telah disiapkan dalam halaman dApp staking. Menggunakan address ini membutuhkan extension lainnya selain MetaMask. Kami merekomendasikan Polkadot JS extension jika anda baru masuk dalam ekosistem ini.
+Anda akan berinteraksi dengan address Astar Native ketika menggunakan dApp berbasis Wasm yang telah disiapkan dalam halaman dApp staking. Menggunakan address ini membutuhkan extension lainnya selain MetaMask. Kami merekomendasikan Polkadot JS extension jika anda baru masuk dalam ekosistem ini.
 
 ## Portal Astar
 

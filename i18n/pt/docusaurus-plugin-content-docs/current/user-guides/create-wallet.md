@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ### Formato de endereço
 
-O formato de endereço usado em cadeias baseadas no Substrate como Astar é SS58. SS58 é uma modificação do Base-58-check do Bitcoin com algumas pequenas modificações. Notavelmente, o formato contém um prefixo de tipo de endereço que identifica um endereço como pertencente a uma rede específica. O ecossistema Astar é uma parachain especial no ecossistema Polkadot porque é a única parachain que suporta EVM como contrato inteligente WASM. Com o uso de duas máquinas virtuais diferentes, surgem dois tipos diferentes de endereços.
+O formato de endereço usado em cadeias baseadas no Substrate como Astar é SS58. SS58 é uma modificação do Base-58-check do Bitcoin com algumas pequenas modificações. Notavelmente, o formato contém um prefixo de tipo de endereço que identifica um endereço como pertencente a uma rede específica. O ecossistema Astar é uma parachain especial no ecossistema Polkadot porque é a única parachain que suporta EVM como contrato inteligente Wasm. Com o uso de duas máquinas virtuais diferentes, surgem dois tipos diferentes de endereços.
 
 - Um endereço nativo de Astar ou endereço SS58
 - Um endereço Astar EVM ou endereço H160 que começa com 0x
@@ -16,7 +16,7 @@ O formato de endereço usado em cadeias baseadas no Substrate como Astar é SS58
 <img width="800" alt="1" src="https://user-images.githubusercontent.com/77480847/186840773-5874ba05-a067-4204-b72f-3f1017de85b7.png" />
 <img width="800" alt="2" src="https://user-images.githubusercontent.com/77480847/186840936-692dc1f3-c5a8-450f-813c-6067c60f8cc2.png" />
 
-Você irá interagir com nosso endereço nativo Astar quando o uso de dApps WASM estiver pronto ou nossa página de dApps Staking. Usar este endereço requer outra extensão que não seja a MetaMask. Recomendamos usar a extensão Polkadot JS se você for novo no ecossistema.
+Você irá interagir com nosso endereço nativo Astar quando o uso de dApps Wasm estiver pronto ou nossa página de dApps Staking. Usar este endereço requer outra extensão que não seja a MetaMask. Recomendamos usar a extensão Polkadot JS se você for novo no ecossistema.
 
 ## Portal Astar
 

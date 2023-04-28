@@ -26,8 +26,8 @@
   "Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles.": {
     "message": "Plongez plus profondément dans l'EVM d'Astar et découvrez comment les contrats EVM peuvent interagir avec d'autres modules non-EVM par le biais de précompilations."
   },
-  "Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework.": {
-    "message": "Utilisez Swanky Suite tout-en-un pour commencer à construire des contrats intelligents WASM. Obtenez une vue d'ensemble de Ink! et ask!, les frameworks de contrats WASM ainsi que des exemples pour chaque framework."
+  "Use all-in-one Swanky Suite to start building Wasm smart contracts. Get an overview of ink! and ask! Wasm contract frameworks and examples for each framework.": {
+    "message": "Utilisez Swanky Suite tout-en-un pour commencer à construire des contrats intelligents Wasm. Obtenez une vue d'ensemble de Ink! et ask!, les frameworks de contrats Wasm ainsi que des exemples pour chaque framework."
   },
   "Run A Node": {
     "message": "Faire tourner un noeud"

@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # How to get started with AstarBase
 
-## TL;DR
+## Overview
 
 This cookbook will learn you on how to started using AstarBase. AstarBase is an on-chain EVM database in Astar Ecosystem. After reading this, you will be able to make a small "Hello World" use case of AstarBase yourself.
 

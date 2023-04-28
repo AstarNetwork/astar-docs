@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # How to verify a Solidity smart contract on Blockscout
 
-## TL;DR
+## Overview
 
 Blockscout is the primary block explorer for Astar EVM. Verifying a smart contract on Blockscout makes the contract source code publicly available and verifiable, which creates transparency and trust in the community. Also, contract verification on Blockscout is mandatory for dApps to be eligible for dApp Staking and earn the basic income from the network.
 
