@@ -17,16 +17,16 @@ Experience gained from following the previous guides will be beneficial for this
 In addition to:
 - An already provisioned [ink! environment] (/docs/build/environment/ink_environment.md).
 - Intermediate knowledge of Rust. Visit [here for more information about Rust] (https://www.rust-lang.org/learn).
-- General knowledge of AMMs & [Uniswap V2] (https://docs.uniswap.org/contracts/v2/overview) (as this tutorial will focus on implementation).
+- General knowledge of AMMs & [Uniswap V2](https://docs.uniswap.org/contracts/v2/overview) (as this tutorial will focus on implementation).
 
 ### What Will We Be Doing?
 In this tutorial we will build and deploy the following Solidity implementations of Uniswap V2 Core, using ink!
-- [Pair] (https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol)
-- [Factory] (https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol)
+- [Pair](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol)
+- [Factory](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol)
 
 ### What Version of Ink! Will I Need?
-[ink! 4.0.0] (https://github.com/paritytech/ink/tree/v4.0.0)   
-[OpenBrush 3.0.0] (https://github.com/727-Ventures/openbrush-contracts/tree/3.0.0)
+[ink! 4.0.0](https://github.com/paritytech/ink/tree/v4.0.0)   
+[OpenBrush 3.0.0](https://github.com/727-Ventures/openbrush-contracts/tree/3.0.0)
 
 ### What Topics Will Be Covered in This Guide?
 - The full implementation of Uniswap V2 DEX.

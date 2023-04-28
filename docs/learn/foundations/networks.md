@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Astar Network Family
+# Networks
 
 Prior to commencing development, it's important to understand the Astar Network family, and choose an appropriate network based on what you would like to do. Currently, there are a number of networks available, including the Local network which runs exclusively within your development environment. All networks support Substrate and EVM RPCs.
 

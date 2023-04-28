@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Pair Storage and Getters
 
-If you are starting the tutorial from here, Please checkout this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/psp22) and open it in your IDE.
+If you are starting the tutorial from here, Please checkout this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/psp22) and open it in your IDE.
 
 ## 1. Logics Crate
 
@@ -78,7 +78,7 @@ pub mod traits;
 
 ## 2. Pair Storage
 
-The Uniswap V2 Pair contract has [storage fields] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L18) in Solidity that we should implement as shown below:
+The Uniswap V2 Pair contract has [storage fields](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L18) in Solidity that we should implement as shown below:
 
 ```solidity
 address public factory;
@@ -98,11 +98,11 @@ ink! uses most Substrate primitive types. Here is a conversion table between Sol
 
 | Solidity                                | ink!                                                                                      |
 |-----------------------------------------|-------------------------------------------------------------------------------------------|
-| uint256                                 | [U256] (https://docs.rs/primitive-types/latest/primitive_types/struct.U256.html)           |          
+| uint256                                 | [U256](https://docs.rs/primitive-types/latest/primitive_types/struct.U256.html)           |          
 | any other uint                          | u128 (or lower)                                                                           |
 | address                                 | AccountId                                                                                 |
-| mapping(key => value)                   | [Mapping(key, value)] (https://docs.rs/ink_storage/latest/ink_storage/struct.Mapping.html) |
-| mapping(key1 => mapping(key2 => value)) | [Mapping((key1 ,key2), value)] (https://substrate.stackexchange.com/a/3993/567)            |
+| mapping(key => value)                   | [Mapping(key, value)](https://docs.rs/ink_storage/latest/ink_storage/struct.Mapping.html) |
+| mapping(key1 => mapping(key2 => value)) | [Mapping((key1 ,key2), value)](https://substrate.stackexchange.com/a/3993/567)            |
 
 Let's create a storage struct in *./logics/impls/pair/data.rs*. Name the struct `Data` and add all the required fields. 
 
@@ -120,8 +120,8 @@ pub struct Data {
 }
 ```
 
-Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage] (https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits] (https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with the specified storage key (storage key is a required input argument of the macro).
-To generate a unique key Openbrush provides the [openbrush::storage_unique_key!] (https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is based on the name of the struct and its file path. Let's add this to our struct and import the required fields.
+Openbrush uses a specified storage key instead of the default one in the attribute [openbrush::upgradeable_storage](https://github.com/Supercolony-net/openbrush-contracts/blob/main/lang/macro/src/lib.rs#L447). It implements all [required traits](https://docs.openbrush.io/smart-contracts/upgradeable#suggestions-on-how-follow-the-rules) with the specified storage key (storage key is a required input argument of the macro).
+To generate a unique key Openbrush provides the [openbrush::storage_unique_key!](https://docs.openbrush.io/smart-contracts/upgradeable#unique-storage-key) declarative macro that is based on the name of the struct and its file path. Let's add this to our struct and import the required fields.
 
 ```rust
 use openbrush::traits::{
@@ -257,7 +257,7 @@ fn get_reserves(&self) -> (Balance, Balance, Timestamp) {
 This method is more of a setter as it will set token address in storage. That's why it takes a `&mut self` as the first argument.    
 As a general rule if a function only takes `&self` then it will not modify the state so it will only be called as a query.
 If the functions takes an `&mut self` it will make state change so can be called as a transaction, and should return a Result<T, E>.
-Only factory can call this [function] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67), but we will add `only_owner` modifier later in this tutorial.
+Only factory can call this [function](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67), but we will add `only_owner` modifier later in this tutorial.
 
 ```rust
 fn initialize(
@@ -376,4 +376,4 @@ In this section we've gone over how to create a trait and its generic implementa
 ```console
 cargo contract build
 ```
-It should now look like this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end).
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end).

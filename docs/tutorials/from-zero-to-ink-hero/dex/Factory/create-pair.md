@@ -359,4 +359,4 @@ And that's it! Check your Factory contract with (run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_create_pair_end).
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_create_pair_end).

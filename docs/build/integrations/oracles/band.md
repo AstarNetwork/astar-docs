@@ -22,7 +22,7 @@ The Aggregator Contract address can be found in the following table:
 
 ### Astar
 
-Smart Contract (Aggregator): `0xDA7a001b254CD22e46d3eAB04d937489c93174C3``
+Smart Contract (Aggregator): `0xDA7a001b254CD22e46d3eAB04d937489c93174C3`
 
 ### Shiden
 

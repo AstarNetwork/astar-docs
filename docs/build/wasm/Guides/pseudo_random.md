@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# How to Generate Pseudo-Random Numbers in Ink! Smart Contract
+# Generate pseudo-random Numbers in ink! smart contract
 Generating random numbers is an essential feature of many decentralized applications, but generating truly random numbers in a trustless, decentralized environment is a challenging problem. In this article, we will show you how to implement a simple pseudo-random function in your Ink! smart contract and generate pseudo-random numbers within a specified range.
 
 ## **Implementation**

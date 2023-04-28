@@ -4,11 +4,11 @@ sidebar_position: 3
 
 # Mint
 
-If you are starting the tutorial from here, please check out this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
+If you are starting the tutorial from here, please check out this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/storage-end) and open it in your IDE.
 
 ### 1. Add Mint Functions to Pair Trait
 
-At this stage, we will implement the [mint] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L110) function of the Pair contract.   
+At this stage, we will implement the [mint](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L110) function of the Pair contract.   
 In the *./logics/traits/pair.rs* file add the **mint** function to the Pair trait. You should also add two internal **_mint_fee** and **_update** functions.
 As those functions modify the state, they should take a `&mut self` as first argument. When sending transaction (as tx) it return nothing (a tx cannot return a value neither a variant of the Error enum) so in most cases state changes function will return `Result<(), PairError>`.
 But if you call the function as dry-run (as a query, it will not modify the state) it can return a value (any value and Error enum as well). That is why the **mint** message function returns a `Balance` (and not `()`). So before calling **mint** as tx you can call it as dry-run and gets the liquidity that will be minted.
@@ -38,7 +38,7 @@ pub trait Pair {
 ### 2. Mint Fee and Factory Trait
 
 As **_update** and **_mint_fee** are child functions of **mint**, let's start by implementing those.
-Have a look at [_mintFee] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L89) in Solidity, which takes `uint112 _reserve0` and `uint112 _reserve1`  as arguments, and translates to `Balance` in ink! that returns a bool, and can make state changes (it can save `k_last` to storage) so in ink! it should return `Result<bool, PairError>`.    
+Have a look at [_mintFee](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L89) in Solidity, which takes `uint112 _reserve0` and `uint112 _reserve1`  as arguments, and translates to `Balance` in ink! that returns a bool, and can make state changes (it can save `k_last` to storage) so in ink! it should return `Result<bool, PairError>`.    
 Let's add it to *./logics/impls/pair/pair.rs*:
 
 ```rust
@@ -52,7 +52,7 @@ impl<T: Storage<data::Data> + Storage<psp22::Data>> Pair for T {
 }
 ```
 
-In the [first line] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L90) of **_mintFee** there is a cross-contract call to the Factory contract to obtain the address of the account collecting the fees. To do so we will use Openbrush wrapper around a Factory trait (and demonstrate that the trait only is needed - no implementation).
+In the [first line](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L90) of **_mintFee** there is a cross-contract call to the Factory contract to obtain the address of the account collecting the fees. To do so we will use Openbrush wrapper around a Factory trait (and demonstrate that the trait only is needed - no implementation).
 create a file *./logics/traits/factory.rs* and add the `Factory` trait and a **fee_to** function getter.     
 Add `#[openbrush::trait_definition]` to the top of the file:
 
@@ -99,7 +99,7 @@ And in the body of **_mint_fee** we will obtain the `fee_to` with a cross-contra
 The rest of the function body may be somewhat difficult to interpret, so here are a few tips: 
 
 - For ` address(0)` in Solidity you can use `openbrush::traits::ZERO_ADDRESS` (which is a const `[0; 32]`).
-- For `sqrt` you can either implement the [same function] (https://github.com/AstarNetwork/wasm-tutorial-dex/blob/4afd2d2a0503ad5dfcecd87e2b40d55cd3c854a0/uniswap-v2/logics/impls/pair/pair.rs#L437) or use [integer-sqrt] (https://crates.io/crates/integer-sqrt).
+- For `sqrt` you can either implement the [same function](https://github.com/AstarNetwork/wasm-tutorial-dex/blob/4afd2d2a0503ad5dfcecd87e2b40d55cd3c854a0/uniswap-v2/logics/impls/pair/pair.rs#L437) or use [integer-sqrt](https://crates.io/crates/integer-sqrt).
 - When doing Math operations you should handle overflow cases (and return an Error if there is an overflow). You can perform check operations on `u128`
 - Use each Error variant only once, so when testing or debugging you will know immediately which line the Error come from.
 
@@ -151,11 +151,11 @@ Then implement line-by-line the same logic as in Uniswap-V2:
 ```
 
 ### 3. Update
-The update function will update the [oracle price] (https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) of the tokens with time-weighted average prices (TWAPs). Please check the Uniswap V2 [implementation] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L73).    
+The update function will update the [oracle price](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) of the tokens with time-weighted average prices (TWAPs). Please check the Uniswap V2 [implementation](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L73).    
 To implement this in ink!:
-- ink! contracts should [never panic!] (https://substrate.stackexchange.com/questions/2391/panic-in-ink-smart-contracts). The reason being that a panic! will give the user no information about the Error (it only returns `CalleeTrapped`). Every potential business/logical error should be returned in a predictable way using `Result<T, Error>`.
+- ink! contracts should [never panic!](https://substrate.stackexchange.com/questions/2391/panic-in-ink-smart-contracts). The reason being that a panic! will give the user no information about the Error (it only returns `CalleeTrapped`). Every potential business/logical error should be returned in a predictable way using `Result<T, Error>`.
 - To handle time use `Self::env().block_timestamp()` that is the time in milliseconds since the Unix epoch.
-- In Solidity, float point division is not supported, it uses Q number UQ112x112 for more precision. We will use div for our example (note that is the DEX template we use [U256] (https://github.com/swanky-dapps/dex/blob/4676a73f4ab986a3a3f3de42be1b0052562953f1/uniswap-v2/logics/impls/pair/pair.rs#L374) for more precision).
+- In Solidity, float point division is not supported, it uses Q number UQ112x112 for more precision. We will use div for our example (note that is the DEX template we use [U256](https://github.com/swanky-dapps/dex/blob/4676a73f4ab986a3a3f3de42be1b0052562953f1/uniswap-v2/logics/impls/pair/pair.rs#L374) for more precision).
 - To store values in storage (but first verify, then save), modify the value of the Storage field (as the function takes `&mut self` it can modify Storage struct fields)
 
 You can then implement **update**:
@@ -201,9 +201,9 @@ First, add the function definition in the impl block of *./logics/impls/pair/pai
 fn mint(&mut self, to: AccountId) -> Result<Balance, PairError> {}
 ```
 
-On line [112] (https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L112) of *Pair.sol* there is a cross-contract call to the ERC20 to obtain the balance of the contract `uint balance0 = IERC20(token0).balanceOf(address(this));`.    
+On line [112](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol#L112) of *Pair.sol* there is a cross-contract call to the ERC20 to obtain the balance of the contract `uint balance0 = IERC20(token0).balanceOf(address(this));`.    
 To implement this cross-contract call we will use `PSP22Ref` from Openbrush. To obtain the address of the contract, use `Self::env().account_id()`.
-Read more about how to find all the ink_env getters in this [doc] (https://docs.rs/ink_env/latest/ink_env/).
+Read more about how to find all the ink_env getters in this [document](https://docs.rs/ink_env/latest/ink_env/).
 
 First, add the `psp22::Data` Trait bound to the generic impl block:
 ```rust
@@ -265,7 +265,7 @@ For the **MINIMUM_LIQUIDTY** constant, please add:
 pub const MINIMUM_LIQUIDITY: u128 = 1000;
 ```
 
-For the **min** function, add the [same implementation] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/libraries/Math.sol#L6) below the `impl` block:
+For the **min** function, add the [same implementation](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/libraries/Math.sol#L6) below the `impl` block:
 ```rust
     default fn _emit_mint_event(&self, _sender: AccountId, _amount_0: Balance, _amount_1: Balance) {}
     
@@ -280,7 +280,7 @@ fn min(x: u128, y: u128) -> u128 {
 }
 ```
 
-For **sqrt** function add the [same implementation] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/libraries/Math.sol#L11) below the **min** function:
+For **sqrt** function add the [same implementation](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/libraries/Math.sol#L11) below the **min** function:
 ```rust
 fn sqrt(y: u128) -> u128 {
     let mut z = 1;
@@ -414,4 +414,4 @@ Check your Pair contract with (run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/mint_end).
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/mint_end).

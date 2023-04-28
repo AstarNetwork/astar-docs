@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Custom Modifier
 
-In the Factory contract, prior to the **setFeeTo** and **setFeeToSetter** entries, there is a [check] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L41) that occurs, and the caller is `feeToSetter`.
+In the Factory contract, prior to the **setFeeTo** and **setFeeToSetter** entries, there is a [check](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L41) that occurs, and the caller is `feeToSetter`.
 Let's create a custom modifier for it.
 
 ## `only_fee_setter`
@@ -74,4 +74,4 @@ And that's it! Check your Factory contract with (run in the contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_modifiers).
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/factory_modifiers).

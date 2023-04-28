@@ -4,12 +4,12 @@ sidebar_position: 5
 
 # Swap
 
-If you are starting the tutorial from here, please check out this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/burn_end) and open it in your IDE.
+If you are starting the tutorial from here, please check out this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/burn_end) and open it in your IDE.
 
 ## 1. Add Swap Functions to Pair Trait
 
-At this stage, we will implement a [swap] (https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L159) function in the Pair contract.  
-[Swap] (https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps) is a way for traders to exchange one PSP22 token for another one in a simple way.    
+At this stage, we will implement a [swap](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L159) function in the Pair contract.  
+[Swap](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps) is a way for traders to exchange one PSP22 token for another one in a simple way.    
 In the *./logics/traits/pair.rs* file add the **swap** function to the Pair trait. As this function modifies the state, `&mut self` should be used as the first argument.
 Also, we will add a function to emit a swap event in the contract:
 
@@ -91,7 +91,7 @@ Ensure that no swap attempted will leave the trading pair with less than the min
 `balance_0` and `balance_1` are the balances/reserves after the swap is finished, and `reserve_0` and `reserve_1` are the values previous to that (swap is done first and then possibly reverted, if the requirements are not met).
 We will need to check that the swap did not reduce the product of the reserves (otherwise liquidity from the pool can be stolen).
 Hence the reason why we check `balance_0 * balance_1 >= reserve_0 * reserve_1`.      
-`balance_0_adjusted` and `balance_1_adjusted` are adjusted with 0.3% swap [liquidity provider fees] (https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/fees#liquidity-provider-fees).
+`balance_0_adjusted` and `balance_1_adjusted` are adjusted with 0.3% swap [liquidity provider fees](https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/fees#liquidity-provider-fees).
 ```rust
 ...
     let amount_0_in = if balance_0
@@ -287,4 +287,4 @@ And that's it! Check your Pair contract with (run in contract folder):
 ```console
 cargo contract build
 ```
-It should now look like this [branch] (https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/swap_end).
+It should now look like this [branch](https://github.com/AstarNetwork/wasm-tutorial-dex/tree/tutorial/swap_end).
