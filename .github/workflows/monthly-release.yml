@@ -19,11 +19,41 @@ jobs:
           WITH_V: true
           DEFAULT_BUMP: minor
 
-      - name: Create Release Note
-        id: create_release_note
-        run: |
-          RELEASE_NOTE=$(cat RELEASE-NOTES.md)
-          echo ::set-output name=body::"$RELEASE_NOTE"
+      - name: Build Changelog
+        uses: mikepenz/release-changelog-builder-action@v3
+        with:
+          configurationJson: |
+            {
+              "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
+              "categories": [
+                {
+                  "title": "## 📄 Documentation",
+                  "labels": ["documentation"]
+                },
+                {
+                  "title": "## 👒 Enhancement",
+                  "labels": ["enhancement"]
+                },
+                {
+                  "title": "## 🐞 Bug",
+                  "labels": ["bug"]
+                },
+                {
+                  "title": "## 🗣️ Translation",
+                  "labels": ["translation"]
+                },
+                {
+                    "title": "## 💬 Other",
+                    "labels": ["other"]
+                },
+                {
+                    "title": "## 📦 Dependencies",
+                    "labels": ["dependencies"]
+                }
+              ]
+            }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         id: create_release
@@ -33,4 +63,4 @@ jobs:
         with:
           tag_name: ${{ steps.create_tag.outputs.new_tag }}
           release_name: Release ${{ steps.create_tag.outputs.new_tag }}
-          body: ${{ steps.create_release_note.outputs.body }}
+          body: ${{steps.github_release.outputs.changelog}}
