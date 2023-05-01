@@ -20,7 +20,7 @@ XC20 is an asset standard introduced by PureStake Technologies, which combines t
 
 ### What are mintable XC20 and external XC20
 
-There are two types of XC20 assets, mintable XC20, and external XC20 assets. Mintable XC20 assets can be issued on Astar Network based on the owner’s implementation logic. And external XC20 assets are XC20 assets originally from other parachain/relaychain and transferred to Astar Network via XCM and issued by the sovereign account. 
+There are two types of XC20 assets, mintable XC20, and external XC20 assets. Mintable XC20 assets can be issued on Astar Network based on the owner’s issuance logic. And external XC20 assets are XC20 assets originally from other parachain/relaychain and transferred to Astar Network via XCM and issued by the sovereign account. 
 
 ### What is XCM
 
@@ -35,6 +35,7 @@ Currently, the best way to create XC20 asset is via [Polkadot.js](https://polkad
 
 - Please visit [Polkadot.js](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/explorer)
 - Go to `Network` → `Asset` → `Create`
+    - **Note**: please make sure to have at least 100 ASTR in the wallet when creating XC20 asset on Astar Network.
 - Please set the following parameters for your asset
     - `creater account`: the account that will create this asset and set up the initial metadata.
     - `asset name`: the descriptive name for this asset, e.g. Cookbook Token.
