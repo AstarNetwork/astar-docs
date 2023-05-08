@@ -23,7 +23,7 @@ Provide step-by step tutorial on how to use your tool with Astar.
 
 ## Addresses/Endpoints
 
-If you provide list of Addressess (bridges) or Endpoints or any other necessary lsitings, use this section to list them. Feel free to change the heading, but keep it short. 
+If you provide list of Addressess (bridges) or Endpoints or any other necessary listings, use this section to list them. Feel free to change the heading, but keep it short. 
 
 ## Troubleshooting
 // List all the common problems and solutions to them
