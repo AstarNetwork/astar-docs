@@ -1,0 +1,5 @@
+# Ignore all files
+file://.*
+
+# Twitter its API does not like us
+https://twitter.com/*
