@@ -22,7 +22,7 @@ Tracing node setup in general is equal to [Archive Node setup](/docs/nodes/archi
 
 :::info 
 
-EVM tracing node binary is different because includes additional tracing features. You can easily build it from source code using `cargo build --release --features evm-tracing` command or download from [latest release](https://github.com/AstarNetwork/Astar/releases/latest), binary should contains `tracing` in artifact name. For example, `astar-collator-v5.1.0-tracing-ubuntu-x86_64.tar.gz`.
+EVM tracing node binary is different because includes additional tracing features. You can easily build it from source code using `cargo build --release --features evm-tracing` command or download from [latest release](https://github.com/AstarNetwork/Astar/releases/latest), executable EVM tracing binary is included in the compressed file `evm-tracing-artifacts.tar.gz`.
 
 :::
 
