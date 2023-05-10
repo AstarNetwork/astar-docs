@@ -11,20 +11,24 @@ import ledger6 from "./img/native/ledger6.png"
 
 # Using Ledger with Astar Native Accounts
 
-This tutorial walks through the process of setting up a Ledger device to participate in dApp staking using ASTR native tokens, how to initiate the first interaction between the device and the network, and explains some of the limitations of Ledger devices when it comes to the native dApp staking system.
+This tutorial walks through the process of setting up a Ledger device to participate in dApp staking using ASTR native tokens, initiating the first interaction between the device and the network, and also explains some limitations of using Ledger devices with the native dApp staking system.
 
-### Before staking, ensure that:
+:::danger
+At the time of this release, the following operations are **NOT SUPPORTED:** 
+- **EVM withdraw** : It is not possible to claim tokens from the Astar EVM side. 
+- **XCM transfers**
+- **Vesting**
+:::
 
+### Before staking, confirm that:
 1. Ledger Live is up to date, and the Astar app is installed.
-2. A Ledger account has been imported to Polkadot.js.
-3. A Chromium-based browser is available for web-based operations, such as Google Chrome or Brave (Ledger wallets need WebUSB support).
+2. The Ledger device firmware is up to date.
+3. A Ledger account has been imported to Polkadot.js.
+4. A Chromium-based browser is available for all web-based operations, such as Google Chrome or Brave (Ledger devices need WebUSB support).
 
-### Update Ledger Live
+### Update Ledger Live and Device Firmware
 
 Ensure Ledger Live is up to date. 
-- 
-
-(need screenshots)
 
 <div style={{textAlign: 'center'}}>
   <img src={ledger1} style={{width: 1200}} />
@@ -45,12 +49,14 @@ Ledger NanoS users should install the Astar XL version of the app, shown in the 
 ::: 
 
 <div style={{textAlign: 'center'}}>
-  <img src={ledger3} style={{width: 400}} />
+  <img src={ledger3} style={{width: 1200}} />
   </div>
 
 ### Import Ledger account to Polkadot.js
 
-- Open the Polkadot.js extension, click the + sign menu option, and choose ‘Attach ledger account.’ Make sure your ledger is unlocked.
+- Open the Polkadot.js extension.
+- Click the + sign menu option.
+- Choose ‘Attach ledger account.’ Make sure your ledger is unlocked.
 
 <div style={{textAlign: 'center'}}>
   <img src={ledger4} style={{width: 600}} />
@@ -73,9 +79,16 @@ Ledger NanoS users should install the Astar XL version of the app, shown in the 
   <img src={ledger6} style={{width: 600}} />
   </div>
 
-For more detailed information about dApp staking in particular, or how to stake on the EVM side of Astar Portal using a Ledger device, please refer to the [Astar documentation](/docs/dapp-staking/for-stakers/staking) or [Ledger EVM staking guide](./ledger-evm.md)
+For detailed information about dApp staking or how to stake on the EVM side of Astar Portal using a Ledger device, please refer to the [Astar documentation](/docs/dapp-staking/for-stakers/staking) or [Ledger EVM staking guide](./ledger-evm.md)
 
-## Limitations of using a Ledger NanoS or S-plus/X
+## Limitations of using a Ledger NanoS or S-plus/X device
+
+:::danger
+At the time of this release, the following operations are **NOT SUPPORTED:** 
+- **EVM withdraw** : It is not possible to claim tokens from the Astar EVM side. 
+- **XCM transfers**
+- **Vesting**
+:::
 
 Assume you are staking on 2 dApps, and accumulate 2 eras worth of rewards each day. What happens if you do not claim the rewards for an entire month?
 
