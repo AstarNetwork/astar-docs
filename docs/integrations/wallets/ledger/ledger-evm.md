@@ -11,7 +11,7 @@ title: Ledger Astar/Shiden EVM on MetaMask
 
 This guide will show you how to set up Astar EVM and Shiden EVM on your Ledger hardware wallet and how to use it in combination with MetaMask.
 
-:::warning
+:::caution
 Do not transfer from EVM to Ledger Astar Native accounts. It is not supported.
 :::
 :::info
