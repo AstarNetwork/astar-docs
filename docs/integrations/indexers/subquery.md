@@ -6,199 +6,57 @@ sidebar_position: 2
 
 ## What is SubQuery?
 
-SubQuery’s goal is to become an Omni-chain indexer for both EVM/Substrate-native smart contract infrastructure in the Polkadot ecosystem. Connecting directly to Substrate with WebSocket, developers can get an insight into their smart contracts from Subquery’s indexing mechanism by detecting smart contract events in a more native way without running separate RPC nodes for HTTP connection. The insights are often used for recent trades in DEXes, yield reserves tracking in money markets, NFT transfers, and many more. In this tutorial, we will look at how to set up a Substrate native indexer for frontier EVM tracking ERC20 token transfers.
+SubQuery is an open source and universal blockchain data indexer for developers that provides fast, flexible, reliable, and decentralised APIs to power leading multi-chain apps. Our goal is to save developers' time and money by eliminating the need of building their own indexing solution and instead, fully focus on developing their applications. 
 
-SubQuery has an advantage over the Graph in that it requires Javascript or TypeScript, while each subgraph requires AssemblyScript, a more focused native-friendly language and may have unexpected behavior. It also tracks EVM calls so that developers can still make insight out of calls without adding event code. For deployment workflow, since Subgraph is made for the public, it requires developers to add Subgraphs one by one, but Subquery just needs one command to build a dedicated indexer.
+SubQuery's superior indexing capabilities supports Astar native, EVM and WASM based smart contracts all out of the box. (In reality a Docker container!) Starter projects are provided allowing developers to get up and running and indexing blockchain data in minutes. 
+
+Another one of SubQuery's competitive advantage is the ability to aggregate data not only within a chain but  across blockchains all within a single project. This allows the creation of feature rich dashboard analytics or multi-chain block scanners.
+
+Other advantages include superior performance with multiple RPC endpoint configuration, multi-worker capabilities and a configurable caching architecture. To find out more, visit our [documentation](https://academy.subquery).
 
 ## Prerequisites
-
-[Docker]: https://docs.docker.com/get-docker/
-[docker-compose]: https://docs.docker.com/compose/install/
-[GraphQL]: https://graphql.org/
 
 Before you setup SubQuery for your platform, you will need:
 
 [Docker] : Containerization platform for software solutions
-[docker-compose] : Used to automate interactions between docker containers
-[GraphQL]: Simple knowledge on how to propose entity and query it is required
+[Subquery CLI] : Install this by running the following:
+
+```bash
+npm install -g @subql/cli
+```
 
 ## Getting started
 
-First, clone the boilerplate code for setting up the indexer:
+Initialise the SubQuery Starter Project with subql init and then choose Substrate as the network family, Astar as the networ and then select betwen native, evm or wasm based starter project.
 
 ```bash
-git clone https://github.com/AstarNetwork/astar-evm-example.git
-cd astar-evm-example
-yarn
+~$ subql init astar-demo
+? Select a network family Substrate
+? Select a network Astar
+? Select a template project (Use arrow keys or type to search)
+❯ astar-evm-starter      Astar EVM project template tutorial 
+  astar-wasm-starter     Astar WASM project template tutorial 
+  astar-starter          Starter project for Astar 
+  Other                  Enter a custom git endpoint 
 ```
+Visit the [SubQuery quick start guide](https://academy.subquery.network/quickstart/quickstart.html) for more details.
 
-### Setting up typedef for Connecting to a Parachain
+Continue with the set up by following the prompt and customising the parameters or accepting the defaults. 
 
-To connect to a parachain with websocket, type definitions, or typedef for short, are used to encode data for communication. `chainTypes.ts` manages the manifest of the types of data that will be shared between the parachain and the indexer. As Astar.js goes through an upgrade of type definitions, `chainTypes.ts` will need to be updated with the latest typedefs to be able to fully connect to parachains.
+## Customizing the project in 3 simple steps
 
-```ts
-import type { OverrideBundleDefinition } from "@polkadot/types/types";
+### 1. Customize the schema file
 
-const definitions: OverrideBundleDefinition = {
-    types: [
-        {
-            // on all versions
-            minmax: [0, undefined],
-            types: {
-                Keys: "AccountId",
-                Address: "MultiAddress",
-                LookupSource: "MultiAddress",
-                AmountOf: "Amount",
-                Amount: "i128",
-                SmartContract: {
-                    _enum: {
-                        Evm: "H160",
-                        Wasm: "AccountId",
-                    },
-                },
-                EraStakingPoints: {
-                    total: "Balance",
-                    stakers: "BTreeMap<AccountId, Balance>",
-                    formerStakedEra: "EraIndex",
-                    claimedRewards: "Balance",
-                },
-                EraRewardAndStake: {
-                    rewards: "Balance",
-                    staked: "Balance",
-                },
-                EraIndex: "u32",
-            },
-        },
-    ],
-};
 
-export default { typesBundle: definitions };
-```
+
+
 
 ### Setup Entity for Storing Event Topics
 
-SubQuery indexer filters event topics from the connected parachain and stores them in its database for searchability. A topic is a unit of event data on a Solidity smart contract that is used for providing updates about its state. `Entity` declares the shape of data, and which event data is stored in the indexer database through the handler. To declare an entity to store event topics, you can edit `schema.graphql` in the root directory with GraphQL syntax.
 
-```graphql
-type Transfer @entity {
-  id: ID! # Tx hash
-
-  from: String!
-  to: String!
-  contractAddress: String!
-  amount: BigInt!
-  blockNumber: BigInt!
-}
-```
-
-After declaring an entity, you can run the command `yarn codegen` to generate model types for handling events in the handler code. Then, the `src` directory will have types ready for the handler to add indexing logic. `types` is the directory which declares data entities as models for handler to manage.
-
-```
-src/
-├── chaintypes.ts
-├── index.ts
-├── mappings
-│   └── mappingHandlers.ts
-**└── types
-    ├── index.ts
-    └── models
-        ├── Transfer.ts
-        └── index.ts**
-```
 
 ### Setup Handler for Indexing
 
-Now that storage has been declared, we can use the handler to declare how to add data on each event emission. The `mappings` directory stores handlers mapping solidity event topics, to a SubQuery data entity. In this tutorial, we will examine how an ERC20 transfer event is handled.
-
-```ts
-// import model from types
-import { Transfer } from "../types"; 
-// contract processor library
-import {
-  FrontierEvmEvent,
-} from "@subql/contract-processors/dist/frontierEvm";
-// uint256 in js
-import { BigNumber } from "@ethersproject/bignumber";
-
-// event data declaration 
-//[ /*topic types in order address as string */ ] & {
-// /*
-//   mapping of event topic args and types
-// */
-type TransferEventArgs = [string, string, BigNumber] & {
-  from: string;
-  to: string;
-  value: BigNumber;
-};
-
-// When event occurs
-export async function handleERC20Transfer(
-  event: FrontierEvmEvent<TransferEventArgs>
-): Promise<void> {
-  logger.warn("Calling handleERC20Transfer");
-  // fill entity with event data
-  const transfer = Transfer.create({
-    amount: event.args.value.toBigInt(),
-    from: event.args.from,
-    to: event.args.to,
-    contractAddress: event.address,
-    blockNumber: BigInt(event.blockNumber),
-    id: event.transactionHash,
-  });
- // save it to indexer database
-  await transfer.save();
-}
-```
-
-SubQuery indexer can also track calls for Solidity precompiles, that are normally difficult to track.
-
-```ts
-import { Transfer } from "../types";
-import {
-  FrontierEvmCall
-} from "@subql/contract-processors/dist/frontierEvm";
-import { BigNumber } from "@ethersproject/bignumber";
-
-type TransferCallArgs = [string, BigNumber] & {
-  _to: string;
-  _value: BigNumber;
-};
-
-export async function handleERC20TransferCall(
-  call: FrontierEvmCall<TransferCallArgs>
-): Promise<void> {
-  logger.warn("Calling handleERC20TransferCall");
-
-  const transfer = Transfer.create({
-    amount: call.args._value.toBigInt(),
-    from: call.from,
-    to: call.args._to,
-    contractAddress: call.to,
-    id: call.hash,
-    blockNumber: undefined,
-  });
-
-  await transfer.save();
-}
-```
-
-Once the handler is built, run `yarn build` to compile the code into deployable format. You will want to confirm that the `dist` folder has been created under the root folder, as it is below:
-
-```
-astar-evm-example
-├── LICENSE
-├── README.md
-**├── dist**
-├── docker-compose.yml
-├── erc20.abi.json
-├── node_modules
-├── package.json
-├── project.yaml
-├── schema.graphql
-├── src
-├── tsconfig.json
-└── yarn.lock
-```
 
 ### Deploy Indexer
 
