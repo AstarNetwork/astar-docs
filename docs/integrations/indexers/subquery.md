@@ -6,13 +6,13 @@ sidebar_position: 2
 
 ## What is SubQuery?
 
-SubQuery is an open source and universal blockchain data indexer for developers that provides fast, flexible, reliable, and decentralised APIs to power leading multi-chain apps. Our goal is to save developers' time and money by eliminating the need of building their own indexing solution and instead, fully focus on developing their applications. 
+SubQuery is an open-source and universal blockchain data indexer for developers that provides fast, flexible, reliable, and decentralised APIs to power leading multi-chain apps. Our goal is to save developers time and money by eliminating the need of building their own indexing solution and instead, fully focus on developing their applications. 
 
-SubQuery's superior indexing capabilities supports Astar native, EVM and WASM based smart contracts all out of the box. (In reality a Docker container!) Starter projects are provided allowing developers to get up and running and indexing blockchain data in minutes. 
+SubQuery's superior indexing capabilities support Astar native, EVM and WASM-based smart contracts all out of the box. (In reality a Docker container!) Starter projects are provided allowing developers to get up and running and index blockchain data in minutes. 
 
-Another one of SubQuery's competitive advantage is the ability to aggregate data not only within a chain but  across blockchains all within a single project. This allows the creation of feature rich dashboard analytics or multi-chain block scanners.
+Another one of SubQuery's competitive advantages is the ability to aggregate data not only within a chain but across blockchains all within a single project. This allows the creation of feature-rich dashboard analytics or multi-chain block scanners.
 
-Other advantages include superior performance with multiple RPC endpoint configuration, multi-worker capabilities and a configurable caching architecture. To find out more, visit our [documentation](https://academy.subquery).
+Other advantages include superior performance with multiple RPC endpoint configurations, multi-worker capabilities and a configurable caching architecture. To find out more, visit our [documentation](https://academy.subquery).
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ npm install -g @subql/cli
 
 ## Getting started
 
-Initialise the SubQuery Starter Project with `subql init` and then choose `Substrate` as the network family, `Astar` as the network and then select betwen a native Substrate, EVM or WASM based starter project.
+Initialise the SubQuery Starter Project with `subql init` and then choose `Substrate` as the network family, `Astar` as the network and then select between a native Substrate, EVM or WASM based starter project.
 
 ```bash
 ~$ subql init astar-demo
@@ -40,7 +40,7 @@ Initialise the SubQuery Starter Project with `subql init` and then choose `Subst
 ```
 Visit the [SubQuery quick start guide](https://academy.subquery.network/quickstart/quickstart.html) for more details.
 
-Continue with the set up by following the prompt and customising the parameters or accepting the defaults. 
+Continue with the set-up by following the prompt and customising the parameters or accepting the defaults. 
 
 ## Customizing the project in 3 simple steps
 There are 3 important files that need to be modified. These are:
@@ -66,9 +66,9 @@ It is also here where you can customise many parameters such as the startBlock a
 
 ### 3. Customize the mapping file
 
-The mapping functions within the mapping file defines how chain data is transformed into the optimised GraphQL entities that we previously defined in the schema.graphql file. Navigate to the default mappingHandler.ts file in the src/mappings directory and customise the functions using Typescript.
+The mapping functions within the mapping file define how chain data is transformed into the optimised GraphQL entities that we previously defined in the schema.graphql file. Navigate to the default mappingHandler.ts file in the src/mappings directory and customise the functions using Typescript.
 
-The starter project contains example mapping functions that extract standard data such as block height, contract addresses along with other parameters specific to the contract being indexed.
+The starter project contains example mapping functions that extract standard data such as block height, and contract addresses along with other parameters specific to the contract being indexed.
 
 ## Build Your Project
 
@@ -94,7 +94,7 @@ Once the container is running, navigate to `http://localhost:3000` in your brows
 
 SubQuery's indexing experience is designed to be as fast and as simple as possible allowing developers to index data from the blockchain in minutes with the help of the starter project and a docker environment. 
 
-It is also flexible to enable indexing across different chains and filtering only the data relevant to your application making it light weight, fast and efficient. 
+It is also flexible to enable indexing across different chains and filtering only the data relevant to your application making it lightweight, fast and efficient. 
 
 We are excited to help you on your indexing journey so please reach out to us at the various links below to see how we can help further. 
 
