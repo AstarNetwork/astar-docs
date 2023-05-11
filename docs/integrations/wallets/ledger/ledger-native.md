@@ -36,7 +36,7 @@ Ensure Ledger Live is up to date.
   <img src={ledger1} style={{width: 1200}} />
   </div>
 
-- If prompted to update the device Firmware, please do so, as it will update the Astar app as well.
+- If prompted to update the device Firmware do so, as it will update the Astar app as well.
 
 <div style={{textAlign: 'center'}}>
   <img src={ledger2} style={{width: 1200}} />
@@ -45,9 +45,7 @@ Ensure Ledger Live is up to date.
 - Once Ledger Live is up to date, ensure the latest Astar app (version 2.52.2 or higher) is installed.
 
 :::tip
-
 Ledger NanoS users should install the Astar XL version of the app, shown in the image below:
-
 ::: 
 
 <div style={{textAlign: 'center'}}>
@@ -105,7 +103,7 @@ At the time of this release, the following operations are **NOT SUPPORTED:** on 
 
 Consider the following scenario: You stake on 2 dApps, and accumulate 2 eras worth of rewards each day. What happens if you do not claim the rewards for an entire month?
 
-- Using a Nano-S - The Nano-S device supports claiming a maximum of **2 eras** at a time, so for as long as there are more eras to claim in the dApp staking dashboard, you should continue to claim. Based on a month's worth of accumulated rewards (30 eras), 30 claims would need to be initiated.
-- Using a Ledger Nano X - Based on a maximum of **6 eras per claim,** 10 claims would need to be initiated using a Ledger Nano X.
+- Ledger Nano-S - The Nano-S device supports claiming a maximum of **2 eras** at a time, so for as long as there are more eras to claim in the dApp staking dashboard, you should continue to claim. Based on a month's worth of accumulated rewards (30 eras), 30 claims would need to be initiated using a Nano-S.
+- Ledger Nano X - Based on a maximum of **6 eras per claim,** 10 claims would need to be initiated using a Nano X.
 
 As you can imagine, staking on multiple dApps using a Ledger device may substantially increase the amount of time and/or administrative overhead required to participate in dApp staking in order to maximize benefits, however, although multiple claims may be required to retrieve all rewards from the Portal using a Ledger device, the fees remain the same per era claimed whether they occur in batches, or as individual transactions.
