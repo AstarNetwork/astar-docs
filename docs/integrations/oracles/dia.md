@@ -18,7 +18,7 @@ Show your users the most transparent data on the market with DIA's API. Whether 
 
 The DIA base URL is `https://api.diadata.org/v1`. All API paths are sub-paths of this base URL. You can find specific documentation for the endpoints of our API on the [API documentation site](https://docs.diadata.org/documentation/api-1/api-endpoints).
 
-## DIA's Oracle
+## DIA EVM Oracle
 
 Here, we provide an overview of the deployed oracle contracts on each supported chain.
 
@@ -26,29 +26,29 @@ DIA Development Oracle contracts are smart contracts that provide a selected ran
 
 DIA Development Oracle contracts are not intended to be integrated into a dApp. DIA deploys dedicated contracts for dApps. Please request a dedicated oracle by contacting the team on their [Discord](https://discord.com/invite/zFmXtPFgQj) or the [DIA DAO Forum](https://dao.diadata.org/).
 
-## Deployed Contracts
+### Deployed Contracts
 
 [Key/Value Oracle]: https://docs.diadata.org/documentation/oracle-documentation/access-the-oracle#dia-key-value-oracle-contract-v2
 
-### Astar
+#### Astar
 
 **Smart Contract**: [0xd79357ebb0cd724e391f2b49a8De0E31688fEc75](https://blockscout.com/astar/address/0xd79357ebb0cd724e391f2b49a8De0E31688fEc75/contracts)
 
 **Oracle Type**: [Key/Value Oracle]
 
-### Shiden
+#### Shiden
 
 **Smart Contract**: [0xCe784F99f87dBa11E0906e2fE954b08a8cc9815d](https://blockscout.com/shiden/address/0xCe784F99f87dBa11E0906e2fE954b08a8cc9815d/contracts)
 
 **Oracle Type**: [Key/Value Oracle]
 
-### Shibuya
+#### Shibuya
 
 **Smart Contract**: 0x1232AcD632Dd75f874E357c77295Da3f5Cd7733E
 
 **Oracle Type**: [Key/Value Oracle]
 
-## Price feeds
+### Price feeds
 
 The oracle contains information about crypto assets. You can access a price quotation (see [sources](https://docs.diadata.org/documentation/methodology/digital-assets/cryptocurrency-trading-data) and [methodology](https://docs.diadata.org/documentation/methodology/digital-assets/exchangeprices)) and the current circulating supply as well as the timestamp of the last update.
 
@@ -60,7 +60,7 @@ The oracle contains information about crypto assets. You can access a price quot
    3. The [UNIX timestamp](https://www.unixtimestamp.com/) of the last oracle update.
    4. The short name of the asset, e.g., `BTC` for Bitcoin.
 
-The development oracle supports price quotations for, at the very least, the following assets:
+The development demo oracle supports price quotations for, at the very least, the following assets:
 
 - BTC
 - ETH
@@ -71,3 +71,83 @@ The development oracle supports price quotations for, at the very least, the fol
 - KSM
 - MOVR
 - ASTR
+
+## DIA WASM Oracle
+
+DIA has a dedicated WASM-based oracle. It can be universally deployed on any chain that supports substrate WASM environment.
+
+### WASM Oracle Functions
+
+`get`: Gets the latest value of the asset symbol with timestamp. Can be called by anyone.
+
+`set`: Sets latest value of asset, requires price and timestamp. Can be called only by the owner of contract.
+
+### Using the Oracle
+
+To access values from DIA wasm oracles you need to copy the diadata directory to your contract so that you can access DIA structs, that contain the oracle data.
+
+### Contract Integration
+
+Create storage with DiaDataref, this is used to access values from the oracle.
+
+```
+    #[ink(storage)]
+    pub struct OracleExample {
+        diadata: DiadataRef,
+        ....
+        ....
+    }
+```
+
+This struct can be used to access data from pub functions from the oracle contract.
+
+### Link the contract with an Oracle
+
+To instantiate a contract's access to the oracle you need to pass the DIA oracle address, either using the constructor or by creating a separate write function to update with the value of oracle at a later stage.
+
+Here is an example using a constructor:
+
+```
+    #[ink(constructor)]
+    pub fn new(
+        oracle_address: AccountId, 
+    ) -> Self {
+        let diadata: DiadataRef = ink_env::call::FromAccountId::from_account_id(oracle_address);  
+        Self {
+            diadata
+        }
+    }
+```
+
+Here, `oracle_address` refers to the DIA oracle address of a deployed oracle contract.
+
+### Access the value
+
+Next, to access an oracle value you can simple call the get() function:
+
+```
+ pub fn get(&self ) -> diadata::ValueTime {
+            return self.diadata.get(String::from("ETH"));
+        }
+```
+
+This returns the ETH price value time given by the oracle.
+
+### Config changes
+
+Make sure you add diadata/std in you config:
+
+```
+std = [
+    "ink_metadata/std",
+    "ink_env/std",
+    "ink_storage/std",
+    "ink_primitives/std",
+    "scale/std",
+    "scale-info/std",
+    "diadata/std",
+]
+```
+
+Make sure the version of ink you are on is v3.0.1
+See the entire oracle code and instructions on how to run and oracle service by yourself in [our github repo](https://github.com/diadata-org/dia-wasm-oracle).
