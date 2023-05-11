@@ -36,6 +36,8 @@ DIA Development Oracle contracts are not intended to be integrated into a dApp. 
 
 **Oracle Type**: [Key/Value Oracle]
 
+**WASM Smart Contract**: [XmVR4FbKWLYQgyHVxkFiBYScVo662WgSCoS84uZZPWNrtRT](https://shiden.subscan.io/account/XmVR4FbKWLYQgyHVxkFiBYScVo662WgSCoS84uZZPWNrtRT)
+
 #### Shiden
 
 **Smart Contract**: [0xCe784F99f87dBa11E0906e2fE954b08a8cc9815d](https://blockscout.com/shiden/address/0xCe784F99f87dBa11E0906e2fE954b08a8cc9815d/contracts)
@@ -47,6 +49,8 @@ DIA Development Oracle contracts are not intended to be integrated into a dApp. 
 **Smart Contract**: 0x1232AcD632Dd75f874E357c77295Da3f5Cd7733E
 
 **Oracle Type**: [Key/Value Oracle]
+
+**WASM Smart Contract**: [X5NLwAUYX7FwVk25a8JwaXtuVJQsW87GQcKxYoF3aLyu8Pz](https://shibuya.subscan.io/account/X5NLwAUYX7FwVk25a8JwaXtuVJQsW87GQcKxYoF3aLyu8Pz)
 
 ### Price feeds
 
