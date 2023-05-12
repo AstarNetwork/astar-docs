@@ -114,7 +114,7 @@ The Project Manifest (`project.yaml`) file works as an entry point to your proje
 For [EVM](https://academy.subquery.network/build/substrate-evm.html) and [WASM](https://academy.subquery.network/build/substrate-wasm.html) data processors on Substrate/Polkadot chains, there are only two types of mapping handlers:
 
 - [EventHandlers](https://academy.subquery.network/build/substrate-wasm.html#event-handlers): On each and every Event that matches optional filter criteria, run a mapping function
-- [CallHanders](https://academy.subquery.network/build/substrate-wasm.html#event-handlers): On each and every extrinsic call that matches optional filter criteria, run a mapping function
+- [CallHanders](https://academy.subquery.network/build/substrate-wasm.html#call-handlers): On each and every extrinsic call that matches optional filter criteria, run a mapping function
 
 ### Substrate Manifest section
 
