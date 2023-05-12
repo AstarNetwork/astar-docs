@@ -58,7 +58,7 @@ There are 3 important files that need to be modified. These are:
 
 The `schema.graphql` file determines the shape of your data from SubQuery due to the mechanism of the GraphQL query language. Hence, updating the GraphQL Schema file is the perfect place to start. It allows you to define your end goal right at the start.
 
-The Astar-wasm-starter project has four entities. Transaction, Approval, DApp, and DAppReward (which has a [foreign key](../../build/graphql.md#one-to-many-relationships) to Dapp). These index basic block data such as the timestamp, height and hash along with from and contract addresses and the value.
+The Astar-wasm-starter project has four entities. Transaction, Approval, DApp, and DAppReward (which has a [foreign key](https://academy.subquery.network/build/graphql.html#one-to-many-relationships) to Dapp). These index basic block data such as the timestamp, height and hash along with from and contract addresses and the value.
 
 ```graphql
 type Transaction @entity {
@@ -102,19 +102,19 @@ When you make any changes to the schema file, please ensure that you regenerate 
 
 You will find the generated models in the `/src/types/models` directory.
 
-Check out the [GraphQL Schema](../../build/graphql.md) documentation to get in-depth information on `schema.graphql` file.
+Check out the [GraphQL Schema](https://academy.subquery.network/build/graphql.html) documentation to get in-depth information on `schema.graphql` file.
 
 ### 2. The project manifest file
 The Project Manifest (`project.yaml`) file works as an entry point to your project. It defines most of the details on how SubQuery will index and transform the chain data. For Substrate/Polkadot chains, there are three types of mapping handlers:
 
-- [BlockHanders](../../build/manifest/polkadot.md#mapping-handlers-and-filters): On each and every block, run a mapping function
-- [EventHandlers](../../build/manifest/polkadot.md#mapping-handlers-and-filters): On each and every Event that matches optional filter criteria, run a mapping function
-- [CallHanders](../../build/manifest/polkadot.md#mapping-handlers-and-filters): On each and every extrinsic call that matches optional filter criteria, run a mapping function
+- [BlockHanders](https://academy.subquery.network/build/manifest/polkadot.html#mapping-handlers-and-filters): On each and every block, run a mapping function
+- [EventHandlers](https://academy.subquery.network/build/manifest/polkadot.html#mapping-handlers-and-filters): On each and every Event that matches optional filter criteria, run a mapping function
+- [CallHanders](https://academy.subquery.network/build/manifest/polkadot.html#mapping-handlers-and-filters): On each and every extrinsic call that matches optional filter criteria, run a mapping function
 
-For [EVM](../../build/substrate-evm.md) and [WASM](../../build/substrate-wasm.md) data processors on Substrate/Polkadot chains, there are only two types of mapping handlers:
+For [EVM](https://academy.subquery.network/build/substrate-evm.html) and [WASM](https://academy.subquery.network/build/substrate-wasm.html) data processors on Substrate/Polkadot chains, there are only two types of mapping handlers:
 
-- [EventHandlers](../../build/substrate-wasm.html#event-handlers): On each and every Event that matches optional filter criteria, run a mapping function
-- [CallHanders](../../build/substrate-wasm.html#call-handlers): On each and every extrinsic call that matches optional filter criteria, run a mapping function
+- [EventHandlers](https://academy.subquery.network/build/substrate-wasm.html#event-handlers): On each and every Event that matches optional filter criteria, run a mapping function
+- [CallHanders](https://academy.subquery.network/build/substrate-wasm.html#event-handlers): On each and every extrinsic call that matches optional filter criteria, run a mapping function
 
 ### Substrate Manifest section
 
@@ -152,7 +152,7 @@ dataSources:
 
 This indicates that you will be running a `handleNewContract` mapping function whenever there is an event emitted from the `NewContract` method on the `dappsStaking` pallet. Similarly we will run other mapping functions for the three other events being emitted from the `dappsStaking` to other mapping functions. This covers most interactions with the dApp staking feature that we are interested in.
 
-Check out our [Manifest File](../../build/manifest/polkadot.md) documentation to get more information about the Project Manifest (`project.yaml`) file.
+Check out our [Manifest File](https://academy.subquery.network/build/manifest/polkadot.html) documentation to get more information about the Project Manifest (`project.yaml`) file.
 
 ### WASM Manifest Section
 
@@ -197,7 +197,7 @@ dataSources:
 
 The above code indicates that you will be running a `handleWasmEvent` mapping function whenever there is an `Transfer` event on any transaction from the Astar contract. Similarly, we will run the `handleWasmCall` mapping function whenever there is a `approve` log on the same contract
 
-Check out our [Substrate Wasm](../../build/substrate-wasm.md) documentation to get more information about the Project Manifest (`project.yaml`) file for Substrate WASM contracts.
+Check out our [Substrate Wasm](https://academy.subquery.network/build/substrate-wasm.html) documentation to get more information about the Project Manifest (`project.yaml`) file for Substrate WASM contracts.
 
 ### 3. Customize the mapping file
 
@@ -256,7 +256,7 @@ export async function handleBondAndStake(event: SubstrateEvent): Promise<void> {
 
 The `handleBondAndStake` function receives Substrate event data from the native Substrate environment whenever an event matches the filters that was specified previously in the `project.yaml`. It extracts the various data from the event payload (in Substrate it's stored as a array of Codecs), then checks if an existing DApp record exists. If none exists (e.g. it's a new dApp), then it instantiates a new one and then updates the total stake to reflect the new staking mount. Then the `.save()` function is used to save the new/updated entity (_SubQuery will automatically save this to the database_).
 
-Check out our mappings documentation for [Substrate](../../build/mapping/polkadot.md) and for the [Substrate WASM data processor](../../build/substrate-wasm.md) to get detailed information on mapping functions for each type.
+Check out our mappings documentation for [Substrate](https://academy.subquery.network/build/mapping/polkadot.html) and for the [Substrate WASM data processor](https://academy.subquery.network/build/substrate-wasm.html) to get detailed information on mapping functions for each type.
 
 ## Build Your Project
 
@@ -271,7 +271,7 @@ The docker-compose.yml file defines all the configurations that control how a Su
 
 Run the following command under the project directory: `yarn start:docker` or `npm run-script start:docker`. It may take a few minutes to download the required images and start the various nodes and Postgres databases.
 
-Visit [Running SubQuery Locally](../../run_publish/run.md) to get more information on the file and the settings.
+Visit [Running SubQuery Locally](https://academy.subquery.network/run_publish/run.html) to get more information on the file and the settings.
 
 ## Query Your Project
 
@@ -296,7 +296,7 @@ query {
 ```
 
 Note: 
-There is a _Docs_ tab on the right side of the playground which should open a documentation drawer. This documentation is automatically generated and helps you find what entities and methods you can query. To learn more about the GraphQL Query language [here](../../run_publish/graphql.md).
+There is a _Docs_ tab on the right side of the playground which should open a documentation drawer. This documentation is automatically generated and helps you find what entities and methods you can query. To learn more about the GraphQL Query language [here](https://academy.subquery.network/run_publish/graphql.html).
 
 You should see results similar to those below:
 
