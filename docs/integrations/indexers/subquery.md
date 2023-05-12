@@ -28,13 +28,9 @@ npm install -g @subql/cli
 
 This quick start guide introduces SubQuery's Substrate WASM support by using an example project in Astar Network. The example project indexes all Transactions and Approvals from the [Astar Wasm based lottery contract](https://astar.subscan.io/account/bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc), as well as dApp staking events from [Astar's dApp Staking](https://docs.astar.network/docs/dapp-staking/) functions.
 
-This project is unique, as it indexes data from both Astar's Substrate execution layer (native Astar pallets and runtime), with smart contract data from Astar's WASM smart contract layer, within the same SubQuery project and into the same dataset. A very similar approach can be take with indexing Astar's EVM layer too.
+This project is unique, as it indexes data from both Astar's Substrate execution layer (native Astar pallets and runtime), with smart contract data from Astar's WASM smart contract layer, within the same SubQuery project and into the same dataset. A very similar approach can be taken with indexing Astar's EVM layer too.
 
-Previously, in the [1. Create a New Project](../quickstart.md) section, [3 key files](../quickstart.md#_3-make-changes-to-your-project) were mentioned. Let's take a closer look at these files.
-
-
-
-Initialise the SubQuery Starter Project with `subql init` and then choose `Substrate` as the network family, `Astar` as the network and then select between a native Substrate, EVM or WASM based starter project.
+Initialise the SubQuery Starter Project with `subql init` and then choose `Substrate` as the network family, `Astar` as the network and then select astar-wasm-starter for the purposes of this guide.
 
 ```bash
 ~$ subql init astar-demo
@@ -46,9 +42,10 @@ Initialise the SubQuery Starter Project with `subql init` and then choose `Subst
   astar-starter          Starter project for Astar 
   Other                  Enter a custom git endpoint 
 ```
-Visit the [SubQuery quick start guide](https://academy.subquery.network/quickstart/quickstart.html) for more details.
 
 Continue with the set-up by following the prompt and customising the parameters or accepting the defaults. 
+
+Visit the [SubQuery quick start guide](https://academy.subquery.network/quickstart/quickstart.html) for more details.
 
 ## Customizing the project in 3 simple steps
 There are 3 important files that need to be modified. These are:
@@ -61,7 +58,7 @@ There are 3 important files that need to be modified. These are:
 
 The `schema.graphql` file determines the shape of your data from SubQuery due to the mechanism of the GraphQL query language. Hence, updating the GraphQL Schema file is the perfect place to start. It allows you to define your end goal right at the start.
 
-The Astar-wasm-starter project has four entities. A Transaction, Approval, DApp, and DAppReward (which has a [foreign key](../../build/graphql.md#one-to-many-relationships) to Dapp). These index basic block data such as the timestamp, heigh and hash along with from and contract addresses and the value.
+The Astar-wasm-starter project has four entities. Transaction, Approval, DApp, and DAppReward (which has a [foreign key](../../build/graphql.md#one-to-many-relationships) to Dapp). These index basic block data such as the timestamp, height and hash along with from and contract addresses and the value.
 
 ```graphql
 type Transaction @entity {
@@ -101,24 +98,7 @@ type DAppReward @entity {
 }
 ```
 
-::: warning Important
-When you make any changes to the schema file, please ensure that you regenerate your types directory.
-:::
-
-::: code-tabs
-@tab:active yarn
-
-```shell
-yarn codegen
-```
-
-@tab npm
-
-```shell
-npm run-script codegen
-```
-
-:::
+When you make any changes to the schema file, please ensure that you regenerate your types directory via `yarn codegen` or `npm run-script codegen`
 
 You will find the generated models in the `/src/types/models` directory.
 
@@ -131,7 +111,7 @@ The Project Manifest (`project.yaml`) file works as an entry point to your proje
 - [EventHandlers](../../build/manifest/polkadot.md#mapping-handlers-and-filters): On each and every Event that matches optional filter criteria, run a mapping function
 - [CallHanders](../../build/manifest/polkadot.md#mapping-handlers-and-filters): On each and every extrinsic call that matches optional filter criteria, run a mapping function
 
-For [EVM](../../build/substrate-evm.md) and [WASM](../../build/substrate-wasm.md) data processors on Substrate/Polkadot chains, there are additionally two types of mapping handlers:
+For [EVM](../../build/substrate-evm.md) and [WASM](../../build/substrate-wasm.md) data processors on Substrate/Polkadot chains, there are only two types of mapping handlers:
 
 - [EventHandlers](../../build/substrate-wasm.html#event-handlers): On each and every Event that matches optional filter criteria, run a mapping function
 - [CallHanders](../../build/substrate-wasm.html#call-handlers): On each and every extrinsic call that matches optional filter criteria, run a mapping function
@@ -178,7 +158,7 @@ Check out our [Manifest File](../../build/manifest/polkadot.md) documentation to
 
 If you're not using the [WASM starter template](https://github.com/subquery/subql-starter/tree/main/Astar/astar-wasm-starter) then please add the Wasm Datasource as a dependency using `yarn add @subql/substrate-wasm-processor`.
 
-We are indexing all transfers and approve contract call events from the Astar contract `bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc`. First you will need to import the contract ABI defintion. You can copy the entire JSON and save as a file `./erc20Metadata.json` in the `abis` directory.
+Here we are indexing all transfers and approve contract call events from the Astar contract `bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc`. First you will need to import the contract ABI defintion. You can copy the entire JSON and save as a file `./erc20Metadata.json` in the `abis` directory.
 
 This section in the Project Manifest now imports all the correct definitions and lists the triggers that we look for on the blockchain when indexing. We add another section the datasource beneath the above [substrate manifest section](#substrate-manifest-section).
 
@@ -280,26 +260,7 @@ Check out our mappings documentation for [Substrate](../../build/mapping/polkado
 
 ## Build Your Project
 
-Next, build your work to run your new SubQuery project. Run the build command from the project's root directory as given here:
-
-::: code-tabs
-@tab:active yarn
-
-```shell
-yarn build
-```
-
-@tab npm
-
-```shell
-npm run-script build
-```
-
-:::
-
-::: warning Important
-Whenever you make changes to your mapping functions, make sure to rebuild your project.
-:::
+Next, build your work to run your new SubQuery project. Run the build command from the project's root directory `yarn build` or `npm run-script build`. Note, whenever you make changes to your mapping functions, make sure to rebuild your project.
 
 
 ## Run Your Project Locally with Docker
@@ -308,26 +269,7 @@ SubQuery provides a Docker container to run projects very quickly and easily for
 
 The docker-compose.yml file defines all the configurations that control how a SubQuery node runs. For a new project, which you have just initialised, you won't need to change anything.
 
-Run the following command under the project directory:
-
-::: code-tabs
-@tab:active yarn
-
-```shell
-yarn start:docker
-```
-
-@tab npm
-
-```shell
-npm run-script start:docker
-```
-
-:::
-
-::: tip
-It may take a few minutes to download the required images and start the various nodes and Postgres databases.
-:::
+Run the following command under the project directory: `yarn start:docker` or `npm run-script start:docker`. It may take a few minutes to download the required images and start the various nodes and Postgres databases.
 
 Visit [Running SubQuery Locally](../../run_publish/run.md) to get more information on the file and the settings.
 
@@ -353,11 +295,10 @@ query {
 }
 ```
 
-::: tip
+Note: 
 There is a _Docs_ tab on the right side of the playground which should open a documentation drawer. This documentation is automatically generated and helps you find what entities and methods you can query. To learn more about the GraphQL Query language [here](../../run_publish/graphql.md).
-:::
 
-You should see results similar to below:
+You should see results similar to those below:
 
 ```json
 {
