@@ -63,6 +63,18 @@ Or with a relaychain like so:
 npx @acala-network/chopsticks@latest xcm -r polkadot -p astar -p statemint
 ```
 
+## Config Settings
+
+In the short form of the parachain/relaychain cli parameter, the configs are getting pulled from the github repo on demand.
+
+For example, here is [Astar's](https://github.com/AcalaNetwork/chopsticks/blob/master/configs/astar.yml) config.
+
+You can always download it locally and modify it's content to suit your needs.
+
+Note that the configs already has Alice with:
+
+- 100k of ASTR, DOT & USDT
+
 ## E2E Tests
 
 End-to-end (E2E) tests offers numerous benefits, such as it enables developers to accurately assess the security, performance, and scalability of proposed changes in a controlled environment that closely mirrors the live network. This approach fosters innovation, simplifies debugging, and streamlines consensus-building among stakeholders. Ultimately, it contributes to more stable, reliable, and efficient blockchain networks, increasing user confidence and promoting long-term success.
