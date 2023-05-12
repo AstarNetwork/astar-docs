@@ -18,12 +18,14 @@ As you can see in the screenshot above, there is DOT in our EVM wallet. Let's ad
 
 Open MetaMask and connect the account with DOT. Make sure you are connected to the Astar Network. If not, you will find the Network Details in the Integration section.
 
-After the account is connected, you will be able to import tokens into the wallet. Click on Import tokens and use the following information:
-
-- Token Contract Address: 0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF
-- Token Symbol: DOT
-- Decimals: 10
+After the account is connected, you will be able to import tokens into the wallet. Click on **Add to wallet** button in DOT row.
 
 ![7](img/7.png)
 
+Click on **Import Tokens** in MetaMask popup.
+
+![8](img/8.png)
+
 When you are finished adding and importing DOT, you will see them in your wallet. You can find the full list of supported XCM assets [here](../asset-list.md).
+
+To manually import assets that are not in *Assets page*, follow [this guide](../building-with-xcm/send-xc20-evm.md#import-assets-on-metamask). 
