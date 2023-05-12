@@ -12,23 +12,24 @@ Forking a live blockchain at any block with the corresponding memory and state o
 
 1. Improved security: By forking a live blockchain, developers can test proposed changes, identify vulnerabilities, and address potential security threats in a controlled environment, reducing the risk of attacks on the main network.
 
-2. Enhanced performance: Testing transactions and upgrades on a forked version of the blockchain enables developers to analyze the performance implications of their changes, such as transaction throughput and latency. This can lead to optimizations that enhance the overall performance of the main blockchain network.
+2. Enhanced performance: Testing transactions and upgrades on a forked version of the blockchain enables developers to analyze the performance implications of their changes, such as transaction throughput and latency.
 
 3. Reduced downtime: Forking a live blockchain for testing purposes can help minimize network downtime during upgrades or other maintenance activities, as it allows developers to thoroughly test and validate changes before implementation on the main network.
 
 4. Increased user confidence: Users can feel more confident in the stability and reliability of the blockchain network when they know that proposed changes have been rigorously tested in an environment that closely mirrors the live network.
 
-5. Facilitated innovation: Forking a live blockchain provides a space for experimentation, allowing developers to test new features, protocols, and consensus algorithms without disrupting the main network. This fosters innovation and can lead to the development of novel applications and use cases for blockchain technology.
+5. Facilitated innovation: Forking a live blockchain provides a space for experimentation, allowing developers to test new features, protocols, and consensus algorithms without disrupting the main network.
 
-6. Streamlined consensus-building: Forking a live blockchain enables developers to present real-world test results to stakeholders, which can help build consensus for proposed changes. This can expedite the decision-making process and lead to a more efficient and effective governance model.
+6. Streamlined consensus-building: Forking a live blockchain enables developers to present real-world test results to stakeholders, which can help build consensus for proposed changes.
 
 7. Simplified debugging: Debugging transactions and smart contracts on a forked version of the blockchain allows developers to isolate and address issues more easily, ensuring that only well-vetted code is introduced to the main network.
-
-8. Enhanced scalability: By testing proposed changes on a forked version of the live blockchain, developers can identify scalability bottlenecks and implement solutions to support future growth, ultimately contributing to the long-term success of the blockchain network.
 
 ## Chopsticks
 
 Setting up a parallel reality for our networks is easy with chopsticks.
+
+This documentation focuses on the use of chopsticks with the Astar networks.
+For more details on the options and settings, refer to the [Chopsticks repository readme file](https://github.com/AcalaNetwork/chopsticks)
 
 ### Dev mode
 
@@ -65,15 +66,8 @@ npx @acala-network/chopsticks@latest xcm -r polkadot -p astar -p statemint
 
 ## Config Settings
 
-In the short form of the parachain/relaychain cli parameter, the configs are getting pulled from the github repo on demand.
-
-For example, here is [Astar's](https://github.com/AcalaNetwork/chopsticks/blob/master/configs/astar.yml) config.
-
-You can always download it locally and modify it's content to suit your needs.
-
-Note that the configs already has Alice with:
-
-- 100k of ASTR, DOT & USDT
+In the short form of the parachain/relaychain cli parameter, the configs are getting pulled from the github repo on demand. For example, here is [Astar's](https://github.com/AcalaNetwork/chopsticks/blob/master/configs/astar.yml) config. You can always download it locally and modify it's content to suit your needs. Note that the configs already has Alice with:
+- 100k of ASTR, DOT & USDT on Polkadot and 100k of SDN, KSM & USDT on Kusama
 
 ## E2E Tests
 
