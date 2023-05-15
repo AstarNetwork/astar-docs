@@ -6,303 +6,355 @@ sidebar_position: 2
 
 ## What is SubQuery?
 
-SubQuery’s goal is to become an Omni-chain indexer for both EVM/Substrate-native smart contract infrastructure in the Polkadot ecosystem. Connecting directly to Substrate with WebSocket, developers can get an insight into their smart contracts from Subquery’s indexing mechanism by detecting smart contract events in a more native way without running separate RPC nodes for HTTP connection. The insights are often used for recent trades in DEXes, yield reserves tracking in money markets, NFT transfers, and many more. In this tutorial, we will look at how to set up a Substrate native indexer for frontier EVM tracking ERC20 token transfers.
+SubQuery is an open-source and universal blockchain data indexer for developers that provides fast, flexible, reliable, and decentralised APIs to power leading multi-chain apps. Our goal is to save developers time and money by eliminating the need of building their own indexing solution and instead, fully focus on developing their applications. 
 
-SubQuery has an advantage over the Graph in that it requires Javascript or TypeScript, while each subgraph requires AssemblyScript, a more focused native-friendly language and may have unexpected behavior. It also tracks EVM calls so that developers can still make insight out of calls without adding event code. For deployment workflow, since Subgraph is made for the public, it requires developers to add Subgraphs one by one, but Subquery just needs one command to build a dedicated indexer.
+SubQuery's superior indexing capabilities support Astar native, EVM and WASM-based smart contracts all out of the box. (In reality a Docker container!) Starter projects are provided allowing developers to get up and running and index blockchain data in minutes. 
+
+Another one of SubQuery's competitive advantages is the ability to aggregate data not only within a chain but across blockchains all within a single project. This allows the creation of feature-rich dashboard analytics or multi-chain block scanners.
+
+Other advantages include superior performance with multiple RPC endpoint configurations, multi-worker capabilities and a configurable caching architecture. To find out more, visit our [documentation](https://academy.subquery).
 
 ## Prerequisites
 
-[Docker]: https://docs.docker.com/get-docker/
-[docker-compose]: https://docs.docker.com/compose/install/
-[GraphQL]: https://graphql.org/
+[Docker](https://docs.docker.com/get-docker/): Containerization platform for software solutions.
 
-Before you setup SubQuery for your platform, you will need:
+Subquery CLI: Command line tool for creating SubQuery projects. Install this by running the following:
 
-[Docker] : Containerization platform for software solutions
-[docker-compose] : Used to automate interactions between docker containers
-[GraphQL]: Simple knowledge on how to propose entity and query it is required
+```bash
+npm install -g @subql/cli
+```
 
 ## Getting started
 
-First, clone the boilerplate code for setting up the indexer:
+This quick start guide introduces SubQuery's Substrate WASM support by using an example project in Astar's Network. The example project indexes all Transactions and Approvals from the [Astar Wasm based lottery contract](https://astar.subscan.io/account/bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc), as well as dApp staking events from [Astar's dApp Staking](https://docs.astar.network/docs/dapp-staking/) functions.
+
+This project is unique, as it indexes data from both Astar's Substrate execution layer (native Astar pallets and runtime), and with smart contract data from Astar's WASM smart contract layer, within the same SubQuery project and into the same dataset. A very similar approach can be taken with indexing Astar's EVM layer too.
+
+Initialise the SubQuery Starter Project with `subql init` and then choose `Substrate` as the network family, `Astar` as the network and then select astar-wasm-starter for the purposes of this guide.
 
 ```bash
-git clone https://github.com/AstarNetwork/astar-evm-example.git
-cd astar-evm-example
-yarn
+~$ subql init astar-demo
+? Select a network family Substrate
+? Select a network Astar
+? Select a template project (Use arrow keys or type to search)
+❯ astar-evm-starter      Astar EVM project template tutorial 
+  astar-wasm-starter     Astar WASM project template tutorial 
+  astar-starter          Starter project for Astar 
+  Other                  Enter a custom git endpoint 
 ```
 
-### Setting up typedef for Connecting to a Parachain
+Continue with the set-up by following the prompt and customising the parameters or accepting the defaults. 
 
-To connect to a parachain with websocket, type definitions, or typedef for short, are used to encode data for communication. `chainTypes.ts` manages the manifest of the types of data that will be shared between the parachain and the indexer. As Astar.js goes through an upgrade of type definitions, `chainTypes.ts` will need to be updated with the latest typedefs to be able to fully connect to parachains.
+Visit the [SubQuery quick start guide](https://academy.subquery.network/quickstart/quickstart.html) for more details.
 
-```ts
-import type { OverrideBundleDefinition } from "@polkadot/types/types";
+## Customizing the project in 3 simple steps
+There are 3 important files that need to be modified. These are:
 
-const definitions: OverrideBundleDefinition = {
-    types: [
-        {
-            // on all versions
-            minmax: [0, undefined],
-            types: {
-                Keys: "AccountId",
-                Address: "MultiAddress",
-                LookupSource: "MultiAddress",
-                AmountOf: "Amount",
-                Amount: "i128",
-                SmartContract: {
-                    _enum: {
-                        Evm: "H160",
-                        Wasm: "AccountId",
-                    },
-                },
-                EraStakingPoints: {
-                    total: "Balance",
-                    stakers: "BTreeMap<AccountId, Balance>",
-                    formerStakedEra: "EraIndex",
-                    claimedRewards: "Balance",
-                },
-                EraRewardAndStake: {
-                    rewards: "Balance",
-                    staked: "Balance",
-                },
-                EraIndex: "u32",
-            },
-        },
-    ],
-};
+1. The GraphQL Schema in schema.graphql
+2. The Project Manifest in project.yaml
+3. The Mapping functions in src/mappings/ directory
 
-export default { typesBundle: definitions };
-```
+### 1. Customize the schema file
 
-### Setup Entity for Storing Event Topics
+The `schema.graphql` file determines the shape of your data from SubQuery due to the mechanism of the GraphQL query language. Hence, updating the GraphQL Schema file is the perfect place to start. It allows you to define your end goal right at the start.
 
-SubQuery indexer filters event topics from the connected parachain and stores them in its database for searchability. A topic is a unit of event data on a Solidity smart contract that is used for providing updates about its state. `Entity` declares the shape of data, and which event data is stored in the indexer database through the handler. To declare an entity to store event topics, you can edit `schema.graphql` in the root directory with GraphQL syntax.
+The Astar-wasm-starter project has four entities. Transaction, Approval, DApp, and DAppReward (which has a [foreign key](https://academy.subquery.network/build/graphql.html#one-to-many-relationships) to Dapp). These index basic block data such as the timestamp, height and hash along with from and contract addresses and the value.
 
 ```graphql
-type Transfer @entity {
-  id: ID! # Tx hash
-
+type Transaction @entity {
+  id: ID! # Transaction hash
+  transactionHash: String
+  blockHeight: BigInt
+  blockHash: String
+  timestamp: Date
+  value: BigInt
   from: String!
   to: String!
   contractAddress: String!
-  amount: BigInt!
-  blockNumber: BigInt!
+}
+
+type Approval @entity {
+  id: ID! # Transaction hash
+  blockHeight: BigInt
+  value: BigInt
+  hash: String
+  owner: String!
+  spender: String!
+  contractAddress: String!
+}
+
+type DApp @entity {
+  id: ID! #EVM is a required field
+  accountID: String!
+  totalStake: BigInt!
+}
+
+type DAppReward @entity {
+  id: ID!
+  dApp: DApp!
+  accountID: String!
+  eraIndex: Int!
+  balanceOf: BigInt!
 }
 ```
 
-After declaring an entity, you can run the command `yarn codegen` to generate model types for handling events in the handler code. Then, the `src` directory will have types ready for the handler to add indexing logic. `types` is the directory which declares data entities as models for handler to manage.
+When you make any changes to the schema file, please ensure that you regenerate your types directory via `yarn codegen` or `npm run-script codegen`
 
-```
-src/
-├── chaintypes.ts
-├── index.ts
-├── mappings
-│   └── mappingHandlers.ts
-**└── types
-    ├── index.ts
-    └── models
-        ├── Transfer.ts
-        └── index.ts**
-```
+You will find the generated models in the `/src/types/models` directory.
 
-### Setup Handler for Indexing
+Check out the [GraphQL Schema](https://academy.subquery.network/build/graphql.html) documentation to get in-depth information on `schema.graphql` file.
 
-Now that storage has been declared, we can use the handler to declare how to add data on each event emission. The `mappings` directory stores handlers mapping solidity event topics, to a SubQuery data entity. In this tutorial, we will examine how an ERC20 transfer event is handled.
+### 2. The project manifest file
+The Project Manifest (`project.yaml`) file works as an entry point to your project. It defines most of the details on how SubQuery will index and transform the chain data. For Substrate/Polkadot chains, there are three types of mapping handlers:
 
-```ts
-// import model from types
-import { Transfer } from "../types"; 
-// contract processor library
-import {
-  FrontierEvmEvent,
-} from "@subql/contract-processors/dist/frontierEvm";
-// uint256 in js
-import { BigNumber } from "@ethersproject/bignumber";
+- [BlockHanders](https://academy.subquery.network/build/manifest/polkadot.html#mapping-handlers-and-filters): On each and every block, run a mapping function
+- [EventHandlers](https://academy.subquery.network/build/manifest/polkadot.html#mapping-handlers-and-filters): On each and every Event that matches optional filter criteria, run a mapping function
+- [CallHanders](https://academy.subquery.network/build/manifest/polkadot.html#mapping-handlers-and-filters): On each and every extrinsic call that matches optional filter criteria, run a mapping function
 
-// event data declaration 
-//[ /*topic types in order address as string */ ] & {
-// /*
-//   mapping of event topic args and types
-// */
-type TransferEventArgs = [string, string, BigNumber] & {
-  from: string;
-  to: string;
-  value: BigNumber;
-};
+For [EVM](https://academy.subquery.network/build/substrate-evm.html) and [WASM](https://academy.subquery.network/build/substrate-wasm.html) data processors on Substrate/Polkadot chains, there are only two types of mapping handlers:
 
-// When event occurs
-export async function handleERC20Transfer(
-  event: FrontierEvmEvent<TransferEventArgs>
-): Promise<void> {
-  logger.warn("Calling handleERC20Transfer");
-  // fill entity with event data
-  const transfer = Transfer.create({
-    amount: event.args.value.toBigInt(),
-    from: event.args.from,
-    to: event.args.to,
-    contractAddress: event.address,
-    blockNumber: BigInt(event.blockNumber),
-    id: event.transactionHash,
-  });
- // save it to indexer database
-  await transfer.save();
-}
-```
+- [EventHandlers](https://academy.subquery.network/build/substrate-wasm.html#event-handlers): On each and every Event that matches optional filter criteria, run a mapping function
+- [CallHanders](https://academy.subquery.network/build/substrate-wasm.html#call-handlers): On each and every extrinsic call that matches optional filter criteria, run a mapping function
 
-SubQuery indexer can also track calls for Solidity precompiles, that are normally difficult to track.
+### Substrate Manifest section
 
-```ts
-import { Transfer } from "../types";
-import {
-  FrontierEvmCall
-} from "@subql/contract-processors/dist/frontierEvm";
-import { BigNumber } from "@ethersproject/bignumber";
-
-type TransferCallArgs = [string, BigNumber] & {
-  _to: string;
-  _value: BigNumber;
-};
-
-export async function handleERC20TransferCall(
-  call: FrontierEvmCall<TransferCallArgs>
-): Promise<void> {
-  logger.warn("Calling handleERC20TransferCall");
-
-  const transfer = Transfer.create({
-    amount: call.args._value.toBigInt(),
-    from: call.from,
-    to: call.args._to,
-    contractAddress: call.to,
-    id: call.hash,
-    blockNumber: undefined,
-  });
-
-  await transfer.save();
-}
-```
-
-Once the handler is built, run `yarn build` to compile the code into deployable format. You will want to confirm that the `dist` folder has been created under the root folder, as it is below:
-
-```
-astar-evm-example
-├── LICENSE
-├── README.md
-**├── dist**
-├── docker-compose.yml
-├── erc20.abi.json
-├── node_modules
-├── package.json
-├── project.yaml
-├── schema.graphql
-├── src
-├── tsconfig.json
-└── yarn.lock
-```
-
-### Deploy Indexer
-
-SubQuery indexer is a multi-container solution that runs in three different containers.
-
-- `postgres` : Database which stores data from the indexer.
-- `subquery-node` : Event subscriber which detects EVM calls or events on the connected blockchain, and writes them in the database.
-- `graphql-engine` : GraphQL engine which indexes data within the database.
-
-The `docker-compose.yml` file handles specifics about how they are connected, but `project.yaml` will need to be edited to provide information to `subquery-node` about what to track in its container.
-
-Here are the parameters in `project.yaml` that need to be configured:
+**Since we are planning to index all Polkadot transfers, we need to update the `datasources` section as follows:**
 
 ```yaml
-# metadata
-specVersion: 0.2.0 
-name: astar-evm 
-version: 0.0.1
-description: This SubQuery project can be use as a starting point for Astar network
-repository: <https://github.com/subquery/astar-subql-starters>
-# schema directory
-schema:
-  file: ./schema.graphql
-# network 
-network:
-  # wss endpoint
-  endpoint: wss://astar.api.onfinality.io/public-wss 
-  # genesis hash of connecting blockchahin
-  genesisHash: '0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6'
-  # chain types directory
-  chaintypes:
-    file: ./dist/chaintypes.js
 dataSources:
-  # one kind per one contract to track
-  - kind: substrate/FrontierEvm
-    startBlock: 436282 # block to start tracking events
-
-    assets:
-    # Smart contract ABIs
-      erc20: # declare ABI to refer within the file
-        file: './erc20.abi.json' # abi file directory
-    # Processor library for websocket data
-    processor:
-      file: './node_modules/@subql/contract-processors/dist/frontierEVM.js'
-      options:
-        abi: erc20
-        address: '0x3d4dcfd2b483549527f7611ccfecb40b47d0c17b'
-    # mapping for contract event
+  - kind: substrate/Runtime
+    # This is the datasource for Astar's Native Substrate processor
+    startBlock: 1
     mapping:
       file: ./dist/index.js
       handlers:
-        - handler: handleFrontierEvmEvent
-          kind: substrate/FrontierEvmEvent
+        - handler: handleNewContract
+          kind: substrate/EventHandler
           filter:
-            ## Topics that follow Ethereum JSON-RPC log filters
-            ## <https://docs.ethers.io/v5/concepts/events/>
-            ## With a couple of added benefits:
-            ##  - Values don't need to be 0 padded
-            ##  - Event fragments can be provided and automatically converted to their id
-            topics:
-              ## Example valid values:
-              # - '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'
-              # - Transfer(address,address,u256)
-              # - Transfer(address from,address to,uint256 value)
-
-              ## Example of OR filter, will capture Transfer or Approval events
-              # - - 'Transfer(address indexed from,address indexed to,uint256 value)'
-              #   - 'Approval(address indexed owner, address indexed spender, uint256 value)'
-
-              - Transfer(address indexed from,address indexed to,uint256 value)
-        - handler: handleFrontierEvmCall
-          kind: substrate/FrontierEvmCall
+            module: dappsStaking
+            method: NewContract
+        - handler: handleBondAndStake
+          kind: substrate/EventHandler
           filter:
-            ## The function can either be the method fragment or signature
-            # function: '0x095ea7b3'
-            # function: '0x7ff36ab500000000000000000000000000000000000000000000000000000000'
-            # function: approve(address,uint256)
-            function: approve(address to,uint256 value)
-            ## The transaction sender
-            from: '0x6bd193ee6d2104f14f94e2ca6efefae561a4334b'
+            module: dappsStaking
+            method: BondAndStake
+        - handler: handleUnbondAndUnstake
+          kind: substrate/EventHandler
+          filter:
+            module: dappsStaking
+            method: UnbondAndUnstake
+        - handler: handleReward
+          kind: substrate/EventHandler
+          filter:
+            module: dappsStaking
+            method: Reward
 ```
 
-After editing project.yaml , execute docker-compose to pull the latest containers, and deploy.
+This indicates that you will be running a `handleNewContract` mapping function whenever there is an event emitted from the `NewContract` method on the `dappsStaking` pallet. Similarly we will run other mapping functions for the three other events being emitted from the `dappsStaking` to other mapping functions. This covers most interactions with the dApp staking feature that we are interested in.
 
-```sh
-docker-compose pull && docker-compose up
+Check out our [Manifest File](https://academy.subquery.network/build/manifest/polkadot.html) documentation to get more information about the Project Manifest (`project.yaml`) file.
+
+### WASM Manifest Section
+
+If you're not using the [WASM starter template](https://github.com/subquery/subql-starter/tree/main/Astar/astar-wasm-starter) then please add the Wasm Datasource as a dependency using `yarn add @subql/substrate-wasm-processor`.
+
+Here we are indexing all transfers and approve contract call events from the Astar contract `bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc`. First you will need to import the contract ABI defintion. You can copy the entire JSON and save as a file `./erc20Metadata.json` in the `abis` directory.
+
+This section in the Project Manifest now imports all the correct definitions and lists the triggers that we look for on the blockchain when indexing. We add another section the datasource beneath the above [substrate manifest section](#substrate-manifest-section).
+
+```yaml
+dataSources:
+  - kind: substrate/Runtime
+    # This is the datasource for Astar's Native Substrate processor
+    ...
+  - kind: substrate/Wasm
+    # This is the datasource for Astar's Wasm processor
+    startBlock: 3281780
+    processor:
+      file: ./node_modules/@subql/substrate-wasm-processor/dist/bundle.js
+      options:
+        abi: erc20
+        # contract: "a6Yrf6jAPUwjoi5YvvoTE4ES5vYAMpV55ZCsFHtwMFPDx7H" # Shibuya
+        contract: "bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc" # Mainnet
+    assets:
+      erc20:
+        file: ./abis/erc20Metadata.json
+    mapping:
+      file: ./dist/index.js
+      handlers:
+        - handler: handleWasmEvent
+          kind: substrate/WasmEvent
+          filter:
+            # contract: "a6Yrf6jAPUwjoi5YvvoTE4ES5vYAMpV55ZCsFHtwMFPDx7H" # Shibuya
+            contract: "bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc" # Mainnet
+            identifier: "Transfer"
+        - handler: handleWasmCall
+          kind: substrate/WasmCall
+          filter:
+            selector: "0x681266a0"
+            method: "approve"
 ```
 
-### Exploring the Indexed Data
+The above code indicates that you will be running a `handleWasmEvent` mapping function whenever there is an `Transfer` event on any transaction from the Astar contract. Similarly, we will run the `handleWasmCall` mapping function whenever there is a `approve` log on the same contract
 
-After you run `docker-compose`, SubQuery supports the GraphiQL playground to explore the indexed data. You can explore the data by sending GraphQL queries to `http://localhost:3000`
+Check out our [Substrate Wasm](https://academy.subquery.network/build/substrate-wasm.html) documentation to get more information about the Project Manifest (`project.yaml`) file for Substrate WASM contracts.
+
+### 3. Customize the mapping file
+
+Mapping functions define how chain data is transformed into the optimised GraphQL entities that we previously defined in the `schema.graphql` file.
+
+Navigate to the default mapping function in the `src/mappings` directory. There are multiple exported functions: `handleWasmCall`, `handleWasmEvent`, `handleNewContract`, `handleBondAndStake`, `handleUnbondAndUnstake`, and `handleReward`. We wont go into all here but you should be able to figure out what each is doing.
+
+```ts
+type ApproveCallArgs = [AccountId, Balance];
+
+export async function handleWasmCall(
+  call: WasmCall<ApproveCallArgs>
+): Promise<void> {
+  logger.info(`Processing WASM Call at ${call.blockNumber}`);
+  const approval = new Approval(`${call.blockNumber}-${call.idx}`);
+  approval.hash = call.hash;
+  approval.owner = call.from.toString();
+  approval.contractAddress = call.dest.toString();
+  if (typeof call.data !== "string") {
+    const [spender, value] = call.data.args;
+    approval.spender = spender.toString();
+    approval.value = value.toBigInt();
+  } else {
+    logger.info(`Decode call failed ${call.hash}`);
+  }
+  await approval.save();
+}
+```
+
+The `handleWasmCall` function receives event data from the WASM execution environment whenever an call matches the filters that was specified previously in the `project.yaml`. It instantiates a new `Approval` entity and populates the fields with data from the Wasm Call payload. Then the `.save()` function is used to save the new entity (_SubQuery will automatically save this to the database_).
+
+```ts
+export async function handleBondAndStake(event: SubstrateEvent): Promise<void> {
+  logger.info(
+    `Processing new Dapp Staking Bond and Stake event at ${event.block.block.header.number}`
+  );
+  const {
+    event: {
+      data: [accountId, smartContract, balanceOf],
+    },
+  } = event;
+  // Retrieve the dapp by its ID
+  let dapp: DApp = await DApp.get(smartContract.toString());
+  if (!dapp) {
+    dapp = DApp.create({
+      id: smartContract.toString(),
+      accountID: accountId.toString(),
+      totalStake: BigInt(0),
+    });
+  }
+
+  dapp.totalStake += (balanceOf as Balance).toBigInt();
+  await dapp.save();
+}
+```
+
+The `handleBondAndStake` function receives Substrate event data from the native Substrate environment whenever an event matches the filters that was specified previously in the `project.yaml`. It extracts the various data from the event payload (in Substrate it's stored as a array of Codecs), then checks if an existing DApp record exists. If none exists (e.g. it's a new dApp), then it instantiates a new one and then updates the total stake to reflect the new staking mount. Then the `.save()` function is used to save the new/updated entity (_SubQuery will automatically save this to the database_).
+
+Check out our mappings documentation for [Substrate](https://academy.subquery.network/build/mapping/polkadot.html) and for the [Substrate WASM data processor](https://academy.subquery.network/build/substrate-wasm.html) to get detailed information on mapping functions for each type.
+
+## Build Your Project
+
+Next, build your work to run your new SubQuery project. Run the build command from the project's root directory `yarn build` or `npm run-script build`. Note, whenever you make changes to your mapping functions, make sure to rebuild your project.
+
+
+## Run Your Project Locally with Docker
+
+SubQuery provides a Docker container to run projects very quickly and easily for development purposes.
+
+The docker-compose.yml file defines all the configurations that control how a SubQuery node runs. For a new project, which you have just initialised, you won't need to change anything.
+
+Run the following command under the project directory: `yarn start:docker` or `npm run-script start:docker`. It may take a few minutes to download the required images and start the various nodes and Postgres databases.
+
+Visit [Running SubQuery Locally](https://academy.subquery.network/run_publish/run.html) to get more information on the file and the settings.
+
+## Query Your Project
+
+Once the container is running, navigate to http://localhost:3000 in your browser and run the sample GraphQL command provided in the README file. Below is an example query from the Astar-wasm-starter project.
+
+```graphql
+query {
+  transactions(first: 3, orderBy: BLOCK_HEIGHT_ASC) {
+    totalCount
+    nodes {
+      id
+      timestamp
+      blockHeight
+      transactionHash
+      blockHash
+      contractAddress
+      from
+      value
+    }
+  }
+}
+```
+
+Note: 
+There is a _Docs_ tab on the right side of the playground which should open a documentation drawer. This documentation is automatically generated and helps you find what entities and methods you can query. To learn more about the GraphQL Query language [here](https://academy.subquery.network/run_publish/graphql.html).
+
+You should see results similar to those below:
+
+```json
+{
+  "data": {
+    "transactions": {
+      "totalCount": 17,
+      "nodes": [
+        {
+          "id": "3281781-0",
+          "timestamp": "2023-04-04T14:37:54.532",
+          "blockHeight": "3281781",
+          "transactionHash": "0x4f57e6ab4e8337375871fe4c8f7ae2e71601ea7fbd135b6f8384eb30db31ec44",
+          "blockHash": "0x6d65fe39ae469afd74d32e34a61382b1bbda37983dea745ea2afe58e57d4afbc",
+          "contractAddress": "bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc",
+          "from": "WJWxmJ27TdMZqvzLx18sZpH9s5ir9irFm1LRfbDeByamdHf",
+          "value": "25000000000000000000"
+        },
+        {
+          "id": "3281792-0",
+          "timestamp": "2023-04-04T14:40:06.386",
+          "blockHeight": "3281792",
+          "transactionHash": "0xbe8d6f09a96ff44e732315fbeff2862e9bdeb8353612a0bfab10632c410d8135",
+          "blockHash": "0xaa09e8060068931a58a162c150ccb73e0b4de528185f1da92b049ab31c299e5a",
+          "contractAddress": "bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc",
+          "from": "aFNoZEM64m1ifrHAwEPEuhfRM5L7kjnPhmtYjZaQHX2zb6y",
+          "value": "32000000000000000000"
+        },
+        {
+          "id": "3281797-1",
+          "timestamp": "2023-04-04T14:41:06.786",
+          "blockHeight": "3281797",
+          "transactionHash": "0xfdb111a314ee4e4460a3f2ab06221d5985c50e8f5cbae5a12f4f73b222d5954c",
+          "blockHash": "0xeb4e49463e174fc993417e852f499ddc6e3c4a15f355a576a74772604f2132e5",
+          "contractAddress": "bZ2uiFGTLcYyP8F88XzXa13xu5Mmp13VLiaW1gGn7rzxktc",
+          "from": "aFNoZEM64m1ifrHAwEPEuhfRM5L7kjnPhmtYjZaQHX2zb6y",
+          "value": "57000000000000000000"
+        }
+      ]
+    }
+  }
+}
+```
 
 ![4](img/4.png)
 
-## Glossary
+## Next steps
 
-### Topic
+SubQuery's indexing experience is designed to be as fast and as simple as possible allowing developers to index data from the blockchain in minutes with the help of the starter project and a docker environment. 
 
-A unit of event subscription data on a Solidity smart contract that's used for providing updates to its state.
+It is also flexible to enable indexing across different chains and filtering only the data relevant to your application making it lightweight, fast and efficient. 
 
-### Entity
+We are excited to help you on your indexing journey so please reach out to us at the various links below to see how we can help further. 
 
-A distinctive data structure that is used to store event topics in the database of the SubQuery indexer.
-
-### GraphQL
-
-An indexing tool for aggregated data.
+## Resources
+* [SubQuery Network](https://subquery.network/)
+* [SubQuery Documentation](https://academy.subquery.network/)
+* [SubQuery Discord](https://discord.com/invite/subquery)
+* [SubQuery Twitter](https://twitter.com/SubQueryNetwork)
+* [SubQuery Blog](https://blog.subquery.network/)
