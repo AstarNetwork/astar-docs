@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "node build.js && docusaurus start",
-    "build": "node build.js && docusaurus build",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -31,8 +31,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.4.0",
     "@tsconfig/docusaurus": "^1.0.5",
-    "typescript": "^4.6.3",
-    "dotenv": "^16.0.3"
+    "typescript": "^4.6.3"
   },
   "browserslist": {
     "production": [
