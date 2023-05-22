@@ -81,7 +81,14 @@ To enhance the security of proxies, we can implement a delay mechanism measured 
 
 During this delay window, the intended action can be canceled by either the proxy itself using the `proxy.removeAnnouncement` extrinsic or by the accounts controlling the proxy through the `proxy.rejectAnnouncement` extrinsic. The announcement made by the proxy includes the hash of the intended function call, enabling the identification and validation of the action.
 
-By incorporating this delay mechanism, any malicious activities can be detected and reversed within the designated delay period. After the time-delay has passed, the proxy can proceed with executing the announced call using the proxy.proxyAnnounced extrinsic.
+By incorporating this delay mechanism, any malicious activities can be detected and reversed within the designated delay period. After the time-delay has passed, the proxy can proceed with executing the announced call using the `proxy.proxyAnnounced` extrinsic.
+
+:::caution
+
+Any attempt to sign the transaction using **proxy** extrinsic with pure proxy will fail. Read more about [pure](https://wiki.polkadot.network/docs/learn-proxies#anonymous-proxy-pure-proxy) proxies here.
+
+
+:::
 
 This implementation adds an additional layer of security to proxies, providing confidence in their usage, knowing that actions can be observed and undone within the specified delay period.
 
