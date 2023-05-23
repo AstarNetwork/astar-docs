@@ -64,6 +64,37 @@ Or with a relaychain like so:
 npx @acala-network/chopsticks@latest xcm -r polkadot -p astar -p statemint
 ```
 
+#### Specific block
+
+You can specify a block number on the cli using the -c and not the XCM cli format.
+
+```sh
+npx @acala-network/chopsticks@latest -c astar -b 3500000
+```
+
+To use a specific block number in the XCM mode, you'll need to download the `.yml` file and modify the block number within.
+
+```sh
+endpoint: wss://astar.api.onfinality.io/public-ws
+mock-signature-host: true
+block: 3600000
+...
+```
+
+Then just start you XCM as usual.
+
+```sh
+npx @acala-network/chopsticks@latest xcm -p astar.yml
+```
+
+#### Creating blocks
+
+To create new blocks, you'll need to connect to the websocket port of that node.  To do so, you can use `wscat`, just install it if your system does not have it.  For example `sudo apt-get install wscat`.
+
+```sh
+wscat -c ws://127.0.0.1:8000 -x '{ "jsonrpc": "2.0", "id": 1, "method": "dev_newBlock", "params": [{"count": 100}] }'
+```
+
 ## Config Settings
 
 In the short form of the parachain/relaychain cli parameter, the configs are getting pulled from the github repo on demand. For example, here is [Astar's](https://github.com/AcalaNetwork/chopsticks/blob/master/configs/astar.yml) config. You can always download it locally and modify it's content to suit your needs. Note that the configs already has Alice with:
