@@ -48,7 +48,7 @@ astar-collator \
 --rpc-cors all \
 --name {NODE_NAME} \
 --chain astar \
---base-path /var/lib/astar \
+--base-path /data \
 --rpc-external \
 --ws-external \
 --rpc-methods Safe \
@@ -75,7 +75,7 @@ astar-collator \
 --rpc-cors all \
 --name {NODE_NAME} \
 --chain astar \
---base-path /var/lib/astar \
+--base-path /data \
 --rpc-external \
 --ws-external \
 --rpc-methods Safe \
@@ -102,7 +102,7 @@ astar-collator \
 --rpc-cors all \
 --name {NODE_NAME} \
 --chain astar \
---base-path /var/lib/astar \
+--base-path /data \
 --rpc-external \
 --ws-external \
 --rpc-methods Safe \

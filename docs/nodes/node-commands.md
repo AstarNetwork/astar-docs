@@ -118,7 +118,7 @@ astar-collator \
 --collator \
 --name {COLLATOR_NAME} \
 --chain astar \
---base-path /var/lib/astar \
+--base-path /data \
 --trie-cache-size 0 \
 --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
@@ -138,7 +138,7 @@ astar-collator \
 --collator \
 --name {COLLATOR_NAME} \
 --chain shiden \
---base-path /var/lib/astar \
+--base-path /data \
 --trie-cache-size 0 \
 --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
@@ -158,7 +158,7 @@ astar-collator \
 --collator \
 --name {COLLATOR_NAME} \
 --chain shibuya \
---base-path /var/lib/astar \
+--base-path /data \
 --trie-cache-size 0 \
 --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
 ```
@@ -286,7 +286,7 @@ astar-collator \
 --rpc-cors all \
 --name {NODE_NAME} \
 --chain astar \
---base-path /var/lib/astar \
+--base-path /data \
 --rpc-external \
 --ws-external \
 --rpc-methods Safe \
@@ -312,7 +312,7 @@ astar-collator \
 --rpc-cors all \
 --name {NODE_NAME} \
 --chain astar \
---base-path /var/lib/astar \
+--base-path /data \
 --rpc-external \
 --ws-external \
 --rpc-methods Safe \
@@ -338,7 +338,7 @@ astar-collator \
 --rpc-cors all \
 --name {NODE_NAME} \
 --chain astar \
---base-path /var/lib/astar \
+--base-path /data \
 --rpc-external \
 --ws-external \
 --rpc-methods Safe \
