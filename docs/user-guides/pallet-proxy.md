@@ -56,23 +56,39 @@ The proxy pallet provides the following extrinsics (functions):
 
 | Constant                 | Description                                                                                                  |
 |--------------------------|--------------------------------------------------------------------------------------------------------------|
-| announcementDepositBase  | Retrieves the base amount of currency required to reserve when creating an announcement.                     |
-| announcementDepositFactor| Retrieves the amount of currency required per announcement made.                                             |
-| maxPending               | Retrieves the maximum number of time-delayed announcements allowed to be pending.                           |
-| maxProxies               | Retrieves the maximum number of proxies permitted for a single account.                                     |
-| proxyDepositBase         | Retrieves the base amount of currency required to reserve when creating a proxy.                            |
-| proxyDepositFactor       | Retrieves the amount of currency required per proxy added.                                                   |
+| announcementDepositBase  | base amount of currency required to reserve when creating an announcement.                     |
+| announcementDepositFactor| amount of currency required per announcement made.                                             |
+| maxPending               | maximum number of time-delayed announcements allowed to be pending.                           |
+| maxProxies               | maximum number of proxies permitted for a single account.                                     |
+| proxyDepositBase         | base amount of currency required to reserve when creating a proxy.                            |
+| proxyDepositFactor       | amount of currency required per proxy added.                                                   |
 
 
 **Why Proxy Deposits ?**
 ---
-To create proxies within the network, it is necessary to provide deposits in the native currency (like ASTR or SHD). The deposit is required because adding a proxy requires some storage space on-chain, which must be replicated across every peer in the network. Due to the costly nature of this, these functions could open up the network to a Denial-of-Service attack
+To create proxies within the network, it is necessary to provide deposits in the native currency (like ASTR or SDN). The deposit is required because adding a proxy requires some storage space on-chain, which must be replicated across every peer in the network. Due to the costly nature of this, these functions could open up the network to a Denial-of-Service attack.
 
 When creating a proxy, a bond is deducted from your free balance and transferred to your reserved balance. This mechanism helps maintain the integrity and stability of the proxy system while providing assurance that the bond can be returned when the proxy is deactivated or removed.
     
 The required deposit amount for `n` proxies is equal to:
 
 `ProxyDepositBase` + `ProxyDepositFactor` * `n`
+
+
+**Pure / Anonymous Proxy**
+---
+
+Anonymous proxies (Pure Proxies) are freshly generated accounts, distinct from original one, which originate from a primary account. The primary account assumes the role of a proxy, representing the anonymous proxy. These proxies are non-deterministic and lack a private key, yet possess a randomly generated address. It is worth noting that anonymous proxies remain ownerless, as no individual possesses a private key to exercise control over them.
+
+Despite their complexity and associated dangers, pure proxies have many important benefits like enhanced security and multi-sig account management.
+
+:::tip 
+
+It is highly encouraged to checkout [**this**](https://wiki.polkadot.network/docs/learn-proxies#anonymous-proxy-pure-proxy) documentation by Polkadot for more information about Pure proxy, it's limitations and benefits. 
+
+Video resource for Pure Proxy - https://youtu.be/MqY6yU-YLO0
+
+:::
 
 **Time-Delayed Proxy**
 ---
@@ -85,7 +101,7 @@ By incorporating this delay mechanism, any malicious activities can be detected 
 
 :::caution
 
-Any attempt to sign the transaction using **proxy** extrinsic with pure proxy will fail. Read more about [pure](https://wiki.polkadot.network/docs/learn-proxies#anonymous-proxy-pure-proxy) proxies here.
+Any attempt to sign the transaction using **proxy** extrinsic with pure proxy will fail. Read more about [**pure**](https://wiki.polkadot.network/docs/learn-proxies#anonymous-proxy-pure-proxy) proxies here.
 
 
 :::
@@ -94,7 +110,7 @@ This implementation adds an additional layer of security to proxies, providing c
 
 :::tip
 
-Check out [this](https://www.youtube.com/watch?v=3L7Vu2SX0PE) by Polkadot to learn how to set up time-delayed proxies.
+Check out this [**video**](https://www.youtube.com/watch?v=3L7Vu2SX0PE) by Polkadot to learn how to set up time-delayed proxies.
 
 :::
 
