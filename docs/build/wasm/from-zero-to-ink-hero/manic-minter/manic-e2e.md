@@ -6,7 +6,7 @@ sidebar_position: 4
 In this chapter we will write e2e tests for the ManicMinter contract. The e2e tests will be written in Rust using the ink! e2e framework. The e2e tests will be executed on a local substrate node.
 Just like in previous chapter we will not include complete code from the contract to keep it short and focused on the e2e tests.
 ## Import Crates
-To start with, we will import the following crates:
+Let's create a new module `e2e_tests` within the body of the `mod manicminter` and import the following crates:
 ```rust
 #[cfg(all(test, feature = "e2e-tests"))]
 mod e2e_tests {
@@ -122,6 +122,10 @@ The e2e tests are invoking the node which is running on the local machine.
 Before running the test we need to setup the environment variable `CONTRACT_NODE` to the executable local node. The node can be Swanky-node or any other node that implements pallet-contracts.
 ```bash
 export CONTRACTS_NODE="YOUR_CONTRACTS_NODE_PATH"
+```
+As an example it can be set to the following value:
+```bash
+export CONTRACTS_NODE="/home/p/Documents/astar/target/release/astar-collator"
 ```
 After setting your node path, run the following command to execute the e2e tests:
 ```bash
