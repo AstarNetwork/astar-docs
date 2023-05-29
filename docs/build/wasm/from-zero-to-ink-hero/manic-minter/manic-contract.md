@@ -88,7 +88,7 @@ impl Minting for ManicMinter {
             )
             .returns::<()>()
             .try_invoke();
-        
+
         //---- snip ----
     }
 }
@@ -124,21 +124,33 @@ oxygen = { path = "../oxygen", default-features = false, features = ["ink-as-dep
 ```
 
 ## Oxygen Contract Update
-Since we are using Oxygen contract for our testing we need to update it to be able to use it as a dependency. Update `Cargo.toml` with the following content to make the library available for the e2e test:
+Since we are using Oxygen contract for our testing we need to update it to be able to use it as a dependency. The code is already provided in the previous chapter, but please note that
+1.  `Cargo.toml`  needs to be updated to become a library:
 ```toml
 crate-type = [
     "rlib",
 ]
 ```
-At the top of the `lib.rs` file for Oxygen contract add `ref`
+2. At the top of the `lib.rs` file for Oxygen contract add `ref`
 
 ```rust
 pub use self::oxygen::OxygenRef;
 ```
+3. Under the `features` section of the `Cargo.toml` file add the following:
+```toml
+ink-as-dependency = [] 
+```
+:::note
+* This is a prerequisite for ManicMinter contract to import the Oxygen library in the `Cargo.toml` file with feature `ink-as-dependency`:
+```rust
+oxygen = { path = "../oxygen", default-features = false, features = ["ink-as-dependency"] }
+```
+:::
 
 ## Summary of the ManicMinter Contract Chapter
 * The ManicMinter contract will be used to mint new fungible tokens.
 * The ManicMinter contract will be able to mint Oxygen tokens by invoking cross contract call to Oxygen contract.
+* The Oxygen contract needs to be set as library with `ink-as-dependency` feature to be used as a dependency in the ManicMinter contract.
 
 
 The full code for this example is available [here](https://github.com/swanky-dapps/manic-minter).

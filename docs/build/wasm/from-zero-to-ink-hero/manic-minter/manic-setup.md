@@ -32,21 +32,89 @@ members = [
 ```
 
 ### Oxygen Contract Setup
-Using the Openbrush [wizard](https://openbrush.io/), we will create a new ink! smart contract for PSP22. Provide the following information to the wizard:
-```bash
-version 3.0.0
-constructor name: Oxygen
-extensions: mintable
-security: ownable
+Let's create a new ink! smart contract for fungible tokens using Brushfam library for PSP22. In the `oxygen/` folder, add the following to the `Cargo.toml` file:
+```toml
+[package]
+name = "oxygen"
+version = "1.0.0"
+edition = "2021"
+authors = ["The best developer ever"]
+
+[dependencies]
+
+ink = { version = "4.1.0", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
+
+# Include brush as a dependency and enable default implementation for PSP22 via brush feature
+openbrush = { tag = "3.1.0", git = "https://github.com/727-Ventures/openbrush-contracts", default-features = false, features = ["psp22", "ownable"] }
+
+[lib]
+path = "lib.rs"
+crate-type = [
+    "rlib",
+]
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+
+    "openbrush/std",
+]
+ink-as-dependency = [] 
 ```
-Copy the `lib.rs` and `Cargo.toml` from the wizard to your project `oxygen/` folder.
+
+In the same `oxygen/` folder, add the following to the `lib.rs` file:
+```rust
+#![cfg_attr(not(feature = "std"), no_std)]
+#![feature(min_specialization)]
+
+pub use self::oxygen::OxygenRef;
+
+#[openbrush::contract]
+pub mod oxygen {
+
+    use openbrush::contracts::ownable::*;
+    use openbrush::contracts::psp22::extensions::mintable::*;
+    use openbrush::traits::Storage;
+
+    #[ink(storage)]
+    #[derive(Default, Storage)]
+    pub struct Oxygen {
+        #[storage_field]
+        psp22: psp22::Data,
+        #[storage_field]
+        ownable: ownable::Data,
+    }
+
+    impl PSP22 for Oxygen {}
+    impl Ownable for Oxygen {}
+    impl PSP22Mintable for Oxygen {}
+
+    impl Oxygen {
+        #[ink(constructor)]
+        pub fn new(initial_supply: Balance) -> Self {
+            let mut instance = Self::default();
+            instance
+                ._mint_to(instance.env().caller(), initial_supply)
+                .expect("Should mint");
+            instance._init_with_owner(instance.env().caller());
+            instance
+        }
+    }
+}
+```
 
 This tutorial uses ink! version 4.1.0. If you are using a different version, please update the `Cargo.toml` file accordingly.
 ```toml
 ink = { version = "4.1.0", default-features = false }
 ```
 
-Use Openbrush version `3.1.0` and add feature "ownable" since wizard failed to do so.
+Use Openbrush version `3.1.0` with ink! version 4.1.0 and add features "psp22" and  "ownable".
 
 ```toml
 openbrush = { tag = "3.1.0", git = "https://github.com/727-Ventures/openbrush-contracts", default-features = false, features = ["psp22", "ownable"] }
