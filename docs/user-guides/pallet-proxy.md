@@ -114,7 +114,7 @@ Check out this [**video**](https://www.youtube.com/watch?v=3L7Vu2SX0PE) by Polka
 
 :::
 
-**Creating a Proxy Account**
+**Create a Proxy Account**
 ---
 This tutorial will be using [Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shiden.astar.network#/extrinsics) for manipulating proxies.
 
