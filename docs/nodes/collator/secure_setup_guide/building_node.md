@@ -108,7 +108,7 @@ Create a dedicated user for the node and move the **node binary** (in this examp
 ```
 sudo useradd --no-create-home --shell /usr/sbin/nologin astar
 sudo cp ./astar-collator /usr/local/bin
-chmod +x /usr/local/bin/astar-collator
+sudo chmod +x /usr/local/bin/astar-collator
 ```
 
 Create a dedicated directory for the **chain storage data**:
