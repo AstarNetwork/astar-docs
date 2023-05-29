@@ -26,12 +26,14 @@ We will define the error and types as follows:
 pub enum Error {
     /// Returned if not enough balance to fulfill a request is available.
     BadMintValue,
-    /// The call is not allowed if the caller is not the owner of the contract
-    NotOwner,
     /// Returned if the token contract account is not set during the contract creation.
     ContractNotSet,
+    /// The call is not allowed if the caller is not the owner of the contract
+    NotOwner,
     /// Returned if multiplication of price and amount overflows
     OverFlow,
+    /// Returned if the cross contract transaction failed
+    TransactionFailed,
 }
 
 pub type Result<T> = core::result::Result<T, Error>;
@@ -76,7 +78,7 @@ impl Minting for ManicMinter {
     fn manic_mint(&mut self, amount: Balance) -> Result<()> {
         //---- snip ----
 
-        let _mint_result = build_call::<DefaultEnvironment>()
+        let mint_result = build_call::<DefaultEnvironment>()
             .call(self.token_contract)
             .gas_limit(5000000000)
             .exec_input(
@@ -86,7 +88,8 @@ impl Minting for ManicMinter {
             )
             .returns::<()>()
             .try_invoke();
-        Ok(())
+        
+        //---- snip ----
     }
 }
 ```
