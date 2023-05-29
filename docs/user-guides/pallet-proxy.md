@@ -93,7 +93,7 @@ Video resource for Pure Proxy - https://youtu.be/MqY6yU-YLO0
 **Time-Delayed Proxy**
 ---
 
-To enhance the security of proxies, we can implement a delay mechanism measured in blocks. A delay value of 10 corresponds to ten blocks, resulting in a delay of around two minute (for Astar network). The proxy will utilize the proxy.announce extrinsic to declare its intended action and will wait for the specified number of blocks according to the defined delay time before executing it.
+To enhance the security of proxies, we can implement a delay mechanism measured in blocks. A delay value of 10 corresponds to ten blocks, resulting in a delay of around two minute (for Astar network). The proxy will utilize the `proxy.announce` extrinsic to declare its intended action and will wait for the specified number of blocks according to the defined delay time before executing it.
 
 During this delay window, the intended action can be canceled by either the proxy itself using the `proxy.removeAnnouncement` extrinsic or by the accounts controlling the proxy through the `proxy.rejectAnnouncement` extrinsic. The announcement made by the proxy includes the hash of the intended function call, enabling the identification and validation of the action.
 
