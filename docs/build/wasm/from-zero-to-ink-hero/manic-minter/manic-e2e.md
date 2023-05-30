@@ -95,7 +95,7 @@ client
 
 ```
 ## Mint Oxygen Tokens
-We are now ready to execute `manic_mint` method of the ManicMinter contract. We will use the `build_message` macro to compose the `manic_mint` method of the ManicMinter contract. The `client.call()` will be used to execute the contract call. The `call_dry_run` method with `balance_of()` message will be used to verify the result of the contract call on the Oxygen contract.
+We are now ready to execute `manic_mint` method of the ManicMinter contract. We use the `build_message` macro to compose the `manic_mint` method of the ManicMinter contract. The `client.call()` executes the contract call. The `call_dry_run` method with `balance_of()` message verifies the result of the contract call on the Oxygen contract.
 
 ```rust
 // Bob mints AMOUNT of Oxygen tokens by calling ManicMinter contract
