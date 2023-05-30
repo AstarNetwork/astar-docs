@@ -60,7 +60,7 @@ async fn e2e_minting_works(mut client: ink_e2e::Client<C, E>) -> E2EResult<()> {
 ```
 
 ## Set ManicMinter as Owner of Oxygen
-We will use the `build_message` macro to compose the `transfer_ownership` method of the Oxygen contract. The `client.call()` will be used to execute the contract call. The `call_dry_run` method with `owner()` message will be used to verify the result of the contract call.
+We will use the `build_message` macro to compose the `transfer_ownership` method of the Oxygen contract. The `client.call()` executes the contract call. The `call_dry_run` method with `owner()` message verifies the result of the contract call.
 
 ```rust
 // Set ManicMinter contract to be the owner of Oxygen contract
