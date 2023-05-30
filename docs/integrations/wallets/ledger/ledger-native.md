@@ -82,7 +82,7 @@ Ledger NanoS users should install the Astar XL version of the app, shown in the 
 
 - Open a browser and visit the [Astar Portal](https://portal.astar.network).
 - Connect the Polkadot.js extension to the Portal.
-- Select the Ledger account that was imported during the last step. And check the toggle so Portal knows the device is a ledger. It can now be used to participate in dApp staking.
+- Select the Ledger account that was imported during the last step.  Check the toggle so Portal knows the device is a ledger. It can now be used to participate in dApp staking.
 
 <div style={{textAlign: 'center'}}>
   <img src={ledger8} style={{width: 600}} />
