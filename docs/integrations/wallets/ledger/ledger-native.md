@@ -9,6 +9,8 @@ import ledger4 from "./img/native/ledger4.png"
 import ledger5 from "./img/native/ledger5.png"
 import ledger6 from "./img/native/ledger6.png"
 import ledger7 from "./img/native/ledger7.png"
+import ledger8 from "./img/native/ledger8.png"
+
 
 # Using a Ledger device with Astar Native Accounts
 
@@ -80,8 +82,12 @@ Ledger NanoS users should install the Astar XL version of the app, shown in the 
 
 - Open a browser and visit the [Astar Portal](https://portal.astar.network).
 - Connect the Polkadot.js extension to the Portal.
-- Select the Ledger account that was imported during the last step. It can now be used to participate in dApp staking.
+- Select the Ledger account that was imported during the last step.  Check the toggle so Portal knows the device is a ledger. It can now be used to participate in dApp staking.
 
+<div style={{textAlign: 'center'}}>
+  <img src={ledger8} style={{width: 600}} />
+  </div>
+  
 For detailed information about dApp staking or how to stake on the EVM side of Astar Portal using a Ledger device, please refer to the [Astar documentation](/docs/dapp-staking/for-stakers/staking) or [Ledger EVM staking guide](./ledger-evm.md)
 
 :::tip
@@ -106,4 +112,4 @@ Consider the following scenario: You stake on 2 dApps, and accumulate 2 eras wor
 - Ledger Nano-S - The Nano-S device supports claiming a maximum of **2 eras** at a time, so for as long as there are more eras to claim in the dApp staking dashboard, you should continue to claim. Based on a month's worth of accumulated rewards (30 eras), 30 claims would need to be initiated using a Nano-S.
 - Ledger Nano X - Based on a maximum of **6 eras per claim,** 10 claims would need to be initiated using a Nano X.
 
-As you can imagine, staking on multiple dApps using a Ledger device may substantially increase the amount of time and/or administrative overhead required to participate in dApp staking in order to maximize benefits, however, although multiple claims may be required to retrieve all rewards from the Portal using a Ledger device, the fees remain the same per era claimed whether they occur in batches, or as individual transactions.
+Staking on multiple dApps using a Ledger device may substantially increase the amount of time and/or administrative overhead required to participate in dApp staking in order to maximize benefits. However, although multiple claims may be required to retrieve all rewards from the Portal using a Ledger device, the fees remain the same per era claimed whether they occur in batches, or as individual transactions.
