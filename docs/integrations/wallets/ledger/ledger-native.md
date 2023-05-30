@@ -9,6 +9,8 @@ import ledger4 from "./img/native/ledger4.png"
 import ledger5 from "./img/native/ledger5.png"
 import ledger6 from "./img/native/ledger6.png"
 import ledger7 from "./img/native/ledger7.png"
+import ledger8 from "./img/native/ledger8.png"
+
 
 # Using a Ledger device with Astar Native Accounts
 
