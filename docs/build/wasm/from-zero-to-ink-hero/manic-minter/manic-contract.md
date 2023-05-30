@@ -148,7 +148,7 @@ oxygen = { path = "../oxygen", default-features = false, features = ["ink-as-dep
 :::
 
 ## Summary of the ManicMinter Contract Chapter
-* The ManicMinter contract will be used to mint new fungible tokens.
+* The ManicMinter contract mints new fungible tokens.
 * The ManicMinter contract mints Oxygen tokens by invoking cross contract call to Oxygen contract.
 * The Oxygen contract needs to be set as library with `ink-as-dependency` feature to be used as a dependency in the ManicMinter contract.
 
