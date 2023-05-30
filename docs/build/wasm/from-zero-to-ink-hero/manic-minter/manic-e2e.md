@@ -82,7 +82,7 @@ assert_eq!(owner_result, manic_minter_account_id);
 
 ## Set Price for Oxygen Tokens
 
-We will use the `build_message` macro to compose the `set_price` method of the ManicMinter contract. The `client.call()` will be used to execute the contract call. 
+We  use the `build_message` macro to compose the `set_price` method of the ManicMinter contract. The `client.call()` executes the contract call. 
 
 ```rust
 // Contract owner sets price
