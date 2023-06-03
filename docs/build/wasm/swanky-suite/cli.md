@@ -11,8 +11,10 @@ import TabItem from '@theme/TabItem'
 
 # Swanky CLI
 
-Swanky CLI is a Node.js based CLI application that abstracts away and extends the functionality of Polkadot.js, `cargo contract`, and other Wasm developer tools.
-It aims to ease development of and interaction with Wasm smart contracts and provides simple tools to bootstrap contract environment (project) with contract and integration tests templates, manage local node and accounts, language agnostic compile, deploy contracts to both local and remote networks, compatibility checks between the contract pallet and compiler...
+Swanky CLI is a Node.js based CLI application that abstracts away and extends the functionality of Polkadot.js, `cargo contract`, and other ink! based smart contract developer tools.
+It aims to ease development of and interaction with ink! smart contracts and provides simple tools to bootstrap contract environment (project) with contract and integration tests templates, local node and accounts management, smart contracts interaction on both local and remote networks, compatibility checks between the contract pallet and compiler...
+
+It also comes with a preconfigured Docker image and .codespaces configuration for easy dev environment setup.
 
 With all of the features mentioned above, even more is in active or planned development. The whole project is public, and everyone is welcome to contribute or suggest features:
 
@@ -20,26 +22,40 @@ With all of the features mentioned above, even more is in active or planned deve
 - [Swanky CLI project](https://github.com/orgs/AstarNetwork/projects/3)
 
 :::info
-Templates provided in the current version of swanky-cli, as well as environment and supported tools target ink! v4, and use `cargo contract` v2
+Templates provided in the current version of swanky-cli, as well as environment in the swanky-base image, and supported tools target ink! v4, and use `cargo contract` v2.
+
+Cargo contract v3 introduced breaking changes to how artifacts are stored and you'll have to move them manually if you wish to use it.
 :::
 
 ## Installing
 
 The CLI can be installed and used in different ways:
 
-- using a preconfigured environment of a dev-container
+- using a preconfigured environment of a dev-container locally with VS Code
+- using the dev-container in a cloud-based environment such as GitHub Codespaces or Gitpod
+- using the swanky-base container image locally (same is used in the dev-container)
 - downloading a precompiled binary
-- as an npm package
+- as an npm package (installed globally, or via the `npx` command)
 
 :::caution
 Note that using the precompiled binaries, NPM, or compiling it yourself requires you to have the [local environment set up](/docs/build/environment/ink_environment.md) correctly
 :::
 
-### Dev container (Recommended)
+### Dev container
 
-Using [dev container](/docs/build/environment/dev-container) is the recommended method to use `swanky-cli`, it includes all the environment setup and will support auto-updates in the future.
+Using [dev container](/docs/build/environment/dev-container) is the easiest way to use `swanky-cli`, it includes all the environment setup and will support auto-updates in the future.
 
 To run your project in the dev container follow the steps on [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container).
+
+### Cloud based environments
+
+Similar to using the dev container locally, GitHub will detect the `.devcontainer` config in your project and let you run the project in a cloud-based IDE.
+
+You'll have to sign up for an account to use [Gitpod](https://www.gitpod.io/), but the process is the same.
+
+:::caution
+Currently it is not possible to forward ws:// ports from GitHub Codespaces, so if you'd like to interact with the swanky-node from contracts-ui or a similar service, use Gitpod or one of the other methods.
+:::
 
 ### Download the precompiled binaries
 
@@ -114,10 +130,24 @@ The resulting folder structure should look something like this:
 
 <Figure caption="Folder structure" src={require('../img/swanky/folder-structure.png').default} width="65%" />
 
+If you want to start from a more complete example like those in the swanky-dapps repo, or rmrk-ink, or you want to convert your existing contract to a swanky project, you can use `swanky init --convert` command.
+
+It will prompt you for locations of your contract files, as well as additional crates and tests.
+
+In the last step, you'll be provided a list of files to be copied over and you'll be able to deselect any of them that are maybe not needed.
+
+<Figure caption="Converting an existing project" src={require('../img/swanky/init-convert.png').default} width="65%" />
+
+<Figure caption="Confirming the file list" src={require('../img/swanky/init-convert-confirm.png').default} width="65%" />
+
+:::note
+Swanky will look for a common ink! configuration, and will do it's best to copy everything to equivalent paths, but it is likely that you'll have to adjust some configs and import paths manually after conversion.
+:::
+
 _Resources:_
 
-- [_`swanky init` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-init-projectname)
-- [_available templates_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/templates)
+- [_`swanky init` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-init-projectname)
+- [_available templates_](https://github.com/AstarNetwork/swanky-cli/tree/master/src/templates/contracts)
 
 ### Check dependencies and compatibility
 
@@ -133,7 +163,7 @@ This command will be updated to fix that, and provide more useful information.
 
 _Resources:_
 
-- [_`swanky check` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-check)
+- [_`swanky check` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-check)
 
 ### Manage accounts
 
@@ -155,7 +185,7 @@ Newly generated accounts that are not the preconfigured dev accounts (Alice, Bob
 
 _Resources:_
 
-- [_`swanky account` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-account-create)
+- [_`swanky account` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-account-create)
 
 ### Interact with contracts
 
@@ -171,7 +201,7 @@ swanky contract SUB_COMMAND --help
 
 #### Compile
 
-Depending on the contracts definition in `swanky.config.json`, calling `swanky contract compile CONTRACT_NAME` will run either cargo-contract or ask! compiler (via npm script).
+Your contracts are listed in `swanky.config.json`, and can be referred to by `name` field. Calling `swanky contract compile CONTRACT_NAME` will run cargo-contract compiler, generate TS types using [Typechain](https://github.com/Brushfam/typechain-polkadot), and move the artifacts and types to appropriate locations for later usage.
 
 If you have multiple contracts and wish to compile them all at once, you can pass the `--all` flag instead of the contract name.
 
@@ -181,7 +211,7 @@ Likewise, if you're compiling for production, you need to pass the `--prod` flag
 
 _Resources:_
 
-- [_`swanky account` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-compile-contractname)
+- [_`contract compile` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-contract-compile-contractname)
 
 #### Get detailed contract description
 
@@ -193,7 +223,7 @@ Swanky provides `contract explain CONTRACT_NAME` command to get a more human fri
 
 _Resources:_
 
-- [_`contract compile` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-compile-contractname)
+- [_`contract explain` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-contract-explain-contractname)
 
 #### Run E2E tests
 
@@ -205,11 +235,12 @@ Please note these tests are not ink! E2E tests, but are written in TypeScript, a
 You can get more information on ink! E2E test framework in the [ink! documentation](https://use.ink/basics/contract-testing/#end-to-end-e2e-tests).
 :::
 A contract template will provide you with a simple test as well, which you can use as a starting point.
+
 The tests utilize [@polkadot/api](https://polkadot.js.org/docs/api/) library, and contract types generated by [typechain-polkadot](https://github.com/727-Ventures/typechain-polkadot).
-The types are generated during the compile step and copied to `test/*/typedContract/` directory, along with the contract artifacts in the `test/*/artifacts/` directory. If you need only the types generated
+The types are generated during the compile step and copied to `typedContract/contract_nae` directory, and in the `tests/*/artifacts/` directory. If you need only the types generated
 (if you for example deleted or edited them), you can do that without going through the whole compilation step by using `swanky contract typegen` command.
 
-Running `swanky contract test CONTRACT_NAME` will detect all `*.test.ts` files in the `test/contract_name/` directory, and run them sequentially, or in all directories inside `test/` if you pass the `-a`/`--all` flag.
+Running `swanky contract test CONTRACT_NAME` will detect all `*.test.ts` files in the `tests/contract_name/` directory, and run them sequentially, or in all directories inside `tests/` if you pass the `-a`/`--all` flag.
 
 <Figure caption="Run tests for a contract" src={require('../img/swanky/test.png').default} width="65%"/>
 
@@ -225,7 +256,7 @@ If you want to avoid the warnings anyway, you can run tests as a yarn/npm comman
 `npm run test`
 :::
 
-Web based report will be generated and stored in `artifacts/` directory. You can copy the path of the reports and use the `serve` app to view them in browser. (`serve` is included in swanky-dev-container)
+Web based report will be generated and stored in `tests/*/testReports` directory. You can copy the path of the reports and use the `serve` app to view them in browser. (`serve` is included in swanky-dev-container)
 
 ```
 serve PATH_TO_REPORTS
@@ -235,13 +266,13 @@ serve PATH_TO_REPORTS
 
 _Resources:_
 
-- [_`swanky contract test` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-test-contractname)
+- [_`swanky contract test` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-contract-test-contractname)
 
 #### Deploy your contract
 
 When your contract is compiled and tested, you can deploy it to a local node or a remote network.
 
-You will need to supply account you wish to deploy the contract from (`-account`), max amount of gas to be used (`-g`), and any arguments required by your contract's constructor (`-a`).
+You will need to supply account you wish to deploy the contract from (`--account`), and any arguments required by your contract's constructor (`-a`).
 
 By default, your contract will be deployed to a local node, but you can pass a custom network via `-n`/`--network` flag. Available networks are configured in `swanky.config.json` file.
 
@@ -251,7 +282,7 @@ Successfully running the `deploy` command will print out the address your contra
 
 _Resources:_
 
-- [_`swanky contract deploy` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-deploy-contractname)
+- [_`swanky contract deploy` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-contract-deploy-contractname)
 
 #### Run queries and transactions
 
@@ -280,8 +311,8 @@ Keep in mind that the transaction will fail if you provide too low a value.
 
 _Resources:_
 
-- [_`swanky contract query` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-query-contractname-messagename)
-- [_`swanky contract tx` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-tx-contractname-messagename)
+- [_`swanky contract query` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-contract-query-contractname-messagename)
+- [_`swanky contract tx` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-contract-tx-contractname-messagename)
 
 #### Add a new contract from template
 
@@ -293,7 +324,7 @@ The contract will be referred by `name` when using the relevant contract command
 
 _Resources:_
 
-- [_`swanky contract new` command usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-contract-new-contractname)
+- [_`swanky contract new` command usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-contract-new-contractname)
 
 ### Interact with a local node
 
@@ -309,6 +340,12 @@ If you want to reset the node state, use the `swanky node purge` command.
 Note that node needs to be running if you are using a default local network with `deploy`, `query` and `tx` commands.
 :::
 
+:::info
+If you chose not to download the swanky-node during the `init`, or you changed the OS environment (for example switched to inside a dev container after running `init` on host OS, or vice-versa), you can run
+`swanky node install`
+to download the node for currently running platform.
+:::
+
 :::caution
 If you want to use an external UI to interact with the node, you might run into some CORS issues.
 
@@ -317,7 +354,7 @@ This can be solved by passing a custom array of whitelisted urls using the `--rp
 
 _Resources:_
 
-- [_`swanky node` commands usage manual_](https://github.com/AstarNetwork/swanky-cli/tree/master/packages/cli#swanky-node-purge)
+- [_`swanky node` commands usage manual_](https://github.com/AstarNetwork/swanky-cli#swanky-node-install)
 
 ## Using plugins
 
