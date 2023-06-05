@@ -55,7 +55,7 @@ const App = () => {
 
 ### Get contract
 
-To connect to your contract, use the SDK’s `[getContract](https://portal.thirdweb.com/typescript/sdk.thirdwebsdk.getcontract)`method.
+To connect to your contract, use the SDK’s [`getContract`](https://portal.thirdweb.com/typescript/sdk.thirdwebsdk.getcontract) method.
 
 ```jsx
 import { useContract } from "@thirdweb-dev/react";
@@ -68,6 +68,7 @@ function App() {
 ### Calling contract functions
 
 - For extension based functions, use the built-in supported hooks. The following is an example using the NFTs extension to access a list of NFTs owned by an address- `useOwnedNFTs`
+
   ```jsx
   import { useOwnedNFTs, useContract, useAddress } from "@thirdweb-dev/react";
 
@@ -80,8 +81,11 @@ function App() {
     const { data, isLoading, error } = useOwnedNFTs(contract, address);
   }
   ```
+
   Full reference: https://portal.thirdweb.com/react/react.usenft
+
 - Use the `useContractRead` hook to call any read functions on your contract by passing in the name of the function you want to use.
+
   ```jsx
   import { useContractRead, useContract } from "@thirdweb-dev/react";
 
@@ -93,8 +97,11 @@ function App() {
     const { data, isLoading, error } = useContractRead(contract, "getName");
   }
   ```
+
   Full reference: https://portal.thirdweb.com/react/react.usecontractread
+
 - Use the `useContractWrite` hook to call any writefunctions on your contract by passing in the name of the function you want to use.
+
   ```jsx
   import {
     useContractWrite,
@@ -123,6 +130,7 @@ function App() {
     );
   }
   ```
+
   Full reference: [https://portal.thirdweb.com/react/react.usecontract](https://portal.thirdweb.com/react/react.usecontractread)write
 
 ### Connect Wallet
