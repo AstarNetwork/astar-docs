@@ -15,7 +15,20 @@ For Astar and Shiden applications, we _highly_ recommend [running your own netwo
 
 ## thirdweb
 
-### Create contract
+### Introduction
+
+thirdweb is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks
+
+### Prerequisites
+
+1. Latest version of [Node.js](https://nodejs.org/) installed.
+2. Astar network wallet set up with basic usage knowledge.
+3. Sufficient funds in the wallet for contract deployment gas fees.
+4. Basic knowledge of Solidity.
+
+### Getting started
+
+#### Creating contract
 
 To create a new smart contract using thirdweb CLI, follow these steps:
 
@@ -34,7 +47,7 @@ To create a new smart contract using thirdweb CLI, follow these steps:
 3. Once created, navigate to your project’s directory and open in your preferred code editor.
 4. If you open the `contracts` folder, you will find your smart contract; this is your smart contract written in Solidity.
 
-   The following is code for an ERC721Base contract without specified extensions. It implements all of the logic inside the [`ERC721Base.sol`](https://github.com/thirdweb-dev/contracts/blob/main/contracts/base/ERC721Base.sol) contract; which implements the [`ERC721A`](https://github.com/thirdweb-dev/contracts/blob/main/contracts/eip/ERC721A.sol) standard.
+   The following is code for an ERC721Base contract without specified extensions. It implements all of the logic inside the `[ERC721Base.sol](https://github.com/thirdweb-dev/contracts/blob/main/contracts/base/ERC721Base.sol)` contract; which implements the `[ERC721A](https://github.com/thirdweb-dev/contracts/blob/main/contracts/eip/ERC721A.sol)` standard.
 
    ```bash
    // SPDX-License-Identifier: MIT
@@ -66,14 +79,14 @@ Alternatively, you can deploy a prebuilt contract for NFTs, tokens, or marketpla
 
 1. Go to the thirdweb Explore page: https://thirdweb.com/explore
 
-   ![thirdweb Explore page featuring pre-built smart contracts](/img/thirdweb-explore.png)
+   ![thirdweb Explore page](/img/thirdweb-explore.png)
 
 2. Choose the type of contract you want to deploy from the available options: NFTs, tokens, marketplace, and more.
 3. Follow the on-screen prompts to configure and deploy your contract.
 
 > For more information on different contracts available on Explore, check out [thirdweb’s documentation.](https://portal.thirdweb.com/pre-built-contracts)
 
-### Deploy contract
+#### Deploying contract
 
 Deploy allows you to deploy a smart contract to any EVM compatible network without configuring RPC URLs, exposing your private keys, writing scripts, and other additional setup such as verifying your contract.
 
@@ -99,7 +112,9 @@ Deploy allows you to deploy a smart contract to any EVM compatible network witho
 
 For additional information on Deploy, please reference [thirdweb’s documentation](https://portal.thirdweb.com/deploy).
 
-If you have any further questions or encounter any issues during the process, please reach out to thirdweb support at [support.thirdweb.com](http://support.thirdweb.com/).
+### Learn more
+
+If you have any further questions or encounter any issues during the process, please [reach out to thirdweb support](https://support.thirdweb.com).
 
 ## Hardhat
 

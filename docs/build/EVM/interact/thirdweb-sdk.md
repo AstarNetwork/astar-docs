@@ -4,6 +4,20 @@ sidebar_position: 1
 
 # thirdweb SDK
 
+## Introduction
+
+thirdweb is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks
+
+## Prerequisites
+
+1. Latest version of [Node.js](https://nodejs.org/) installed.
+2. Astar network wallet set up with basic usage knowledge.
+3. Basic knowledge of React.
+
+## Getting started
+
+### Creating an app
+
 thirdweb provides several SDKs to allow you to interact with your contract including: [React](https://portal.thirdweb.com/react), [React Native](https://portal.thirdweb.com/react-native), [TypeScript](https://portal.thirdweb.com/typescript), [Python](https://portal.thirdweb.com/python), [Go](https://portal.thirdweb.com/go), and [Unity](https://portal.thirdweb.com/unity).
 
 This document will show you how to interact with your contract deployed to Astar using React
@@ -22,7 +36,7 @@ or install it into your existing project by running:
 npx thirdweb install
 ```
 
-### Initialize SDK On Astar
+### Initialize SDK on Astar
 
 Wrap your application in the `ThirdwebProvider` component and change the `activeChain` to Astar
 
@@ -39,9 +53,9 @@ const App = () => {
 };
 ```
 
-### Get Contract
+### Get contract
 
-To connect to your contract, use the SDK’s [`getContract`](https://portal.thirdweb.com/typescript/sdk.thirdwebsdk.getcontract) method.
+To connect to your contract, use the SDK’s `[getContract](https://portal.thirdweb.com/typescript/sdk.thirdwebsdk.getcontract)`method.
 
 ```jsx
 import { useContract } from "@thirdweb-dev/react";
@@ -51,10 +65,9 @@ function App() {
 }
 ```
 
-### Calling Contract Functions
+### Calling contract functions
 
 - For extension based functions, use the built-in supported hooks. The following is an example using the NFTs extension to access a list of NFTs owned by an address- `useOwnedNFTs`
-
   ```jsx
   import { useOwnedNFTs, useContract, useAddress } from "@thirdweb-dev/react";
 
@@ -67,11 +80,8 @@ function App() {
     const { data, isLoading, error } = useOwnedNFTs(contract, address);
   }
   ```
-
   Full reference: https://portal.thirdweb.com/react/react.usenft
-
 - Use the `useContractRead` hook to call any read functions on your contract by passing in the name of the function you want to use.
-
   ```jsx
   import { useContractRead, useContract } from "@thirdweb-dev/react";
 
@@ -83,11 +93,8 @@ function App() {
     const { data, isLoading, error } = useContractRead(contract, "getName");
   }
   ```
-
   Full reference: https://portal.thirdweb.com/react/react.usecontractread
-
 - Use the `useContractWrite` hook to call any writefunctions on your contract by passing in the name of the function you want to use.
-
   ```jsx
   import {
     useContractWrite,
@@ -116,7 +123,6 @@ function App() {
     );
   }
   ```
-
   Full reference: [https://portal.thirdweb.com/react/react.usecontract](https://portal.thirdweb.com/react/react.usecontractread)write
 
 ### Connect Wallet
@@ -169,4 +175,6 @@ function App() {
 
 Full reference: https://portal.thirdweb.com/react/connecting-wallets
 
-If you have any further questions or encounter any issues during the process, please reach out to thirdweb support at [support.thirdweb.com](http://support.thirdweb.com/).
+## Learn more
+
+If you have any further questions or encounter any issues during the process, please [reach out to thirdweb support](https://support.thirdweb.com).
