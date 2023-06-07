@@ -121,7 +121,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discord.gg/mWGt9bH59s',
+                href: 'https://discord.gg/astarnetwork',
               },
               {
                 label: 'Twitter',
