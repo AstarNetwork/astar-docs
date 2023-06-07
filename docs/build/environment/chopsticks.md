@@ -95,6 +95,23 @@ To create new blocks, you'll need to connect to the websocket port of that node.
 wscat -c ws://127.0.0.1:8000 -x '{ "jsonrpc": "2.0", "id": 1, "method": "dev_newBlock", "params": [{"count": 100}] }'
 ```
 
+You can also do it with the WsProvider:
+
+```js
+const { WsProvider } = require("@polkadot/api");
+
+async function main() {
+  const provider = new WsProvider("ws://localhost:8000");
+  await provider.isReady;
+  await provider.send("dev_newBlock", [{ count: 10 }]);
+  console.log("10 new blocks created");
+}
+
+main()
+  .catch(console.error)
+  .finally(() => process.exit());
+```
+
 ## Config Settings
 
 In the short form of the parachain/relaychain cli parameter, the configs are getting pulled from the github repo on demand. For example, here is [Astar's](https://github.com/AcalaNetwork/chopsticks/blob/master/configs/astar.yml) config. You can always download it locally and modify it's content to suit your needs. Note that the configs already has Alice with:
