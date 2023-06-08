@@ -12,7 +12,7 @@ A Substrate ecological explorer that not only allows ordinary users to view WASM
 
 ### View WASM Transactions and Detail
 
-Visit [Transactions](https://astar.subscan.io/wasm_transaction) under WASM category in Subscan navbar.
+Visit [Transactions](https://astar.subscan.io/wasm_transaction) under the WASM category in Subscan navbar.
 
 ![transactions](./static/img/tutorial/subscan/transactions.png)
 
@@ -26,7 +26,7 @@ Visit [Transactions](https://astar.subscan.io/wasm_transaction) under WASM categ
 
 ![contracts](./static/img/tutorial/subscan/contracts.png)
 
-Click on the link in list item to view contract Detail.
+Click on the link in the list item to view contract detail.
 
 ![contract_detail](./static/img/tutorial/subscan/contract_detail.png)
 
@@ -50,11 +50,11 @@ Visit [Contract tab in contract detail](https://astar.subscan.io/wasm_contract/a
 
 ## Troubleshooting
 
-**I've submitted the contract verify form but the contract is still not verifed**
+**I've submitted the contract verification form, but the contract is still not verified**
 
 It happens mainly in two situations:
-1. The verifying process in still undergoing, just wait for 5 to 10 minutes and check again
-2. Verification failed. In this case, you'll see Last Compiled Code Hash as follows, please check the parameters and confirm using the above docker image for compilation.
+1. The verifying process is still undergoing. Just wait for 5 to 10 minutes and check again
+2. Verification failed. In this case, you'll see Last Compiled Code Hash as follows. Please check the parameters and confirm using the above docker image for compilation.
 
 ![failed](./static/img/tutorial/subscan/failed.png)
 
