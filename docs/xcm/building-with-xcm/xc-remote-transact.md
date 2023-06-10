@@ -76,15 +76,15 @@ For example, let's assume `Alice` is sending an XCM sequence from `Polkadot` to 
 | Alice's Address in Polkadot      | 15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5       |
 | Alice's Public Key  | 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d  |
 | Alice's MultiLoc in Astar | { parents: 1, interior: AccountId32 {network: NetworkId::Polkadot, id: 0xd4359...a27d } } |
-| Alice's Derived Account in Astar | 5HNGwjahXUvxBe4wNMJEb3SHhdFWaGxyuSYvsW77K9EMSy4Z |
+| Alice's Derived Account in Astar | 5EbMT4dyi1ohgYVwLUvWAoCZCznHMT1Dk5B7GAaGJGcAMRaG |
 
 You can use the `xcm-tools` binary to generate the derived address, based on your needs.
 
 :::caution
-Be aware that derived accounts may change with the introduction of **XCM v3**.
-This is because `AccountId32` type's `network` parameter will become an `Option<NetworkId>`.
+Be aware that derived accounts have been changed with the introduction of **XCM v3**.
+This is because `AccountId32` type's `network` parameter has become an `Option<NetworkId>`.
 
-**XCM v3** is still under development so whether this will happen still remains uncertain.
+
 :::
 
 ## Remotely Transact via EVM Smart Contracts
