@@ -83,8 +83,6 @@ You can use the `xcm-tools` binary to generate the derived address, based on you
 :::caution
 Be aware that derived accounts have been changed with the introduction of **XCM v3**.
 This is because `AccountId32` type's `network` parameter has become an `Option<NetworkId>`.
-
-
 :::
 
 ## Remotely Transact via EVM Smart Contracts
