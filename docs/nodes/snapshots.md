@@ -6,6 +6,7 @@ sidebar_position: 4
 
 Generally speaking, using database snapshots is discouraged, it is a best practice to synchronize database from scratch.
 In some particular cases, it may be needed to use a parachain snapshot. Stakecraft is providing archive db snapshots for Astar and Shiden at <https://snapshots.stakecraft.com/>.
+Note: these are archive snapshots only and they don't work on pruned node.
 
 ## Stakecraft snapshots usage
 
