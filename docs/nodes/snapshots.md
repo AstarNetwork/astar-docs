@@ -4,8 +4,8 @@ sidebar_position: 4
 
 # Snapshots
 
-Generally speaking, using database snapshots is is discouraged, it is a best practice to synchronize database from scratch.
-In some particular cases, it may be needed to use a parachain snapshot. Stakecraft is providing snapshots for Astar and Shiden at <https://snapshots.stakecraft.com/>.
+Generally speaking, using database snapshots is discouraged, it is a best practice to synchronize database from scratch.
+In some particular cases, it may be needed to use a parachain snapshot. Stakecraft is providing archive db snapshots for Astar and Shiden at <https://snapshots.stakecraft.com/>.
 
 ## Stakecraft snapshots usage
 
@@ -21,6 +21,10 @@ cd {BASE_PATH}/chains/{CHAIN}/db/full
 
 # download latest snapshot
 wget -O - {STAKECRAFT_WEBSITE_SNAPSHOT} | tar xf -
+
+# pay attention to file ownership if needed
+chown -R astar:astar {BASE_PATH}/chains/{CHAIN}/db/full
+
 ```
 
 Note: `{BASE_PATH}` is the path specified for chain data in the node command
