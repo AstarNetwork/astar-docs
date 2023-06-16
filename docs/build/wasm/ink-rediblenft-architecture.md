@@ -1,7 +1,4 @@
----
-sidebar_position: 14
----
-# ink!redible NFT viewer architecture  
+# ink!redible NFT architecture  
 
 This guide will give a brief overview of the !inkredible NFT on Astar.
 
@@ -74,7 +71,7 @@ Sometimes, when trying to update during deployment on aquarium console, do not r
 
 - Remove the existing squad and creates a new one. it works perfectly
 
-###UI
+### UI
 **Assets**
 Displays all tokens owner by a connected user. The information about token ownership comes from the indexer above. List of all mintable collections is fetched from Polkaverse.
 ![inkredible_architecture03](img/inkredible_architecture03.png)
