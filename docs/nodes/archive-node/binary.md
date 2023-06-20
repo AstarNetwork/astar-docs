@@ -158,7 +158,7 @@ WantedBy=multi-user.target
 </Tabs>
 
 :::important
-EVM RPC calls are disabled by default, and require additional flag to be enabled. Please refer [to this page](/docs/build/EVM/developer-tooling.md#your-own-rpc-server) for more info.
+EVM RPC calls are disabled by default, and require additional flag to be enabled. Please refer [to this page](/docs/build/EVM/developer-tooling/own-RPC.md) for more info.
 :::
 
 Start the service:
