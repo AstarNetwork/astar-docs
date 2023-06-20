@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-## Your Own RPC Server
+# Your Own RPC Server
 
 For EVM developers and projects, it is not an unreasonable expectation that they should have their own managed EVM endpoints. Relying on public endpoints can introduce additional risk due to centralizaion or improper maintenance, and make them single points of failure.
 

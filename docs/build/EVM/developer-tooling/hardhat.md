@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-## Hardhat
+# Hardhat
 
 ### Initialize Your Project
 

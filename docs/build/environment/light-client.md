@@ -100,7 +100,7 @@ Congratulations! You have successfully connected to the Astar Network using a li
 ## Run it in Replit
 
 ```mdx-code-block
-import Iframe from 'react-iframe';
+`import Iframe from 'react-iframe';`
 
 <Iframe
   url="https://replit.com/@gluneau/Light-Client-Demo-for-Astar-and-Shiden?embed=true"

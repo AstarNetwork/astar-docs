@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-## thirdweb
+
 
 ### Introduction
 

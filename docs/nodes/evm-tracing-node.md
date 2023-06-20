@@ -28,7 +28,7 @@ EVM tracing node binary is different because includes additional tracing feature
 
 :::important
 
-EVM RPC calls are disabled by default, and require additional flag to be enabled. Please refer [to this page](/docs/build/EVM/developer-tooling.md#your-own-rpc-server) for more info.
+EVM RPC calls are disabled by default, and require additional flag to be enabled. Please refer [to this page](/docs/build/EVM/developer-tooling/own-RPC) for more info.
 
 :::
 

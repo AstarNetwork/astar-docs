@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 ---
-# Banana SDK Integration
+# Banana SDK
 
 ## Introduction
 In this tutorial we will show how you can integrate Banana Wallet to your JavaScript or TypeScript-based frontend. We will demonstrate how to create a new wallet or connect an existing Banana Wallet on any dApp on Astar Network.
