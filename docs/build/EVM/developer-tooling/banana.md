@@ -63,11 +63,11 @@ For this demo we had already deployed it here: `0xCC497f137C3A5036C043EBd62c36F1
 
 ### Step 4: Building the front end
 
-We will have a simple front end with some buttons to interact with the blockchain. Although Banana SDK provides you with a smart contract wallet you don't need worry about its deployment. Everything is handled by us in the SDK so you can just concentrate on building your Dapp.
+We will have a simple front end with some buttons to interact with the blockchain. Although Banana SDK provides you with a smart contract wallet you don't need worry about its deployment. Everything is handled by us in the SDK so you can concentrate on building your dApp.
 
 ![](https://hackmd.io/_uploads/ryPnrYEPh.png)
 
-For more information about building the fron tend please refer to this  [guide](https://banana-wallet-docs.rizelabs.io/integration/sdk-integration-tutorial/banana-less-than-greater-than-shibuya#building-the-frontend).
+For more information about building the frontend please refer to this [guide](https://banana-wallet-docs.rizelabs.io/integration/sdk-integration-tutorial/banana-less-than-greater-than-shibuya#building-the-frontend).
 
 ### Step 5: Imports
 
@@ -79,7 +79,7 @@ import { ethers } from "ethers";
 import { SampleAbi } from "./SampleAbi";
 ```
 
-Download app.css and SampleAbi from here [App.css](https://github.com/Banana-Wallet/banana-tutorial/blob/feat/chaido-tutorial/src/App.css) and [SampleAbi.js](https://github.com/Banana-Wallet/banana-tutorial/blob/feat/chaido-tutorial/src/SampleAbi.js)
+Download app.css and SampleAbi.js from here [App.css](https://github.com/Banana-Wallet/banana-tutorial/blob/feat/chaido-tutorial/src/App.css) and [SampleAbi.js](https://github.com/Banana-Wallet/banana-tutorial/blob/feat/chaido-tutorial/src/SampleAbi.js)
 
 Initializing some states for demo
 
@@ -107,7 +107,7 @@ useEffect(() => {
   };
 ```
 
-For simplicity here we are creating SDK instance for Shibuya testnet network.
+For simplicity in this example we are creating an SDK instance for Shibuya testnet.
 
 Creating Wallet
 
@@ -129,7 +129,7 @@ const createWallet = async () => {
  
 ```
 
-Developers need to call the `createWallet` method which will inherently ask user for wallet name once username is provided wallet would be initialized for user and the method would return an instance of wallet.
+Developers need to call the `createWallet` method which will inherently ask the user for a wallet name. Once username is provided, the wallet is initialized for the user, and the method returns an instance of the wallet.
 
 Connecting wallet
 
@@ -159,7 +159,7 @@ const connectWallet = async () => {
   };
   
 ```
-When the user wallet is created the wallet's public data is already cached into the user's cookie. The `getWalletName` function fetches the `walletName` from the cookie and once fetched we need to pass `walletName` into `connectWallet` which internally initializes and configures some wallet parameters and returns a wallet instance
+When the user wallet is created the wallet's public data is cached in the user's cookie. Once the `getWalletName` function fetches `walletName` from the cookie, we pass `walletName` into `connectWallet` which  initializes and configures some wallet parameters internally, and returns a wallet instance.
 
 Get ChainId
 
@@ -172,7 +172,7 @@ Get ChainId
     setIsLoading(false);
   };
 ```
-Getting `chainId` is pretty straightforward forward devs just have to extract the signer from wallet once signer is extracted you can do `getChainId` to get the `chainId` of the current network.
+Getting `chainId` is pretty straight forward. Developers should extract the *signer* from the wallet and use `getChainId` to obtain the `chainId` of the current network.
 
 Get Network
 
@@ -186,7 +186,7 @@ Get Network
   };
 ```
 
-Extracting the network is as easy as it looks. Developers just need to extract provider from wallet and from provider get network info using `getNetwork` method.
+Extracting the network is as easy as it looks. Developers should extract the *provider* from the wallet and use the `getNetwork` method to obtain the chain info.
 
 Make transaction
 
@@ -218,8 +218,8 @@ Make transaction
   };
 ```
 
-For making a transaction. you just need to create a transaction object. Then extract signer from the wallet instance you received and just make transaction by passing transaction object to the send transaction method.
-PS: Make sure your wallet is funded before you make any transaction.
+To initiate a transaction you will create a transaction object. Extract *signer* from the wallet instance and initiate a transaction by passing the *transaction object* to the *send transaction* method.
+PS: Make sure your wallet is funded before you initiate transactions.
 
 Signing message
 
@@ -234,15 +234,15 @@ Signing message
   };
 ```
 
-Signing a message is as simple as it looks. You just need to pass a message which you need to get signed once signed the method returns an object { messageSigned: "", signature: "" }
+Signing a message is as simple as it looks. Pass a message that needs to be signed, and the method will return an object { messageSigned: "", signature: "" }
 
 messageSigned: message that was signed. 
 
 signature: signature for the signed message.
 
-### Step 7: Putting frontend
+### Step 7: Building the frontend
 
-JSX code for front end
+JSX code for frontend
 
 ```
 <div className="App">
@@ -275,7 +275,7 @@ JSX code for front end
 
 ## Troubleshooting
 
-If you are facing webpack 5 polyfill issue please try to get it fixed using `react-app-rewired`.
+If you are facing a webpack 5 polyfill issue please try using `react-app-rewired`.
 
 ```
 npm install react-app-rewired 
@@ -283,7 +283,7 @@ npm install react-app-rewired
 npm install stream-browserify constants-browserify crypto-browserify os-browserify path-browserify process stream-browserify buffer ethers@^5.7.2
 ```
 
-create a file name `config-overrides.js` with below content.
+create a file name `config-overrides.js` using the content below.
 ```
 const { ProvidePlugin }= require("webpack")
 
@@ -334,8 +334,8 @@ If you are still unable to resolve the issue please post your query to Banana Di
 
 ## Learn more
 
-To learn more about Banana Wallet headover to [banana docs](https://banana-wallet-docs.rizelabs.io/)
+To learn more about Banana Wallet head over to [banana docs](https://banana-wallet-docs.rizelabs.io/)
 
-Full tutorial code is avalaible [here](https://github.com/Banana-Wallet/banana-tutorial/tree/feat/shibuya-tutorial)
+Full tutorial code is available [here](https://github.com/Banana-Wallet/banana-tutorial/tree/feat/shibuya-tutorial)
 
-If you dapp already uses Rainbowkit then you can direclty use Banana Wallet on Shibuya testnet directly using rainbowkit. Please refer to [this](https://banana-wallet-docs.rizelabs.io/integration/sdk-integration-tutorial/banana-less-than-greater-than-shibuya) doc for more information.
+If your dApp already uses Rainbowkit then you can use Banana Wallet directly on Shibuya testnet. Please refer [here](https://banana-wallet-docs.rizelabs.io/integration/sdk-integration-tutorial/banana-less-than-greater-than-shibuya) for more information.
