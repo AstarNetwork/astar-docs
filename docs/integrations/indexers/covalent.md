@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Covalent Indexing and Querying API
 [Covalent](https://www.covalenthq.com/?utm_source=astar&utm_medium=partner-docs) is a hosted blockchain data solution providing access to historical and current on-chain data for 100+ supported blockchains, including [Astar](https://www.covalenthq.com/docs/networks/astar/?utm_source=astar&utm_medium=partner-docs).
 
@@ -13,7 +17,6 @@ Covalent maintains a full archival copy of every supported blockchain, meaning e
 
 > **[Sign up to start building on Astar](https://www.covalenthq.com/platform/?utm_source=astar&utm_medium=partner-docs)**
 
-&nbsp;
 ## Unified API
 
 [![example-api-response-json](https://www.datocms-assets.com/86369/1686098284-example-api-response-json-astar.png)](https://www.covalenthq.com/docs/api/balances/get-token-balances-for-address/?utm_source=astar&utm_medium=partner-docs)
@@ -25,9 +28,10 @@ The Covalent API is RESTful and offers the following for Astar:
 | Response Formats | JSON, CSV |
 | Real-Time Data Latency | 2 blocks |
 | Batch Data Latency | 30 minutes |
-| Supported Network: `chainName`, `chainId` | Mainnet: `astar-mainnet`, `592` <br> Testnet: `astar-shibuya`, `81` |
-| API Tiers | [Free tier](https://www.covalenthq.com/docs/unified-api/pricing/?utm_source=astar&utm_medium=partner-docs#free-tier) <br> [Premium tier](https://www.covalenthq.com/docs/unified-api/pricing/?utm_source=astar&utm_medium=partner-docs#premium-tier) |
-| API Categories | [Balances](https://www.covalenthq.com/docs/api/balances/get-token-balances-for-address/?utm_source=astar&utm_medium=partner-docs) <br> [NFTs](https://www.covalenthq.com/docs/api/nft/get-nfts-for-address/?utm_source=astar&utm_medium=partner-docs) <br> [Transactions](https://www.covalenthq.com/docs/api/transactions/get-transactions-for-address/?utm_source=astar&utm_medium=partner-docs) <br> [Security](https://www.covalenthq.com/docs/api/security/get-token-approvals-for-address/?utm_source=astar&utm_medium=partner-docs) <br> [Log Events & Others](https://www.covalenthq.com/docs/api/base/get-log-events-by-contract-address/?utm_source=astar&utm_medium=partner-docs)
+| Supported Network: `chainName`, `chainId` | Mainnet: `astar-mainnet`, `592` <br /> Testnet: `astar-shibuya`, `81` |
+| API Tiers | [Free tier](https://www.covalenthq.com/docs/unified-api/pricing/?utm_source=astar&utm_medium=partner-docs#free-tier) <br /> [Premium tier](https://www.covalenthq.com/docs/unified-api/pricing/?utm_source=astar&utm_medium=partner-docs#premium-tier) |
+| API Categories | [Balances](https://www.covalenthq.com/docs/api/balances/get-token-balances-for-address/?utm_source=astar&utm_medium=partner-docs) <br /> [NFTs](https://www.covalenthq.com/docs/api/nft/get-nfts-for-address/?utm_source=astar&utm_medium=partner-docs) <br /> [Transactions](https://www.covalenthq.com/docs/api/transactions/get-transactions-for-address/?utm_source=astar&utm_medium=partner-docs) <br /> [Security](https://www.covalenthq.com/docs/api/security/get-token-approvals-for-address/?utm_source=astar&utm_medium=partner-docs) <br /> [Log Events & Others](https://www.covalenthq.com/docs/api/base/get-log-events-by-contract-address/?utm_source=astar&utm_medium=partner-docs)
+
 
 ### Get started
 - [API Key](https://www.covalenthq.com/platform/?utm_source=astar&utm_medium=partner-docs) - sign up for free
