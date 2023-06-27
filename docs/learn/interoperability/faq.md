@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# FAQ
+# XCM FAQ
 
 ### Q: Is there a way to see my DOT/SDN balance (on Astar/Shiden) on the Polkadot.js?
 

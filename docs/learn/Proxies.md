@@ -1,7 +1,7 @@
 # Proxy accounts
 
-**Why use Proxy?**
----
+## Overview
+
 Pallet Proxy enables accounts to grant specific permissions to other accounts, empowering them to make calls on their behalf, thereby safeguarding the security of the underlying accounts.
 On this page, you will find a detailed overview of the various proxy types, extrinsics, general definitions, and features associated with the proxy pallet. Additionally, there are tutorials available to help you understand and utilize the proxy functionality effectively.
 
