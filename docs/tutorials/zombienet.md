@@ -1,4 +1,4 @@
-# How to set up a Zombienet for XCM testing
+# Test XCM
 
 ## Overview
 

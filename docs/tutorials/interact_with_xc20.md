@@ -1,4 +1,4 @@
-# How to create and interact with a mintable XC20 asset via Solidity smart contract
+# XC20 Assets
 
 ## Overview
 
@@ -13,7 +13,6 @@ In this guide, we will support you on:
 
 ---
 
-## Overview
 ### What is an XC20
 
 XC20 is an asset standard introduced by PureStake Technologies, which combines the power of Substrate assets (native cross-chain interoperability) but allows users and developers to interact with them through a familiar [ERC20 interface] (https://github.com/PureStake/moonbeam/blob/master/precompiles/assets-erc20/ERC20.sol) via a precompile contract (Ethereum API). With XC20, developers will be able to create assets that are both EVM-usable and cross-chain compatible via XCM.

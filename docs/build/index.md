@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # Build on Astar
 ![Documentation of all the resources builders need in order to start testing, deploying and interacting with smart contracts on the Astar network] (assets/build.png)
 
