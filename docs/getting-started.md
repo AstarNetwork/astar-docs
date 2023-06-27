@@ -7,7 +7,11 @@ Dive right into dApp building on Astar. In the Build section you can find all th
 
 ## Overview of Docs
 
-### [Understand Astar concepts and core features](/docs/learn/)
+Dive right into dApp building on Astar. In the Build section you can find all the necessary information about developer tooling, setting up the build environment, protocol specificaitons, and more.
+
+## Overview of Docs
+
+### [Understand Astar concepts and core features](/docs/learn/)[Understand Astar concepts and core features](/docs/learn/)
 ### [Create an account](/docs/learn/Introduction/create_account)
 ###
 ### [Learn how to send transactions, stake on Astar, and more.](/docs/use) 
