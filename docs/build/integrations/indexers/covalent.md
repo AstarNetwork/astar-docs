@@ -2,128 +2,64 @@
 sidebar_position: 3
 ---
 
-# Covalent
+# Covalent Indexing and Querying API
+[Covalent](https://www.covalenthq.com/?utm_source=astar&utm_medium=partner-docs) is a hosted blockchain data solution providing access to historical and current on-chain data for 100+ supported blockchains, including [Astar](https://www.covalenthq.com/docs/networks/astar/?utm_source=astar&utm_medium=partner-docs).
 
-[Covalent]: https://www.covalenthq.com/?utm_source=astar&utm_medium=partner-docs
+Covalent maintains a full archival copy of every supported blockchain, meaning every balance, transaction, log event, and NFT asset data is available from the genesis block. This data is available via:
 
-## Introduction
+1. [Unified API](#unified-api) - Incorporate blockchain data into your app with a familiar REST API
+2. [Increment](#increment) - Create and embed custom charts with no-code analytics
 
-Covalent​ provides a unified API to bring full transparency and visibility to assets across all blockchain networks including Astar.
+**Use Covalent if you need:**
+* Structured and enhanced on-chain data well beyond what you get from RPC providers
+* Broad and deep multi-chain data at scale
+* Enterprise-grade performance
 
-To get started, sign up for an [API Key] (https://www.covalenthq.com/platform/?utm_source=astar&utm_medium=partner-docs).
+> **[Sign up to start building on Astar](https://www.covalenthq.com/platform/?utm_source=astar&utm_medium=partner-docs)**
 
-### Developer Mode (JSON)
+&nbsp;
+## Unified API
 
-![5] (img/5.webp)
+[![example-api-response-json](https://www.datocms-assets.com/86369/1686098284-example-api-response-json-astar.png)](https://www.covalenthq.com/docs/api/balances/get-token-balances-for-address/?utm_source=astar&utm_medium=partner-docs)
 
-### Analyst Mode
+The Covalent API is RESTful and offers the following for Astar:
 
-![6] (img/6.webp)
+| **Features**| |
+|---|---|
+| Response Formats | JSON, CSV |
+| Real-Time Data Latency | 2 blocks |
+| Batch Data Latency | 30 minutes |
+| Supported Network: `chainName`, `chainId` | Mainnet: `astar-mainnet`, `592`  Testnet: `astar-shibuya`, `81` |
+| API Tiers | [Free tier](https://www.covalenthq.com/docs/unified-api/pricing/?utm_source=astar&utm_medium=partner-docs#free-tier)  [Premium tier](https://www.covalenthq.com/docs/unified-api/pricing/?utm_source=astar&utm_medium=partner-docs#premium-tier) |
+| API Categories | [Balances](https://www.covalenthq.com/docs/api/balances/get-token-balances-for-address/?utm_source=astar&utm_medium=partner-docs)  [NFTs](https://www.covalenthq.com/docs/api/nft/get-nfts-for-address/?utm_source=astar&utm_medium=partner-docs)  [Transactions](https://www.covalenthq.com/docs/api/transactions/get-transactions-for-address/?utm_source=astar&utm_medium=partner-docs)  [Security](https://www.covalenthq.com/docs/api/security/get-token-approvals-for-address/?utm_source=astar&utm_medium=partner-docs)  [Log Events & Others](https://www.covalenthq.com/docs/api/base/get-log-events-by-contract-address/?utm_source=astar&utm_medium=partner-docs)
 
-The Covalent API is RESTful and offers the following out-of-box features for Astar:
-​
+### Get started
+- [API Key](https://www.covalenthq.com/platform/?utm_source=astar&utm_medium=partner-docs) - sign up for free
+- [Quickstart](https://www.covalenthq.com/docs/unified-api/quickstart/?utm_source=astar&utm_medium=partner-docs) - summary of key resources to get you building immediately on blockchain
+- [API Reference](https://www.covalenthq.com/docs/api/?utm_source=astar&utm_medium=partner-docs) - try all the endpoints directly from your browser
+- [Guides](https://www.covalenthq.com/docs/unified-api/guides/?utm_source=astar&utm_medium=partner-docs) - learn how to build dapps, fetch data and extend your Web3 knowledge
 
-- **Response formats**: JSON and CSV.
-- **Real time response**: 2 blocks.
-- **Batch response**: 30 minutes.
-- **Request volume limit**: None.
-- **Request rate limit**: 5 requests per second.
-- **Base URL**: (<https://api.covalenthq.com/v1/>)
-- **Networks & `chain_id`**
-  - Mainnet Astar - 592
-  - Mainnet Shiden - 336
-  - Testnet - 81
-- **Supported Endpoints**
-  - **Class A**
-    - [Balances] (https://www.covalenthq.com/docs/api/#/0/Get%20token%20balances%20for%20address/USD/592/?utm_source=astar&utm_medium=partner-docs)
-    - [Transactions] (https://www.covalenthq.com/docs/api/#/0/Get%20transactions%20for%20address/USD/592/?utm_source=astar&utm_medium=partner-docs)
-    - [Transfers] (https://www.covalenthq.com/docs/api/#/0/Get%20ERC20%20token%20transfers%20for%20address/USD/592/?utm_source=astar&utm_medium=partner-docs)
-    - [Token Holders] (https://www.covalenthq.com/docs/api/#/0/Get%20token%20holders%20as%20of%20any%20block%20height/USD/592/?utm_source=astar&utm_medium=partner-docs)
-    - [Log Events (Contract Address)] (https://www.covalenthq.com/docs/api/#/0/Get%20log%20events%20by%20contract%20address/USD/592/?utm_source=astar&utm_medium=partner-docs)
-    - [Log Events (Topic Hash)] (https://www.covalenthq.com/docs/api/#/0/Get%20log%20events%20by%20topic%20hash(es)/USD/592/?utm_source=astar&utm_medium=partner-docs)
+## Increment
 
-You can try out the supported endpoints directly in your browser from our [API Reference] (https://covalenthq.com/docs/api/?utm_source=astar&utm_medium=partner-docs) or use the following code examples: 
+[![example-increment-chart](https://www.datocms-assets.com/86369/1684974544-increment-example-partner-docs.png)](https://www.covalenthq.com/platform/increment/#/?utm_source=astar&utm_medium=partner-docs)
 
-**Note: The JSON response format is the same for all endpoints**
+Increment is a novel no-code charting and reporting tool powered by Covalent, revolutionizing how the Web3 space approaches analytics. Many analytics tools let you write SQL to create charts, but *Increment is the only one to encode business logic - Reach, Retention, and Revenue - into an SQL compiler that can write valid SQL for you.*
 
-```json
-❴
-    "data": ..., 
-    "error": false,
-    "error_message": null,
-    "error_code": null
-❵
-```
+### Use cases
+Increment can be used for:
 
-### Curl
+- [Analyzing Blockchain Networks](https://www.covalenthq.com/docs/increment/data-models/chain-gdp/?utm_source=astar&utm_medium=partner-docs)
+- [Analyzing DEXs](https://www.covalenthq.com/docs/increment/data-models/swap-land/?utm_source=astar&utm_medium=partner-docs)
+- [Analyzing NFT Marketplaces](https://www.covalenthq.com/docs/increment/data-models/jpeg-analysis/?utm_source=astar&utm_medium=partner-docs)
 
-```sh
-curl -X GET "https://api.covalenthq.com/v1/592/address/0xFEC4f9D5B322Aa834056E85946A32c35A3f5aDD8/balances_v2/?key={YOUR API KEY}" -H "Accept: application/json"
-```
-
-### JavaScript
-
-```js
-const APIKEY = 'YOUR API KEY';
-const baseURL = 'https://api.covalenthq.com/v1'
-const blockchainId = 592
-const demoAddress = '0xFEC4f9D5B322Aa834056E85946A32c35A3f5aDD8'
-
-async function getWalletBalance(chainId, address) {
-    const url = new URL(`${baseURL}/${chainId}/address/${address}/balances_v2/?key=${APIKEY}`);
-    const response = await fetch(url);
-    const result = await response.json();
-    const data = result.data;
-    console.log(data)
-    return data;
-}
-
-// Example address request
-getWalletBalance(blockchainId, demoAddress);
-```
-
-### Python
-
-```py
-import requests
-API_KEY = 'YOUR API KEY'
-base_url = 'https://api.covalenthq.com/v1'
-blockchain_id = 592
-demo_address = '0xFEC4f9D5B322Aa834056E85946A32c35A3f5aDD8'
-
-def get_wallet_balance(chain_id, address):
-    endpoint = f'/{chain_id}/address/{address}/balances_v2/?key={API_KEY}'
-    url = base_url + endpoint
-    result = requests.get(url).json()
-    data = result["data"]
-    print(data)
-    return(data)
+For example, click on the following table to get the latest number of active wallets, transactions and tokens by day, week, month or year for Astar:
+[![example-network-status-increment-ftm](https://www.datocms-assets.com/86369/1686100924-example_network_status_increment_general.png)](https://www.covalenthq.com/docs/networks/astar/?utm_source=astar&utm_medium=partner-docs#network-status)
 
 
-# Example address request
-get_wallet_balance(blockchain_id, demo_address)
-```
+### Get started
 
-## Use Cases
-
-The Covalent API supports a broad range of Web3 data use cases including:
-
-![7] (img/7.png)
-
-Covalent also provides a collection of ready-to-ship [Code Templates] (https://github.com/covalenthq/web3-resources?utm_source=astar&utm_medium=partner-docs) that you can use to build your Web3 data-powered dApps.
-
-## Resources
-
-Here are some additional resources to help you get started with the Covalent API:
-
-- [Astar Network Details] (https://www.covalenthq.com/docs/networks/astar/?utm_source=astar&utm_medium=partner-docs)
-- [Project Showcase] (https://www.covalenthq.com/docs/project-showcase/?utm_source=astar&utm_medium=partner-docs)
-- [Covalent API Reference] (https://covalenthq.com/docs/api/?utm_source=astar&utm_medium=partner-docs)
-- [API FAQs] (https://www.covalenthq.com/docs/developer/faq/?utm_source=astar&utm_medium=partner-docs)
-- [Discord Support] (https://www.covalenthq.com/discord/?utm_source=astar&utm_medium=partner-docs)
-
-## About Covalent
-
-Covalent provides the industry-leading **Unified API** bringing visibility to billions of Web3 data points. Developers use Covalent to build exciting multi-chain applications like [crypto wallets] (https://www.covalenthq.com/docs/project-showcase/wallet), [NFT galleries] (https://www.covalenthq.com/docs/project-showcase/nft), and [investor dashboard tools] (https://www.covalenthq.com/docs/project-showcase/tools) utilizing data from [32+ blockchains] (https://www.covalenthq.com/docs/networks). Covalent is trusted by a community of 27,000+ developers and powers data for 1000+ applications including 0x, Zerion, Rainbow Wallet, Rotki, Bitski and many others.
-
-[Website] (https://www.covalenthq.com/) | [Discord] (https://discord.com/invite/fgZPpq69Dd) | [Telegram] (https://t.me/CovalentHQ) | [Twitter] (https://twitter.com/covalent_hq) | [Youtube] (https://www.youtube.com/channel/UCGn-T9qPiXAx490Wr6WPbOw) | [微信公众号] (https://mp.weixin.qq.com/s?__biz=MzU0MzY5ODMzMg==&mid=2247483899&idx=1&sn=9c1d4df3acc04bc35c429b244307d3c7&chksm=fb063d08cc71b41e2da96b4747513acf2ab9182babe57c135e4a7d1fef9255eb3b310217835c&token=2144505038&lang=zh_CN#rd)
+- [Increment](https://www.covalenthq.com/platform/increment/#/?utm_source=astar&utm_medium=partner-docs) - login via the Covalent Platform
+- [Docs](https://www.covalenthq.com/docs/increment/?utm_source=astar&utm_medium=partner-docs) - learn how to use Increment to build dynamic, custom charts
+- [Data Models Demo](https://www.covalenthq.com/docs/increment/data-models/model-intro/?utm_source=astar&utm_medium=partner-docs) - build analytics in 3 clicks
+- [Explore Models. Seek Alpha.](https://www.covalenthq.com/platform/increment/#/pages/covalent/chain-gdp/?utm_source=astar&utm_medium=partner-docs) - browse all data models
+- [Use Models. Become Alpha.](https://www.covalenthq.com/platform/increment/#/sql/query_b6c88fd8604f49d5920ca86fa7/?utm_source=astar&utm_medium=partner-docs) - use a data model
