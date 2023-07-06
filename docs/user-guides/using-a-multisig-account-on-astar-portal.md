@@ -9,7 +9,7 @@ This guide will assist you in utilizing a multisig account on Astar Portal via P
 ## **Prerequisites**
 
 - Install a substrate wallet extension (such as Polkadot.js, SubWallet, or Talisman) on your browser.
-- Prepare at least two Astar wallet addresses. ([See reference](/docs/user-guides/create-wallet)).
+- Prepare at least two Astar wallet addresses ([See reference](/docs/user-guides/create-wallet)).
 
 ## Understanding the Benefits of Multisig Accounts
 
