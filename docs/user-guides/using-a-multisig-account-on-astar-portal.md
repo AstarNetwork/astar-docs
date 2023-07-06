@@ -41,8 +41,6 @@ PolkaSafe integrates with Polkadot's multisig solution, offering a seamless user
 9. Now, you can manage your multisig account on PolkaSafe.
 ![multisig_guide_5.png](img/multisig_guide_5.png)
 
-Reference: [PolkaSafe Documentation](https://docs.polkasafe.xyz/)
-
 ## Sending Transactions on Astar Portal and Approving them on PolkaSafe
 
 1. Go to the Astar Portal and select PolkaSafe.
@@ -58,3 +56,7 @@ Reference: [PolkaSafe Documentation](https://docs.polkasafe.xyz/)
 1. If you want to understand the transaction details, copy the 'Call Data' and paste it on the [Decode page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/extrinsics/decode) on the Polkadot.js portal.
 ![multisig_guide_10.png](img/multisig_guide_10.png)
 ![multisig_guide_11.png](img/multisig_guide_11.png)
+
+## References:
+* [PolkaSafe Documentation](https://docs.polkasafe.xyz/)
+* [Introduction to Multisig Accounts](https://wiki.polkadot.network/docs/learn-account-multisig)
