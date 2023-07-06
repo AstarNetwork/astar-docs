@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 15
 ---
 
 # How To Register or Unregister AstarPass/ShidenPass

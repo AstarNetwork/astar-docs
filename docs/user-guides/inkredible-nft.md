@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 15
 ---
 import inkredible_guide00 from "./img/inkredible_guide00.png"
 import inkredible_guide01 from "./img/inkredible_guide01.png"

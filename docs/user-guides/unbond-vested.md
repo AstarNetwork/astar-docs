@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 # Unbonding Vested Tokens
@@ -17,4 +17,3 @@ Click on the three dots next to 'send' where you can 'Unlock vested amount'. Whe
 ![32](img/32.png)
 
 After unlocking the tokens, it will be displayed as transferrable which means you can transfer the tokens. But if it has already been staked in the first place, it will appear as locked. Staked tokens are locked and if you want to make it transferrable, unbond your stake.
- 

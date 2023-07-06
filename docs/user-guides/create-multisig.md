@@ -11,7 +11,7 @@ This tutorial serves as a guide to create a multisig substrate wallet.
 1. Go to <https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts>
 2. Go to Accounts -> Address Book
 3. Click `+ Add Contact` and add all the contact addresses that you want to include in the multisig wallet.
-4. For example; Bob, Charlie and Dave
+4. For example; Bob, Charlie and Dave.
 
 ![12](img/12.png)
 

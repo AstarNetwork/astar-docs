@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 12
 ---
 
 # Withdraw Stake From Unregistered Contract
@@ -14,7 +14,7 @@ Occasionally, some projects decide to change their contract address on the porta
 1. Go to [Polkadot.js web app](https://polkadot.js.org/apps/#/chainstate).
 2. Make sure you are connected to the correct chain (Astar/Shiden/Shibuya).
 3. Make sure you are connected with the correct wallet.
-4. Click `Developer` and `Chain State`. 
+4. Click `Developer` and `Chain State`.
 5. On the left dropdown menu, select `dappsStaking`.
 6. On the right dropdown menu, select `generalStakerInfo`.
 7. Unselect `include option`.
@@ -43,7 +43,7 @@ Occasionally, some projects decide to change their contract address on the porta
 1. Open a new browser tab and go to [Polkadot.js web app](https://polkadot.js.org/apps/#/extrinsics).
 2. Make sure you are connected to the correct chain (Astar/Shiden/Shibuya).
 3. Make sure you are connected with the correct wallet.
-4. Click `Developer` and `Extrinsics`. 
+4. Click `Developer` and `Extrinsics`.
 5. On the left dropdown menu, select `dappsStaking`.
 6. On the right dropdown menu, select `claimStaker`.
 7. On EVM: H160, paste the contract address that you have on the notepad e.g `0xaab44542c72f88f7b98fffda418e3efe94bc13af`.
@@ -60,7 +60,7 @@ Occasionally, some projects decide to change their contract address on the porta
 5. Submit transaction and add a small tip before signing the transaction.
 ![image](https://user-images.githubusercontent.com/37278708/199930565-fff88330-bc9d-4680-aea3-de8d52052c00.png)
 
-6. Your stake is now withdrawn from the unregistered contract. 
+6. Your stake is now withdrawn from the unregistered contract.
 
 ---
 
