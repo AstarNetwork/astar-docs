@@ -15,8 +15,8 @@ import ledger8 from "./img/native/ledger8.png"
 # Using a Ledger device with Astar Native Accounts
 
 :::danger
-At the time of this release, the following operations are **NOT SUPPORTED:** on Ledger devices:  
-- **EVM withdraw** : It is not possible to claim tokens from the Astar EVM side. 
+At the time of this release, the following operations are **NOT SUPPORTED:** on Ledger devices:
+- **EVM withdraw** : It is not possible to claim tokens from the Astar EVM side.
 - **XCM transfers**
 - **Vesting**
 :::
@@ -32,7 +32,7 @@ This tutorial walks through the process of setting up a Ledger device to partici
 
 ### Update Ledger Live and Device Firmware
 
-Ensure Ledger Live is up to date. 
+Ensure Ledger Live is up to date.
 
 <div style={{textAlign: 'center'}}>
   <img src={ledger1} style={{width: 1200}} />
@@ -48,7 +48,7 @@ Ensure Ledger Live is up to date.
 
 :::tip
 Ledger NanoS users should install the Astar XL version of the app, shown in the image below:
-::: 
+:::
 
 <div style={{textAlign: 'center'}}>
   <img src={ledger3} style={{width: 1200}} />
@@ -87,7 +87,7 @@ Ledger NanoS users should install the Astar XL version of the app, shown in the 
 <div style={{textAlign: 'center'}}>
   <img src={ledger8} style={{width: 600}} />
   </div>
-  
+
 For detailed information about dApp staking or how to stake on the EVM side of Astar Portal using a Ledger device, please refer to the [Astar documentation](/docs/dapp-staking/for-stakers/staking) or [Ledger EVM staking guide](./ledger-evm.md)
 
 :::tip
@@ -98,11 +98,11 @@ If you receive a **Ledger error: Failed to execute 'claimInterface' on 'USBDevic
   <img src={ledger6} style={{width: 600}} />
   </div>
 
-## Ledger NanoS and S-plus/X device limitations 
+## Ledger NanoS and S-plus/X device limitations
 
 :::danger
-At the time of this release, the following operations are **NOT SUPPORTED:** on Ledger devices:  
-- **EVM withdraw** : It is not possible to claim tokens from the Astar EVM side. 
+At the time of this release, the following operations are **NOT SUPPORTED:** on Ledger devices:
+- **EVM withdraw** : It is not possible to claim tokens from the Astar EVM side.
 - **XCM transfers**
 - **Vesting**
 :::

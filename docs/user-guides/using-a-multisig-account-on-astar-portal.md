@@ -6,6 +6,11 @@ sidebar_position: 3
 
 This guide will assist you in utilizing a multisig account on Astar Portal via PolkaSafe.
 
+:::danger
+At the time of this release, PolkaSafe only supports Astar Network.
+:::
+
+
 ## **Prerequisites**
 
 - Install a substrate wallet extension (such as Polkadot.js, SubWallet, or Talisman) on your browser.
