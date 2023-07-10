@@ -53,7 +53,7 @@ At every block you produced as a collator, rewards will automatically be transfe
 ---
 
 ## Slash mechanism
-Starting April 2022, a slashing mechanism is implemented on Astar and Shiden networks - a collator that doesn't produce blocks during one session (1 hour) will be slashed 1% of its total stake and kicked out of the active collator set.
+Starting April 2022, a slashing mechanism is implemented on Astar and Shiden networks - a collator that doesn't produce blocks during two sessions (2 hours) will be slashed 1% of its total stake and kicked out of the active collator set.
 This slashing ensures the best block rate and prevents malicious actors from harming the network without financial consequences.
 
 ---
