@@ -39,6 +39,9 @@ PolkaSafe integrates with Polkadot's multisig solution, offering a seamless user
 5. Select 'Create Multisig.'
 ![multisig_guide_2.png](img/multisig_guide_2.png)
 6. Choose the signatory addresses to include in the multisig account. You can select from your wallet or add an address manually.
+:::danger
+Ledger accounts cannot be multisig signatories
+:::
 ![multisig_guide_3.png](img/multisig_guide_3.png)
 7. Input the threshold number (the minimum required signatures to authorize and execute a transaction) and name the multisig account.
 8. Sign the message to add a small Existential Deposit to the multisig account.
