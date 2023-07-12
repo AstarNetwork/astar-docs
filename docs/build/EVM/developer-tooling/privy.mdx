@@ -1,0 +1,151 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Privy
+
+## Introduction
+
+Privy is the easiest way for web3 developers to onboard their users, regardless of whether they already have wallets, across mobile and desktop. Privy offers [embedded wallets](https://www.privy.io/features/wallets) so you can seamlessly provision self-custodial wallets for users who sign in via email or social login, as well as [powerful connectors](https://www.privy.io/features/connectors) for web3 native users who prefer to sign in with their existing wallets. It’s one library to onboard all users, regardless of where they are in their web3 journey.
+
+Developers building end-user facing applications in the Astar ecosystem can leverage Privy to expand their addressable market, improve onboarding funnel conversion and better understand their users. **For a limited time, Astar developers can get free unlimited access to Privy’s features for their first three months using the product, by reaching out to us at astar@privy.io**. For more information on Privy, check out the [website](http://privy.io), [API docs](http://docs.privy.io), [product demo](http://demo.privy.io), and sample customer integrations ([Lighthouse](http://lighthouse.world/), [Courtyard](http://courtyard.io/), and [Shibuya](http://shibuya.xyz/)).
+
+## Prerequisites
+
+To use Privy in your app, you'll need to:
+
+- Have basic knowledge of JavaScript and React
+- Use React 18 in your app
+- Use only EVM-compatible networks for any on-chain actions
+
+## Getting started
+
+### Step 1
+
+Request API keys by reaching out to our team at astar@privy.io to ensure you’re able to access Privy’s special offer of three free months of unlimited software use. We'll set you up with a [Privy app ID](https://docs.privy.io/guide/console/api-keys#app-id) that you can use to initialize the SDK.
+
+### Step 2
+
+Install the **[Privy React Auth SDK](https://www.npmjs.com/package/@privy-io/react-auth)** using `npm`:
+
+`npm install @privy-io/react-auth@latest`
+
+### Step 3
+
+Once you have your app ID and have installed the SDK, **in your React project, wrap your components with a [PrivyProvider](https://docs.privy.io/reference/react-auth/modules#privyprovider)**. The [PrivyProvider](https://docs.privy.io/reference/react-auth/modules#privyprovider) should wrap any component that will use the Privy SDK.
+
+For example, in a [NextJS](https://nextjs.org/) or [Create React App](https://create-react-app.dev/) project, you may wrap your components like so:
+
+<Tabs>
+<TabItem value="nextjs" label="NextJS">
+
+```tsx title=_app.jsx
+import type {AppProps} from 'next/app';
+import Head from 'next/head';
+import {PrivyProvider} from '@privy-io/react-auth';
+
+// This method will be passed to the PrivyProvider as a callback
+// that runs after successful login.
+const handleLogin = (user) => {
+  console.log(`User ${user.id} logged in!`)
+}
+
+function MyApp({Component, pageProps}: AppProps) {
+  return (
+    <>
+      <Head>
+        {/* Edit your HTML header */}
+      </Head>
+      <PrivyProvider
+        appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID}
+        onSuccess={handleLogin}
+        config={{
+          loginMethods: ['email', 'wallet'],
+          appearance: {
+            theme: 'light',
+            accentColor: '#676FFF',
+            logo: 'https://your-logo-url',
+          },
+        }}
+      >
+        <Component {...pageProps} />
+      </PrivyProvider>
+    </>
+  );
+}
+```
+
+</TabItem>
+
+<TabItem value="cra" label="Create React App">
+
+```tsx title=index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import {PrivyProvider} from '@privy-io/react-auth';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// This method will be passed to the PrivyProvider as a callback
+// that runs after successful login.
+const handleLogin = (user) => {
+  console.log(`User ${user.id} logged in!`)
+}
+
+root.render(
+  <React.StrictMode>
+    <PrivyProvider
+      appId={process.env.REACT_APP_PRIVY_APP_ID}
+      onSuccess={handleLogin}
+      config={{
+        loginMethods: ['email', 'wallet'],
+        appearance: {
+          theme: 'light',
+          accentColor: '#676FFF',
+          logo: 'https://your-logo-url',
+        },
+      }}
+    >
+      <App />
+    </PrivyProvider>
+  </React.StrictMode>
+);
+
+// See https://docs.privy.io/guide/troubleshooting/webpack for how to handle
+// common build issues with web3 projects bootstrapped with Create React App
+```
+
+</TabItem>
+</Tabs>
+
+The [PrivyProvider](https://docs.privy.io/reference/react-auth/modules#privyprovider) takes the following properties:
+
+- your [appId](https://docs.privy.io/reference/react-auth/interfaces/PrivyProviderProps#appid)
+- an optional [onSuccess](https://docs.privy.io/reference/react-auth/interfaces/PrivyProviderProps#onsuccess) callback which will execute once a user successfully logs in
+- an optional [createPrivyWalletOnLogin](https://docs.privy.io/reference/react-auth/interfaces/PrivyProviderProps#createprivywalletonlogin) boolean to configure whether you'd like your users to create [embedded wallets](https://docs.privy.io/guide/frontend/embedded/overview) when logging in
+- an optional [config](https://docs.privy.io/reference/react-auth/modules#privyclientconfig) property to customize your onboarding experience.
+    - The example above will set you up with email and wallet logins.
+    - See [this page](https://docs.privy.io/guide/configuration/) for more on how to construct the right [config](https://docs.privy.io/reference/react-auth/modules#privyclientconfig) for your app!
+
+### Step 4
+
+**You can now use the Privy SDK throughout your app via the [usePrivy](https://docs.privy.io/reference/react-auth/modules#useprivy) hook!** Check out our [starter repo](https://github.com/privy-io/next-starter) to see what a simple end-to-end integration looks like.
+
+Read on to learn how you can use Privy to:
+
+- [log your users in](https://docs.privy.io/guide/frontend/authentication/login)
+- [prompt users to link additional accounts](https://docs.privy.io/guide/frontend/users/linking), as part of progressive onboarding
+- [interface with users' crypto wallets](https://docs.privy.io/guide/frontend/wallets/external)
+- [create Ethereum wallets embedded in your app](https://docs.privy.io/guide/frontend/embedded/overview)
+
+and to do so much more!
+
+## Troubleshooting
+
+If you're using a framework like [create-react-app](https://create-react-app.dev/) to build your project, you may encounter errors related to [Webpack 5](https://webpack.js.org/blog/2020-10-10-webpack-5-release/). To resolve, check out [this guide](https://docs.privy.io/guide/troubleshooting/webpack).
+
+## Learn more
+
+If there’s anything we can do to support your Privy integration, please reach out to us at astar@privy.io or via our [developer slack](https://join.slack.com/t/privy-developers/shared_invite/zt-1y6sjkn3l-cJQ1ryWRA7RkMGuHHXIX8w).
