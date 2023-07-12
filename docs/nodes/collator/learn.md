@@ -43,7 +43,7 @@ A collator (block producer) is rewarded a fixed amount for each block produced.
 
 ## Collator election mechanism
 ### Election process
-To join the election process you must register for a collator and bond tokens, see [Collator Requirements](https://docs.astar.network/docs/nodes/collator/requirements) for details. When your node fits the parameters and checks all the boxes to become a collator, it will be added to the chain. **Note: if your collator doesn’t produce blocks during one session (1h) it will be kicked out.**
+To join the election process you must register for a collator and bond tokens, see [Collator Requirements](https://docs.astar.network/docs/nodes/collator/requirements) for details. When your node fits the parameters and checks all the boxes to become a collator, it will be added to the chain. **Note: if your collator doesn’t produce blocks during two sessions (2h) it will be kicked out.**
 
 ---
 
@@ -53,7 +53,7 @@ At every block you produced as a collator, rewards will automatically be transfe
 ---
 
 ## Slash mechanism
-Starting April 2022, a slashing mechanism is implemented on Astar and Shiden networks - a collator that doesn't produce blocks during one session (1 hour) will be slashed 1% of its total stake and kicked out of the active collator set.
+Starting April 2022, a slashing mechanism is implemented on Astar and Shiden networks - a collator that doesn't produce blocks during two sessions (2 hours) will be slashed 1% of its total stake and kicked out of the active collator set.
 This slashing ensures the best block rate and prevents malicious actors from harming the network without financial consequences.
 
 ---
