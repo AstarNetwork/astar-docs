@@ -144,7 +144,7 @@ You will then be prompted to authorize and sign the transaction. Go ahead and cl
 
 ![34](img/34.png)
 
-Once the transaction has been successfully submitted, you will receive some notifications confirming the transaction.
+Once the transaction has been successfully submitted, you will receive notifications confirming the transaction.
 
 You can also find the event `proxy.ProxyAdded` in recently emitted events inside  **Network** > **Explorer** tab.
 
