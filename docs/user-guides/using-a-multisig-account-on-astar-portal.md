@@ -32,7 +32,7 @@ Multisig accounts offer several key benefits, particularly in terms of security,
 PolkaSafe integrates with Polkadot's multisig solution, offering seamless user experience and robust security features for managing assets in the Polkadot ecosystem. You can use the multisig accounts created on PolkaSafe with the Astar Portal.
 
 1. Visit [PolkaSafe](https://app.polkasafe.xyz/).
-2. Select the Astar network and click 'Connect Wallet.'
+2. Select  Astar network and click 'Connect Wallet.'
 ![multisig_guide_1.png](img/multisig_guide_1.png)
 3. Choose a wallet and select an account with more than 0 ASTR.
 4. Sign the message via the wallet extension.
