@@ -84,7 +84,7 @@ Despite their complexity and associated dangers, pure proxies have many importan
 
 :::tip
 
-It is highly encouraged to checkout [**this**](https://wiki.polkadot.network/docs/learn-proxies#anonymous-proxy-pure-proxy) documentation by Polkadot for more information about Pure proxy, its limitations and benefits.
+It is highly encouraged to check out [**this**](https://wiki.polkadot.network/docs/learn-proxies#anonymous-proxy-pure-proxy) documentation by Polkadot for more information about Pure proxy, its limitations and benefits.
 
 Video resource for Pure Proxy - https://youtu.be/MqY6yU-YLO0
 
