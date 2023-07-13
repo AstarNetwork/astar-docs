@@ -29,7 +29,7 @@ Multisig accounts offer several key benefits, particularly in terms of security,
 
 ## Creating a Multisig Account on PolkaSafe
 
-PolkaSafe integrates with Polkadot's multisig solution, offering a seamless user experience and robust security features for managing assets in the Polkadot ecosystem. You can use the multisig accounts created on PolkaSafe with the Astar Portal.
+PolkaSafe integrates with Polkadot's multisig solution, offering seamless user experience and robust security features for managing assets in the Polkadot ecosystem. You can use the multisig accounts created on PolkaSafe with the Astar Portal.
 
 1. Visit [PolkaSafe](https://app.polkasafe.xyz/).
 2. Select the Astar network and click 'Connect Wallet.'
