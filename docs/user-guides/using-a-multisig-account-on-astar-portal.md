@@ -46,8 +46,31 @@ Ledger accounts cannot be multisig signatories
 7. Input the threshold number (the minimum required signatures to authorize and execute a transaction) and name the multisig account.
 8. Sign the message to add a small Existential Deposit to the multisig account.
 ![multisig_guide_4.png](img/multisig_guide_4.png)
-9. Now, you can manage your multisig account on PolkaSafe.
+9. Optionally, you can enable proxy signatory management to allow enhanced functionalities for your multisig account. ([See reference](/docs/user-guides/using-a-multisig-account-on-astar-portal#optional-enable-proxy-signatory-management-for-your-multisig-account-on-polkasafe))
+10.  Now, you can manage your multisig account on PolkaSafe.
 ![multisig_guide_5.png](img/multisig_guide_5.png)
+
+## (Optional) Enable Proxy Signatory Management for Your Multisig Account on PolkaSafe
+Adding a proxy account to your multisig account enhances functionality and flexibility. A proxy allows signatories to alter key parameters and setup account backups. Furthermore, the proxy wallet address remains unchanged even when the multisig account's consensus conditions are modified. A proxy can:
+
+1. Edit the Threshold: Alter the number of required signatures for transaction authorization.
+2. Modify Signatories: Change the signatories of the multisig account.
+3. Create Backups: Establish a backup of the multisig account, aiding in seamless asset transfers.
+
+You can add a proxy to your multisig account either during multisig creation or from the account dashboard.
+
+![multisig_guide_12.png](img/multisig_guide_12.png)
+![multisig_guide_13.png](img/multisig_guide_13.png)
+
+Switch to the proxy account by clicking the switch icon.
+![multisig_guide_14.png](img/multisig_guide_14.png)
+
+The address should now display as the proxy account.
+![multisig_guide_15.png](img/multisig_guide_15.png)
+
+:::tip
+Editing a multisig account (e.g., adding signatories) creates a new multisig address linked to the existing proxy address. This new multisig lacks an Existential Deposit, so you must add some balance to the new multisig address before initiating transactions.
+:::
 
 ## Sending Transactions on Astar Portal and Approving them on PolkaSafe
 
@@ -66,5 +89,10 @@ Ledger accounts cannot be multisig signatories
 ![multisig_guide_11.png](img/multisig_guide_11.png)
 
 ## References:
+### PolkaSafe
 * [PolkaSafe Documentation](https://docs.polkasafe.xyz/)
 * [Introduction to Multisig Accounts](https://wiki.polkadot.network/docs/learn-account-multisig)
+* [Creating a pure proxy](https://docs.polkasafe.xyz/setup-polkasafe/creating-a-pure-proxy)
+### Polkadot Wiki
+* [Multi-Signature Accounts](https://wiki.polkadot.network/docs/learn-account-multisig#introduction-to-multisig-accounts)
+* [Proxy Accounts](https://wiki.polkadot.network/docs/learn-proxies)
