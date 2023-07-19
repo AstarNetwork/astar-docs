@@ -55,7 +55,7 @@ Adding a proxy account to your multisig account enhances functionality and flexi
 
 1. Edit the Threshold: Alter the number of required signatures for transaction authorization.
 2. Modify Signatories: Change the signatories of the multisig account.
-3. Create Backups: Establish a backup of the multisig account, aiding in seamless asset transfers.
+3. Create Backups: Establish a backup of the multisig account, facilitating seamless asset transfers. In other words, all assets will be in the proxy account. This means that when you add or remove any signatory, the multisig address will change, but the proxy address will not. Therefore, assets in the proxy account won't be lost.
 
 You can add a proxy to your multisig account either during multisig creation or from the account dashboard.
 
