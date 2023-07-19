@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 14
 ---
 
 # How to claim ETH from Lockdrop
@@ -9,7 +9,7 @@ This section will guide you on how to claim the ETH that you locked during Lockd
 
 1. Go to the [Lockdrop page](https://lockdrop.astar.network/).
 2. Select either Lockdrop 1 or Lockdrop 2.
-3. You will be prompted to connect Metamask. 
+3. You will be prompted to connect Metamask.
 4. Connect the wallet that you used to lock the ETH and make sure that you are on the Ethereum Network.
 5. Click "Unlock Tokens".
 6. Click the 🔒.

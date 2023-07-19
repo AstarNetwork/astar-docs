@@ -24,7 +24,7 @@ You will interact with our Astar native address when using WASM dApps are ready 
 
 The [Astar Portal] is the place to be for doing anything in our ecosystem. The Astar developers created a one-stop-place for everyone who wants to interact in our ecosystem.
 
-Through our portal, you can connect to different networks in the Astar ecosystem. 
+Through our portal, you can connect to different networks in the Astar ecosystem.
 
 - **Astar Network**: parachain on Polkadot.
 - **Shiden Network**: parachain on Kusama.

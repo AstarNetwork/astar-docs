@@ -1,8 +1,8 @@
 ---
-sidebar_position: 16
+sidebar_position: 17
 ---
 
-# Introduction to Pallet Proxy 
+# Introduction to Pallet Proxy
 
 **Why use Proxy?**
 ---
@@ -42,7 +42,7 @@ The proxy pallet provides the following extrinsics (functions):
 
 * **proxyAnnounced**(delegate, real, forceProxyType, call) - executes a transaction as a proxy and removes any previous corresponding announcements. This function emits a ProxyExecuted event.
 
-* **rejectAnnouncement**(delegate, callHash) - if the sender is a prime account, it removes a specific announcement from their proxy account. 
+* **rejectAnnouncement**(delegate, callHash) - if the sender is a prime account, it removes a specific announcement from their proxy account.
 
 * **removeAnnouncement**(real, callHash) - if the sender is a proxy account, it removes a specific announcement to their prime account.
 
@@ -69,7 +69,7 @@ The proxy pallet provides the following extrinsics (functions):
 To create proxies within the network, it is necessary to provide deposits in the native currency (like ASTR or SDN). The deposit is required because adding a proxy requires some storage space on-chain, which must be replicated across every peer in the network. Due to the costly nature of this, these functions could open up the network to a Denial-of-Service attack.
 
 When creating a proxy, a bond is deducted from your free balance and transferred to your reserved balance. This mechanism helps maintain the integrity and stability of the proxy system while providing assurance that the bond can be returned when the proxy is deactivated or removed.
-    
+
 The required deposit amount for `n` proxies is equal to:
 
 `ProxyDepositBase` + `ProxyDepositFactor` * `n`
@@ -82,9 +82,9 @@ Anonymous proxies (Pure Proxies) are freshly generated accounts, distinct from o
 
 Despite their complexity and associated dangers, pure proxies have many important benefits like enhanced security and multi-sig account management.
 
-:::tip 
+:::tip
 
-It is highly encouraged to checkout [**this**](https://wiki.polkadot.network/docs/learn-proxies#anonymous-proxy-pure-proxy) documentation by Polkadot for more information about Pure proxy, its limitations and benefits. 
+It is highly encouraged to check out [**this**](https://wiki.polkadot.network/docs/learn-proxies#anonymous-proxy-pure-proxy) documentation by Polkadot for more information about Pure proxy, its limitations and benefits.
 
 Video resource for Pure Proxy - https://youtu.be/MqY6yU-YLO0
 
@@ -144,7 +144,7 @@ You will then be prompted to authorize and sign the transaction. Go ahead and cl
 
 ![34](img/34.png)
 
-Once the transaction has been successfully submitted, you will receive some notifications confirming the transaction. 
+Once the transaction has been successfully submitted, you will receive notifications confirming the transaction.
 
 You can also find the event `proxy.ProxyAdded` in recently emitted events inside  **Network** > **Explorer** tab.
 

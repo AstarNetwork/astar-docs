@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 13
 ---
 
 # Manually Claim dApp Staking Rewards On Polkadot.Js
@@ -16,7 +16,7 @@ If you are caught in this situation, this tutorial will guide you on how to clai
 1. Go to [Astar Portal](https://portal.astar.network/) and connect to the desired network.
 2. Go to dApp Staking and turn off `Re-Stake after claiming`.
 ![image](https://user-images.githubusercontent.com/37278708/201064005-8f8f6a84-f509-46d4-b0a0-493dba981957.png)
-3. Go to `My dApps`. 
+3. Go to `My dApps`.
 4. You can see the list of dApps that you are staked on.
 5. Go to the info of each dApp that you are staked on and copy the contract address.
 6. Save the contract address as a reference for the next steps.
@@ -28,12 +28,12 @@ If you are caught in this situation, this tutorial will guide you on how to clai
 1. Open a new browser tab and go to [Polkadot.Js web app](https://polkadot.js.org/apps/#/extrinsics).
 2. Make sure you are connected to the correct chain (Astar/Shiden/Shibuya).
 3. Make sure you are connected with the correct wallet.
-4. Click `Developer` and `Extrinsics`. 
+4. Click `Developer` and `Extrinsics`.
 5. On the left dropdown menu, select `dappsStaking`.
 6. On the right dropdown menu, select `claimStaker`.
 7. On `EVM: H160`, paste the contract address that you have on the notepad e.g `0xaab44542c72f88f7b98fffda418e3efe94bc13af`.
 8. Submit transaction and add a tip before signing the transaction.
-9. If you have a huge backlog, you need to repeat this step many times until all the rewards are claimed. 
+9. If you have a huge backlog, you need to repeat this step many times until all the rewards are claimed.
 ![image](https://user-images.githubusercontent.com/37278708/199938229-92e8eb7d-46fa-450f-a16f-d583da7bf48c.png)
 10. You have to claim one era at a time.
 11. After claiming all the rewards, you can go back to the Portal and turn on `Re-Stake after claiming`.

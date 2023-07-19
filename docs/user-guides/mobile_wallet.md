@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Creating an Astar Wallet on a Mobile Device
@@ -12,7 +12,7 @@ There are a few mobile wallets that support Astar native environment such as [No
 1. Download [Math Wallet](https://mathwallet.org/en-us/) for either Android or iOS.
 2. Select Astar for Native and Astar EVM for EVM.
 
-![image](https://user-images.githubusercontent.com/37278708/199638326-b2dc20cf-1446-40f9-9b7a-152ee5f35da7.png) 
+![image](https://user-images.githubusercontent.com/37278708/199638326-b2dc20cf-1446-40f9-9b7a-152ee5f35da7.png)
 ![image](https://user-images.githubusercontent.com/37278708/199638421-d27fa62b-72b0-485f-a654-f949bf128f89.png)
 
 3. Select "Create Wallet" if you want to create a new wallet (You can also import wallet if you want to restore an existing wallet from other devices).
@@ -27,7 +27,7 @@ There are a few mobile wallets that support Astar native environment such as [No
 ![image](https://user-images.githubusercontent.com/37278708/199640403-1b8091b6-9e65-4aef-920c-751698682c55.png)
 
 
-8. Your Astar wallet is now ready. 
+8. Your Astar wallet is now ready.
 9. Click on the dApp browser and you will be able to use [Astar portal](https://portal.astar.network/) to use dApp staking (only on Astar Native) and make [token transfers](https://docs.astar.network/docs/user-guides/transfer-tokens) between native to EVM and vice versa.
 
 ![image](https://user-images.githubusercontent.com/37278708/199640641-81e1ed72-1357-490f-b9c6-ccab0d6f3cd8.png)
