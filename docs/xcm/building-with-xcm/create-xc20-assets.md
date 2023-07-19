@@ -94,7 +94,7 @@ For `Shibuya` testnet, users can manually register the revert code using a small
 Now perform the following:
 * Select `xcAssetConfig->registerAssetLocation`
 * The asset location you select is not important, but to make things more consistent and easier to follow-up, we suggest the following:
-  * `V1`
+  * `V2`
   * `parents: 0`
   * `interior: X1( GeneralIndex (>>your asset Id<<) )`
 * `assetId` should match your asset Id
