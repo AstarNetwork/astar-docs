@@ -130,7 +130,7 @@ server {
 ```
 :::info
 In the example above, note that port 9944 is used in proxy_pass. This is the WS port.
-Change this to 9933 to pass the RPC port.
+Change this to 9944 to pass the RPC port.
 :::
 
 Check and restart nginx:

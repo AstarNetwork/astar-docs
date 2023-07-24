@@ -70,8 +70,7 @@ The Astar node runs in parachain configuration, meaning they will listen at diff
 |Description| Parachain Port | Relaychain Port | Custom Port Flag |
 |---|---|---|---|
 | P2P | 30333 | 30334 | `--port` |
-| WS | 9944 | 9945 | `--ws-port` |
-| RPC | 9933 | 9934 | `--rpc-port` |
+| RPC | 9944 | 9945 | `--rpc-port` |
 | Prometheus | 9615 | 9616 | `--prometheus-port` |
 
 For all types of nodes, ports `30333` and `30334` need to be opened for incoming traffic at the Firewall.

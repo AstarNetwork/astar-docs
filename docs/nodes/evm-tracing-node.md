@@ -75,7 +75,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --state-pruning archive \
   --blocks-pruning archive \
-  --ws-external \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
   --rpc-max-response-size 10 \
@@ -110,7 +109,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --state-pruning archive \
   --blocks-pruning archive \
-  --ws-external \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
   --rpc-max-response-size 10 \
@@ -145,7 +143,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --state-pruning archive \
   --blocks-pruning archive \
-  --ws-external \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
   --rpc-max-response-size 10 \

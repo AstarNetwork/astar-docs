@@ -13,7 +13,7 @@ It's easy to configure MetaMask to interact with the Astar/Shiden network family
 | Properties                    | Network Details                |
 | ----------------------------- | ------------------------------ |
 | Network Name                  | My Network (anything you want) |
-| New RPC URL                   | http://127.0.0.1:9933          |
+| New RPC URL                   | http://127.0.0.1:9944          |
 | Chain ID                      | 4369                           |
 | Currency Symbol               | ASTL                           |
 | Block Explorer URL (Optional) |                                |

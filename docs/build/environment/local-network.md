@@ -33,14 +33,13 @@ You should then be able to execute the binary. To see whether you can run the n
 You are now ready to run the local network, using the following command:
 
 ```sh
-./astar --port 30333 --ws-port 9944 --rpc-port 9933 --rpc-cors all --alice --dev
+./astar --port 30333 --rpc-port 9944 --rpc-cors all --alice --dev
 ```
 
 What this command means:
 
 - Use port 30333 for P2P TCP connection
-- Use port 9944 for WebSocket connection
-- Use port 9933 for RPC
+- Use port 9944 for WebSocket/Http connection
 - Accept any origin for HTTP and WebSocket connections
 - Enable Alice session keys
 - Launch network in development mode

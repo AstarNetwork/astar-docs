@@ -71,7 +71,7 @@ For example, for the `debug_traceTransaction` method, you can make the following
 :::
 
 ```
-curl http://127.0.0.1:9933 -H "Content-Type:application/json;charset=utf-8" -d \
+curl http://127.0.0.1:9944 -H "Content-Type:application/json;charset=utf-8" -d \
   '{
     "jsonrpc":"2.0",
     "id":1,
@@ -85,7 +85,7 @@ The node responds with the step-by-step replayed transaction information.
 For the `trace_filter` call, you can make the following JSON RPC request in your terminal (in this case, the filter is from block 20000 to 25000, only for transactions where the recipient is 0x4E0078423a39EfBC1F8B5104540aC2650a756577, it will start with a zero offset and provide the first 20 traces):
 
 ```
-curl http://127.0.0.1:9933 -H "Content-Type:application/json;charset=utf-8" -d \
+curl http://127.0.0.1:9944 -H "Content-Type:application/json;charset=utf-8" -d \
   '{
     "jsonrpc":"2.0",
     "id":1,
@@ -106,7 +106,7 @@ Let's get pool status using `curl` HTTP POST request.
 :::
 
 ```
-curl http://127.0.0.1:9933 -H "Content-Type:application/json;charset=utf-8" -d \
+curl http://127.0.0.1:9944 -H "Content-Type:application/json;charset=utf-8" -d \
   '{
     "jsonrpc":"2.0",
     "id":1,

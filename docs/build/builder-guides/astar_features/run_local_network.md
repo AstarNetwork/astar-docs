@@ -80,14 +80,13 @@ Please rename the binary file to `astar`, for illustration purposes the consiste
 
 Run the local network with the following configurations:
 - `--port 30333`: use `port 30333` for P2P TCP connection
-- `--ws-port 9944`: use `port 9944` for WebSocket connection
-- `--rpc-port 9933`: use `port 9933` for RPC
+- `--rpc-port 9944`: use `port 9944` for RPC, both WS(s) and HTTP(s)
 - `--rpc-cors all`: accept any origins for HTTP and WebSocket connections
 - `--alice`: enable `Alice` session keys
 - `--dev`: launch the network in development mode
     
 ```jsx
-./astar --port 30333 --ws-port 9944 --rpc-port 9933 --rpc-cors all --alice --dev
+./astar --port 30333 --rpc-port 9944 --rpc-cors all --alice --dev
 ```
     
 You will be able to see the local Astar collator node info and new blocksafter successfully running it.
@@ -119,7 +118,7 @@ When using the local blockchain with other dev tools including MetaMask, Hardhat
 
 | Network Name | Local Astar Testnet 0 |
 | --- | --- |
-| New RPC URL | http://127.0.0.1:9933 |
+| New RPC URL | http://127.0.0.1:9944 |
 | Chain ID | 4369 |
 | Currency Symbol | ASTL |
 

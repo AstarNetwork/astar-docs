@@ -79,7 +79,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain astar \
   --base-path /var/lib/astar \
   --rpc-external \
-  --ws-external \
   --rpc-methods Safe \
   --rpc-max-request-size 1 \
   --rpc-max-response-size 1 \
@@ -110,7 +109,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain shiden \
   --base-path /var/lib/astar \
   --rpc-external \
-  --ws-external \
   --rpc-methods Safe \
   --rpc-max-request-size 1 \
   --rpc-max-response-size 1 \
@@ -141,7 +139,6 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain shibuya \
   --base-path /var/lib/astar \
   --rpc-external \
-  --ws-external \
   --rpc-methods Safe \
   --rpc-max-request-size 1 \
   --rpc-max-response-size 1 \
@@ -182,7 +179,7 @@ sudo systemctl enable astar.service
 You can test the node health through the RPC port with this command:
 
 ```sh
-curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9933
+curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9944
 ```
 
 ## Next steps
