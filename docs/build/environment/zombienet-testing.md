@@ -94,7 +94,7 @@ The following steps will explain how to execute a cross-chain remote call. `Alic
 
 1. Calculate `Alice's` derived account on `Shibuya` when sending instructions from `Shiden`.
 ```
-> ./xcm-tools account32-hash -p 2007 -a 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d -n kusama
+> ./xcm-tools remote-account -p 2007 -a 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d
 5Cvcv8RvSsp6go2pQ8FRXcGLAzNp5eyC8Je7KLHz5zFwuUyT
 ```
 

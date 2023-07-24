@@ -22,7 +22,7 @@ The developer or user must ensure that the destination chain supports the encode
 
 ### XCM Sequence
 
-At the moment, remote execution from origins other than parachain accounts are only allowed to be initiated by the `Shibuya` runtime (including RocStar).
+At the moment, remote execution from origins other than parachain accounts are only allowed to be initiated by the `Shibuya` runtime (including RocStar) and `Shiden` runtime.
 
 A permissible sequence of instructions will therefore have to start like:
 1. `DescendOrigin`
@@ -52,7 +52,7 @@ Call data can be virtually anything supported by the remote chain - it doesn't m
 
 ### Remote Wasm Smart Contract Execution
 
-For all our runtimes supporting Wasm smart sontracts & remote transaction via XCM, users are able to fully utilize contract uploads, instantiation, and most important - calls. No special approach or setup is needed since Wasm smart contracts are native to Astar chains. Sending a remote Wasm smart contract call is the same as executing any other remote transaction.
+For all our runtimes supporting Wasm smart contracts & remote transaction via XCM, users are able to fully utilize contract instantiation & calls. No special approach or setup is needed since Wasm smart contracts are native to Astar chains. Sending a remote Wasm smart contract call is the same as executing any other remote transaction.
 
 You can prepare the call within the `polkadot.js portal`(see image below), or custom code using the [polkadot-js/api-contract](https://github.com/polkadot-js/api/tree/46076c5595ab62e960a1097611a3e150bfa942f2/packages/api-contract) TypeScript library.
 
@@ -65,25 +65,49 @@ Until then, developers will need to rely on the aforementioned library, or the `
 ## Derived Remote Accounts
 
 When executing a remote transaction, the remote chain will derive a new address based on the sender's multilocation.
-The way this address is derived is determined by the chain itself.
+The way this address is derived is determined by the chain itself so this documentation cannot guarantee how any other chain but Astar-based chains.
+However, we 
 
-For Astar runtimes, a generalized approach, aligned with `Polkadot` and `Kusama` is used. A tuple like `("multiloc", sender_multilocation)` is SCALE encoded and hashed using the `Blake2_256` hasher, with the output being the derived address.
-
-For example, let's assume `Alice` is sending an XCM sequence from `Polkadot` to `Astar`.
+For Astar-based runtimes, a generalized approach, aligned with `Polkadot` and `Kusama` is used. 
+Multilocation is SCALE-encoded, step-by-step, until finally it is hashed using the `Blake2_256`, with the output being the derived address.
 
 | Name      | Value       |
 | ----------- | ----------- |
 | Alice's Address in Polkadot      | 15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5       |
 | Alice's Public Key  | 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d  |
-| Alice's MultiLoc in Astar | { parents: 1, interior: AccountId32 {network: NetworkId::Polkadot, id: 0xd4359...a27d } } |
-| Alice's Derived Account in Astar | 5EbMT4dyi1ohgYVwLUvWAoCZCznHMT1Dk5B7GAaGJGcAMRaG |
+| Alice's Multiloc in Astar | { parents: 1, interior: AccountId32 {network: NetworkId::Polkadot, id: 0xd4359...a27d } } |
+
+---
+
+For example, let's assume `Alice` is sending an XCM sequence from `AssetHub` to `Astar`.
+Sibling parachain's account is derived using a simple approach:
+
+`blake2_256(("SiblingChain", compact_parachain_id, b"AccountId32", public_key).encode())`
+
+| Name      | Value       |
+| ----------- | ----------- |
+| Alice's MultiLoc in Astar | { parents: 1, interior: X2(Parachain(1000), AccountId32 {network: NetworkId::Polkadot, id: 0xd4359...a27d }) } |
+| Alice's Derived Account | 0x88275533b5d43292c86d05985c3a6e226fee2baeddb4f3b90e30a70bec4d7bff |
+
+Similarly, in case `Alice` is sending XCM from a chain that uses **H160** address format:
+
+`blake2_256(("SiblingChain", compact_parachain_id, b"AccountKey20", public_key).encode())`
+
+---
+
+In case `Alice` is sending XCM from `Polkadot`, the encoded data changes a bit and would be like:
+
+`blake2_256((b"ParentChain", b"AccountId32", public key).encode())`
+
+| Name      | Value       |
+| ----------- | ----------- |
+| Alice's Multiloc in Astar | { parents: 1, interior: X1(AccountId32 {network: NetworkId::Polkadot, id: 0xd4359...a27d }) } |
+| Alice's Derived Account | 0x7dcb1027ecb97011ebe79ca233def50d1f216eb05d76367c8984f67ccc5d2dd1 |
+
+---
 
 You can use the `xcm-tools` binary to generate the derived address, based on your needs.
 
-:::caution
-Be aware that derived accounts have been changed with the introduction of **XCM v3**.
-This is because `AccountId32` type's `network` parameter has become an `Option<NetworkId>`.
-:::
 
 ## Remotely Transact via EVM Smart Contracts
 
@@ -117,7 +141,11 @@ For example, let's assume you have a contract deployed on Shibuya and are callin
 | Contract Derived SS58 Address | `agn53DdEuRgQsvgxqj5M1AecxB6LpbXT7T1R1hjVcoEBR6M` |
 | SS58 Address Public Key | `0xd219fe1b02545c7dd7e718b1530b4e32b23288351f61e5975c7dc49b004ff119` |
 | Caller Multilocation | `{ parents: 1, interior: X2 ( Parachain(2000), AccountId32 {network: NetworkId::Any, id: 0xd219f...f119 } ) }` |
-| Derived Account32Hash Address | `5FrhDFydxUwbWyXT1XDBhRUUYpQtiJJ6skB6n2XV4NubC9fP` |
+| Derived Remote Address | `5FrhDFydxUwbWyXT1XDBhRUUYpQtiJJ6skB6n2XV4NubC9fP` |
+
+:::note
+The remote address derivation scheme has changed after writing the initial example but the whole process is otherwise still valid and correct. 
+:::
 
 This means that the instructions like `WithdrawAsset` and `Transact` will be executed as if origin was address `5FrhDFydxUwbWyXT1XDBhRUUYpQtiJJ6skB6n2XV4NubC9fP`.
 
