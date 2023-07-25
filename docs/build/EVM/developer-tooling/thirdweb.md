@@ -5,7 +5,22 @@ sidebar_position: 2
 
 ### Introduction
 
-thirdweb is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks
+Thirdweb is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks.
+
+:::caution
+API keys will be required for access to thirdweb infrastructure services (effective August 1st, 2023).
+
+
+In an effort to serve our growing developer community by providing more resilient, reliable, and robust infrastructure, we are instituting a new policy requiring users of our SDK’s, Storage, CLI and Smart Accounts to include an API key for use of the following thirdweb infrastructure services:
+
+
+-   RPC Edge - RPC infrastructure for connecting to any EVM chain
+-   Storage - Service for both uploading and downloading of data to decentralized storage
+-   Smart Wallet Bundler/Paymaster (beta) - Our Bundler and Paymaster service for use with smart wallets (ERC-4337/6551)
+
+
+For more details, FAQ and instructions on how you can get your API key and upgrade your app to work in advance of the August 1st deadline, please visit the [migration blog](https://blog.thirdweb.com/changelog/api-keys-to-access-thirdweb-infra/).
+:::
 
 ### Prerequisites
 
