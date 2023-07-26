@@ -11,12 +11,12 @@ Bluez.app is a community driven marketplace for Astar network. Bluez API provide
 
 First, obtain an API key [here](https://docs.google.com/forms/d/e/1FAIpQLSf5Fa3Tapwakj5O--peMN9woGc54gXLyOXB1aSG5ewciT0FPQ/viewform). Once you have obtained your key, head over to the [playground](https://api.bluez.app/api/#/) where you'll be able to reference various queries, and try them live before using them within your specific application.
 
-For reference:
+**For reference:**
 
 [Get an API key](https://docs.google.com/forms/d/e/1FAIpQLSf5Fa3Tapwakj5O--peMN9woGc54gXLyOXB1aSG5ewciT0FPQ/viewform)
 [API guide and playground](https://api.bluez.app/api/#/)
 
-Examples of GET queries available through this API:
+### Examples of GET queries available through this API:
 
 /nft/v3/{apiKey}/getNFTsForOwner
 
