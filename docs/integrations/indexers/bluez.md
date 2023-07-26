@@ -19,8 +19,13 @@ For reference:
 Examples of GET queries available through this API:
 
 /nft/v3/{apiKey}/getNFTsForOwner
+
 /nft/v3/{apiKey}/getNFTMetadata
+
 /nft/v3/{apiKey}/getNFTsForContract
+
 /nft/v3/{apiKey}/getOwnersForNFT
+
 /nft/v3/{apiKey}/getOwnersForContract
+
 /nft/v3/{apiKey}/getNFTSales
