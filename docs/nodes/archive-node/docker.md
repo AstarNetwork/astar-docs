@@ -39,7 +39,6 @@ docker run -d \
 --name astar-container \
 -u $(id -u astar):$(id -g astar) \
 -p 30333:30333 \
--p 9933:9933 \
 -p 9944:9944 \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
@@ -50,7 +49,6 @@ astar-collator \
 --chain astar \
 --base-path /data \
 --rpc-external \
---ws-external \
 --rpc-methods Safe \
 --rpc-max-request-size 1 \
 --rpc-max-response-size 1 \
@@ -66,7 +64,6 @@ docker run -d \
 --name shiden-container \
 -u $(id -u astar):$(id -g astar) \
 -p 30333:30333 \
--p 9933:9933 \
 -p 9944:9944 \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
@@ -77,7 +74,6 @@ astar-collator \
 --chain astar \
 --base-path /data \
 --rpc-external \
---ws-external \
 --rpc-methods Safe \
 --rpc-max-request-size 1 \
 --rpc-max-response-size 1 \
@@ -93,7 +89,6 @@ docker run -d \
 --name shibuya-container \
 -u $(id -u astar):$(id -g astar) \
 -p 30333:30333 \
--p 9933:9933 \
 -p 9944:9944 \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
@@ -104,7 +99,6 @@ astar-collator \
 --chain astar \
 --base-path /data \
 --rpc-external \
---ws-external \
 --rpc-methods Safe \
 --rpc-max-request-size 1 \
 --rpc-max-response-size 1 \
@@ -117,7 +111,7 @@ astar-collator \
 Test the node health via the RPC port with this command:
 
 ```sh
-curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9933
+curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"system_health", "params":[],"id":1 }' localhost:9944
 ```
 
 ## Next steps

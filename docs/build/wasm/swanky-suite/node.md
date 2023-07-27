@@ -148,7 +148,7 @@ Swanky Node enables both Manual seal and Instant seal.
 We can tell the node to author a block by calling the `engine_createBlock` RPC.
 
 ```bash
-$ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d   '{
+$ curl http://localhost:9944 -H "Content-Type:application/json;charset=utf-8" -d   '{
      "jsonrpc":"2.0",
       "id":1,
       "method":"engine_createBlock",
@@ -172,7 +172,7 @@ $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d
 In addition to finalizing blocks at the time of creating them, they may also be finalized later by using the RPC call `engine_finalizeBlock`.
 
 ```bash
-$ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d   '{
+$ curl http://localhost:9944 -H "Content-Type:application/json;charset=utf-8" -d   '{
      "jsonrpc":"2.0",
       "id":1,
       "method":"engine_finalizeBlock",

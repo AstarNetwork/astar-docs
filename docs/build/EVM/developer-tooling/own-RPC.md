@@ -16,9 +16,9 @@ The EVM RPC server is disabled by default. To enable it, append the `--enable-ev
 :::
 
 ```
-astar-collator --chain=shiden --enable-evm-rpc --unsafe-rpc-external --unsafe-ws-external
+astar-collator --chain=shiden --enable-evm-rpc --unsafe-rpc-external
 ```
 
-The launch string above will start an Astar Collator on Shiden network, open up an HTTP endpoint on port `9933`, and a WS endpoint on port `9944`.
+The launch string above will start an Astar Collator on Shiden network, open up an WS/HTTP endpoint on port `9944`.
 
-We also recommend paying attention to the `--ws-max-connections` parameter. By default this value is relatively small, so it may be beneficial to increase it to a few thousand.
+We also recommend paying attention to the `--rpc-max-connections` parameter. By default this value is relatively small, so it may be beneficial to increase it to a few thousand.
