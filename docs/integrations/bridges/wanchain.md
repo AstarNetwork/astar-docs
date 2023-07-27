@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 import wanchain1 from "./img/wanchain1.png"
 import wanchain2 from "./img/wanchain2.png"
