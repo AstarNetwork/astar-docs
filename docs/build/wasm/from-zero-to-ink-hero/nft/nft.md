@@ -21,9 +21,9 @@ To follow this tutorial you will need:
 - Prior knowledge about ERC721 is helpful but not mandatory.
 
 ## What will be used?
-- [ink! v4.0.0](https://github.com/paritytech/ink/tree/v4.0.0)   
-- [Openbrush 3.0.0](https://github.com/727-Ventures/openbrush-contracts/tree/3.0.0)
-- cargo-contract 2.0.1
+- [ink! v4.2.1](https://github.com/paritytech/ink/tree/v4.2.1)   
+- [Openbrush 4.0.0-beta](https://github.com/Brushfam/openbrush-contracts/releases/tag/4.0.0-beta)
+- cargo-contract 3.0.1
 
 ## What will you learn?
 - Full implementation of NFT project in ink!.
