@@ -4,23 +4,14 @@
 
 You may have noticed while using the Openbrush wizard, that prior to adding the Security -> Ownable trait, the contract will not have the `mint()` function overridden, so anyone is able to mint new tokens, by default.
 
-```rust
-impl PSP34Mintable for Shiden34 { }
-```
 
 However, after including the *Ownable* trait, the default `mint()` function will be overridden, and restricted to being called by the contract owner, only. 
 
 ```rust
-impl PSP34Mintable for Shiden34 {
-    #[ink(message)]
-    #[openbrush::modifiers(only_owner)]
-    fn mint(
-        &mut self,
-        account: AccountId,
-        id: Id
-    ) -> Result<(), PSP34Error> {
-        self._mint_to(account, id)
-    }
+#[overrider(PSP34Mintable)]
+#[openbrush::modifiers(only_owner)]
+fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error>{
+    psp34::InternalImpl::_mint_to(self, account, id)
 }
 ```
 
@@ -50,7 +41,7 @@ Let's introduce a new `mint()` function to the contract, and add it after the co
 ```rust
 #[ink(message, payable)]
 pub fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error> {
-    self._mint_to(account, id)
+    psp34::InternalImpl::_mint_to(self, account, id)
 }
 ```
 
@@ -60,10 +51,11 @@ If the value transferred is not 1 native token, the `mint()` method will return 
 ```rust
 #[ink(message, payable)]
 pub fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error> {
-    if Self::env().transferred_value() != 1_000_000_000_000_000_000 {
-        return Err(PSP34Error::Custom(String::from("BadMintValue")))
+    if self.env().transferred_value() != 1_000_000_000_000_000_000 {
+        return Err(PSP34Error::Custom(String::from("BadMintValue")));
     }
-    self._mint_to(account, id)
+
+    psp34::InternalImpl::_mint_to(self, account, id)
 }
 ```
 
@@ -74,7 +66,7 @@ cargo fmt --all
 
 Check if code compiles:
 ```bash
-cargo +nightly check
+cargo check
 ````
 
 At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/mint-step2).
