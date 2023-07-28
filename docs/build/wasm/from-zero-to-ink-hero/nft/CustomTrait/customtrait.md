@@ -30,7 +30,6 @@ With the extended structure we need to link all new modules. Let's start from `l
 The crate's `lib.rs` needs to point to `impls` and `trait` folders and since it is top module for this crate it needs a few macros:
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
-#![feature(min_specialization)]
 
 pub mod impls;
 pub mod traits;
@@ -40,17 +39,15 @@ The crate's `Cargo.toml` will import all ink! and Openbrush crates and it will b
 ```toml
 [package]
 name = "payable_mint_pkg"
-version = "3.0.0"
+version = "3.1.0"
 authors = ["Astar builder"]
 edition = "2021"
 
 [dependencies]
-ink = { version = "~4.0.0", default-features = false}
-
+ink = { version = "4.2.1", default-features = false }
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
-scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
-
-openbrush = { tag = "3.0.0", git = "https://github.com/727-Ventures/openbrush-contracts", default-features = false, features = ["psp34", "ownable"] }
+scale-info = { version = "2.6", default-features = false, features = ["derive"], optional = true }
+openbrush = { tag = "v4.0.0-beta", git = "https://github.com/Brushfam/openbrush-contracts", default-features = false, features = ["psp34", "ownable"] }
 
 [lib]
 path = "lib.rs"
@@ -110,93 +107,93 @@ You may have noticed some unusual macro commands in these examples. They will be
 Let's move the `mint()` function from the contract's `lib.rs` to the newly created `logics/impls/payable_mint.rs` file, as we do not want any duplicated calls in the contract.
 
 ```rust
-pub use crate::traits::payable_mint::PayableMint;
+use openbrush::traits::DefaultEnv;
 use openbrush::{
-    contracts::{
-        psp34::extensions::{
-            enumerable::*,
-        },
-    },
-    traits::{
-        AccountId,
-        Storage,
-        String
-    },
+    contracts::psp34::*,
+    traits::{AccountId, String},
 };
 
-impl<T> PayableMint for T
-where
-    T: Storage<psp34::Data<enumerable::Balances>>
-        + psp34::extensions::metadata::PSP34Metadata
-        + psp34::Internal,
-{
-    default fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error> {
+#[openbrush::trait_definition]
+pub trait PayableMintImpl: psp34::InternalImpl {
+    #[ink(message, payable)]
+    fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error> {
         if Self::env().transferred_value() != 1_000_000_000_000_000_000 {
-            return Err(PSP34Error::Custom(String::from("BadMintValue")))
+            return Err(PSP34Error::Custom(String::from("BadMintValue")));
         }
-        self._mint_to(account, id)
+
+        psp34::InternalImpl::_mint_to(self, account, id)
     }
 }
+
 ```
 
 The last remaining step is to import and implement `PayableMint` in our contract:
 
 ```rust
-use payable_mint_pkg::traits::payable_mint::*;
+use payable_mint_pkg::impls::payable_mint::*;
 
 ...
 
-impl PayableMint for Shiden34 {}
+impl payable_mint::PayableMintImpl for Shiden34 {}
 ```
 
 The contract with all its changes should now appear as something like this:
 
 ```rust
-#![cfg_attr(not(feature = "std"), no_std)]
-#![feature(min_specialization)]
+#![cfg_attr(not(feature = "std"), no_std, no_main)]
 
+#[openbrush::implementation(PSP34, PSP34Enumerable, PSP34Metadata, PSP34Mintable, Ownable)]
 #[openbrush::contract]
 pub mod shiden34 {
-	use payable_mint_pkg::traits::payable_mint::*;
-    use openbrush::{
-        contracts::ownable::*,
-        contracts::psp34::extensions::{enumerable::*, metadata::*},
-        traits::{Storage, String},
-    };
+    use openbrush::traits::Storage;
+    use payable_mint_pkg::impls::payable_mint::*;
 
     #[ink(storage)]
     #[derive(Default, Storage)]
     pub struct Shiden34 {
         #[storage_field]
-        psp34: psp34::Data<enumerable::Balances>,
+        psp34: psp34::Data,
         #[storage_field]
         ownable: ownable::Data,
         #[storage_field]
         metadata: metadata::Data,
+        #[storage_field]
+        enumerable: enumerable::Data,
     }
 
-    impl PSP34 for Shiden34 {}
-    impl Ownable for Shiden34 {}
-    impl PSP34Enumerable for Shiden34 {}
-    impl PSP34Metadata for Shiden34 {}
-	impl PayableMint for Shiden34 {}
+    #[overrider(PSP34Mintable)]
+    #[openbrush::modifiers(only_owner)]
+    fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error> {
+        psp34::InternalImpl::_mint_to(self, account, id)
+    }
+
+   impl payable_mint::PayableMintImpl for Shiden34 {}
 
     impl Shiden34 {
         #[ink(constructor)]
         pub fn new() -> Self {
-            let mut instance = Self::default();
-            instance._init_with_owner(instance.env().caller());
-            let collection_id = instance.collection_id();
-            instance._set_attribute(
+            let mut _instance = Self::default();
+            ownable::Internal::_init_with_owner(&mut _instance, Self::env().caller());
+            psp34::Internal::_mint_to(&mut _instance, Self::env().caller(), Id::U8(1))
+                .expect("Can mint");
+            let collection_id = psp34::PSP34Impl::collection_id(&_instance);
+            metadata::Internal::_set_attribute(
+                &mut _instance,
                 collection_id.clone(),
                 String::from("name"),
                 String::from("Shiden34"),
             );
-            instance._set_attribute(collection_id, String::from("symbol"), String::from("SH34"));
-            instance
+            metadata::Internal::_set_attribute(
+                &mut _instance,
+                collection_id,
+                String::from("symbol"),
+                String::from("SH34"),
+            );
+            _instance
         }
     }
 }
+
 ```
 Format your code with:
 ```bash
@@ -205,7 +202,7 @@ cargo fmt --all
 
 Check if code compiles:
 ```bash
-cargo +nightly check
+cargo check
 ````
 
 At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/trait-step3).
