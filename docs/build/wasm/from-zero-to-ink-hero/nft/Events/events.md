@@ -42,25 +42,19 @@ pub struct Approval {
 
 Override the default event emission function:
 ```rust
-impl psp34::Internal for Shiden34 {
-    fn _emit_transfer_event(&self, from: Option<AccountId>, to: Option<AccountId>, id: Id) {
-        self.env().emit_event(Transfer { from, to, id });
-    }
+#[overrider(psp34::Internal)]
+fn _emit_transfer_event(&self, from: Option<AccountId>, to: Option<AccountId>, id: Id) {
+    self.env().emit_event(Transfer { from, to, id });
+}
 
-    fn _emit_approval_event(
-        &self,
-        from: AccountId,
-        to: AccountId,
-        id: Option<Id>,
-        approved: bool,
-    ) {
-        self.env().emit_event(Approval {
-            from,
-            to,
-            id,
-            approved,
-        });
-    }
+#[overrider(psp34::Internal)]
+fn _emit_approval_event(&self, from: AccountId, to: AccountId, id: Option<Id>, approved: bool) {
+    self.env().emit_event(Approval {
+        from,
+        to,
+        id,
+        approved,
+    });
 }
 ```
 
@@ -76,7 +70,7 @@ cargo fmt --all
 
 Run unit test:
 ```bash
-cargo +nightly test
+cargo test
 ```
 
 At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/events).
