@@ -18,58 +18,53 @@ At the time of writing this tutorial, Openbrush wizard does not properly generat
 
 Your `lib.rs` file should look like this:
 ```rust
-#![cfg_attr(not(feature = "std"), no_std)]
-#![feature(min_specialization)]
+#![cfg_attr(not(feature = "std"), no_std, no_main)]
 
+#[openbrush::implementation(PSP34, Ownable, PSP34Enumerable, PSP34Metadata, PSP34Mintable)]
 #[openbrush::contract]
 pub mod shiden34 {
-    use openbrush::{
-        contracts::psp34::extensions::{
-            enumerable::*,
-            mintable::*,
-            metadata::*,
-        },
-        contracts::ownable::*,
-        traits::{Storage, String},
-    };
+    use openbrush::traits::Storage;
 
     #[ink(storage)]
     #[derive(Default, Storage)]
     pub struct Shiden34 {
         #[storage_field]
-        psp34: psp34::Data<enumerable::Balances>,
-		#[storage_field]
-		ownable: ownable::Data,
+        psp34: psp34::Data,
         #[storage_field]
-		metadata: metadata::Data,
+        ownable: ownable::Data,
+        #[storage_field]
+        metadata: metadata::Data,
+        #[storage_field]
+        enumerable: enumerable::Data,
     }
 
-    impl PSP34 for Shiden34 {}
-    impl Ownable for Shiden34 {}
-    impl PSP34Mintable for Shiden34 {
-        #[ink(message)]
-		#[openbrush::modifiers(only_owner)]
-		fn mint(
-            &mut self,
-            account: AccountId,
-			id: Id
-        ) -> Result<(), PSP34Error> {
-			self._mint_to(account, id)
-		}
+    #[overrider(PSP34Mintable)]
+    #[openbrush::modifiers(only_owner)]
+    fn mint(&mut self, account: AccountId, id: Id) -> Result<(), PSP34Error> {
+        psp34::InternalImpl::_mint_to(self, account, id)
     }
-    impl PSP34Enumerable for Shiden34 {}
-	impl PSP34Metadata for Shiden34 {}
 
     impl Shiden34 {
         #[ink(constructor)]
         pub fn new() -> Self {
-            let mut instance = Self::default();
-            instance._init_with_owner(instance.env().caller());
-            instance._mint_to(instance.env().caller(), Id::U8(1)).expect("Can't mint");
-            let collection_id = instance.collection_id();
-            instance._set_attribute(collection_id.clone(), String::from("name"), String::from("Shiden34"));
-			instance._set_attribute(collection_id, String::from("symbol"), String::from("SH34"));
-            instance
+            let mut _instance = Self::default();
+            ownable::Internal::_init_with_owner(&mut _instance, Self::env().caller());
+            psp34::Internal::_mint_to(&mut _instance, Self::env().caller(), Id::U8(1))
+                .expect("Can mint");
+            let collection_id = psp34::PSP34Impl::collection_id(&_instance);
+            metadata::Internal::_set_attribute(
+                &mut _instance,
+                collection_id.clone(),
+                String::from("name"),
+                String::from("Shiden34"),
+            );
+            metadata::Internal::_set_attribute(
+                &mut _instance,
+                collection_id,
+                String::from("symbol"),
+                String::from("SH34"),
+            );
+            _instance
         }
     }
 }
@@ -79,17 +74,15 @@ Your `Cargo.toml` should now look like this:
 ```toml
 [package]
 name = "shiden34"
-version = "3.0.0"
+version = "3.1.0"
 authors = ["Astar builder"]
 edition = "2021"
 
 [dependencies]
-ink = { version = "~4.0.0", default-features = false}
-
+ink = { version = "4.2.1", default-features = false }
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
-scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
-
-openbrush = { tag = "3.0.0", git = "https://github.com/727-Ventures/openbrush-contracts", default-features = false, features = ["psp34", "ownable"] }
+scale-info = { version = "2.6", default-features = false, features = ["derive"], optional = true }
+openbrush = { tag = "v4.0.0-beta", git = "https://github.com/Brushfam/openbrush-contracts", default-features = false, features = ["psp34", "ownable"] }
 
 [lib]
 path = "lib.rs"
@@ -137,22 +130,15 @@ And your folder structure will look like:
 You are now ready to check if all is set.
 Run in root project folder:
 ```bash
-cargo +nightly check
+cargo check
 ```
-:::warning
-If you are using stable rustc compiler you will get:
-`error[E0554]: #![feature] may not be used on the stable release channel`
-
-Since Openbrush uses `#![feature(min_specialization)]` which is unstable feature, you need to use `cargo +nightly`.
-Check [Setup environment chapter](/docs/build/environment/ink_environment#rust-and-cargo) to instal nightly toolchain.
-:::
 
 ## Examine Openbrush Traits
 Let's examine what we have inside module `shiden34` (lib.rs) so far:
 * Defined structure `Shiden34` for contract storage.
 * Implemented constructor `new()` for `Shiden34` structure.
-* Implemented Openbrush traits *PSP34, Metadata, Mintable, Enumberable, Ownable* for structure `Shiden34`.
-* Overridden `mint()` method from trait *Mintable*. More about this in next section.
+* Implemented Openbrush traits *PSP34, PSP34Metadata, PSP34Mintable, PSP34Enumberable, Ownable* for structure `Shiden34`.
+* Overridden `mint()` method from trait *PSP34Mintable*. More about this in next section.
 
 Each of implemented traits will enrich `shiden34` contract with a set of methods. To examine which methods you now have available check:
 * Openbrush [PSP34 trait](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/psp34.rs) brings all familiar functions from ERC721 plus a few extra:
@@ -187,7 +173,7 @@ After this step your code should look like [this](https://github.com/swanky-dapp
 Build your contract:
 ```bash
 cd contracts/shiden34
-cargo +nightly contract build --release
+cargo contract build --release
 ```
 Use ***shiden34.contract*** target to deploy contract.
 The file is located in this folder:

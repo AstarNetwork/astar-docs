@@ -9,17 +9,15 @@ In this section we will:
 Since the contract is able to accept new parameters, we will need storage to log them. Let's create a new file called `logics/impls/payable_mint/types.rs` and add new type `Data`:
 
 ```rust
-use openbrush::traits::{
-    Balance,
-};
-pub const STORAGE_KEY: u32 = openbrush::storage_unique_key!(Data);
+use openbrush::traits::Balance;
 
 #[derive(Default, Debug)]
-#[openbrush::upgradeable_storage(STORAGE_KEY)]
+#[openbrush::storage_item]
 pub struct Data {
     pub last_token_id: u64,
     pub max_supply: u64,
     pub price_per_mint: Balance,
+}rice_per_mint: Balance,
 }
 ```
 
@@ -34,14 +32,12 @@ Since we introduced data storage, we will need to add a trait bound `Storage<Dat
 ```rust
 use crate::impls::payable_mint::types::Data;
 
-...
-impl<T> PayableMint for T
-where
-    T: Storage<Data>
-        + Storage<psp34::Data<enumerable::Balances>>
-        + Storage<ownable::Data>
-        + Storage<metadata::Data>
-        + psp34::Internal
+#[openbrush::trait_definition]
+pub trait PayableMintImpl:
+    Storage<Data>
+    + Storage<psp34::Data>
+    + Storage<ownable::Data>
+    + Storage<metadata::Data>
     {...}
 ```
 
@@ -49,24 +45,9 @@ where
 There are several checks that need to be performed before the token mint can proceed. To keep our `mint()` function easy to read, let's introduce an `Internal` trait with helper functions in our implementation file `logics/impls/payable_mint/payable_mint.rs` and add two helper functions `check_value()` and `check_amount()` by defining traits and implementing them in the same file:
 
 ```rust
-pub trait Internal {
+pub trait Internal: Storage<Data> + psp34::Internal {
     /// Check if the transferred mint values is as expected
-    fn check_value(&self, transferred_value: u128, mint_amount: u64) -> Result<(), PSP34Error>;
-
-    /// Check amount of tokens to be minted
-    fn check_amount(&self, mint_amount: u64) -> Result<(), PSP34Error>;
-}
-
-impl<T> Internal for T
-where
-    T: Storage<Data> + Storage<psp34::Data<enumerable::Balances>>,
-{
-    /// Check if transferred funds are sufficient for minting the desired nunmber of tokens. 
-    default fn check_value(
-        &self,
-        transferred_value: u128,
-        mint_amount: u64,
-    ) -> Result<(), PSP34Error> {
+    fn check_value(&self, transferred_value: u128, mint_amount: u64) -> Result<(), PSP34Error> {
         if let Some(value) = (mint_amount as u128).checked_mul(self.data::<Data>().price_per_mint) {
             if transferred_value == value {
                 return Ok(());
@@ -74,8 +55,9 @@ where
         }
         return Err(PSP34Error::Custom(String::from("BadMintValue")));
     }
-    /// Check if amount of tokens to be minted does not overflow max supply. 
-    default fn check_amount(&self, mint_amount: u64) -> Result<(), PSP34Error> {
+
+    /// Check amount of tokens to be minted
+    fn check_amount(&self, mint_amount: u64) -> Result<(), PSP34Error> {
         if mint_amount == 0 {
             return Err(PSP34Error::Custom(String::from("CannotMintZeroTokens")));
         }
@@ -87,11 +69,11 @@ where
         return Err(PSP34Error::Custom(String::from("CollectionIsFull")));
     }
 }
-
 ```
 Using these helper functions our `mint()` implementation will look like this:
 ```rust
-default fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34Error> {
+#[ink(message, payable)]
+fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34Error> {
     self.check_value(Self::env().transferred_value(), mint_amount)?;
     self.check_amount(mint_amount)?;
 
@@ -99,10 +81,8 @@ default fn mint(&mut self, to: AccountId, mint_amount: u64) -> Result<(), PSP34E
     let mint_offset = next_to_mint + mint_amount;
 
     for mint_id in next_to_mint..mint_offset {
-        self.data::<psp34::Data<enumerable::Balances>>()
-            ._mint_to(to, Id::U64(mint_id))?;
+        psp34::InternalImpl::_mint_to(self, to, Id::U64(mint_id))?;
         self.data::<Data>().last_token_id += 1;
-        self._emit_transfer_event(None, Some(to), Id::U64(mint_id));
     }
 
     Ok(())
@@ -113,17 +93,17 @@ This trait allows the contract owner to initiate withdrawal of funds from the co
 
 ```rust
 /// Withdraws funds to contract owner
-#[modifiers(only_owner)]
-default fn withdraw(&mut self) -> Result<(), PSP34Error> {
+#[ink(message)]
+#[openbrush::modifiers(only_owner)]
+fn withdraw(&mut self) -> Result<(), PSP34Error> {
     let balance = Self::env().balance();
     let current_balance = balance
         .checked_sub(Self::env().minimum_balance())
         .unwrap_or_default();
+    let owner = self.data::<ownable::Data>().owner.get().unwrap().unwrap();
     Self::env()
-        .transfer(self.data::<ownable::Data>().owner(), current_balance)
-        .map_err(|_| {
-            PSP34Error::Custom(String::from(Shiden34Error::WithdrawalFailed.as_str()))
-        })?;
+        .transfer(owner, current_balance)
+        .map_err(|_| PSP34Error::Custom(String::from("WithdrawalFailed")))?;
     Ok(())
 }
 ```
@@ -132,49 +112,40 @@ default fn withdraw(&mut self) -> Result<(), PSP34Error> {
 To make the code cleaner, let's create additional helper function `token_exist()` and add it to the `Internal` trait:
 
 ```rust
-pub trait Internal {
+pub trait Internal: Storage<Data> + psp34::Internal {
     ...
-    /// Check if token is minted
-    fn token_exists(&self, id: Id) -> Result<(), PSP34Error>;
-}
 
-impl<T> Internal for T...
-{
-    ...
-    /// Check if token is minted
-    default fn token_exists(&self, id: Id) -> Result<(), PSP34Error> {
-        self.data::<psp34::Data<enumerable::Balances>>()
-            .owner_of(id)
-            .ok_or(PSP34Error::TokenNotExists)?;
+     /// Check if token is minted
+    fn token_exists(&self, id: Id) -> Result<(), PSP34Error> {
+        self._owner_of(&id).ok_or(PSP34Error::TokenNotExists)?;
         Ok(())
-}
+    }
 ```
 
 Now the implementation of `set_base_uri()` and `token_uri()` will look like this:
 ```rust
 ...
 /// Set new value for the baseUri
-#[modifiers(only_owner)]
-default fn set_base_uri(&mut self, uri: PreludeString) -> Result<(), PSP34Error> {
-    let id = self
-        .data::<psp34::Data<enumerable::Balances>>()
-        .collection_id();
-    self.data::<metadata::Data>()
-        ._set_attribute(id, String::from("baseUri"), uri.into_bytes());
+#[ink(message)]
+#[openbrush::modifiers(only_owner)]
+fn set_base_uri(&mut self, uri: String) -> Result<(), PSP34Error> {
+    let id = PSP34Impl::collection_id(self);
+    metadata::Internal::_set_attribute(self, id, String::from("baseUri"), uri);
+
     Ok(())
 }
+
 /// Get URI from token ID
-default fn token_uri(&self, token_id: u64) -> Result<PreludeString, PSP34Error> {
+#[ink(message)]
+fn token_uri(&self, token_id: u64) -> Result<String, PSP34Error> {
     self.token_exists(Id::U64(token_id))?;
-    let value = self.get_attribute(
-        self.data::<psp34::Data<enumerable::Balances>>()
-            .collection_id(),
+    let base_uri = PSP34MetadataImpl::get_attribute(
+        self,
+        PSP34Impl::collection_id(self),
         String::from("baseUri"),
     );
-    let mut token_uri = PreludeString::from_utf8(value.unwrap()).unwrap();
-    token_uri = token_uri + &token_id.to_string() + &PreludeString::from(".json");
+    let token_uri = base_uri.unwrap() + &token_id.to_string() + &String::from(".json");
     Ok(token_uri)
-}
 ```
 
 ## Update Shiden34 Contract
@@ -201,16 +172,32 @@ pub fn new(
     max_supply: u64,
     price_per_mint: Balance,
 ) -> Self {
-        let mut instance = Self::default();
-        instance._init_with_owner(instance.env().caller());
-        let collection_id = instance.collection_id();
-        instance._set_attribute(collection_id.clone(), String::from("name"), name);
-        instance._set_attribute(collection_id.clone(), String::from("symbol"), symbol);
-        instance._set_attribute(collection_id, String::from("baseUri"), base_uri);
-        instance.payable_mint.max_supply = max_supply;
-        instance.payable_mint.price_per_mint = price_per_mint;
-        instance.payable_mint.last_token_id = 0;
-        instance
+    let mut instance = Self::default();
+    let caller = instance.env().caller();
+    ownable::InternalImpl::_init_with_owner(&mut instance, caller);
+    let collection_id = psp34::PSP34Impl::collection_id(&instance);
+    metadata::InternalImpl::_set_attribute(
+        &mut instance,
+        collection_id.clone(),
+        String::from("name"),
+        name,
+    );
+    metadata::InternalImpl::_set_attribute(
+        &mut instance,
+        collection_id.clone(),
+        String::from("symbol"),
+        symbol,
+    );
+    metadata::InternalImpl::_set_attribute(
+        &mut instance,
+        collection_id,
+        String::from("baseUri"),
+        base_uri,
+    );
+    instance.payable_mint.max_supply = max_supply;
+    instance.payable_mint.price_per_mint = price_per_mint;
+    instance.payable_mint.last_token_id = 0;
+    instance
 }
 ```
 
@@ -219,17 +206,18 @@ Let's write a simple unit test to check the `mint()` function. In ink! contracts
 After all imports, let's write a helper method to initiate the contract:
 ```rust
 #[cfg(test)]
+#[cfg(test)]
 mod tests {
     use super::*;
     use crate::shiden34::PSP34Error::*;
     use ink::env::test;
-    
+
     const PRICE: Balance = 100_000_000_000_000_000;
-    
-    fn init() -> Contract {
+
+    fn init() -> Shiden34 {
         const BASE_URI: &str = "ipfs://myIpfsUri/";
         const MAX_SUPPLY: u64 = 10;
-        Contract::new(
+        Shiden34::new(
             String::from("Shiden34"),
             String::from("SH34"),
             String::from(BASE_URI),
@@ -249,20 +237,20 @@ fn mint_multiple_works() {
     set_sender(accounts.bob);
     let num_of_mints: u64 = 5;
 
-    assert_eq!(sh34.total_supply(), 0);
+    assert_eq!(PSP34Impl::total_supply(&sh34), 0);
     test::set_value_transferred::<ink::env::DefaultEnvironment>(
         PRICE * num_of_mints as u128,
     );
-    assert!(sh34.mint(accounts.bob, num_of_mints).is_ok());
-    assert_eq!(sh34.total_supply(), num_of_mints as u128);
-    assert_eq!(sh34.balance_of(accounts.bob), 5);
-    assert_eq!(sh34.owners_token_by_index(accounts.bob, 0), Ok(Id::U64(1)));
-    assert_eq!(sh34.owners_token_by_index(accounts.bob, 1), Ok(Id::U64(2)));
-    assert_eq!(sh34.owners_token_by_index(accounts.bob, 2), Ok(Id::U64(3)));
-    assert_eq!(sh34.owners_token_by_index(accounts.bob, 3), Ok(Id::U64(4)));
-    assert_eq!(sh34.owners_token_by_index(accounts.bob, 4), Ok(Id::U64(5)));
+    assert!(payable_mint::PayableMintImpl::mint(&mut sh34, accounts.bob, num_of_mints).is_ok());
+    assert_eq!(PSP34Impl::total_supply(&sh34), num_of_mints as u128);
+    assert_eq!(PSP34Impl::balance_of(&sh34, accounts.bob), 5);
+    assert_eq!(PSP34EnumerableImpl::owners_token_by_index(&sh34, accounts.bob, 0), Ok(Id::U64(1)));
+    assert_eq!(PSP34EnumerableImpl::owners_token_by_index(&sh34, accounts.bob, 1), Ok(Id::U64(2)));
+    assert_eq!(PSP34EnumerableImpl::owners_token_by_index(&sh34, accounts.bob, 2), Ok(Id::U64(3)));
+    assert_eq!(PSP34EnumerableImpl::owners_token_by_index(&sh34, accounts.bob, 3), Ok(Id::U64(4)));
+    assert_eq!(PSP34EnumerableImpl::owners_token_by_index(&sh34, accounts.bob, 4), Ok(Id::U64(5)));
     assert_eq!(
-        sh34.owners_token_by_index(accounts.bob, 5),
+        PSP34EnumerableImpl::owners_token_by_index(&sh34, accounts.bob, 5),
         Err(TokenNotExists)
     );
 }
@@ -274,7 +262,7 @@ fn set_sender(sender: AccountId) {
 
 Run unit test:
 ```bash
-cargo +nightly test
+cargo test
 ```
 
 At this stage, your code should look something like [this](https://github.com/swanky-dapps/nft/tree/tutorial/payablemint-step5).
