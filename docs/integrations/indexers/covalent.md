@@ -1,4 +1,5 @@
 ---
+title: Covalent
 sidebar_position: 3
 ---
 
