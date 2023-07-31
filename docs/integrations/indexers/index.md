@@ -4,9 +4,9 @@ Blockchain developers are often faced with the challenge of obtaining data from 
 
 Feel free to use these existing GraphQL endpoints provided for the following parachains:
 
-1. [Astar](https://astar.explorer.subsquid.io/graphql)
-2. [Shiden](https://shiden.explorer.subsquid.io/graphql)
-3. [Shibuya](https://shibuya.explorer.subsquid.io/graphql)
+1. [Astar](https://squid.subsquid.io/gs-explorer-astar/graphql)
+2. [Shiden](https://squid.subsquid.io/gs-explorer-shiden/graphql)
+3. [Shibuya](https://squid.subsquid.io/gs-explorer-shibuya/graphql)
 
 ## What is GraphQL?
 
@@ -29,7 +29,7 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 // Replace with the GraphQL endpoint of the parachain you want to interact with
 const client = new ApolloClient({
-  uri: 'https://astar.explorer.subsquid.io/graphql',
+  uri: 'https://squid.subsquid.io/gs-explorer-astar/graphql',
   cache: new InMemoryCache()
 });
 
