@@ -101,7 +101,8 @@ sudo nano /etc/systemd/system/astar.service
     Group=astar
     
     ExecStart=/usr/local/bin/astar-collator \
-    --pruning archive \
+    --state-pruning archive \
+    --blocks-pruning archive \
     --rpc-cors all \
     --name {NODE_NAME} \
     --chain astar \
