@@ -15,7 +15,7 @@ Wasm smart contracts empower developers, and bridge the gap between blockchain a
 Solidity developers will feel right at home building on Astar EVM, as it provides an equivalent environment, and simultaneously allows them to fragment smart contracts and offload logic selectively to the Wasm Virtual Machine for applications that have different operating requirements. See the [EVM chapter.](/docs/build/evm) for more information.
 
 ## Build2Earn
-Astar network's innovative Build2Earn program allows developers to earn a basic income while they build out their products and communities. Users are able to support projects by staking on them, which adds to the passive income developers earn. Build2Earn encourages projects to stand out, and provide value directly to the end-users. See the [dApp staking](/docs/dapp-staking/#dapp-staking--web3) section for more information.
+Astar network's innovative Build2Earn program allows developers to earn a basic income while they build out their products and communities. Users are able to support projects by staking on them, which adds to the passive income developers earn. Build2Earn encourages projects to stand out, and provide value directly to the end-users. See the dApp staking (INSERT_LINK) section for more information.
 
 ## XVM - The cross virtual machine
 The Cross Virtual Machine allows developers to call smart contracts from one VM to another (e.g. Wasm to EVM), and `XVM`, the innovative protocol that makes creation of these hybrid cross-VM dApps possible, is *only* available on Astar network.

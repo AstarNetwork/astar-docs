@@ -12,21 +12,8 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: <Translate>About Astar</Translate>,
-    link: '/docs/about/astar',
-    iconClass: 'aboutastar',
-    description: (
-      <>
-        <Translate>
-          Get to know what Astar Network is solving and all the information
-          related to our native token.
-        </Translate>
-      </>
-    ),
-  },
-  {
     title: <Translate>Ecosystem</Translate>,
-    link: '/docs/ecosystem/',
+    link: '/docs/learn/ecosystem/',
     iconClass: 'ecosystem',
     description: (
       <>
@@ -52,7 +39,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>dApp Staking</Translate>,
-    link: '/docs/dapp-staking/',
+    link: '/docs/build/dapp-staking/',
     iconClass: 'staking',
     description: (
       <>
@@ -65,7 +52,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Run A Node</Translate>,
-    link: '/docs/nodes/',
+    link: '/docs/build/nodes/',
     iconClass: 'node',
     description: (
       <>
@@ -78,7 +65,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Learn Cross-Chain Message (XCM)</Translate>,
-    link: '/docs/xcm/',
+    link: '/docs/learn/xcm/',
     iconClass: 'broadcast',
     description: (
       <>
@@ -91,7 +78,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Integrate Toolings</Translate>,
-    link: '/docs/integrations/',
+    link: '/docs/build/integrations/',
     iconClass: 'tool',
     description: (
       <>
@@ -104,7 +91,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>User Guides</Translate>,
-    link: '/docs/user-guides/',
+    link: '/docs/use/user-guides/',
     iconClass: 'docs',
     description: (
       <>

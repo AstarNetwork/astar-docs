@@ -22,7 +22,7 @@ The free endpoints below are dedicated to end users, they can be used to interac
 <b>They limit the rate of API calls</b>, so they are not suitable for high demand, such as a dApp UI constantly scraping blockchain data or an indexer.
 :::
 :::tip
-To meet the demands of a production dApp you can [run an archive node](/docs/nodes/archive-node/) **or** get your own API key from one of our [infra partners](/docs/integrations/node-providers/)
+To meet the demands of a production dApp you can run an archive node (INSERT_LINK) **or** get your own API key from one of our infra partners (INSERT_LINK).
 :::
 
 <Tabs>
