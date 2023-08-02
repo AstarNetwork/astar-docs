@@ -53,7 +53,7 @@ Spinning up a debug or tracing node is similar to running a full node. However, 
 
 :::info
 
-EVM tracing node installation manual available [on this page](/docs/nodes/evm-tracing-node.md). 
+EVM tracing node installation manual available on this page (INSERT_LINK). 
 
 :::
 
