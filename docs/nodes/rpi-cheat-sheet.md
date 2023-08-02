@@ -107,7 +107,6 @@ sudo nano /etc/systemd/system/astar.service
     --chain astar \
     --base-path /var/lib/astar \
     --rpc-external \
-    --ws-external \
     --rpc-methods Safe \
     --rpc-max-request-size 1 \
     --rpc-max-response-size 1 \
@@ -126,3 +125,7 @@ Start the service: `sudo systemctl start astar.service`
 Check the node log to ensure proper syncing: `journalctl -f -u astar.service -n100`
 
 Enable the service: `sudo systemctl enable astar.service`
+
+## Tips and Troubleshooting
+
+You can refer to [this page](https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021) maintained by our ambassador Sequaja with FAQ and troubleshooting tips.
