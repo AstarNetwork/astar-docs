@@ -14,7 +14,7 @@ Collators maintain our ecosystem by collecting transactions from users and produ
 
 Unlike validators, collator nodes do not secure the network. If a parachain block is invalid, it will get rejected by validators. Therefore the assumption that having more collators is better or more secure is not correct. On the contrary, too many collators may slow down the network. The only nefarious power collators have transaction censorship. To prevent censorship, a parachain only needs to ensure some neutral collators - but not necessarily a majority. Theoretically, the censorship problem is solved by having just one honest collator (reference: [https://wiki.polkadot.network/docs/learn-collator](https://wiki.polkadot.network/docs/learn-collator)).
 
-Performance of the network depends directly on collators. To ensure optimal performance of the network, a [slashing mechanism](/docs/nodes/collator/learn#slash-mechanism) is implemented.
+Performance of the network depends directly on collators. To ensure optimal performance of the network, a [slashing mechanism](/docs/build/nodes/collator/learn.md#slash-mechanism) is implemented.
 
 ### XCMP
 
