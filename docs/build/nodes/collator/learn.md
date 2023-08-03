@@ -60,4 +60,4 @@ This slashing ensures the best block rate and prevents malicious actors from har
 
 ## FAQ
 ### What about NPoS?
-Our first intention was to activate NPoS to Shiden Network. After internal testing, we realised this would use a lot of Shiden collator resources. NPoS is not designed for collators in the Polkadot ecosystem (reference: [role of collators](/docs/nodes/collator/learn#role-of-collators-in-the-astar-ecosystem)). Astar ecosystem is built to be a dApp hub in the Polkadot ecosystem for smart contracts with a unique incentive reward mechanism for developers, dApp staking. 
+Our first intention was to activate NPoS to Shiden Network. After internal testing, we realised this would use a lot of Shiden collator resources. NPoS is not designed for collators in the Polkadot ecosystem (reference: [role of collators](/docs/build/nodes/collator/learn#role-of-collators-in-the-astar-ecosystem)). Astar ecosystem is built to be a dApp hub in the Polkadot ecosystem for smart contracts with a unique incentive reward mechanism for developers, dApp staking. 
