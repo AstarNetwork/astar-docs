@@ -76,7 +76,7 @@ curl http://127.0.0.1:9944 -H "Content-Type:application/json;charset=utf-8" -d \
     "jsonrpc":"2.0",
     "id":1,
     "method":"debug_traceTransaction",
-    "params": ["0x04978f83e778d715eb074352091b2159c0689b5ae2da2554e8fe8e609ab463bf"]
+    "params": ["0xc74f3219cf6b9763ee5037bab4aa8ebe5eafe85122b00a64c2ce82912c7d3960"]
   }'
 ```
 
@@ -85,11 +85,10 @@ The node responds with the step-by-step replayed transaction information.
 For the `trace_filter` call, you can make the following JSON RPC request in your terminal (in this case, the filter is from block 20000 to 25000, only for transactions where the recipient is 0x4E0078423a39EfBC1F8B5104540aC2650a756577, it will start with a zero offset and provide the first 20 traces):
 
 ```
-curl http://127.0.0.1:9944 -H "Content-Type:application/json;charset=utf-8" -d \
-  '{
+curl http://127.0.0.1:9944 -H "Content-Type:application/json;charset=utf-8" -d   '{
     "jsonrpc":"2.0",
     "id":1,
-    "method":"trace_filter", "params":[{"fromBlock":"0x4E20","toBlock":"0x5014","toAddress":["0x4E0078423a39EfBC1F8B5104540aC2650a756577"],"after":0,"count":20}]
+    "method":"trace_filter","params":[{"fromBlock":"4142700","toBlock":"4142800","toAddress":["0xb1dD8BABf551cD058F3B253846EB6FA2a5cabc50"],"after":0,"count":20}]
   }'
 ```
 
@@ -110,6 +109,6 @@ curl http://127.0.0.1:9944 -H "Content-Type:application/json;charset=utf-8" -d \
   '{
     "jsonrpc":"2.0",
     "id":1,
-    "method":"txpool_status", "params":[],"after":0,"count":20}]
+    "method":"txpool_status", "params":[]
   }'
 ```

@@ -86,7 +86,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --blocks-pruning archive \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
-  --rpc-max-response-size 10 \
+  --rpc-max-response-size 50 \
   --enable-evm-rpc \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
