@@ -14,8 +14,7 @@ At the time of this release, PolkaSafe only supports Astar Network.
 ## **Prerequisites**
 
 - Install a Substrate wallet extension (such as Polkadot.js, SubWallet, or Talisman) on your browser.
-- Prepare at least two Astar wallet addresses ([See reference](/docs/user-guides/create-wallet)).
-
+- Prepare at least two Astar wallet addresses ([See reference](/docs/use/user-guides/using-a-multisig-account-on-astar-portal.md))
 ## Understanding the Benefits of Multisig Accounts
 
 Multisig accounts offer several key benefits, particularly in terms of security, control, and flexibility:
@@ -46,7 +45,7 @@ Ledger accounts cannot be multisig signatories
 7. Input the threshold number (the minimum required signatures to authorize and execute a transaction) and name the multisig account.
 8. Sign the message to add a small Existential Deposit to the multisig account.
 ![multisig_guide_4.png](img/multisig_guide_4.png)
-9. Optionally, you can enable proxy signatory management to allow enhanced functionalities for your multisig account. ([See reference](/docs/user-guides/using-a-multisig-account-on-astar-portal#optional-enabling-proxy-signatory-management-for-your-multisig-account-on-polkasafe))
+9. Optionally, you can enable proxy signatory management to allow enhanced functionalities for your multisig account. ([See reference](/docs/use/user-guides/
 10.  Now, you can manage your multisig account on PolkaSafe.
 ![multisig_guide_5.png](img/multisig_guide_5.png)
 

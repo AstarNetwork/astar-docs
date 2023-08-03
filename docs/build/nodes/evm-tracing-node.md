@@ -9,16 +9,16 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-Running a tracing node on an Astar chain allows you to debug EVM transactions and have enhanced access to transaction pool using [EVM debug RPC](/docs/build/EVM/evm-debug-api.md).
+Running a tracing node on an Astar chain allows you to debug EVM transactions and have enhanced access to transaction pool using EVM debug RPC (INSERT_LINK).
 
 ## Requirements
 
-Requirements for running any node are similar to what we recommend for archive node. Read more about this [here](/docs/nodes/archive-node/#requirements).
+Requirements for running any node are similar to what we recommend for archive node. Read more about this here (INSERT_LINK).
 
 
 ## Node launch 
 
-Tracing node setup in general is equal to [Archive Node setup](/docs/nodes/archive-node/binary.md). Except binary location and additional launch flags.
+Tracing node setup in general is equal to Archive Node setup (INSERT_LINK). Except binary location and additional launch flags.
 
 :::info 
 
@@ -28,7 +28,7 @@ EVM tracing node binary is different because includes additional tracing feature
 
 :::important
 
-EVM RPC calls are disabled by default, and require additional flag to be enabled. Please refer [to this page](/docs/build/EVM/developer-tooling/own-RPC) for more info.
+EVM RPC calls are disabled by default, and require additional flag to be enabled. Please refer to this page (INSERT_LINK) for more info.
 
 :::
 

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Subsquid
 
-[Subsquid](https://subsquid.io) is an indexing framework supporting both [Substrate](/docs/ecosystem/substrate) and [EVM](/docs/build/EVM/)-based chains. It is [extremely flexible and offers high syncing speeds](https://docs.subsquid.io/migrate/subsquid-vs-thegraph/). Subsquid comes with a set of code generation tools that make ready-to-use, customizable indexer projects ("squids") out of contracts' ABIs. WASM/ink! and EVM/Solidity contracts are supported. Once scraped, the contract data can be served over a GraphQL API or stored as a dataset.
+[Subsquid](https://subsquid.io) is an indexing framework supporting both Substrate (INSERT_LINK) and EVM (INSERT_LINK)-based chains. It is [extremely flexible and offers high syncing speeds](https://docs.subsquid.io/migrate/subsquid-vs-thegraph/). Subsquid comes with a set of code generation tools that make ready-to-use, customizable indexer projects ("squids") out of contracts' ABIs. WASM/ink! and EVM/Solidity contracts are supported. Once scraped, the contract data can be served over a GraphQL API or stored as a dataset.
 
 Squids can run either locally or in a Subsquid-provided a cloud service called Aquarium. The service has and will always have a free tier. For more demanding applications it offers a premium subscription.
 

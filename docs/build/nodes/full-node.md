@@ -20,7 +20,7 @@ If your node need to provide old historical blocks' data, please consider to use
 
 ## Requirements
 
-Requirements for running any node are similar to what we recommend for archive node. Read more about this [here](/docs/nodes/archive-node/#requirements).
+Requirements for running any node are similar to what we recommend for archive node. Read more about this here (INSERT_LINK).
 Note that Full node requires less disk space. Hard Disk requirement for Archive node is not applied to Full nodes.
 
 To set a full node, you need to specify the number of blocks to be pruned:
@@ -33,5 +33,5 @@ Running a node for our testnet 'Shibuya' requires less resources. It's a perfect
 :::
 
 :::important
-EVM RPC calls are disabled by default, and require additional flag to be enabled. Please refer [to this page](/docs/build/EVM/developer-tooling/own-RPC) for more info.
+EVM RPC calls are disabled by default, and require additional flag to be enabled. Please refer to this page (INSERT_LINK) for more info.
 :::

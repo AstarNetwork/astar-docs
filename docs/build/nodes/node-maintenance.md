@@ -56,7 +56,7 @@ journalctl -fu astar-collator -n100
 
 ## Upgrade node
 
-When a node upgrade is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), [Astar Discord](https://discord.gg/Z3nC9U4), and [Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow any of these channels to receive news about node updates and node upgrades.
+When a node upgrade is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), Astar Discord (INSERT_LINK), and [The Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow any of these channels to receive news about node updates and node upgrades.
 
 Download the [latest release](https://github.com/AstarNetwork/Astar/releases/latest) from Github:
 
@@ -90,5 +90,5 @@ sudo systemctl start {NETWORK}.service
 
 ## Snapshot
 
-Please refer to [**snapshot page**](/docs/nodes/snapshots/).
+Please refer to **snapshot page** (INSERT_LINK).
 :::

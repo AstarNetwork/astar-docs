@@ -283,7 +283,7 @@ sudo systemctl enable astar.service
 
 ### Snapshot
 
-Please refer to [**snapshot page**](/docs/nodes/snapshots/).
+Please refer to **snapshot page** (INSERT_LINK).
 
 
 ## Finalizing
@@ -296,5 +296,5 @@ To finalize your collator you need to:
 * Verify your identity
 * Bond tokens
 
-this part is covered in chapter [Spin up a Collator](../spinup_collator.md)
+this part is covered in chapter Spin up a Collator (INSERT_LINK)
 
