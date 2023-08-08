@@ -9,6 +9,6 @@ jobs:
     steps:
     - uses: yogevbd/enforce-label-action@2.1.0
       with:
-        REQUIRED_LABELS_ANY: "ci,bug,documentation,duplicate,enhancement,good first issue,help wanted,invalid,question,translation,wontfix"
-        REQUIRED_LABELS_ANY_DESCRIPTION: "Select at least one label ['ci', 'bug','documentation','duplicate','enhancement','good first issue','help wanted','invalid','question','translation','wontfix']"
+        REQUIRED_LABELS_ANY: "ci,bug,documentation,duplicate,enhancement,good first issue,help wanted,invalid,question,translation,wontfix,dependencies"
+        REQUIRED_LABELS_ANY_DESCRIPTION: "Select at least one label ['ci', 'bug','documentation','duplicate','enhancement','good first issue','help wanted','invalid','question','translation','wontfix','dependencies']"
 
