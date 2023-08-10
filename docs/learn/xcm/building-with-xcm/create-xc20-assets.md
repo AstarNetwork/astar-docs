@@ -81,21 +81,3 @@ The hex value that was already generated in the example is 7 characters long, so
 For this example, the full address is `0xFFFFFFFF00000000000000000000000001310dD5`.
 
 Now that you've generated the XC20 precompile address, you can use the address to interact with the XC20 as you would with any other ERC20 in Remix.
-
-## Accessing XC20 From a Smart Contract
-
-In order to access an XC20 via smart contract, _EVM revert code_ needs to be registered on the XC20 address, first.
-This isn't an automated process, and currently requires a small intervention on the part of the Astar team on `Astar` and `Shiden` networks.
-
-Please contact us if you cannot access an XC20 from your smart contract
-
-For `Shibuya` testnet, users can manually register the revert code using a small trick. Open `Shibuya` in [polkadot-js app](https://polkadot.js.org/apps/) (under *Test networks*) and select `Extrinsic` under `Developer` dropdown menu.
-
-Now perform the following:
-* Select `xcAssetConfig->registerAssetLocation`
-* The asset location you select is not important, but to make things more consistent and easier to follow-up, we suggest the following:
-  * `V2`
-  * `parents: 0`
-  * `interior: X1( GeneralIndex (>>your asset Id<<) )`
-* `assetId` should match your asset Id
-* Submit the extrinsic to register the revert code, which should make the XC20 asset accessible to smart contracts.
