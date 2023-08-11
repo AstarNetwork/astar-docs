@@ -135,7 +135,7 @@ In order to confirm receiving the asset on EVM, we need to add the specific asse
 In the following section, we will demonstrate how to interact with the Cookbook Token that we created via Solidity smart contract.
 
 :::note
-💡 In order to make the mintable XC20 asset interactable via Solidity smart contract, `insufficient` needs to be set to `true`, and the EVM revert code needs to be registered. It may require technical support from the Astar Foundation team. Please submit the support request in [Astar Discord](https://discord.gg/astarnetwork) or DM `@neutrino4` on Telegram.
+💡 In order for an account to receive some of the **XC20** asset, it has to hold some native token. This can be bypassed if `isSufficient` is sufficient is set to `true`.
 :::
 
 The Solidity Interface of Mintable XC20 on Astar includes IERC20 and IERC20Plus interfaces, which are declared in [ERC20.sol](https://github.com/AstarNetwork/astar-frame/blob/polkadot-v0.9.33/precompiles/assets-erc20/ERC20.sol), and are as follows:
