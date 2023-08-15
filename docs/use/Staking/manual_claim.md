@@ -3,12 +3,8 @@ sidebar_position: 13
 ---
 
 # Manually Claim dApp Staking Rewards On Polkadot.Js
-The portal has a limit of 50 claims per batch. If this is exceeded, you won't be able to claim your rewards and have to manually do it on Polkadot.js. For example:
 
-1. You are staked on a dApp and left the rewards unclaimed for more than 50 eras.
-2. You are staked on 5 dApps and left the rewards unclaimed for more than 10 eras.
-
-If you are caught in this situation, this tutorial will guide you on how to claim the rewards on Polkadot.js.
+If you have difficulties claiming your dApp staking rewards on Astar Portal, you can always manually claim it on Polkadot.js web. Follow the steps below.
 
 ---
 
@@ -40,5 +36,5 @@ If you are caught in this situation, this tutorial will guide you on how to clai
 
 ---
 
-That's all, and please claim your rewards regularly to avoid this situation. If you happen to come across any issue, please contact any of the Team Members or Ambassadors on [Discord](https://discord.gg/2FGq5KqwBh).
+That's all. If you happen to come across any issue, please contact any of the Team Members or Ambassadors on [Discord](https://discord.gg/2FGq5KqwBh).
 
