@@ -88,7 +88,7 @@ Ledger NanoS users should install the Astar XL version of the app, shown in the 
   <img src={ledger8} style={{width: 600}} />
   </div>
 
-For detailed information about dApp staking or how to stake on the EVM side of Astar Portal using a Ledger device, please refer to the Astar documentation (INSERT_LINK) or [Ledger EVM staking guide](./ledger-evm.md)
+For detailed information about dApp staking or how to stake on the EVM side of Astar Portal using a Ledger device, please refer to the [Astar official documentation](/docs/build/dapp-staking/for-stakers/) or [Ledger EVM staking guide](./ledger-evm.md)
 
 :::tip
 If you receive a **Ledger error: Failed to execute 'claimInterface' on 'USBDevice': Unable to claim interface** message during the dApp staking claim process, ensure you are performing the operation using a Chromium-based browser such as Chrome or Brave, and the Ledger device connection method is WebHID, as outlined in the previous step.
