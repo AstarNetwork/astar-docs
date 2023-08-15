@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 # Spin up a Collator
 
 :::caution
-Collators are responsible for the network stability, it is very important to be able to react at any time of the day or night in case of trouble. We strongly encourage collators to set up a monitoring and alerting system, learn more about this from our secure setup guide (INSERT_LINK).
+Collators are responsible for the network stability, it is very important to be able to react at any time of the day or night in case of trouble. We strongly encourage collators to set up a monitoring and alerting system, learn more about this from our [secure setup guide](/docs/build/nodes/collator/secure_setup_guide/).
 :::
 
 ### Service Parameters

@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Documentation of Astar and Shiden Network - The Future of Smart Contracts for Multichain - both WebAssembly (WASM) and EVM using XCM. Tutorials, user guides and tools for developers and builders.">
+      description="Astar Network Official Documentation Portal - User Guides, Tutorials, and Tools for Developers.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

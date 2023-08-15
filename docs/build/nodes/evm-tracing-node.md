@@ -9,26 +9,26 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-Running a tracing node on an Astar chain allows you to debug EVM transactions and have enhanced access to transaction pool using EVM debug RPC (INSERT_LINK).
+Running a tracing node on an Astar chain allows you to debug EVM transactions and have enhanced access to transaction pool using EVM debug RPC (INSERT_LINK also see link below).
 
 ## Requirements
 
-Requirements for running any node are similar to what we recommend for archive node. Read more about this here (INSERT_LINK).
+Requirements for running a tracing node are similar to what we recommend for an archive node. Read more about this [here](/docs/build/nodes/archive-node/).
 
 
 ## Node launch 
 
-Tracing node setup in general is equal to Archive Node setup (INSERT_LINK). Except binary location and additional launch flags.
+Tracing node setup in general is similar to the [Archive Node setup](/docs/build/nodes/archive-node/), except for the location of the binary and some additional launch flags.
 
 :::info 
 
-EVM tracing node binary is different because includes additional tracing features. You can easily build it from source code using `cargo build --release --features evm-tracing` command or download the `evm-tracing-artifacts` from [latest release](https://github.com/AstarNetwork/Astar/releases/latest), executable EVM tracing binary is included in the compressed file `evm-tracing-artifacts.tar.gz`.
+An EVM tracing node binary is different because it includes additional tracing features. You can easily build it from source using `cargo build --release --features evm-tracing` command or download the `evm-tracing-artifacts` from [latest release](https://github.com/AstarNetwork/Astar/releases/latest), an executable EVM tracing binary is included in the compressed file `evm-tracing-artifacts.tar.gz`.
 
 :::
 
 :::important
 
-EVM RPC calls are disabled by default, and require the `--enable-evm-rpc` additional flag to be enabled. Please refer to this page (INSERT_LINK) for more info.
+EVM RPC calls are disabled by default, and require the `--enable-evm-rpc` flag to be enabled. Please refer to this page (INSERT_LINK) for more info.
 
 :::
 
