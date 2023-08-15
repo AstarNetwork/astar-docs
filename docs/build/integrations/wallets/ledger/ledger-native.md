@@ -16,9 +16,7 @@ import ledger8 from "./img/native/ledger8.png"
 
 :::danger
 At the time of this release, the following operations are **NOT SUPPORTED:** on Ledger devices:
-- **EVM withdraw** : It is not possible to claim tokens from the Astar EVM side.
 - **XCM transfers**
-- **Vesting**
 :::
 
 This tutorial walks through the process of setting up a Ledger device to participate in dApp staking using ASTR native tokens, initiating the first interaction between the device and the network, and also explains some limitations of using Ledger devices with the native dApp staking system.
@@ -99,13 +97,6 @@ If you receive a **Ledger error: Failed to execute 'claimInterface' on 'USBDevic
   </div>
 
 ## Ledger NanoS and S-plus/X device limitations
-
-:::danger
-At the time of this release, the following operations are **NOT SUPPORTED:** on Ledger devices:
-- **EVM withdraw** : It is not possible to claim tokens from the Astar EVM side.
-- **XCM transfers**
-- **Vesting**
-:::
 
 Consider the following scenario: You stake on 2 dApps, and accumulate 2 eras worth of rewards each day. What happens if you do not claim the rewards for an entire month?
 
