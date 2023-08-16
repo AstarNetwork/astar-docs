@@ -56,7 +56,7 @@ Most centralized exchanges only list 'Astar Network' as a destination, which mea
 
 <img width="1000" alt="network" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Connect your Polkadot.js wallet - if you have not done it yet please go back to [Create Astar Accounts](#create-wallet/#astar-accounts).
+3. Connect your Polkadot.js wallet - if you have not done it yet please go back to [Create Astar Accounts](../Manage%20wallets/create-wallet/#astar-accounts).
 
 <img width="1000" alt="wallet" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
@@ -88,7 +88,7 @@ In addition to the instructions below, please carefully read the instructions pr
 
 1. Copy a deposit address from an exchange you wish to make a transfer to.
 2. Visit the Astar [Portal](https://portal.astar.network/) and change the network to either Astar or Shiden (Astar Network uses ASTR token and Shiden uses SDN).
-3. Connect your wallet (Native or EVM will depend on the exchange) - if you have not done this yet please revisit [Create Astar Accounts](https://docs.astar.network/docs/user-guides/create-wallet/).
+3. Connect your wallet (Native or EVM will depend on the exchange) - if you have not done this yet please revisit [Create Astar Accounts](../Manage%20wallets/create-wallet/).
 4. Click transfer button.
    <img width="1000" alt="Native-Asset-transfer" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png"/>
 5. Add the destination address of the exchange and the amount you wish to transfer.
@@ -180,7 +180,7 @@ Polkadot.js supports all parachains, therefore you will be able to view all the 
 
 :::caution
 
-Astar has set Polkadot’s DOT Min.balance to 1.1DOT and Min.Transfer Amount to 1.1, so users will need to have at least 2.2DOT + gas to make a minimum transfer. This is to protect user's funds from getting reaped by its Existential Deposit (ED) (more information about ED, please visit [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
+Astar has set Polkadot’s DOT Min.balance to 1.1DOT and Min.Transfer Amount to 1.1, so users will need to have at least 2.2DOT + gas to make a minimum transfer. This is to protect user's funds from getting reaped by its Existential Deposit (ED) (more information about ED, please visit [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).)
 
 :::
 

@@ -45,7 +45,7 @@ Ledger accounts cannot be multisig signatories
 7. Input the threshold number (the minimum required signatures to authorize and execute a transaction) and name the multisig account.
 8. Sign the message to add a small Existential Deposit to the multisig account.
 ![multisig_guide_4.png](img/multisig_guide_4.png)
-9. Optionally, you can enable proxy signatory management to allow enhanced functionalities for your multisig account. ([See reference](/docs/use/user-guides/
+9. Optionally, you can enable proxy signatory management to allow enhanced functionalities for your multisig account. [See reference](/docs/use/Manage%wallets/use-proxies.md)
 10.  Now, you can manage your multisig account on PolkaSafe.
 ![multisig_guide_5.png](img/multisig_guide_5.png)
 
