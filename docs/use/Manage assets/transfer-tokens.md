@@ -29,7 +29,7 @@ Astar Network supports addresses with two different formats:
 - An EVM address is used to interact with dApps on the Astar EVM
 
 
-If you would like to create an Astar Native account, [this page](/docs/use/Manage%20wallets/create-wallet.md) will guide you through the process.
+If you would like to create an Astar Native account, [this page](/docs/use/Manage%20wallets/create-wallet) will guide you through the process.
 
 If you have not added yet Astar Network to MetaMask, you can do it quickly and easily on our [Portal](https://portal.astar.network/) by choosing MetaMask from the Select Wallet menu, which should appear automatically. After selection, MetaMask will prompt you for permission to add Astar Network. Alternatively, you can visit [here](/docs/use/EVM%20guides/setup-metamask) for details about how to add Astar Network to your wallet manually.
 
