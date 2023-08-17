@@ -12,7 +12,7 @@ Yes. visit Polkadot.js, connect your wallet and go to Network > Balances and sel
 
 ## Q: I used XCM to transfer 5 DOT from Polkadot to Astar, but only received 4.999
 
-Please note that the gas amount will be deducted from the amount entered, so the amount transferred should be adjusted according to account for the gas fee estimate. For more information, visit here docs/learn/xcm/using-xcm/xcm-transactions (INSERT_LINK)
+Please note that the gas amount will be deducted from the amount entered, so the amount transferred should be adjusted according to account for the gas fee estimate. For more information, visit here (INSERT_LINK)
 
 ## Q: My balance should be 1.00012 DOT but the Portal is displaying 1 DOT, where are they?
 
@@ -28,7 +28,7 @@ You can send back DOT/KSM to the Relay Chain using both EVM and native wallets. 
 
 ## Q: Why is the XCM button for DOT/KSM disabled when I connect my wallet on the Astar Portal?
 
-Ensure you have a non-zero balance of the native token as described in this section docs/learn/xcm/using-xcm/xcm-transactions (INSERT_LINK).
+Ensure you have a non-zero balance of the native token as described in this section (INSERT_LINK).
 
 ## Q: I transferred X tokens to another account, but the amount transferred and received by the target account is greater than X. What is going on?
 
