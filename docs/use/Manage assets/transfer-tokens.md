@@ -182,7 +182,7 @@ Polkadot.js supports all parachains, therefore you will be able to view all the 
 
 :::caution
 
-Astar has set Polkadot’s DOT Min.balance to 1.1DOT and Min.Transfer Amount to 1.1, so users will need to have at least 2.2DOT + gas to make a minimum transfer. This is to protect user's funds from getting reaped by its Existential Deposit (ED) (more information about ED, please visit [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
+Astar has set Polkadot’s DOT Min.balance to 1.1DOT and Min.Transfer Amount to 1.1, so users will need to have at least 2.2DOT + gas to make a minimum transfer. This is to protect user's funds from getting reaped by its Existential Deposit (ED) (more information about ED, please visit [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).)
 
 :::
 
