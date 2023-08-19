@@ -28,8 +28,9 @@ The Frontier EVM used on Astar network provides several useful precompiled contr
 | [Sr25519](sr25519.md) | 0x0000000000000000000000000000000000005002     |
 | [SubstrateEcdsa](substrate-ecdsa.md) | 0x0000000000000000000000000000000000005003     |
 | [XCM](xcm.md) | 0x0000000000000000000000000000000000005004     |
-| [assets-erc20](xc20.md) | ASSET_PRECOMPILE_ADDRESS_PREFIX |
 | [XVM](xvm.md) | 0x0000000000000000000000000000000000005005 |
+| [Batch](batch.md) | 0x0000000000000000000000000000000000005006 |
+| [assets-erc20](xc20.md) | ASSET_PRECOMPILE_ADDRESS_PREFIX |
 
 The interface descriptions for these precompiles can be found in the `precompiles` folder: [astar-frame repo](https://github.com/AstarNetwork/astar-frame/).
 The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.

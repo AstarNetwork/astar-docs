@@ -29,7 +29,7 @@ Some of you may be unable to execute certain funtions. Please try these steps.
 5. Use VPN.
 
 ## Unable To Claim Staking Rewards
-1. If you can't claim the staking rewards on the portal. Go [HERE](https://docs.astar.network/docs/use/user-guides/manual_claim).
+1. If you can't claim the staking rewards on the portal. Go [HERE](/docs/use/user-guides/manual_claim)
 2. If the transferrable balance in the wallet is too low, you might not be able to claim the staking rewards. Top up your wallet or turn off `auto-restake` and then claim the rewards. Turning off `auto-restake` reduces the amount of transactions therefore reducing the amount of gas needed.
 
 
