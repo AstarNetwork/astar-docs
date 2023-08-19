@@ -184,11 +184,11 @@ curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"sy
 
 ## Next steps
 
-For any usage, wait for the chain to be fully sync by checking the node log (INSERT_LINK).
+For any usage, wait for the chain to be fully sync by checking the [node log](/docs/build/nodes/archive-node/binary#get-node-logs).
 
 It all depends on what you plan to do with your archive node.
 
-- In most cases, you will want to access node from outside. In this case, nginx server (INSERT_LINK) is the recommended option.
+- In most cases, you will want to access node from outside. In this case, [nginx server](/docs/build/nodes/archive-node/nginx) is the recommended option.
 - If you run your dApp on the same server as the node, then you can access it directly with the `localhost` address. This setup is recommended for testing purpose only.
 - If you run the node locally for testing purpose, you can switch the network in [Polkadot.js portal](https://polkadot.js.org/apps) and explore the chain:
 
@@ -214,7 +214,7 @@ To access data from indexers (e.g. The Graph) or Oracles (e.g. Chainlink), you n
 
 ### Upgrade node
 
-When an upgrade is necessary, node operators are be notified in our Discord (INSERT_LINK) and Element (INSERT_LINK) group.
+When an upgrade is necessary, node operators are be notified in our Discord and Element group.
 
 Download the [latest release](https://github.com/AstarNetwork/Astar/releases/latest) from Github
 
@@ -243,5 +243,5 @@ sudo systemctl start astar.service
 
 ### Snapshot
 
-Please refer to the **snapshot page** (INSERT_LINK).
+Please refer to the [**snapshot page**](/docs/build/nodes/snapshots).
 :::
