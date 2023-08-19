@@ -29,9 +29,9 @@ Astar Network supports addresses with two different formats:
 - An EVM address is used to interact with dApps on the Astar EVM
 
 
-If you would like to create an Astar Native account, [this page](../Manage%20wallets/create-wallet.md) will guide you through the process.
+If you would like to create an Astar Native account, [this page](/docs/use/Manage%20wallets/create-wallet) will guide you through the process.
 
-If you have not added yet Astar Network to MetaMask, you can do it quickly and easily on our [Portal](https://portal.astar.network/) by choosing MetaMask from the Select Wallet menu, which should appear automatically. After selection, MetaMask will prompt you for permission to add Astar Network. Alternatively, you can visit [here](../EVM%20guides/setup-metamask.md) for details about how to add Astar Network to your wallet manually.
+If you have not added yet Astar Network to MetaMask, you can do it quickly and easily on our [Portal](https://portal.astar.network/) by choosing MetaMask from the Select Wallet menu, which should appear automatically. After selection, MetaMask will prompt you for permission to add Astar Network. Alternatively, you can visit [here](/docs/use/EVM%20guides/setup-metamask) for details about how to add Astar Network to your wallet manually.
 
 
 <br />
@@ -58,7 +58,7 @@ Most centralized exchanges only list 'Astar Network' as a destination, which mea
 
 <img width="1000" alt="network" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Connect your Polkadot.js wallet - if you have not done it yet please go back to [Create Astar Accounts](../Manage%20wallets/create-wallet/#astar-accounts).
+3. Connect your Polkadot.js wallet - if you have not done it yet please go back to [Create Astar Accounts](/docs/use/Manage%20wallets/create-wallet.md).
 
 <img width="1000" alt="wallet" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
@@ -90,7 +90,7 @@ In addition to the instructions below, please carefully read the instructions pr
 
 1. Copy a deposit address from an exchange you wish to make a transfer to.
 2. Visit the Astar [Portal](https://portal.astar.network/) and change the network to either Astar or Shiden (Astar Network uses ASTR token and Shiden uses SDN).
-3. Connect your wallet (Native or EVM will depend on the exchange) - if you have not done this yet please revisit [Create Astar Accounts](../Manage%20wallets/create-wallet/).
+3. Connect your wallet (Native or EVM will depend on the exchange) - if you have not done this yet please revisit [Create Astar Accounts](/docs/use/Manage%20wallets/create-wallet).
 4. Click transfer button.
    <img width="1000" alt="Native-Asset-transfer" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png"/>
 5. Add the destination address of the exchange and the amount you wish to transfer.
