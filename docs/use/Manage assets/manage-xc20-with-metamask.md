@@ -27,6 +27,6 @@ Click on **Import Tokens** in MetaMask popup.
 ![8](img/8.png)
 
 
-When you are finished adding and importing DOT, you will see them in your wallet. You can find the full list of supported XCM assets [here] (../asset-list.md).
+When you are finished adding and importing DOT, you will see them in your wallet. You can find the full list of supported XCM assets [here](/docs/learn/xcm/asset-list).
 
-To manually import assets that are not in *Assets page*, follow [this guide] (../building-with-xcm/send-xc20-evm.md#import-assets-on-metamask). 
+To manually import assets that are not listed on the *Assets page*, follow [this guide](/docs/learn/xcm/building-with-xcm/send-xc20-evm.md#import-assets-on-metamask). 

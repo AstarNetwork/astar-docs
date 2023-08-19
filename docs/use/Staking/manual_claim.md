@@ -3,7 +3,8 @@ sidebar_position: 13
 ---
 
 # Manually Claim dApp Staking Rewards On Polkadot.Js
-If you have problems claiming your dApp staking rewards on Astar Portal, follow this guide.
+
+If you have difficulties claiming your dApp staking rewards on Astar Portal, you can always manually claim it on Polkadot.js web. Follow the steps below.
 
 ---
 

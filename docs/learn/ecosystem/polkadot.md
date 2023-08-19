@@ -14,7 +14,6 @@ Polkadot consists of two parts: Relaychain and Parachain.
 
 - Relaychain: This is the core of Polkadot which is responsible for network security, consensus, and cross-chain interoperability.
 - Parachain: These are sovereign blockchains with custom tokens and optimized functionality for specific use cases. Parachain connection to Relaychain is priced on a pay-as-you-go basis or a continuous connectivity lease.
-Astar Network is built on Parity Substrate making it one of the first SCALABLE smart contract Polkadot Parachains.
 
 Astar Network is built on Parity Substrate making it one of the first SCALABLE smart contract Polkadot Parachains.
 
