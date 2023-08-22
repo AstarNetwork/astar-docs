@@ -2,7 +2,7 @@
 sidebar_position: 15
 ---
 
-# Register or Unregister AstarPass/ShidenPass
+# How To Register or Unregister AstarPass/ShidenPass
 
 This section will guide you on how to register AstarPass/ShidenPass
 

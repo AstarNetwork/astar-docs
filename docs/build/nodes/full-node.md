@@ -20,7 +20,7 @@ If your node need to provide old historical blocks' data, please consider to use
 
 ## Requirements
 
-Requirements for running any node are similar to what we recommend for archive node. Read more about this [here](/docs/build/nodes/archive-node/).
+Requirements for running any node are similar to what we recommend for archive node. Read more about this here (INSERT_LINK).
 Note that Full node requires less disk space. Hard Disk requirement for Archive node is not applied to Full nodes.
 
 To set a full node, you need to specify the number of blocks to be pruned:

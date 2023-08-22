@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# About Astar Network
+# What is Astar Network
 
 [Astar Network]: https://astar.network/ 
 

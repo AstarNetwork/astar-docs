@@ -204,7 +204,7 @@ Apabila anda hendak memindahkan aset cross-chain(XCM) menuju akun Astar Native d
 
 3. Klik Transfer dan pindah ke halaman Transfer. Pilih tab Cross-chain Transfer (XCM).
 
-4. Apabila anda di dalam Astar EVM, masukan address tujuan. Anda akan membutuhkan [alamat chain awal (origin chain’s address)](https://docs.astar.network/docs/learn/interoperability/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
+4. Apabila anda di dalam Astar EVM, masukan address tujuan. Anda akan membutuhkan [alamat chain awal (origin chain’s address)](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
 5. Apabila anda di Astar Native dan anda ingin transfer ke dalam akun yang sama anda tidak perlu merubah tetapi hanya menukar pilihannya dan juga anda dapat memasukkan address lain secara manual. <img width="1000" alt="XCM-reverse" src="https://user-images.githubusercontent.com/77480847/188535198-27aaf6e9-6b15-4e6f-bc6a-84febcd78de0.png" />
 

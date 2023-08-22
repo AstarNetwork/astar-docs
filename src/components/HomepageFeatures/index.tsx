@@ -11,7 +11,19 @@ type FeatureItem = {
 };
 
 const FeatureList: FeatureItem[] = [
-  
+  {
+    title: <Translate>Ecosystem</Translate>,
+    link: '/docs/learn/ecosystem/',
+    iconClass: 'ecosystem',
+    description: (
+      <>
+        <Translate>
+          Dive into our ecosystem and discover more about Polkadot, Substrate
+          and other initiatives.
+        </Translate>
+      </>
+    ),
+  },
   {
     title: <Translate>Build</Translate>,
     link: '/docs/build/',
@@ -53,7 +65,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Learn Cross-Chain Message (XCM)</Translate>,
-    link: '/docs/learn/interoperability/xcm/',
+    link: '/docs/learn/xcm/',
     iconClass: 'broadcast',
     description: (
       <>
