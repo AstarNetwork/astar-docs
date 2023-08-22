@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 # Build2Earn
 
 ## Overview
