@@ -23,6 +23,6 @@ To expand your knowledge on building applications or utilizing various toolson A
 
 [Networks](/docs/learn/networks)
 
-[Interoperability](/docs/learn/interoperability/xcm.md)
+[Interoperability](/docs/learn/interoperability/xcm/)
 
 [Proxy Accounts](/docs/learn/Proxies.md)
