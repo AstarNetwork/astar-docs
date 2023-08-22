@@ -2,7 +2,7 @@
 sidebar_position: 11
 ---
 
-# Unbond Vested Tokens
+# Unbonding Vested Tokens
 
 If you joined the crowdloan, you will have vested tokens that you can unlock.
 

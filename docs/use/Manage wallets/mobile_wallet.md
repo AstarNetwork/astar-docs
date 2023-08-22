@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Create an Astar Wallet on a Mobile Device
+# Creating an Astar Wallet on a Mobile Device
 
 **This guide will support you to setup an Astar/Shiden wallet for both EVM and Native on your mobile.**
 ---

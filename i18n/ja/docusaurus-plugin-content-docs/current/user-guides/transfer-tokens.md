@@ -204,7 +204,7 @@ PolkadotのDOTの Min.balance を1.1DOTに設定し、Min.Transfer 量を1.1に�
 
 3. 「Transfer」をクリックし、「転送ページ」に移動します。 「 Cross-chain Transfer（XCM）」タブを選択します。
 
-4. Astar EVMを使用しているとき、宛先EVMアドレスを入力します。 あなたは[オリジンチェーンのアドレス](https://docs.astar.network/docs/learn/interoperability/xcm/faq#q-where-can-i-find-other-chains-addresses)が必要です。 <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
+4. Astar EVMを使用しているとき、宛先EVMアドレスを入力します。 あなたは[オリジンチェーンのアドレス](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses)が必要です。 <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
 5. もし、Astar Nativeを使用しているのであれば、順序を逆にするだけで、同じアカウント内でトークンを転送することができ、他のアカウントのアドレスに転送するのであれば手動で入力することもできます。 <img width="1000" alt="XCM-reverse" src="https://user-images.githubusercontent.com/77480847/188535198-27aaf6e9-6b15-4e6f-bc6a-84febcd78de0.png" />
 
