@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# How to restore ECDSA wallet on Polkadot.js
+# Restore a ECDSA wallet on Polkadot.js
 
 During Lockdrop 1 & 2, some of you might have claimed PLM tokens to the default wallet. If you are one of them and have lost access to your Polkadot.js wallet, this tutorial will guide you on how to restore that wallet.
 

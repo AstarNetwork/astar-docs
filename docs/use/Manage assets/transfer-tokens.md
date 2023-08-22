@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# How to transfer tokens
+# Transfer tokens
 
 In this tutorial we will guide you through the process of sending and receiving tokens using the Portal.
 

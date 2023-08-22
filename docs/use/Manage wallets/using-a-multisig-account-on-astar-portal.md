@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Using a Multisig Account on Astar Portal
+# Use a Multisig Account on Astar Portal
 
 This guide will assist you in utilizing a multisig account on Astar Portal via PolkaSafe.
 
