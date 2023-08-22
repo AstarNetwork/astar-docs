@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# How to transfer tokens
+# Transfer tokens
 
 In this tutorial we will guide you through the process of sending and receiving tokens using the Portal.
 
@@ -28,9 +28,11 @@ Astar Network supports addresses with two different formats:
 - A Native address is used for dApp staking and interacting with Wasm projects
 - An EVM address is used to interact with dApps on the Astar EVM
 
-If you would like to create an Astar Native account, [this page](create-wallet.md) will guide you through the process.
 
-If you have not added yet Astar Network to MetaMask, you can do it quickly and easily on our [Portal](https://portal.astar.network/) by choosing MetaMask from the Select Wallet menu, which should appear automatically. After selection, MetaMask will prompt you for permission to add Astar Network. Alternatively, you can visit [here](setup-metamask.md) for details about how to add Astar Network to your wallet manually.
+If you would like to create an Astar Native account, [this page](/docs/use/Manage%20wallets/create-wallet) will guide you through the process.
+
+If you have not added yet Astar Network to MetaMask, you can do it quickly and easily on our [Portal](https://portal.astar.network/) by choosing MetaMask from the Select Wallet menu, which should appear automatically. After selection, MetaMask will prompt you for permission to add Astar Network. Alternatively, you can visit [here](/docs/use/EVM%20guides/setup-metamask) for details about how to add Astar Network to your wallet manually.
+
 
 <br />
 
@@ -56,7 +58,7 @@ Most centralized exchanges only list 'Astar Network' as a destination, which mea
 
 <img width="1000" alt="network" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Connect your Polkadot.js wallet - if you have not done it yet please go back to [Create Astar Accounts](#create-wallet/#astar-accounts).
+3. Connect your Polkadot.js wallet - if you have not done it yet please go back to [Create Astar Accounts](/docs/use/Manage%20wallets/create-wallet.md).
 
 <img width="1000" alt="wallet" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
@@ -88,7 +90,7 @@ In addition to the instructions below, please carefully read the instructions pr
 
 1. Copy a deposit address from an exchange you wish to make a transfer to.
 2. Visit the Astar [Portal](https://portal.astar.network/) and change the network to either Astar or Shiden (Astar Network uses ASTR token and Shiden uses SDN).
-3. Connect your wallet (Native or EVM will depend on the exchange) - if you have not done this yet please revisit [Create Astar Accounts](https://docs.astar.network/docs/user-guides/create-wallet/).
+3. Connect your wallet (Native or EVM will depend on the exchange) - if you have not done this yet please revisit [Create Astar Accounts](/docs/use/Manage%20wallets/create-wallet).
 4. Click transfer button.
    <img width="1000" alt="Native-Asset-transfer" src="https://user-images.githubusercontent.com/77480847/188530698-e799a412-a21b-49c7-a868-2fcb4e69fd4e.png"/>
 5. Add the destination address of the exchange and the amount you wish to transfer.
@@ -180,7 +182,7 @@ Polkadot.js supports all parachains, therefore you will be able to view all the 
 
 :::caution
 
-Astar has set Polkadot’s DOT Min.balance to 1.1DOT and Min.Transfer Amount to 1.1, so users will need to have at least 2.2DOT + gas to make a minimum transfer. This is to protect user's funds from getting reaped by its Existential Deposit (ED) (more information about ED, please visit [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).
+Astar has set Polkadot’s DOT Min.balance to 1.1DOT and Min.Transfer Amount to 1.1, so users will need to have at least 2.2DOT + gas to make a minimum transfer. This is to protect user's funds from getting reaped by its Existential Deposit (ED) (more information about ED, please visit [Polkadot Wiki](https://support.polkadot.network/support/solutions/articles/65000168651-what-is-the-existential-deposit-).)
 
 :::
 
@@ -211,7 +213,7 @@ If you wish to move cross-chain (XCM) assets to Astar Native accounts from Astar
 
 3. Click Transfer and move to Transfer Page. Choose the Cross-chain Transfer (XCM) tab.
 
-4. If you are on Astar EVM, insert the destination address. You will need to use the [origin chain’s address](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses).
+4. If you are on Astar EVM, insert the destination address. You will need to use the [origin chain’s address](https://docs.astar.network/docs/learn/interoperability/xcm/faq#q-where-can-i-find-other-chains-addresses).
    <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
 5. If you are on Astar Native and would like to transfer tokens to a different chain within the same account, you do not need to input the address. Otherwise, enter the address manually if you want to transfer to another account. You may also transfer tokens from another chain to Astar Native by clicking the reverse button.

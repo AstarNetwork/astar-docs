@@ -90,5 +90,5 @@ sudo systemctl start {NETWORK}.service
 
 ## Snapshot
 
-Please refer to **snapshot page** (INSERT_LINK).
+Please refer to **snapshot page**(/docs/build/nodes/snapshots).
 :::
