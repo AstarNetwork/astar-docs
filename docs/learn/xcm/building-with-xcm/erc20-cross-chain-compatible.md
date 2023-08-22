@@ -84,7 +84,7 @@ contract XcBurrito is Xc20Plus, ERC20Wrapper, BURITTO{
     }
 }
 ```
-Check the full example on the Github repo under [examples](https://github.com/AstarNetwork/astar-frame).
+Check the full example on the Github repo under [examples](https://github.com/AstarNetwork/Astar/).
 
 ## Procedure
 ### 1. Create an XC20 asset

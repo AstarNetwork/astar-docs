@@ -24,7 +24,7 @@ During the transfer the following will occur:
 
 # EVM precompiles
 
-This functionality is exposed to EVM smart contracts via precompiles. The interface can be found [here](https://github.com/AstarNetwork/astar-frame) under XCM precompiles.
+This functionality is exposed to EVM smart contracts via precompiles. The interface can be found [here](https://github.com/AstarNetwork/Astar) under XCM precompiles.
 
 ```js
     function assets_reserve_transfer(
