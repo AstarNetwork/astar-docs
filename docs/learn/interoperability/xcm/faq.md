@@ -12,11 +12,11 @@ Yes. visit Polkadot.js, connect your wallet and go to Network > Balances and sel
 
 ## Q: I used XCM to transfer 5 DOT from Polkadot to Astar, but only received 4.999
 
-Please note that the gas amount will be deducted from the amount entered, so the amount transferred should be adjusted according to account for the gas fee estimate. For more information, visit [here](https://docs.astar.network/docs/xcm/using-xcm/xcm-transactions).
+Please note that the gas amount will be deducted from the amount entered, so the amount transferred should be adjusted according to account for the gas fee estimate. For more information, visit here docs/learn/interoperability/xcm/using-xcm/xcm-transactions (INSERT_LINK)
 
 ## Q: My balance should be 1.00012 DOT but the Portal is displaying 1 DOT, where are they?
 
-The current version of Astar Portal rounds balances to the 3rd decimal. If you have a similar issue please refer to the [previous FAQ entry](building-with-xcm/faq-for-smart-contracts.md) and instructions on how to use Polkadot.js to find your exact balance.
+The current version of Astar Portal rounds balances to the 3rd decimal. If you have a similar issue please refer to the [previous FAQ entry](/docs/learn/interoperability/xcm/building-with-xcm/faq-for-smart-contracts) and instructions on how to use Polkadot.js to find your exact balance.
 
 ## Q: Can I send my DOT token to other Parachains?
 
@@ -28,7 +28,7 @@ You can send back DOT/KSM to the Relay Chain using both EVM and native wallets. 
 
 ## Q: Why is the XCM button for DOT/KSM disabled when I connect my wallet on the Astar Portal?
 
-Ensure you have a non-zero balance of the native token as described in [this section](https://docs.astar.network/docs/xcm/using-xcm/xcm-transactions).
+Ensure you have a non-zero balance of the native token.
 
 ## Q: I transferred X tokens to another account, but the amount transferred and received by the target account is greater than X. What is going on?
 
@@ -36,7 +36,7 @@ XC20 assets have a defined minimum-balance. The minimum-balance is the minimum b
 
 Take a look at an example of a transaction in case of an asset whose minimum-balance is 10: Alice has 10.9 tokens and tries to send Bob 10 tokens. Alice's remaining balance in that case would become 0.9, which is less than minimum amount, so the amount transferred would be set to 10.9 tokens, so Alice's balance will become 0, to avoid any funds being reaped by not fulfilling the Existential Deposit.
 
-For more information, check out this[section within our documentation](building-with-xcm/send-xc20-evm.md).
+For more information, check out this [section within our documentation](/docs/learn/interoperability/xcm/building-with-xcm/send-xc20-evm.md).
 
 ## Q: Where can I find other chains' addresses?
 
