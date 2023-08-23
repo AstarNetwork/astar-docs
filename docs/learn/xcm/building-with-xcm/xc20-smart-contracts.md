@@ -8,6 +8,12 @@ So far we’ve successfully transferred assets from Kusama to Shiden and shown h
 
 Here is an example staking contract we’ll be using for the demonstration (for DOT, replace `ksm` with `dot`):
 
+:::note
+XC20 address of relay chain token (KSM and DOT) is `0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF` (because `Id` `340,282,366,920,938,463,463,374,607,431,768,211,455` to hex is `FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`).     
+To use this address inside a solidity smart-contract, check sum of the address should be respected. Please use [toChecksumAddress](https://web3-tools.netlify.app/) converter that will convert your address.     
+for example `0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF` will be converted to `0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF`
+:::
+
 ```js
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;

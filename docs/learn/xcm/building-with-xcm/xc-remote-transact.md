@@ -66,7 +66,6 @@ Until then, developers will need to rely on the aforementioned library, or the `
 
 When executing a remote transaction, the remote chain will derive a new address based on the sender's multilocation.
 The way this address is derived is determined by the chain itself so this documentation cannot guarantee how any other chain but Astar-based chains.
-However, we 
 
 For Astar-based runtimes, a generalized approach, aligned with `Polkadot` and `Kusama` is used. 
 Multilocation is SCALE-encoded, step-by-step, until finally it is hashed using the `Blake2_256`, with the output being the derived address.
