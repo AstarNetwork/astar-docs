@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# XC20 via Smart Contracts
+# XC20 in Smart Contracts
 
 So far we’ve successfully transferred assets from Kusama to Shiden and shown how we can access those assets the same as any other within MetaMask. Now we will take it one step further and demonstrate how to use these assets with smart contracts.
 
