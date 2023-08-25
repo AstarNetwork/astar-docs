@@ -22,7 +22,7 @@ In this guide, we will demonstrate how to run an Astar node for getting more ins
 
 ## Running a Graph Node
 
-After successfully running an [RPC node](https://docs.astar.network/docs/build/nodes/archive-node/), the Graph node will need to be installed and configured to connect to a separate computer. If you are running a self-signed RPC node, you will need to set up an extra environment variable for allowance.
+After successfully running an [RPC node](https://docs.astar.network/docs/nodes/archive-node/), the Graph node will need to be installed and configured to connect to a separate computer. If you are running a self-signed RPC node, you will need to set up an extra environment variable for allowance.
 
 The first step is to clone the [Graph Node repository](https://github.com/graphprotocol/graph-node/):
 

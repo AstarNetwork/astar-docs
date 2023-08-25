@@ -204,7 +204,7 @@ Si vous souhaitez envoyer des actifs cross-chain(XCM) vers des comptes Astar Nat
 
 3. Cliquez sur Transfert et allez vers la page de transfert. Choisissez l’onglet Transfert Cross-chain (XCM).
 
-4. Si vous êtes sur Astar EVM, indiquez l'adresse de destination. Vous auriez besoin de l'adresse [de la chaîne d'origine](https://docs. astar. network/docs/learn/interoperability/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
+4. Si vous êtes sur Astar EVM, indiquez l'adresse de destination. Vous auriez besoin de l'adresse [de la chaîne d'origine](https://docs. astar. network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses). <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
 5. Si vous êtes sur Astar Natif et que vous êtes satisfait de transférer le jeton vers le même compte, vous n’avez pas besoin de changer ici mais simplement d’inverser la commande. Cependant, vous pouvez entrer manuellement l’adresse d’un autre compte si vous le souhaitez. <img width="1000" alt="Inversion-XCM" src="https://user-images.githubusercontent.com/77480847/188535198-27aaf6e9-6b15-4e6f-bc6a-84febcd78de0.png" />
 

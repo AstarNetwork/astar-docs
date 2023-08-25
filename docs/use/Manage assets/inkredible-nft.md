@@ -9,7 +9,7 @@ import inkredible_guide04 from "./img/inkredible_guide04.png"
 import inkredible_guide05 from "./img/inkredible_guide05.png"
 import inkredible_guide06 from "./img/inkredible_guide06.png"
 
-# Use ink!redible NFT
+# How to use ink!redible NFT
 
 ## What are ink!redible NFTs?
 

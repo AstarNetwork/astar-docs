@@ -124,7 +124,7 @@ In order to confirm receiving the asset on EVM, we need to add the specific asse
 - Convert the `asset ID` from hexadecimal to decimal
 - Add the prefix of `0xffffffff`
     - for example, our Cookbook Token, CKT, has `asset ID` of `229`. Following the step above, we will have the converted address of `0xffffffff000000000000000000000000000000E5`.
-- More information can be found in the following guide: [Send XC20 Assets to EVM](/docs/build/builder-guides/leverage_parachains/interact_with_xc20.md#send-the-asset-to-evm)
+- More information can be found in the following guide: Send XC20 Assets to EVM (INSERT_LINK)
 
 ![Untitled](mintable-xc20-cookbook/Untitled%207.png)
 
