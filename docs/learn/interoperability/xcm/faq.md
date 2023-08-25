@@ -12,7 +12,7 @@ Yes. visit Polkadot.js, connect your wallet and go to Network > Balances and sel
 
 ## Q: I used XCM to transfer 5 DOT from Polkadot to Astar, but only received 4.999
 
-Please note that the gas amount will be deducted from the amount entered, so the amount transferred should be adjusted according to account for the gas fee estimate. For more information, visit here docs/learn/interoperability/xcm/using-xcm/xcm-transactions (INSERT_LINK)
+Please note that the gas amount will be deducted from the amount entered, so the amount transferred should be adjusted according to account for the gas fee estimate. For more information, visit [here](/docs/learn/interoperability/xcm/using-xcm/) 
 
 ## Q: My balance should be 1.00012 DOT but the Portal is displaying 1 DOT, where are they?
 
