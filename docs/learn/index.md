@@ -6,7 +6,7 @@ Whether you're an aspiring developer or a newcomer to the world of blockchain, t
 To expand your knowledge on building applications or utilizing various toolson Astar, we recommend exploring the build section. 
 
 ## Foundations
-[About Astar](/docs/learn/astar.md)
+[About Astar](/docs/learn/astar)
 
 [Astar Tokens](docs/learn/astar-tokens)
 
@@ -23,6 +23,6 @@ To expand your knowledge on building applications or utilizing various toolson A
 
 [Networks](/docs/learn/networks)
 
-[Interoperability](/docs/learn/interoperability/xcm.md)
+[Interoperability](/docs/learn/interoperability/xcm)
 
 [Proxy Accounts](/docs/learn/Proxies.md)

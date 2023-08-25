@@ -38,7 +38,7 @@ There are two implementations: one in the runtime and one on the ink! side.
 
 #### Runtine
 
-Implementation of the chain extension on runtime side is available on [astar-frame repository](https://github.com/AstarNetwork/astar-frame/), under `chain-extensions` folder
+Implementation of the chain extension on runtime side is available on [Astar repository](https://github.com/AstarNetwork/astar-frame/), under `chain-extensions` folder
 
 #### ink! implementation
 
