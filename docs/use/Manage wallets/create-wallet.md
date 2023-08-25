@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Creating an Astar Wallet
+# Create an Astar Wallet
 
 ## Astar Accounts
 
