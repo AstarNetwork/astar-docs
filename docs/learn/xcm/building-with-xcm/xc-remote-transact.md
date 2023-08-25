@@ -201,18 +201,10 @@ Since we are sending four XCM instructions, the total weight of the *raw* XCM in
 | XCM instructions   | 4_000_000_000               |
 | Total  | 4_886_264_000               |
 
-The total weight is **4_886_264_000** units of weight `ref_time`.
+The total weight is **4_886_264_000** units of `ref_time` and **24_668** of `proof_size`. In oder to maximize the chance of successful execution, we should add a sefety limit of +10% to the total weight. So `ref_time`: **5_374_890_400** and `proof_size`: **27_134**.
 
-**Step 4** requires another workaround, where we will need to execute the `polkadotXcm -> execute` extrinsic call, and ensure `ref_time` and `proof_size` are equal to the previously calculated value of **4_886_264_000** and **24_668**. As required in step 2, you will need to copy the encoded call data.
-
-![5-empty-execute](img/remote-transact/003_xcm_execute_weight_hack.png)
-
-Repeat step 3 and query the fee amount.
-
-![6-final-fee-details](img/remote-transact/004_total_fee_for_execution.png)
-
-The fee calculated is **15.1771 ASTR**.
+The weight to fee calculated is **4.2998 mASTR**.
 
 To summarize, in order to execute functions remotely on `Astar` network, we should:
-* withdraw around **15.1771 ASTR** 
-* specify the max transact weight as **4_886_264_000** `ref_time` and **24_668** `proof_size`.
+* withdraw around **4.2998 mASTR** 
+* specify the max transact weight (+ safety threshold) of **5_374_890_400** `ref_time` and **27_134** `proof_size`.
