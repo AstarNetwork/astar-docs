@@ -43,7 +43,7 @@ A collator (block producer) is rewarded a fixed amount for each block produced.
 
 ## Collator election mechanism
 ### Election process
-To join the election process you must register for a collator and bond tokens, see [Collator Requirements](https://docs.astar.network/docs/build/nodes/collator/requirements) for details. When your node fits the parameters and checks all the boxes to become a collator, it will be added to the chain. **Note: if your collator doesn’t produce blocks during two sessions (2h) it will be kicked out.**
+To join the election process you must register for a collator and bond tokens, see [Collator Requirements](https://docs.astar.network/docs/nodes/collator/requirements) for details. When your node fits the parameters and checks all the boxes to become a collator, it will be added to the chain. **Note: if your collator doesn’t produce blocks during two sessions (2h) it will be kicked out.**
 
 ---
 

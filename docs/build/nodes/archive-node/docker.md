@@ -116,10 +116,10 @@ curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"sy
 
 ## Next steps
 
-In any case, wait for the chain to be fully synchronized by checking the [node log](/docs/build/nodes/archive-node/binary#get-node-logs).
+In any case, wait for the chain to be fully synchronized by checking the node log (INSERT_LINK).
 
 How the archive node will be used will largely determine what steps to follow next: 
-- If accessing the node publicly, running an [nginx server](/docs/build/nodes/archive-node/nginx) is the recommended option.
+- If accessing the node publicly, running an nginx server (INSERT_LINK) is the recommended option.
 - If the dApp is running on the same server as the node, then it can be accessed directly with the `localhost` address. This setup is recommended for testing purposes only.
 - If running the node locally for testing purposes, switch networks in [Polkadot.js portal](https://polkadot.js.org/apps) to explore the chain:
 
@@ -151,7 +151,7 @@ To access data from indexers (like The Graph) or Oracles (like Chainlink), add t
 
 ## Upgrade node
 
-When a node upgrade is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), [Astar Discord](https://discord.gg/Z3nC9U4), and [Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow any of these channels to receive news about node updates and node upgrades.
+When a node upgrade is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), Astar Discord (INSERT_LINK), and [Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow any of these channels to receive news about node updates and node upgrades.
 
 To upgrade to the latest node version, stop and remove the actual container:
 
@@ -177,9 +177,9 @@ sudo rm -R /var/lib/astar/*
 
 where `CHAIN` is `astar`, `shiden`, or `shibuya`.
 
-Then start a new container by following the instructions under the [Start Docker node](/docs/build/nodes/archive-node/docker#start-docker-node) section.
+Then start a new container by following the instructions under the Start Docker node (INSERT_LINK) section.
 
 ### Snapshot
 
-Please refer to [**snapshot page**](/docs/build/nodes/snapshots/).
+Please refer to **snapshot page** (INSERT_LINK).
 :::

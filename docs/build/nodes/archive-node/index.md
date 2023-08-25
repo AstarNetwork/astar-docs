@@ -6,8 +6,7 @@ import TabItem from '@theme/TabItem';
 ## Overview
 
 An **archive node** stores the history of past blocks. Most of times, an archive node is used as **RPC endpoint**.
-RPC plays a vital role on our network: it connects users and dApps to the blockchain through WebSocket and HTTP endpoints. For example, our [public endpoints](/docs/build/environment
-/endpoints) run archive nodes for anyone to quickly connect to Astar chains.
+RPC plays a vital role on our network: it connects users and dApps to the blockchain through WebSocket and HTTP endpoints. For example, our public endpoints (INSERT_LINK) run archive nodes for anyone to quickly connect to Astar chains.
 
 **DApp projects** need to run their own RPC node as archive to the retrieve necessary blockchain data and not to rely on public infrastructure. Public endpoints respond slower because of the large amount of users connected and are rate limited.
 
@@ -83,6 +82,6 @@ For all types of nodes, ports `30333` and `30334` need to be opened for incoming
 
 There are 2 different ways to run an Astar node:
 
-Using [Binary](/docs/build/nodes/archive-node/binary) - run the node from binary file and set it up as systemd service
+Using Binary (INSERT_LINK) - run the node from binary file and set it up as systemd service
 
-Using [Docker](/docs/build/nodes/archive-node/docker) - run the node within a Docker container
+Using Docker (INSERT_LINK) - run the node within a Docker container

@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Create a Multisig Wallet
+# Creating a Multisig Wallet
 
 This tutorial serves as a guide to create a multisig substrate wallet.
 

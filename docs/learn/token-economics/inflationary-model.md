@@ -1,5 +1,8 @@
+---
+sidebar_position: 4
+---
 
-# Tokenomics 
+# Tokenomics & Inflation Model
 
 :::note
 This section includes advanced content.
@@ -60,7 +63,7 @@ Treasury receives a variable portion of block reward. It is then allocated to a 
 
 Part of it is dedicated for supporting dApp developers while another part goes towards stakers who locked their ASTR to *stake* or *vote* for a dApp.
 
-![inflation_graphic] (img/inflation_1.png)
+![inflation_graphic](img/inflation_1.png)
 
 ### Model Overview
 
@@ -139,6 +142,6 @@ The following graph is a visualization of the described model.
 * blue line is total staker inflation $total_{staker}$
 * red line is inflation adjusted interest rate $i_{adjusted}$
 
-![tokenomics_model_visualization] (img/tokenomics_1.png)
+![tokenomics_model_visualization](img/tokenomics_1.png)
 
-You can check the model and configure if yourself [here] (https://www.desmos.com/calculator/cjjkt6smk5).
+You can check the model and configure if yourself [here](https://www.desmos.com/calculator/cjjkt6smk5).

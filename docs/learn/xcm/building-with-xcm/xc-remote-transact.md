@@ -138,7 +138,7 @@ This means that the instructions like `WithdrawAsset` and `Transact` will be exe
 
 ### Precompiles API
 
-`Transact` functionality is exposed to EVM smart contracts via precompiles. The interface can be found [here](https://github.com/AstarNetwork/astar-frame) under XCM precompiles.
+`Transact` functionality is exposed to EVM smart contracts via precompiles. The interface can be found [here](https://github.com/AstarNetwork/Astar) under XCM precompiles.
 
 ```solidity
     function remote_transact(

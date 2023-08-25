@@ -37,4 +37,3 @@ Block explorers are the Google for searching data on a blockchain. They give dev
 </TabItem>
 </Tabs>
 
-Visit the Subscan [tutorial page](/docs/build/integrations/indexers/subscan) for more information.

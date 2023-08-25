@@ -100,5 +100,5 @@ To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz pe
 
 :::tip
 Shibuya is the perfect network to test out your knowledge about running nodes in the Astar ecosystem. To join the collator set on Shibuya you need to apply for a 32k SBY fund.
-If you never operated a collator node, we strongly encourage you to spin up a **Shibuya collator** node to start before thinking about mainnet. A perfect start is our [secure setup guide](/docs/build/nodes/collator/secure_setup_guide/).
+If you never operated a collator node, we strongly encourage you to spin up a **Shibuya collator** node to start before thinking about mainnet. A perfect start is our secure setup guide (INSERT_LINK).
 :::
