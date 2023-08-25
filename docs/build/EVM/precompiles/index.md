@@ -32,7 +32,7 @@ The Frontier EVM used on Astar network provides several useful precompiled contr
 | [Batch](batch.md) | 0x0000000000000000000000000000000000005006 |
 | [assets-erc20](xc20.md) | ASSET_PRECOMPILE_ADDRESS_PREFIX |
 
-The interface descriptions for these precompiles can be found in the `precompiles` folder: [Astar repo](https://github.com/AstarNetwork/astar-frame/).
+The interface descriptions for these precompiles can be found in the `precompiles` folder: [Astar repo](https://github.com/AstarNetwork/Astar/).
 The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.
 
 # Usage Example
@@ -54,7 +54,7 @@ contract A {
 
 Example use: check `current era` and `total staked amount` in the `pallet-dapps-staking` for Shiden Network. For this example we will use Remix.
 
-1. Copy `DappsStaking.sol` from [Astar repo](https://github.com/AstarNetwork/astar-frame/) and create new contract in Remix:
+1. Copy `DappsStaking.sol` from [Astar repo](https://github.com/AstarNetwork/Astar/) and create new contract in Remix:
 
 ![](https://i.imgur.com/mr0TcLq.png)
 
