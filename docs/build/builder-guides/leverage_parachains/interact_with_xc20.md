@@ -138,7 +138,7 @@ In the following section, we will demonstrate how to interact with the Cookbook 
 💡 In order for an account to receive some of the **XC20** asset, it has to hold some native token. This can be bypassed if `isSufficient` is sufficient is set to `true`.
 :::
 
-The Solidity Interface of Mintable XC20 on Astar includes IERC20 and IERC20Plus interfaces, which are declared in [ERC20.sol](https://github.com/AstarNetwork/Astar/blob/polkadot-v0.9.33/precompiles/assets-erc20/ERC20.sol), and are as follows:
+The Solidity Interface of Mintable XC20 on Astar includes IERC20 and IERC20Plus interfaces, which are declared in [ERC20.sol](https://github.com/AstarNetwork/astar-frame/blob/polkadot-v0.9.33/precompiles/assets-erc20/ERC20.sol), and are as follows:
 
 ```solidity
 interface IERC20 {
@@ -232,4 +232,4 @@ Please feel free to join our [Discord](https://discord.gg/astarnetwork) for tech
 
 ## Reference
 
-- [ERC20.sol](https://github.com/AstarNetwork/Astar/blob/polkadot-v0.9.33/precompiles/assets-erc20/ERC20.sol)
+- [ERC20.sol](https://github.com/AstarNetwork/astar-frame/blob/polkadot-v0.9.33/precompiles/assets-erc20/ERC20.sol)
