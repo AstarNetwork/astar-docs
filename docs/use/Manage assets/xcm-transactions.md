@@ -11,3 +11,4 @@ The following chapters will describe how to transfer native and foreign assets u
 
 ### [Transferring cross-chain (XCM) assets to other chains from Astar Network](/docs/use/Manage%20assets/transfer-tokens#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
 
+

@@ -32,7 +32,7 @@ The Frontier EVM used on Astar network provides several useful precompiled contr
 | [Batch](batch.md) | 0x0000000000000000000000000000000000005006 |
 | [assets-erc20](xc20.md) | ASSET_PRECOMPILE_ADDRESS_PREFIX |
 
-The interface descriptions for these precompiles can be found in the `precompiles` folder: [Astar repo](https://github.com/AstarNetwork/Astar).
+The interface descriptions for these precompiles can be found in the `precompiles` folder: [Astar repo](https://github.com/AstarNetwork/Astar/).
 The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.
 
 # Usage Example

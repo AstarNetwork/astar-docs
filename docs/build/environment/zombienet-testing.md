@@ -90,7 +90,7 @@ For all steps, encoded call data will be provided to simplify the process for th
 After completing the previous steps, cross-chain SDN and SBY wrappers are configured as payable and sufficient assets.
 The following steps will explain how to execute a cross-chain remote call. `Alice` will send an instruction from `Shiden` to execute `System::remark_with_event` on `Shibuya`.
 
-`Alice` isn't able to directly control `Alice` on the destination chain, instead a new account will be derived. More information can be found here (INSERT_LINK).
+`Alice` isn't able to directly control `Alice` on the destination chain, instead a new account will be derived. More information can be found [here](/docs/learn/interoperability/xcm/building-with-xcm/xc-remote-transact.md#derived-remote-accounts).
 
 1. Calculate `Alice's` derived account on `Shibuya` when sending instructions from `Shiden`.
 ```

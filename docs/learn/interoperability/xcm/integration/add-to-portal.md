@@ -101,4 +101,4 @@ const xcmToken = {
 2. Deposit and withdrawal functions have additionally been tested with the `minBridgeAmount`.
 3. You've tested withdrawal of assets to accounts that have 0 balance of the assets being withdrawn (to check whether `minBridgeAmount` is higher than `Existential Deposit` defined on the origin chain).
 4. You've included Subscan link(s) to the XCM transaction details, for each of the assets you've registered.
-5. And finally, have deployed the forked app, and submitted the staging URL([ref](/docs/build/builder-guides/integration_toolings/deploy-astar-portal.md)).
+5. And finally, have deployed the forked app, and submitted the staging URL [ref](/docs/build/builder-guides/integration_toolings/deploy-astar-portal.md).
