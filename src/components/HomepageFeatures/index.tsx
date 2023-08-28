@@ -65,7 +65,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Learn Cross-Chain Message (XCM)</Translate>,
-    link: '/docs/learn/xcm/',
+    link: '/docs/learn/interoperability/xcm/',
     iconClass: 'broadcast',
     description: (
       <>
