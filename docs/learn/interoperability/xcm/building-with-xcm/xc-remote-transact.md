@@ -50,18 +50,6 @@ Buys XCM executuion time, using the withdrawn assets.
 Execute the specified encoded call data, without consuming more weight than specified.
 Call data can be virtually anything supported by the remote chain - it doesn't matter what the origin chain supports.
 
-### Remote Wasm Smart Contract Execution
-
-For all our runtimes supporting Wasm smart contracts & remote transaction via XCM, users are able to fully utilize contract instantiation & calls. No special approach or setup is needed since Wasm smart contracts are native to Astar chains. Sending a remote Wasm smart contract call is the same as executing any other remote transaction.
-
-You can prepare the call within the `polkadot.js portal`(see image below), or custom code using the [polkadot-js/api-contract](https://github.com/polkadot-js/api/tree/46076c5595ab62e960a1097611a3e150bfa942f2/packages/api-contract) TypeScript library.
-
-![remote-wasm-call](img/remote-transact/007_wasm_flipper_call.png)
-
-The `data: Bytes` part consists of a function selector (which contract function to call) and [SCALE](https://github.com/paritytech/parity-scale-codec) encoded input arguments. Unfortunately, no tool exists for easily generating the `data` value for the time being. Once a tools becomes available, we'll provide a link to it here.
-
-Until then, developers will need to rely on the aforementioned library, or the `polkadot-js portal` to extract these values.
-
 ## Derived Remote Accounts
 
 When executing a remote transaction, the remote chain will derive a new address based on the sender's multilocation.
@@ -152,21 +140,20 @@ This means that the instructions like `WithdrawAsset` and `Transact` will be exe
 
 `Transact` functionality is exposed to EVM smart contracts via precompiles. The interface can be found [here](https://github.com/AstarNetwork/Astar) under XCM precompiles.
 
-```js
-function remote_transact(
-    uint256 parachain_id,
-    bool is_relay,
+```solidity
+    function remote_transact(
+    Multilocation memory destination,
     address payment_asset_id,
     uint256 payment_amount,
     bytes calldata call,
-    uint64 transact_weight
+    WeightV2 memory transact_weight
 ) external returns (bool);
 ```
 
-The `destination` can either be a sibling parachain Id or the Relay Chain (in which case parachain Id is ignored).
-`payment asset Id & amount` - Determines which asset to withdraw on the destination chain and how much. Used to pay for execution time. Current limitation is that the asset used must have a local derivative since it's referenced via H160 address.
-`call` - The encoded call to be executed on the remote chain.
-`transact_weight` - The max weight that can be consumed by the execution of the call on the remote chain.
+The `destination` is the Multilocation of destination chain and can either be a sibling parachain `Id` or the Relay Chain (in which case parachain `Id` is ignored).     
+`payment asset Id & amount` - Determines which asset to withdraw on the destination chain and how much. Used to pay for execution time. Current limitation is that the asset used must have a local derivative since it's referenced via H160 address.     
+`call` - The encoded call to be executed on the remote chain.     
+`transact_weight` - The max weight that can be consumed by the execution of the call on the remote chain.     
 
 Continue reading below to gain a better understanding of how to calculate these parameters.
 
@@ -196,45 +183,28 @@ Astar cannot guarantee that the following approach will work on all parachains, 
 
 Let's assume for this example that we're on some other chain, and want to execute a transaction remotely on `Astar`.
 
-**Step 1** Visit `Astar` network in *polkadot-js* and locate the extrinsic we would like to execute. For the sake of simplicity, let's assume it's `dappsStaking->claimStaker`, although it could be any call. **Submit** the transaction.
+**Step 1** Visit `Astar` network in *polkadot-js* and locate the extrinsic we would like to execute. For the sake of simplicity, let's assume it's `dappsStaking->claimStaker`, although it could be any call. Fill all arg fields. Then copy the `encoded call data` (click on the copy icon).
 
 ![1-encoded-call](img/remote-transact/001_dapps_staking_claim.png)
 
-**Step 2** Sign the transaction without submitting it.
+**Step 2** Go to Developer > Runtime calls and select `transactionPaymentCallApi -> queryCallInfo` and paaste the encoded call data into the `call` field. Then click on `Submit Runtime call`.
 
 ![2-sign-no-submit](img/remote-transact/002_unsigned_transaction.png)
 
-**Step 3** Store the *Signed transaction* data for further use, and **Sign** the transaction again 
-
-![3-signed-tx-data](img/remote-transact/003_non_signed_tx_data.png)
-
-**Step 4** is to open the **RPC** handler under **Developer** and select `payment -> QueryInfo`. Paste the `Signed transaction` data into prompt, and submit the RPC call. The result will indicate the transaction weight, and cost to execute it.
-In this case, it will cost **941_000_000** units of weight to execute.
-
-![4-query-sig-tx-info](img/remote-transact/004_rpc_query_info_weight_transact_call.png)
-
-**Step 5** requires a bit of a workaround. We need to know how much the cost is to execute a **single** XCM instruction on the destination chain. For `Astar` and `Shiden` it's `1_000_000_000` units of weight per instruction. This can be used as a rough guide, but there's no guarantee other parachains will be the same, so users should ensure they test this value themselves, or contact the other parachain team to learn the exact value.
+**Step 3** Requires a bit of a workaround. We need to know how much the cost is to execute a **single** XCM instruction on the destination chain. For `Astar` and `Shiden` it's `1_000_000_000` units of ref_time per instruction. This can be used as a rough guide, but there's no guarantee other parachains will be the same, so users should ensure they test this value themselves, or contact the other parachain team to learn the exact value.
 
 Since we are sending four XCM instructions, the total weight of the *raw* XCM instructions will be four times the weight of a single XCM instruction: `4 x 1_000_000_000`. Additionally, we will need to add the weight of the `transact` call being executed, so in total, the weight of our example will be `5 x 1_000_000_000`.
 
-| Name      | Amount |
-| ----------- | ----------- |
-| Call      | 941_000_000       |
-| XCM instructions   | 4_000_000_000 |
-| Total  | 4_941_000_000  |
+| Name      | Amount of weight `ref_time` |
+| ----------- |-----------------------------|
+| Call      | 886_264_000                 |
+| XCM instructions   | 4_000_000_000               |
+| Total  | 4_886_264_000               |
 
-The total weight is **4_941_000_000** units of weight.
+The total weight is **4_886_264_000** units of `ref_time` and **24_668** of `proof_size`. In oder to maximize the chance of successful execution, we should add a sefety limit of +10% to the total weight. So `ref_time`: **5_374_890_400** and `proof_size`: **27_134**.
 
-**Step 6** requires another workaround, where we will need to execute the `polkadotXcm -> execute` extrinsic call, and ensure `maxWeight` is equal to the previously calculated value of **4_941_000_000**. As required in step 2, you will need to copy the signed transaction data.
-
-![5-empty-execute](img/remote-transact/005_xcm_execute_weight_hack.png)
-
-Repeat step 3 and query the fee amount.
-
-![6-final-fee-details](img/remote-transact/006_total_fee_for_execution.png)
-
-The fee calculated is **5.2682 mASTR**.
+The weight to fee calculated is **4.2998 mASTR**.
 
 To summarize, in order to execute functions remotely on `Astar` network, we should:
-* withdraw around **0.0053 ASTR** 
-* specify the max transact weight as **941_000_000** units.
+* withdraw around **4.2998 mASTR** 
+* specify the max transact weight (+ safety threshold) of **5_374_890_400** `ref_time` and **27_134** `proof_size`.
