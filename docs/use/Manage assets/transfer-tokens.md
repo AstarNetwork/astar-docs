@@ -213,7 +213,7 @@ If you wish to move cross-chain (XCM) assets to Astar Native accounts from Astar
 
 3. Click Transfer and move to Transfer Page. Choose the Cross-chain Transfer (XCM) tab.
 
-4. If you are on Astar EVM, insert the destination address. You will need to use the [origin chain’s address](https://docs.astar.network/docs/xcm/faq#q-where-can-i-find-other-chains-addresses).
+4. If you are on Astar EVM, insert the destination address. You will need to use the [origin chain’s address](https://docs.astar.network/docs/learn/interoperability/xcm/faq#q-where-can-i-find-other-chains-addresses).
    <img width="1390" alt="EVM-XCM" src="https://user-images.githubusercontent.com/77480847/188535089-d594bdc6-9978-4b7b-a6a2-c165f51e8a6e.png" />
 
 5. If you are on Astar Native and would like to transfer tokens to a different chain within the same account, you do not need to input the address. Otherwise, enter the address manually if you want to transfer to another account. You may also transfer tokens from another chain to Astar Native by clicking the reverse button.

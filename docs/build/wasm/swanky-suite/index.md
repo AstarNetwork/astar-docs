@@ -39,7 +39,7 @@ This documentation's sub-sections on usage of [Swanky CLI](/docs/build/wasm/swan
 [ink! language] repo and specification
 
 [`pallet-contracts`]: https://github.com/paritytech/substrate/tree/master/frame/contracts
-[`pallet-dapps-staking`]: https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.27/frame/dapps-staking
+[`pallet-dapps-staking`]: https://github.com/AstarNetwork/Astar/tree/polkadot-v0.9.27/frame/dapps-staking
 [`pallet-assets`]: https://github.com/paritytech/substrate/tree/master/frame/assets
 [`swanky-node` github repo]: https://github.com/AstarNetwork/swanky-node
 [`swanky` cli github repo]: https://github.com/AstarNetwork/swanky-cli

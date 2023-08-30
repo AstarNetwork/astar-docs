@@ -1,3 +1,6 @@
+---
+sidebar_position: 8
+---
 # Proxy accounts
 
 ## Overview
