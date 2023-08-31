@@ -79,7 +79,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>User Guides</Translate>,
-    link: '/docs/use/user-guides/',
+    link: '/docs/use/',
     iconClass: 'docs',
     description: (
       <>
