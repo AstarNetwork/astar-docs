@@ -88,7 +88,7 @@ Check the full example on the Github repo under [examples](https://github.com/As
 
 ## Procedure
 ### 1. Create an XC20 asset
-Follow the documentation on how to [Create XC20 Assets](https://docs.astar.network/docs/use/Manage%20assets/create-xc20-assets).
+Follow the documentation on how to [Create XC20 Assets](https://docs.astar.network/docs/use/manage-assets/create-xc20-assets).
 
 ### 2. Deploy the xcBurrito.sol smart contract
 To deploy the XcBurrito contract you will need 2 input parameters
