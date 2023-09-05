@@ -20,10 +20,10 @@ Follow their handy guides to get started on exploring and integrating Transak as
 
 This guide will lay out the end-to-end steps for onboarding with Transak and integration, up to the point users are able to make live transactions:
 
-[Onboarding and Integration Process Overview](<https://transak.gitbook.io/transak-docs/transak-partner-onboarding-process/onboarding-and-integration-process-overview>)
+[Onboarding and Integration Process Overview](https://docs.transak.com/docs/onboarding-and-integration-process-overview)
 
 ### Jump right in and start playing around
 
-Would you like to explore and see what's possible with Transak first before onboarding? Feel free to [set up an account](https://transak.gitbook.io/transak-docs/quick-guides/create-a-partner-account-and-access-the-dashboard) and [create a demo integration](https://transak.gitbook.io/transak-docs/quick-guides/testing-your-integration-and-customization-setup). They can be done in only a few minutes.
+Would you like to explore and see what's possible with Transak first before onboarding? Feel free to [set up an account](https://docs.transak.com/docs/setup-your-partner-account) and [create a demo integration](https://docs.transak.com/docs/integration-options). They can be done in only a few minutes.
 
-Additionally, there are other guides available, such as [using the Partner dashboard](https://transak.gitbook.io/transak-docs/quick-guides/using-the-partner-dashboard).
+Additionally, there are other guides available, such as [using the Partner dashboard](https://dashboard.transak.com/).
