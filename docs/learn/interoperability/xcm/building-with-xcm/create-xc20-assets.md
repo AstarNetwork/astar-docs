@@ -43,7 +43,7 @@ The asset is now created on our network, but has no supply. To mint the tokens, 
 ![Mint your assets](img/7.png)
 
 1. Only the **issuer account** has permission to mint the token.
-2. Enter the address that will receive the minted tokens. We recommend using a [multisig](/docs/use/Manage%20wallets/create-multisig.md).
+2. Enter the address that will receive the minted tokens. We recommend using a [multisig](/docs/use/manage-wallets/create-multisig.md).
 
 ## Set Asset Metadata
 
