@@ -22,11 +22,11 @@ Yes. Astar zkEVM will be interoperable with existing chains on day because of it
 
 There are several key features that make Astar zkEVM unique:
         
-- Bridging the Japanese market with global projects, enterprises, and developers
-- High EVM equivalency
-- High scalability via zero-knowledge technology
-- Trustless interoperability and shared security inherited from Ethereum
-- Significantly reduced transaction cost compared to Ethereum mainnet
+- Bridging the Japanese market with global projects, enterprises, and developers.
+- High EVM equivalency.
+- High scalability via zero-knowledge technology.
+- Trustless interoperability and shared security inherited from Ethereum.
+- Significantly reduced transaction cost compared to Ethereum mainnet.
 
 ### What is Astar zkEVM’s gas option?
         
@@ -57,7 +57,7 @@ Our projects and partners have shown a growing interest in zero-knowledge techno
 Launching a layer 2 on Ethereum offers several advantages for the Astar ecosystem:
         
 - **More Choices for Builders**: With both Astar Substrate (layer 1) and Astar zkEVM (layer 2), developers have more places and tools to create/build with.
-- Expanding to a bigger community!
+- Expanding to a bigger community.
 - Astar can work more closely with Tier 1 projects on Ethereum. This means they can benefit from Astar's unique features, for example: Astar's dApp Staking.
 - The Astar ecosystem will benefit from increased growth in transactions, active users, and liquidity. All are key factors for network success.
 - More Japanese enterprises and real-world use cases are coming to the Astar ecosystem
@@ -83,7 +83,7 @@ Astar zkEVM testnet will begin to roll out in October 2023 (Q4) with a planned r
 - ETH can be natively transferred in both directions using a trustless bridge.
 - ASTR and additional tokens will be transitioned via the LayerZero protocol.
 
-### How are transactions collected and ordered? @Ramz 
+### How are transactions collected and ordered?
 1. A user initiates a transaction in a wallet, such as Metamask, and forwards it to a Sequencer.
 2. The transaction gets finalized on Astar zkEVM once the Sequencer commits to processing it. At this point, it's finalized on Astar zkEVM but not Ethereum, and referred to as the **Trusted State**.
 3. The Sequencer submits batch data to the Ethereum smart contract. This allows any node to trustlessly sync from Ethereum, a phase called **Virtual State**.
@@ -102,7 +102,7 @@ Astar zkEVM itself exists as a rollup, which doesn’t require independent conse
 
 ### What is the value of Astar zkEVM for ASTR token holders?
 
-Astar zkEVM uses $ASTR in three new ways: the gas fee for tooling, in the burning mechanism with the zk sequencer, and incentivizing the network aggregator.
+Astar zkEVM uses the ASTR token in three new ways: as the gas fee for tooling, in the burning mechanism with the sequencer, and burning incentivized tokens to the network aggregator. This model will be evaluated on our testnet to maximize the value for ASTR holders. The final design is subject to change based on analysis from testing the model.
 
 <Figure caption="Astar zkEVM Value" src={require('./img/astar-zkevm-value.png').default } width="65%" />
         
