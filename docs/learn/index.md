@@ -26,3 +26,5 @@ To expand your knowledge about building applications or utilizing various tools 
 [Multichain Interoperability](/docs/learn/interoperability/xcm)
 
 [Proxy Accounts](/docs/learn/Proxies.md)
+
+[zkEVM](/docs/learn/zkEVM)
