@@ -14,7 +14,7 @@ Astar zkEVM, in particular, leverages zk-rollup technology on Ethereum Layer 2 t
 
 The bridge between Ethereum and Layer 2 is trustless, meaning Astar zkEVM inherits the security of Ethereum, whereas bridges between Ethereum and other Layer 1 chains such as Polygon PoS rely on the specific bridge provider to provide security assurances. 
 
-### Is Astar leaving Polkadot
+### Is Astar leaving Polkadot?
 
 Astar is not leaving Polkadot. We will support the chain as before. In fact, we've just secured a parachain slot for the next two years, with our primary focus being the development of tools for smart contract creation and the regular onboarding of new projects. So, we're wholeheartedly committed to Polkadot.
 
