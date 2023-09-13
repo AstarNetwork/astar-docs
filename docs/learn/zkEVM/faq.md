@@ -20,7 +20,7 @@ Astar is not leaving Polkadot. We will support the chain as before. In fact, we'
 
 ### Are all three (EVM, Astar zkEVM and Wasm) VMs interoperable?
 
-Yes. Astar zkEVM will be interoperable with existing chains on day because of its EVM equivalence, and also via partners such as Layer Zero that supports traditional asset bridging, arbitrary cross-chain message passing, and remote smart contract calls. 
+Yes. Astar zkEVM will be interoperable with existing chains on day one because of its EVM equivalence, and also via partners such as Layer Zero that support traditional asset bridging, arbitrary cross-chain message passing, and remote smart contract calls. 
 
 ### What is unique about Astar zkEVM?
 
