@@ -6,10 +6,10 @@ Astar zkEVM serves as a versatile solution for global enterprises, accelerating 
         
 Key attributes of the Astar zkEVM include:
         
-- Scalability that ensures smooth operations even during high transaction volumes via zero-knowledge technology
-- EVM equivalency
-- Security mechanisms dereived from Ethereum, ensuring a robust and secure framework
-- Trustless interoperability with Ethereum, making diverse integrations smoother
-- Significantly reduced transaction costs compared to Ethereum, making it economically advantageous for users
+- Scalability that ensures smooth operations even during high transaction volumes via zero-knowledge technology.
+- EVM equivalency.
+- Security mechanisms dereived from Ethereum, ensuring a robust and secure framework.
+- Trustless interoperability with Ethereum, making diverse integrations smoother.
+- Significantly reduced transaction costs compared to Ethereum, making it economically advantageous for users.
 
 For more information, check out the zkEVM [FAQ](/docs/learn/zkEVM/faq.md) page.
