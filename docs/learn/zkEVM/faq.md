@@ -34,7 +34,7 @@ There are several key features that make Astar zkEVM unique:
 
 ### What is Astar zkEVM’s gas option?
         
-sETH is the gas token on Astar zkEVM testnet.
+ETH is the gas token on Astar zkEVM testnet.
 
 ### Does Astar zkEVM use a ZK-Rollup architecture? Why so? 
         
