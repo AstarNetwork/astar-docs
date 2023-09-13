@@ -51,7 +51,7 @@ Yes, [Astar zkEVM is fully open-source](https://polygon.technology/blog/polygon-
 
 No. **ETH will be used for gas fees**. It is expected that ASTR will be used for staking and governance in Astar zkEVM in the future.
 
-It is also important to note that Astar zkEVM **natively supports Account Abstraction via ERC-4337**, which will allow users to pay fees with any token (bring your own gas).
+It is also important to note that Astar zkEVM **supports Account Abstraction via ERC-4337**, which will allow users to pay fees with any token (bring your own gas).
 
 ### What types of dApps can be deployed on Astar zkEVM?
 
