@@ -13,7 +13,11 @@ Polygon PoS and Astar zkEVM both provide scaling solutions for Ethereum, though 
 Astar zkEVM, in particular, leverages zk-rollup technology on Ethereum Layer 2 to achieve improved scalability, shared security, and EVM equivalence, while Polygon PoS is an independent side-chain of Ethereum, acting as its own Layer 1, with its own consensus mechanism and security. 
 
 The bridge between Ethereum and Layer 2 is trustless, meaning Astar zkEVM inherits the security of Ethereum, whereas bridges between Ethereum and other Layer 1 chains such as Polygon PoS rely on the specific bridge provider to provide security assurances. 
-        
+
+### Is Astar leaving Polkadot
+
+Astar is not leaving Polkadot. We will support the chain as before. In fact, we've just secured a parachain slot for the next two years, with our primary focus being the development of tools for smart contract creation and the regular onboarding of new projects. So, we're wholeheartedly committed to Polkadot.
+
 ### Are all three (EVM, Astar zkEVM and Wasm) VMs interoperable?
 
 Yes. Astar zkEVM will be interoperable with existing chains on day because of its EVM equivalence, and also via partners such as Layer Zero that supports traditional asset bridging, arbitrary cross-chain message passing, and remote smart contract calls. 
@@ -30,7 +34,7 @@ There are several key features that make Astar zkEVM unique:
 
 ### What is Astar zkEVM’s gas option?
         
-We will use ETH as the gas token on Astar zkEVM testnet.
+sETH is the gas token on Astar zkEVM testnet.
 
 ### Does Astar zkEVM use a ZK-Rollup architecture? Why so? 
         
