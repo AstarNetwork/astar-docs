@@ -12,8 +12,8 @@ Astar is the largest smart contract platform in the Polkadot ecosystem, supporti
   testing, deploying, and interacting with smart contracts on the network.
 - [**EVM**](/docs/build/evm) dives deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through [precompiles](https://docs.astar.network/docs/build/EVM/precompiles/).
 - [**Wasm**](/docs/build/wasm) provides an overview of the [Wasm stack](https://docs.astar.network/docs/build/wasm/smart-contract-wasm) on Astar, [Wasm contract frameworks](/docs/build/wasm/dsls), and [Swanky Suite](/docs/build/wasm/swanky-suite/).
-- **Nodes**(/docs/build/nodes) explains how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.
-- **XCM**(/docs/learn/xcm) explains how XCM is used in Astar and also how developers can use it to interact with the rest of the Polkadot network.
-- **Integrations**(/docs/build/integrations/) provide relevant information about the wallets, indexers, and oracles that are integrated with the network.
+- [**Nodes**](/docs/build/nodes) explains how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.
+- [**XCM**](/docs/learn/interoperability/xcm) explains how XCM is used in Astar and also how developers can use it to interact with the rest of the Polkadot network.
+- [**Integrations**](/docs/build/integrations/) provide relevant information about the wallets, indexers, and oracles that are integrated with the network.
 
 [cbridge]: https://cbridge.celer.network/#/transfer
