@@ -8,15 +8,15 @@ sidebar_position: 2
 
 XC20 assets, created by the [Moonbeam](https://moonbeam.network/blog/introducing-xc-20s-the-new-standard-for-cross-chain-tokens-on-dotsama/) team, maintains compatibility between the EVM and Substrate framework that powers Polkadot, via precompiles — a set of built-in smart contracts made to look like ERC20s. Calling functions on an XC20 will invoke underlying Substrate functionality, which may be instructions for transferring tokens to another chain, or to send them to another local address. This compatibility layer connects the world of EVM and smart contracts to advanced Substrate-based interoperability scenarios.
 
-## Create and Register an XC20 Asset
+## Create an XC20 Asset
 
-Currently, mintable XC20 assets need to be created through [Polkadot.js Apps][polkadotjs-apps]. In this case, we will use Shibuya testnet. 
+XC20 asset refers to interface it uses to wrap around an asset in `assets-pallets`. So first we will need to create, mint and set metadata for an asset in `assets-pallets` and then access it from smart-contract using XC20 precompile interface.
 
 This section of the guide will demonstrate how to register an asset using [Polkadot.js Apps](https://polkadot.js.org/apps). 
 
 ## Create the Asset
 
-Before the asset's Metadata can be set, we will need to create the XC20 on the network using the following steps:
+Before the asset's Metadata can be set, we will need to create an asset on the network using the following steps:
 
 1. Navigate within [Polkadot.js Apps](https://polkadot.js.org/apps) to Network and click on **Assets**.
 2. Click on **+Create** on the right to open the create asset pop-up.
@@ -43,7 +43,7 @@ The asset is now created on our network, but has no supply. To mint the tokens, 
 ![Mint your assets](img/7.png)
 
 1. Only the **issuer account** has permission to mint the token.
-2. Enter the address that will receive the minted tokens. We recommend using a [multisig](https://docs.astar.network/docs/user-guides/create-multisig).
+2. Enter the address that will receive the minted tokens. We recommend using a [multisig](/docs/use/manage-wallets/create-multisig.md).
 
 ## Set Asset Metadata
 
@@ -64,13 +64,13 @@ To set the asset metadata, click on **Developer** at the top of the page and the
 
 You can use the **Extrinsics** page to perform other functions such as minting tokens, delegating a team, freeze and thaw assets or accounts, and more.
 
-## Generate XC20 Precompile Address
+## Calculate XC20 Precompile Address
 
-To use our asset as XC20 in MetaMask or another EVM wallet, we will need to generate the smart contract. The XC20 precompile address is generated using the following rule:
+To access our asset as XC20 in MetaMask or another EVM wallet, we will need to use its precompile address. The XC20 precompile address is using the following rule:
 
 `address = "0xFFFFFFFF" + DecimalToHexWith32Digits(AssetId)`
 
-The first step is to take the asset ID and convert it to a hex value. You can use the search engine of your choice to look up a simple tool for converting decimals to hex values. In this tutorial, we will use this [decimal to hexadecimal converter](https://www.rapidtables.com/convert/number/decimal-to-hex.html).
+The first step is to take the asset Id and convert it to a hex value. You can use the search engine of your choice to look up a simple tool for converting decimals to hex values. In this tutorial, we will use this [decimal to hexadecimal converter](https://www.rapidtables.com/convert/number/decimal-to-hex.html).
 
 For asset ID `19992021`, the hex value is `1310DD5`.
 
@@ -80,4 +80,13 @@ The hex value that was already generated in the example is 7 characters long, so
 
 For this example, the full address is `0xFFFFFFFF00000000000000000000000001310dD5`.
 
+:::note
+To use this address inside a solidity smart-contract, check sum of the address should be respected. Please use [toChecksumAddress](https://web3-tools.netlify.app/) converter that will convert your address.     
+for example `0xFFFFFFFF00000000000000000000000001310dD5` will be converted to `0xfFFfffFF00000000000000000000000001310dD5`
+:::
+
 Now that you've generated the XC20 precompile address, you can use the address to interact with the XC20 as you would with any other ERC20 in Remix.
+
+:::note
+Native token (SDN/ASTR) XC20 address is by convention `0x0000000000000000000000000000000000000000`
+:::

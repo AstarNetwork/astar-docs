@@ -21,4 +21,4 @@ Alguns de vocês podem não ser capazes de executar certas funções, por exempl
 2. Limpe o cache, reinicie o navegador e conecte a carteira ao portal novamente.
 3. No canto superior direito, alterne para um endpoint diferente.
 
-Se nenhuma das alternativas acima for útil, entre em contato com qualquer um dos membros ou embaixadores da equipe no [Discord](https://discord.gg/2FGq5KqwBh).
+Se nenhuma das alternativas acima for útil, entre em contato com qualquer um dos membros ou embaixadores da equipe no [Discord](https://discord.gg/AstarNetwork).

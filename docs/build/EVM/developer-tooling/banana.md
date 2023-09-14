@@ -338,4 +338,4 @@ To learn more about Banana Wallet head over to [banana docs](https://banana-wall
 
 Full tutorial code is available [here](https://github.com/Banana-Wallet/banana-tutorial/tree/feat/shibuya-tutorial)
 
-If your dApp already uses Rainbowkit then you can use Banana Wallet directly on Shibuya testnet. Please refer [here](https://banana-wallet-docs.rizelabs.io/integration/sdk-integration-tutorial/banana-less-than-greater-than-shibuya) for more information.
+If your dApp already uses Rainbowkit then you can use Banana Wallet directly on Shibuya testnet. Please refer [here](https://docs.bananahq.io/integration/wallet-connectors/using-rainbowkit) for more information.

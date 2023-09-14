@@ -25,8 +25,8 @@ Astar EVM side allows Ethereum-style addresses (H160 format), which is 40+2 hex-
 
 
 ## Learn more
-[Create a Substrate account](/docs/use/Manage%20wallets/create-wallet.md)
+[Create a Substrate account](/docs/use/manage-wallets/create-wallet.md)
 
-[Create an EVM account](/docs/use/EVM%20guides/setup-metamask.md)
+[Create an EVM account](/docs/use/evm-guides/setup-metamask.md)
 
 [Read about Substrate accounts](https://docs.substrate.io/learn/accounts-addresses-keys/)
