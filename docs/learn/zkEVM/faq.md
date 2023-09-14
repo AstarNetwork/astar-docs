@@ -34,7 +34,7 @@ There are several key features that make Astar zkEVM unique:
 
 ### What is Astar zkEVM’s gas option?
         
-ETH is the gas token on Astar zkEVM testnet.
+Bridged ETH is the gas token on Astar zkEVM testnet, and bridged ASTR may be added as an option at some point in future.
 
 ### Does Astar zkEVM use a ZK-Rollup architecture? Why so? 
         
