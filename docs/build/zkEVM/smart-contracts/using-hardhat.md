@@ -12,7 +12,7 @@ This document is a guide on how to deploy a smart contract on the Astar zkEVM ne
 
 :::info
 
-Before starting with this deployment, please ensure that your wallet is connected to the Astar zkEVM Testnet. See the demo [here](../develop.md#deploying-smart-contracts) for details on how to connect your wallet.
+Before starting with this deployment, please ensure that your wallet is connected to the Astar zkEVM Testnet. See the demo [here](../quickstart.md#deploying-smart-contracts) for details on how to connect your wallet.
 
 ::: 
 
