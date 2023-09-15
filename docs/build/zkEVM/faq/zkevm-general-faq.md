@@ -36,7 +36,7 @@ However, with the proving system breakthroughs pioneered by Polygon Labs, we bel
 
 ### How do I connect Astar zkEVM to a Metamask Wallet?
 
-In order to add the Astar zkEVM network to your wallet, please check [this guide](../develop.md) which contains the latest RPC details and videos demonstrating useful functionalities.
+In order to add the Astar zkEVM network to your wallet, please check [this guide](../quickstart.md) which contains the latest RPC details and videos demonstrating useful functionalities.
 
 ### How does Astar zkEVM compare to other zkEVMs in terms of technology and performance? What are the technical advantages there?
 
