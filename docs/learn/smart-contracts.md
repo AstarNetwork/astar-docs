@@ -1,3 +1,6 @@
+---
+sidebar_position: 9
+---
 # Smart Contracts
 
 ## Overview

@@ -53,13 +53,25 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>Learn Cross-Chain Message (XCM)</Translate>,
-    link: '/docs/learn/xcm/',
+    link: '/docs/learn/interoperability/xcm/',
     iconClass: 'broadcast',
     description: (
       <>
         <Translate>
-          Explain how XCM is used in Astar and how developers can use it to
+          Explains how XCM is used in Astar and how developers can use it to
           interact with the rest of the Polkadot network.
+        </Translate>
+      </>
+    ),
+  },
+  {
+    title: <Translate>Learn About Astar zkEVM</Translate>,
+    link: '/docs/learn/zkEVM',
+    iconClass: 'node',
+    description: (
+      <>
+        <Translate>
+          Explains the zkEVM, FAQs, and how to interact with Astar's scalability solution for Ethereum, powered by Polygon CDK.
         </Translate>
       </>
     ),
@@ -71,7 +83,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         <Translate>
-          Provide relevant information about the wallets, bridges, indexers, and
+          Contains relevant information about the wallets, bridges, indexers, and
           oracles that are integrated with the network.
         </Translate>
       </>
@@ -79,7 +91,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>User Guides</Translate>,
-    link: '/docs/use/user-guides/',
+    link: '/docs/use/',
     iconClass: 'docs',
     description: (
       <>
