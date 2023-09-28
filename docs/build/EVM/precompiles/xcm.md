@@ -188,7 +188,7 @@ XCM.Multilocation memory beneficiary = XCM.Multilocation({
 #### 3. asset address
 This is the precompile address of asset id = 1 (address = '0xFFFFFFFF...' + DecimalToHex(AssetId)): `0xFfFFFFff00000000000000000000000000000001`. The precompiles expect an array of assets.
 ```solidity
-ddress[] memory assetId = new address[](1);
+address[] memory assetId = new address[](1);
 assetId[0] = 0xFfFFFFff00000000000000000000000000000001;
 ```
 
