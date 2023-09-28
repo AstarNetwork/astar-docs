@@ -78,7 +78,7 @@ Inside the repository:
 - Solidity examples of usage of XCM precompiles
 - Integration tests (hardaht) in order to understand the flow of the examples
 
-Please follow the instruction ins the README to try it on your local machine.
+Please follow the instruction in the README to try it on your local machine.
 
 
 ### Create Multilocation
