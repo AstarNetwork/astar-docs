@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 # Hack Wasm Smart Contracts
-![banner](../../assets/gradient4.jpg)
+![banner](/docs/build/img/gradient4.jpg)
 
 Read the linked chapters or use tutorials to be able to answer following questions:
 

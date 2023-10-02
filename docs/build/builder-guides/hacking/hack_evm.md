@@ -5,7 +5,7 @@ import CustomNet from './img/custom_net.png'
 import Zombie from './img/zombie.png'
 
 # Hack EVM Smart Contracts
-![banner](../../assets/gradient2.jpg)
+![banner](/docs/build/img/gradient2.jpg)
 
 Read the linked chapters or use tutorials to be able to answer following questions:
 

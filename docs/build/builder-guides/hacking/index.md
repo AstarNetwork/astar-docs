@@ -1,5 +1,5 @@
 # Astar Hacker Guide
-![banner](../../assets/gradient8.jpg)
+![banner](/docs/build/img/gradient8.jpg)
 Welcome to Web3! 
 ## What is this Guide all about?
 This guide will navigate you through the Astar Documentation to jump start your development journey. We are aware of the complexity of the subject and want to encourage and support you on your Web3 journey.
