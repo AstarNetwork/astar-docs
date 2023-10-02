@@ -126,7 +126,7 @@ You will also be able to interact with the contract that you just deployed on Sh
 
 ## FAQ
 
-Please feel free to our Discord [here](https://discord.gg/AstarNetwork) for technical support.
+Please feel free to join our Discord [here](https://discord.gg/AstarNetwork) for technical support.
 
 ## Reference
 
