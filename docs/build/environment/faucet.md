@@ -24,7 +24,7 @@ Then, click the `I'm not a robot` checkbox, and click **Confirm**.
 
 ## Astar Discord Server
 
-Once you join the [Discord Server](https://discord.com/invite/kvRRnvBbQn), you will be able to see the **#shibuya-faucet** channel.
+Once you join the [Discord Server](https://discord.gg/AstarNetwork), you will be able to see the **#shibuya-faucet** channel.
 
 ![3](img/3.png)
 
