@@ -137,7 +137,7 @@ The debugger also supports adding **user defined watched variables (similar to a
 
 **Limitations**
 
-- Contracts compiled with viaIR option are not fully supported.
+- Contracts compiled with the viaIR option are not fully supported.
 - When debugging a release build, since they are fully optimized, source-mapping issues and unexpected execution orders may present themselves.
 - When debugging a debug build, gas usage is ignored, which may cause different code execution. e.g. if the original transaction runs out of gas, the debug build will indicate the transaction fully executes.
 
