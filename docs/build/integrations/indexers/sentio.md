@@ -186,7 +186,7 @@ You can also click the simulator button on the left navigation bar and go to the
 
 **Override Contract**
 
-Use the compilations tab to upload a local contract compilation, folder.
+Use the compilations tab to upload a local contract compilation folder.
 
 <Figure src={require('./img/sentio20.png').default } width="50%" />
 
