@@ -174,7 +174,7 @@ The simplest way to start a simulation is to click the simulator button as shown
 
 In this case, it will copy all the parameters from the existing transaction and you could make adjustments on top of it. Like block number, block index, gas fee, block header, state, etc.
 
-<Figure src={require('./img/sentio18.png').default } width="100%" />
+<Figure src={require('./img/sentio18.png').default } width="50%" />
 
 Click the simulate transaction button will save this run to the simulation history of your project and show you the result, just like what you see from the normal debugger UI.
 
@@ -182,17 +182,17 @@ Click the simulate transaction button will save this run to the simulation histo
 
 You can also click the simulator button on the left navigation bar and go to the simulator page which shows all the history simulations. Click the simulation button on the right corner will pop a similar UI but without prepopulated transaction data.
 
-<Figure src={require('./img/sentio19.png').default } width="100%" />
+<Figure src={require('./img/sentio19.png').default } width="85%" />
 
 **Override Contract**
 
 Use the compilations tab to upload a local contract compilation, folder.
 
-<Figure src={require('./img/sentio20.png').default } width="100%" />
+<Figure src={require('./img/sentio20.png').default } width="50%" />
 
 When doing the simulation, choose the contract override.
 
-<Figure src={require('./img/sentio21.png').default } width="100%" />
+<Figure src={require('./img/sentio21.png').default } width="50%" />
 
 ### Simulation API
 
@@ -243,7 +243,7 @@ State Diff
 Endpoint: https://app.sentio.xyz/api/v1/solidity/state_diff
 API key is required.
 
-<Figure src={require('./img/sentio22.png').default } width="100%" />
+<Figure src={require('./img/sentio22.png').default } width="50%" />
 
 Example:
 
@@ -257,7 +257,7 @@ curl --location 'https://app.sentio.xyz/api/v1/solidity/state_diff?networkId=1&t
 Endpoint: https://app.sentio.xyz/api/v1/solidity/call_trace
 API key is required.
 
-<Figure src={require('./img/sentio23.png').default } width="100%" />
+<Figure src={require('./img/sentio23.png').default } width="50%" />
 
 Example:
 
