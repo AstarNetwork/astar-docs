@@ -7,32 +7,32 @@ This document compiles some of the frequently asked questions related to the Ast
 
 ---
 
-### For anyone not familiar, what is Astar zkEVM?
+### What is Astar zkEVM?
 
-Astar zkEVM is the leading zero knowledge scaling solution that is equivalent to the Ethereum Virtual Machine. This means that most of the existing smart contracts, developer tools, and wallets work seamlessly. 
+Astar zkEVM is a layer 2 scaling solution for Ethereum that offers an EVM-equivalent smart contract environment. This means that most of the existing smart contracts, developer tools, and wallets for Ethereum also work with the Astar zkEVM. 
 
-Astar zkEVM harnesses the power of Zero-Knowledge proofs to reduce transaction costs and increase throughput, all while inheriting the security of Ethereum L1.
+Astar zkEVM harnesses the power of Zero-Knowledge proofs to reduce transaction costs and increase throughput on L2, all while inheriting the security of Ethereum L1.
 
 ### What are the main features of Astar zkEVM?
 
-- **EVM-equivalence**: Most Ethereum smart contracts, wallets, and tools work seamlessly on Astar zkEVM
-- Inherits **security from Ethereum**
-- Lower cost compared to L1 and **better finality than other L2 solutions** like Optimistic Rollups
-- **ZKP-powered scalability**, and aiming at similar throughput to PoS
+- **EVM-equivalence**: Most Ethereum smart contracts, wallets, and tools work seamlessly on Astar zkEVM.
+- Inherits its **security from Ethereum.**
+- Lower cost compared to L1 and **faster finality compared to other L2 solutions** such as Optimistic Rollups
+- **Zero-Knowledge Proof-powered scalability** aiming for similar throughput to PoS.
 
 ### What kind of gas fee reduction can users expect from Astar zkEVM?
 
-Compared to Ethereum Layer 1, users can expect a significant reduction in gas fees. Astar layer 2 scaling solutions/protocols batch transactions together and then effectively spread the cost of a single layer 1 transaction across multiple layer 2 transactions.
+Compared to Ethereum Layer 1, users can expect a significant reduction in gas fees. Astar's layer 2 scaling solution batches transactions together, effectively spreading the cost of a single layer 1 transaction across multiple layer 2 transactions.
 
-### How do zkRollups work?
+### How do zk Rollups work?
 
-zkRollups aggregate a large batch of transactions and prove all of them to the Ethereum network with a single zero-knowledge validity proof.
+zk Rollups aggregate large batches of transactions and finalize them on the Ethereum network using zero-knowledge validity proofs.
 
 ### What is so unique about zkEVMs?
 
-Many people in crypto believed that a zkEVM was years away, and might never be practical or competitive with other ZK L2s. This was framed as an unavoidable tradeoff: we could have either full EVM equivalence or high performance, but not both.
+ZkEVMs were thought to be years away; not practical or competitive with other ZK L2s as there seemed to loom an unavoidable tradeoff - Full EVM equivalence or high performance, but not both.
 
-However, with the proving system breakthroughs pioneered by Polygon Labs, we believe we can achieve full EVM equivalence while offering better performance (higher throughput, lower latency, and lower cost) than alt-L1s, optimistic rollups, and other ZK-Rollups.
+However, given the proving system breakthroughs pioneered by Polygon Labs, full EVM equivalence is now possible while at the same time offering higher performance and lower costs than alternative L1s, optimistic rollups, and other kinds of zk Rollups.
 
 ### How do I connect Astar zkEVM to a Metamask Wallet?
 
@@ -40,23 +40,23 @@ In order to add the Astar zkEVM network to your wallet, please check [this guide
 
 ### How does Astar zkEVM compare to other zkEVMs in terms of technology and performance? What are the technical advantages there?
 
-The best reference is Vitalik Buterin's neutral and comprehensive analysis of zkEVMs [published in his blog](https://vitalik.ca/general/2022/08/04/zkevm.html).
+The best reference is Vitalik Buterin's comprehensive analysis of zkEVMs [published in his blog](https://vitalik.ca/general/2022/08/04/zkevm.html).
 
-However, the one big difference between Astar zkEVM and other projects is zkEVM's efficient prover and the significant Ethereum equivalence. Regarding the design of the prover/verification component: other projects use an arithmetic circuit approach while the Astar zkEVM zkProver uses the State Machine approach.
+However, the major difference between Astar zkEVM and others is the zkEVM's efficient prover and high Ethereum equivalence. Regarding the design of the prover/verification component: other projects use an arithmetic circuit approach while the Astar zkEVM zkProver uses the State Machine approach.
 
 ### Is Astar zkEVM open source?
 
-Yes, [Astar zkEVM is fully open-sourced](https://polygon.technology/blog/polygon-zkevm-is-now-fully-open-source) and uses Polygon zkEVM solution with an AGPL v3 open-source license.
+Yes, [Astar zkEVM is fully open-source](https://polygon.technology/blog/polygon-zkevm-is-now-fully-open-source) and uses Polygon zkEVM solution with an AGPL v3 open-source license.
 
 ### Does Astar zkEVM have a separate token?
 
 No. **ETH will be used for gas fees**. It is expected that ASTR will be used for staking and governance in Astar zkEVM in the future.
 
-It is also important to note that Astar **zkEVM supports Account Abstraction via ERC-4337**, which will allow you to pay fees with any token transparently from a user's perspective.
+It is also important to note that Astar zkEVM **natively supports Account Abstraction via ERC-4337**, which will allow users to pay fees with any token (bring your own gas).
 
 ### What types of dApps can be deployed on Astar zkEVM?
 
-Any dApp that is compatible with EVM can be deployed, except for those which require a specific precompiled contract that is currently not supported by zkEVM. For more details related to supported precompiled contracts, check out [Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/).
+Any dApp that is compatible with EVM can be deployed, except for those which require a specific precompiled contract that is currently not supported by zkEVM. For more details related to supported precompiled contracts, check out the [Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/).
 
 ### Can this Layer 2 zkEVM work with other chains?
 
