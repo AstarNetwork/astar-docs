@@ -5,25 +5,29 @@ title: Docs Integration Request Form
 # Your Project Name
 
 :::info
+
+To learn how to set up a local Docusaurus install to view this the way it was intended, in addition to being able to review your own document(s) prior to submitting a PR, see the astar-docs [README](https://github.com/AstarNetwork/astar-docs/blob/main/README.md) file. Once your environment is ready to go:
+
 - Create a new branch of astar-docs for your update/addition. 
 
-- Within the new branch, copy and rename this file to something meaningful (ie: *projectname-oracle.md* or *widgetzyx-nft-api.md*) and move it to the most appropriate section of Astar docs. If you're unsure about where that might be in the end, please submit a PR anyways; we will find a home for it prior to merging. 
+- Within the new branch, copy and rename this file to something meaningful (ie: *projectname-oracle.md* or *widgetzyx-nft-api.md.* **Do not use spaces**) and move it to the most appropriate section of Astar docs. If you're unsure about where that might be in the end, please submit a PR anyways; we will find a home for it prior to merging. 
 
-- If your tutorial includes images or screenshots, which are **highly encouraged**, please add them to a new or existing `img` folder located within the same folder as your .md file, and link to them using the following:
+- If your tutorial includes images or screenshots, which are **highly encouraged**, please add them to a new or existing `img` folder located within the same folder as your .md file. Do not use `[!](https://dont.link.images.like.this.com)` to include each image. Instead, link to them using the following:
 
-    At top of .md file add this exactly:
+    At the top of the .md file add:
 
     `import Figure from '/src/components/figure'`
 
-    and in reference to each image, as one example:
+    and to reference each image, using one example:
 
-    `<Figure caption="This is a picture of Cody McCodeface, Degen" src={require('./img/cody_mccodeface.png').default } width="100%"/>`
+    `<Figure caption="This is a picture of Cody McCodeface, degen" src={require('./img/cody_mccodeface.png').default } width="100%"/>`
 
-    or another example without a caption; width reduced:
+    Here's another example without a caption; width reduced:
 
     `<Figure src={require('./img/Alice_und_Bob_only_slimmer.png').default } width="65%"/>`
 
 - When your document or tutorial is finished, submit a pull request to the [astar-docs](https://github.com/AstarNetwork/astar-docs) repo on Github. Thank you!
+
 :::
 
 ## Introduction
