@@ -12,7 +12,7 @@ To learn how to set up a local Docusaurus install to view this the way it was in
 
 - Within the new branch, copy and rename this file to something meaningful (ie: *projectname-oracle.md* or *widgetzyx-nft-api.md.* **Do not use spaces**) and move it to the most appropriate section of Astar docs. If you're unsure about where that might be in the end, please submit a PR anyways; we will find a home for it prior to merging. 
 
-- If your tutorial includes images or screenshots, which are **highly encouraged**, please add them to a new or existing `img` folder located within the same folder as your .md file. Do not use `[!](https://dont.link.images.like.this.com)` to include each image. Instead, link to them using the following. :
+- If your tutorial includes images or screenshots, which are **highly encouraged**, please add them to a new or existing `img` folder located within the same folder as your .md file. Do not use `[!](https://dont.link.images.like.this.com)` to include each image. Instead, link to them using the following:
 
     At the top of the .md file add:
 
@@ -27,6 +27,7 @@ To learn how to set up a local Docusaurus install to view this the way it was in
     `<Figure src={require('./img/Alice_und_Bob_only_slimmer.png').default } width="65%"/>`
 
 - When your document or tutorial is finished, submit a pull request to the [astar-docs](https://github.com/AstarNetwork/astar-docs) repo on Github. Thank you!
+
 :::
 
 ## Introduction
