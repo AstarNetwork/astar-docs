@@ -36,6 +36,14 @@ There are several key features that make Astar zkEVM unique:
         
 Bridged ETH is the gas token on Astar zkEVM testnet, and bridged ASTR may be added as an option at some point in the future.
 
+### Will Astar release a new token for the zkEVM?
+
+No. The value of Astar network as a whole is reflected in the ASTR token, and everything we do from a business-perspective is intended to either enhance or preseve it. We have no intention of introducing a token native to the zkEVM.
+
+### Will there be an airdrop for the zkEVM ecosystem?
+
+There will be a number of different ways participants in the zkEVM ecosystem can earn incentives, although, at least for now, a planned airdrop is not one of them. Please follow the zkEVM Journey campaign if you'd like to learn more, and to get involved during the launch phase. 
+
 ### Does Astar zkEVM use a ZK-Rollup architecture? Why so? 
         
 Astar team has decided to use ZK-Rollup architecture for the testnet. ZK-Rollups are fully secured and backed by Ethereum. 

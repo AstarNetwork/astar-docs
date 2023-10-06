@@ -13,7 +13,7 @@ The world of Non-Fungible Tokens (NFTs) has opened up intriguing possibilities f
 Before diving into NFT creation, you'll need to set up a Web3 wallet. This wallet serves as an interface between traditional web browsers and the Ethereum blockchain, a popular home for NFTs. Wallets such as Metamask, Talisman, and Subwallet are widely used and supported.
 - Begin by connecting your Web3 wallet.
 
-```jsx=
+```jsx
 async connect() {
   const connect = await this.onboard.connectWallet();
   this.wallet = await this.onboard.connectedWallet;
@@ -33,7 +33,7 @@ While there is a little more than just that, you should take a look at [this art
 
 On line 10 above, you might have wondered what was this for, well it's one of those things that onboard simplifies, this sets the chain to be Shiden in our example.  It simplifies the interaction with the wallet by making suggestions to the user. 
 
-```jsx=
+```jsx
 set() {
   this.onboard.setChain({ wallet: "MetaMask", chainId: "0x150" });
 },
@@ -45,7 +45,7 @@ Now that you're connected, the next step involves signing a message. Why? Crust'
 
 **Pro tip**, there are many different ways to sign a message depending of the framework, here are two I have used for this project, first in VueJs, then in NodeJs.
 
-```jsx=
+```jsx
 async sign() {
   this.sig = await this.signer.signMessage(this.address);
 }
@@ -69,7 +69,7 @@ How to add is shown on line 42, how to get stats on it on line 53.
 
 And just like that, we already know what our `tokenURI` will be so let's pin that!
 
-```jsx=
+```jsx
 async ipfs() {
   const tokenId = await this.getNextTokenId();
   const now = Date.now();
@@ -151,7 +151,7 @@ async ipfs() {
 
 There is a little helper function that should not be overlooked.  It's a good example of a basic interaction with a smart contract, in this instance we want to know the latest `tokenID` that was minted.
 
-```jsx=
+```jsx
 async getNextTokenId() {
   const abi = ["function currentTokenId() view returns (uint256)"];
   const provider = new ethers.providers.Web3Provider(this.wallet.provider);
@@ -170,7 +170,7 @@ Once your files are on the IPFS network, you'll need to pin them. This process a
 Line 18 shows how to get your SDN balance, this way you could advise the user if there is not enough for the transactions. Line 28 shows how to get the price of storing this file on the Crust Network. Line 37 places the order and the payment is made.
 
 
-```jsx=
+```jsx
 async pin() {
   // Define StorageOrder contract ABI
   const StorageOrderABI = [
@@ -265,7 +265,7 @@ With your files securely pinned, you're ready to mint your NFT. This is where th
 
 On line 13 is where we mint this new marvelous ShidenCrust Singular NFT using the `tokenURI` we made ealier. Line 16 shows how you can retreive the offical `tokenID`. Line 20 shows how to retreive the `tokenURI` from a `tokenID`  
 
-```jsx=
+```jsx
 async mint() {
   // Get signer and provider
   const provider = new ethers.providers.Web3Provider(this.wallet.provider);
@@ -310,7 +310,7 @@ Deploying an NFT Factory may seem intimidating if you're new to the world of blo
 
 Line 9 deployes the contract, don't forget to save the deployed address, (that's what was inside `this.contractAddress`) you'll need it for interations we've done above.
 
-```nodejs=
+```js
 // deploy.js
 
 async function main() {

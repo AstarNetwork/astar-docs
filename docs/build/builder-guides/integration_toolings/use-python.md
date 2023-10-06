@@ -139,7 +139,7 @@ In order to collect the addresses that participated in dApp staking during a cer
 
 ## FAQ
 
-For technical support, please contact our team of ambassadors and developers on Discord at [https://discord.com/invite/Z3nC9U4](https://discord.com/invite/Z3nC9U4). We're happy to help.
+For technical support, please contact our team of ambassadors and developers on [Discord](https://discord.gg/AstarNetwork). We're happy to help.
 
 ## Reference
 - [Python Substrate Interface Github](https://github.com/polkascan/py-substrate-interface)

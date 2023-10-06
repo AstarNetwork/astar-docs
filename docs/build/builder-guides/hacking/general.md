@@ -3,9 +3,9 @@ sidebar_position: 1
 ---
 
 # General
-![banner](../../assets/gradient5.jpg)
+![banner](/docs/build/img/gradient5.jpg)
 
-Please read the linked chapter and try to answer questions. If you cant find the answer, go to the [Astar Discord server](https://discord.com/invite/mWGt9bH59s) and ask the question in the general channel under the Developer Support category.
+Please read the linked chapter and try to answer questions. If you can't find the answer, go to the [Astar Discord server](https://discord.gg/invite/AstarNetwork) and ask the question in the general channel under the Developer Support category.
 
 ## Introduction
 ### Polkadot Relay [Chapter](/docs/build/introduction/polkadot_relay)

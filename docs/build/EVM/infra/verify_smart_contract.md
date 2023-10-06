@@ -2,6 +2,8 @@
 sidebar_position: 5
 ---
 
+import Figure from '/src/components/figure'
+
 # How to verify a Solidity smart contract on Blockscout
 
 ## TL;DR
@@ -36,44 +38,41 @@ In the previous guide, we went through the process of using Remix IDE to deploy 
 
 Copy the deployed contract address under the `Deployed Contracts` section
 
-![Untitled](img-verification-cookbook/Untitled.png)
+<Figure src={require('./img/Untitled.png').default } width="100%" />
 
 Search for the contract on Blockscout and click `Verify and Publish` under the `Code` page
 
-![Untitled](img-verification-cookbook/Untitled%201.png)
+<Figure src={require('./img/Untitled1.png').default } width="100%" />
     
 Choose `Via standard input JSON`
     
-![Untitled](img-verification-cookbook/Untitled%202.png)
+<Figure src={require('./img/Untitled2.png').default } width="100%" />
     
 Fill in the contract name and Solidity compiler version and upload the standard input JSON file
 - You can find the standard input JSON file under contracts/artifacts/build-info. Only use the `input` object in the JSON file.
 - You can also find the Solidity compiler version in the same JSON file under `solcVersion`
     
-    ![Untitled](img-verification-cookbook/Untitled%203.png)
+    <Figure src={require('./img/Untitled3.png').default } width="100%" />
     
 - Click “Verify & Publish”, then you are all set!
     
-    ![Untitled](img-verification-cookbook/Untitled%204.png)
+    <Figure src={require('./img/Untitled4.png').default } width="100%" />
     
 
 ---
 
 ### Example 2: verifying smart contracts with OpenZepplin-related source contracts
 
-Due to compiler constraints, contracts **with OpenZeppelin-related source contracts** have different verification methods to contracts **without OpenZeppelin-related source contracts.** In this section, we will go through the process of verifying a smart contract **with OpenZeppelin-related source contracts** using **Flattener** plugin. 
+Due to compiler constraints, contracts **with OpenZeppelin-related source contracts** have different verification methods to contracts **without OpenZeppelin-related source contracts.** In this section, we will go through the process of verifying a smart contract **with OpenZeppelin-related source contracts** using **Flatten**. 
 
-I have already deployed an ERC20 token contract using OpenZepplin library import, and will demonstrate how to verify it on Blockscout using **Flattener** plugin in Remix IDE.
+I have already deployed an ERC20 token contract using OpenZepplin library import, and will demonstrate how to verify it on Blockscout using **Flatten** in Remix IDE.
 
-- Install **Flattener** plugin in the `plugin manager`.
-    ![Untitled](img-verification-cookbook/Untitled%205.png)
-
-- Use **Flattener** plugin to flatten the ERC20 contract deployed.
-    ![Untitled](img-verification-cookbook/Untitled%206.png)
+- Use the **Flatten** function in the context menu to flatten the ERC20 contract deployed. Copy the flattened code.
+    <Figure src={require('./img/flatten.jpg').default } width="100%" />
 
 - Go to Blockscout and on the verification page choose the `Via flattened source code` method
-    ![Untitled](img-verification-cookbook/Untitled%207.png)
+    <Figure src={require('./img/Untitled7.png').default } width="100%" />
 
-- Paste the copied flattened source code from **Flattener** into the `Enter the Solidity Contract Code`”` field and click `“`Verify & Publis`.
-    ![Untitled](img-verification-cookbook/Untitled%208.png)
+- Paste the flattened source code from the **Flatten** function output into the `Enter the Solidity Contract Code`”` field and click `“`Verify & Publish`.
+    <Figure src={require('./img/Untitled8.png').default } width="100%" />
 
