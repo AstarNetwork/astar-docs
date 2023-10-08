@@ -7,7 +7,7 @@ Let's use `transfer_multiasset` to:
 
 #### 1. Define call as payable
 
-As the call will be on behalf of the contract, the native amount should be hold by the contract. Please make the function payable to ensure the native token will be transfered to contract.
+As the call will be on behalf of the contract, the native amount should be held by the contract. Please make the function payable to ensure the native token will be transferred to contract.
 
 ```solidity
     function transfer_native() external payable {

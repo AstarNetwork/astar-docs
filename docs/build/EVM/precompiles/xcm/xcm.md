@@ -9,7 +9,7 @@ sidebar_position: 6
 The interface can be found [here](https://github.com/AstarNetwork/Astar/blob/master/precompiles/xcm/XCM_v2.sol#L1) and contains the follow functions:
 
 :::info
-Only available in Shibuya for now. For Shiden and Astar please check this [interface](https://github.com/AstarNetwork/Astar/blob/master/precompiles/xcm/XCM.sol) 
+Only available in Shibuya for now. For Shiden and Astar please check this [interface](https://github.com/AstarNetwork/Astar/blob/master/precompiles/xcm/XCM.sol)
 :::
 
 #### transfer(currencyAddress, amount, destination, weight)
@@ -146,7 +146,7 @@ This repository contains examples demonstrating solidity contracts using XCM pre
 Inside the repository:
 
 - Learn how to do: asset transfer & withdraw as well as native token transfer
-- Zombienet config file: spawn a local zombienet with one relay chain and two parcahins (Shibuya and Shiden node)
+- Zombienet config file: spawn a local zombienet with one relay chain and two parachains (Shibuya and Shiden node)
 - A setup script in order to create an asset and register it in both networks
 - Solidity examples of usage of XCM precompiles
 - Integration tests (hardhat) in order to understand the flow of the examples
