@@ -35,12 +35,11 @@ The Frontier EVM used on Astar network provides several useful precompiled contr
 The interface descriptions for these precompiles can be found in the `precompiles` folder: [Astar repo](https://github.com/AstarNetwork/Astar/).
 The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.
 
-# Usage Example
+## Usage Example
 
 Here we'll demonstrate how to interact with the dApp staking precompile using Remix IDE. Other precompiles can be accessed in a similar manner.
 
-
-```
+```solidity
 import "./DappsStaking.sol";
 contract A {
     DappsStaking public constant DAPPS_STAKING = DappsStaking(0x0000000000000000000000000000000000005001);
