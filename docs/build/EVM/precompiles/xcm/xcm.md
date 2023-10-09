@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ### XCM precompiles - Interface
 
-The interface can be found [here](https://github.com/AstarNetwork/Astar/blob/master/precompiles/xcm/XCM_v2.sol#L1) and contains the follow functions:
+The interface can be found [here](https://github.com/AstarNetwork/Astar/blob/master/precompiles/xcm/XCM_v2.sol#L1) and contains the following functions:
 
 :::info
 Only available in Shibuya for now. For Shiden and Astar please check this [interface](https://github.com/AstarNetwork/Astar/blob/master/precompiles/xcm/XCM.sol)
