@@ -66,4 +66,4 @@ require(
 );
 ```
 
-Please check full example in the [XCM EVM SDK](TO UPDATE)
+Please check full example in the [XCM EVM SDK](https://github.com/AstarNetwork/EVM-XCM-Examples/tree/main/contracts/withdraw-assets)

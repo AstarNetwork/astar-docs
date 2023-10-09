@@ -111,6 +111,10 @@ function transfer_multiasset_with_fee(
 
 Transfer several tokens at once through XCM based on its location specifying fee
 
+:::caution
+Only a maximum of 2 assets can be transferred
+:::
+
 ```solidity
 function transfer_multi_assets(
     MultiAsset[] memory assets,
@@ -234,3 +238,11 @@ XCM.Multilocation memory asset = XCM.Multilocation({
     interior: interior
 });
 ```
+
+#### Builder Guides
+
+Three builder guides ont eh subject of EVM XCM are available in Builder section:
+
+- [How to create and interact with a mintable XC20 asset via Solidity smart contract](../../../builder-guides/leverage_parachains/interact_with_xc20.md)   
+- [Harnessing Crust Network for NFT Minting: A Developer's Guide](../../../builder-guides/leverage_parachains/mint-nfts-crust.md)   
+- [How to set up a Zombienet for XCM testing](../../../builder-guides/leverage_parachains/zombienet.md)  
