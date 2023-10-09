@@ -1,8 +1,8 @@
-# Astar zkEVM
+# Astar Beta Labs
 
 ## Overview
 
-This is where you will find information about building on Astar zkEVM, a Layer 2 scaling solution for Ethereum powered by Polygon CDK.
+This section is for experimental technologies and features that are still in development that may only be available in testnet environments.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
