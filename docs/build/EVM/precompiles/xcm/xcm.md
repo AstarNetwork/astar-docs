@@ -241,8 +241,10 @@ XCM.Multilocation memory asset = XCM.Multilocation({
 
 #### Builder Guides
 
-Three builder guides on the subject of EVM XCM are available in Builder section:
+Five builder guides on the subject of EVM XCM are available in Builder section:
 
 - [How to create and interact with a mintable XC20 asset via Solidity smart contract](../../../builder-guides/leverage_parachains/interact_with_xc20.md)   
 - [Harnessing Crust Network for NFT Minting: A Developer's Guide](../../../builder-guides/leverage_parachains/mint-nfts-crust.md)   
+- [NFT Minting Simplified: A Developer’s Guide to Lighthouse and Astar Network](../../../builder-guides/leverage_parachains/mint-nfts-lighthouse.md)
 - [How to set up a Zombienet for XCM testing](../../../builder-guides/leverage_parachains/zombienet.md)  
+- [Utilizing Lighthouse Encryption on Astar for Enhanced Security: A Developer's Guide](../../../builder-guides/leverage_parachains/lighthouse-encryption.md)
