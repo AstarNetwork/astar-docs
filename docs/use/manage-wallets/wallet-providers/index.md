@@ -1,8 +1,6 @@
-# Astar zkEVM
+# Wallet Providers
 
-## Overview
-
-This is where you will find information about building on Astar zkEVM, a Layer 2 scaling solution for Ethereum powered by Polygon CDK.
+Here you will find various wallets compatible with Astar Network.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
