@@ -12,42 +12,43 @@ import guide06 from "./img/guide06.png"
 
 ## What is a Unified Account?
 
-Creating a Unified account is very simple. However, we would like you to understand that this is still an advanced technology. We do not recommend proceeding unless you are familiar with its workings.
+Creating a Unified account is simple, however, it's important to understand that this is still an emerging technology. We do not recommend attempting account unification until you are familiar with how it works.
 
-A Unified account provides a simpler experience within the Astar ecosystem. Since we have two address formats, it has always been challenging for new users to grasp how they function. While you need both Astar Native and Astar subEVM accounts, once they are unified, you won't have to worry about which wallet you are connected to.
+A Unified account provides a simplified experience for end-users of Astar Substrate-based networks. Since on Astar Substrate, native Wasm and the EVM use two different address formats, new users find it challenging to grasp how they function. While both Astar Native and Astar EVM accounts are *typically* required, with unified accounts, users don't have to worry about which wallet they are connected to. When unifed accounts work in conjuction with XVM, they are designed to form a powerful new way to abstract away the inner workings of the Substrate native VM side from end users, entirely, allowing them to interact with both networks seamlessly using only MetaMask.
 
 ## What is possible?
 
-- Two accounts, one balance. When accounts are unified, they share the same balance. The moment you withdraw ASTR tokens from a CEX exchange using your Astar Native account, your balance will also reflect in the Astar subEVM. There's no need to transfer between them; users can immediately stake tokens or use a DEX.
+- Two accounts; one balance. When accounts are unified, they share the same balance. The moment ASTR tokens are withdrawn from a CEX exchange to an Astar Native account, the balance is updated on the Astar EVM side. There's no need to transfer between them any longer; users can stake tokens immediately, for example, or use a DEX.
 
-- Furthermore, it's already possible to interact with Wasm dApps using the Unified account, provided the dApp supports EVM wallets. The core team is currently developing XVM, which will enable the Unified account to interact with EVM smart contracts.
+- Furthermore, it's already possible to interact with Wasm dApps using a Unified account, as long as the dApp supports EVM wallets. The core team is currently developing XVM, which allows a Unified account to interact with EVM smart contracts.
 
 ## How to create an unified account
 
 :::caution
-At this moment this feature is only available in Shibuya test net
+At this moment this feature is only available on Shibuya testnet.
 :::
 
 ### Disclaimer: Before creating a Unified account, please ensure you understand the following
 
-- Unified accounts are specific to each network. Creating a Unified account on Shibuya using Shibuya Native account A and Shibuya subEVM account A does not mean it will apply to Shiden or Astar.
+- Unified accounts are specific to each network. Creating a Unified account on Shibuya using Shibuya Native account A and Shibuya EVM account A does not carry over to Shiden or Astar.
 
-- If you have a staking balance on the EVM, it must be unstaked first since staked tokens cannot be transferred to the unified balance.
+- Staking balances on the EVM must be unstaked first before initiating the process since staked tokens cannot be transferred to the unified balance.
 
-- If you possess custom xcTokens rather than official XCM tokens, they will not be included during the unified account creation process. Please transfer them to an EVM wallet separately. If you do not have xcTokens on Shibuya, please contact @kahori on Discord. She will provide you with official test xcTokens.
+- Custom xcTokens (rather than official XCM tokens) are not included automatically during the account unification process, so they need to be transferred to an EVM wallet separately. To obtain test xcTokens on Shibuya, please contact @kahori on Discord.
 
-- There is a fee (slightly more than 1 SBY) associated with creating a Unified account. If you already have an existing Account ID (substrate), this charge acts more as a deposit than a fee. However, it will not be refunded as it currently cannot be separated once unified.
+- There is a fee (slightly more than 1 SBY) for creating a Unified account. If you have an existing Account ID (Substrate), this charge acts more like a deposit than a fee. However, it can not be refunded as accounts currently cannot be separated after they are unified.
 
-### 1, Start creating by connecting Native account
+### 1, Start by connecting Native account.
 
-Please prepare following
+Please prepare following:
 
-- **Shibuya Native Account**
-- **Shibuya subEVM account**
-- with no staking balance
-- some test xcTokens (to understand better) Please ask a team member if you wish to have testing tokens
+- **Shibuya Native account**
+- **Shibuya EVM account**
+- Must have no staking balance.
+- Must have non-zero balances on both accounts (enough for gas) Use the faucet built into the [Portal](https://portal.astar.network) to obtain enough for gas fees, if you need to.
+- To understand the process more thoroughly, obtain some test tokens. Please ask a team member if you do not know how to obtain test tokens.
 
-Make sure you are connected to the Shibuya test net. You will see a new account icon on the Asset page, you can start from here.
+Make sure you are connected to the Shibuya testnet. You should see a new account icon on the Asset page, and can initiate the process from there.
 
 <div style={{textAlign: 'center'}}>
   <img src={guide01} style={{width: 600}} />
@@ -57,44 +58,46 @@ Make sure you are connected to the Shibuya test net. You will see a new account 
   <img src={guide02} style={{width: 600}} />
   </div>
 
-### 2, Read the disclaimer
+### 2, Read the disclaimer.
 
 <div style={{textAlign: 'center'}}>
   <img src={guide03} style={{width: 450}} />
   </div>
 
-### 3, Connect to EVM wallet
+### 3, Connect to EVM wallet.
 
-It is recommended to use a new wallet however if you wish to use an existing EVM account. please make sure that you unstake all tokens first.
+It is recommended to use a new wallet, but if you wish to use an existing EVM account, please make sure to unstake all tokens first.
 
 <div style={{textAlign: 'center'}}>
   <img src={guide04} style={{width: 450}} />
   </div>
 
-### 4, Add your account name
+### 4, Add your account name.
 
-It will be on-chain and we are working on adding NFT as an icon of the account at this moment and will be ready when it’s available on Astar.
+The account name will be visible on-chain. We are working on adding NFT pfp support in time for when Account Unification comes on Astar.
 
 <div style={{textAlign: 'center'}}>
   <img src={guide05} style={{width: 450}} />
   </div>
 
-### 5, Send xcTokens
+### 5, Send xcTokens.
 
-xcTokens do not live in an EVM account balance. Before unifying the balance, the portal will send xcTokens to a Unified account. When testing the environment, most of you may not have xcTokens. Please find a team member and ask for this purpose. You will be asked to sign an EVM transaction for this.
+xcTokens do not live in the EVM account balance. Before unifying the balance, the portal will send xcTokens to a Unified account. When testing the environment, most of you may not have xcTokens. Please find a team member and ask for them for this purpose. You will be asked to sign an EVM transaction.
 
 <div style={{textAlign: 'center'}}>
   <img src={guide06} style={{width: 450}} />
   </div>
 
-### 6, Check everything is okay. Press the button and your accounts will be unified
+### 6, Confirm everything looks okay. Press the button and the accounts will be unified.
 
-### 7, To experience what happened to your account
+### 7, To confirm the accounts were unified:
 
-- Check your SBY tokens balances are now all together.
+- Check that the SBY tokens balances are unified.
 
-- Check your xcTokens ERC tokens are now available when you connect with your substrate wallet.
+- Check that xcTokens ERC token balances are available after connecting a Substrate wallet.
 
-- You can also send xcTokens from this unified Substrate account.
+- You can send xcTokens from the unified Substrate account.
 
-- We are working on a wallet modal to create Unified Account section, you will be able to choose unified accounts without selecting a specific wallet.
+:::note
+We are working on a wallet modal to create a Unified Account section, where users can use unified accounts without needing to select a specific wallet.
+:::
