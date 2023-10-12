@@ -16,16 +16,21 @@ To learn how to set up a local Docusaurus install to view this the way it was in
 
     At the top of the .md file add:
 
-    `import Figure from '/src/components/figure'`
+    ```r
+    import image01 from "./img/image01.png"
+    import image02 from "./img/image02.png"
+    import image03 from "./img/image03.png"
+    import ...
+    ```
 
-    and to reference each image, using one example:
+    and to reference each image, as one example:
 
-    `<Figure caption="This is a picture of Cody McCodeface, degen" src={require('./img/cody_mccodeface.png').default } width="100%"/>`
-
-    Here's another example without a caption; width reduced:
-
-    `<Figure src={require('./img/Alice_und_Bob_only_slimmer.png').default } width="65%"/>`
-
+    ```r
+    <div style={{textAlign: 'center'}}>
+        <img src={image01} style={{width: 600}} />
+    </div>
+    ```
+           
 - When your document or tutorial is finished, submit a pull request to the [astar-docs](https://github.com/AstarNetwork/astar-docs) repo on Github. Thank you!
 
 :::
