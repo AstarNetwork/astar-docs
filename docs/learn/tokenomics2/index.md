@@ -8,9 +8,9 @@ As the network evolves, so do our tokenomics. Astar Network's tokenomics are bei
 :::info
 Astar Network is currently in a phased transition to a Tokenomics 2.0 model.
 
-Sections within this chapter describe current status of tokenomics and content will be added as changes get enacted (go live) on Astar Network.
+Content within this chapter will be added as changes get enacted (go live).
 
-Overview of current Tokenomics are documented [here](../tokenomics)
+Overview of current Astar Network's Tokenomics are documented **[here](../tokenomics)**
 
 The overview of Astar Network Tokenomics 2.0 plans and current discussion on the topic can be found on [Astar Forum](https://forum.astar.network/t/astar-tokenomics-2-0-a-dynamically-adjusted-inflation/4924)
 
@@ -32,7 +32,7 @@ This section includes advanced content.
 :::
 
 :::tip
-Astar and Shiden share the same economic model, however some configuration differences are possible. Following chapters only focus on Astar and ASTR but also apply to Shiden and its SDN token.
+Astar and Shiden share the same economic model, however configuration differences exist. Following chapters only focus on Astar and ASTR but also apply to Shiden and its SDN token.
 :::
 
 
