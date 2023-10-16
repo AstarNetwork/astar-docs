@@ -1,11 +1,13 @@
+import Figure from "/src/components/figure"
+
 ---
 sidebar_position: 2
 ---
 # Fee Model
 
-Fees on Astar comprise of Native (Substrate) fees and Ethereum fees.
+Fees on Astar comprise of Native (Substrate) fees and EVM fees.
 
-Native (Substrate) and Ethereum transaction fees are calculated in inherently different ways, and in Astar Network's legacy tokenomics the cost of similar transactions differed between the two systems.
+Native (Substrate) and EVM transaction fees are calculated in inherently different ways, and in Astar Network's legacy tokenomics the cost of similar transactions differed between the two systems.
 
 Tokenomics 2.0 aligns the fees calculation between the two systems so that transactions consuming the same amount of block resources are priced roughly the same if executed as a Native or as an Ethereum transaction. 
 
@@ -74,7 +76,7 @@ and using $s$ to describe current block fullness:
 Based on the network usage (congestion), factor $c$ will either increase or decrease from block to block. If network is used heavily and blocks are full, it will increase, scaling up the weight fee and thus making the transactions more expensive. If network congestion is below the ideal the fee multiplier will decrease, making transactions less expensive.
 
 
-## Ethereum Fees
+## EVM Fees
 
 Astar is fully Ethereum compatible. This means it also supports Ethereum’s [gas concept](https://ethereum.org/en/developers/docs/gas/). Gas is similar to weight but not quite the same. As a result, Ethereum transaction fees are calculated a bit differently. A simplified formula looks like this 
 
@@ -86,11 +88,11 @@ $$ethereum\_fee = used\_gas * (base\_fee\_per\_gas + priority\_fee\_per\_gas)$$
 
 Comparing it with the previous example using native fees, it’s clear that Ethereum transactions are less configurable and more information is abstracted from the user. One of the important differences compared to native fee model is the non-existance of rent fees: when storage is created, the price of that storage is included in the gas fee, and even if some storage is removed later on, the user doesn’t receive a refund.
 
-In order to align fees between two different systems, Ethereum fee formula is adjusted in a way that $base\_fee\_per\_gas$ becomes a dynamic paramter calculated in each block $n$:
+In order to align fees between two different systems, EVM fee formula for Astar Network is adjusted in a way that $base\_fee\_per\_gas$ becomes a dynamic paramter calculated in each block $n$:
 
 $$
 \begin{align}
-ethereum\_fee &= used\_gas * (base\_fee\_per\_gas + priority\_fee\_per\_gas)
+EVM\_fee &= used\_gas * (base\_fee\_per\_gas + priority\_fee\_per\_gas)
 \\
 base\_fee\_per\_gas_{n} &= base\_fee\_per\_gas_{n-1} * (1 + adjustment + \frac{adjustment^2}{2})
 \\
@@ -102,12 +104,12 @@ With the following configuration parameters:
 - $base\_fee\_per\_gas_{min}$ - the smallest possible value of base\_fee\_per\_gas.
 - $base\_fee\_per\_gas_{max}$ - the largest possible value of base\_fee\_per\_gas.
 
-**<div style={{textAlign: 'center'}}>Ethereum fee calculation on Astar Network</div>**
+**<div style={{textAlign: 'center'}}>EVM fee calculation on Astar Network</div>**
 
 ## Fee Model Parameters
 
 Values of all the Fee Model parameters are listed in the table below.
-All parameters are also retrievable as on-chain values using ..... 
+TODO All parameters are also retrievable as on-chain values using ..... 
 
 | Parameter name                                            | Value on Astar            | Value on Shiden        | 
 | --------------------------------------------------------- |---------------            |---------------        |
@@ -126,13 +128,38 @@ All parameters are also retrievable as on-chain values using .....
 | $base\_fee\_per\_gas_{min}$                               |0.0000008 ASTR             |               SDN|
 | $base\_fee\_per\_gas_{max}$                               |0.00008 ASTR               |               SDN|
 
-The values for the parameters above (weight factor, length factor, initial adjustment factor and initial base fee per gas) are set so that, at the time of implementation, the Ethereum fee and the Native fee are equal and equal to 0.5 ASTR for an average weight and length transaction with no rent fee.
+The values for the parameters above (weight factor, length factor, initial adjustment factor and initial base fee per gas) are set so that, at the time of implementation, the EVM fee and the Native fee are equal and equal to 0.5 ASTR for an average weight and length transaction with no rent fee.
 
 
 ## Fee Alignment Transition Period
 
-As mentioned above, in legacy Astar Network tokenomics fee model there is a significant gap between the value of fees for similar transactions between Native and Ethereum systems.
+As mentioned above, in legacy Astar Network tokenomics fee model there is a significant gap between the value of fees for similar transactions between Native and EVM systems.
  
-To allow network stakeholders to adjust to the Tokenomics 2.0 fee model, alignemnt wont happen instantly but gradually over a period of ~90 days.
+To allow network stakeholders to adjust to the Tokenomics 2.0 fee model, alignemnt wont happen instantly but gradually over a period of ~80 days.
+
+The transition phase will start with setting the initial parameters as in the tabele below:
+
+| Parameter name                                            | Value on Astar            | Value on Shiden        | 
+| --------------------------------------------------------- |---------------            |---------------        |
+| $c_0$                                                     | 0.08614819118682882 ASTR           ||
+| $c_{min}$                                                 | 0.08614819118682882                     |                   |
+| $base\_fee\_per\_gas_{0}$                                 |0.000000001 ASTR  |               SDN|
+| $base\_fee\_per\_gas_{min}$                               |0.0000008 ASTR             |               SDN|
+
+All other parameters are set to values described in the main table.
+
+A new factor $m$ is introduced with the value $m$= 1 710 000 and inserted into the dynamic formula for the base\_fee\_per\_gas:
+
+$$
+\begin{align}
+base\_fee\_per\_gas_{n} &= base\_fee\_per\_gas_{n-1} * (1 + adjustment + m * \frac{adjustment^2}{2})
+\\
+\end{align}
+$$
+
+The following graph shows the expected movement of EVM fee and Native fee for average transaction in the first 80 days after the launch (the graph is based on the assumption that block fullness will behave similarly as it did during the data gathering period for the Tokenomics 2.0 modeling TODO - which is that):
+
+<Figure caption="Fee Alignment Transition Period " src={require('./img/tokenomics-fee-alignment.png').default } width="65%" />
 
 
+After the EVM fee and Native fee reach the desired level, the $m$ factor will be removed from the formula and the $base\_fee\_per\_gas_{min}$ and $c_{min}$ will be set to the values from the main table.
