@@ -3,16 +3,17 @@ sidebar_position: 12
 ---
 # Tokenomics 2.0
 
-As the network evolves, so do our tokenomics. Astar Network's tokenomics are being revised to best serve the needs of network participants, from users and builders to enterprise partners. With Tokenomics 2.0, you can expect a sustainable token structure and a lower inflation rate.
+Astar Network's tokenomics has been revised to best serve the needs of network participants, from users and builders to enterprise partners.
+
+With Tokenomics 2.0, you can expect a sustainable token inflation allocation structure and network fees as well as a lower inflation rate.
 
 :::info
-Astar Network is currently in a phased transition to a Tokenomics 2.0 model.
+Astar Network is currently in a phased transition to a Tokenomics 2.0 model. The overview of Tokenomics 2.0 plans and discussions on the topic can be found on [Astar Forum](https://forum.astar.network/t/astar-tokenomics-2-0-a-dynamically-adjusted-inflation/4924)
 
-Content within this chapter will be added as changes get enacted (go live).
+Content to this page will be added as changes get enacted (go live).
 
 Overview of current Astar Network's Tokenomics are documented **[here](../tokenomics)**
 
-The overview of Astar Network Tokenomics 2.0 plans and current discussion on the topic can be found on [Astar Forum](https://forum.astar.network/t/astar-tokenomics-2-0-a-dynamically-adjusted-inflation/4924)
 
 The outline of the phased approach to new Tokenomics:
 - Phase 0 - Forum Discussion: 
