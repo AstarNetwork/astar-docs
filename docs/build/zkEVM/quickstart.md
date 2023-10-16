@@ -3,6 +3,7 @@ sidebar_position: 1
 title: Quickstart to Astar zkEVM
 sidebar_label: Quickstart
 ---
+![Documentation of all the resources builders need in order to start testing, deploying and interacting with smart contracts on the Astar network](../img/build.png)
 
 Astar zkEVM is the zero-knowledge scaling solution that is **fully equivalent to an EVM**. All existing smart contracts, developer toolings and wallets work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs in order to reduce transaction costs and massively increase throughput, all while inheriting the security of Ethereum.
 

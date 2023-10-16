@@ -3,9 +3,13 @@ sidebar_position: 1
 title: General FAQs related to zkEVM
 sidebar_label: General FAQs
 ---
+
+# General FAQ
+
+## Overview
+
 This document compiles some of the frequently asked questions related to the Astar zkEVM. For more details, check out [Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/).
 
----
 
 ### What is Astar zkEVM?
 

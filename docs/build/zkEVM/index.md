@@ -1,7 +1,8 @@
-# Astar zkEVM
+# Build on Astar zkEVM
 
-### This is where you will find information about building on Astar zkEVM, a Layer 2 scaling solution for Ethereum powered by Polygon CDK.
+## Overview
 
+Here you can find information about building on Astar zkEVM, a Layer 2 scaling solution for Ethereum powered by Polygon CDK.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

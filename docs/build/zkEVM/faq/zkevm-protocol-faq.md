@@ -17,15 +17,15 @@ This document compiles some of the frequently asked questions related to the Ast
 
 ### Are there any time or transaction intervals for a sequencer to wait before moving forward to make a Rollup batch?
 
-The sequencer always has an open batch. Transactions are added to this batch until this batch is full or a big timeout happens. Those batches are also accumulated until 128K of batches is accumulated (or a bib timeout) and then a sequencing transaction to L1 is sent.
+The sequencer always has an open batch. Transactions are added to this batch until this batch is full or a big timeout happens. Those batches are also accumulated until it reaches 128K of batches (or a big timeout) and then a sequencing transaction to L1 is sent.
 
-From the L2 user perspective, a new L2 block (different from than L2 batch) is closed and sent to the user. The user perceives the transaction finality even if the L2 batch is not closed. **One L2 Transaction is one L2 Block**.
+From the L2 user perspective, a new L2 block (different from the L2 batch) is closed and sent to the user. The user perceives the transaction finality even if the L2 batch is not closed. **One L2 Transaction is one L2 Block**.
 
 ### What are the stages that a transaction goes through in order to be finalized on L1?
 
 The process of validating a specific transaction within the batch typically involves three steps:
 
-1. **Trusted State:** This state is given by the trusted sequencer almost instantaneously. No L1 transactions are required. 
+1. **Trusted State:** This state is given by the trusted sequencer almost instantaneously. No L1 transactions are required.
 
 2. **Virtual State:** Transactions are in L1. These transactions and their order cannot be modified as the state is final and anybody could calculate. 
 
@@ -47,7 +47,7 @@ Once the transaction is deemed valid, the Sequencer applies the transaction to t
 
 **If the user trusts the Sequencer**, transactions are considered final once the Sequencer sequences it (or Trusted State).
 
-**If the user trust only the L1 state**, then the transaction will be final at the moment it reaches **Virtual State**. This means, once the data is available and the transaction is already on L1.
+**If the user trusts only the L1 state**, then the transaction will be final at the moment it reaches **Virtual State**. This means, once the data is available and the transaction is already on L1.
 
 **In case the user needs to withdraw funds**, he/she needs to wait for the Prover to convert the implicit state to an explicit state. We call this last state the **Consolidated or Verified State**.
 

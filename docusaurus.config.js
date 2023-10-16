@@ -84,6 +84,12 @@ const config = {
             label: 'Start Building',
           },
           {
+            type: 'doc',
+            docId: 'build/zkEVM/quickstart',
+            position: 'left',
+            label: 'zkEVM',
+          },
+          {
             to: 'https://medium.com/astar-network',
             label: 'Medium',
             position: 'left',

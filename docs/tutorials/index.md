@@ -2,7 +2,7 @@
 
 ## Overview
 
-In the following sections you will find hands-on tutorials covering various aspects of Astar Network. 
+In the following sections you can find hands-on tutorials designed to help developers get the most out of Astar Network.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
