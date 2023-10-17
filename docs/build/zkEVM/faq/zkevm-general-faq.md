@@ -88,8 +88,6 @@ Yes, any language that gets compiled to EVM opcode should work with Astar zkEVM.
 
 Additionally, for a software application to interact with the Ethereum blockchain (by reading blockchain data and/or sending transactions to the network), it must connect to an Ethereum node. It works the same way as other nodes such as geth.
 
-Learn how to set up your production zkNode [here](../zk-node/setup-production-node.md).
-
 ### Do you support the JSON-RPC EVM query spec? What are the unsupported queries?
 
 All official queries are supported (`eth_*` endpoints). We are working on support from some "extra official endpoints" such as `debug_*`.
