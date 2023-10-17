@@ -111,6 +111,7 @@ With the following configuration parameters:
 Values of all the Fee Model parameters are listed in the table below.
 TODO All parameters are also retrievable as on-chain values using ..... 
 
+
 | Parameter name                                            | Value on Astar            | Value on Shiden        | 
 | --------------------------------------------------------- |---------------            |---------------        |
 | $base\_fee$                                               | 98 974 000                |
@@ -128,6 +129,7 @@ TODO All parameters are also retrievable as on-chain values using .....
 | $base\_fee\_per\_gas_{min}$                               |0.0000008 ASTR             |               SDN|
 | $base\_fee\_per\_gas_{max}$                               |0.00008 ASTR               |               SDN|
 
+
 The values for the parameters above (weight factor, length factor, initial adjustment factor and initial base fee per gas) are set so that, at the time of implementation, the EVM fee and the Native fee are equal and equal to 0.5 ASTR for an average weight and length transaction with no rent fee.
 
 
@@ -140,11 +142,11 @@ To allow network stakeholders to adjust to the Tokenomics 2.0 fee model, alignem
 The transition phase will start with setting the initial parameters as in the tabele below:
 
 | Parameter name                                            | Value on Astar            | Value on Shiden        | 
-| --------------------------------------------------------- |---------------            |---------------        |
-| $c_0$                                                     | 0.08614819118682882 ASTR           ||
-| $c_{min}$                                                 | 0.08614819118682882                     |                   |
-| $base\_fee\_per\_gas_{0}$                                 |0.000000001 ASTR  |               SDN|
-| $base\_fee\_per\_gas_{min}$                               |0.0000008 ASTR             |               SDN|
+| --------------------------------------------------------- |---------------            |------------------------|
+| $c_0$                                                     | 0.08614819118682882 ASTR  |                     SDN|
+| $c_{min}$                                                 | 0.08614819118682882 ASTR  |                     SDN|
+| $base\_fee\_per\_gas_{0}$                                 |0.000000001 ASTR           |                     SDN|
+| $base\_fee\_per\_gas_{min}$                               |0.0000008 ASTR             |                     SDN|
 
 All other parameters are set to values described in the main table.
 
