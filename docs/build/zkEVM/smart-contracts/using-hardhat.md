@@ -52,7 +52,7 @@ To create the sample project, run `npx hardhat init` in your project folder:
 - **Press** `<ENTER>` to install `hardhat @nomicfoundation/hardhat-toolbox` 
 
 ## Configure Hardhat
-- Open the `hardhat.config.js` file and paste the below code:
+- Open the `hardhat.config.js` file and paste the code below:
 
     ```js
     require("dotenv").config();
@@ -65,8 +65,8 @@ To create the sample project, run `npx hardhat init` in your project folder:
         artifacts: "./src",
     },
     networks: {
-        zkEVM: {
-        url: `https://rpc.public.zkevm-test.net`,
+        zKatana: {
+        url: `https://rpc.zkatana.gelato.digital`,
         accounts: [process.env.ACCOUNT_PRIVATE_KEY],
         },
     },
@@ -111,7 +111,7 @@ uint256 currentCount = 0;
         const deployedContract = await hre.ethers.deployContract("Counter");
         await deployedContract.waitForDeployment();
         console.log(
-            `Counter contract deployed to https://testnet-zkevm.polygonscan.com/address/${deployedContract.target}`
+            `Counter contract deployed to https://zkatana.blockscout.com/address/${deployedContract.target}`
         );
     }
 
@@ -131,13 +131,13 @@ uint256 currentCount = 0;
 ## Deploy Contract
 - Run the deploy script:
     ```bash
-    npx hardhat run scripts/deploy.js --network zkEVM
+    npx hardhat run scripts/deploy.js --network zKatana
     ```
 
     ​Here's an output example:
 
     ```
-    Counter contract deployed to https://testnet-zkevm.polygonscan.com/address/0x5FbDB2315678afecb367f032d93F642f64180aa3
+    Counter contract deployed to https://zkatana.blockscout.com/address/0x8731DC57f9C7e01f5Ba733E7a10692cA540862f8
     ```
 ```
 

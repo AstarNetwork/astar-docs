@@ -49,7 +49,7 @@ Click on the Bridge tab on the left-hand side. Ensure Sepolia is selected as Bri
 Sign the MetaMask transaction. 
 
 :::note
-Once the transaction shows as confirmed on the MetaMask Activity tab, it will take approximately 10-30 minutes for the Astar Portal and MetaMask to update your balance on the zKatana network side.
+Once the transaction shows as confirmed on the MetaMask Activity tab, it will take approximately 6-10 minutes for the Astar Portal and MetaMask to update your balance on the zKatana network side.
 :::
 
 
