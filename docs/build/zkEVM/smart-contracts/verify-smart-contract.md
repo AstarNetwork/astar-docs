@@ -47,7 +47,7 @@ In order to flatten the code using Foundry, the following command can be used:
 forge flatten src/<Contract-Name> -o <Any-Name-For-Flattened-Code>.sol
 ```
 
-With this command, the flattened code gets saved in the `<Any-Name-For-Flattened-Code>.sol` file. Copy the contents of the new `<Any-Name-For-Flattened-Code>.sol` file and paste into the `Enter the Solodity Contract` field in the [explorer](https://testnet-zkevm.polygonscan.com).
+With this command, the flattened code gets saved in the `<Any-Name-For-Flattened-Code>.sol` file. Copy the contents of the new `<Any-Name-For-Flattened-Code>.sol` file and paste into the `Enter the Solodity Contract` field in the [explorer](https://zkatana.blockscout.com/).
 </details>
 
 <details>
