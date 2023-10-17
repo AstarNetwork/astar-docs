@@ -9,10 +9,22 @@ We will explore the basics of creating a Hardhat project with a sample contract 
 
 For the full instruction on how to use Hardhat, please refer to the [official Hardhat documentation](https://hardhat.org/getting-started/).
 
-## Install Hardhat
-To install it, you need to create an npm project by going to an empty folder, running `npm init`, and following its instructions. You can use another package manager, like yarn, but Hardhat recommends you use npm 7 or later, as it makes installing Hardhat plugins simpler.
+## Create New Project
+Start with creating an npm project by going to an empty folder, running `npm init`, and following its instructions. You can use another package manager, like yarn, but Hardhat recommends you use npm 7 or later, as it makes installing Hardhat plugins simpler.
 
-## Initial Setup
+
+## Hardhat Smart Contract
+
+To create the sample project, run `npx hardhat init` in your project folder:
+
+![Hardhat init screen](figures/hardhat-init.png)
+
+- **Press** `<ENTER>` choose javascript, typescript or empty project
+- **Press** `<ENTER>` to set the project root 
+- **Press** `<ENTER>` again to accept addition of `.gitignore`
+- **Press** `<ENTER>` to install `hardhat @nomicfoundation/hardhat-toolbox` 
+
+## Create deployer account
 - Create the `.env` file in your project root folder and add the following line:
 
 ```bash
@@ -39,17 +51,6 @@ ACCOUNT_PRIVATE_KEY='my private key'
 
 Verify that your .gitignore file contains `.env` to prevent your private key from being committed to a public repository.
 :::
-
-## Hardhat Smart Contract
-
-To create the sample project, run `npx hardhat init` in your project folder:
-
-![Hardhat init screen](figures/hardhat-init.png)
-
-- **Press** `<ENTER>` choose javascript, typescript or empty project
-- **Press** `<ENTER>` to set the project root 
-- **Press** `<ENTER>` again to accept addition of `.gitignore`
-- **Press** `<ENTER>` to install `hardhat @nomicfoundation/hardhat-toolbox` 
 
 ## Configure Hardhat
 - Open the `hardhat.config.js` file and paste the code below:
