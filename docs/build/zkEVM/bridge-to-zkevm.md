@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Bridge to Astar zkEVM
 sidebar_label: Bridge to zkEVM
 ---

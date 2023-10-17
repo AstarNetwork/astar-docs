@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Astar zkEVM Faucet
-sidebar_label: zkEVM Faucet
+sidebar_label: Faucet
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

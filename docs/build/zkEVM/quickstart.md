@@ -1,41 +1,46 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Quickstart to Astar zkEVM
 sidebar_label: Quickstart
 ---
 import metamask from '/docs/build/zkEVM/img/metamask-network.png'
+import build from '/docs/build/img/build.png'
 
-![Documentation of all the resources builders need in order to start testing, deploying and interacting with smart contracts on the Astar network](../img/build.png)
+<div style={{textAlign: 'center'}}>
+    <img src={build} style={{width: 1200}} />
+</div>
 
-Astar zkEVM is the zero-knowledge scaling solution that is **fully equivalent to an EVM**. All existing smart contracts, developer toolings and wallets work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs in order to reduce transaction costs and massively increase throughput, all while inheriting the security of Ethereum.
+Astar zkEVM is a zero-knowledge scaling solution for Ethereum that's **fully equivalent to an EVM**. All existing smart contracts, developer tools, and wallets work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs to reduce transaction costs and increase throughput, while inheriting the security of Ethereum.
 
-Building dApps on zkEVM is completely similar to Ethereum. Simply switch to the zkEVM RPC and start building on a network with much higher throughput and lower fees. Astar zkEVM provides a complete EVM-like experience for Developers and Users alike. So you do not need special toolings or new wallets for building or interacting with zkEVM.
+Ethereum developers can work seamlessly on Astar zkEVM. Simply switch to the zkEVM RPC, and start building!
 
 :::info Reminder
-
-You don't need special toolings or Wallets to build or interact with Astar zkEVM.
-
+You don't need special tools or wallets to build or interact with Astar zkEVM.
 :::
 
-Developers will be able to deploy their existing contracts to the zkEVM, and Users can deposit assets from Ethereum and transact off-chain. These transactions are grouped into batches with zero-knowledge proof attesting to the validity of each transaction.
+Developers can deploy their existing contracts to the zkEVM, and Users can deposit assets from Ethereum to transact off-chain in batches, which are ultimately finalized on Ethereum through novel use of zero-knowledge proofs.
 
 ## Connecting to zkEVM
 
-In order to add the **Astar zkEVM** network to your wallet, you will need to enter the following details :
+To add the **Astar zkEVM** network to your wallet manually, enter the following details :
 
 | Network | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------- | ------------------------------- | ---------------- | ---------------- | ----- |
 | zKatana Testnet | `https://rpc.zkatana.gelato.digital` | `1261120` | `https://zkatana.blockscout.com/` | **ETH** |
 | Mainnet | `coming soon...` | `-` | `-` | **ETH** |
 
-The next step is to [bridge your assets](./bridge-to-zkevm.md) from Ethereum &rarr; Astar zkEVM. You can use the Astar's trustless [zKEVM Bridge](https://portal.astar.network) to bridge your assets.
+The next step is to [bridge assets](/docs/build/zkEVM/bridge-to-zkevm.md) from Ethereum &rarr; Astar zkEVM. 
+
+:::important
+Astar's canonical [zkEVM Bridge](https://portal.astar.network) does not inherit any counterparty risk compared to 3rd party bridge services, and is trustless at the protocol level.
+:::
 
 ## Deploying Smart Contracts
 
-The development experience on zkEVM is seamless and identical to Ethereum Virtual Machine. Developers on zkEVM can use their existing code and toolings to deploy on zkEVM with much higher throughput and lower fees.
+The development experience on zkEVM is seamless and identical to the Ethereum Virtual Machine. Developers building on zkEVM can use their existing code and tools to deploy on zkEVM, and dApp users will experience higher transaction throughput and lower fees. Read more about deploying smart contracts on the zkEVM [here.](/docs/build/zkEVM/smart-contracts/)
 
 ## Metamask setup for zKatana Testnet
-If you need to add zKatana testnet to your wallet, use the link at the bottom of the [block explorer](https://zkatana.blockscout.com/), or fill in the details manually:
+To add zKatana testnet to MetaMask, use the link at the bottom of the [block explorer](https://zkatana.blockscout.com/), or fill in the following details manually:
 
 <div style={{textAlign: 'center'}}>
   <img src={metamask} style={{width: 400}} />
@@ -43,7 +48,7 @@ If you need to add zKatana testnet to your wallet, use the link at the bottom of
 
 ## Astar zkEVM Support for Developers
 
-If you are a developer and need help with anything related to the Astar zkEVM network, you can open an issue on [Ethereum StackExchange](https://discord.gg/astarnetwork) and tag it with `Astar` (preferred) or on the [Astar Discord server](https://discord.gg/astarnetwork). 
+Developers that need support can open an issue on [Ethereum StackExchange](https://discord.gg/astarnetwork) and tag it with `Astar` (preferred) or join the [Astar Discord server](https://discord.gg/astarnetwork). 
 
 <details>
 <summary>Ethereum StackExchange</summary>

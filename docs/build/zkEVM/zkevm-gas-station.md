@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: Astar zkEVM Gas Station
-sidebar_label: zkEVM Gas Station
+sidebar_label: Gas Station
 ---
 
 import Tabs from '@theme/Tabs';
