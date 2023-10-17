@@ -4,7 +4,7 @@ title: Verifying Smart Contracts
 sidebar_label: Verify Contracts
 ---
 
-Once a smart contract is deployed to zkEVM, it can be verified in various ways depending on the framework of deployment as well as the complexity of the contract. The aim here is to use examples to illustrate how you can manually verify a deployed smart contract. 
+Once a smart contract is deployed to zKatana testnet, it can be verified in various ways depending on the framework of deployment as well as the complexity of the contract. The aim here is to use examples to illustrate how you can manually verify a deployed smart contract. 
 
 Ensure that your wallet is connected while following this guide. We will use Metamask wallet throughout this tutorial.
 
@@ -14,7 +14,7 @@ After successfully compiling a smart contract, follow the next steps to verify y
 
 1. Copy the **Address** to which the smart contract is deployed. 
 
-2. Navigate to the [zkEVM Explorer](https://testnet-zkevm.polygonscan.com) and paste the contract address into the Search box. This opens a window with a box labelled **Contract Address Details**.
+2. Navigate to the [zKatana Explorer](https://zkatana.blockscout.com/) and paste the contract address into the Search box. This opens a window with a box labelled **Contract Address Details**.
 
 3. Scroll down to the box with tabs labelled - **Transactions**, **Internal Transactions**, **Coin Balance History**, **Logs**, and **Code**.
 
