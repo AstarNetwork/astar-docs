@@ -3,10 +3,8 @@ import introduction from "./img/introduction.png"
 # Introduction
 
 <div style={{textAlign: 'center'}}>
-    <figure>
-        <img src={introduction} style={{width: 1200}} />
-        <figcaption>This section requires a general understanding of programming basics</figcaption>
-    </div>
+    <img src={introduction} style={{width: 1200}} />
+</div>
 
 To make use of this documentation effectively, you should possess a general understanding of programming basics. The programming languages used throughout are mainly Solidity, and JavaScript, for which previous knowledge is not necessary, but would be highly beneficial. 
 
