@@ -10,28 +10,43 @@ To learn how to set up a local Docusaurus install to view this the way it was in
 
 - Create a new branch of astar-docs for your update/addition. 
 
-- Within the new branch, copy and rename this file to something meaningful (ie: *projectname-oracle.md* or *widgetzyx-nft-api.md.* **Do not use spaces**) and move it to the most appropriate section of Astar docs. If you're unsure about where that might be in the end, please submit a PR anyways; we will find a home for it prior to merging. 
+- ***This file can be used as a template for your submission.*** Within the new branch, copy and rename this file to something meaningful (ie: *projectname-oracle.md* or *widgetzyx-nft-api.md.* **Do not use spaces**) and move it to the most appropriate section of Astar docs. If you're unsure about where that might be in the end, please submit a PR anyways; we will find a home for it prior to merging. 
 
-- If your tutorial includes images or screenshots, which are **highly encouraged**, please add them to a new or existing `img` folder located within the same folder as your .md file. Do not use `[!](https://dont.link.images.like.this.com)` to include each image. Instead, link to them using the following:
+
+- If your tutorial includes images or screenshots, which are **highly encouraged**, please add them to a new or existing `img` folder located within the same folder as your .md file.
+
+- **Do not use `[!](https://dont.link.images.like.this.com)` or `[!](./some/relative/path/image.jpg)` to link images.** Instead, use the following method, with absolute paths:
 
     At the top of the .md file add:
 
     ```r
-    import image01 from "./img/image01.png"
-    import image02 from "./img/image02.png"
-    import image03 from "./img/image03.png"
+    import cody from "/docs/learn/defi/img/codytrading.png"
+    import trades from "/docs/learn/defi/img/trades.png"
+    import downbad from "/docs/learn/defi/img/onlyup.png"
     import ...
     ```
 
-    and to reference each image, as one example:
+    And in the body in reference to each image, as one example:
 
     ```r
     <div style={{textAlign: 'center'}}>
-        <img src={image01} style={{width: 600}} />
+        <img src={trades} style={{width: 600}} />
     </div>
     ```
+
+    Here's another example with an image caption:
+
+    ```r
+    <div style={{textAlign: 'center'}}>
+        <figure>
+            <img src={cody} style={{width: 600}} />
+        <figcaption>This is Cody McCodeface, Degen</figcaption>
+        </figure>
+    </div>
+    ```
+
            
-- When your document or tutorial is finished, submit a pull request to the [astar-docs](https://github.com/AstarNetwork/astar-docs) repo on Github. Thank you!
+- When your document or tutorial is finished, submit a pull request to the [astar-docs](https://github.com/AstarNetwork/astar-docs) repo on Github and tag it with the `documentation` label. Thank you!
 
 :::
 
@@ -40,9 +55,9 @@ To learn how to set up a local Docusaurus install to view this the way it was in
 Write a short description in just a few paragraphs about your solution and how Astar developers can leverage it. 
 
 #### Example: 
-GraphQL is a query language for APIs and a runtime for executing those queries with your existing data. It provides an efficient and powerful alternative to REST and offers significant advantages when dealing with complex data models.
+BlockAppleQL is a query language for APPLECHAINS and a runtime for validating those apple transactions within your existing fruit ledger. It offers a cryptographically secure and transparent alternative to traditional fruit databases, and excels when dealing with complex decentralized orchards.
 
-GraphQL allows clients to define the structure of the responses they receive. This means that instead of receiving a fixed data structure from a server, clients can request specific data they need, leading to more efficient data loading and a reduction in data over-fetching.
+BlockAppleQL allows users to define the ripeness of the apples they transact. Instead of receiving a generic apple from the global orchard, users can request specific ripeness levels, leading to more consistent fruit experiences and a reduction in unripe or overripe transactions.
 
 ## Prerequisites
 
