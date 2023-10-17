@@ -5,31 +5,30 @@ sidebar_position: 12
 
 Astar Network's tokenomics has been revised to best serve the needs of network participants, from users and builders to enterprise partners.
 
-With Tokenomics 2.0, you can expect a sustainable token inflation allocation structure and network fees as well as a lower inflation rate.
+Tokenomics 2.0 introduce a sustainable token allocation structure and network fees as well as a lower inflation rate.
 
 :::info
 Astar Network is currently in a phased transition to a Tokenomics 2.0 model. The overview of Tokenomics 2.0 plans and discussions on the topic can be found on [Astar Forum](https://forum.astar.network/t/astar-tokenomics-2-0-a-dynamically-adjusted-inflation/4924)
 
-Content to this page will be added as changes get enacted (go live).
+Content to this section will be added as changes get enacted (go live).
 
 Overview of current Astar Network's Tokenomics are documented **[here](../tokenomics)**
 
-
-The outline of the phased approach to new Tokenomics:
+The outline of the phased approach to Tokenomics 2.0:
 - Phase 0 - Forum Discussion: 
     - ongoing throughtout all phases
 - Phase 1 - Fee Ajdustments:
-    - live on Shibuya since block XXX
-    - live on Shiden since block XXX
-    - live on Astar since block XXX
-- Phase 2 - Hybrid Inflation Model
-    - parameters defined, implementation in progress
-- Phase 3 - New Inflation Model
-    - parameters defined, implementation in progress
-:::
-
-:::note
-This section includes advanced content.
+    - Shibuya testnet - live since October 2023
+    - Shiden - parameters defined, implementation in progress
+    - Astar - parameters defined, implementation in progress
+- Phase 2 - Hybrid Inflation Model (Reduction of collators' reward and treasury reward, reduction of inflation)
+    - Shibuya testnet - parameters defined, implementation in progress
+    - Shiden - parameters defined, implementation in progress
+    - Astar - parameters defined, implementation in progress
+- Phase 3 - Full Inflation Model (activation of dAppStaking v3 which affects block reward calculation, further reduction of inflation)
+    - Shibuya testnet - parameters defined, implementation in progress
+    - Shiden - parameters defined, implementation in progress
+    - Astar - parameters defined, implementation in progress
 :::
 
 :::tip

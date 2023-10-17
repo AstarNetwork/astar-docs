@@ -7,11 +7,9 @@ import Figure from "/src/components/figure"
 
 # Fee Model
 
-Fees on Astar comprise of Native (Substrate) fees and EVM fees. Native (Substrate) and EVM transaction fees are calculated in inherently different ways, and in Astar Network's legacy tokenomics the cost of similar transactions differed between the two systems.
+Fees on Astar comprise of Native (Substrate) and EVM fees. Native and EVM transaction fees are calculated in different ways. Tokenomics 2.0 aligns the fees calculation between the two systems so that transactions consuming the same amount of block resources are priced roughly the same regardless of transaction type (Native or EVM).
 
-Tokenomics 2.0 aligns the fees calculation between the two systems so that transactions consuming the same amount of block resources are priced roughly the same if executed as a Native or as an Ethereum transaction. 
-
-Remainter of the section describes Tokenomics 2.0 fee model calulation details as well as the way the alignment of the fees between the two systems is gradually introduced over a period of time.
+This section describes Tokenomics 2.0 fee model calulation details.
 
 ## Native Fees
 
@@ -24,8 +22,6 @@ $$
 native\_fee &= base\_fee + c * weight\_fee + length\_fee + rent\_fee + tip
 \end{align}
 $$
-
-**<div style={{textAlign: 'center'}}>Native fee calculation on Astar Network</div>**
 
 where following applies:
 
@@ -60,12 +56,11 @@ s &= \frac{block\_weight}{max\_block\_normal\_dispatch\_weight}
 $$
 
 
-With several configuration parameters:
+with several configuration parameters:
 
 - $s*$ - ideal block fullnes; desired long term average block fullness.
 - $v$ - variability factor; controls how fast the adjustment factor changes. If value is small, it will adjust slowly, and if it is large, it will adjust quickly.
 - $block\_weight$ - total weight of the previous block.
-- $c_{0}$ - initial value of fee multiplier $c$
 - $c_{min}$ - the smallest possible value of fee multiplier $c$
 - $c_{max}$ - the largest possible value of fee multiplier $c$
 
@@ -99,69 +94,32 @@ base\_fee\_per\_gas_{n} &= base\_fee\_per\_gas_{n-1} * (1 + adjustment + \frac{a
 \end{align}
 $$
 
-With the following configuration parameters:
-- $base\_fee\_per\_gas_{0}$ - initial value of base\_fee\_per\_gas
+with the following configuration parameters:
 - $base\_fee\_per\_gas_{min}$ - the smallest possible value of base\_fee\_per\_gas.
 - $base\_fee\_per\_gas_{max}$ - the largest possible value of base\_fee\_per\_gas.
-
-**<div style={{textAlign: 'center'}}>EVM fee calculation on Astar Network</div>**
 
 ## Fee Model Parameters
 
 Values of all the Fee Model parameters are listed in the table below.
-TODO All parameters are also retrievable as on-chain values using ..... 
+
+| Parameter name                                            | Value on Shibuya          | Value on Shiden | Value on Astar | 
+| --------------------------------------------------------- |------------------         |---|- -|
+| $base\_fee$                                               | 98,974,000                |   |   |
+| $weight_{factor}$ (per byte)                              | 0.030855 SBY              |   |   |
+| $length_{factor}$ (per byte)                              | 0.0000235 SBY             |   |   |
+| $max\_block\_normal\_dispatch\_weight$                    | 375,000,000,000           |   |   |
+| $s*$                                                      | 0.25                      |   |   |
+| $v$                                                       | 0.000015                  |   |   |
+| $c_{min}$                                                 | 0.1                       |   |   |
+| $c_{max}$                                                 | 10                        |   |   |
+| $price\_per\_item$                                        | 0.00004 SBY               |   |   |
+| $price\_per\_byte$                                        | 0.000001 SBY              |   |   |
+| $base\_fee\_per\_gas_{min}$                               | 0.0000008 SBY             |   |   |
+| $base\_fee\_per\_gas_{max}$                               | 0.00008 SBY               |   |   |
 
 
-| Parameter name                                            | Value on Astar            | Value on Shiden        | 
-| --------------------------------------------------------- |---------------            |---------------        |
-| $base\_fee$                                               | 98 974 000                |
-| $weight_{factor}$                                         | 0.030854941570478255 ASTR |               SDN|
-| $length_{factor}$                                         | 0.00002350852691084 ASTR  |               SDN|
-| $max\_block\_normal\_dispatch\_weight$                    | 375 000 000 000           |                   |
-| $s*$                                                      | 0.25                      |               0.25 |
-| $v$                                                       | 0.000015                  |                   |
-| $c_0$                                                     | $\frac{98\_974\_000}{525\_000\_000}$           ||
-| $c_{min}$                                                 | 0.1                       |                   |
-| $c_{max}$                                                 | 10                        |                   |
-| $price\_per\_item$                                        | 0.4 ASTR                  |               SDN|
-| $price\_per\_byte$                                        | 0.002 ASTR                |               SDN|
-| $base\_fee\_per\_gas_{0}$                                 |0.000001469282931928 ASTR  |               SDN|
-| $base\_fee\_per\_gas_{min}$                               |0.0000008 ASTR             |               SDN|
-| $base\_fee\_per\_gas_{max}$                               |0.00008 ASTR               |               SDN|
-
-
-The values for the parameters above (weight factor, length factor, initial adjustment factor and initial base fee per gas) are set so that, at the time of implementation, the EVM fee and the Native fee are equal and equal to 0.5 ASTR for an average weight and length transaction with no rent fee.
-
+The values for the parameters above are set so that EVM fee and the Native fee are equal and equal to 0.5 ASTR for an average weight and length transaction with no rent fee.
 
 ## Fee Alignment Transition Period
 
-As mentioned above, in legacy Astar Network tokenomics fee model there is a significant gap between the value of fees for similar transactions between Native and EVM systems.
- 
-To allow network stakeholders to adjust to the Tokenomics 2.0 fee model, alignemnt wont happen instantly but gradually over a period of ~80 days.
-
-The transition phase will start with setting the initial parameters as in the tabele below:
-
-| Parameter name                                            | Value on Astar            | Value on Shiden        | 
-| --------------------------------------------------------- |---------------            |------------------------|
-| $c_0$                                                     | 0.08614819118682882 ASTR  |                     SDN|
-| $c_{min}$                                                 | 0.08614819118682882 ASTR  |                     SDN|
-| $base\_fee\_per\_gas_{0}$                                 |0.000000001 ASTR           |                     SDN|
-| $base\_fee\_per\_gas_{min}$                               |0.0000008 ASTR             |                     SDN|
-
-All other parameters are set to values described in the main table.
-
-A new factor $m$ is introduced with the value $m$= 1 710 000 and inserted into the dynamic formula for the base\_fee\_per\_gas:
-
-$$
-\begin{align}
-base\_fee\_per\_gas_{n} &= base\_fee\_per\_gas_{n-1} * (1 + adjustment + m * \frac{adjustment^2}{2})
-\\
-\end{align}
-$$
-
-The following graph shows the expected movement of EVM fee and Native fee for average transaction in the first 80 days after the launch (the graph is based on the assumption that block fullness will behave similarly as it did during the data gathering period for the Tokenomics 2.0 modeling TODO - which is that):
-
-<Figure caption="Fee Alignment Transition Period " src={require('./img/tokenomics-fee-alignment.png').default } width="65%" />
-
-
-After the EVM fee and Native fee reach the desired level, the $m$ factor will be removed from the formula and the $base\_fee\_per\_gas_{min}$ and $c_{min}$ will be set to the values from the main table.
+Legacy Astar Network tokenomics fee model was not aligned between two systems adn there was a gap between the value of fees for similar transactions between Native and EVM systems. To allow network stakeholders to adjust to the Tokenomics 2.0 fee model, alignemnt of fees betwen the two systems will be gradually introduced over a period of approximately 3 months once the change is enacted (live) on the network.
