@@ -1,13 +1,13 @@
-import Figure from "/src/components/figure"
-
 ---
 sidebar_position: 2
 ---
+
+import Figure from "/src/components/figure"
+
+
 # Fee Model
 
-Fees on Astar comprise of Native (Substrate) fees and EVM fees.
-
-Native (Substrate) and EVM transaction fees are calculated in inherently different ways, and in Astar Network's legacy tokenomics the cost of similar transactions differed between the two systems.
+Fees on Astar comprise of Native (Substrate) fees and EVM fees. Native (Substrate) and EVM transaction fees are calculated in inherently different ways, and in Astar Network's legacy tokenomics the cost of similar transactions differed between the two systems.
 
 Tokenomics 2.0 aligns the fees calculation between the two systems so that transactions consuming the same amount of block resources are priced roughly the same if executed as a Native or as an Ethereum transaction. 
 
