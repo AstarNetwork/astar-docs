@@ -35,12 +35,11 @@ rent\_fee &= storage\_items*price\_per\_item + storage\_bytes*price\_per\_byte
 \end{align}
 $$
 
-
 - $base\_fee$ - a fixed fee that needs to be paid for every transaction included in the block.
-- $weight\_fee$ - is the fee related to the weight of the transaction. More details about the weight of native transactions and accompanying fees can be found the [in the Build section](/docs/build/wasm/transaction-fees#weight)
+- $weight\_fee$ - is the fee related to the weight of the transaction. More details about the weight of native transactions and accompanying fees can be found the [in the Build section](/docs/build/wasm/transaction-fees#weight).
 - $c$ - fee multiplier; if network utilization is above ideal, `c` factor will increase, forcing users to pay more.
 - $length\_fee$ - this is part of the fee related to the transaction length (number of bytes).
-- $rent\_fee$ - deposit fee for storing data on chain. Detailed explanation of rent fee calculation in case of Wasm tranactions can be found under the [in the Build section](/docs/build/wasm/transaction-fees#storage-rent)
+- $rent\_fee$ - deposit fee for storing data on chain. Detailed explanation of rent fee calculation in case of Wasm tranactions can be found under the [in the Build section](/docs/build/wasm/transaction-fees#storage-rent).
 - $tip$ - extra payment transaction submitter pays to ensure their transaction gets included faster into a block.
 
 Native fees are inherently dynamic using the fee multiplies `c` which is calculated in each block using the following formulas:
@@ -61,8 +60,8 @@ with several configuration parameters:
 - $s*$ - ideal block fullnes; desired long term average block fullness.
 - $v$ - variability factor; controls how fast the adjustment factor changes. If value is small, it will adjust slowly, and if it is large, it will adjust quickly.
 - $block\_weight$ - total weight of the previous block.
-- $c_{min}$ - the smallest possible value of fee multiplier $c$
-- $c_{max}$ - the largest possible value of fee multiplier $c$
+- $c_{min}$ - the smallest possible value of fee multiplier $c$.
+- $c_{max}$ - the largest possible value of fee multiplier $c$.
 
 and using $s$ to describe current block fullness:
 - If $s > s*$, meaning block fullness if **more** than the ideal, the adjustment will be a positive number.
