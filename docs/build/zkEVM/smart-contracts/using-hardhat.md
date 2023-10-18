@@ -137,8 +137,6 @@ uint256 currentCount = 0;
 
     ​Here's an output example:
 
-    ```
+    ```bash
     Counter contract deployed to https://zkatana.blockscout.com/address/0x8731DC57f9C7e01f5Ba733E7a10692cA540862f8
     ```
-```
-
