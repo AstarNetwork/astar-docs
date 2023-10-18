@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-title: Quickstart to Astar zkEVM
+sidebar_position: 1
+title: Astar zkEVM Quickstart Guide
 sidebar_label: Quickstart
 ---
 import metamask from '/docs/build/zkEVM/img/metamask-network.png'
@@ -12,7 +12,7 @@ import build from '/docs/build/img/build.png'
 
 Astar zkEVM is a zero-knowledge scaling solution for Ethereum that's **fully equivalent to an EVM**. All existing smart contracts, developer tools, and wallets work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs to reduce transaction costs and increase throughput, while inheriting the security of Ethereum.
 
-Ethereum developers can work seamlessly on Astar zkEVM. Simply switch to the zkEVM RPC, and start building!
+Ethereum developers are right at home on Astar zkEVM. Simply switch to the zkEVM RPC, and start building!
 
 :::info Reminder
 You don't need special tools or wallets to build or interact with Astar zkEVM.
