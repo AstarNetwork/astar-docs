@@ -6,7 +6,7 @@ import introduction from "/docs/build/img/evm.png"
     <img src={introduction} style={{width: 1200}} />
 </div>
 
-To make use of this documentation effectively, you should possess a general understanding of programming basics. The programming languages used throughout are mainly Solidity, and JavaScript, for which previous knowledge is not necessary, but would be highly beneficial. 
+To make use of this documentation effectively, you should possess a general understanding of programming basics. The programming languages used throughout are mainly Solidity and JavaScript, for which previous knowledge is not necessary, but would be highly beneficial. 
 
 ## What is Astar zkEVM?
 
@@ -22,7 +22,7 @@ Astar zkEVM is an Ethereum Layer-2 scaling solution leveraging Polygon's Chain D
 
 ## Section Overview
 
-The following sections walk through the process of setting up a development environment and introduces common tools and partner services useful for powering highly scalable dApps and seamless user onboarding experiences on the Astar zkEVM.
+The following sections walk through the process of setting up a development environment and introduce common tools and partner services useful for powering highly scalable dApps and seamless user onboarding experiences on the Astar zkEVM.
 
 
 ```mdx-code-block
