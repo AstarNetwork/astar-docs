@@ -18,7 +18,7 @@ import walletselect from '/docs/build/zkEVM/img/wallet-select.jpg'
 Here you will find information about how to bridge assets to the Astar zkEVM. Presently, there are two options for bridging assets to the zkEVM: 
 
 1. Ethereum L1 to Astar zkEVM -> Bridged ETH is the native token required for testing and deployment of dApps on the Astar zkEVM, so before using the network, developers need to bridge some ETH from Layer 1 to Layer 2. Accessible through the Astar Portal, which can take approximately 10-30 minutes, depending on network usage.
-2. Astar Parachain to Astar zkZVM -> A 3rd-party asset bridge or message network facilitating locking and minting of synthetic (wrapped) assets between Astar Substrate EVM and Astar zkEVM. See the [integrations section](/docs/build/zkEVM/integrations/bridges-relays/) for more information about how to use 3rd-party bridge services and compatible assets.
+2. Astar Parachain to Astar zkEVM -> A 3rd-party asset bridge or message network facilitating locking and minting of synthetic (wrapped) assets between Astar Substrate EVM and Astar zkEVM. See the [integrations section](/docs/build/zkEVM/integrations/bridges-relays/) for more information about how to use 3rd-party bridge services and compatible assets.
 
 ### Transfer ETH using the Astar Portal
 
