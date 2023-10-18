@@ -3,10 +3,18 @@ sidebar_position: 4
 title: Astar zkEVM Faucet
 sidebar_label: Faucet
 ---
-
+import sepolia from '/docs/build/zkEVM/img/metamask-sepolia-select.png'
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Overview
+## Connect MetaMask to Sepolia Testnet
+
+Open MetaMask and click on the network list (top left corner). Toggle `Show test networks` and select `Sepolia`
+
+<div style={{textAlign: 'center'}}>
+  <img src={sepolia} style={{width: 400}} />
+  </div>
+
+## Faucets
 
 **Faucet** is a tool provided to obtain Testnet tokens. 
 

@@ -48,7 +48,7 @@ To add zKatana testnet to MetaMask, use the link at the bottom of the [block exp
 
 ## Astar zkEVM Support for Developers
 
-Developers requiring support can open an issue on [Ethereum StackExchange](https://discord.gg/astarnetwork) and tag it with `Astar` (preferred) or join the [Astar Discord server](https://discord.gg/astarnetwork). 
+Developers requiring support can open an issue on [Ethereum StackExchange](https://ethereum.stackexchange.com/) and tag it with `Astar` (preferred) or join the [Astar Discord server](https://discord.gg/astarnetwork). 
 
 <details>
 <summary>Ethereum StackExchange</summary>
@@ -67,6 +67,6 @@ Developers requiring support can open an issue on [Ethereum StackExchange](https
 
 2. Accept the invite.
 3. Take the **Developer** role under **#roles**.
-4. Navigate to the **Builder/#zkevm-support** channel.
+4. Navigate to the **Builder/#zkevm-learning** channel.
 
 </details>
