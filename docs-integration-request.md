@@ -1,5 +1,5 @@
 ---
-title: Docs Integration Request Form
+title: Your Project Title
 ---
 
 # Your Project Name
