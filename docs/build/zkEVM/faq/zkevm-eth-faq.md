@@ -16,7 +16,7 @@ The ultimate goal is not **compatibility**. The ultimate goal is **equivalence**
 
 1. **Development teams don't have to make changes to their code**, which could introduce security vulnerabilities.
 2. **No code changes are needed**. You don't need additional audits, which saves time and money. 
-3. **zkEVM ultimately benefits from the security and decentralization of Ethereum**, since transactions are still finalized on Ethereum.
+3. **zkEVM ultimately benefits from the security and decentralization of Ethereum**, since transactions are finalized on Ethereum.
 4. Astar zkEVM **benefits from the already vibrant and active Ethereum community**.
 5. Allows for **fast user onboarding**, since dApps built on Ethereum are already compatible.
 

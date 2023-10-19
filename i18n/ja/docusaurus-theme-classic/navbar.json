@@ -18,5 +18,13 @@
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
+  },
+  "logo.alt": {
+    "message": "Astar",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Start Building": {
+    "message": "Start Building",
+    "description": "Navbar item with label Start Building"
   }
 }

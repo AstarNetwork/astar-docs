@@ -27,11 +27,11 @@ In the Shiden chopsticks [configs file](https://github.com/AcalaNetwork/chopstic
 
 Let's transfer some **KSM** from Kusama to Shiden using Alice.
 
-This will be an example of VMP protocol usage or DMP to be more specific. We will make use of the `limited_reserve_transfer_asset` functionality. This consists of moving assets from one blockchain to another blockchain via an intermediary *Sovereign* account. In the process, origin chain assets won’t be destroyed, instead, the *Sovereign* will hold them, while the target chain mints wrapped versions, and deposits them to the target address.
+This will be an example of VMP protocol usage or DMP to be more specific. We will make use of the `reserve_transfer_asset` functionality. This consists of moving assets from one blockchain to another blockchain via an intermediary *Sovereign* account. In the process, origin chain assets won’t be destroyed, instead, the *Sovereign* will hold them, while the target chain mints wrapped versions, and deposits them to the target address.
 
 The *Sovereign* account ensures that the same assets cannot be used simultaneously on both chains. It also guarantees that the wrapped assets are interchangeable with the assets on the origin chain.
 
-Alice wants to send some tokens to herself on Shiden Network, so she prepares a `limited_reserve_transfer_asset` call on the Relay Chain. The parameters look like this:
+Alice wants to send some tokens to herself on Shiden Network, so she prepares a `reserve_transfer_asset` call on the Relay Chain. The parameters look like this:
 
 ![XCM message to send KSM from Kusama to Shiden via reserveAssetTransfer](img/2.png)
 
