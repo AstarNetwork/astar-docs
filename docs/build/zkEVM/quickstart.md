@@ -3,11 +3,13 @@ sidebar_position: 1
 title: Astar zkEVM Quickstart Guide
 sidebar_label: Quickstart
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import metamask from '/docs/build/zkEVM/img/metamask-network.png'
-import build from '/docs/build/img/build.png'
+import zkHeader from '/docs/build/img/zkHeader.png'
 
 <div style={{textAlign: 'center'}}>
-    <img src={build} style={{width: 1200}} />
+    <img src={zkHeader} style={{width: 1200}} />
 </div>
 
 Astar zkEVM is a zero-knowledge scaling solution for Ethereum that offers an **EVM-equivalent environment** on which existing EVM smart contracts, developer tools, and wallets can work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs to reduce transaction costs and increase throughput, while inheriting the security of Ethereum.
@@ -23,11 +25,22 @@ Developers can deploy existing contracts from other EVM chains to the zkEVM, and
 ## Connecting to zkEVM
 
 To add the **Astar zkEVM** network to your wallet manually, enter the following details :
+<Tabs>
+<TabItem value="testnet" label="zKatana Testnet" default>
 
-| Network | RPC URL | ChainID | Block Explorer URL | Currency |
-| ------- | ------------------------------- | ---------------- | ---------------- | ----- |
-| zKatana Testnet | `https://rpc.zkatana.gelato.digital` | `1261120` | `https://zkatana.blockscout.com/` | **ETH** |
-| Mainnet | `coming soon...` | `-` | `-` | **ETH** |
+| RPC URL | ChainID | Block Explorer URL | Currency |
+| ------------------------------- | ---------------- | ---------------- | ----- |
+| `https://rpc.zkatana.gelato.digital` | `1261120` | [https://zkatana.blockscout.com](https://zkatana.blockscout.com) | **ETH** |
+| `https://rpc.startale.com/zkatana` | `1261120` | [https://zkatana.blockscout.com](https://zkatana.blockscout.com) | **ETH** |
+</TabItem>
+
+<TabItem value="mainnet" label="Astar zkEVM Mainnet" disabled>
+
+| RPC URL | ChainID | Block Explorer URL | Currency |
+| ------------------------------- | ---------------- | ---------------- | ----- |
+| `coming soon...` | `-` | `-` | **ETH** |
+</TabItem>
+</Tabs>
 
 The next step is to [bridge assets](/docs/build/zkEVM/bridge-to-zkevm.md) from Ethereum &rarr; Astar zkEVM. 
 
