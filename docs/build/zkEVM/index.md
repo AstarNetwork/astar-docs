@@ -1,4 +1,4 @@
-import introduction from "/docs/build/img/evm.png" 
+import introduction from "/docs/build/img/buildZkEvm.png" 
 
 # Build on Astar zkEVM
 
