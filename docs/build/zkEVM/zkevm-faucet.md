@@ -6,6 +6,9 @@ sidebar_label: Faucet
 import sepolia from '/docs/build/zkEVM/img/metamask-sepolia-select.png'
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+## Overview
+There is no faucet to directly obtain zKatana testnet ETH. You can use the [Astar Bridge](./bridge-to-zkevm.md) to bridge your Sepolia ETH to zKatana testnet.
+
 ## Connect MetaMask to Sepolia Testnet
 
 Open MetaMask and click on the network list (top left corner). Toggle `Show test networks` and select `Sepolia`
