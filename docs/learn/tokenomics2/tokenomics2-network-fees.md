@@ -7,7 +7,19 @@ import Figure from "/src/components/figure"
 
 # Fee Model
 
-Fees on Astar comprise of Native (Substrate) and EVM fees. Native and EVM transaction fees are calculated in different ways. Tokenomics 2.0 aligns the fees calculation between the two systems so that transactions consuming the same amount of block resources are priced roughly the same regardless of transaction type (Native or EVM).
+Each block is a limited resource - it can only fit a limited amount of transactions. This is an oversimplification, but the point is that every transaction included in the block consumes a portion of the block’s resources.
+
+Astar is a parachain in the Polkadot ecosystem, which relies on the shared security the Polkadot relay chain provides. However, it comes at the cost of having certain limitations placed on block resources. Most readers should know that a block is produced on Astar every 12 seconds - a limitation imposed by Polkadot. Only 0.5 out of those 12 seconds account for the time required to **execute** the block. This means it takes **0.5 seconds** of execution time on some CPU to execute the block logic. This is the first limiting resource - usually called `ref time` (time required to execute on the reference machine).
+
+As a simple example - consider a token transferred from **Alice** to **Bob**. If such a transaction consumes **0.001 seconds** of execution time, executing two such transactions in a single block would consume **0.002 seconds**. Calling a smart contract, e.g., a DEX swap, is much more resource intensive and may, for example, consume **0.01 seconds, or 100x that of a simple transfer from one account to another**.
+
+The other limiting factor is the __Proof of Validity__ (PoV) size. Since Polkadot validators provide security by validating blocks authored by parachain collators, they need access to the data required to validate the block. Expanding on the previous example with **Alice** and **Bob**, Astar would need to provide Polkadot validators with information about how many initial tokens ****Alice** and **Bob** had and the transaction itself. This is (almost) enough data for validators to work with, but it is strictly limited to only **5 MB (megabytes)** per block.
+
+In summary, there are two main factors limiting block production: `ref time` and `PoV size`, which taken all together, are collectively referred to as `weight`, an important concept when calculating transaction fees.
+
+ <Figure caption="Block Consumption" src={require('/docs/learn/tokenomics2/img/Astar-Block-Consumption.jpeg').default } width="100%" /> 
+
+Transaction Fees on Astar comprise of Native (Substrate) and EVM fees. Native and EVM transaction fees are calculated in different ways. Tokenomics 2.0 aligns the fees calculation between the two systems so that transactions consuming the same amount of block resources are priced roughly the same regardless of transaction type (Native or EVM).
 
 This section describes Tokenomics 2.0 fee model calulation details.
 
@@ -36,8 +48,8 @@ rent\_fee &= storage\_items*price\_per\_item + storage\_bytes*price\_per\_byte
 $$
 
 - $base\_fee$ - a fixed fee that needs to be paid for every transaction included in the block.
-- $weight\_fee$ - is the fee related to the weight of the transaction. More details about the weight of native transactions and accompanying fees can be found the [in the Build section](/docs/build/wasm/transaction-fees#weight).
-- $c$ - fee multiplier; if network utilization is above ideal, `c` factor will increase, forcing users to pay more.
+- $weight\_fee$ - is the fee related to the weight of the transaction.
+- $c$ - fee multiplier; if network utilization is above ideal, `c` factor will increase, forcing users to pay more. And vice-versa, when network congestion is low, fee multiplier will decrease.
 - $length\_fee$ - this is part of the fee related to the transaction length (number of bytes).
 - $rent\_fee$ - deposit fee for storing data on chain. Detailed explanation of rent fee calculation in case of Wasm tranactions can be found under the [in the Build section](/docs/build/wasm/transaction-fees#storage-rent).
 - $tip$ - extra payment transaction submitter pays to ensure their transaction gets included faster into a block.
@@ -103,7 +115,7 @@ Values of all the Fee Model parameters are listed in the table below.
 
 | Parameter name                                            | Value on Shibuya          | Value on Shiden | Value on Astar | 
 | --------------------------------------------------------- |------------------         |---|- -|
-| $base\_fee$                                               | 98,974,000                |   |   |
+| $base\_fee$                                               | 0.00000000098974 SBY      |   |   |
 | $weight_{factor}$ (per byte)                              | 0.030855 SBY              |   |   |
 | $length_{factor}$ (per byte)                              | 0.0000235 SBY             |   |   |
 | $max\_block\_normal\_dispatch\_weight$                    | 375,000,000,000           |   |   |

@@ -16,9 +16,9 @@ Overview of current Astar Network's Tokenomics are documented **[here](../tokeno
 
 The outline of the phased approach to Tokenomics 2.0:
 - Phase 0 - Forum Discussion: 
-    - ongoing throughtout all phases
+    - ✅ ongoing throughtout all phases
 - Phase 1 - Fee Ajdustments:
-    - Shibuya testnet - live since October 2023
+    - ✅ Shibuya testnet - live since October 2023
     - Shiden - parameters defined, implementation in progress
     - Astar - parameters defined, implementation in progress
 - Phase 2 - Hybrid Inflation Model (Reduction of collators' reward and treasury reward, reduction of inflation)
@@ -32,7 +32,7 @@ The outline of the phased approach to Tokenomics 2.0:
 :::
 
 :::tip
-Astar and Shiden share the same economic model, however configuration differences exist. Following chapters only focus on Astar and ASTR but also apply to Shiden and its SDN token.
+Astar, Shiden and Shibuya share the same economic model, however configuration differences exist. Following chapters focus on Astar (ASTR token) but also apply to Shiden (SDN token) and Shibuya (SBY token).
 :::
 
 
