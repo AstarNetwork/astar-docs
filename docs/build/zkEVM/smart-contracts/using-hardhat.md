@@ -3,6 +3,8 @@ sidebar_position: 3
 title: Deploy Smart Contracts Using Hardhat
 sidebar_label: Deploy Using Hardhat
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 Hardhat is a popular smart contract development frameworks. In this tutorial, we will be using Hardhat to deploy a simple Counter smart contract to the Astar zkEVM Testnet.
 We will explore the basics of creating a Hardhat project with a sample contract and a script to deploy it.
@@ -55,24 +57,57 @@ Verify that your .gitignore file contains `.env` to prevent your private key fro
 ## Configure Hardhat
 - Open the `hardhat.config.js` file and paste the code below:
 
-    ```js
+<Tabs>
+<TabItem value="javascript" label="Javascript" default>
+
+```js
     require("dotenv").config();
     require("@nomicfoundation/hardhat-toolbox");
 
-    /** @type import('hardhat/config').HardhatUserConfig */
     module.exports = {
-    solidity: "0.8.19",
-    paths: {
-        artifacts: "./src",
-    },
-    networks: {
-        zKatana: {
-        url: `https://rpc.zkatana.gelato.digital`,
-        accounts: [process.env.ACCOUNT_PRIVATE_KEY],
+        solidity: "0.8.19",
+        paths: {
+            artifacts: "./src",
         },
-    },
+        networks: {
+            zKatana: {
+            url: `https://rpc.zkatana.gelato.digital`,
+            accounts: [process.env.ACCOUNT_PRIVATE_KEY],
+            },
+        },
     };
-    ```
+```
+</TabItem>
+<TabItem value="typescript" label="Typescript" >
+
+```js
+    import { HardhatUserConfig } from "hardhat/config";
+    import "@nomicfoundation/hardhat-toolbox";
+    import * as dotenv from "dotenv";
+
+    dotenv.config({ path: __dirname + "/.env" });
+    const ACCOUNT_PRIVATE_KEY = process.env.PRIVATE_KEY || "";
+    console.log("PrivateKey set:", !!ACCOUNT_PRIVATE_KEY)
+
+    const config: HardhatUserConfig = {
+        solidity: "0.8.19",
+        paths: {
+        artifacts: "./src",
+        },
+        networks: {
+            zKatana: {
+            url: `https://rpc.zkatana.gelato.digital`,
+            accounts: [ACCOUNT_PRIVATE_KEY]
+            },
+        },
+    };
+
+    export default config;
+```
+
+</TabItem>
+</Tabs>
+
 ## Write Smart Contract
 :::info
 **Note:** The existing smart contract code that comes with the sample project is a `Lock.sol` contract. Feel free to delete it or leave it.
