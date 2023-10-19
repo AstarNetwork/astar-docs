@@ -3,6 +3,11 @@ sidebar_position: 1
 title: Setup Local zkNode
 sidebar_label: Setup Local zkNode
 ---
+
+:::warning
+Due to an open [issue](https://github.com/ethereum/go-ethereum/issues/27274) you might have problem running local node.
+:::
+
 It's crucial that developers can thoroughly test the network for a developing blockchain technology like **Astar zkEVM** without putting users or themselves at unnecessary risk. Developers should be able to test their smart contracts, experiment with new code, and play around with the network on their local machines.
 
 Astar zkEVM has a local development environment setup for this reason. This tutorial will help you create a local single-node zkEVM blockchain with no connections to external peers. It only exists on your local machine.
