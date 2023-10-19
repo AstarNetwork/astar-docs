@@ -19,8 +19,20 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         <Translate>
-          Find all the resources you need in order to start testing, deploying,
-          and interacting with smart contracts on the network.
+          Find all the resources you need to start testing, deploying,
+          and interacting with smart contracts on Astar networks.
+        </Translate>
+      </>
+    ),
+  },
+  {
+    title: <Translate>Build on Astar zkEVM</Translate>,
+    link: '/docs/build/zkEVM',
+    iconClass: 'tool',
+    description: (
+      <>
+        <Translate>
+          Jump right into building on Astar zkEVM the Layer 2 scaling solution for Ethereum, powered by Polygon CDK.
         </Translate>
       </>
     ),

@@ -14,28 +14,28 @@ sidebar_position: 1
 
 Through Acurast developers can arbitrarly fetch data from public or permissioned APIs for the "Oracle" use case such as price feeds for DeFi platforms through a decentralized execution layer of off-chain workers. These [Processors](https://docs.acurast.com/acurast-processors), hosted by individuals, provide the resources of their Trusted Execution Environment that can be utilized to run computation yielding a verifiable output directly on chain. Developers can use the [Acurast Console](https://console.acurast.com/) to create new request and to get access to these interoperability resources.
 
-Acurast supports Astar's **WASM** and **EVM** environments. Contract Examples address can be found below:
+Acurast supports Astar's **Wasm** and **EVM** environments. Contract Examples address can be found below:
 
 ### Astar Destination Example
 
-WASM Smart Contract: b2o6ENagNWAxQT9f9yHFxfVMSpJA7kK6ouMhNN6veKXi3jw
+Wasm Smart Contract: b2o6ENagNWAxQT9f9yHFxfVMSpJA7kK6ouMhNN6veKXi3jw
 
 ### Shiden Destination
 
-WASM Smart Contract: 0xDA7a001b254CD22e46d3eAB04d937489c93174C3
+Wasm Smart Contract: 0xDA7a001b254CD22e46d3eAB04d937489c93174C3
 
-## Obtain Data with Acurast on WASM and EVM
+## Obtain Data with Acurast on Wasm and EVM
 
 ### How to Get Started
 
-1. Deploy one of the example contracts to WASM or EVM
+1. Deploy one of the example contracts to Wasm or EVM
 1. Define your script detailing where to fetch data, computation etc.
 1. Create a Job on the [Acurast Console](https://console.acurast.com/)
 1. Processors will fulfill verifiable outputs in your defined interval to your contract
 
-### WASM Example
+### Wasm Example
 
-The following example shows simple WASM smart contracts implemented with [ink!](https://use.ink/).
+The following example shows simple Wasm smart contracts implemented with [ink!](https://use.ink/).
 
 Keep in mind that you can do much more with Acurast and get access to all interoperability modules besides these examples.
 
@@ -100,7 +100,7 @@ contract PriceFeed {
 
 ### Script
 
-This example script shows how a "Price Feeds" is fetched from Binance and pushed to a WASM smart contract. You can view and test the your script on the Acurast Console.
+This example script shows how a "Price Feeds" is fetched from Binance and pushed to a Wasm smart contract. You can view and test the your script on the Acurast Console.
 
 ```js
 const callIndex = "0x4606"; // the call index for the 'call' extrinsic.
