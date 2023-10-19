@@ -121,4 +121,4 @@ The values for the parameters above are set so that EVM fee and the Native fee a
 
 ## Fee Alignment Transition Period
 
-Legacy Astar Network tokenomics fee model was not aligned between two systems adn there was a gap between the value of fees for similar transactions between Native and EVM systems. To allow network stakeholders to adjust to the Tokenomics 2.0 fee model, alignemnt of fees betwen the two systems will be gradually introduced over a period of approximately 3 months once the change is enacted (live) on the network.
+Legacy Astar Network tokenomics fee model was not aligned between the two systems - same resource consumption via native or Ethereum transactions resulted in significantly different fees. To allow network stakeholders to adjust to the Tokenomics 2.0 fee model, alignment of fees between the two systems will be gradually introduced once the change is enacted (live) on the network.
