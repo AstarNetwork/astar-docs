@@ -6,7 +6,7 @@ title: Startale Labs
 
 ## Introduction
 
-[Startale Labs](https://sws.startale.com) is a web3 tech company developing multi-chain applications and infrastructure in collaboration with Astar Foundation and large enterprises. The company also conducts R&D and incubation based on industry experience and connections developed in colloaboration with Astar Network.
+[Startale Labs](https://sws.startale.com) is a web3 tech company developing multi-chain applications and infrastructure in collaboration with Astar Foundation and large enterprises. The company also conducts R&D and incubation based on industry experience and connections developed in collaboration with Astar Network.
 
 Startale Web3 Service (SWS) provides an Astar EVM/zkEVM Node RPC Endpoint, a powerful tool designed to enhance the Web3 experience that is now available for developers to utilize.
 
