@@ -57,5 +57,7 @@ Once the transaction shows as confirmed on the MetaMask Activity tab, it will ta
   </div>
 
 
-  You should now see the bridged ETH within MetaMask for use on Astar zkEVM.
+  You should now see the bridged ETH within MetaMask for use on Astar zkEVM. Visit the [smart contracts section](/docs/build/zkEVM/smart-contracts/) to start building!
+
+  
 

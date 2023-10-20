@@ -9,7 +9,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Astar Docs',
-  tagline: 'Your one-stop shop for everything Astar',
+  tagline: 'A comprehensive library of useful information about Astar Network',
   url: 'https://docs.astar.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -140,7 +140,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: 'https://medium.com/astar-network',
+                to: 'https://astar.network/blog',
               },
               {
                 label: 'GitHub',

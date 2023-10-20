@@ -13,6 +13,18 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   
   {
+    title: <Translate>Learn About Astar Network</Translate>,
+    link: '/docs/learn',
+    iconClass: 'docs',
+    description: (
+      <>
+        <Translate>
+        Explains our foundations and provides comprehensive insights into the inner workings of Astar network. 
+        </Translate>
+      </>
+    ),
+  },
+  {
     title: <Translate>Build</Translate>,
     link: '/docs/build/',
     iconClass: 'wrench',
@@ -28,7 +40,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: <Translate>Build on Astar zkEVM</Translate>,
     link: '/docs/build/zkEVM',
-    iconClass: 'tool',
+    iconClass: 'evm',
     description: (
       <>
         <Translate>
@@ -72,18 +84,6 @@ const FeatureList: FeatureItem[] = [
         <Translate>
           Explains how XCM is used in Astar and how developers can use it to
           interact with the rest of the Polkadot network.
-        </Translate>
-      </>
-    ),
-  },
-  {
-    title: <Translate>Learn About Astar zkEVM</Translate>,
-    link: '/docs/learn/zkEVM',
-    iconClass: 'node',
-    description: (
-      <>
-        <Translate>
-          Explains the zkEVM, FAQs, and how to interact with Astar's scalability solution for Ethereum, powered by Polygon CDK.
         </Translate>
       </>
     ),
