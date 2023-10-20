@@ -5,7 +5,7 @@ sidebar_label: Fee Calculation
 ---
 
 ## How do network fees on Astar zkEVM work?
-In Astar zkEVM the gas fee is calculated by by applying a fixed factor over L1 gas fee. That price factor is a fixed value and doesn't change often and it's value is based the rollup's cost to publish tx to L1. To Simply put, gas prices in L2 will linearly follow gas prices in L1.
+In Astar zkEVM the gas fee is calculated by applying a fixed factor over L1 gas fee. That price factor is a fixed value and doesn't change often and it's value is based the rollup's cost to publish tx to L1. To Simply put, gas prices in L2 will linearly follow gas prices in L1.
 
 $$ L2_{gas\_fee} = L1_{gas\_fee} * Factor $$
 
