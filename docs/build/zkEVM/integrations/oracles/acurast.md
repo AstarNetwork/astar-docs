@@ -149,7 +149,7 @@ httpGET(
 1. Specify your additional parameters such as the reward.
 1. Publish your Job and wait for your first fulfillment.
 
-Or check out [How to get started with the Acurast Console](/developers/introduction#get-started) to register your Job.
+Or check out [How to get started with the Acurast Console](https://console.acurast.com/developers/introduction#get-started) to register your Job.
 
 ## Full Documentation
 
