@@ -5,7 +5,7 @@ sidebar_label: Setup Local zkNode
 ---
 
 :::warning
-Due to an open [issue](https://github.com/ethereum/go-ethereum/issues/27274) you might have problem running local node.
+Due to an open [issue](https://github.com/ethereum/go-ethereum/issues/27274) you may encounter problems running a local node.
 :::
 
 It's crucial that developers can thoroughly test the network for a developing blockchain technology like **Astar zkEVM** without putting users or themselves at unnecessary risk. Developers should be able to test their smart contracts, experiment with new code, and play around with the network on their local machines.
