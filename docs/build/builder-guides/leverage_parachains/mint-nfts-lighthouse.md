@@ -25,7 +25,7 @@ Before diving deep into the steps, let's get a clear picture of Lighthouse:
   * Get [Lighthouse Javascript SDK](https://lighthouse-1.gitbook.io/lighthouse-1/lighthouse-sdk/overview)
   * Get [Python SDK](https://pypi.org/project/lighthouseweb3/)
 
-In this tutorial we will be using the Lighthouse Javascript SDK to uplaod a file using Lighthouse.
+In this tutorial we will be using the Lighthouse Javascript SDK to upload a file using Lighthouse.
 
 
 
