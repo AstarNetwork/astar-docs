@@ -1,3 +1,7 @@
+---
+title: Mint NFTs with Crust
+---
+
 # Harnessing Crust Network for NFT Minting: A Developer's Guide
 
 ![](https://hackmd.io/_uploads/r12FVSxHn.jpg)

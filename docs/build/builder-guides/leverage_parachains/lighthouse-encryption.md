@@ -1,3 +1,7 @@
+---
+title: Lighthouse Encryption
+---
+
 # Utilizing Lighthouse Encryption on Astar for Enhanced Security: A Developer's Guide
 
 The realm of digital data has grown immensely, both in terms of volume and significance. As the usage of digital assets like NFTs increases, there's a compelling need to ensure that these assets are stored securely and accessibly. This guide introduces a new dimension of security, detailing how to encrypt data using Lighthouse Storage and then store and retrieve it on the Astar Network EVM. The focus is on leveraging Lighthouse Encryption in tandem with the blockchain capabilities of Astar Network.
@@ -128,7 +132,7 @@ async function storeOnAstar(key, encryptedHash) {
 
 To read back your encrypted data from the Astar Network and decrypt it:
 
-**Step 1: Retrieve data from the Aster Chain:**
+**Step 1: Retrieve data from the Astar Chain:**
 ```javascript
 async function getFromAstar(key) {
   // Assuming you have a contract with a setData function to store data
