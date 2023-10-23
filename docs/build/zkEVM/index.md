@@ -6,8 +6,6 @@ import introduction from "/docs/build/img/buildZkEvm.png"
     <img src={introduction} style={{width: 1200}} />
 </div>
 
-To make use of this documentation effectively, you should possess a general understanding of programming basics. The programming languages used throughout are mainly Solidity and JavaScript, for which previous knowledge is not necessary, but would be highly beneficial. 
-
 ## What is Astar zkEVM?
 
 Astar zkEVM is an Ethereum Layer-2 scaling solution leveraging Polygon's Chain Development Kit and cutting edge zero-knowledge cryptography to enable off-chain transaction execution, with finality and security guarantees provided by Ethereum. In coordination with our key partners, Astar zkEVM is well-positioned to take advantage of the extensive developer base and well-established toolset existing in the Ethereum ecosystem, and boasts the following key features:
