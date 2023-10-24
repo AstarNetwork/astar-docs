@@ -1,33 +1,12 @@
 {
-  "About Astar": {
-    "message": "Astarについて"
-  },
-  "Get to know what Astar Network is solving and all the information related to our native token.": {
-    "message": "Astar Networkが解決していることと、ネイティブトークンに関連するすべての情報を知ることができます。"
-  },
-  "Ecosystem": {
-    "message": "エコシステム"
-  },
-  "Dive into our ecosystem and discover more about Polkadot, Substrate and other initiatives.": {
-    "message": "Polkadot、Substrate、その他の取り組みについて、私たちのエコシステムに飛び込んでみてください。"
-  },
   "Build": {
     "message": "構築の開始"
-  },
-  "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.": {
-    "message": "ネットワーク上のスマートコントラクトのテスト、開発、および対話を開始するために必要なすべてのリソースを検索することができます。"
   },
   "dApp Staking": {
     "message": "dApp Staking"
   },
   "Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking.": {
     "message": "AstarのdApp StakingにdAppを登録して、トークンをステーキングすることであなた自身とあなたのdAppのためにトークンを獲得できます。"
-  },
-  "Dive deeper into EVM on Astar and explains how EVM contracts can interact with other non-EVM modules through precompiles.": {
-    "message": "AstarのEVMを深く掘り下げ、EVMコントラクトがプリコンパイルによって他の非EVMモジュールとどのように相互作用するかを説明します。"
-  },
-  "Use all-in-one Swanky Suite to start building WASM smart contracts. Get an overview of ink! and ask! WASM contract frameworks and examples for each framework.": {
-    "message": "オールインワンのSwanky Suiteを使って、WASMスマートコントラクトの構築を始めます。ink! および ask! WASMコントラクトフレームワークの概要と、各フレームワークの例を知ることができます。"
   },
   "Run A Node": {
     "message": "ノードの実行"
@@ -38,14 +17,8 @@
   "Learn Cross-Chain Message (XCM)": {
     "message": "Cross-Chain Message (XCM) を学ぶ"
   },
-  "Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.": {
-    "message": "XCM が Astar でどのように使用されているかを説明し、開発者が Polkadot ネットワークの残りの部分とどのようにやり取りできるかを説明します。"
-  },
   "Integrate Toolings": {
     "message": "連携ツール"
-  },
-  "Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network.": {
-    "message": "ネットワークに統合されているウォレット、ブリッジ、インデクサ、オラクルに関する関連情報を提供します。"
   },
   "User Guides": {
     "message": "ユーザーガイド"
@@ -53,16 +26,13 @@
   "Learn how to create different types of wallets, obtain tokens, and manage your assets.": {
     "message": "様々な種類のウォレットの作成方法、トークンの入手方法、資産の管理方法などをご紹介します。"
   },
-  "Learn how to use tools and build projects in Astar ecosystem.": {
-    "message": "Astar エコシステムでのツールの使用方法やプロジェクトの構築方法を学びます。"
-  },
   "theme.ErrorPageContent.title": {
     "message": "ページがクラッシュしました。",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "もう一度やり直してください",
-    "description": "The label of the button to try again when the page crashed"
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.NotFound.title": {
     "message": "ページが見つかりません",
@@ -441,5 +411,36 @@
   "theme.tags.tagsPageTitle": {
     "message": "タグ",
     "description": "The title of the tag list page"
+  },
+  "Explains how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.": {
+    "message": "Explains how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network."
+  },
+  "Learn About Astar zkEVM": {
+    "message": "Learn About Astar zkEVM"
+  },
+  "Explains the zkEVM, FAQs, and how to interact with Astar's scalability solution for Ethereum, powered by Polygon CDK.": {
+    "message": "Explains the zkEVM, FAQs, and how to interact with Astar's scalability solution for Ethereum, powered by Polygon CDK."
+  },
+  "Contains relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network.": {
+    "message": "Contains relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network."
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Main",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Close navigation bar",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Toggle navigation bar",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.": {
+    "message": "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network."
   }
 }

@@ -3,8 +3,13 @@ sidebar_position: 1
 title: General FAQs related to zkEVM
 sidebar_label: General FAQs
 ---
+
+# General FAQ
+
+## Overview
+
 This document compiles some of the frequently asked questions related to the Astar zkEVM. For more details, check out [Polygon zkEVM documentation](https://wiki.polygon.technology/docs/category/zkevm-protocol/).
----
+
 
 ### What is Astar zkEVM?
 
@@ -35,7 +40,7 @@ However, given the proving system breakthroughs pioneered by Polygon Labs, full 
 
 ### How do I connect Astar zkEVM to a Metamask Wallet?
 
-In order to add the Astar zkEVM network to your wallet, please check [this guide] (INSERT_LINK) which contains the latest RPC details and videos demonstrating useful functionalities.
+In order to add the Astar zkEVM network to your wallet, please check [this guide](../quickstart.md) which contains the latest RPC details and videos demonstrating useful functionalities.
 
 ### How does Astar zkEVM compare to other zkEVMs in terms of technology and performance? What are the technical advantages there?
 
@@ -83,11 +88,6 @@ Yes, any language that gets compiled to EVM opcode should work with Astar zkEVM.
 
 Additionally, for a software application to interact with the Ethereum blockchain (by reading blockchain data and/or sending transactions to the network), it must connect to an Ethereum node. It works the same way as other nodes such as geth.
 
-Learn how to set up your production zkNode [here] (INSERT_LINK)
-
 ### Do you support the JSON-RPC EVM query spec? What are the unsupported queries?
 
 All official queries are supported (`eth_*` endpoints). We are working on support from some "extra official endpoints" such as `debug_*`.
-
-(INSERT_LINK)(../zk-node/setup-production-node.md).
-(INSERT_LINK)(../quickstart.md)

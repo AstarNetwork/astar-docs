@@ -58,7 +58,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
       <Figure caption="Tokenomics Model" src={require('/docs/about/token-economics/img/tokenomics_1.png').default } width="100%" /> 
       ```
 
-    - Please use absolute path to image (e.g. `/docs/about/token-economics/img/tokenomics_1.png` instead `img/tokenomics_1.png`
+    - Please use absolute path to image (e.g. `/docs/about/token-economics/img/tokenomics_1.png` instead of `img/tokenomics_1.png`
 
 ### Deploy to production
 
