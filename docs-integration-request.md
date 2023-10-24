@@ -2,52 +2,43 @@
 title: Your Project Title
 ---
 
+import Figure from '/src/components/figure'
+
 # Your Project Name
 
 :::info
+
+***This file can be used as a template for your submission.***
 
 To learn how to set up a local Docusaurus install to view this the way it was intended, in addition to being able to review your own document(s) prior to submitting a PR, see the astar-docs [README](https://github.com/AstarNetwork/astar-docs/blob/main/README.md) file. Once your environment is ready to go:
 
 - Create a new branch of astar-docs for your update/addition. 
 
-- ***This file can be used as a template for your submission.*** Within the new branch, copy and rename this file to something meaningful (ie: *projectname-oracle.md* or *widgetzyx-nft-api.md.* **Do not use spaces**) and move it to the most appropriate section of Astar docs. If you're unsure about where that might be in the end, please submit a PR anyways; we will find a home for it prior to merging. 
+- Within the new branch:
+    1. **Make a Copy** of this file and **rename** it to something meaningful (ie: *projectname-oracle.md* or *widgetzyx-nft-api.md.* **Do not use spaces**) 
+    2. Move the newly renames *yourprojectname.md* to the most appropriate section of Astar docs. If you're unsure about where that might be in the end, please submit a PR anyways; we will find a home for it prior to merging.
+    3. If your tutorial includes images or screenshots (**highly encouraged!**) please add them to a new or existing `img` folder located within the same folder as your .md file, and see below.
+    4. When your document or tutorial is finished, submit a pull request to the [astar-docs](https://github.com/AstarNetwork/astar-docs) repo on Github and tag it with the `documentation` label. Thank you!
 
+**PS: Please do not use `[!](https://dont.link.images.like.this.com)` or `[!](./some/relative/path/to/image.jpg)` to link images.** Instead, we request you import and use the custom `Figure` function described below, which is i18n-friendly:
 
-- If your tutorial includes images or screenshots, which are **highly encouraged**, please add them to a new or existing `img` folder located within the same folder as your .md file.
-
-- **Do not use `[!](https://dont.link.images.like.this.com)` or `[!](./some/relative/path/image.jpg)` to link images.** Instead, use the following method, with absolute paths:
-
-    At the top of the .md file add:
+    Retain the existing import statement at the top of this file:
 
     ```r
-    import cody from "/docs/learn/defi/img/codytrading.png"
-    import trades from "/docs/learn/defi/img/trades.png"
-    import downbad from "/docs/learn/defi/img/onlyup.png"
-    import ...
+    import Figure from '/src/components/figure'
     ```
 
-    And in the body in reference to each image, as one example:
+    And in the body, as one example:
 
     ```r
-    <div style={{textAlign: 'center'}}>
-        <img src={trades} style={{width: 600}} />
-    </div>
+    <Figure src={require('/docs/build/zkEVM/integrations/img/network.png').default} width="100%" />
     ```
 
     Here's another example with an image caption:
 
     ```r
-    <div style={{textAlign: 'center'}}>
-        <figure>
-            <img src={cody} style={{width: 600}} />
-        <figcaption>This is Cody McCodeface, Degen</figcaption>
-        </figure>
-    </div>
+   <Figure caption="Cody's Degen Account" src={require('/docs/build/zkEVM/integrations/img/degen.png').default} width="100%"/>
     ```
-
-           
-- When your document or tutorial is finished, submit a pull request to the [astar-docs](https://github.com/AstarNetwork/astar-docs) repo on Github and tag it with the `documentation` label. Thank you!
-
 :::
 
 ## Introduction
