@@ -2,27 +2,31 @@
 sidebar_position: 1
 ---
 
+import Figure from '/src/components/figure'
+
 # Astar Safe (Gnosis Safe)
 
-Build on the Gnosis Safe infrastructure: take advantage of the most modular, flexible, and secure wallet and identity solution in Ethereum. Now available on Astar!
+Build on the Gnosis Safe infrastructure: take advantage of the most modular, flexible, and secure wallet and identity solution in Ethereum. Astar Safe is available on Astar, Shiden, Shibuya, and zKatana networks.
 
 ## Create a Safe
 
 To get started, navigate to [Astar Safe].
 
 :::info
-The current guide will focus on creating a MultiSig on Astar. Soon, we will add more networks to the list.
+The current guide focuses on creating a MultiSig on Astar Network, but you can choose any supported network from the list.
 :::
+
+<Figure caption='Supported Networks' src={require('/docs/build/integrations/wallets/img/networks.png').default } width="33%" />
 
 ### Connect MetaMask
 
-To create a wallet, ypu need to connect your wallet:
+To create a new safe, first connect your wallet:
 
 1. Click **Connect Wallet**
 2. Select a wallet to connect. For this example, we use MetaMask.
 
-![1](img/1.png)
-![2](img/2.png)
+<Figure src={require('/docs/build/integrations/wallets/img/1.png').default } width="100%" />
+<Figure src={require('/docs/build/integrations/wallets/img/2.png').default } width="100%" />
 
 If you're not already signed into MetaMask, you will be prompted to sign in or download the MetaMask plugin. You will then be guided through adding and connecting your accounts, and adding and switching to the Astar Network:
 
@@ -31,11 +35,11 @@ If you're not already signed into MetaMask, you will be prompted to sign in or d
 3. If you are not connected to Astar Network, and you don't have the network added to your MetaMask, add it as a custom network by clicking Approve.
 4. Switch the network to Astar Network by clicking Switch Network.
 
-![3](img/3.png)
+<Figure src={require('/docs/build/integrations/wallets/img/3.png').default } width="100%" />
 
 Your wallet is now connected and connected to the correct network. Let's continue by creating a Safe on Astar. Press Continue.
 
-![4](img/4.png)
+<Figure src={require('/docs/build/integrations/wallets/img/4.png').default } width="100%" />
 
 ## Create New Safe
 
@@ -46,7 +50,7 @@ Let's begin by giving your Safe a name:
 1. Enter the name of your new Safe, for example `my-astar-safe`.
 2. Click **Continue**
 
-![5](img/5.png)
+<Figure src={require('/docs/build/integrations/wallets/img/5.png').default } width="100%" />
 
 Next up is the owners, and confirmations section of the wizard. In this section, you will add the owners of the Safe and specify the signing threshold. The threshold determines how many of the owners are required to confirm a transaction before the transaction gets executed.
 
@@ -62,24 +66,24 @@ Your account information, as Owner 1, will be completed automatically, however, 
 4. Set the confirmation threshold to **2 of 3** owners
 5. Click **Review** to go to the last step in the wizard
 
-![6](img/6.png)
+<Figure src={require('/docs/build/integrations/wallets/img/6.png').default } width="100%" />
 
 Finally, review and confirm the Safe and owner details before clicking **Continue** then:
 
 1. Click **Create** to create your new Safe. The creation of the Safe will cost approximately less than .001 ASTR tokens on Astar Network. MetaMask will pop up and prompt you to confirm the transaction.
 2. Click **Confirm** to send the transaction and create the Safe
-![7](img/7.png)
+<Figure src={require('/docs/build/integrations/wallets/img/7.png').default } width="100%" />
 
 It will take a moment to process the transaction and create the Safe, and once it done you should see a message saying "**Your Safe was created successfully**". From there, click **Get Started** to load your Safe and start interacting with it.
 
-![8](img/8.png)
-![9](img/9.png)
+<Figure src={require('/docs/build/integrations/wallets/img/8.png').default } width="100%" />
+<Figure src={require('/docs/build/integrations/wallets/img/9.png').default } width="100%" />
 
 ## Configure Safe
 
 You can manage your Safe at any time, and change the parameters. To do so, click on the **Settings** option on the left-hand side menu.
 
-![10](img/10.png)
+<Figure src={require('/docs/build/integrations/wallets/img/10.png').default } width="100%" />
 
 In there you should see the following options:
 
@@ -94,8 +98,8 @@ In there you should see the following options:
 
 You can now start interacting with your Safe, and can send funds to it from any account with **ASTR** tokens. In this example, we will use the Owner 1 account. Hover over ASTR in the list of assets to reveal the **Send** and **Receive** buttons. Then click **Receive**.
 
-![11](img/11.png)
-![12](img/12.png)
+<Figure src={require('/docs/build/integrations/wallets/img/11.png').default } width="100%" />
+<Figure src={require('/docs/build/integrations/wallets/img/12.png').default } width="100%" />
 
 Next, open up MetaMask, and send some ASTR tokens to the MultiSig wallet. Once the transaction is complete, the balance of ASTR tokens will be updated within the Safe.
 
@@ -117,16 +121,16 @@ In this example, if two of the three owners decide to reject the proposal, then 
 
 Switch accounts in MetaMask to `Owner 2` account (or Owner 3). Then go back to the Safe connected as Owner 2. The **Confirm** button should now be enabled. As Owner 2, click **Confirm** to meet the threshold and send the transaction.
 
-![15](img/15.png)
+<Figure src={require('/docs/build/integrations/wallets/img/15.png').default } width="100%" />
 
 1. Check the **Execute transaction** box to execute the transaction immediately after confirmation. You can un-check it for the transaction to be executed manually at a later time.
 2. Click **Submit**. MetaMask will pop-up and ask you to confirm the transaction, if everything looks good, you can click **Confirm**
 
-![16](img/16.png)
+<Figure src={require('/docs/build/integrations/wallets/img/16.png').default } width="100%" />
 
 The transaction will be removed from the **QUEUE** tab and a record of the transaction can now be found under the **HISTORY** tab. In addition, `Owner 2` balance has now increased by 1 ASTR token, and the Safe's balance for ASTR tokens has decreased.
 
-![17](img/17.png)
+<Figure src={require('/docs/build/integrations/wallets/img/17.png').default } width="100%" />
 
 ## Send and Receive Other Assets
 
@@ -140,7 +144,7 @@ Next, we will send and receive some other assets from the Safe. In this example 
 4. Enter amount of DOTs to send. Click Next.
 5. Review the transaction details and then click Confirm to send the transaction.
 
-![19](img/19.png)
+<Figure src={require('/docs/build/integrations/wallets/img/19.png').default } width="100%" />
 
 If you navigate back to the Safe, in the list of **Assets** you should now see **DOT**, and a balance of 1 DOT. It could take a few minutes for the **DOT** to appear, but will do so on it's own.
 
