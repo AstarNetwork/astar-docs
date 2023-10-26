@@ -66,7 +66,7 @@ coming soon...
 
 ### The Price Oracle Response
 
-An example JSON response will look like this.
+An example JSON response from Blockscout Price Oracle will look like this:
 
 ```json
 {
