@@ -14,18 +14,18 @@ The goal of **Astar zkEVM Gas Station** is to provide dApp developers with gas p
 <Tabs>
 <TabItem value="testnet" label="zKatana testnet" default>
 
-Send a GET request to the [zKatana Gas Station endpoint](https://zkatana.blockscout.com/api/v1/gas-price-oracle) to get a gas price recommendation from this oracle.
+Send a GET request to the [zKatana Gas Station endpoint](https://zkatana.explorer.startale.com/api/v1/gas-price-oracle) to get a gas price recommendation from this oracle.
 
 #### cURL
 
 ```bash
-curl https://zkatana.blockscout.com/api/v1/gas-price-oracle
+curl https://zkatana.explorer.startale.com/api/v1/gas-price-oracle
 ```
 
 #### JavaScript
 
 ```javascript
-fetch('https://zkatana.blockscout.com/api/v1/gas-price-oracle')
+fetch('https://zkatana.explorer.startale.com/api/v1/gas-price-oracle')
   .then(response => response.json())
   .then(json => console.log(json))
 ```
@@ -34,7 +34,7 @@ fetch('https://zkatana.blockscout.com/api/v1/gas-price-oracle')
 
 ```python
 import requests
-requests.get('https://zkatana.blockscout.com/api/v1/gas-price-oracle').json()
+requests.get('https://zkatana.explorer.startale.com/api/v1/gas-price-oracle').json()
 ```
 
 </TabItem>
