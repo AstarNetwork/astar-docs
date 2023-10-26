@@ -18,7 +18,7 @@ After successfully compiling a smart contract, follow the next steps to verify y
 
 1. Copy the **Address** to which the smart contract is deployed. 
 
-2. Navigate to the [zKatana Explorer](https://zkatana.blockscout.com/) and paste the contract address into the Search box. This opens a window with a box labelled **Contract Details**.
+2. Navigate to the [zKatana Explorer](https://zkatana.explorer.startale.com) and paste the contract address into the Search box. This opens a window with a box labelled **Contract Details**.
 
 3. Scroll down to the box with tabs labelled - **Transactions**, **Token transfers** **Internal txns**, **Coin Balance History**, and **Contract**.
 

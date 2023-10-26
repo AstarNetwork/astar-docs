@@ -147,7 +147,7 @@ uint256 currentCount = 0;
         const deployedContract = await hre.ethers.deployContract("Counter");
         await deployedContract.waitForDeployment();
         console.log(
-            `Counter contract deployed to https://zkatana.blockscout.com/address/${deployedContract.target}`
+            `Counter contract deployed to https://zkatana.explorer.startale.com/address/${deployedContract.target}`
         );
     }
 
@@ -173,5 +173,5 @@ uint256 currentCount = 0;
     ​Here's an output example:
 
     ```bash
-    Counter contract deployed to https://zkatana.blockscout.com/address/0x8731DC57f9C7e01f5Ba733E7a10692cA540862f8
+    Counter contract deployed to https://zkatana.explorer.startale.com/address/0x8731DC57f9C7e01f5Ba733E7a10692cA540862f8
     ```

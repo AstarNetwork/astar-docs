@@ -30,8 +30,8 @@ To add the **Astar zkEVM** network to your wallet manually, enter the following 
 
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
-| `https://rpc.zkatana.gelato.digital` | `1261120` | [https://zkatana.blockscout.com](https://zkatana.blockscout.com) | **ETH** |
 | `https://rpc.startale.com/zkatana` | `1261120` | [https://zkatana.explorer.startale.com/](https://zkatana.explorer.startale.com/) | **ETH** |
+| `https://rpc.zkatana.gelato.digital` | `1261120` | [https://zkatana.explorer.startale.com/](https://zkatana.explorer.startale.com/) | **ETH** |
 </TabItem>
 
 <TabItem value="mainnet" label="Astar zkEVM Mainnet" disabled>
@@ -53,7 +53,7 @@ Astar's canonical [zkEVM Bridge](https://portal.astar.network) does not inherit 
 The development experience on zkEVM is seamless and identical to the Ethereum Virtual Machine. Developers building on zkEVM can use their existing code and tools to deploy on zkEVM, and dApp users will benefit from higher transaction throughput and lower fees. Read more about deploying smart contracts on the zkEVM [here.](/docs/build/zkEVM/smart-contracts/)
 
 ## Metamask setup for zKatana Testnet
-To add zKatana testnet to MetaMask, use the link at the bottom of the [block explorer](https://zkatana.blockscout.com/), or fill in the following details manually:
+To add zKatana testnet to MetaMask, use the link at the bottom of the [block explorer](https://zkatana.explorer.startale.com/), or fill in the following details manually:
 
 <div style={{textAlign: 'center'}}>
   <img src={metamask} style={{width: 400}} />
