@@ -1,20 +1,21 @@
 ---
 sidebar_position: 6
-title: Astar zkEVM Gas Station
-sidebar_label: zkEVM Gas Station
+title: Blockscout zkEVM Gas Oracle
+sidebar_label: zkEVM Gas Oracle
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The goal of **Astar zkEVM Gas Station** is to provide dApp developers with gas pricing suggestions so they can use them before sending transactions to the **Astar zkEVM** network.
+## Overview
+The **Blockscout Price Oracle** provides gas pricing suggestions which can be used by dApp developers before sending transactions to the **Astar zkEVM** network.
 
 ## Usage
-
+Blockscout Price Oracle takes the values from the average of previous blocks. It does't call `eth_gasPrice`. 
 <Tabs>
 <TabItem value="testnet" label="zKatana testnet" default>
 
-Send a GET request to the [zKatana Gas Station endpoint](https://zkatana.blockscout.com/api/v1/gas-price-oracle) to get a gas price recommendation from this oracle.
+Send a GET request to the [Blockscout Price Oracle endpoint](https://zkatana.blockscout.com/api/v1/gas-price-oracle) to get a gas price recommendation from this oracle.
 
 #### cURL
 
@@ -56,4 +57,4 @@ An example JSON response will look like this.
 }
 ```
 
-- {`average`, `fast`, `slow`} are gas prices in Gwei, you can use these prices before sending the transaction off to Astar zkEVM, depending upon your needs
+- {`average`, `fast`, `slow`} are gas prices in Gwei, you can use these prices before sending the transaction off to Astar zkEVM.
