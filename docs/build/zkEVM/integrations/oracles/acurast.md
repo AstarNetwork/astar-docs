@@ -23,7 +23,7 @@ The following price feeds are Chainlink compatible, if your application is alrea
 | BTC/USD   | [0xDBb23274EE9354367155C290c673733374d57967](https://zkatana.explorer.startale.com/address/0xDBb23274EE9354367155C290c673733374d57967) |
 | ETH/USD   | [0x448786CD6E53E706AEdd984C620D63d48B720e6A](https://zkatana.explorer.startale.com/address/0x448786CD6E53E706AEdd984C620D63d48B720e6A) |
 | BNB/USD   | [0xb6B94e18957376ac6d22bAF31C7BF1661B238F4A](https://zkatana.explorer.startale.com/address/0xb6B94e18957376ac6d22bAF31C7BF1661B238F4A) |
-| USDT/USD  | [0xD12ad062A6bFBB27024a7B76E4EF7FDC5bf49Aeb](https://zkatana.explorer.startale.comaddress/0xD12ad062A6bFBB27024a7B76E4EF7FDC5bf49Aeb) |
+| USDT/USD  | [0xD12ad062A6bFBB27024a7B76E4EF7FDC5bf49Aeb](https://zkatana.explorer.startale.com/address/0xD12ad062A6bFBB27024a7B76E4EF7FDC5bf49Aeb) |
 | USDC/USD  | [0x2E23a70dfe6059f9F2DC35C1e940e3B3288BDE04](https://zkatana.explorer.startale.com/address/0x2E23a70dfe6059f9F2DC35C1e940e3B3288BDE04) |
 | DAI/USD   | [0xEC6985D9eA362fb85fEa72263169C375F8f065E7](https://zkatana.explorer.startale.com/address/0xEC6985D9eA362fb85fEa72263169C375F8f065E7) |
 | STETH/USD | [0xA2FB708105a412710Df254D7406A27764408A657](https://zkatana.explorer.startale.com/address/0xA2FB708105a412710Df254D7406A27764408A657) |
