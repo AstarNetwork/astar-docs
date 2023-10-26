@@ -2,66 +2,70 @@
 sidebar_position: 1
 ---
 
+import Figure from "/src/components/figure"
+
 # Subsquid
 
-[Subsquid](https://subsquid.io) is an indexing framework supporting both [Substrate](/docs/build/wasm) and [EVM](/docs/build/EVM)-based chains. It is extremely flexible and offers [high syncing speeds](https://docs.subsquid.io/migrate/subsquid-vs-thegraph/). Subsquid comes with a set of code generation tools that make ready-to-use, customizable indexer projects ("squids") out of contracts' ABIs. WASM/ink! and EVM/Solidity contracts are supported. Once scraped, the contract data can be served over a GraphQL API or stored as a dataset.
+[Subsquid](https://subsquid.io) is an indexing framework supporting both [Substrate](/docs/learn/polkadot_relay#substrate) and [EVM](/docs/learn/polkadot_relay#ethereum-virtual-machine-evm)-based chains. It is [extremely flexible and offers high syncing speeds](https://docs.subsquid.io/migrate/subsquid-vs-thegraph/). 
 
-Squids can run either locally or in a Subsquid-provided a cloud service called Aquarium. The service has and will always have a free tier. For more demanding applications it offers a premium subscription.
+Subsquid indexer projects (or "squids") can be made from templates either manually or with [squid generation tools](https://docs.subsquid.io/basics/squid-gen/). The tools make ready-to-use indexer projects out of contracts' ABIs. The generated squids decode events and transactions of user-specified contracts, then serve the data over a GraphQL API or store it as a dataset on a filesystem. At the moment EVM/Solidity contracts are supported, with WASM/ink! contracts in the pipeline. Consider this route if your use case does not require any nontrivial transformations of blockchain data.
 
-Prerequisites: NodeJS, [Subsquid CLI](https://docs.subsquid.io/squid-cli/installation/). Docker if you want your data in PostgreSQL and/or served via a GraphQL API.
+Implementation-wise, squids are just regular NodeJS processes that can be extended with regular Typescript code. They can [apply arbitrary transformations to the data](https://docs.subsquid.io/basics/squid-processor/#processorrun), query the contract state ([EVM](https://docs.subsquid.io/evm-indexing/query-state/)/[WASM](https://docs.subsquid.io/substrate-indexing/specialized/wasm/#state-queries)) or [mix in some data from external sources like APIs or IPFS](https://docs.subsquid.io/basics/external-api/). Mixing data from multiple chains is [supported](https://docs.subsquid.io/basics/multichain/). If a squid is serving its data over a GraphQL server, that can be extended too with [custom queries](https://docs.subsquid.io/graphql-api/custom-resolvers/) and simple [access control](https://docs.subsquid.io/graphql-api/authorization/). Check out Subsquid's [extensive documentation](https://docs.subsquid.io) to learn more about its features.
 
-## Generating a WASM/ink! squid
+Squids can run either on your infrastructure or in [Subsquid Cloud](https://docs.subsquid.io/deploy-squid/) (former Aquarium). The service has and will always have a free tier. For more demanding applications it offers [paid plans](https://docs.subsquid.io/deploy-squid/pricing/).
 
-A squid indexing events listed in a contract ABI can be generated with the `@subsquid/squid-gen-ink` tool. Begin by creating a new project with the tool's complementary template and installing dependencies:
-```bash
-sqd init my-ink-squid -t https://github.com/subsquid-labs/squid-ink-abi-template
-cd my-ink-squid
-npm i
-```
-Obtain any contract ABIs and save them to the `./abi` folder. For example, for indexing token contracts you can grab the `erc20` ABI from the `squid-gen-ink` repository:
-```bash
-curl -o abi/erc20.json https://raw.githubusercontent.com/subsquid/squid-gen/master/tests/ink-erc20/abi/erc20.json
-```
-Next, make a `squidgen.yaml` configuration file like this one:
-```yaml
-archive: shibuya
-target:
-  type: postgres
-contracts:
-  - name: testToken
-    abi: "./abi/erc20.json"
-    address: "0x5207202c27b646ceeb294ce516d4334edafbd771f869215cb070ba51dd7e2c72"
-    events:
-      - Transfer
-```
-Here,
-* **archive** is an alias or an endpoint URL of a chain-specific data lake responsible for the initial ingestion and filtration of the data. Subsquid maintains free archives for all Astar-related networks under aliases `astar`, `shibuya` and `shiden`.
-* **target** section describes how the scraped data should be stored. The example above uses a PostgreSQL database that can be presented to users as a GraphQL API or used as-is. Another option is to [store the data to a file-based dataset](https://docs.subsquid.io/basics/squid-gen/#file-store-targets).
-* **contracts** is a list of contracts to be indexed. All fields in the example above are required. Set `events: true` to index all events listed in the ABI.
+## Prerequisites
 
-When done, run
-```bash
-npx squid-gen config squidgen.yaml
-```
-to generate the squid code.
+* NodeJS v16 or newer
+* [Subsquid CLI](https://docs.subsquid.io/squid-cli/installation/)
+* Docker (if you want your data in PostgreSQL and/or served via a GraphQL API)
 
-## Generating an EVM/Solidity squid
+## EVM/Solidity
 
-There are two primary ways to index EVM contracts deployed to Astar with Subsquid:
+There are two primary ways to index EVM contracts deployed to [Astar networks](/docs/learn/networks) with Subsquid:
 1. With a [Substrate processor](https://docs.subsquid.io/substrate-indexing/) utilizing its [support for the Frontier EVM pallet](https://docs.subsquid.io/substrate-indexing/evm-support/). This is useful when both EVM and Substrate data is required. If that is your use case, check out [this tutorial](https://docs.subsquid.io/tutorials/create-an-evm-processing-squid/).
-2. With a [native EVM processor](https://docs.subsquid.io/evm-indexing/). This simpler and more performant approach will be the focus of this section.
+2. With a [native EVM processor](https://docs.subsquid.io/evm-indexing/). This simpler and more performant approach will be the focus of this section. Within it, you can choose to either
+   - develop a squid from a template or
+   -  auto-generate it.
 
-Generating EVM squids is very similar to generating ink! squids. To create a project, execute
+   Take the latter approach to obtain the decoded events and/or transactions data from a fixed set of contracts rapidly, but be aware that the autogenerated squids are not meant to be used for further development.
+
+Subsquid supports the following Astar networks for native EVM indexing:
+* `astar`
+* `astar-zkatana`
+* `shiden`
+* `shibuya`
+
+### Developing an EVM/Solidity squid from a template
+
+Retrieve the `evm` squid template and install dependencies:
+```bash
+sqd init my-evm-squid -t evm
+cd my-evm-squid
+npm ci
+```
+Verify that the template squid works by [starting it](#starting-the-squid), then follow the [Development Flow guide](https://docs.subsquid.io/basics/squid-development/). Your major tasks will be:
+ - Setting the [source network](https://docs.subsquid.io/evm-indexing/supported-networks/).
+ - Requesting the raw data by further [configuring](https://docs.subsquid.io/evm-indexing/configuration/) the [EVM processor](https://docs.subsquid.io/evm-indexing/).
+ - Defining the data model of outbound data ([GraphQL/PostgreSQL](https://docs.subsquid.io/store/postgres/schema-file/) or [file-based](https://docs.subsquid.io/store/file-store/overview/#database-options)).
+ - [Decoding EVM events and transactions](https://docs.subsquid.io/evm-indexing/squid-evm-typegen/).
+ - Transforming the decoded data within the [batch handler](https://docs.subsquid.io/basics/squid-processor/#processorrun).
+
+Check out the tutorial on [indexing BAYC](https://docs.subsquid.io/tutorials/bayc/) for a step-by-step guide into developing an EVM-native squid. If you want to save your data to a file-based dataset, take a look at the tutorials on writing to [CSV](https://docs.subsquid.io/tutorials/index-to-local-csv-files/) or to [Apache Parquet](https://docs.subsquid.io/tutorials/parquet-file-store/) files. If you are a contract developer you can follow [this guide](https://docs.subsquid.io/tutorials/ethereum-local-development/) to index contracts deployed to local EVM development environments, for pre-deployment integration tests.
+
+### Generating an EVM/Solidity squid
+
+A squid indexing events and calls listed in a contract ABI can be generated with the `@subsquid/squid-gen` tool. Begin by creating a new project with the tool's complementary template, `abi`, and installing dependencies:
 ```bash
 sqd init my-evm-squid -t abi
 cd my-evm-squid
-npm i
+npm ci
 ```
-Note that a different template, `abi`, is used.
 
-Next, obtain any contract ABIs and save them to the `./abi` folder. I will be indexing the [PancakeFactory](https://blockscout.com/astar/address/0xA9473608514457b4bF083f9045fA63ae5810A03E) and [PancakeRouter](https://blockscout.com/astar/address/0xE915D2393a08a00c5A463053edD31bAe2199b9e7) contracts of [Arthswap](https://arthswap.org) in this example, taking their ABIs from the Blockscout pages ("Code" tab, "Contract ABI" section) and saving them to `./abi/factory.json` and `./abi/router.json`, correspondingly.
+Next, obtain any contract ABIs and save them to the `./abi` folder. I will be indexing the [PancakeFactory](https://blockscout.com/astar/address/0xA9473608514457b4bF083f9045fA63ae5810A03E) and [PancakeRouter](https://blockscout.com/astar/address/0xE915D2393a08a00c5A463053edD31bAe2199b9e7) contracts of [Arthswap](https://arthswap.org), taking their ABIs from the Blockscout pages ("Code" tab, "Contract ABI" section) and saving them to `./abi/factory.json` and `./abi/router.json`, correspondingly.
 
-The syntax of `squidgen.yaml` is almost the same as for the ink! tool, with the sole difference being that a `function` field can now be set for contracts. It is used for indexing contract method calls. Here is an example config for generating a squid indexing the two Arthswap contracts:
+Next, make a `squidgen.yaml` configuration file like this one:
+
 ```yaml
 archive: astar
 target:
@@ -80,24 +84,53 @@ contracts:
     events: true
     functions: true
 ```
-Note that the `astar` archive used by the EVM processor is different from the `astar` archive used by the Substrate processor in the ink! example. At the moment, `astar` is the only EVM archive that Subsquid maintains for Astar-related networks. If you happen to need an EVM archive for Shibuya or Shiden, please contact the Subsquid team directly using [this form](https://forms.gle/ioVNFiPjZgvUNunY9).
+Here,
+* **archive** is an alias or an endpoint URL of a chain-specific data lake responsible for the initial ingestion and filtration of the data. Aliases for Astar networks are `astar`, `astar-zkatana`, `shibuya` and `shiden`.
+* **target** section describes how the scraped data should be stored. The example above uses a PostgreSQL database that can be presented to users as a GraphQL API or used as-is. Another option is to [store the data to a file-based dataset](https://docs.subsquid.io/basics/squid-gen/#file-store-targets).
+* **contracts** is a list of contracts to be indexed. `name`, `abi` and `address` fields are requred. `events: true` requests that all events listed in the ABI are decoded and indexed; `functions: true` means the same for function calls. You can also list individual events and calls for a more compact squid.
 
 Generate the squid code with 
 ```bash
 npx squid-gen config squidgen.yaml
 ```
+and give your new squid [a test run](#starting-the-squid).
+
+## WASM/ink!
+
+Subsquid supports indexing ink! contracts deployed to the following Astar networks:
+* `astar`
+* `shiden`
+* `shibuya`
+
+### Developing a WASM/ink! squid from a template
+
+Retrieve the `ink` squid template and install dependencies:
+```bash
+sqd init my-ink-squid -t ink
+cd my-ink-squid
+npm ci
+```
+Verify that the template squid works by [starting it](#starting-the-squid), then follow the [Development Flow guide](https://docs.subsquid.io/basics/squid-development/). Your major tasks will be:
+ - Setting the [source network](https://docs.subsquid.io/substrate-indexing/supported-networks/).
+ - Requesting the raw data by further [configuring](https://docs.subsquid.io/substrate-indexing/setup/) the [Substrate processor](https://docs.subsquid.io/substrate-indexing/), particularly [subscribing to the relevant ink! events](https://docs.subsquid.io/substrate-indexing/specialized/wasm/).
+ - Defining the data model of outbound data ([GraphQL/PostgreSQL](https://docs.subsquid.io/store/postgres/schema-file/) or [file-based](https://docs.subsquid.io/store/file-store/overview/#database-options)).
+ - [Decoding ink! contract events](https://docs.subsquid.io/substrate-indexing/specialized/wasm/#ink-typegen) and possibly [other Substrate events, calls, storage items or constants](https://docs.subsquid.io/substrate-indexing/squid-substrate-typegen/).
+ - Transforming the decoded data within the [batch handler](https://docs.subsquid.io/basics/squid-processor/#processorrun).
+
+You can also check out the end-to-end [ink! contract indexing tutorial](https://docs.subsquid.io/tutorials/create-a-wasm-processing-squid/) maintained by Subsquid.
 
 ## Starting the squid
 
-Once you're done generating the code for your squid it is time to give it a local test run. This procedure is the same for both kinds of squids.
+Once you've retrieved a template or generated a squid it is time to give it a local test run.
 
 If you used a `postgres` target prepare the database and migrations by running
 ```bash
 sqd up # starts a database container
 sqd migration:generate
 ```
+Skip this if you used a `parquet` target.
 
-Then start a squid *processor* - the process that ingests data from the archive:
+Next, start a squid *processor* - the process that ingests data from the archive:
 ```bash
 sqd process
 ```
@@ -112,7 +145,7 @@ If the data is stored to the database, it should appear there almost instantaneo
 ```bash
 PGPASSWORD=postgres psql -U postgres -p 23798 -h localhost squid
 ```
-For file-based targets synchronization [takes longer](https://docs.subsquid.io/basics/store/file-store/overview/#filesystem-syncs-and-dataset-partitioning).
+For file-based targets synchronization [takes longer](https://docs.subsquid.io/store/file-store/overview/#filesystem-syncs-and-dataset-partitioning).
 
 If you want to serve the scraped data over GraphQL you will need to start a separate GraphQL server process. Processor blocks the terminal, so open another one, navigate to the squid project folder and run
 ```bash
@@ -120,16 +153,14 @@ sqd serve
 ```
 The server will listen at localhost:4350, with a [GraphiQL](https://github.com/graphql/graphiql) playground available at [http://localhost:4350/graphql](http://localhost:4350/graphql):
 
-![GraphiQL playground](</subsquidGraphiql.png>)
+<Figure caption="GraphiQL playground" src={require('/docs/build/integrations/indexers/img/subsquidGraphiql.png').default} width="100%" />
 
 ## Next steps
 
-Squid processes are just regular NodeJS processes that can be extended with regular Typescript code. The processor can [apply arbitrary transformations to the data](https://docs.subsquid.io/basics/squid-processor/#processorrun), query the contract state ([WASM](https://docs.subsquid.io/substrate-indexing/wasm-support/#state-queries)/[EVM](https://docs.subsquid.io/evm-indexing/query-state/)) or [mix in some data from external sources like APIs or IPFS](https://docs.subsquid.io/basics/external-api/). If you are using a GraphQL server, that can be extended too with [custom queries](https://docs.subsquid.io/graphql-api/custom-resolvers/) and simple [access control](https://docs.subsquid.io/graphql-api/authorization/). Check out Subsquid's [extensive documentation](https://docs.subsquid.io) to learn more about its features.
-
-Once you're done customizing your squid, you can run it on your own infrastructure or use the Aquarium cloud service. In the simplest case, the deployment can be done with just
+Once you've developed and tested your squid, you can run it on your own infrastructure or use Subsquid Cloud. In the simplest case, the deployment can be done with just
 ```bash
 sqd deploy .
 ```
-after [authenticating with Aquarium](https://docs.subsquid.io/squid-cli/#1-obtain-an-aquarium-deployment-key). For more complex scenarios see the [Deploy a Squid](https://docs.subsquid.io/deploy-squid/) section of the framework documentation.
+after [authenticating with Cloud](https://docs.subsquid.io/squid-cli/installation/#1-obtain-a-subsquid-cloud-deployment-key). For more complex scenarios see the [Deploy a Squid](https://docs.subsquid.io/deploy-squid/) section of the framework documentation.
 
-Subsquid team can be reached via [Telegram](https://t.me/HydraDevs) and [Discord](https://discord.gg/dxR4wNgdjV). Feel free to stop by and chat!
+Subsquid team can be reached via [Telegram](https://t.me/HydraDevs) and [Discord](https://discord.com/invite/subsquid). Feel free to stop by and chat!
