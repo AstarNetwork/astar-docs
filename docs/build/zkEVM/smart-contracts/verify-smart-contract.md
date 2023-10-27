@@ -11,6 +11,7 @@ import inputobject from '/docs/build/zkEVM/smart-contracts/figures/input-object.
 Once a smart contract is deployed to zKatana testnet, it can be verified in various ways depending on the framework of deployment as well as the complexity of the contract. The aim here is to use examples to illustrate how you can manually verify a deployed smart contract. 
 
 Ensure that your wallet is connected while following this guide. We will use Metamask wallet throughout this tutorial.
+For detailed explanation on how to verify smart contracts, please refer to the [Blockscout documentation](https://docs.blockscout.com/for-developers/verify-contracts).
 
 ## Manual Verification
 
@@ -18,7 +19,7 @@ After successfully compiling a smart contract, follow the next steps to verify y
 
 1. Copy the **Address** to which the smart contract is deployed. 
 
-2. Navigate to the [zKatana Explorer](https://zkatana.explorer.startale.com) and paste the contract address into the Search box. This opens a window with a box labelled **Contract Details**.
+2. Navigate to the [zKatana Explorer](https://zkatana.blockscout.com) and paste the contract address into the Search box. This opens a window with a box labelled **Contract Details**.
 
 3. Scroll down to the box with tabs labelled - **Transactions**, **Token transfers** **Internal txns**, **Coin Balance History**, and **Contract**.
 
