@@ -86,7 +86,7 @@ Verify that your .gitignore file contains `.env` to prevent your private key fro
     import * as dotenv from "dotenv";
 
     dotenv.config({ path: __dirname + "/.env" });
-    const ACCOUNT_PRIVATE_KEY = process.env.PRIVATE_KEY || "";
+    const ACCOUNT_PRIVATE_KEY = process.env.ACCOUNT_PRIVATE_KEY || "";
     console.log("PrivateKey set:", !!ACCOUNT_PRIVATE_KEY)
 
     const config: HardhatUserConfig = {
