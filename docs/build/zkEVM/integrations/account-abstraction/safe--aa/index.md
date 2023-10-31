@@ -43,9 +43,11 @@ in the package.json we have already included zkatana-gelato-protocol-kit, zkatan
   "zkatana-gelato-relay-kit": "^1.3.2"
 ```
 
-3) Create a .env file with your private config:
-cp .env.example .env
-You will need to input your Private Key **PK** and **GELATO_RELAY_API_KEY** for sponsored transactions, you an get it at https://relay.gelato.network
+3) Create a .env file with your private config:  
+ ```shell
+ cp .env.example .env
+```
+You will need to input your Private Key **PK** and **GELATO_RELAY_API_KEY** for sponsored transactions, you can get it at https://relay.gelato.network
 
 4) Call the respective method:
   - Using 1Balance
