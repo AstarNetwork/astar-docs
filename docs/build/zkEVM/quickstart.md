@@ -42,6 +42,8 @@ To add the **Astar zkEVM** network to your wallet manually, enter the following 
 </TabItem>
 </Tabs>
 
+To add the network to MetaMask, use the data above or the link at the bottom of the respective block explorer page.
+
 The next step is to [bridge assets](/docs/build/zkEVM/bridge-to-zkevm.md) from Ethereum &rarr; Astar zkEVM. 
 
 :::important
@@ -51,13 +53,6 @@ Astar's canonical [zkEVM Bridge](https://portal.astar.network) does not inherit 
 ## Deploying Smart Contracts
 
 The development experience on zkEVM is seamless and identical to the Ethereum Virtual Machine. Developers building on zkEVM can use their existing code and tools to deploy on zkEVM, and dApp users will benefit from higher transaction throughput and lower fees. Read more about deploying smart contracts on the zkEVM [here.](/docs/build/zkEVM/smart-contracts/)
-
-## Metamask setup for zKatana Testnet
-To add zKatana testnet to MetaMask, use the link at the bottom of the [block explorer](https://zkatana.explorer.startale.com/), or fill in the following details manually:
-
-<div style={{textAlign: 'center'}}>
-  <img src={metamask} style={{width: 400}} />
-</div>
 
 ## Astar zkEVM Support for Developers
 
