@@ -24,6 +24,12 @@ Developers can deploy existing contracts from other EVM chains to the zkEVM, and
 
 ## Connecting to zkEVM
 
+:::info Reminder
+**Astar zKatana testnet and its related documentation are under active development.** 
+
+All feedback is welcome and highly appreciated, so please report errors or inconsistencies to a team member or as an issue on the [Astar Docs Github repo](https://github.com/AstarNetwork/astar-docs/issues), thank you.
+:::
+
 To add the **Astar zkEVM** network to your wallet manually, enter the following details :
 <Tabs>
 <TabItem value="testnet" label="zKatana Testnet" default>
@@ -43,6 +49,8 @@ To add the **Astar zkEVM** network to your wallet manually, enter the following 
 </Tabs>
 
 To add the network to MetaMask, use the data above or the link at the bottom of the respective block explorer page.
+
+## Bridging Assets
 
 The next step is to [bridge assets](/docs/build/zkEVM/bridge-to-zkevm.md) from Ethereum &rarr; Astar zkEVM. 
 
