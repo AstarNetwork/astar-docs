@@ -20,7 +20,7 @@ Storage space will increase as the network grows.
 
 - 16GB RAM
 - 4-core CPU
-- 20GB Storage (This will increase over time)
+- 100GB Storage (This will increase over time)
 
 ### Prerequisites
 
@@ -49,7 +49,7 @@ In this section, we are going to start the 5 containers necessary to have an **A
 - zkevm-pool-db
 - zkevm-prover
 
-At the time of writing, only **zKatana testnet** is the only network available for **Astar zkEVM**, connected to the L1 Ethereum **Sepolia testnet**.
+At the time of writing, **zKatana testnet** is the only network available for **Astar zkEVM**, connected to the L1 Ethereum **Sepolia testnet**.
 Let's build on this.
 
 Create dedicated directories for config, install and data.
@@ -93,7 +93,7 @@ URL = "https://eth-sepolia-public.unifra.io"
 [Metrics]
 Enabled = true
 ```
-Start containers
+Start the containers.
 ```bash
 # start all the containers
 sudo docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml up -d
@@ -105,15 +105,15 @@ Verify that all containers are up and running: you should see the 5 containers w
 docker ps
 ```
 
-Now you have an **Astar zkEVM** RPC node up and running on port 8545, just wait for it to synchronize.
+Now you have an **Astar zkEVM** RPC node up and running on port 8545, you just have to wait for it to synchronize.
 
 ## Using RPC
 
-View container logs:
+View container logs
 ```bash
 docker logs -fn30 <container-name>
 ```
-Test a RPC request:
+Test RPC requests
 ```bash
 # Get the chain Id
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "eth_chainId", "params": []}' http://localhost:8545
@@ -122,7 +122,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 # Get the latest block
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "eth_getBlockByNumber", "params": ["latest", false]}' http://localhost:8545
 ```
-Stop containers:
+Stop containers
 ```bash
 sudo docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml down
 ```
