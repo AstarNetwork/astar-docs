@@ -56,6 +56,8 @@ To use tracing on an ancient blocks, you need to add the runtime that was in pla
 
 :::
 
+All Astar previous runtime overrides (prior to release on Github) can be downloaded [here](https://shared-assets.astar.network/files/runtime/astar-tracing-runtimes-3-69.tar.gz). They are necessary if you want to trace transactions on ancient blocks
+
 ## Service parameters
 
 The service file for a tracing node will look like this
