@@ -47,6 +47,7 @@ rent\_fee &= storage\_items*price\_per\_item + storage\_bytes*price\_per\_byte
 \end{align}
 $$
 
+- $base\_weight$ - fixed base weight of each transaction included in the block.
 - $base\_fee$ - a fixed fee that needs to be paid for every transaction included in the block.
 - $weight\_fee$ - is the fee related to the weight of the transaction.
 - $c$ - fee multiplier; if network utilization is above ideal, `c` factor will increase, forcing users to pay more. And vice-versa, when network congestion is low, fee multiplier will decrease.
@@ -115,21 +116,21 @@ Values of all the Fee Model parameters are listed in the table below.
 
 | Parameter name                                            | Value on Shibuya          | Value on Shiden | Value on Astar | 
 | --------------------------------------------------------- |------------------         |---|- -|
-| $base\_fee$                                               | 0.00000000098974 SBY      |   |   |
-| $weight_{factor}$ (per byte)                              | 0.030855 SBY              |   |   |
-| $length_{factor}$ (per byte)                              | 0.0000235 SBY             |   |   |
-| $max\_block\_normal\_dispatch\_weight$                    | 375,000,000,000           |   |   |
-| $s*$                                                      | 0.25                      |   |   |
-| $v$                                                       | 0.000015                  |   |   |
-| $c_{min}$                                                 | 0.1                       |   |   |
-| $c_{max}$                                                 | 10                        |   |   |
-| $price\_per\_item$                                        | 0.00004 SBY               |   |   |
-| $price\_per\_byte$                                        | 0.000001 SBY              |   |   |
-| $base\_fee\_per\_gas_{min}$                               | 0.0000008 SBY             |   |   |
-| $base\_fee\_per\_gas_{max}$                               | 0.00008 SBY               |   |   |
+| $base\_weight$                                            | 98974                     | 98974 |   |
+| $weight_{factor}$ (per byte)                              | 0.030855 SBY              | 0.00030855 SDN   |   |
+| $length_{factor}$ (per byte)                              | 0.0000235 SBY             | 0.000000235 SDN |   |
+| $max\_block\_normal\_dispatch\_weight$                    | 375,000,000,000           | 375,000,000,000  |   |
+| $s*$                                                      | 0.25                      | 0.25  |   |
+| $v$                                                       | 0.000015                  | 0.000015   |   |
+| $c_{min}$                                                 | 0.1                       | 0.1 |   |
+| $c_{max}$                                                 | 10                        | 10  |   |
+| $price\_per\_item$                                        | 0.00004 SBY               | 0.0000004 SDN  |   |
+| $price\_per\_byte$                                        | 0.000001 SBY              | 0.00000001 SDN  |   |
+| $base\_fee\_per\_gas_{min}$                               | 0.0000008 SBY             | 0.000000008 SDN  |   |
+| $base\_fee\_per\_gas_{max}$                               | 0.00008 SBY               | 0.0000008 SDN  |   |
 
 
-The values for the parameters above are set so that EVM fee and the Native fee are equal and equal to 0.5 ASTR for an average weight and length transaction with no rent fee.
+The values for the parameters above are set so that EVM fee and the Native fee are equal and equal to 0.5 ASTR or 0.005 SDN for an average weight and length transaction with no rent fee.
 
 ## Fee Alignment Transition Period
 
