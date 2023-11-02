@@ -38,6 +38,7 @@ To add the **Astar zkEVM** network to your wallet manually, enter the following 
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/zkatana` | `1261120` | [https://zkatana.explorer.startale.com/](https://zkatana.explorer.startale.com/) | **ETH** |
 | `https://rpc.zkatana.gelato.digital` | `1261120` | [https://zkatana.blockscout.com/](https://zkatana.blockscout.com/) | **ETH** |
+| `https://astar-zkatana-rpc.dwellir.com` | `1261120` | | **ETH** |
 </TabItem>
 
 <TabItem value="mainnet" label="Astar zkEVM Mainnet" disabled>
