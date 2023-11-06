@@ -14,6 +14,8 @@ import ledger8 from "./img/native/ledger8.png"
 
 # Using a Ledger device with Astar Native Accounts
 
+Astar Native app is an app integrated with Ledger that users can use a ledger device as an account and sign transactions for substrate accounts. **Ledger Live is not supported hence user will not be able to create an account with Ledger Live**.
+
 :::danger
 At the time of this release, the following operations are **NOT SUPPORTED:** on Ledger devices:
 - **XCM transfers**
