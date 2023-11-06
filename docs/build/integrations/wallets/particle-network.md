@@ -9,7 +9,7 @@ sidebar_position: 4
 
 Particle supports Astar zkEVM Testnet through both EOA interactions and native ERC-4337 SimpleAccount implementations.
   
-Using Particle Network Wallet-as-a-Service for a secure, flexible embedded EOA wallet implementation on Astar is quite simple.
+Using Particle Network Wallet-as-a-Service for a secure, flexible embedded wallet implementation on Astar is quite simple.
 
 ## Create an application
 
