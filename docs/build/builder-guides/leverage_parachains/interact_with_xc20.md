@@ -220,7 +220,7 @@ For the next step, we use [Remix](https://remix.ethereum.org/) to deploy our cod
 
 ![Untitled](mintable-xc20-cookbook/Untitled%208.png)
 
-After sending the initial funding to the faucet contract via MetaMask, you can successfully request tokens from the faucet now!
+After sending the initial funding to the faucet contract via MetaMask, you can successfully request tokens from the faucet!
 
 ![Untitled](mintable-xc20-cookbook/Untitled%209.png)
 
