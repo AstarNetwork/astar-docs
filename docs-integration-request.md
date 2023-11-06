@@ -16,7 +16,7 @@ To learn how to set up a local Docusaurus install to view this the way it was in
 
 - Within the new branch:
     1. **Make a Copy** of this file and **rename** it to something meaningful (ie: *projectname-oracle.md* or *widgetzyx-nft-api.md.* **Do not use spaces**) 
-    2. Move the newly renames *yourprojectname.md* to the most appropriate section of Astar docs. If you're unsure about where that might be in the end, please submit a PR anyways; we will find a home for it prior to merging.
+    2. Move the newly renamed *yourprojectname.md* to the most appropriate section of Astar docs. If you're unsure about where that might be in the end, please submit a PR anyways; we will find a home for it prior to merging.
     3. If your tutorial includes images or screenshots (**highly encouraged!**) please add them to a new or existing `img` folder located within the same folder as your .md file, and see below.
     4. When your document or tutorial is finished, submit a pull request to the [astar-docs](https://github.com/AstarNetwork/astar-docs) repo on Github and tag it with the `documentation` label. Thank you!
 
