@@ -107,7 +107,7 @@ sudo nano /etc/systemd/system/astar.service
     --name {NODE_NAME} \
     --chain astar \
     --base-path /var/lib/astar \
-    --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+    --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
     Restart=always
     RestartSec=10
