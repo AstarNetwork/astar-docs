@@ -92,7 +92,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --enable-evm-rpc \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -127,7 +127,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --enable-evm-rpc  \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -161,7 +161,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --enable-evm-rpc  \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10

@@ -52,7 +52,7 @@ astar-collator \
 --rpc-methods Safe \
 --rpc-max-request-size 1 \
 --rpc-max-response-size 1 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -77,7 +77,7 @@ astar-collator \
 --rpc-methods Safe \
 --rpc-max-request-size 1 \
 --rpc-max-response-size 1 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -102,7 +102,7 @@ astar-collator \
 --rpc-methods Safe \
 --rpc-max-request-size 1 \
 --rpc-max-response-size 1 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
