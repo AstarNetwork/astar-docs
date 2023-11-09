@@ -17,9 +17,9 @@ Upon entering the project, the README.md file included in the folder will be aut
 <Figure src={require('/docs/build/EVM/chainide-for-astar-evm/img/chainIDE5.png').default} width="100%" />
 
 In the Explorer panel, you can create new files (or folders), refresh the directory, and download files. You can also directly click on the files that come with the template.
-<br/>
+
 <Figure src={require('/docs/build/EVM/chainide-for-astar-evm/img/chainIDE6.png').default} width="25%" />
-<br/>
+
 Click on a contract file to edit the code.
 
 <Figure src={require('/docs/build/EVM/chainide-for-astar-evm/img/chainIDE7.png').default} width="100%" />
