@@ -21,29 +21,29 @@ Users joining the platform will be able to use the APIs for free within certain 
 
 Here are two Public APIs, that include Astar / Shiden and Shibuya (+ one-click add network to MetaMask):
 
-<https://blastapi.io/public-api/astar>
+[https://blastapi.io/public-api/astar](https://blastapi.io/public-api/astar)
 
-<https://blastapi.io/public-api/shiden>
+[https://blastapi.io/public-api/shiden](https://blastapi.io/public-api/shiden)
 
 ### Public RPC Endpoints
 
-<https://astar.public.blastapi.io>
+[https://astar.public.blastapi.io](https://astar.public.blastapi.io)
 
-<https://shiden.public.blastapi.io>
+[https://shiden.public.blastapi.io](https://shiden.public.blastapi.io)
 
-<https://shibuya.public.blastapi.io>
+[https://shibuya.public.blastapi.io](https://shibuya.public.blastapi.io)
 
 ### Public WSS Endpoints
 
-<wss://astar.public.blastapi.io>
+[wss://astar.public.blastapi.io](wss://astar.public.blastapi.io)
 
-<wss://shiden.public.blastapi.io>
+[wss://shiden.public.blastapi.io](wss://shiden.public.blastapi.io)
 
-<wss://shibuya.public.blastapi.io>
+[wss://shibuya.public.blastapi.io](wss://shibuya.public.blastapi.io)
 
 ## Instructions
 
-1. Launch the app on: <https://blastapi.io/login>
+1. Launch the app on: [https://blastapi.io/login](https://blastapi.io/login)
 2. Connect the app to MetaMask. This is to prevent users from spamming the network. You will only need to connect MetaMask to create an account, and sign in to their app.
 ![2](img/2.png)
 

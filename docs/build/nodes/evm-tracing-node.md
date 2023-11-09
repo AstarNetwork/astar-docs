@@ -63,7 +63,7 @@ All Astar previous runtime overrides (prior to release on Github) can be downloa
 The service file for a tracing node will look like this
 
 :::tip
-Please make sure to change **{NODE_NAME}**
+Please make sure to change **\{NODE_NAME\}**
 :::
 
 <Tabs>

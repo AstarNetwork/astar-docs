@@ -30,27 +30,27 @@ Portalを通じて、Astarエコシステムのさまざまなネットワーク
 
 <img width="500" alt="2" src="https://user-images.githubusercontent.com/77480847/186842212-fa88eef0-b768-448e-995f-cc5834eb7c88.png" />
 
-## 推奨: Polkadot{.js} ブラウザプラグイン
+## 推奨: Polkadot\{.js\} ブラウザプラグイン
 
-Polkadot{.js}プラグインは、セキュリティとユーザビリティの合理的なバランスを提供します。 これは、あなたのアドレスを生成し、Astarポータルと対話するための独立したローカルメカニズムを提供します。 エコシステムが初めてで、Astarネイティブアドレスを作成したいユーザーはこのウォレットを使用することを推奨します。 Polkadot JS 拡張機能がない場合、ウォレットを接続しようとすると、Astar Portalでポップアップが表示されます。
+Polkadot\{.js\}プラグインは、セキュリティとユーザビリティの合理的なバランスを提供します。 これは、あなたのアドレスを生成し、Astarポータルと対話するための独立したローカルメカニズムを提供します。 エコシステムが初めてで、Astarネイティブアドレスを作成したいユーザーはこのウォレットを使用することを推奨します。 Polkadot JS 拡張機能がない場合、ウォレットを接続しようとすると、Astar Portalでポップアップが表示されます。
 
 ### ブラウザプラグインをインストール
 
-ブラウザプラグインは、 [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (および Brave などの Chromium ベースのブラウザ) と [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension) の両方で利用できます。 プラグインをインストールした後、ブラウザのメニューバーに、オレンジ色と白色の Polkadot{.js} ロゴが表示されます。
+ブラウザプラグインは、 [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (および Brave などの Chromium ベースのブラウザ) と [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension) の両方で利用できます。 プラグインをインストールした後、ブラウザのメニューバーに、オレンジ色と白色の Polkadot\{.js\} ロゴが表示されます。
 
 ![4](img/4.png)
 
 ### アカウント作成
 
-ブラウザのトップバーにあるロゴをクリックして、Polkadot{.js}ブラウザ拡張機能を開いてください。 ブラウザポップアップ表示されます。
+ブラウザのトップバーにあるロゴをクリックして、Polkadot\{.js\}ブラウザ拡張機能を開いてください。 ブラウザポップアップ表示されます。
 
 ![6](img/6.png)
 
-「Create new account」という大きなプラスボタンをクリックします。 Polkadot{.js}プラグインは、システムのランダム性を利用して、あなたのために新しいSeedを作り、12個の単語の形で表示します。
+「Create new account」という大きなプラスボタンをクリックします。 Polkadot\{.js\}プラグインは、システムのランダム性を利用して、あなたのために新しいSeedを作り、12個の単語の形で表示します。
 
 ![7](img/7.png)
 
-これらの言葉をバックアップするべきです。 安全な場所にSeedを保管してください。 何らかの理由でPolkadot{.js}からアカウントにアクセスできない場合は、「Add account menu」から「Import account from pre-existing seed」を選択することで、Seedを再入力することが可能です。
+これらの言葉をバックアップするべきです。 安全な場所にSeedを保管してください。 何らかの理由でPolkadot\{.js\}からアカウントにアクセスできない場合は、「Add account menu」から「Import account from pre-existing seed」を選択することで、Seedを再入力することが可能です。
 
 ![8](img/8.png)
 

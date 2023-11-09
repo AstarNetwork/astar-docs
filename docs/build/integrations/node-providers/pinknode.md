@@ -23,9 +23,9 @@ Pinknode provides RPC and WSS endpoints for the Astar ecosystem. You will be abl
 
 | Network | RPC Endpoint | WSS Endpoint|
 |----|----|---|
-| Astar | <https://public-rpc.pinknode.io/astar> | wss://public-rpc.pinknode.io/astar |
-| Shiden | <https://public-rpc.pinknode.io/shiden> | wss://public-rpc.pinknode.io/shiden |
-| Shibuya | <https://public-rpc.pinknode.io/shibuya> | wss://public-rpc.pinknode.io/shibuya |
+| Astar | [https://public-rpc.pinknode.io/astar](https://public-rpc.pinknode.io/astar) | wss://public-rpc.pinknode.io/astar |
+| Shiden | [https://public-rpc.pinknode.io/shiden](https://public-rpc.pinknode.io/shiden) | wss://public-rpc.pinknode.io/shiden |
+| Shibuya | [https://public-rpc.pinknode.io/shibuya](https://public-rpc.pinknode.io/shibuya) | wss://public-rpc.pinknode.io/shibuya |
 
 ## Instructions
 

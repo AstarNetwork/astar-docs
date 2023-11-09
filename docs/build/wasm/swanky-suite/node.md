@@ -16,7 +16,7 @@ Swanky Node is a Substrate based blockchain configured to enable `pallet-contrac
 - `pallet-assets` chain extension
 - `pallet-dapps-staking` chain extension
 
-Swanky Node is optimized for local development, while removing unnecessary components such as P2P. Additional features and pallets, such as to interact between (Contract <-> Runtime), will be added in the future.
+Swanky Node is optimized for local development, while removing unnecessary components such as P2P. Additional features and pallets, such as to interact between (Contract \<-\> Runtime), will be added in the future.
 
 ### Compatible ink! version
 

@@ -28,7 +28,7 @@ This guide goes over the process of starting a container with both WS and RPC en
 Launch the docker node in detached mode:
 
 :::tip
-Make sure to change the {NODE_NAME}
+Make sure to change the \{NODE_NAME\}
 :::
 
 <Tabs>

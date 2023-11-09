@@ -51,7 +51,8 @@ Here, we are going to showcase the three steps required to implement the method 
 
 - Step 1: Inherit Context Contract  
 Depending on the method, you must inherit different contracts as they will provide other methods. In this case, we will have to inherit the [ERC2771Context](https://github.com/gelatodigital/relay-context-contracts/blob/master/contracts/vendor/ERC2771Context.sol). The ERC2771Context provide us with the methods `_msgSender()` and `_msgData()` that will allow us to recover the original user sending the transaction.
-    
+
+```sol
     import {
         ERC2771Context
     } from "@gelatonetwork/relay-context/contracts/vendor/ERC2771Context.sol";
@@ -70,19 +71,21 @@ Depending on the method, you must inherit different contracts as they will provi
             emit IncrementContextCounter(_msgSender());
         }
     }
-    
+```
 
 - Step 2: Import the relay SDK  
 In your frontend/backend, you would need to import and instantiate the relay class.
 
-    
+```js
     import { GelatoRelay, SponsoredCallERC2771Request } from "@gelatonetwork/relay-sdk";
     const relay = new GelatoRelay(API_KEY);
-    
+```
 
 - Step 3: Send the payload to Gelato  
 This is an example using Gelato's CounterERC2771.sol, which is deployed on these networks.
-    ```// Set up on-chain variables, such as target address
+
+```js
+    // Set up on-chain variables, such as target address
     const counter = "0x00172f67db60E5fA346e599cdE675f0ca213b47b"; 
     const abi = ["function incrementContext()"];
     const provider = new ethers.BrowserProvider(window.ethereum);
@@ -105,8 +108,10 @@ This is an example using Gelato's CounterERC2771.sol, which is deployed on these
     // Go to https://relay.gelato.network to get a testnet API key with 1Balance.
     // Send a relay request using Gelato Relay!
     const relayResponse = await relay.sponsoredCallERC2771(request, provider, apiKey);
+```
 
 ### 4: Tracking your request
+
 When submitting your Gelato Relay requests, you'll receive a taskId in response. This taskId allows you to track the status of your request in two primary ways:
 
 1) WebSocket Subscriptions: This is the recommended and most efficient method. By subscribing via WebSocket, the Gelato backend will automatically push updates for all your tasks to your Relay SDK client. To start receiving these updates, you must register a callback function, which will be triggered every time one of your tasks gets updated. Detailed implementation can be found [here](https://docs.gelato.network/developer-services/relay/tracking-your-relay-request#websocket-subscriptions).

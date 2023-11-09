@@ -62,7 +62,7 @@ Multilocation is SCALE-encoded, step-by-step, until finally it is hashed using t
 | ----------- | ----------- |
 | Alice's Address in Polkadot      | 15oF4uVJwmo4TdGW7VfQxNLavjCXviqxT9S1MgbjMNHr6Sp5       |
 | Alice's Public Key  | 0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d  |
-| Alice's Multiloc in Astar | { parents: 1, interior: AccountId32 {network: NetworkId::Polkadot, id: 0xd4359...a27d } } |
+| Alice's Multiloc in Astar | \{ parents: 1, interior: AccountId32 \{network: NetworkId::Polkadot, id: 0xd4359...a27d \} \} |
 
 ---
 
@@ -73,7 +73,7 @@ Sibling parachain's account is derived using a simple approach:
 
 | Name      | Value       |
 | ----------- | ----------- |
-| Alice's MultiLoc in Astar | { parents: 1, interior: X2(Parachain(1000), AccountId32 {network: NetworkId::Polkadot, id: 0xd4359...a27d }) } |
+| Alice's MultiLoc in Astar | \{ parents: 1, interior: X2(Parachain(1000), AccountId32 \{network: NetworkId::Polkadot, id: 0xd4359...a27d \}) \} |
 | Alice's Derived Account | 0x88275533b5d43292c86d05985c3a6e226fee2baeddb4f3b90e30a70bec4d7bff |
 
 Similarly, in case `Alice` is sending XCM from a chain that uses **H160** address format:
@@ -88,7 +88,7 @@ In case `Alice` is sending XCM from `Polkadot`, the encoded data changes a bit a
 
 | Name      | Value       |
 | ----------- | ----------- |
-| Alice's Multiloc in Astar | { parents: 1, interior: X1(AccountId32 {network: NetworkId::Polkadot, id: 0xd4359...a27d }) } |
+| Alice's Multiloc in Astar | \{ parents: 1, interior: X1(AccountId32 \{network: NetworkId::Polkadot, id: 0xd4359...a27d \}) \} |
 | Alice's Derived Account | 0x7dcb1027ecb97011ebe79ca233def50d1f216eb05d76367c8984f67ccc5d2dd1 |
 
 ---
