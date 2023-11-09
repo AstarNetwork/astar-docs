@@ -123,6 +123,7 @@ ChainIDE and Polkaholic have collaborated to develop the WASM Developer Dashboar
 Click the "WASM Developer Dashboard" button on the right-hand side to view information such as "Recent Code Stored," "Recent Contracts Instantiated," and "Recent Calls."
 
 <Figure src={require('/docs/build/wasm/chainide-for-astar-wasm/img/chainIDE48.png').default} width="100%" />
+
 ### 9. Astar WASM Sandbox
 
 If you prefer command-line development, you can open the Astar WASM Sandbox, which comes pre-loaded with [Swanky Suite](https://docs.astar.network/docs/build/wasm/swanky-suite/), [Git](https://git-scm.com/) and [Node.js V16](https://nodejs.org/en).
