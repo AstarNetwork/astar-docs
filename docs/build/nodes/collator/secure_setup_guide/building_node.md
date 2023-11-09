@@ -197,7 +197,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --pruning archive \
   --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=120
@@ -224,7 +224,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --pruning archive \
   --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=120
@@ -251,7 +251,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --base-path /var/lib/astar \
   --pruning archive \
   --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=120

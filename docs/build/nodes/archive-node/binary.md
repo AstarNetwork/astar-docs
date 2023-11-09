@@ -82,7 +82,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-methods Safe \
   --rpc-max-request-size 1 \
   --rpc-max-response-size 1 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -112,7 +112,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-methods Safe \
   --rpc-max-request-size 1 \
   --rpc-max-response-size 1 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -142,7 +142,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-methods Safe \
   --rpc-max-request-size 1 \
   --rpc-max-response-size 1 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
