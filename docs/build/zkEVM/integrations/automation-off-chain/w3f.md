@@ -3,6 +3,8 @@ sidebar_position: 1
 description: "Web3 Functions serve as a comprehensive tool, enabling developers to effortlessly set up, manage, and automate their smart contract tasks"
 ---
 
+import Figure from '/src/components/figure'
+
 # Gelato Web3 Functions
 
 ## Overview
@@ -18,7 +20,7 @@ If all the conditions necessary for your automation task can be directly verifie
 
 ## Triggers
 
-![Triggers](figures/triggers.png)
+<Figure src={require('/docs/build/zkEVM/integrations/automation-off-chain/img/triggers.png').default} width="100%" />
 
 1. Time Interval
    Description: Use this trigger to execute tasks at regular intervals, e.g., every 10 minutes or once every 24 hours. It's like setting a straightforward, recurring alarm.
@@ -31,7 +33,7 @@ If all the conditions necessary for your automation task can be directly verifie
 
 ## What to Execute?
 
-![Functions](figures/functions.png)
+<Figure src={require('/docs/build/zkEVM/integrations/automation-off-chain/img/functions.png').default} width="100%" />
 
 ### Typescript Functions
 
@@ -119,7 +121,7 @@ Once you have deployed your checker, go to the [Gelato App](https://beta.app.gel
 
 ## Demo
 
-We have created a demo showing a "Trailing Stop" strategy leeraging Web3 Functions and [Pyth Oracle](../oracles/pyth.md). Here the [GitHub repo](https://github.com/gelatodigital/astar-zkatana-w3f-pyth).
+We have created a demo showing a "Trailing Stop" strategy leeraging Web3 Functions and [Pyth Oracle](/docs/build/zkEVM/integrations/oracles/pyth.md). Here the [GitHub repo](https://github.com/gelatodigital/astar-zkatana-w3f-pyth).
 
 To do this, we have created a `MockSwap.sol` contract deployed on [https://zkatana.blockscout.com/address/0x957ce2D8e9E0F584000FbEA2b655e939BE5dfD52](https://zkatana.blockscout.com/address/0x957ce2D8e9E0F584000FbEA2b655e939BE5dfD52) that accepts fake USDC deposits, sets the operator to the W3F executor, swaps the USDC into Ether, and creates the W3F with the trailing stop strategy:
 - If the price increases, the W3F will push the stop loss.
@@ -127,4 +129,4 @@ To do this, we have created a `MockSwap.sol` contract deployed on [https://zkata
 
 The Web3 Function is deployed on [https://beta.app.gelato.network/functions/task/0x2d376e17ff3b63cf18e623586c51a86843be886457f7809e7194e3aa73f4d00b:1261120](https://beta.app.gelato.network/functions/task/0x2d376e17ff3b63cf18e623586c51a86843be886457f7809e7194e3aa73f4d00b:1261120)
 
-![Web3 Function](figures/w3f.png)
+<Figure caption="Web3 Function" src={require('/docs/build/zkEVM/integrations/automation-off-chain/img/w3f.png').default} width="100%" />
