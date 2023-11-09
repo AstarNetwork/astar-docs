@@ -2,8 +2,9 @@
 sidebar_position: 4
 ---
 
-# Particle Network Smart Wallet-as-a-Service
+import Figure from '/src/components/figure'
 
+# Particle Network Smart Wallet-as-a-Service
 
 [**Particle Network**](https://particle.network) is the Intent-Centric, Modular Access Layer of Web3. With Particle's Smart Wallet-as-a-Service, developers can curate an unparalleled user experience through modular and customizable EOA/AA embedded wallet components. Using MPC-TSS for key management, Particle can streamline user onboarding via familiar Web2 accounts—such as Google accounts, email addresses, and phone numbers.
 
@@ -16,16 +17,22 @@ Using Particle Network Wallet-as-a-Service for a secure, flexible embedded walle
 To use Particle Network's Smart Wallet-as-a-Service on Astar, you'll need to begin by creating an account on the [Particle Network dashboard](https://dashboard.particle.network) and spinning up an application.
 
 1. Navigate to the Particle Network dashboard, then sign up or log in
-![Dashboard login](https://files.readme.io/e385493-image_22_1.png)
 
+<Figure caption="Dashboard login" src={require('/docs/build/zkEVM/integrations/account-abstraction/img/22_1.png').default} width="100%" />
 2. Once logged in, create a new project
 ![Project creation](https://files.readme.io/e7f1946-image_23_1.png)
 
+2. Once logged in, create a new project.
+
+<Figure caption="Project creation" src={require('/docs/build/zkEVM/integrations/account-abstraction/img/23_1.png').default} width="100%" />
+
 3. Enter the new project and create a new application
-![Application creation](https://files.readme.io/aa31038-webapp.png)
+
+<Figure caption="Application creation" src={require('/docs/build/zkEVM/integrations/account-abstraction/img/22_1.png').default} width="100%" />
 
 4. Finally, copy the project ID, client key, and app ID
-![Application dashboard](https://files.readme.io/07d065b-image_24_1.png)
+
+<Figure caption="Application dashboard" src={require('/docs/build/zkEVM/integrations/account-abstraction/img/24_1.png').default} width="100%" />
 
 ## Install dependencies
 
