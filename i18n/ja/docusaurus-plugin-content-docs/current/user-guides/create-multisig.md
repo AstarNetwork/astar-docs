@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ## コンタクトの追加
 
-1. <https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts>を開く
+1. [https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/accounts)を開く
 2. Accounts -> Address Bookを開きます。
 3. `+ Add Contact` をクリックし、マルチシグウォレットに含めたいすべてのアドレスを追加する
 4. 例：Bob、Charlie、Dave
@@ -28,5 +28,5 @@ sidebar_position: 2
 ## ウォレットのテスト
 
 1. 上記の通りマルチシグウォレットの作成を完了させる。
-2. マルチシグウォレットのテストには、まずShibuya testnetを利用することを推奨する。 自身のウォレットを接続することで、 <https://portal.astar.network> からSBYを取得できる。
+2. マルチシグウォレットのテストには、まずShibuya testnetを利用することを推奨する。 自身のウォレットを接続することで、 [https://portal.astar.network](https://portal.astar.network) からSBYを取得できる。
 3. SBYを取得した後、SBYトークンをマルチシグウォレットに送信すると、使用を開始できる。

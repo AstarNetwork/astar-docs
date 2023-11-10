@@ -26,7 +26,7 @@ If you don't have a domain name, you will have to generate a self-signed certifi
 ## Installation
 
 :::info
-In the following steps, don't forget to update {SUB_DOMAIN} with your full sub domain name.
+In the following steps, don't forget to update \{SUB_DOMAIN\} with your full sub domain name.
 Example: ws.astar.awesomedappproject.io
 :::
 
@@ -85,7 +85,7 @@ Certbot will issue the SSL certificate into `/etc/letsencrypt/live`.
 
 Edit again the site file:
 
-```ssh
+```sh
 sudo nano {SUB_DOMAIN}
 ```
 
@@ -144,11 +144,11 @@ sudo systemctl restart nginx
 
 This is it, your arcive node is set and available from outside.
 
-If you set a WS endpoint, you can explore the chain from the [Polkadot.js](https://polkadot.js.org/apps) portal using the format wss://{SUB_DOMAIN}
+If you set a WS endpoint, you can explore the chain from the [Polkadot.js](https://polkadot.js.org/apps) portal using the format [wss://\{SUB_DOMAIN\}](wss://\{SUB_DOMAIN\})
 
 ![2](img/2.png)
 
-If you set a **RPC endpoint**, you can it through <https://{SUB_DOMAIN}>
+If you set a **RPC endpoint**, you can it through [https://\{SUB_DOMAIN\}](https://\{SUB_DOMAIN\})
 
 ## Self-signed certificate
 
@@ -161,10 +161,10 @@ sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 
 Then in the https site config file, you will have to replace the following values:
 
-```
+```sh
 ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;
 ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
 ssl_dhparam /etc/ssl/certs/dhparam.pem;
 ```
 
-In all steps, the {SUB_DOMAIN} value will be the node server ip address.
+In all steps, the \{SUB_DOMAIN\} value will be the node server ip address.

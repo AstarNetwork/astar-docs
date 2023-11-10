@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 In Astar zkEVM the gas fee is calculated by applying a fixed factor over L1 gas fee. That price factor is a fixed value and doesn't change often and it's value is based the rollup's cost to publish tx to L1. To Simply put, gas prices in L2 will linearly follow gas prices in L1.
 
 $$
-L2_{gas\_fee} = L1_{gas\_fee} * Factor
+L2_\{gas\_fee\} = L1_\{gas\_fee\} * Factor
 $$
 
 The L1 fee will vary depending on the amount of transactions on the L1. If the timing of your transaction is flexible, you can save costs by submitting transactions during periods of lower gas on the L1 (for example, over the weekend)

@@ -151,7 +151,7 @@ sudo -u astar ./astar-collator --collator --chain shibuya --pruning archive --na
 </Tabs>
 
 :::tip
-Type in the place of **{COLLATOR\_NAME}**, what you would like to call your node.
+Type in the place of **\{COLLATOR\_NAME\}**, what you would like to call your node.
 :::
 
 See your node syncing on [https://telemetry.polkadot.io/](https://telemetry.polkadot.io/#list/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6).

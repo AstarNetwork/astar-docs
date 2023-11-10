@@ -26,8 +26,8 @@ Storage space requirements will increase as the network grows.
 
 This tutorial requires `docker` and `docker-compose` to be installed on your machine. If you don’t have these installed, check out the links provided below:
 
-- <https://www.docker.com/get-started>
-- <https://docs.docker.com/compose/install/>
+- [https://www.docker.com/get-started](https://www.docker.com/get-started)
+- [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
 ### Ethereum RPC Node
 

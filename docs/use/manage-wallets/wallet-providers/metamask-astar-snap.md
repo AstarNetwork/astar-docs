@@ -103,7 +103,7 @@ support robots 🤖). Click the button labeled "Confirm".
 
 Optionally, you can view the transaction (extrinsic) details for the faucet
 transaction. If you'd like to view these details, copy the transaction hash from the notification toast.
-Visit <https://shibuya.subscan.io> and search for the hash.
+Visit [https://shibuya.subscan.io](https://shibuya.subscan.io) and search for the hash.
 
 Return to the portal dApp and review your account balance - it should be 10
 SBYs.
