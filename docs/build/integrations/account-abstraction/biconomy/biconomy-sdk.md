@@ -86,14 +86,14 @@ IBundler is the typing for the Bundler class that we will create a new instance 
 ```typescript
 const bundler: IBundler = new Bundler({
     bundlerUrl: 'https://bundler.biconomy.io/api/v2/80001/nJPK7B3ru.dd7f7861-190d-41bd-af80-6877f74b8f44',     
-    chainId: ChainId.ASTAR_TESTNET,
+    chainId: ChainId.POLYGON_MUMBAI,
     entryPointAddress: DEFAULT_ENTRYPOINT_ADDRESS,
   })
 ```
 
 - Now we create an instance of our bundler with the following:
     - a bundler url which you can retrieve from the Biconomy Dashboard
-    - chain ID, in this case we’re using Shibuya testnet
+    - chain ID, in this case we’re using Polygon Mumbai testnet
     - and default entry point address imported from the account package
 
 
@@ -104,7 +104,7 @@ import {  BiconomySmartAccountV2, DEFAULT_ENTRYPOINT_ADDRESS } from "@biconomy/a
 Update your import from the account package to also include BiconomySmartAccountV2 which is the class we will be using to create an instance of our smart account.
 
 ```typescript
-const provider = new ethers.providers.JsonRpcProvider("https://evm.shibuya.astar.network")
+const provider = new ethers.providers.JsonRpcProvider("https://rpc.ankr.com/polygon_mumbai")
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY || "", provider);
 ```
 
@@ -130,7 +130,7 @@ async function createAccount() {
 
   let biconomySmartAccount = await BiconomySmartAccountV2.create({
   signer: wallet,
-  chainId: ChainId.ASTAR_TESTNET,
+  chainId: ChainId.POLYGON_MUMBAI,
   bundler: bundler, 
   entryPointAddress: DEFAULT_ENTRYPOINT_ADDRESS,
   defaultValidationModule: module,
@@ -150,7 +150,7 @@ Smart accounts are counterfactual in nature. We know their address before they a
 :::
 
 :::caution
-Before continuing, now that we have our smart account address we need to fund it with some test network tokens! Since we are using the Shibuya network head over to the [Astar Portal](https://portal.astar.network) and use the faucet function to fund your account. If you skip this step you might run into the [AA21 didn't pay prefund error](https://docs.biconomy.io/troubleshooting/commonerrors)!
+Before continuing, now that we have our smart account address we need to fund it. Since we are using the Polygon Mumbai network head over to the Polygon Faucet and paste in your smart account address and get some test tokens! If you skip this step you might run into the [AA21 didn't pay prefund error](https://docs.biconomy.io/troubleshooting/commonerrors)!
 :::
 Once you have tokens available it is time to start constructing our first userOps for a native transfer.
 
@@ -215,7 +215,7 @@ const wallet = new ethers.Wallet(process.env.PRIVATE_KEY || "", provider);
 
 const bundler: IBundler = new Bundler({
   bundlerUrl: 'https://bundler.biconomy.io/api/v2/80001/nJPK7B3ru.dd7f7861-190d-41bd-af80-6877f74b8f44',     
-  chainId: ChainId.ASTAR_TESTNET,
+  chainId: ChainId.POLYGON_MUMBAI,
   entryPointAddress: DEFAULT_ENTRYPOINT_ADDRESS,
 })
 
@@ -227,7 +227,7 @@ const module = await ECDSAOwnershipValidationModule.create({
   async function createAccount() {
     let biconomyAccount = await BiconomySmartAccountV2.create({
       signer: wallet,
-      chainId: ChainId.ASTAR_TESTNET,
+      chainId: ChainId.POLYGON_MUMBAI,
       bundler: bundler, 
       entryPointAddress: DEFAULT_ENTRYPOINT_ADDRESS,
       defaultValidationModule: module,
@@ -254,7 +254,7 @@ const module = await ECDSAOwnershipValidationModule.create({
       const transactionDetail = await userOpResponse.wait()
     
       console.log("transaction detail below")
-      console.log(`https://shibuya.subscan.io/extrinsic/${transactionDetail.receipt.transactionHash}`)
+      console.log(`https://mumbai.polygonscan.com/tx/${transactionDetail.receipt.transactionHash}`)
     } catch (error) {
       console.log(error)
     }
