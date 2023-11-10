@@ -93,7 +93,7 @@ const bundler: IBundler = new Bundler({
 
 - Now we create an instance of our bundler with the following:
     - a bundler url which you can retrieve from the Biconomy Dashboard
-    - chain ID, in this case we’re using Shibuya testnet
+    - chain ID, in this case we’re using Polygon Mumbai testnet
     - and default entry point address imported from the account package
 
 
