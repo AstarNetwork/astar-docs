@@ -234,7 +234,7 @@ Signing message
   };
 ```
 
-Signing a message is as simple as it looks. Pass a message that needs to be signed, and the method will return an object { messageSigned: "", signature: "" }
+Signing a message is as simple as it looks. Pass a message that needs to be signed, and the method will return an object \{ messageSigned: "", signature: "" \}
 
 messageSigned: message that was signed. 
 

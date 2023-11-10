@@ -58,7 +58,7 @@ sudo nano /etc/systemd/system/astar.service
 ## Service parameters
 
 :::tip
-Please make sure to change **{NODE_NAME}**
+Please make sure to change **\{NODE_NAME\}**
 :::
 
 <Tabs>

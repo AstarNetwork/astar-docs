@@ -84,8 +84,8 @@ You will need to send two such calls for both accepting request, and initiating 
 
 To open an HRMP channel with Astar or Shiden you will need to create a proposal on our [forum](https://forum.astar.network/). Create your proposal in the correct category:
 
-- Shiden Network: <https://forum.astar.network/c/shiden/proposal/10>
-- Astar Network: <https://forum.astar.network/c/astar/proposal/20>
+- Shiden Network: [https://forum.astar.network/c/shiden/proposal/10](https://forum.astar.network/c/shiden/proposal/10)
+- Astar Network: [https://forum.astar.network/c/astar/proposal/20](https://forum.astar.network/c/astar/proposal/20)
 
 We have created a template that you can use to post your proposal, which you can find [here](https://astarnetwork.notion.site/Open-HRMP-Channel-Template-166eb1b8202d4439a8c00e4a50fe0d89).
 

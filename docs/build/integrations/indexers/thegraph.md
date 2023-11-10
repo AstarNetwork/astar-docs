@@ -27,7 +27,7 @@ After successfully running an [RPC node](https://docs.astar.network/docs/build/n
 The first step is to clone the [Graph Node repository](https://github.com/graphprotocol/graph-node/):
 
 ```sh
-git clone <https://github.com/graphprotocol/graph-node/> \\
+git clone [https://github.com/graphprotocol/graph-node/](https://github.com/graphprotocol/graph-node/) \\
 && cd graph-node/docker
 ```
 

@@ -17,9 +17,9 @@ Tips are used for native transaction. Tips are an optional transaction fee that 
 
 ## GAS API
 
-- Shibuya: <https://gas.astar.network/api/gasnow?network=shibuya&type=gas>
-- Shiden: <https://gas.astar.network/api/gasnow?network=shiden&type=gas>
-- Astar: <https://gas.astar.network/api/gasnow?network=astar&type=gas>
+- Shibuya: [https://gas.astar.network/api/gasnow?network=shibuya&type=gas](https://gas.astar.network/api/gasnow?network=shibuya&type=gas)
+- Shiden: [https://gas.astar.network/api/gasnow?network=shiden&type=gas](https://gas.astar.network/api/gasnow?network=shiden&type=gas)
+- Astar: [https://gas.astar.network/api/gasnow?network=astar&type=gas](https://gas.astar.network/api/gasnow?network=astar&type=gas)
 
 ## Response
 
@@ -63,9 +63,9 @@ EIP-1559's purpose is essentially to make gas fees more transparent and predicta
 
 ### Tip API
 
-- Shibuya: <https://gas.astar.network/api/gasnow?network=shibuya&type=tip>
-- Shiden: <https://gas.astar.network/api/gasnow?network=shiden&type=tip>
-- Astar: <https://gas.astar.network/api/gasnow?network=astar&type=tip>
+- Shibuya: [https://gas.astar.network/api/gasnow?network=shibuya&type=tip](https://gas.astar.network/api/gasnow?network=shibuya&type=tip)
+- Shiden: [https://gas.astar.network/api/gasnow?network=shiden&type=tip](https://gas.astar.network/api/gasnow?network=shiden&type=tip)
+- Astar: [https://gas.astar.network/api/gasnow?network=astar&type=tip](https://gas.astar.network/api/gasnow?network=astar&type=tip)
 
 Response
 ```

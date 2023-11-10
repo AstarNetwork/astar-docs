@@ -256,7 +256,7 @@ fn get_reserves(&self) -> (Balance, Balance, Timestamp) {
 
 This method is more of a setter as it will set token address in storage. That's why it takes a `&mut self` as the first argument.    
 As a general rule if a function only takes `&self` then it will not modify the state so it will only be called as a query.
-If the functions takes an `&mut self` it will make state change so can be called as a transaction, and should return a Result<T, E>.
+If the functions takes an `&mut self` it will make state change so can be called as a transaction, and should return a Result\<T, E\>.
 Only factory can call this [function](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L67), but we will add `only_owner` modifier later in this tutorial.
 
 ```rust

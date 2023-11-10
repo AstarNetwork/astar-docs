@@ -91,8 +91,9 @@ Create a dedicated user for the node and move the node binary:
 
 Create a dedicated directory for the chain storage data: `sudo mkdir /var/lib/astar && sudo chown astar:astar /var/lib/astar`
 
-Create the Astar service file changing the name {NODE_NAME}
+Create the Astar service file changing the name \{NODE_NAME\}
 
+```bash
 sudo nano /etc/systemd/system/astar.service
 
     [Unit]
@@ -114,6 +115,7 @@ sudo nano /etc/systemd/system/astar.service
 
     [Install]
     WantedBy=multi-user.target
+```
 
 Save the file: Ctrl+O > Yes
 

@@ -1,6 +1,6 @@
 # Safe Account Abstraction
  
-The Safe{Core} Account Abstraction (AA) SDK aims to bring Account Abstraction to life by integrating Safe with Gelato Relay. This SDK helps developers to abstract the complexity of setting up a smart contract account.
+The Safe\{Core\} Account Abstraction (AA) SDK aims to bring Account Abstraction to life by integrating Safe with Gelato Relay. This SDK helps developers to abstract the complexity of setting up a smart contract account.
 
 **Account Abstraction Kit**
 The AA kit helps user ot create predeterministic smart contract wallets and execute gasless transactions with the Gelato Relay.
