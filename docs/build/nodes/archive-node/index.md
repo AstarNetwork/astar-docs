@@ -6,8 +6,7 @@ import TabItem from '@theme/TabItem';
 ## Overview
 
 An **archive node** stores the history of past blocks. Most of times, an archive node is used as **RPC endpoint**.
-RPC plays a vital role on our network: it connects users and dApps to the blockchain through WebSocket and HTTP endpoints. For example, our [public endpoints](/docs/build/environment
-/endpoints) run archive nodes for anyone to quickly connect to Astar chains.
+RPC plays a vital role on our network: it connects users and dApps to the blockchain through WebSocket and HTTP endpoints. For example, our [public endpoints](/docs/build/environment/endpoints) run archive nodes for anyone to quickly connect to Astar chains.
 
 **DApp projects** need to run their own RPC node as archive to the retrieve necessary blockchain data and not to rely on public infrastructure. Public endpoints respond slower because of the large amount of users connected and are rate limited.
 
