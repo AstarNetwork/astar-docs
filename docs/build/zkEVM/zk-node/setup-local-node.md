@@ -5,7 +5,7 @@ sidebar_label: Setup Local zkNode
 ---
 
 :::warning
-Due to an open [issue](https://github.com/ethereum/go-ethereum/issues/27274) you might have problem running local node.
+Due to an open [issue](https://github.com/ethereum/go-ethereum/issues/27274) you may encounter problems running a local node.
 :::
 
 It's crucial that developers can thoroughly test the network for a developing blockchain technology like **Astar zkEVM** without putting users or themselves at unnecessary risk. Developers should be able to test their smart contracts, experiment with new code, and play around with the network on their local machines.
@@ -33,10 +33,7 @@ After completing this tutorial, you will have the following components running:
 
 The tutorial for current version of the environment requires `go`, `docker` and `docker-compose` to be previously installed on your machine. If you don’t have these installed, check out the links provided below:
 
-- <https://go.dev/doc/install>
-- <https://www.docker.com/get-started>
-- <https://docs.docker.com/compose/install/>
-
+- [https://go.dev/doc/install](https://go.dev/doc/install)- [https://www.docker.com/get-started](https://www.docker.com/get-started)- [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 ### System Requirements
 
 - zkEVM Node: 16GB RAM with 4-core CPU
@@ -147,16 +144,13 @@ To configure your MetaMask to use your local zkEVM environment, follow these ste
 4. Click on **Add Network** button
 5. Fill up the L2 network information
     * **Network Name:** Astar zkEVM - Local
-    * **New RPC URL:** <http://localhost:8123>
-    * **ChainID:** 1001
+    * **New RPC URL:** [http://localhost:8123](http://localhost:8123)    * **ChainID:** 1001
     * **Currency Symbol:** ETH
-    * **Block Explorer URL:** <http://localhost:4000>
-6. Click on **Save**
+    * **Block Explorer URL:** [http://localhost:4000](http://localhost:4000)6. Click on **Save**
 7. Click on **Add Network** button
 8. Fill up the L1 network information
     * **Network Name:** Geth - Local
-    * **New RPC URL:** <http://localhost:8545>
-    * **ChainID:** 1337
+    * **New RPC URL:** [http://localhost:8545](http://localhost:8545)    * **ChainID:** 1337
     * **Currency Symbol:** ETH
 9. Click on **Save**
 

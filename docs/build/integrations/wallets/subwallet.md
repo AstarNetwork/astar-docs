@@ -6,10 +6,10 @@ sidebar_position: 2
 
 ## Overview
 
-SubWallet, Polkadot{.js}, and Talisman extensions allow dApps to connect to them via public interaction with the `injectedWeb3` object of the window browser.
+SubWallet, Polkadot\{.js\}, and Talisman extensions allow dApps to connect to them via public interaction with the `injectedWeb3` object of the window browser.
 
 - SubWallet (public with properties `subwallet-js`)
-- Polkadot{.js} (public with properties `polkadot-js`)
+- Polkadot\{.js\} (public with properties `polkadot-js`)
 - Talisman (public with properties `talisman`)
 
 ![20](img/20.png)
@@ -23,9 +23,9 @@ You can open the `injectedWeb3` object in your browser's devtools.
 :::info
 Refer to these examples:
 
-- Github Repository <https://github.com/Koniverse/SubConnect>
-- Demo App: <https://connect.subwallet.app/>
-- Video Demo: <https://bit.ly/38QhmfI>
+- Github Repository [https://github.com/Koniverse/SubConnect](https://github.com/Koniverse/SubConnect)
+- Demo App: [https://connect.subwallet.app/](https://connect.subwallet.app/)
+- Video Demo: [https://bit.ly/38QhmfI](https://bit.ly/38QhmfI)
   :::
 
 - Check the extension is active:

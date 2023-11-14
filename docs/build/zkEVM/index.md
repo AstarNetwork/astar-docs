@@ -1,12 +1,10 @@
-import introduction from "/docs/build/img/evm.png" 
+import introduction from "/docs/build/img/buildZkEvm.png" 
 
 # Build on Astar zkEVM
 
 <div style={{textAlign: 'center'}}>
     <img src={introduction} style={{width: 1200}} />
 </div>
-
-To make use of this documentation effectively, you should possess a general understanding of programming basics. The programming languages used throughout are mainly Solidity and JavaScript, for which previous knowledge is not necessary, but would be highly beneficial. 
 
 ## What is Astar zkEVM?
 

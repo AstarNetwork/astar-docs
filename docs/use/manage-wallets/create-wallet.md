@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Create an Astar Wallet
@@ -32,27 +32,27 @@ Through our portal, you can connect to different networks in the Astar ecosystem
 
 <img width="500" alt="2" src="https://user-images.githubusercontent.com/77480847/186842212-fa88eef0-b768-448e-995f-cc5834eb7c88.png" />
 
-## Recommend: Polkadot{.js} Browser Plugin
+## Recommend: Polkadot\{.js\} Browser Plugin
 
-The Polkadot{.js} plugin provides a reasonable balance of security and usability. It provides a separate local mechanism to generate your address and interact with the Astar portal. We recommend users who are new to our ecosystem and want to create an Astar native address use this wallet. If you don't have the Polkadot JS extension you will receive a popup in our portal when you try to connect your wallet.
+The Polkadot\{.js\} plugin provides a reasonable balance of security and usability. It provides a separate local mechanism to generate your address and interact with the Astar portal. We recommend users who are new to our ecosystem and want to create an Astar native address use this wallet. If you don't have the Polkadot JS extension you will receive a popup in our portal when you try to connect your wallet.
 
 ### Install the Browser Plugin
 
-The browser plugin is available for both [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (and Chromium-based browsers like Brave) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension). After installing the plugin, you should see the orange and white Polkadot{.js} logo in your browser menu bar.
+The browser plugin is available for both [Google Chrome](https://chrome.google.com/webstore/detail/polkadot%7Bjs%7D-extension/mopnmbcafieddcagagdcbnhejhlodfdd?hl=en) (and Chromium-based browsers like Brave) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/polkadot-js-extension). After installing the plugin, you should see the orange and white Polkadot\{.js\} logo in your browser menu bar.
 
 ![4](img/4.png)
 
 ### Create Account
 
-Open the Polkadot{.js} browser extension by clicking the logo on the top bar of your browser. You will see a browser popup.
+Open the Polkadot\{.js\} browser extension by clicking the logo on the top bar of your browser. You will see a browser popup.
 
 ![6](img/6.png)
 
-Click the big plus button - "Create new account". The Polkadot{.js} plugin will then use system randomness to make a new seed for you and display it to you in the form of twelve words.
+Click the big plus button - "Create new account". The Polkadot\{.js\} plugin will then use system randomness to make a new seed for you and display it to you in the form of twelve words.
 
 ![7](img/7.png)
 
-You should back up these words. Please, store the seed somewhere safe, secret, and secure. If you cannot access your account via Polkadot{.js} for some reason, you can re-enter your seed through the "Add account menu" by selecting "Import account from pre-existing seed".
+You should back up these words. Please, store the seed somewhere safe, secret, and secure. If you cannot access your account via Polkadot\{.js\} for some reason, you can re-enter your seed through the "Add account menu" by selecting "Import account from pre-existing seed".
 
 ![8](img/8.png)
 

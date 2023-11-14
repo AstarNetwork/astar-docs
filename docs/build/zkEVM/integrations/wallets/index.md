@@ -1,8 +1,5 @@
 # Wallets
-:::info
-Coming soon...
-:::
 
 ## Overview
 
-Majority of EVM wallets will be compatible with the Astar zkEVM. 
+The majority of EVM wallets are compatible with Astar zkEVM. 

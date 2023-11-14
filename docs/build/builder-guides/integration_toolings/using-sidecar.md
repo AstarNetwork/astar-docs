@@ -12,7 +12,7 @@ The Substrate API Sidecar is a REST service that makes it easy to interact with 
 
 Instead of having to use the Substrate RPC directly and rely on libraries like `Astar.js` or `Polkadot.js`, you can set up a Substrate API server and interact with the blockchain. For example, you can read block history, listen to events, or submit a transaction, all through a REST API server.
 
-The source code for the Substrate Sidecar API can be found here: <https://github.com/paritytech/substrate-api-sidecar>.
+The source code for the Substrate Sidecar API can be found here: [https://github.com/paritytech/substrate-api-sidecar](https://github.com/paritytech/substrate-api-sidecar).
 Please refer to the README of the repository for more information. 
 
 Below we will quickly walk through setting up a Substrate API Sidecar.

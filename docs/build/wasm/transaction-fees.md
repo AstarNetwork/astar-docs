@@ -14,8 +14,6 @@ As is also the case with Substrate, `pallet-contracts` uses [weightV2][weight] t
 Gas = Weight = (refTime, proofSize)
 :::
 
-Note: Currently Astar only charge for refTime (execution time). ProofSize is a threshold (with a max value epr block) to prevents form PoV attack.
-
 [Transaction Weight in Substrate Documentation][weight]
 
 ## Storage Rent

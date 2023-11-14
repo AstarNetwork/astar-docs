@@ -10,7 +10,7 @@ A Substrate ecological explorer that not only allows ordinary users to view WASM
 ## Prerequisites
  - [Subscan WASM smart contract dashboard for Astar network](https://astar.subscan.io/wasm_contract_dashboard)
  - Basic WASM smart contract knowledge
- - polkadot{.js} extension (optional, it's used to call WASM smart contract)
+ - polkadot\{.js\} extension (optional, it's used to call WASM smart contract)
 
 ## Getting started
 
@@ -48,7 +48,7 @@ After compiling contract in docker, you need to fill in the Contract Verificatio
 ![verified_contract](./img/subscan/verified_contract.png)
 
 ### Read/Call WASM Smart Contract
-Visit [Contract tab in contract detail](https://astar.subscan.io/wasm_contract/aBmKPunRKt9VaW6AuMS8ZUhpSYZqHJHYKhvjdNb1M4VQgqS?tab=contract&contractTab=read). Please note that read/call features only apply to verified WASM smart contract, and you need to connect to polkadot{.js} extension before calling contract.
+Visit [Contract tab in contract detail](https://astar.subscan.io/wasm_contract/aBmKPunRKt9VaW6AuMS8ZUhpSYZqHJHYKhvjdNb1M4VQgqS?tab=contract&contractTab=read). Please note that read/call features only apply to verified WASM smart contract, and you need to connect to Polkadot\{.js\} extension before calling contract.
 
 ![read_call](./img/subscan/read_call.png)
 

@@ -8,11 +8,11 @@ sidebar_position: 1
 
 A guide on how to transfer assets from Ethereum & Binance Smart Chain to the Astar ecosystem. Make sure you have some ASTR to pay gas fees before bridging. You can buy ASTR token on exchanges.
 
-<https://www.coingecko.com/en/coins/astar>
+[https://www.coingecko.com/en/coins/astar](https://www.coingecko.com/en/coins/astar)
 
 ## Product Page
 
-<https://cbridge.celer.network/#/transfer>
+[https://cbridge.celer.network/#/transfer](https://cbridge.celer.network/#/transfer)
 
 
 ## Contracts
@@ -48,7 +48,7 @@ This is the address that you should use when you withdraw ASTR tokens from excha
 
 In this tutorial we will demonstrate how to bridge USDC from Ethereum to Astar. By doing so, you will be adding liquidity to our network, which benefits the ecosystem overall, and for which we convey our deepest gratitude.
 
-Visit cBridge <https://cbridge.celer.network/#/transfer> and input a currency you would like to transfer.
+Visit cBridge [https://cbridge.celer.network/#/transfer](https://cbridge.celer.network/#/transfer) and input a currency you would like to transfer.
 
 ![3](img/3.png)
 

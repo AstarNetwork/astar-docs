@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Gaining an understanding of the material covered in this section will allow you to debug quickly and easily, should you run into issues. 
 
-Developers can interact with Polkadot and its parachains using the [Polkadot{.js}](https://polkadot.js.org) portal. Let's run through a few simple tasks to help you get accustomed to the interface. 
+Developers can interact with Polkadot and its parachains using the [Polkadot\{.js\}](https://polkadot.js.org) portal. Let's run through a few simple tasks to help you get accustomed to the interface. 
 
 First, visit the Polkadot apps portal, and switch to an Astar node by selecting Astar under **Polkadot & Parachains** and press Switch. You will be able to toggle network selection by clicking on the network name in the top left.
 

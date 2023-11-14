@@ -1,15 +1,15 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
+const {themes} = require('prism-react-renderer');
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 const math = require('remark-math');
 const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Astar Docs',
-  tagline: 'Your one-stop shop for everything Astar',
+  tagline: 'A comprehensive library of useful information about Astar Network',
   url: 'https://docs.astar.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -18,6 +18,10 @@ const config = {
   organizationName: 'AstarNetwork', // Usually your GitHub org/user name.
   projectName: 'astar-docs', // Usually your repo name.
   plugins: ['docusaurus-plugin-sass'],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
@@ -140,7 +144,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: 'https://medium.com/astar-network',
+                to: 'https://astar.network/blog',
               },
               {
                 label: 'GitHub',
