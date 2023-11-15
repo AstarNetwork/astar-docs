@@ -233,10 +233,6 @@
     "message": "行の折り返しを切り替える",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
-  "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
-    "message": "サイドバーのカテゴリー'{label}'を切り替える",
-    "description": "The ARIA label to toggle the collapsible sidebar category"
-  },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "言語",
     "description": "The label for the mobile language switcher dropdown"
@@ -416,7 +412,7 @@
     "message": "Explains how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network."
   },
   "Learn About Astar zkEVM": {
-    "message": "Learn About Astar zkEVM"
+    "message": "Learn About Astar zkEVM - Japanese translation"
   },
   "Explains the zkEVM, FAQs, and how to interact with Astar's scalability solution for Ethereum, powered by Polygon CDK.": {
     "message": "Explains the zkEVM, FAQs, and how to interact with Astar's scalability solution for Ethereum, powered by Polygon CDK."
@@ -442,5 +438,40 @@
   },
   "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.": {
     "message": "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network."
+  },
+  "Learn About Astar Network": {
+    "message": "Learn About Astar Network. Japanese"
+  },
+  "Explains our foundations and provides comprehensive insights into the inner workings of Astar network.": {
+    "message": "Explains our foundations and provides comprehensive insights into the inner workings of Astar network. Japanese"
+  },
+  "Find all the resources you need to start testing, deploying, and interacting with smart contracts on Astar networks.": {
+    "message": "Find all the resources you need to start testing, deploying, and interacting with smart contracts on Astar networks."
+  },
+  "Build on Astar zkEVM": {
+    "message": "Build on Astar zkEVM"
+  },
+  "Jump right into building on Astar zkEVM the Layer 2 scaling solution for Ethereum, powered by Polygon CDK.": {
+    "message": "Jump right into building on Astar zkEVM the Layer 2 scaling solution for Ethereum, powered by Polygon CDK."
+  },
+  "theme.admonition.warning": {
+    "message": "警告",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Expand sidebar category '{label}'",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Collapse sidebar category '{label}'",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.unlistedContent.title": {
+    "message": "Unlisted page",
+    "description": "The unlisted content banner title"
+  },
+  "theme.unlistedContent.message": {
+    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
+    "description": "The unlisted content banner message"
   }
 }
