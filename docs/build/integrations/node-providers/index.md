@@ -7,9 +7,10 @@ If you are an active developer you should consider creating your own endpoint, a
 /archive-node/) for more information, or obtain an API key from one of our infrastructure providers, listed below:
 
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
+
