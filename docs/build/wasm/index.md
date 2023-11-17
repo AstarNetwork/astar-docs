@@ -6,9 +6,10 @@ The **Wasm** section covers the Wasm stack on Astar/Shiden, some more advanced t
 
 If you would like to start building right away, we encourage you to check out [**Swanky Suite**](./swanky-suite) - The all-in-one tool for Wasm smart contract developers within the Polkadot ecosystem.
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
+

@@ -23,10 +23,11 @@ Although it significantly enhances wallet functionality, it's important to note 
 
 For more information about Web3Auth check out their [official documentation](https://web3auth.io/docs/what-is-web3auth)
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
+
 
