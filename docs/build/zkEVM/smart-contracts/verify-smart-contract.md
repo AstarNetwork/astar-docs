@@ -5,8 +5,7 @@ sidebar_label: Verify Contracts
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import jsoninput from '/docs/build/zkEVM/smart-contracts/figures/json.png';
-import inputobject from '/docs/build/zkEVM/smart-contracts/figures/input-object.png';
+import Figure from '/src/components/figure'
 
 Once a smart contract is deployed to zKatana testnet, it can be verified in various ways depending on the framework of deployment as well as the complexity of the contract. The aim here is to use examples to illustrate how you can manually verify a deployed smart contract. 
 
@@ -58,7 +57,7 @@ Copy the contents of the new `flattened.sol` file and paste into the `Contract  
 <TabItem value="remix" label="Remix">
 In order to flatten the contract code with Remix, one needs to only right-click on the contract name and select **Flatten** option from the drop-down menu that appears. See the below figure for reference.
 
-![Selecting the flatten code option](figures/flatten-code-remix.png)
+<Figure caption="Selecting the flatten code option" src={require('/docs/build/zkEVM/smart-contracts/img/flatten-code-remix.png').default} width="100%" />
 
 After selecting **Flatten**, a new `.sol` file with the suffix `_flatten.sol` is automatically created. Copy the contents of the new `<Original-Name>_flatten.sol` file and paste into the `Contract  code` field in the explorer.
 </TabItem>
@@ -94,17 +93,13 @@ Click **Next** after selecting the **via Standard JSON Input** option.
 
 1. For Hardhat project go to the `src/build-info` folder and open the `.json` file.
 
-<div style={{textAlign: 'center'}}>
-  <img src={jsoninput} style={{width: 400}} />
-</div>
+<Figure src={require('/docs/build/zkEVM/smart-contracts/img/json.png').default} width="35%" />
 
 2. Find the `input` JSON object. Format the json file to make it more readable.
 
 3. Copy the only `input` JSON object value into a new file
 
-<div style={{textAlign: 'center'}}>
-  <img src={inputobject} style={{width: 400}} />
-</div>
+<Figure src={require('/docs/build/zkEVM/smart-contracts/img/input-object.png').default} width="35%" />
 
 4. Drag and drop this new file into **Drop file or Click here** field.
 

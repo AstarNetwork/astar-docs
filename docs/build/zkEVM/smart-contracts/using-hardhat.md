@@ -3,6 +3,7 @@ sidebar_position: 3
 title: Deploy Smart Contracts Using Hardhat
 sidebar_label: Deploy Using Hardhat
 ---
+import Figure from '/src/components/figure'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -19,7 +20,7 @@ Start with creating an npm project by going to an empty folder, running `npm ini
 
 To create the sample project, run `npx hardhat init` in your project folder:
 
-![Hardhat init screen](figures/hardhat-init.png)
+<Figure src={require('/docs/build/zkEVM/smart-contracts/img/hardhat-init.png').default} width="100%" />
 
 - **Press** `<ENTER>` choose javascript, typescript or empty project
 - **Press** `<ENTER>` to set the project root 

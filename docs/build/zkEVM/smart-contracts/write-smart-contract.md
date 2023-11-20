@@ -4,6 +4,8 @@ title: Writing Smart Contracts using OpenZeppelin Wizard
 sidebar_label: Write A Contract
 ---
 
+import Figure from '/src/components/figure'
+
 This document explains how to automatically write any smart contract using the OpenZeppelin Wizard. The resulting smart contract code can either be integrated with Remix by Clicking the **Open in Remix** button, or copied to clipboard and pasted in the user's intended IDE.
 
 ## Getting Started
@@ -41,4 +43,4 @@ With the resulting lines of code, you now have the NFT token contract written in
 
 The below figure depicts the auto-written NFT smart contract code.
 
-![The End-Product NFT Source Code](figures/end-product-nft-code.png)
+<Figure caption="The End-Product NFT Source Code" src={require('/docs/build/zkEVM/smart-contracts/img/end-product-nft-code.png').default} width="100%" />
