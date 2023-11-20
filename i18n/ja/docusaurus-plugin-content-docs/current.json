@@ -254,5 +254,57 @@
   "sidebar.tutorialSidebar.category.Migrating from Web2 to Web3": {
     "message": "Migrating from Web2 to Web3",
     "description": "The label for category Migrating from Web2 to Web3 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tokenomics 2.0": {
+    "message": "Tokenomics 2.0",
+    "description": "The label for category Tokenomics 2.0 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.EVM Guides": {
+    "message": "EVM Guides",
+    "description": "The label for category EVM Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.ChainIDE for Astar WASM": {
+    "message": "ChainIDE for Astar WASM",
+    "description": "The label for category ChainIDE for Astar WASM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.ChainIDE for Astar EVM": {
+    "message": "ChainIDE for Astar EVM",
+    "description": "The label for category ChainIDE for Astar EVM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Account Abstraction": {
+    "message": "Account Abstraction",
+    "description": "The label for category Account Abstraction in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Biconomy Account Abstraction SDK": {
+    "message": "Biconomy Account Abstraction SDK",
+    "description": "The label for category Biconomy Account Abstraction SDK in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Smart Contracts": {
+    "message": "Smart Contracts",
+    "description": "The label for category Smart Contracts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.zkNode": {
+    "message": "zkNode",
+    "description": "The label for category zkNode in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Web3Auth": {
+    "message": "Web3Auth",
+    "description": "The label for category Web3Auth in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Relayers": {
+    "message": "Relayers",
+    "description": "The label for category Relayers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Automation & Off-Chain Data": {
+    "message": "Automation & Off-Chain Data",
+    "description": "The label for category Automation & Off-Chain Data in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Bridges & Relays": {
+    "message": "Bridges & Relays",
+    "description": "The label for category Bridges & Relays in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Indexers": {
+    "message": "Indexers",
+    "description": "The label for category Indexers in sidebar tutorialSidebar"
   }
 }

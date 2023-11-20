@@ -26,5 +26,9 @@
   "item.label.Start Building": {
     "message": "Start Building",
     "description": "Navbar item with label Start Building"
+  },
+  "item.label.zkEVM": {
+    "message": "zkEVM",
+    "description": "Navbar item with label zkEVM"
   }
 }
