@@ -25,7 +25,7 @@
   },
   "link.item.label.Blog": {
     "message": "Blog",
-    "description": "The label of footer link with label=Blog linking to https://medium.com/astar-network"
+    "description": "The label of footer link with label=Blog linking to https://astar.network/blog"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",

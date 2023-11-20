@@ -18,9 +18,10 @@ Meta transactions allow users to perform Ethereum transactions without having ET
 
 
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
+

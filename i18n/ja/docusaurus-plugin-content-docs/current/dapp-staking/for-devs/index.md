@@ -9,7 +9,8 @@
 - dApp Staking に登録するためには、Shiden Networkの場合は100SDN、Astar Networkの場合は1,000ASTRが必要となります。 テストネットであるShibuyaの場合は、100SBYが必要です。
 - **リワードを受け取るためにはClaimする必要があります。１週間に一回程度Claimすることを推奨しています。**
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 ```

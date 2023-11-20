@@ -15,9 +15,10 @@ Please take the following parameters into consideration:
 
 Other pages that can be of interest:
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
+

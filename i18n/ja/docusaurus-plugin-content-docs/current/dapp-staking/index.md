@@ -64,9 +64,10 @@ Astar 上の dApp Staking の取り組みは、私たちの#Build2Earn プログ
 
 今後、Astar/Shiden Network で構築される重要なプロジェクトの詳細を発表していく予定です。 私たちは、あなたも dApp Staking に参加して、明日のWeb3インターネットの構築に貢献できるように、Astar/Shidenトークンをステークする方法についての詳細をステップバイステップで説明します。
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
+

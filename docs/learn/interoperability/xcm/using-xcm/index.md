@@ -9,9 +9,10 @@ The most frequently encountered scenario involves users transferring their **DOT
 
 In this section, we will describe the technical details of XCM so that developers can leverage it in their dApps. Do note that Astar/Polkadot and Shiden/Kusama examples are interchangeable as the features are supported on both networks.
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
+

@@ -64,9 +64,8 @@ Our dApp staking initiative on Astar is foundational to our #Build2Earn program 
 
 In the coming days, we will be announcing more details about important projects being built on Astar/Shiden Network. We will also be sharing step-by-step details on how to stake your Astar/Shiden tokens so that you too can partake in dApp staking, and help build the Web3 internet of tomorrow.
 
-```mdx-code-block
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```

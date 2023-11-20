@@ -9,9 +9,10 @@ For example, to build and test Wasm smart contracts, an ink! Environment with a 
 
 When you are ready to deploy a smart contract to production, you can use the information contained within this section to configure an RPC endpoint.
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
+

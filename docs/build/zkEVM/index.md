@@ -22,10 +22,9 @@ Astar zkEVM is an Ethereum Layer-2 scaling solution leveraging Polygon's Chain D
 
 The following sections walk through the process of setting up a development environment and introduce common tools and partner services useful for powering highly scalable dApps and seamless user onboarding experiences on the Astar zkEVM.
 
+<br/>
 
-```mdx-code-block
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
