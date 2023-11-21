@@ -46,7 +46,7 @@ Choose OS > Other general-purpose OS > Ubuntu > Ubuntu Server 22.04.2 LTS (64-bi
 
 Choose storage > select the USB disk
 
-If advance menu doesn't show up, open it with Ctrl + Shift + X
+If advance menu doesn't show up, open it with `Ctrl + Shift + X`
 
 Set hostname, enable SSH, user and wireless LAN
 
@@ -60,7 +60,7 @@ SSH to the Pi from your computer
 - On Linux/Mac: `ssh user@pi_name.local`
 - On Windows, you will need a SSH client like PuTTY
 
-Check that partition / uses the full size of the disk: `lsblk`
+Check that partition `/` uses the full size of the disk: `lsblk`
 
 Update and upgrade the OS with latest packages: `sudo apt update && sudo apt upgrade`
 
@@ -68,10 +68,12 @@ Install package required: `sudo apt install -y adduser libfontconfig1`
 
 To prevent Out Of Memory issues, create a swap file
 
-    sudo fallocate -l 4g /file.swap
-    sudo chmod 600 /file.swap
-    sudo mkswap /file.swap
-    sudo swapon /file.swap
+```bash
+sudo fallocate -l 4g /file.swap
+sudo chmod 600 /file.swap
+sudo mkswap /file.swap
+sudo swapon /file.swap
+```
 
 Add swap file to fstab so that swap will be loaded on reboot: `echo '/file.swap none swap sw 0 0' | sudo tee -a /etc/fstab`
 
@@ -81,15 +83,23 @@ Get the `aarch64` binary link from Astar release page: https://github.com/AstarN
 
 Download and unarchive ARM binary (example here with v5.21.0)
 
-    wget https://github.com/AstarNetwork/Astar/releases/download/v5.21.0/astar-collator-v5.21.0-ubuntu-aarch64.tar.gz && tar -xf astar-collator*.tar.gz
+```bash
+wget https://github.com/AstarNetwork/Astar/releases/download/v5.21.0/astar-collator-v5.21.0-ubuntu-aarch64.tar.gz && tar -xf astar-collator*.tar.gz
+```
 
 Create a dedicated user for the node and move the node binary:
 
-    sudo useradd --no-create-home --shell /usr/sbin/nologin astar
-    sudo mv ./astar-collator /usr/local/bin
-    sudo chmod +x /usr/local/bin/astar-collator
+```bash
+sudo useradd --no-create-home --shell /usr/sbin/nologin astar
+sudo mv ./astar-collator /usr/local/bin
+sudo chmod +x /usr/local/bin/astar-collator
+```
 
-Create a dedicated directory for the chain storage data: `sudo mkdir /var/lib/astar && sudo chown astar:astar /var/lib/astar`
+Create a dedicated directory for the chain storage data: 
+
+```bash
+sudo mkdir /var/lib/astar && sudo chown astar:astar /var/lib/astar
+```
 
 Create the Astar service file changing the name \{NODE_NAME\}
 
