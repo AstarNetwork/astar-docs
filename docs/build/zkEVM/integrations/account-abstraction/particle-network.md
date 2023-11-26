@@ -6,7 +6,7 @@ import Figure from '/src/components/figure'
 
 # Particle Network Smart Wallet-as-a-Service
 
-[**Particle Network**](https://particle.network) is the Intent-Centric, Modular Access Layer of Web3. With Particle's Smart Wallet-as-a-Service, developers can curate an unparalleled user experience through modular and customizable EOA/AA embedded wallet components. Using MPC-TSS for key management, Particle can streamline user onboarding via familiar Web2 accounts—such as Google accounts, email addresses, and phone numbers.
+[**Particle Network**](https://particle.network) is the Intent-Centric, Modular Access Layer of Web3. With Particle's [Smart Wallet-as-a-Service Modular Stack](https://blog.particle.network/announcing-our-smart-wallet-as-a-service-modular-stack-upgrading-waas-with-erc-4337/), developers can curate an unparalleled user experience through modular and customizable EOA/AA embedded wallet components. Using MPC-TSS for key management, Particle can streamline user onboarding via familiar Web2 accounts—such as Google accounts, email addresses, and phone numbers.
 
 Particle supports Astar zkEVM Testnet through both EOA interactions and native ERC-4337 SimpleAccount implementations.
   
@@ -89,7 +89,7 @@ const smartAccount = new SmartAccount(new ParticleProvider(particle.auth), {
   }
 });
 ```
-At this point, you've signed up and created an application, installed all required dependencies, and configured `ParticleNetwork`, along with `SmartAccount` if applicable.
+At this point, you've signed up to the Particle dashboard and created an application, installed all required dependencies, and configured `ParticleNetwork`, along with `SmartAccount` if applicable.
 
 ## Example of utilization
 
