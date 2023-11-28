@@ -55,38 +55,38 @@ Install with yarn:
 yarn global add @graphprotocol/graph-cli
 ```
 
-<Figure caption="yarn install" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph13-yarngraphcli.png').default} width="50%" />
+<Figure caption="yarn install" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph13-yarngraphcli.png').default} width="100%" />
 
 Install with npm:
 
 ```js
 npm install -g @graphprotocol/graph-cli
 ```
-<Figure caption="npm install" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph12-installgraphcli.png').default} width="50%" />
+<Figure caption="npm install" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph12-installgraphcli.png').default} width="65%" />
 
 ## Create a New Subgraph
 
 Login to [Subgraph Studio](https://thegraph.com/studio/) with your Github account, and connect your wallet:
 
-<Figure caption="Connect your wallet" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph2-connectwallet.png').default} />
+<Figure caption="Connect your wallet" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph2-connectwallet.png').default} width="100%" />
 
 <Figure caption="Choose wallet" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph3-connectwallet2.png').default} width="65%"/>
 
 API keys are required to use subgraphs. Click on the **API Keys** tab and then create an API Key:
 
-<Figure caption="Click Create API Key" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph5-createfirstAPI.png').default} />
+<Figure caption="Create API Key" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph5-createfirstAPI.png').default} width="100%" />
 
 <Figure caption="Choose an appropriate name" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph6-createAPIkey.png').default} width="35%"/>
 
 <Figure caption="Bonus for new users" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph7-freequeries.png').default} width="35%"/>
 
-<Figure caption="The API Keys tab" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph8-subgraphstudio.png').default} />
+<Figure caption="The API Keys tab" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph8-subgraphstudio.png').default} width="100%" />
 
 Now, return to the **My Subgraphs** tab and create a subgraph. In this example we are using Ethereum Goerli testnet, but you should be able to choose zKatana testnet:
 
 <Figure caption="Create Subgraph" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph9-createsubgraph.png').default} width="35%"/>
 
-<Figure caption="New subgraph details" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph10-subgraph.png').default} />
+<Figure caption="New subgraph details" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph10-subgraph.png').default} width="85%" />
 
 At this point, the new subgraph is ready to initialize.
 
@@ -106,13 +106,15 @@ graph init \
   [--abi <FILE>] \
   <SUBGRAPH_SLUG> [<DIRECTORY>]
 ```
+
 The `<SUBGRAPH_SLUG>` is the ID of your subgraph in Subgraph Studio, it can be found on your subgraph details page.
 
-If any of the optional arguments are missing, it takes you through an interactive form, shown below:
+If any of the optional arguments are missing, it takes you through an interactive mode, shown below:
 
 <Figure src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph11-initializesubgraph.png').default} width="50%" />
 
-Add New dataSources To An Existing Subgraph⁠#Link to this section
+## Add New dataSources To An Existing Subgraph
+
 Since v0.31.0 the graph-cli supports adding new dataSources to an existing subgraph through the graph add command.
 
 ```js
