@@ -13,9 +13,9 @@ Projects with complex smart contracts such as Uniswap and NFT projects like Bore
 
 In the case of Bored Ape Yacht Club, it's possible to perform basic read operations on the contract such as getting the owner of a certain Ape, getting the content URI of an Ape based on their ID, or the total supply, as these read operations are programmed directly into the smart contract. More advanced real-world queries and operations like aggregation, search, relationships, and non-trivial filtering however are *not possible.* For example, if we would like to query all Apes owned by a certain address and filter results by one of its characteristics, we cannot rely on the contract itself; it cannot provide historical information.
 
-To obtain this kind of data, you would need to process every transfer event ever emitted from the BAYC smart contract, read the metadata from IPFS using the Token ID and IPFS hash, and then aggregate all the results. Put simply, to answer these kinds of (relatively) simple questions, it would take *hours* or even *days* for a decentralized application (dApp) running in a browser to obtain an answer.
+To obtain this kind of data, we would need to process every transfer event ever emitted from the BAYC smart contract, read the metadata from IPFS using the Token ID and IPFS hash, and then aggregate all the results. Put simply, to answer these kinds of (relatively) simple questions, it would take *hours* or even *days* for a decentralized application running in a browser to obtain a result.
 
-As a solution, you could build a server to process the transactions, save them to a database, and then build an API endpoint on top to query the data. However, this opens up a whole new can of worms, which is why The Graph exists.
+As a solution, a server could be used to process the transactions and save them to a database, and then an API endpoint can be configured on top to query the data. However, this would open up a whole new can of worms, which is why The Graph exists.
 
 ## How do dApps integrate The Graph?
 
