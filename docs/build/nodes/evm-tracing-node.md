@@ -56,12 +56,14 @@ To use tracing on an ancient blocks, you need to add the runtime that was in pla
 
 :::
 
+All Astar previous runtime overrides (prior to release on Github) can be downloaded [here](https://shared-assets.astar.network/files/runtime/astar-tracing-runtimes-3-69.tar.gz). They are necessary if you want to trace transactions on ancient blocks
+
 ## Service parameters
 
 The service file for a tracing node will look like this
 
 :::tip
-Please make sure to change **{NODE_NAME}**
+Please make sure to change **\{NODE_NAME\}**
 :::
 
 <Tabs>
@@ -90,7 +92,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --enable-evm-rpc \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -125,7 +127,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --enable-evm-rpc  \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -159,7 +161,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --enable-evm-rpc  \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10

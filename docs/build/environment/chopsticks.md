@@ -46,7 +46,7 @@ npx @acala-network/chopsticks@latest -c shiden
 ```
 
 and simply examine the local setup by using PJS on it.
-<https://polkadot.js.org/apps/?rpc=ws://localhost:8000#/explorer>
+[https://polkadot.js.org/apps/?rpc=ws://localhost:8000#/explorer](https://polkadot.js.org/apps/?rpc=ws://localhost:8000#/explorer)
 
 ### XCM mode
 

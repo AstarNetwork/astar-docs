@@ -26,8 +26,8 @@ For **offset** 0, this will produce the permissoned asset id: **1844674407370955
 
 To add an XCM asset on Astar or Shiden you will need to create a proposal on our [forum](https://forum.astar.network/). Create your proposal in the correct category:
 
-- Shiden Network: <https://forum.astar.network/c/shiden/proposal/10>
-- Astar Network: <https://forum.astar.network/c/astar/proposal/20>
+- Shiden Network: [https://forum.astar.network/c/shiden/proposal/10](https://forum.astar.network/c/shiden/proposal/10)
+- Astar Network: [https://forum.astar.network/c/astar/proposal/20](https://forum.astar.network/c/astar/proposal/20)
 
 We have created a template that you can use to post your proposal. You can find the template [here](https://astarnetwork.notion.site/XCM-Asset-Registration-Template-ece966dca72d43a38645b54f2fb9f674).
 

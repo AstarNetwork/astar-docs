@@ -50,7 +50,7 @@ in the root of your project directory with following values.
 
 ```toml
 [toolchain]
-channel = "nightly-2023-02-07"
+channel = "1.69.0"
 components = [ "rustfmt", "rust-src" ]
 targets = [ "wasm32-unknown-unknown" ]
 profile = "minimal"

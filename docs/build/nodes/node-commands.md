@@ -35,7 +35,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain astar \
   --base-path /var/lib/astar \
   --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -62,7 +62,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain shiden \
   --base-path /var/lib/astar \
   --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -89,7 +89,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --chain shibuya \
   --base-path /var/lib/astar \
   --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -120,7 +120,7 @@ astar-collator \
 --chain astar \
 --base-path /data \
 --trie-cache-size 0 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -140,7 +140,7 @@ astar-collator \
 --chain shiden \
 --base-path /data \
 --trie-cache-size 0 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -160,7 +160,7 @@ astar-collator \
 --chain shibuya \
 --base-path /data \
 --trie-cache-size 0 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -192,7 +192,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-methods Safe \
   --rpc-max-request-size 1 \
   --rpc-max-response-size 1 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
   
 Restart=always
 RestartSec=10
@@ -222,7 +222,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-methods Safe \
   --rpc-max-request-size 1 \
   --rpc-max-response-size 1 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
   
 Restart=always
 RestartSec=10
@@ -252,7 +252,7 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-methods Safe \
   --rpc-max-request-size 1 \
   --rpc-max-response-size 1 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 
 Restart=always
 RestartSec=10
@@ -287,7 +287,7 @@ astar-collator \
 --rpc-methods Safe \
 --rpc-max-request-size 1 \
 --rpc-max-response-size 1 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -311,7 +311,7 @@ astar-collator \
 --rpc-methods Safe \
 --rpc-max-request-size 1 \
 --rpc-max-response-size 1 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -335,7 +335,7 @@ astar-collator \
 --rpc-methods Safe \
 --rpc-max-request-size 1 \
 --rpc-max-response-size 1 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>

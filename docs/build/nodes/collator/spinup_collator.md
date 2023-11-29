@@ -24,7 +24,7 @@ Collators are responsible for the network stability, it is very important to be 
   --base-path /var/lib/astar \
   --pruning archive \
   --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -38,7 +38,7 @@ Collators are responsible for the network stability, it is very important to be 
   --base-path /var/lib/astar \
   --pruning archive \
   --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>
@@ -52,7 +52,7 @@ Collators are responsible for the network stability, it is very important to be 
   --base-path /var/lib/astar \
   --pruning archive \
   --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 ```
 
 </TabItem>

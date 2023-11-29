@@ -1,34 +1,37 @@
 ---
 sidebar_position: 10
+title: Tokenomics
 ---
-# Tokenomics 
 
-:::note
-This section includes advanced content.
-:::
-
-:::tip
-Astar and Shiden share the same economic model, however some configuration differences are possible.
-Following chapters only focus on Astar and ASTR but also apply to Shiden and its SDN token.
-:::
+import tokenomics from '/docs/learn/img/tokenomics_1.png'
+import inflation from '/docs/learn/img/inflation_1.png'
 
 [Astar Network]: https://astar.network/
 
-[Astar Network] tokenomics model is built around supporting developers via dApp staking. At its core, ASTR token has multiple roles:
+:::note
+This section includes content for advanced users.
+:::
+
+:::tip
+Astar and Shiden share the same economic model, though there were differences in their initial supply configurations.
+The following chapters focus on Astar and ASTR, however, this information also applies to Shiden and SDN token.
+:::
+
+## Overview
+
+In previous chapters we defined the initial ASTR token distribution. However, Astar uses an inflationary tokenomics model (unbound supply) where tokens are issued each time a new block is produced. These tokens power the dApp staking system and are used to reward stakers and collators.
+
+[Astar Network] tokenomics model is built around supporting developers via dApp staking. At its core, ASTR token has a number of utilities:
 
 1. Payment for transaction fees
 2. Staking dApps
 3. dApp staking rewards & collator rewards
 
-## Inflation Model
+### Inflation Model
 
-### Overview
+For each block produced, Astar issues a fixed number of tokens. Initially, these numbers were chosen to generate approximately 10% inflation, based on the initial supply.
 
-Previous chapters defined initial ASTR token distribution. However, Astar uses an inflationary tokenomics model (unbound supply) where tokens are issued each time a new block is produced. These tokens drive the dApp staking system and are used to reward stakers and collators.
-
-For each produced block, Astar issues a fixed number of tokens. Initially, these numbers were picked to achieve approximate 10% inflation of the initial supply.
-
-Since January 2023, Astar inflation has been reduced by 5% to ~665,000,000 ASTR yearly.
+Since January 2023, ASTR inflation has been reduced by 5% to ~665,000,000 ASTR yearly.
 
 | Network | Issued Per Block | Issued Per Era* |
 | ------- | ---------------- | --------------  |
@@ -62,7 +65,9 @@ Treasury receives a variable portion of block reward. It is then allocated to a 
 
 Part of it is dedicated for supporting dApp developers while another part goes towards stakers who locked their ASTR to *stake* or *vote* for a dApp.
 
-![inflation_graphic] (img/inflation_1.png)
+<div style={{textAlign: 'center'}}>
+    <img src={inflation} style={{width: 600}} />
+</div>
 
 ### Model Overview
 
@@ -141,6 +146,11 @@ The following graph is a visualization of the described model.
 * blue line is total staker inflation $total_{staker}$
 * red line is inflation adjusted interest rate $i_{adjusted}$
 
-![tokenomics_model_visualization] (img/tokenomics_1.png)
+<div style={{textAlign: 'center'}}>
+    <figure>
+    <img src={tokenomics} style={{width: 600}} />
+    <figcaption>Model Visualization</figcaption>
+    </figure>
+</div>
 
-You can check the model and configure if yourself [here] (https://www.desmos.com/calculator/cjjkt6smk5).
+You can check this model and configure parameters yourself [here](https://www.desmos.com/calculator/cjjkt6smk5).

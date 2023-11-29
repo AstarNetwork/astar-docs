@@ -53,9 +53,10 @@ Remember, each parachain may expose different data and operations in their Graph
 
 Take a look at these for your own custom GraphQL indexing needs:
 
-```mdx-code-block
+<br/>
+
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-```
+

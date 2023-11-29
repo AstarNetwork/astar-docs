@@ -74,6 +74,8 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 
 </TabItem>
 
+
+
 <TabItem value="shibuya" label="Shibuya Network" default>
 
 |   | Public endpoint Shibuya |
@@ -89,6 +91,20 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 |           | Dwellir: wss://shibuya-rpc.dwellir.com |
 | chainID | 81 |
 | Symbol | SBY |
+
+</TabItem>
+
+<TabItem value="zKatana" label="zKatana Network" default>
+
+|   | Public endpoint zKatana |
+| --- | --- |
+| Network | zKatana (zkEVM testnet) |
+| Parent chain | Sepolia |
+| ChainID | 1261120 |
+| HTTPS | Startale Labs: https://rpc.startale.com/zkatana |
+|         | Gelato: https://rpc.zkatana.gelato.digital |
+| Websocket | Gelato: wss://ws.zkatana.gelato.digital |
+| Symbol | ETH |
 
 </TabItem>
 </Tabs>
