@@ -8,7 +8,7 @@ Layer Zero has been integrated to AstarEVM (Shibuya Parachain) and zkEVM (zKatan
 
 ## LSBY Token
 
-On Shibuya side, the contract used is [NativeOFT](https://github.com/LayerZero-Labs/solidity-examples/blob/main/contracts/token/oft/v2/fee/NativeOFTWithFee.sol). It acts as an ERC0 wrapper contract (the function is payable) so you send Shibuya token to the contract, it then sends a message to the OFT contract in zKatana and mints LSBY.
+On Shibuya side, the contract used is [NativeOFT](https://github.com/LayerZero-Labs/solidity-examples/blob/main/contracts/token/oft/v2/fee/NativeOFTWithFee.sol). It acts as an ERC20 wrapper contract (the function is payable) so you send Shibuya token to the contract, it then sends a message to the OFT contract in zKatana and mints LSBY.
 On zKatana side, the contract is [OFT](https://github.com/LayerZero-Labs/solidity-examples/blob/main/contracts/token/oft/v2/fee/OFTWithFee.sol). This contract acts as the ERC20 SBY synthetic asset on zKatana. It's ticker is LSBY (for LayerZero SBY).
 
 ### Bridging LSBY Tokens
