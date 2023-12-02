@@ -1,5 +1,5 @@
 ---
-title: Astar Bridge
+title: ETH <-> zkEVM Bridge
 ---
 
 import bridge1 from '/docs/build/zkEVM/img/astar-bridge-zKatana-Shibuya1.jpg'
