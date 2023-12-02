@@ -30,13 +30,13 @@ Note: The current method is provisional and specific to testnet environments. Th
 
 1. Fork the [Repository](https://github.com/AstarNetwork/layer-zero-bridge-contracts-testnet)
 
-2. Install dependencies by running `pnpm install`
+2. Install dependencies by running `npm install`
 
 3. Create a .env file (based on the .env.example) in the root directory 
 
 4. Add your [private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key) in the .env file
 
-5. Run `pnpm hardhat compile` to compile the contracts
+5. Run `npm hardhat compile` to compile the contracts
 
 #### Shibuya EVM &rarr; zKatana
 To send 1 SBY from shibuya-testnet to zkatana-testnet, run the following command (Note that the --quantity flag is in wei):
