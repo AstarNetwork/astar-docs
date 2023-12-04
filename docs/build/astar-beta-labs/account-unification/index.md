@@ -132,10 +132,10 @@ Since accounts are dispensable, if a user wishes to change mappings he/she can s
 
 ### Manually transfer the native state (including funds)
 
-Since before unifying the accounts any interactions from EVM to Native side is performed via default derived account, including all the holdings
+Since before unifying the accounts any interaction from the EVM to the Native side is performed via the default derived account, including all the holdings
 of native funds like XC20, dAppStaking rewards (if interacted with staking precompiles), etc, thus they need to be transferred to the new SS58 account before accounts are unified otherwise the funds will be lost. The pallet only handles the transfer of native balances, and all other native assets need to be transferred manually.
 
-Also for EVM smart contract developers, if contract is XVM enabled that call into WASM contract, there should be mechanisms in place to migrate state to a new SS58 account so that users can clear/migrate state before unifying accounts.
+Also for EVM smart contract developers, if a contract is XVM enabled and it calls into a Wasm contract, there should be a mechanism in place to migrate the state to a new SS58 account so that users can do that before unifying accounts.
 
 :::caution
 It is strongly advised to use only the Astar Portal for unifying accounts as it is designed to handle the asset transfer process properly. **If the pallet’s extrinsics are used directly then native funds will be lost forever.**
