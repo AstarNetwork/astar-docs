@@ -133,7 +133,7 @@ Since accounts are dispensable, if a user wishes to change mappings he/she can s
 ### Manually transfer the native state (including funds)
 
 Since before unifying the accounts any interactions from EVM to Native side is performed via default derived account, including all the holdings
-of native funds like XC20, dAppStaking rewards (if interacted with staking precompiles), etc, then they need to be transferred to the new SS58 account before unifying the accounts otherwise the funds will be lost. The pallet only handles the transfer of native balances, and all other native assets need to be transferred manually.
+of native funds like XC20, dAppStaking rewards (if interacted with staking precompiles), etc, thus they need to be transferred to the new SS58 account before accounts are unified otherwise the funds will be lost. The pallet only handles the transfer of native balances, and all other native assets need to be transferred manually.
 
 Also for EVM smart contract developers, if contract is XVM enabled that call into WASM contract, there should be mechanisms in place to migrate state to a new SS58 account so that users can clear/migrate state before unifying accounts.
 
