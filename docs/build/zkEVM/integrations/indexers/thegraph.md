@@ -266,7 +266,7 @@ The important entries to update for the manifest are:
 
 `features`: a list of all used feature names.
 
-`dataSources.source`: the address of the smart contract the subgraph sources, and the ABI of the smart contract to use. The address is optional; omitting it allows to index matching events from all contracts.
+`dataSources.source`: the address of the smart contract the subgraph uses as a source, and the ABI of the smart contract to use. The address is optional; omitting it allows the subgraph to index matching events from all contracts.
 
 `dataSources.source.startBlock`: the optional number of the block that the data source starts indexing from. In most cases, we suggest using the block in which the contract was created.
 
