@@ -76,9 +76,6 @@ button labeled "OK" to continue to the example dApp.
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
   <div style={{ marginRight: '10px' }}>
-    <Figure caption='Review Elevated Permissions' src={require('/docs/use/manage-wallets/wallet-providers/img/07.png').default } width="100%" />
-  </div>
-  <div style={{ marginRight: '10px' }}>
     <Figure caption='Confirm Elevated Permissions' src={require('/docs/use/manage-wallets/wallet-providers/img/08.png').default } width="100%" />
   </div>
   <div>
@@ -86,28 +83,43 @@ button labeled "OK" to continue to the example dApp.
   </div>
 </div>
 
-## Review Account Details
+## Connect the Snap Wallet
 
-The Astar Wallet snap is configured to default to the
-[Shibuya Network](https://wiki.polkadot.network/docs/maintain-networks#westend-test-network),
-which is the official test network of the Astar ecosystem. Notice the address
-& the public key for the account that were derived using the entropy from your
-MetaMask seed phrase. The address will change depending on the selected
-network - for this example, only the Shibuya Network is used. The public key
-does _not_ depend on the network and will always be the same. As with all
-asymmetric cryptography systems, the public key is complemented by a private
-key, which will be used to sign a message in the next step.
+The Astar Snap Wallet is now configured. Notice the address
+was derived using the entropy from your MetaMask seed phrase and the snapId.
+The public key does _not_ depend on the network and will always be the same.
 
-<Figure caption='Account Details' src={require('/docs/use/manage-wallets/wallet-providers/img/10.png').default } width="100%" />
+<Figure caption='Connect' src={require('/docs/use/manage-wallets/wallet-providers/img/10.png').default } width="100%" />
 
-## How to remove
+<Figure caption='Account Details' src={require('/docs/use/manage-wallets/wallet-providers/img/13.png').default } width="100%" />
 
-## How to restore
+## How to Remove
+
+In MetaMask, click on the tripple dot icon on the top right of the extention, then Snap,
+lastly click on **Astar Wallet**, scroll to the bottom and click **Remove Astar Wallet**
+
+This action will not destroy your account or your funds. But deleting your MetaMask account and/or seed could.
+
+<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <div style={{ marginRight: '10px' }}>
+    <Figure caption='Remove Astar Wallet' src={require('/docs/use/manage-wallets/wallet-providers/img/11.png').default } width="100%" />
+  </div>
+  <div>
+    <Figure caption='Remove Snap' src={require('/docs/use/manage-wallets/wallet-providers/img/12.png').default } width="100%" />
+  </div>
+</div>
+
+## How to Restore
+
+Simply reconnect to the [Portal](https://portal.astar.network/) and choose the Astar Snap Wallet again.
+You will obtain the same address as before with all the funds attached.
 
 ## Disclaimer
 
+XCM is not recommended
+
 ## Conclusion
 
-That concludes the Astar Wallet snap Portal dApp demo. If you have any
+That concludes the Astar Wallet snap [Portal](https://portal.astar.network/) install instructions. If you have any
 questions or believe you have found an error or bug, please
 [open an Issue](https://github.com/AstarNetwork/metamask-snap-astar/issues/new).
