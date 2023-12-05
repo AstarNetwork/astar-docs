@@ -6,6 +6,12 @@ sidebar_position: 1
 
 import Figure from '/src/components/figure'
 
+## Introduction
+
+The Astar Wallet Snap extends MetaMask's functionality, specifically for blockchains built with Astar’s Substrate technology, powered by Polkadot. The Astar Wallet Snap enables you to quickly generate a Substrate wallet with MetaMask for signing transactions and interacting with decentralized applications (dApps) that utilize the @polkadot/extension-dapp package. You can seamlessly interact with all dApps in the Astar ecosystem through MetaMask, thereby expanding MetaMask's utility beyond Ethereum and EVM-compatible networks.
+
+## How to install
+
 Follow these steps to interact with the Astar Wallet snap
 [Portal](https://portal.astar.network/). The
 [source code](https://github.com/AstarNetwork/metamask-snap-astar/tree/master/packages/example)
@@ -94,43 +100,14 @@ key, which will be used to sign a message in the next step.
 
 <Figure caption='Account Details' src={require('/docs/use/manage-wallets/wallet-providers/img/10.png').default } width="100%" />
 
-## Acquire Tokens for the Shibuya Test Network
+## How to remove
 
-Go to the token section and click on the faucet button
-for the Shibuya Network. If you are not a robot, check the box
-labeled "I'm not a robot" (the faucet for the Shibuya Network does not currently
-support robots 🤖). Click the button labeled "Confirm".
+## How to restore
 
-Optionally, you can view the transaction (extrinsic) details for the faucet
-transaction. If you'd like to view these details, copy the transaction hash from the notification toast.
-Visit [https://shibuya.subscan.io](https://shibuya.subscan.io) and search for the hash.
-
-Return to the portal dApp and review your account balance - it should be 10
-SBYs.
-
-<Figure caption='Click Faucet Button' src={require('/docs/use/manage-wallets/wallet-providers/img/11.png').default } width="100%" />
-<Figure caption='Review Faucet Confirmation' src={require('/docs/use/manage-wallets/wallet-providers/img/12.png').default } width="100%" />
-<Figure caption='Review Faucet Transaction' src={require('/docs/use/manage-wallets/wallet-providers/img/13.png').default } width="100%" />
-
-## Transfer Tokens to Another Account
-
-Enter a valid Shibuya Network address in the portal dApp's "Transfer" tab and
-field labeled "To" - for example, use the address:
-`aCiXU739xA4wGb8Sipp8T1XhDsfcLACmRFJTSYqCiLqWdJ2`. In the "Transfer" tab, amount field
-labeled "SBY" enter a relatively small (e.g. 10) number that represents the
-number of tokens to transfer. Click the "Transfer" tab button labeled
-"Confirm". Review the MetaMask notification that describes the action that will be
-taken and, if you approve, click the MetaMask button labeled "Approve". After a
-second or two, a dialog with transaction details will appear at the top of
-the page. The transaction details notification toast will appear in the portal
-dApp's and you can click it.
-
-<Figure caption='Enter Account Address' src={require('/docs/use/manage-wallets/wallet-providers/img/18.png').default } width="100%" />
-<Figure caption='Review Faucet Confirmation' src={require('/docs/use/manage-wallets/wallet-providers/img/19.png').default } width="40%" />
-<Figure caption='Review Faucet Transaction' src={require('/docs/use/manage-wallets/wallet-providers/img/20.png').default } width="100%" />
+## Disclaimer
 
 ## Conclusion
 
-That concludes the Astar Wallet snapPortal dApp demo. If you have any
+That concludes the Astar Wallet snap Portal dApp demo. If you have any
 questions or believe you have found an error or bug, please
 [open an Issue](https://github.com/AstarNetwork/metamask-snap-astar/issues/new).
