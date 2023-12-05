@@ -8,7 +8,7 @@ import Figure from '/src/components/figure'
 
 ## Overview: Why is The Graph needed?
 
-[The Graph](https://thegraph.com/en) is a decentralized protocol for indexing and querying data from blockchains. It makes querying fast, reliable, and secure, and allows anyone to build and publish application programming interfaces (APIs) called subgraphs, which act as intermediaries; allowing applications to communicate with one other.
+[The Graph](https://thegraph.com/en) is a decentralized protocol for indexing and querying data from blockchains. It makes querying fast, reliable, and secure, and allows anyone to build and publish application programming interfaces (APIs) called subgraphs, which act as intermediaries; allowing applications to communicate with one another.
 
 ## Prerequisites
 
