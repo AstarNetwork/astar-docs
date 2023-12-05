@@ -2,27 +2,27 @@
 sidebar_position: 4
 ---
 
-# The Graph
+import Figure from '/src/components/figure' 
 
-[The Graph]: https://thegraph.com/en/
+# The Graph
 
 ## Overview: Why is The Graph needed?
 
-[The Graph] is a decentralized protocol for indexing and querying data from blockchains. It makes querying fast, reliable and secure but also allows anyone to build and publish application programming interfaces (APIs) called subgraphs, which act as intermediaries and allow applications to communicate with one other.
+[The Graph](https://thegraph.com/en) is a decentralized protocol for indexing and querying data from blockchains. It makes querying fast, reliable, and secure, and allows anyone to build and publish application programming interfaces (APIs) called subgraphs, which act as intermediaries; allowing applications to communicate with one another.
 
 ## Prerequisites
 
-Before you run The Graph node on a server, you will need:
+Before you run a standalone Graph node, you will need:
 
 - [Docker](https://docs.docker.com/get-docker/): Containerization platform for software solutions.
 - [`docker-compose`](https://docs.docker.com/compose/install/) : Used to automate interactions between docker containers.
 - [JQ](https://stedolan.github.io/jq/download/): JSON processor for graph requests.
 
-In this guide, we will demonstrate how to run an Astar node for getting more insight into the transactions on the blockchain, by providing indexing data to The Graph node.
+In this guide, we will walk through setting up an Astar node to gain more insight into transactions on the blockchain by providing indexing data to a standalone Graph node. 
 
 ## Running a Graph Node
 
-After successfully running an [RPC node](https://docs.astar.network/docs/build/nodes/archive-node/), the Graph node will need to be installed and configured to connect to a separate computer. If you are running a self-signed RPC node, you will need to set up an extra environment variable for allowance.
+After successfully setting up an [RPC node](https://docs.astar.network/docs/build/nodes/archive-node/), the Graph node needs to be installed and configured to connect as a different machine. If you are running a self-signed RPC node, you will need to set up an extra environment variable to allow for this.
 
 The first step is to clone the [Graph Node repository](https://github.com/graphprotocol/graph-node/):
 
@@ -31,15 +31,15 @@ git clone [https://github.com/graphprotocol/graph-node/](https://github.com/grap
 && cd graph-node/docker
 ```
 
-Next, execute the `setup.sh` file. This will pull all the necessary Docker images and write the necessary information to the `docker-compose.yml` file. Do ensure that `docker-compose` and `jq` are installed.
+Next, execute the `setup.sh` file. This will pull all the necessary Docker images and write the necessary information to the `docker-compose.yml` file. Ensure that `docker-compose` and `jq` are installed.
 
 ```sh
 sudo bash ./setup.sh
 ```
 
-After running the command, the tail end of the command should show similar logs as below:
+After running the command, the tail end of the output should be similar to that shown below:
 
-![8](img/8.png)
+<Figure src={require('/docs/build/integrations/indexers/img/8.png').default} width="65%" />
 
 Once everything is set up, you will need to modify the "Ethereum environment" inside the `docker-compose.yml` file, so that the Graph node points to the endpoint of the RPC that you are connecting with. Note that the `setup.sh` file detects the RPC's Host IP and writes its value, so you'll need to modify it accordingly.
 
@@ -73,6 +73,15 @@ nano docker-compose.yml
 
 # modify file and save
 ethereum: 'shibuya:https://<IP address or domain>:<PORT>'
+```
+
+### zKatana
+
+```sh
+# open docker-compose.yml
+nano docker-compose.yml
+# modify file and save
+ethereum: 'zkatana:https://<IP address or domain>:<PORT>'
 ```
 
 For example, if you are building a Graph node for Shiden, the entire `docker-compose.yml` now should appear as below:
@@ -128,4 +137,10 @@ sudo docker-compose up
 
 When everything is set up the log will appear as below:
 
-![9](img/9.png)
+<Figure src={require('/docs/build/integrations/indexers/img/9.png').default} width="100%" />
+
+For more information and advanced node configuration, consult The Graph [official documentation](https://thegraph.com/docs/en/developing/developer-faqs/)
+
+## Define a Subgraph
+
+To start using the Graph node you can now follow the walkthrough to [define a Subgraph](/docs/build/zkEVM/integrations/indexers/thegraph.md#how-to-define-a-subgraph-using-cli).
