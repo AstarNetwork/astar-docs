@@ -17,6 +17,10 @@ All the solutions that require performing actions on other VMs, i.e interoperabi
 Throughout this doc we will use words “address” and “account” interchangeably, although they are different in literal sense, in the context of this doc they are treated the same.
 :::
 
+:::info
+Account Unification codebase has been audited in December 2023 - Audit report is available on [Astar Network Audit Reports](https://github.com/AstarNetwork/Audits)
+:::
+
 ### How does `frontier` handle accounts?
 
 Put simply, there are a set of Native Substrate accounts existing in parallel to the EVM accounts managed by the `frontier` pallet, and one-to-one mappings from the Substrate accounts to EVM accounts are defined by a conversion trait called `AddressMapping` in the `frontier` pallet’s config.
