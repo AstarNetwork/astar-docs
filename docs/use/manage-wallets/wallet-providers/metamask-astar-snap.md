@@ -6,18 +6,28 @@ sidebar_position: 1
 
 import Figure from '/src/components/figure'
 
-## Introduction
+<!-- markdownlint-disable MD033 -->
+<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <div style={{ marginRight: '10px' }}>
+    ## Introduction
 
-The Astar Wallet Snap extends MetaMask's functionality, specifically for blockchains built with Astar’s Substrate technology, powered by Polkadot. The Astar Wallet Snap enables you to quickly generate a Substrate wallet with MetaMask for signing transactions and interacting with decentralized applications (dApps) that utilize the @polkadot/extension-dapp package. You can seamlessly interact with all dApps in the Astar ecosystem through MetaMask, thereby expanding MetaMask's utility beyond Ethereum and EVM-compatible networks.
+    The Astar Wallet Snap extends MetaMask's functionality, specifically for blockchains built with Astar’s Substrate technology, powered by Polkadot. The Astar Wallet Snap enables you to quickly generate a Substrate wallet with MetaMask for signing transactions and interacting with decentralized applications (dApps) that utilize the @polkadot/extension-dapp package. You can seamlessly interact with all dApps in the Astar ecosystem through MetaMask, thereby expanding MetaMask's utility beyond Ethereum and EVM-compatible networks.
 
-## How to install
+    ## How to install
 
-Follow these steps to interact with the Astar Wallet snap
-[Portal](https://portal.astar.network/). The
-[source code](https://github.com/AstarNetwork/metamask-snap-astar/tree/master/packages/example)
-for the example dApp is available as part of the repository. This guide assumes
-that MetaMask is [installed](https://metamask.io/download/) and properly
-configured.
+    Follow these steps to interact with the Astar Wallet snap
+    [Portal](https://portal.astar.network/). The
+    [source code](https://github.com/AstarNetwork/metamask-snap-astar/tree/master/packages/example)
+    for the example dApp is available as part of the repository. This guide assumes
+    that MetaMask is [installed](https://metamask.io/download/) and properly
+    configured.
+  </div>
+  <div>
+    <video width="400" controls>
+      <source src={require('/docs/use/manage-wallets/wallet-providers/img/astar_snap_30s_v1.mp4').default } />
+    </video>
+  </div>
+</div>
 
 ## Connect to the Portal
 
