@@ -16,3 +16,7 @@ Astar is an interoperable blockchain platform for Polkadot and Ethereum ecosyste
 - [**XCM**](/docs/learn/interoperability/xcm) - Explains how XCM is used in Astar and also how developers can use it to interact with the rest of the Polkadot network.
 - [**Integrations**](/docs/build/integrations/) - Provides relevant information about the wallets, indexers, and oracles that are integrated with the network.
 - [**Docs Integration Request**](https://github.com/AstarNetwork/astar-docs/blob/main/docs-integration-request.md) - Provides information about how to make a documentation integration request for this repository. 
+
+## Audit Reports
+
+A comprehensive list of finalized audit reports of Astar Network's codebase ia available on GitHub - [Astar Network Audit Reports](https://github.com/AstarNetwork/Audits)
