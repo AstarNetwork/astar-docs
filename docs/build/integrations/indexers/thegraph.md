@@ -8,7 +8,7 @@ import Figure from '/src/components/figure'
 
 ## Overview: Why is The Graph needed?
 
-[The Graph](https://thegraph.com/en) is a decentralized protocol for indexing and querying data from blockchains. It makes querying fast, reliable, and secure, and allows anyone to build and publish application programming interfaces (APIs) called subgraphs, which act as intermediaries; allowing applications to communicate with one another.
+[The Graph](https://thegraph.com/en) is a permissionless and decentralized protocol for indexing and querying data from blockchains. It makes querying fast, reliable, and secure, and allows anyone to build and publish application programming interfaces (APIs) called subgraphs, which act as intermediaries; allowing applications to communicate with one another.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ In this guide, we will walk through setting up an Astar node to gain more insigh
 
 ## Running a Graph Node
 
-After successfully setting up an [RPC node](https://docs.astar.network/docs/build/nodes/archive-node/), the Graph node needs to be installed and configured to connect as a different machine. If you are running a self-signed RPC node, you will need to set up an extra environment variable to allow for this.
+After successfully setting up an [RPC node](https://docs.astar.network/docs/build/nodes/archive-node/), the Graph node needs to be installed and configured to connect from a different container or virtual machine. If you are running a self-signed RPC node, you will need to set up an extra environment variable to allow for this or use a different host.
 
 The first step is to clone the [Graph Node repository](https://github.com/graphprotocol/graph-node/):
 

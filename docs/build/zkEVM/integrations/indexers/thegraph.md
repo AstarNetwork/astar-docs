@@ -7,7 +7,7 @@ import Figure from '/src/components/figure'
 
 # Overview 
 
-The Graph is a decentralized protocol for indexing and querying blockchain data that makes it possible to query data that is difficult to query directly.
+The Graph is a decentralized protocol for indexing and querying blockchain data that makes it possible to query historical data that is difficult to query from smart contracts directly.
 
 Projects with complex smart contracts such as Uniswap and NFT projects like Bored Ape Yacht Club store data on the Ethereum blockchain, making it difficult to read anything but the most basic information.
 
@@ -19,17 +19,17 @@ As a solution, a server could be used to process the transactions and save them 
 
 ## How do developers integrate The Graph?
 
-Developers can either run a standalone Graph node or use the Graph hosted service to define a Subgraph, which specifies how blockchain data is indexed. The Graph then processes these subgraphs and makes the data accessible through GraphQL, a popular query language.
+Developers can either run a standalone Graph node and define their own subgraph(s), or choose a subgraph that is publicly available on the Graph's decentralized network. The Graph processes subgraphs and makes the data accessible through GraphQL, a popular query language.
 
 ### Subgraph Overview
 
-A subgraph is a component of The Graph. It's essentially a definition created by a developer that specifies which data The Graph should index from the blockchain, and how it should be stored.
+A subgraph is essentially a definition created by a developer that specifies which data The Graph should index from the blockchain, and how it should be stored.
 
 To define a subgraph, developers write a manifest (in YAML format) and a set of GraphQL schemas. This tells The Graph which events to listen for on the blockchain, and how to map event data to entities that can be queried using GraphQL. Since developers define their own subgraphs, they have considerable flexibility in the way they index and expose blockchain data to their applications.
 
 ## Prerequisites for using Subgraphs
 
-1. An account and API key on Subgraph Studio if using The Graph decentralized network or hosted service, and balance of GRT tokens for queries.
+1. An account and API key on Subgraph Studio if using The Graph decentralized network, and balance of GRT tokens for queries.
 2. A standalone Graph node requires the following:
 - [Docker](https://docs.docker.com/get-docker/): Containerization platform for software solutions.
 - [`docker-compose`](https://docs.docker.com/compose/install/) : Used to automate interactions between docker containers.
@@ -40,7 +40,7 @@ In this guide, we will walk through setting up an Astar node to gain more insigh
 
 ## Running a standalone Graph Node
 
-After successfully setting up an [RPC node](https://docs.astar.network/docs/build/nodes/archive-node/), the Graph node needs to be installed and configured to connect as a different machine. If you are running a self-signed RPC node, you will need to set up an extra environment variable to allow for this.
+After successfully setting up an [RPC node](https://docs.astar.network/docs/build/nodes/archive-node/), the Graph node needs to be installed and configured to connect as a different container or virtual machine. If you are running a self-signed RPC node, you will need to set up an extra environment variable to allow for this, or run the Graph node on a different host.
 
 The first step is to clone the [Graph Node repository](https://github.com/graphprotocol/graph-node/):
 
