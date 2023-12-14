@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 The following sections explain various parameters required for different use-cases of the Astar node.
 
-For more information, consult the help page:
+For more information, consult the embedded help page:
 
 ```
 astar-collator --help
