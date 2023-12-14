@@ -64,6 +64,7 @@ Set local variables.
 
 ```
 # define installation and config path
+ZKEVM_NET=testnet
 ZKEVM_DIR=/etc/zkevm/install
 ZKEVM_CONFIG_DIR=/etc/zkevm/config
 ```
@@ -120,7 +121,7 @@ sudo docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/d
 Verify that all containers are up and running: you should see the 5 containers with a status Up.
 
 ```bash
-docker ps
+sudo docker ps
 ```
 
 Now you have an **Astar zkEVM** RPC node up and running on port 8545, you just have to wait for it to synchronize.
@@ -130,7 +131,7 @@ Now you have an **Astar zkEVM** RPC node up and running on port 8545, you just h
 View container logs.
 
 ```bash
-docker logs -fn30 <container-name>
+sudo docker logs -fn30 <container-name>
 ```
 
 Test RPC requests.
