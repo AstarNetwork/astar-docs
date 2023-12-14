@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-Running a full node on an Astar chain allows you to connect to the network, sync with a bootnode, obtain local access to RPC endpoints, author blocks on the parachain, and more.
+Running a full node on an Astar parachain allows you to connect to the network, sync with a bootnode, obtain local access to RPC endpoints, author blocks, and more.
 
 Different from archive node, a full node discards all finalized blocks older than configured number of blocks (256 blocks by default).
 A full node occupies less storage space than an archive node because of pruning.
@@ -33,5 +33,5 @@ Running a node for our testnet 'Shibuya' requires less resources. It's a perfect
 :::
 
 :::important
-EVM RPC calls are disabled by default, and require additional flag to be enabled. Please refer to this page (INSERT_LINK) for more info.
+EVM RPC calls are disabled by default, and require the additional flag `-enable-evm-rpc` to be enabled. Please refer to [this page](/docs/build/nodes/node-commands.md) for more info.
 :::

@@ -7,8 +7,10 @@ import TabItem from '@theme/TabItem';
 
 # Node Commands
 
-The following sections summarize the commands of Astar nodes you need for different cases.
-For any more details, you can consult help page:
+The following sections explain various parameters required for different use-cases of the Astar node.
+
+For more information, consult the help page:
+
 ```
 astar-collator --help
 ```
@@ -17,6 +19,7 @@ astar-collator --help
 
 ## Collator
 ### Binary service file
+
 <Tabs>
 <TabItem value="astar" label="Astar" default>
 
@@ -347,23 +350,27 @@ astar-collator \
 
 ### EVM management
 
-Enable EVM medhods on RPC node
+Enable EVM methods on the RPC node:
+
 ```
 --enable-evm-rpc
 ```
 
-Enable EVM debug log
+Enable EVM debug log:
+
 ```
 --ethapi=debug
 ```
 
-Enable EVM tracing log
+Enable EVM tracing log:
+
 ```
 --ethapi=txpool,debug,trace
 --wasm-runtime-overrides /var/lib/astar/wasm
 ```
 
 ### External monitoring
+
 ```
 --prometheus-external
 ```
@@ -371,10 +378,15 @@ Enable EVM tracing log
 ---
 
 ## Full command documentation
-To see full node command binary embedded documentation, please use help option.
+
+To see the full node (binary) embedded documentation, please use the help option.
+
 ```
 $ ./astar-collator -h
 ```
 
-Node process will be launched with Parachain ID 2006 for Astar, 2007 for Shiden, 1000 for Shibuya.
+:::note
+The node process launches with Parachain ID 2006 for Astar, 2007 for Shiden, 1000 for Shibuya.
+
 Parachain ID info for each network can be found [here](/docs/build/environment/endpoints.md).
+:::
