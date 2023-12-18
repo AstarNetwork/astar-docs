@@ -23,8 +23,8 @@ The outline of the phased approach to Tokenomics 2.0:
     - ✅ Astar - live since November 2023
 - Phase 2 - Hybrid Inflation Model (Reduction of collators' reward and treasury reward, reduction of inflation)
     - ✅ Shibuya testnet - live since November 2023
-    - Shiden - parameters defined, implementation in progress
-    - Astar - parameters defined, implementation in progress
+    - ✅ Shiden - live since Decemeber 2023
+    - ✅ Astar - live since December 2023
 - Phase 3 - Full Inflation Model (activation of dAppStaking v3 which affects block reward calculation, further reduction of inflation)
     - Shibuya testnet - parameters defined, implementation in progress
     - Shiden - parameters defined, implementation in progress
