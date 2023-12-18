@@ -17,7 +17,7 @@ In the case of Bored Ape Yacht Club, it's possible to perform basic read operati
 
 To obtain this kind of data, we would need to process every transfer event ever emitted from the BAYC smart contract, read the metadata from IPFS using the Token ID and IPFS hash, and then aggregate all the results. Put simply, to answer these kinds of (relatively) simple questions, it would take *hours* or even *days* for a decentralized application running in a browser to obtain a result.
 
-As a solution, a server could be used to process the transactions and save them to a database, and then an API endpoint can be configured on top to query the data. However, this would open up a whole new can of worms, which is why The Graph exists.
+As a solution, a server could be used to process the transactions and save them to a database, and an API endpoint could be configured on top to query the data. However, this would open up a whole new can of worms, which is why The Graph exists.
 
 ## How do developers integrate The Graph?
 
