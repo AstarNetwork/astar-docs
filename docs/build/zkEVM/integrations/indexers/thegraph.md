@@ -5,6 +5,8 @@ sidebar_position: 1
 
 import Figure from '/src/components/figure'
 
+<Figure src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph1-logo.jpg').default} width="100%" />
+
 # Overview 
 
 The Graph is a decentralized protocol for indexing and querying blockchain data that makes it possible to query historical data that is difficult to query from smart contracts directly.
@@ -294,10 +296,12 @@ These ordering rules are subject to change.
 
 ## How to Define a Subgraph using Subgraph Studio
 
-If you are using The Graph's hosted service or Subgraph Studio, there is no need to spin up a standalone Graph node. After creating your account you can jump straight into defining a subgraph.
+If you are using The Graph's Subgraph Studio, there is no need to spin up a standalone Graph node. After creating your account you can jump straight into defining a subgraph.
 
 :::note
-In order to use your subgraph with the Graph's hosted services, you will need to create an API key. It is also recommended that you [add signal](https://thegraph.com/docs/en/network/curating/#how-to-signal) to your subgraph with at least 10,000 GRT.
+As of the time of this publication Astar zKatana network is not supported, however, Astar zkEVM will become available within Subgraph Studio once mainnet is live in Q1 2024.
+
+In order to use your subgraph with the Graph's decentralized network services, you will need to create an API key. It is also recommended that you [add signal](https://thegraph.com/docs/en/network/curating/#how-to-signal) to your subgraph with at least 10,000 GRT.
 :::
 
 Login to [Subgraph Studio](https://thegraph.com/studio/) with your Github account, and connect your wallet:
