@@ -28,7 +28,7 @@ Astar Network is changing that, and ushering in the next generation of multichai
 
 Astar's interoperability framework allows developers to use and build smart contracts in ways they never have before. By fostering cooperation and integration across multiple blockchains and infrastructure providers, complex solutions can be developed, leading to the realization of truly innovative solutions and smart contracts that can't simply be copied and pasted to any other environment.
 
-Many different blockchains exist, but few have interoperability as their defining feature. Welcome to Astar Network.
+Many different blockchains exist, but few have interoperability as a defining feature. Welcome to Astar Network.
 
 ## Poor User Experience (UX)
 
