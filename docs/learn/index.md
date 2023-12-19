@@ -14,7 +14,7 @@ To expand your knowledge about building applications or utilizing various tools 
 
 [Polkadot](/docs/learn/polkadot_relay)
 
-[Build2Earn](/docs/learn/build2earn)
+[Unstoppable Grants](/docs/learn/unstoppable-grants)
 
 [Smart Contracts](/docs/learn/smart-contracts)
 

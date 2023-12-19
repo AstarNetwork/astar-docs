@@ -6,8 +6,13 @@ Are you a product owner and want to list your dApp in our staking mechanism to e
 
 Please take the following parameters into consideration:
 
-- To register a dApp for dApp staking you need to have 100 SDN tokens or 1000 ASTR tokens depending on the network you would like to join as a project. DApp staking on our testnet Shibuya requires 100 SBY.
-- **You need to claim to receive your rewards, we recommend claiming for your staking rewards once a week.**
+- To register a dApp for dApp staking requires 100 SDN tokens or 1000 ASTR tokens depending on the network the project is joining. DApp staking on Shibuya testnet requires 100 SBY.
+
+:::note
+**DApp staking rewards are not claimed or restaked automatically without  manual initiation.** 
+
+Due to the introduction of expiring rewards in dApp staking v3, it is recommended that rewards be claimed at least once a week, or at very minimum once per election period to avoid penalties.**
+:::
 
 <br/>
 
