@@ -154,6 +154,11 @@ Search for the token that you would like to receive, in this case ASTR. You can 
 
 ![Copy address](/docs/use/manage-wallets/img/subwallet/subwallet-22.png)
 
+
+!!! Note
+    ASTR are allowed to execute cross-chain transfer, so when choosing the token, make sure you are receiving ASTR on the correct chain by checking the network icon under the tokens.
+    ![Cross-chain receive](/docs/use/manage-wallets/img/subwallet/subwallet-30.png)
+
 Send the address or show the QR code to the sender and you'll be able to receive ASTR from them!
 
 ![QR code](/docs/use/manage-wallets/img/subwallet/subwallet-23.png)
@@ -169,7 +174,7 @@ Next, you can take the following steps:
 1. Specify the asset to send and the destination chain. 
 
     !!! Note 
-        Some tokens are allowed to execute cross-chain transfer, so when choosing the destination network, you can choose the drop-down menu to see the available options.
+        ASTR are allowed to execute cross-chain transfer, so when choosing the destination network, you can choose the drop-down menu to see the available options.
 
 2. Enter the destination address
 3. Enter the amount of tokens to send
