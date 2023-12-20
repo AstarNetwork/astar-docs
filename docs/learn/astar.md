@@ -32,7 +32,7 @@ Web3, in its traditional usage, is known particularly for its poor user experien
 
 1. A steep learning curve. Users have to manage their public and private keys, which can be daunting for those not familiar with blockchain technology. Astar Network provides account abstraction and key management solutions. 
 
-2. Complicated prerequisites to onboard. Networks generally require holding a certain amount of gas for transactions in the chain-native token, which can fluctuate greatly depending on network congestion. Astar has a number of gasless payment and gas sponsorship options for developers that, when combined with account abstraction, provide a modern web3 experience that is friendly to existing social media and mobile phone users, allowing for seemingly *walletless* or *accountless* interaction with web3 dApps and marketplaces, without requiring the chain-native token,
+2. Complicated prerequisites to onboard. Networks generally require holding a certain amount of gas for transactions in the chain-native token, which can fluctuate greatly depending on network congestion. Astar has a number of gasless payment and gas sponsorship options for developers that, when combined with account abstraction, provide a modern web3 experience that is friendly to existing social media and mobile phone users, allowing for seemingly *walletless* or *accountless* interaction with web3 dApps and marketplaces, without requiring the chain-native token.
 
 3. Stalled transactions and high gas fees. During periods of high demand, blockchain networks can become congested, leading to slower transaction times. Astar network, as a Layer 2 on Ethereum and parachain on Polkadot, are not subject to traditional bottlenecks that plague other blockchains.
 
