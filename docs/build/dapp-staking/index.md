@@ -6,15 +6,16 @@ Introducing Unstoppable Grants: What is dApp Staking and why is it important for
 
 At Astar, we are on a mission to revolutionize the internet. We envision a future where the internet is truly decentralized, and not controlled by a handful of tech giants. We believe the internet should be free and owned by the people for the people. We believe that people should have ownership of their data and assets, and not be at the mercy of intermediaries. This is the essence of the web3 vision and what drives Astar.
 
-*What does this have to do with dApp staking*? Well, to put it simply, a lot.
+*What does this have to do with dApp staking?* Well, to put it simply, a lot.
 
-DApp staking is one of the catalysts that will accelerate the Web3 vision from a pipe dream to reality. For the Web3 vision to come to fruition, three important things need to occur.
+DApp staking is one of the catalysts that will accelerate the web3 vision from dream to reality. For the web3 vision to come to fruition, three important things need to occur.
 
 - Transaction costs (i.e. gas fees) need to drop dramatically
 - Blockchains need to be interoperable, interconnected, and frictionless
 - Great dApps need to be built for users
+- The user experience needs to be improved
 
-At Astar Network, we are tackling these three challenges head-on.
+At Astar Network, we are tackling these challenges head-on.
 
 The third point, namely — the necessity for great dApps to be built — is the driving force behind **Unstoppable Grants (our dApp staking initiative)** and the focus of this article.
 
@@ -54,16 +55,13 @@ Having more (and better) dApps attracts and retains more users, creating a netwo
 
 ### Developers, developers, developers: More Developers in the Ecosystem
 
-Ultimately, the most precious human resource in the Web3 ecosystem is developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure in public blockchains.
+Ultimately, the most precious human resource in the web3 ecosystem is developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure in public blockchains.
 
 With dApp staking, developers can earn a basic income while building dApps on Astar/Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the better off everyone is.
 
-## Build2Earn Program
+## dApp Staking & Unstoppable Grants Program
 
-Our dApp staking initiative on Astar is foundational to our #Build2Earn program and is the natural continuation of our [#Stake2Earn](https://medium.com/astar-network/stake2earn-festival-411cb712a380) campaign. #Build2Earn is our financial incentive program whose aim is to provide a basic income to developers for building useful dApps on Astar/Shiden.
-
-In the coming days, we will be announcing more details about important projects being built on Astar/Shiden Network. We will also be sharing step-by-step details on how to stake your Astar/Shiden tokens so that you too can partake in dApp staking, and help build the Web3 internet of tomorrow.
-
+The dApp staking initiative on Astar is foundational to our Unstoppable Grants program and is the natural continuation of our [#Stake2Earn](https://medium.com/astar-network/stake2earn-festival-411cb712a380) campaign. Unstoppable Grants is our financial incentive program whose aim is to provide rewards to developers for building useful dApps on Astar/Shiden.
 
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
