@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-# Build2Earn
+# Unstoppable Grants
 
 ## Overview
 
