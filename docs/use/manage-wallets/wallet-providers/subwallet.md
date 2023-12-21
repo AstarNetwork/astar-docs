@@ -23,7 +23,7 @@ For this tutorial, we will walk you through the process of creating a wallet usi
 
 ## Setup an account
 
-Once you have installed the extension, you'll have the option to **create, import** or **attach a watch-only account**.
+Once you have installed the extension, you'll have the option to **create, import** or **attach an account**.
 
 ![Browser extension create screen](/docs/use/manage-wallets/img/subwallet/subwallet-1.png)
 
@@ -35,7 +35,12 @@ To create a new account, click on **Create a new account**.
 
 You will then need to create your master password which keeps all of your accounts secure. Once you have entered the password and then confirmed it, click on **Continue**.
 
+
 ![Master password](/docs/use/manage-wallets/img/subwallet/subwallet-3.png)
+
+!!! Note
+    For each seed phrase created with SubWallet, you would have a Substrate account and an Ethereum account. 
+    Substrate account would display your assets on Substrate-native blockchains (such as Polkadot, Kusama, and Acala), while EVM account would display your assets on Ethereum chains (such as Moonbeam). 
 
 Now you will be shown a seed phrase together with the option to back it up. Once you have saved and stored it in a safe place, choose **I have kept it somewhere safe**.
 
@@ -71,15 +76,15 @@ After you have chosen a method, you will be prompted to create a master password
 !!! Caution
     Please note that SubWallet is non-custodial, so you would be the only person who knows your password; we cannot help you restore your password once it is lost. Please make sure that your password is well-kept.
 
-#### Using seedphrase
+#### Using seed phrase
 
 You could choose between importing either a Substrate (Polkadot) account or EVM (Ethereum) account, or both. After choosing, click on **Import account**
 
 ![Methods of importing](/docs/use/manage-wallets/img/subwallet/subwallet-9.png)
 
-Enter your seedphrase in the text boxes. You can use either a 12-word seedphrase or a 24-word seedphrase to import your account. Click on **Import account** and your account has been imported!
+Enter your seed phrase in the text boxes. You can use either a 12-word seed phrase or a 24-word seed phrase to import your account. Click on **Import account** and your account has been imported!
 
-![Import using seedphrase](/docs/use/manage-wallets/img/subwallet/subwallet-10.png)
+![Import using seed phrase](/docs/use/manage-wallets/img/subwallet/subwallet-10.png)
 
 !!! Incompatibility
     In some cases, if you import an account from a seed phrase, problems can arise if the seed phrase of your original wallet is not compatible with SubWallet. **Trust Wallet** and **Safepal** are among the wallets not compatible with us. 
@@ -101,17 +106,21 @@ You will then need to enter your JSON file password (created when you set up the
 
 Once you have exported your private key, enter it into the text box then click on **Import account**.
 
-![Import with private key](/docs/use/manage-wallets/img/subwallet/subwallet-13.png)
+![Import with private key](/docs/use/manage-wallets/img/subwallet/subwallet-36.png)
 
 #### Using QR code
 
+![Import with private key](/docs/use/manage-wallets/img/subwallet/subwallet-13.png)
+
+Click on **Scan QR**. If you have not enabled camera access yet, a message will show up prompting you to **Go to settings**.
+
 ![Import with QR Code](/docs/use/manage-wallets/img/subwallet/subwallet-14.png)
 
-Click on **Scan QR**. If you have not enabled camera access yet, a message will show up prompting you to **Go to settings**. 
+ On the settings page, toggle on **Camera access for QR** then head back to the QR page, click on **Scan QR** and scan your accounts' QR code. After the successful import of your account by QR code, you will be directed to the Homepage. 
+
 
 ![Enable camera access](/docs/use/manage-wallets/img/subwallet/subwallet-15.png)
 
-On the settings page, toggle on **Camera access for QR** then head back to the QR page, click on **Scan QR** and scan your accounts' QR code. After the successful import of your account by QR code, you will be directed to the Homepage. 
 
 #### Import additional accounts
 
@@ -127,9 +136,9 @@ You have finished importing your account! If you want to import additional accou
 
 ## Interacting with Astar
 
-### Connect to Astar
+### Managing ASTR on SubWallet
 
-To connect your account to Astar, choose the **Customize asset display** icon next to the search icon.
+To Managing ASTR on SubWallet, choose the **Customize asset display** icon next to the search icon.
 
 ![Customize asset display](/docs/use/manage-wallets/img/subwallet/subwallet-17.png)
 
@@ -159,7 +168,7 @@ Search for the token that you would like to receive, in this case, ASTR. You can
 
 !!! Note
     ASTR is allowed to execute cross-chain transfer, so when choosing the token, make sure you are receiving ASTR on the correct chain by checking the network icon under the tokens.
-    ![Cross-chain receive](/docs/use/manage-wallets/img/subwallet/subwallet-30.png)
+    ![Cross-chain receive](/docs/use/manage-wallets/img/subwallet/subwallet-35.png)
 
 Send the address or show the QR code to the sender and you'll be able to receive ASTR from them!
 
@@ -209,3 +218,30 @@ Otherwise, if you want to connect using your Polkadot account, choose **SubWalle
 Afterward, the steps to connect are identical to that of connecting EVM accounts.
 
 ### dApp Staking
+
+First, head to the **staking** tab on the navigation bar.
+
+![Staking tab](/docs/use/manage-wallets/img/subwallet/subwallet-30.png)
+
+On the staking screen, choose the **+** icon on the top right of the screen.
+
+![Add bond](/docs/use/manage-wallets/img/subwallet/subwallet-31.png)
+
+Choose the **Nominate** tab in the "Add to Bond" screen and enter the staking information:
+
+![Staking info](/docs/use/manage-wallets/img/subwallet/subwallet-32.png)
+
+1. Choose the account from which you would like to stake (if you are in all accounts mode)
+2. Choose the token that you would like to stake, in this case, ASTR.
+3. Enter the amount of tokens.
+4. Select a dApp.
+
+A list of available dApps will be shown. It is suggested that you pay close attention to the dApp you are choosing. When selecting dApp, SubWallet supports you with the latest record of dApp details. Please click the three-dot icon on the right-hand side of each dApp to see the pool details.
+
+![dApp details](/docs/use/manage-wallets/img/subwallet/subwallet-33.png)
+
+In addition, you could use the sort function to find the most suitable validator according to your needs. Click the sort icon on the upper right corner and choose your sorting criteria. 
+
+![Sort dApp](/docs/use/manage-wallets/img/subwallet/subwallet-34.png)
+
+After all the staking information is entered, click on **Stake** then approve the transaction. 
