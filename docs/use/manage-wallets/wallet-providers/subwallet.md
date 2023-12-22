@@ -3,16 +3,19 @@ sidebar_position: 1
 title: SubWallet
 ---
 
+import Figure from '/src/components/figure'
+
 # Connecting SubWallet to Astar
 
-SubWallet is the comprehensive non-custodial wallet solution for Polkadot, Substrate & Ethereum ecosystems. Built on top of Polkadot {.js}, SubWallet focuses on improving UX & UI. We envision a crypto wallet as a Web3 multiverse gateway through which users can enjoy multi-chain services with utmost ease and absolute security. 
+
+SubWallet is a comprehensive non-custodial wallet solution for Substrate & Ethereum ecosystems. Built on top of Polkadot.js, SubWallet focuses on improving UX & UI. We envision a crypto wallet as a Web3 multiverse gateway through which users can enjoy multi-chain services with utmost ease and absolute security. 
 This guide will show you how to manage your accounts, your tokens, stake your tokens in-app, and connect to the Astar Portal using SubWallet!
 
 ## Install SubWallet
 
 SubWallet is available on a range of platforms for you to choose from:
 
-1. A **browser extension** which is available on [Google Chrome](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Brave](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn), [MS Edge](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/subwallet/).
+1. A **browser extension** which is available on [Google Chrome](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Brave](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn), [MS Edge](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/subwallet/>.
 
 
 2. A **mobile app** which is available on the [App Store](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285) and [Google Play Store](https://play.google.com/store/apps/details?id=app.subwallet.mobile).
@@ -25,18 +28,17 @@ For this tutorial, we will walk you through the process of creating a wallet usi
 
 Once you have installed the extension, you'll have the option to **create**, **import** or **attach an account** ([Ledger](https://docs.subwallet.app/main/extension-user-guide/account-management/connect-ledger-device), [Keystone](https://docs.subwallet.app/main/extension-user-guide/account-management/connect-keystone-device), [Polkadot Vault](https://docs.subwallet.app/main/extension-user-guide/account-management/attach-a-polkadot-vault-previously-parity-signer-account) and [Watch-only account](https://docs.subwallet.app/main/extension-user-guide/account-management/attach-a-watch-only-account))
 
-![Browser extension create screen](/docs/use/manage-wallets/img/subwallet/subwallet-1.png)
+<Figure caption="Browser extension create screen" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-1.png').default} width="100%" />
 
 ### Create a new account
 
 To create a new account, click on **Create a new account**.
 
-![Create new account](/docs/use/manage-wallets/img/subwallet/subwallet-2.png)
+<Figure caption="Create new account" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-2.png').default} width="100%" />
 
 You will then need to create your master password which keeps all of your accounts secure. Once you have entered the password and then confirmed it, click on **Continue**.
 
-
-![Master password](/docs/use/manage-wallets/img/subwallet/subwallet-3.png)
+<Figure caption="Master password" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-3.png').default} width="100%" />
 
 !!! Note
     For each seed phrase created with SubWallet, you would have a Substrate account and an Ethereum account. 
@@ -44,7 +46,7 @@ You will then need to create your master password which keeps all of your accoun
 
 Now you will be shown a seed phrase together with the option to back it up. Once you have saved and stored it in a safe place, choose **I have kept it somewhere safe**.
 
-![Create new seed phrase](/docs/use/manage-wallets/img/subwallet/subwallet-4.png)
+<Figure caption="Create new seed phrase" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-4.png').default} width="100%" />
 
 !!! Caution
     You should never share your seed phrase (mnemonic) or private key with anyone. This gives them direct access to your funds.
@@ -52,26 +54,26 @@ Now you will be shown a seed phrase together with the option to back it up. Once
 You have finished creating a new account! If you want to create additional accounts, follow these steps:
 1. Choose the accounts tab on the top of the extension.
 
-![Create additional accounts 1](/docs/use/manage-wallets/img/subwallet/subwallet-5.png)
+
+<Figure caption="Create additional accounts 1" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-5.png').default} width="100%" />
 
 2. Click on **Create a new account** and repeat the steps above.
 
-![Create additional accounts 2](/docs/use/manage-wallets/img/subwallet/subwallet-6.png)
+<Figure caption="Create additional accounts 2" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-6.png').default} width="100%" />
 
 ### Import an existing account
 
 To import an account that you have already created, choose **Import an account**. 
 
-![SubWallet browser extension home screen](/docs/use/manage-wallets/img/subwallet/subwallet-7.png)
+<Figure caption="Browser extension home screen" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-7.png').default} width="100%" />
 
 Then you can choose your preferred method of importing.
 
-![Methods of importing](/docs/use/manage-wallets/img/subwallet/subwallet-8.png)
+<Figure caption="Methods of importing" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-8.png').default} width="100%" />
 
 After you have chosen a method, you will be prompted to create a master password. Enter your password and click on **Continue**.
 
-![Master password](/docs/use/manage-wallets/img/subwallet/subwallet-3.png)
-
+<Figure caption="Master password" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-3.png').default} width="100%" />
 
 !!! Caution
     Please note that SubWallet is non-custodial, so you would be the only person who knows your password; we cannot help you restore your password once it is lost. Please make sure that your password is well-kept.
@@ -80,11 +82,13 @@ After you have chosen a method, you will be prompted to create a master password
 
 You could choose between importing either a Substrate account or Ethereum account, or both. After choosing, click on **Import account**
 
-![Methods of importing](/docs/use/manage-wallets/img/subwallet/subwallet-9.png)
+<Figure caption="Methods of importing" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-9.png').default} width="100%" />
+
 
 Enter your seed phrase in the text boxes. You can use either a 12-word seed phrase or a 24-word seed phrase to import your account. Click on **Import account** and your account has been imported!
 
-![Import using seed phrase](/docs/use/manage-wallets/img/subwallet/subwallet-10.png)
+<Figure caption="Import using seed phrase" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-10.png').default} width="100%" />
+
 
 !!! Incompatibility
     In some cases, if you import an account from a seed phrase, problems can arise if the seed phrase of your original wallet is not compatible with SubWallet. **Trust Wallet** and **Safepal** are among the wallets not compatible with us. 
@@ -93,11 +97,11 @@ Enter your seed phrase in the text boxes. You can use either a 12-word seed phra
 
 You can import a Polkadot.js account after exporting the JSON backup file. Click on the **Import from Polkadot.js** field to upload a file from your device, or drag and drop your JSON file into the field.
 
-![Upload JSON file](/docs/use/manage-wallets/img/subwallet/subwallet-11.png)
+<Figure caption="Upload JSON file" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-11.png').default} width="100%" />
 
 You will then need to enter your JSON file password (created when you set up the wallet for the first time) and click **Import by JSON file**. 
 
-![JSON file password](/docs/use/manage-wallets/img/subwallet/subwallet-12.png)
+<Figure caption="JSON file password" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-12.png').default} width="100%" />
 
 !!! Note
     If you want to import multiple accounts simultaneously from a JSON file, you are required to enter the password for each account you want to import.
@@ -106,20 +110,23 @@ You will then need to enter your JSON file password (created when you set up the
 
 Once you have exported your private key, enter it into the text box then click on **Import account**.
 
-![Import with private key](/docs/use/manage-wallets/img/subwallet/subwallet-36.png)
+<Figure caption="Import with private key" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-36.png').default} width="100%" />
+
 
 #### Using QR code
 
-![Import with private key](/docs/use/manage-wallets/img/subwallet/subwallet-13.png)
+<Figure caption="Import with private key" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-13.png').default} width="100%" />
 
 Click on **Scan QR**. If you have not enabled camera access yet, a message will show up prompting you to **Go to settings**.
 
-![Import with QR Code](/docs/use/manage-wallets/img/subwallet/subwallet-14.png)
+<Figure caption="Import with QR code" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-14.png').default} width="100%" />
+
 
  On the settings page, toggle on **Camera access for QR** then head back to the QR page, click on **Scan QR** and scan your accounts' QR code. After the successful import of your account by QR code, you will be directed to the Homepage. 
 
 
-![Enable camera access](/docs/use/manage-wallets/img/subwallet/subwallet-15.png)
+<Figure caption="Enable camera access" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-15.png').default} width="100%" />
+
 
 
 #### Import additional accounts
@@ -127,58 +134,63 @@ Click on **Scan QR**. If you have not enabled camera access yet, a message will 
 You have finished importing your account! If you want to import additional accounts, follow these steps:
 1. Choose the accounts tab on the top of the extension.
 
-![Create additional accounts 1](/docs/use/manage-wallets/img/subwallet/subwallet-5.png)
+<Figure caption="Create additional accounts 1" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-5.png').default} width="100%" />
+
 
 2. Click on the **Import** icon and repeat the steps above.
 
-![Create additional accounts 2](/docs/use/manage-wallets/img/subwallet/subwallet-16.png)
+<Figure caption="Create additional accounts 2" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-16.png').default} width="100%" />
+
 
 
 ## Interacting with Astar
 
 ### Managing ASTR on SubWallet
 
-To Managing ASTR on SubWallet, choose the **Customize asset display** icon next to the search icon.
+To Manage ASTR on SubWallet, choose the **Customize asset display** icon next to the search icon.
 
-![Customize asset display](/docs/use/manage-wallets/img/subwallet/subwallet-17.png)
+<Figure caption="Customize asset display" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-17.png').default} width="100%" />
+
 
 On the search bar, search for **Astar**. Toggle on the networks to enable them.
 
-![Enable Astar](/docs/use/manage-wallets/img/subwallet/subwallet-18.png)
+<Figure caption="Enable Astar" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-18.png').default} width="100%" />
+
 
 Head back to the home screen. You should be able to see that Astar has been connected and all of the tokens available on the network should be displayed.
 
-![Connected Astar](/docs/use/manage-wallets/img/subwallet/subwallet-19.png)
+<Figure caption="Connected Astar" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-19.png').default} width="100%" />
 
 ## Receive token
 
 From your home screen, choose the first blue icon under the eye. 
 
-![Receive](/docs/use/manage-wallets/img/subwallet/subwallet-20.png)
+<Figure caption="Receive" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-20.png').default} width="100%" />
 
 !!! If you are in all-accounts mode
 
     You will be prompted to choose an account if you are in all-accounts mode.
-    ![All accounts mode](/docs/use/manage-wallets/img/subwallet/subwallet-21.png)
+    ![All accounts mode](/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-21.png)
 
 Search for the token that you would like to receive, in this case, ASTR. You can either **Copy the address** or **View address QR**.
 
-![Copy address](/docs/use/manage-wallets/img/subwallet/subwallet-22.png)
+<Figure caption="Copy address" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-22.png').default} width="100%" />
 
 
 !!! Note
     ASTR is allowed to execute cross-chain transfer, so when choosing the token, make sure you are receiving ASTR on the correct chain by checking the network icon under the tokens.
-    ![Cross-chain receive](/docs/use/manage-wallets/img/subwallet/subwallet-35.png)
+    <Figure caption="Cross-chain receive" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-35.png').default} width="100%" />
+
 
 Send the address or show the QR code to the sender and you'll be able to receive ASTR from them!
 
-![QR code](/docs/use/manage-wallets/img/subwallet/subwallet-23.png)
+<Figure caption="QR code" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-23.png').default} width="100%" />
 
 ### Send a transaction
 
 To get started with a simple token transfer to another address on Astar, you can click the send icon.
 
-![Send transaction](/docs/use/manage-wallets/img/subwallet/subwallet-24.png)
+<Figure caption="Send transaction" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-24.png').default} width="100%" />
 
 Next, you can take the following steps:
 
@@ -191,11 +203,11 @@ Next, you can take the following steps:
 3. Enter the amount of tokens to send
 4. Look over the transaction details, then press **Transfer**
 
-![Transaction details](/docs/use/manage-wallets/img/subwallet/subwallet-25.png)
+<Figure caption="Transaction details" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-25.png').default} width="100%" />
 
 On the next screen, you can review the transaction details and submit the transaction. If the transaction details look good, you can click **Approve** to send the transaction.
 
-![Approve transaction](/docs/use/manage-wallets/img/subwallet/subwallet-26.png)
+<Figure caption="Approve transaction" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-26.png').default} width="100%" />
 
 After you send the transaction, you can review the transaction details.
 
@@ -205,15 +217,15 @@ First, head to the [Astar Portal](https://portal.astar.network/astar/assets). On
 
 If you want to connect your Ethereum account, choose **SubWallet** under the **Ethereum accounts** section. 
 
-![Connect Ethereum account](/docs/use/manage-wallets/img/subwallet/subwallet-27.png)
+<Figure caption="Connect EVM account" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-27.png').default} width="100%" />
 
 A window will appear. Choose the account that you would like to connect then choose **Connect**. Approve the connection and you have successfully connected to the Astar portal!
 
-![Choose accounts](/docs/use/manage-wallets/img/subwallet/subwallet-28.png)
+<Figure caption="Choose accounts" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-28.png').default} width="100%" />
 
 Otherwise, if you want to connect using your Substrate account, choose **SubWallet** under the **Native accounts** section. 
 
-![Connect Polkdadot account](/docs/use/manage-wallets/img/subwallet/subwallet-29.png)
+<Figure caption="Connect Polkadot account" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-29.png').default} width="100%" />
 
 Afterward, the steps to connect are identical to that of connecting Ethereum accounts.
 
@@ -221,15 +233,15 @@ Afterward, the steps to connect are identical to that of connecting Ethereum acc
 
 First, head to the **staking** tab on the navigation bar.
 
-![Staking tab](/docs/use/manage-wallets/img/subwallet/subwallet-30.png)
+<Figure caption="Staking tab" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-30.png').default} width="100%" />
 
 On the staking screen, choose the **+** icon on the top right of the screen.
 
-![Add bond](/docs/use/manage-wallets/img/subwallet/subwallet-31.png)
+<Figure caption="Choose bond" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-31.png').default} width="100%" />
 
 Choose the **Nominate** tab in the "Add to Bond" screen and enter the staking information:
 
-![Staking info](/docs/use/manage-wallets/img/subwallet/subwallet-32.png)
+<Figure caption="Staking info" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-32.png').default} width="100%" />
 
 1. Choose the account from which you would like to stake (if you are in all accounts mode)
 2. Choose the token that you would like to stake, in this case, ASTR.
@@ -238,10 +250,10 @@ Choose the **Nominate** tab in the "Add to Bond" screen and enter the staking in
 
 A list of available dApps will be shown. It is suggested that you pay close attention to the dApp you are choosing. When selecting dApp, SubWallet supports you with the latest record of dApp details. Please click the three-dot icon on the right-hand side of each dApp to see the dApp details.
 
-![dApp details](/docs/use/manage-wallets/img/subwallet/subwallet-33.png)
+<Figure caption="DApp details" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-33.png').default} width="100%" />
 
 In addition, you could use the sort function to find the most suitable dApp according to your needs. Click the sort icon on the upper right corner and choose your sorting criteria. 
 
-![Sort dApp](/docs/use/manage-wallets/img/subwallet/subwallet-34.png)
+<Figure caption="Sort dApp" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-34.png').default} width="100%" />
 
 After all the staking information is entered, click on **Stake** then approve the transaction. 
