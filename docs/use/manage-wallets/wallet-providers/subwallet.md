@@ -6,7 +6,7 @@ title: SubWallet
 # Connecting SubWallet to Astar
 
 SubWallet is the comprehensive non-custodial wallet solution for Polkadot, Substrate & Ethereum ecosystems. Built on top of Polkadot {.js}, SubWallet focuses on improving UX & UI. We envision a crypto wallet as a Web3 multiverse gateway through which users can enjoy multi-chain services with utmost ease and absolute security. 
-This guide will show you how to manage your accounts, connect to and stake ASTR on the Astar Portal using SubWallet!
+This guide will show you how to manage your accounts, your tokens, stake your tokens in-app, and connect to the Astar Portal using SubWallet!
 
 ## Install SubWallet
 
@@ -23,7 +23,7 @@ For this tutorial, we will walk you through the process of creating a wallet usi
 
 ## Setup an account
 
-Once you have installed the extension, you'll have the option to **create, import** or **attach an account**.
+Once you have installed the extension, you'll have the option to **create**, **import** or **attach an account** ([Ledger](https://docs.subwallet.app/main/extension-user-guide/account-management/connect-ledger-device), [Keystone](https://docs.subwallet.app/main/extension-user-guide/account-management/connect-keystone-device), [Polkadot Vault](https://docs.subwallet.app/main/extension-user-guide/account-management/attach-a-polkadot-vault-previously-parity-signer-account) and [Watch-only account](https://docs.subwallet.app/main/extension-user-guide/account-management/attach-a-watch-only-account))
 
 ![Browser extension create screen](/docs/use/manage-wallets/img/subwallet/subwallet-1.png)
 
@@ -40,7 +40,7 @@ You will then need to create your master password which keeps all of your accoun
 
 !!! Note
     For each seed phrase created with SubWallet, you would have a Substrate account and an Ethereum account. 
-    Substrate account would display your assets on Substrate-native blockchains (such as Polkadot, Kusama, and Acala), while EVM account would display your assets on Ethereum chains (such as Moonbeam). 
+    Substrate account would display your assets on Substrate-native blockchains (such as Polkadot, Kusama, and Acala), while Ethereum account would display your assets on Ethereum chains (such as Moonbeam). 
 
 Now you will be shown a seed phrase together with the option to back it up. Once you have saved and stored it in a safe place, choose **I have kept it somewhere safe**.
 
@@ -78,7 +78,7 @@ After you have chosen a method, you will be prompted to create a master password
 
 #### Using seed phrase
 
-You could choose between importing either a Substrate (Polkadot) account or EVM (Ethereum) account, or both. After choosing, click on **Import account**
+You could choose between importing either a Substrate account or Ethereum account, or both. After choosing, click on **Import account**
 
 ![Methods of importing](/docs/use/manage-wallets/img/subwallet/subwallet-9.png)
 
@@ -203,19 +203,19 @@ After you send the transaction, you can review the transaction details.
 
 First, head to the [Astar Portal](https://portal.astar.network/astar/assets). Once you arrive at the portal, you will be prompted to connect your wallet. 
 
-If you want to connect your EVM account, choose **SubWallet** under the **EVM accounts** section. 
+If you want to connect your Ethereum account, choose **SubWallet** under the **Ethereum accounts** section. 
 
-![Connect EVM account](/docs/use/manage-wallets/img/subwallet/subwallet-27.png)
+![Connect Ethereum account](/docs/use/manage-wallets/img/subwallet/subwallet-27.png)
 
 A window will appear. Choose the account that you would like to connect then choose **Connect**. Approve the connection and you have successfully connected to the Astar portal!
 
 ![Choose accounts](/docs/use/manage-wallets/img/subwallet/subwallet-28.png)
 
-Otherwise, if you want to connect using your Polkadot account, choose **SubWallet** under the **Native accounts** section. 
+Otherwise, if you want to connect using your Substrate account, choose **SubWallet** under the **Native accounts** section. 
 
 ![Connect Polkdadot account](/docs/use/manage-wallets/img/subwallet/subwallet-29.png)
 
-Afterward, the steps to connect are identical to that of connecting EVM accounts.
+Afterward, the steps to connect are identical to that of connecting Ethereum accounts.
 
 ### dApp Staking
 
@@ -233,14 +233,14 @@ Choose the **Nominate** tab in the "Add to Bond" screen and enter the staking in
 
 1. Choose the account from which you would like to stake (if you are in all accounts mode)
 2. Choose the token that you would like to stake, in this case, ASTR.
-3. Enter the amount of tokens.
+3. Enter the amount of tokens. The minimum active for dApp staking with ASTR is 500 ASTR.
 4. Select a dApp.
 
-A list of available dApps will be shown. It is suggested that you pay close attention to the dApp you are choosing. When selecting dApp, SubWallet supports you with the latest record of dApp details. Please click the three-dot icon on the right-hand side of each dApp to see the pool details.
+A list of available dApps will be shown. It is suggested that you pay close attention to the dApp you are choosing. When selecting dApp, SubWallet supports you with the latest record of dApp details. Please click the three-dot icon on the right-hand side of each dApp to see the dApp details.
 
 ![dApp details](/docs/use/manage-wallets/img/subwallet/subwallet-33.png)
 
-In addition, you could use the sort function to find the most suitable validator according to your needs. Click the sort icon on the upper right corner and choose your sorting criteria. 
+In addition, you could use the sort function to find the most suitable dApp according to your needs. Click the sort icon on the upper right corner and choose your sorting criteria. 
 
 ![Sort dApp](/docs/use/manage-wallets/img/subwallet/subwallet-34.png)
 
