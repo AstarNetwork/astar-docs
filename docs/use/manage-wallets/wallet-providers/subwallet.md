@@ -40,7 +40,7 @@ You will then need to create your master password which keeps all of your accoun
 
 !!! Note
     For each seed phrase created with SubWallet, you would have a Substrate account and an Ethereum account. 
-    Substrate account would display your assets on Substrate-native blockchains (such as Polkadot, Kusama, and Acala), while Ethereum account would display your assets on Ethereum chains (such as Moonbeam). 
+    Substrate account would display your assets on Substrate-native blockchains (such as Polkadot, Kusama, and Astar), while Ethereum account would display your assets on Ethereum chains (such as Astar-EVM). 
 
 Now you will be shown a seed phrase together with the option to back it up. Once you have saved and stored it in a safe place, choose **I have kept it somewhere safe**.
 
