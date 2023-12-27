@@ -19,7 +19,7 @@ To expand your knowledge about building applications or utilizing various tools 
 [Smart Contracts](/docs/learn/smart-contracts)
 
 ## Advanced 
-[Tokenomics](/docs/learn/tokenomics/)
+[Tokenomics](/docs/learn/tokenomics2/index)
 
 [Networks](/docs/learn/networks)
 
