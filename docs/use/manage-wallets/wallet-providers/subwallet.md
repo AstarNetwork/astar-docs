@@ -9,13 +9,14 @@ import Figure from '/src/components/figure'
 
 
 SubWallet is a comprehensive non-custodial wallet solution for Substrate & Ethereum ecosystems. Built on top of Polkadot.js, SubWallet focuses on improving UX & UI. We envision a crypto wallet as a Web3 multiverse gateway through which users can enjoy multi-chain services with utmost ease and absolute security. 
+
 This guide will show you how to manage your accounts, your tokens, stake your tokens in-app, and connect to the Astar Portal using SubWallet!
 
 ## Install SubWallet
 
 SubWallet is available on a range of platforms for you to choose from:
 
-1. A **browser extension** which is available on [Google Chrome](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Brave](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn), [MS Edge](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/subwallet/>.
+1. A **browser extension** which is available on [Google Chrome](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn), [Brave](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn), [MS Edge](https://chromewebstore.google.com/detail/subwallet-polkadot-wallet/onhogfjeacnfoofkfgppdlbmlmnplgbn) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/subwallet/).
 
 
 2. A **mobile app** which is available on the [App Store](https://apps.apple.com/us/app/subwallet-polkadot-wallet/id1633050285) and [Google Play Store](https://play.google.com/store/apps/details?id=app.subwallet.mobile).
@@ -40,16 +41,18 @@ You will then need to create your master password which keeps all of your accoun
 
 <Figure caption="Master password" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-3.png').default} width="100%" />
 
-!!! Note
-    For each seed phrase created with SubWallet, you would have a Substrate account and an Ethereum account. 
+:::note
+For each seed phrase created with SubWallet, you would have a Substrate account and an Ethereum account. 
     Substrate account would display your assets on Substrate-native blockchains (such as Polkadot, Kusama, and Astar), while Ethereum account would display your assets on Ethereum chains (such as Astar-EVM). 
+:::
 
 Now you will be shown a seed phrase together with the option to back it up. Once you have saved and stored it in a safe place, choose **I have kept it somewhere safe**.
 
 <Figure caption="Create new seed phrase" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-4.png').default} width="100%" />
 
-!!! Caution
-    You should never share your seed phrase (mnemonic) or private key with anyone. This gives them direct access to your funds.
+:::caution
+You should never share your seed phrase (mnemonic) or private key with anyone. This gives them direct access to your funds.
+:::
 
 You have finished creating a new account! If you want to create additional accounts, follow these steps:
 1. Choose the accounts tab on the top of the extension.
@@ -75,8 +78,9 @@ After you have chosen a method, you will be prompted to create a master password
 
 <Figure caption="Master password" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-3.png').default} width="100%" />
 
-!!! Caution
-    Please note that SubWallet is non-custodial, so you would be the only person who knows your password; we cannot help you restore your password once it is lost. Please make sure that your password is well-kept.
+:::caution
+Please note that SubWallet is non-custodial, so you would be the only person who knows your password; we cannot help you restore your password once it is lost. Please make sure that your password is well-kept.
+:::
 
 #### Using seed phrase
 
@@ -84,14 +88,16 @@ You could choose between importing either a Substrate account or Ethereum accoun
 
 <Figure caption="Methods of importing" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-9.png').default} width="100%" />
 
-
 Enter your seed phrase in the text boxes. You can use either a 12-word seed phrase or a 24-word seed phrase to import your account. Click on **Import account** and your account has been imported!
 
 <Figure caption="Import using seed phrase" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-10.png').default} width="100%" />
 
 
-!!! Incompatibility
-    In some cases, if you import an account from a seed phrase, problems can arise if the seed phrase of your original wallet is not compatible with SubWallet. **Trust Wallet** and **Safepal** are among the wallets not compatible with us. 
+:::note
+Incompatibility
+In some cases, if you import an account from a seed phrase, problems can arise if the seed phrase of your original wallet is not compatible with SubWallet. **Trust Wallet** and **Safepal** are among the wallets not compatible with us. 
+:::
+
 
 #### Using Polkadot.js JSON file
 
@@ -103,8 +109,9 @@ You will then need to enter your JSON file password (created when you set up the
 
 <Figure caption="JSON file password" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-12.png').default} width="100%" />
 
-!!! Note
-    If you want to import multiple accounts simultaneously from a JSON file, you are required to enter the password for each account you want to import.
+:::note
+If you want to import multiple accounts simultaneously from a JSON file, you are required to enter the password for each account you want to import.
+:::
 
 #### Using MetaMask private key
 
@@ -167,20 +174,22 @@ From your home screen, choose the first blue icon under the eye.
 
 <Figure caption="Receive" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-20.png').default} width="100%" />
 
-!!! If you are in all-accounts mode
+:::note 
+**If you are in all-accounts mode**
+You will be prompted to choose an account if you are in all-accounts mode.
 
-    You will be prompted to choose an account if you are in all-accounts mode.
-    ![All accounts mode](/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-21.png)
+<Figure caption="All accounts mode" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-21.png').default} width="100%" />
+:::
 
 Search for the token that you would like to receive, in this case, ASTR. You can either **Copy the address** or **View address QR**.
 
 <Figure caption="Copy address" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-22.png').default} width="100%" />
 
 
-!!! Note
-    ASTR is allowed to execute cross-chain transfer, so when choosing the token, make sure you are receiving ASTR on the correct chain by checking the network icon under the tokens.
-    <Figure caption="Cross-chain receive" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-35.png').default} width="100%" />
-
+:::note
+ASTR is allowed to execute cross-chain transfer, so when choosing the token, make sure you are receiving ASTR on the correct chain by checking the network icon under the tokens.
+<Figure caption="Cross-chain receive" src={require('/docs/use/manage-wallets/wallet-providers/img/subwallet/subwallet-35.png').default} width="100%" />
+:::
 
 Send the address or show the QR code to the sender and you'll be able to receive ASTR from them!
 
@@ -196,8 +205,9 @@ Next, you can take the following steps:
 
 1. Specify the asset to send and the destination chain. 
 
-    !!! Note 
-        ASTR is allowed to execute cross-chain transfer, so when choosing the destination network, you can choose the drop-down menu to see the available options.
+    :::note 
+    ASTR is allowed to execute cross-chain transfer, so when choosing the destination network, you can choose the drop-down menu to see the available options.
+    :::
 
 2. Enter the destination address
 3. Enter the amount of tokens to send
