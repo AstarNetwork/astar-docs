@@ -1,6 +1,7 @@
 ---
 sidebar_position: 11
 title: dApp Staking
+toc_max_heading_level: 3
 ---
 
 ## Introduction
@@ -233,17 +234,66 @@ dApp reward is calculated based on the tier in which ended. All dApps that end u
 At the end of each `Build&Earn` subperiod era, dApps are evaluated using a simple metric - total value staked on them.
 Based on this metric, they are sorted, and assigned to tiers.
 
-There is a limited number of tiers, and each tier has a limited capacity of slots.
+There is a predefined limited number of tiers, and each tier has a limited capacity of slots.
 Each tier also has a _threshold_ which a dApp must satisfy in order to enter it.
 
+#### Tiers Capacity
+
+There is a limited amount of slots for dApps which means dApps have to compete for them.
+The amount isn't static but is recalculated at the start of each period.
+
+Since the purpose of dApp staking isn't for dApps to earn obscene amounts of rewards, but to provide
+basic income, number of slots is scaled with the value of **ASTR** expressed in **USD**.
+
+At the beginning of each period, using the average **ASTR** price during the former period, new number of slots is calculated:
+
+$ number\_of\_slots = floor(1000 + ASTR_{USD} + 50)$
+
+This approach means that as **ASTR** value increases, so does the number of slots for dApp staking, and vice-versa.
+
+Once number of slots is calculated, it is divided up into slots per tier.
+The portions are statically configured, e.g. _tier 1_ gets **10%** of the slots, _tier 2_ gets **25%** of the slots, and so on.
+
+#### Tier Threshold Entry
+
+A dApp isn't entitled to a tier by just participating in the dApp Staking.
+It needs to attract sufficient support to even be eligible for entry into a tier.
+
+E.g. a threshold to enter _tier 1_ might be set to **1,000,000 ASTR**.
+Since number of slots is dynamic, so has to be the threshold to allow for more realistic competition.
+It's not fair to define the same threshold for entering a tier if there are 50 slots or 500 slots since the
+staked amount will be more diluted between various dApps.
+
+The formula for adjusting tier entry threshold:
+
+$\Delta\%_{threshold} = (\frac{100\%}{100\% + \Delta\%_{dApps}} - 1) * 100\%$
+
+where $\Delta\%_{dApps}$ is the change in the number of dApps, expressed as a percent. In case number has been reduced, the _delta_ will be negative.
+
+At the moment, there are two types of tier entry thresholds:
+* `Dynamic` - adjusts the threshold based on the aforementioned formula.
+* `Fixed` - defines a static, fixed threshold which doesn't adapt.
+
+The `Dynamic` threshold is used for _higher_ tiers, and also defines the minimum amount to which the threshold can fall.
+E.g. a threshold might define _current_ value as **1,000,000 ASTR**. Since this can be decreased if number of slots goes up,
+it also defines a minimum amount the threshold can take, e.g. **500,000 ASTR**.
+
+The `Fixed` threshold is used for the _lowest tier_, and defines a static value.
+
+#### Tier Rewards
+
 Better tiers bring bigger rewards, so dApps are encouraged to compete for higher tiers and attract staker's support.
-For each tier, the reward pool and capacity are fixed. Each dApp within a tier always gets the same amount of reward.
+dApp reward pool is divided between tiers, e.g. _tier 1_ gets **40%** of the total reward pool, and the assigned tier reward pool
+is further divided between the dApps in the pool.
+
+This means that each dApp within a tier always gets the same amount of reward.
 Even if tier capacity hasn't been fully taken, rewards are paid out as if they were.
 
-For example, if tier 1 has capacity for 10 dApps, and reward pool is **500 ASTR**, it means that each dApp that ends up
+For example, if _tier 1_ has capacity for 10 dApps, and reward pool is **500 ASTR**, it means that each dApp that ends up
 in this tier will earn **50 ASTR**. Even if only 3 dApps manage to enter this tier, they will still earn each **50 ASTR**.
 The rest, **350 ASTR** in this case, won't be minted.
 
+#### More On Tiers
 If there are more dApps eligible for a tier than there is capacity, the dApps with the higher score get the advantage.
 dApps which missed out on a higher tier get priority for entry into the next lower tier (if there still is any).
 
@@ -266,4 +316,4 @@ In case they don't, they will simply miss on the earnings.
 However, this should not be a problem given how the system is designed.
 There is no longer _stake&forget_ - users are expected to revisit dApp staking at least at the
 beginning of each new period to pick out old or new dApps on which to stake on.
-If they don't do that, they miss out on the bonus reward & won't earn staker rewards.
+If they don't do that, they miss out on the bonus reward & won't earn any staker rewards.
