@@ -50,7 +50,7 @@ E.g. if `Voting` subperiod lasts for **5 eras**, and each era lasts for **100 bl
 * Block 1, Era 1 starts, Period 1 starts, `Voting` subperiod starts
 * Block 501, Era 2 starts, Period 1 continues, `Build&Earn` subperiod starts
 
-Neither stakers nor dApps earn rewards during this subperiod - no new rewards are generated after `Voting` subperiod ends.
+Neither stakers nor dApps earn rewards during `Voting` subperiod - no new rewards are generated after `Voting` subperiod ends.
 However, as mentioned before, it's crucial for dApps to use this time to market themselves and attract stakers, and for stakers
 to asses which project they want to support.
 
