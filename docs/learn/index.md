@@ -28,3 +28,5 @@ To expand your knowledge about building applications or utilizing various tools 
 [Proxy Accounts](/docs/learn/Proxies.md)
 
 [zkEVM](/docs/learn/zkEVM)
+
+[dApp Staking](/docs/learn/dapp-staking.md)
