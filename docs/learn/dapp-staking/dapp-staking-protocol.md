@@ -1,7 +1,5 @@
 ---
-sidebar_position: 11
-title: dApp Staking
-toc_max_heading_level: 3
+title: dApp Staking - Technical Overview
 ---
 
 ## Introduction
