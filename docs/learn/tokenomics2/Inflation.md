@@ -37,14 +37,14 @@ dApp owners also earn rewards, based on how well their dApp is performing in dAp
 Each **period** is divided up into multiple **eras**.
 **Era** is the core time unit in dApp staking, and its length is measured in the number of blocks.
 
-`BuildAndEarn` subperiod consists of one or more **eras**. Each era has a fixed length.
-`Voting` subperiod always consists of exactly **one era** but its length can be longer than a standard era length.
+`BuildAndEarn` subperiod consists of one or more _standard_ **eras**. Each era has a fixed length.
+`Voting` subperiod always consists of exactly **one era** and this _voting_ era is unique as its length (in blocks) can be longer than a _standard_ era length (but always a multiple of _standard_ era length).
 
 ### Example
 
 * Block is produced every 12 seconds
-* **Era length** is 7200 blocks which equals 24 hours (1 day)
-* `Voting` subperiod length is 10 eras
+* **Era length** is 7200 blocks which equals 24 hours (1 day) (This is _standard_ era length)
+* `Voting` subperiod length is 10 eras (This is the single _voting_ era which lasts 10 x 7700 blocks)
 * `Build&Earn` subperiod length is 81 eras
 * Cycle length is **4 periods**
 
