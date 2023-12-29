@@ -57,7 +57,7 @@ When a new cycle begins, soft-inflation cap is recalculated, and according to th
 The reason why it's a _soft-cap_, instead of a _hard-cap_ is how staker & dApp rewards are distributed.
 Rewards are only minted when they are claimed, and it is possible that at the time of reward recalculation, some rewards remain unclaimed.
 As a result, theoretically, it's possible for the cycle inflation to exceed the _soft-cap_ even though in practice it will be highly unlikely
-due to various _burn_ mechanisms.
+due to _lazy minting_ & _fee burn_ mechanisms.
 
 ## Inflation Distribution
 
@@ -72,8 +72,8 @@ $collator\_reward\_per\_block = \frac{total\_collator\_cycle\_reward}{blocks\_pe
 
 ### Treasury
 
-Similar to the _collators_, treasury gets a fixed amount of the cycle's _soft-capped_ inflation.
-To avoid it being minted all at once, the amount is equaly divided by the number of blocks in the cycle.
+Similar to the _collators_, treasury gets a fixed amount of the cycle's _soft-capped_ inflation 
+distributed in equal amounts throughout all the blocks in the cycle.
 
 $treasury\_reward\_per\_block = \frac{total\_treasury\_cycle\_reward}{blocks\_per\_cycle}$
 
@@ -82,7 +82,7 @@ $treasury\_reward\_per\_block = \frac{total\_treasury\_cycle\_reward}{blocks\_pe
 dApp reward are _assigned_ at the end of each era during `Build&Earn` subperiod.
 This means that the total cycle's dApp reward amount has to be equally divided by the total number of `Build&Earn` eras in a cycle.
 
-$dapp\_reward\_pool\_per\_era = \frac{total\_dapp\_cycle\_reward}{number\_of\_cycles * eras\_per\_build\_and\_earn}$
+$dapp\_reward\_pool\_per\_era = \frac{total\_dapp\_cycle\_reward}{periods\_per\_cycle * eras\_per\_build\_and\_earn}$
 
 The dApp staking protocol will calculate how much each staked dApp should get.
 
@@ -95,7 +95,7 @@ There are two components to the staker rewards - regular _staking_ rewards & the
 Regular staker rewards are awarded for staking native currency, **ASTR**, on a dApp.
 These rewards have two components - the _base_ reward and the _adjustable_ reward.
 
-Base reward is the amount assigned to the reward pool regardless of how much has been staked in total.
+Base reward is the amount assigned to the reward pool at the end of each era regardless of how much has been staked in total.
 
 $base\_staker\_reward\_pool\_per\_era = \frac{total\_base\_staker\_cycle\_reward}{number\_of\_cycles * eras\_per\_build\_and\_earn}$
 
@@ -117,16 +117,16 @@ When the _adjustable factor_ is less than **1**, it means the remainder is never
 
 With the above formulas, we can finally express how much staker _Alice_ earns in era **n**:
 
-$staker\_reward_{Alice} = \frac{staked\_value_{Alice,n}}{total\_staked\_value_n} * (base\_staker\_reward\_pool\_per\_era_n + adjustable\_staker\_reward\_pool_n)$
+$staker\_reward\_per\_era_{Alice} = \frac{staked\_value_{Alice,n}}{total\_staked\_value_n} * (base\_staker\_reward\_pool\_per\_era_n + adjustable\_staker\_reward\_pool_n)$
 
 #### Bonus Rewards
 
-In case a staker stakes during the `Voting` subperiod, and doesn't reduce their stake below what was staked at the end of the `Voting` subperiod,
-it will make them eligible for the bonus reward.
+In case a staker stakes during the `Voting` subperiod, and doesn't reduce their stake during the `Build&Earn` subperiod below what
+was staked at the end of the `Voting` subperiod, it will make them eligible for the bonus reward.
 
 Bonus reward pool is assigned per period, and can be expressed as:
 
-$bonus\_reward\_pool\_per\_period = \frac{total\_bonus\_cycle\_reward}{number\_of\_cycles}$
+$bonus\_reward\_pool\_per\_period = \frac{total\_bonus\_cycle\_reward}{periods\_per\_cycle}$
 
 The bonus reward for a staker _Alice_ can then be expressed as:
 
@@ -137,9 +137,9 @@ $bonus\_staker\_reward_{Alice} = \frac{voting\_subperiod\_staked\_value_{Alice}}
 Both _staker_ and _dApp_ rewards are minted in a lazy fashion - when they are needed. Only collator & treasury rewards are minted per block.
 
 With the _adjustable staker reward_ and the dApp staking tier system, the inflation in practice will be much lower than the calculated _soft-cap_.
-We only allow _award_ the full extent of the adjustable staker rewards if we've reached or exceeded the ideal staking rate.
+Maximum adjustable award amounts is possible only if the ideal staking rate is reached or exceeded.
 For the dApp rewards, it's unlikely that all of the tiers will be filled with dApps - it might be that the tier capacity is larger than the demand,
-or that simply some dApps don't attract enough support to enter a tier. These rewards will never be even minted.
+or that simply some dApps don't attract enough support to enter a tier. These rewards will never be even minted thus lowering the effective inflation rate.
 
 Rewards don't persist forever, and must be claimed before they _expire_.
 Although this is expected to be very lenient, it's still possible to happen.
