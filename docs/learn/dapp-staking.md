@@ -20,7 +20,7 @@ The following chapters will provide an overview of the functionality and termino
 Eras are the basic _time unit_ in dApp staking and their length is measured in the number of blocks.
 
 Eras are not expected to last long, e.g. current production networks era length is roughly 1 day (7200 blocks).
-After an era ends, it's usually possible to claim rewards for it, if user or dApp are eligible.
+After an era ends, it's usually possible to claim rewards for it, if staker or dApp are eligible.
 
 ### Periods
 
@@ -33,7 +33,7 @@ Each period consists of two subperiods:
 
 Period beginning is marked by the `Voting` subperiod, after which follows the `Build&Earn` subperiod.
 
-Stakes are **only** valid throughout a period. When new period starts, all stakes are reset to **zero**. This helps prevent projects remaining staked due to inertia of stakers, and makes for a more dynamic staking system. Staker doesn't need to do anything for this to happen, it is automatic.
+Stakes are **only** valid throughout a period. When new period starts, all stakes are reset to **zero**. Protocol dynamic prevents inactive projects having high stakes due to inertia of stakers while at the same time allows more visibility for dApps joining the protocol and equal chance in attracting stakers' attention.
 
 Even though stakes are reset, locks (or freezes) of tokens remain.
 
@@ -59,7 +59,7 @@ Voting on a poor project means that poor performance is rewarded, damaging the n
 
 #### Build&Earn
 
-`Build&Earn` subperiod consists of one or more eras, therefore its length is expressed in eras.
+`Build&Earn` subperiod consists of one or more eras.
 E.g. if `Build&Earn` subperiod lasts for **10 eras**, and each era lasts for **100 blocks**, these **10 eras** would consume **1000 blocks** in total.
 
 After each _era_ ends, eligible stakers and dApps can claim the rewards they earned.
