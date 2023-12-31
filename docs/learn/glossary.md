@@ -74,10 +74,10 @@ sidebar_position: 5
  Partition of a blockchain network that allows for parallel processing of transactions to increase scalability and network capacity.
 
  ### Shiden
- The "canary network" for Astar connected to Kusama, a canary network for Polkadot. It consists of an early-release, unaudited version of the Astar codebase. It is not a testnet.
+ The "canary network" for Astar connected to Kusama, a canary network for Polkadot. It consists of an early-release, unaudited version of the Astar codebase. It is not a testnet. For more info refer to the Networks section.
 
  ### Shibuya
- A testnet for Shiden and Astar.
+ A testnet for Shiden and Astar. For more info refer to the Networks section.
 
  ### Smart Contract
  A self-executing computer program that automatically enforces and executes the terms of an agreement between parties on a blockchain network.
