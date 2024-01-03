@@ -2,11 +2,13 @@
 sidebar_position: 16
 ---
 
+import Figure from "/src/components/figure"
+
 # Portal Troubleshooting Guide
 
 This section will guide you to troubleshoot and solve most issues when connecting to the portal.
 
-## Can't Connect Wallet To The Portal
+## Can't Connect Wallet To The Portal;
 
 **Allow Polkadot.js to access the portal**
 1. Go to Polkadot.js browser extension.
@@ -20,7 +22,7 @@ This section will guide you to troubleshoot and solve most issues when connectin
 3. On the dropdown menu, select `Allow use on any chain`.
 4. If you have other extensions installed, please revoke access of those extensions.
 
-## Getting Errors Or Unable To Execute Certain Functions
+## Getting Errors Or Unable To Execute Certain Functions;
 Some of you may be unable to execute certain funtions. Please try these steps.
 1. Update metadata (if required).
 2. Clear cache, restart browser and connect wallet to the portal again.
@@ -28,9 +30,23 @@ Some of you may be unable to execute certain funtions. Please try these steps.
 4. Brave browser is known to give errors. Use Chrome or Firefox instead.
 5. Use VPN.
 
-## Unable To Claim Staking Rewards
+## Unable To Claim Staking Rewards;
 1. If you can't claim the staking rewards on the portal. Visit [HERE](https://docs.astar.network/docs/use/user-guides/manual_claim).
 2. If the transferrable balance in the wallet is too low, you might not be able to claim the staking rewards. Top up your wallet or turn off `auto-restake` and then claim the rewards. Turning off `auto-restake` reduces the amount of transactions therefore reducing the amount of gas needed.
 
+## After signing the transaction, the portal spins indefinitely;
+1. If the portal spins indefinitely after you've signed a transaction, your transferable balance in the wallet is too low to pay for the transaction. 
+2. Top up your wallet with new ASTR tokens and you'll be able to complete your transaction.
 
-If none of the above is helpful, please contact any of the team members or ambassadors on [Discord](https://discord.gg/2FGq5KqwBh).
+## My staking is not displayed on the dApp Staking page of the Astar Portal ;
+
+<Figure src={require('/docs/use/img/Troubleshooting_dApp_Staking.png').default } width="100%" /> 
+
+1. Two dApps have been delisted from the dApp Staking and if you were a staker on these dApps, you may not see your staking position on the dApp Staking page.
+2. dApps concerned:
+    - **Arthswap**, contract: `0xE915D2393a08a00c5A463053edD31bAe2199b9e7`
+    - **Sirius Finance**, contract: `0x9448610696659de8F72e1831d392214aE1ca4838`
+3. To release these funds, you must `claim` all your pending ASTR rewards.
+4. Once all your pending rewards have been claimed, your tokens will be unlocked without any unbonding period and will become directly transferable.
+
+If none of the above is helpful, please contact any of the team members or agents on [Discord](https://discord.gg/2FGq5KqwBh).
