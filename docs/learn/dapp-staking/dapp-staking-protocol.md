@@ -49,9 +49,7 @@ E.g. if `Voting` subperiod lasts for **5 eras**, and each era lasts for **100 bl
 * Block 1, Era 1 starts, Period 1 starts, `Voting` subperiod starts
 * Block 501, Era 2 starts, Period 1 continues, `Build&Earn` subperiod starts
 
-Neither stakers nor dApps earn rewards during `Voting` subperiod - no new rewards are generated after `Voting` subperiod ends.
-However, as mentioned before, it's crucial for dApps to use this time to market themselves and attract stakers, and for stakers
-to asses which projects they want to support.
+Neither stakers nor dApps earn rewards during the `Voting` subperiod; rewards are only generated for eras in the `Build&Earn` subperiod. However, as mentioned before, it’s crucial for dApps to use this time to market themselves and attract stakers, and for stakers to assess which projects they want to support.
 
 It is important to award projects which the staker believes will bring value to the network and possibly themselves.
 Voting on a poor project means that poor performance is rewarded, damaging the network instead of improving it.
