@@ -46,7 +46,7 @@ Stakers must assess whether the project they want to stake on brings value to th
 Casting a vote, or staking, during the `Voting` subperiod makes the staker eligible for bonus rewards. so they are encouraged to participate during this time.
 
 `Voting` subperiod length is expressed in _standard_ era lengths, even though the entire voting subperiod is treated as a single _voting era_.
-E.g. if `Voting` subperiod lasts for **5 eras**, and each era lasts for **100 blocks**, total length of the `Voting` subperiod will be **500** blocks.
+E.g. if `Voting` subperiod lasts for **5 eras**, and each era lasts for **100 blocks**, total length of the `Voting` subperiod will be **500** blocks **BUT** it will consume only a single numeric era:
 * Block 1, Era 1 starts, Period 1 starts, `Voting` subperiod starts
 * Block 501, Era 2 starts, Period 1 continues, `Build&Earn` subperiod starts
 
