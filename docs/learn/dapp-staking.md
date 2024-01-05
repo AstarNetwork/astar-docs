@@ -194,7 +194,7 @@ Once period finishes, all stakes are reset back to zero. This means that no unst
 Stakers can claim rewards for passed eras during which they were staked for the entire duration of the era.
 Even if multiple contracts were staked, claim reward call will claim rewards for all of them.
 
-Only rewards for passed eras can be claimed. It is possible that a successful reward claim call will claim rewards for multiple eras. This can happen if staker hasn't claimed rewards in some time, and many eras have passed since then, accumulating pending rewards. There is a limit on how many rewards can a single call claim, so if a lot of rewards have accumulated, it's possible that multiple claim calls will be required to claim all of the pending rewards.
+Only rewards for the finished eras can be claimed. It is possible to claim rewards for multiple eras using a single call. This can happen if staker hasn't claimed rewards in some time, and many eras have passed since then, accumulating pending rewards. There is a limit on how many rewards can a single call claim, so if a lot of rewards have accumulated, it's possible that multiple claim calls will be required to claim all of the pending rewards.
 
 Rewards don't remain available forever, and if not claimed within some time period, they will be treated as expired. This will be a longer period, but will still exist.
 
