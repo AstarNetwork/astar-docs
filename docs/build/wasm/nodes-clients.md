@@ -45,4 +45,4 @@ Wasm contracts are live on Shiden. You can interact with them in the same way as
 
 ## Mainnet Node: Astar
 
-At the moment, Wasm smart contracts are not available on Astar. They should go live during 2023 Q1.
+Wasm contracts are live on Astar.

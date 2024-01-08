@@ -14,22 +14,22 @@ Chain extension is a way to extend contracts API to add contracts to runtime pal
 
 This chain extension enables usage of XVM in your contracts. More info in the [ink! XVM SDK repo](https://github.com/AstarNetwork/ink-xvm-sdk).
 
-#### DApp Staking
-
-This chain extension adds call to `pallet_dapps_staking` so that you can use dApp Staking in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
-
 #### Assets
 
 This chain extension adds call to `pallet_assets` so that you can use Assets in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
 
+#### Account Unification
+
+This chain extension adds query to `pallet_unified_accounts` so that you can query Unified addresses. Find usage and tests in [ink! XVM SDK repo](https://github.com/AstarNetwork/ink-xvm-sdk)
+
 ### Availability in networks
 
 
-| Chain extension | Swanky | Shibuya | Shiden | Astar |
-|---|---|---|---|---|
-| XVM | :white_large_square: | :white_check_mark: | :white_large_square: | :white_large_square: |
-| Dapp Staking |  :white_check_mark:| :white_check_mark: | :white_large_square: | :white_large_square: |
-| Assets | :white_check_mark: | :white_check_mark: | :white_large_square: | :white_large_square: |
+| Chain extension      | Shibuya | Shiden | Astar |
+|---------------------|---|---|---|
+| XVM                 | :white_check_mark: | :white_large_square: | :white_large_square: |
+| Assets              | :white_check_mark: | :white_large_square: | :white_large_square: |
+| Account Unification | :white_check_mark: | :white_large_square: | :white_large_square: |
 
 
 ### Implementations
@@ -38,7 +38,7 @@ There are two implementations: one in the runtime and one on the ink! side.
 
 #### Runtine
 
-Implementation of the chain extension on runtime side is available on [Astar repository](https://github.com/AstarNetwork/Astar/), under `chain-extensions` folder
+Implementation of the chain extension on runtime side is available on [Astar repository](https://github.com/AstarNetwork/Astar/tree/master/chain-extensions), under `chain-extensions` folder
 
 #### ink! implementation
 
