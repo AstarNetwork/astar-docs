@@ -12,18 +12,18 @@ Astar Network is currently in a phased transition to a Tokenomics 2.0 model. The
 
 Content to this section will be added as changes get enacted (go live).
 
-Overview of current Astar Network's Tokenomics are documented **[here](../tokenomics2)**
+Overview of current Astar Network's Tokenomics are documented **[here](./tokenomics2/inflation)**
 
 The outline of the phased approach to Tokenomics 2.0:
 - Phase 0 - Forum Discussion: 
-    - ✅ ongoing throughtout all phases
-- Phase 1 - Fee Ajdustments:
+    - ✅ ongoing throughout all phases
+- Phase 1 - Fee Adjustments:
     - ✅ Shibuya testnet - live since October 2023
     - ✅ Shiden - live since November 2023
     - ✅ Astar - live since November 2023
 - Phase 2 - Hybrid Inflation Model (Reduction of collators' reward and treasury reward, reduction of inflation)
     - ✅ Shibuya testnet - live since November 2023
-    - ✅ Shiden - live since Decemeber 2023
+    - ✅ Shiden - live since December 2023
     - ✅ Astar - live since December 2023
 - Phase 3 - Full Inflation Model (activation of dAppStaking v3 which affects block reward calculation, further reduction of inflation)
     - ✅ Shibuya testnet - live since December 2023
