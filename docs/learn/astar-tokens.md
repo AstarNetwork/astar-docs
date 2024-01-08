@@ -4,7 +4,7 @@ sidebar_position: 3
 # Astar Token
 
 ## Overview
-The native token of Astar Network is Astar Token, with the ticket ASTR. The total initial supply of ASTR was 7,000,000,000 units.  The current tokenomics model of the network is inflationary and the inflation is estimated to be ~665,000,000 yearly. 
+The native token of Astar Network is Astar Token, with the ticker ASTR. The total initial supply of ASTR was 7,000,000,000 units.  The current tokenomics model of the network is inflationary and the inflation is estimated to be ~665,000,000 yearly. 
 ASTR token has 18 decimals. 
 At the genesis, ASTR were allocated as follows: 
 
@@ -60,7 +60,7 @@ You can see the SDN initial allocation below:
 | Team (Employee Incentives) | 5 |
 
 Shibuya's token is SBY. 
-There are ways to get SBY for testing purposes vua Faucet on the Astar Portal.
+There are ways to get SBY for testing purposes via Faucet on the Astar Portal.
 
 ## Learn more
 Get SBY tokens
