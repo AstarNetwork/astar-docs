@@ -29,4 +29,4 @@ To expand your knowledge about building applications or utilizing various tools 
 
 [zkEVM](/docs/learn/zkEVM)
 
-[dApp Staking](/docs/learn/dapp-staking.md)
+[dApp Staking](/docs/learn/dapp-staking-v3)
