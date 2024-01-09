@@ -1,11 +1,4 @@
-TODO CHANGE THIS ARTICLE 
-
-
-# dApp Staking
-
-Introducing #Build2Earn: What is dApp Staking and Why It Matters for Web3
-
-## dApp Staking & Web3
+# dApp Staking & Web3
 
 At Astar, we are on a mission to revolutionize the internet. We envision a future where the internet is truly decentralized, and not controlled by a handful of tech giants. We believe the internet should be free and owned by the people for the people. We believe that people should have ownership of their data and assets, and not be at the mercy of intermediaries. This is the essence of the Web3 vision and what drives Astar.
 
@@ -20,6 +13,9 @@ DApp staking is one of the catalysts that will accelerate the Web3 vision from a
 At Astar Network, we are tackling these three challenges head-on.
 
 The third point, namely — the necessity for great dApps to be built — is the driving force behind **#Build2Earn (our dApp staking initiative)** and the focus of this article.
+
+:::info
+Full overview of dAppStaking v3 can be found in the [Learn/dAppStaking](/docs/learn/dapp-staking/) section of the docs.
 
 ## What is dApp Staking?
 
