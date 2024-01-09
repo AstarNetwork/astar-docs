@@ -12,7 +12,7 @@ Astar Network is currently in a phased transition to a Tokenomics 2.0 model. The
 
 Content to this section will be added as changes get enacted (go live).
 
-Overview of current Astar Network's Tokenomics are documented **[here](./tokenomics2/inflation)**
+Overview of current Astar Network's Tokenomics are documented **[here](/docs/learn/tokenomics2/inflation)**
 
 The outline of the phased approach to Tokenomics 2.0:
 - Phase 0 - Forum Discussion: 
