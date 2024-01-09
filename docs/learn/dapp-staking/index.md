@@ -1,9 +1,11 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
+title: dApp Staking overview
 ---
-# dAppStaking
 
-## What is dAppStaking
+# dApp Staking
+
+## What is dApp Staking
 
 On the Astar/Shiden Network, developers who build decentralized applications (dApps) have the opportunity to receive compensation through a process known as dApp staking. By engaging in dApp staking, developers can receive a basic income, which allows them to continue building and enhancing their dApps.
 
@@ -11,7 +13,7 @@ dApp staking on the Astar/Shiden Network operates similarly to staking on valida
 
 At every block on the network, a portion of the rewards is allocated to dApp staking. This reward is then distributed between the operators (developers) of the dApps and the nominators. This mechanism serves as a powerful incentive for developers to build and deploy their dApps on the Astar/Shiden Network.
 
-For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking/dapp-staking-protocol.md)
+
 
 ## Benefits of dApp Staking on Astar/Shiden
 
@@ -23,7 +25,7 @@ For Web3 to flourish, there needs to be a symbiotic relationship between dApp st
 
 - Reduced Dependency on Gas Fees: Building on other blockchains often entails paying substantial gas fees for transactions and interactions. However, on the Astar/Shiden Network, developers can receive compensation through dApp staking, minimizing their reliance on gas fees and making it more economically feasible to continue dApp development.
 
-### Benefits for dApp Stakers (Nominators): Increase in Token Value & High APRs
+### Benefits for Stakers (Nominators): Increase in Token Value & High APRs
 
 Astar/Shiden dApp stakers (i.e. nominators) want the value of their tokens to increase but for the value of their tokens to increase, the underlying value of the asset — the Astar/Shiden Network — needs to increase.
 
@@ -33,7 +35,7 @@ This market dynamic enables dApp stakers to get more long-term value from their 
 
 Please refer to [this section](/docs/build/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
-### Benefits for dApp Builders: Build2Earn
+### Benefits for Builders: Build2Earn
 
 For great dApps to be built, developers need to build them. For developers to build great dApps, they need financial incentives.
 
@@ -48,3 +50,14 @@ Please refer to [this section](/docs/build/dapp-staking/for-devs/) to learn more
 For users, dApp staking enables the ecosystem to grow and improve in terms of its utility. This is because better dApps are built as a result of developers having a way to earn money while building them.
 
 Having more (and better) dApps attracts and retains more users, creating a network effect, which helps to grow the ecosystem and increases the long-term intrinsic value of the network.
+
+
+## What next?
+
+If you are ASTR token holder interested in staking please refer to [this section](/docs/build/dapp-staking/for-stakers/) to learn more about participating as a staker.
+
+If you are a dApp developer building on Astar, please refer to [this section](/docs/build/dapp-staking/for-stakers/) to learn more about participating as a staker.
+
+For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking/dapp-staking-protocol.md)
+
+Still have a question? - check this FAQ specific to dAppStaking v3 planned to go live on Astar in Q1 2024.
