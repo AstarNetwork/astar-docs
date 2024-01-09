@@ -74,7 +74,7 @@ All users using Astar EVM Ledger App ([Astar EVM](https://support.ledger.com/hc/
 
 ### Q: We are a dApp participating in dAppStaking v2, What do we need to do?
 
-Go here 
+Inform your community and stakers that they should be active once dApp Staking v3 goes live and support your project by staking.
 
 
 ### Still got a question?
