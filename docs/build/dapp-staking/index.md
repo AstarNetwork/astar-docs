@@ -16,6 +16,7 @@ The third point, namely — the necessity for great dApps to be built —�
 
 :::info
 Full overview of dAppStaking v3 can be found in the [Learn/dAppStaking](/docs/learn/dapp-staking/) section of the docs.
+:::
 
 ## What is dApp Staking?
 
