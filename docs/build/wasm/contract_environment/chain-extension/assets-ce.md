@@ -52,18 +52,19 @@ The Origin of the call is the contract address calling the chain-extension. The 
 
 #### Usage in your contract
 
+Please check the Chain Extension library repo and use assets-extension crate: [LINK](https://github.com/AstarNetwork/chain-extension-contracts)
+
 :::note
 Your contract should be in ink! 4.3 or above
 :::
 
 1. add `assets_extension` in your `Cargo.toml` and to the `std` `features`
 ```toml
-assets_extension = {  git = "https://github.com/swanky-dapps/chain-extension-contracts", default-features = false }
+assets_extension = {  git = "https://github.com/AstarNetwork/chain-extension-contracts", default-features = false }
 
 [features]
 default = ["std"]
 std = [
-    "ink_metadata/std",
     "ink/std",
     "scale/std",
     "scale-info/std",
@@ -73,11 +74,12 @@ std = [
 
 2. Add `use` statement in your contract module
 ```rust
-use assets_extension::*;
+use assets_extension::{AssetsError, AssetsExtension as _AssetsExtension};
 
+type AssetsExtension = _AssetsExtension<DefaultEnvironment>;
 ```
 
 3. Use struct functions directly in your contract
 ```rust
-AssetsExtension::create(Origin::Address, asset_id, contract, min_balance)
+AssetsExtension::mint(asset_id, beneficiary, amount)?;
 ```
