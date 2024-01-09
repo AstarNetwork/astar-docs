@@ -14,7 +14,6 @@ dApp staking on the Astar/Shiden Network operates similarly to staking on valida
 At every block on the network, a portion of the rewards is allocated to dApp staking. This reward is then distributed between the operators (developers) of the dApps and the nominators. This mechanism serves as a powerful incentive for developers to build and deploy their dApps on the Astar/Shiden Network.
 
 
-
 ## Benefits of dApp Staking on Astar/Shiden
 
 For Web3 to flourish, there needs to be a symbiotic relationship between dApp stakers (i.e. nominators), dApp developers, and dApp users. On Astar/Shiden, dApp staking is the mechanism that enables this mutually beneficial relationship to occur.
@@ -35,7 +34,11 @@ This market dynamic enables dApp stakers to get more long-term value from their 
 
 Please refer to [this section](/docs/build/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
+<<<<<<< HEAD
 ### Benefits for Builders: Build2Earn
+=======
+### Benefits for dApp Builders: Build2Earn
+>>>>>>> 3bd93c7 (Initial commit)
 
 For great dApps to be built, developers need to build them. For developers to build great dApps, they need financial incentives.
 
