@@ -21,7 +21,7 @@ In summary, there are two main factors limiting block production: `ref time` and
 
 Transaction Fees on Astar comprise of Native (Substrate) and EVM fees. Native and EVM transaction fees are calculated in different ways. Tokenomics 2.0 aligns the fees calculation between the two systems so that transactions consuming the same amount of block resources are priced roughly the same regardless of transaction type (Native or EVM).
 
-This section describes Tokenomics 2.0 fee model calulation details.
+This section describes Tokenomics 2.0 fee model calculation details.
 
 ## Native Fees
 
@@ -52,7 +52,7 @@ $$
 - $weight\_fee$ - is the fee related to the weight of the transaction.
 - $c$ - fee multiplier; if network utilization is above ideal, `c` factor will increase, forcing users to pay more. And vice-versa, when network congestion is low, fee multiplier will decrease.
 - $length\_fee$ - this is part of the fee related to the transaction length (number of bytes).
-- $rent\_fee$ - deposit fee for storing data on chain. Detailed explanation of rent fee calculation in case of Wasm tranactions can be found under the [in the Build section](/docs/build/wasm/transaction-fees#storage-rent).
+- $rent\_fee$ - deposit fee for storing data on chain. Detailed explanation of rent fee calculation in case of Wasm transactions can be found under the [in the Build section](/docs/build/wasm/transaction-fees#storage-rent).
 - $tip$ - extra payment transaction submitter pays to ensure their transaction gets included faster into a block.
 
 Native fees are inherently dynamic using the fee multiplies `c` which is calculated in each block using the following formulas:
@@ -70,7 +70,7 @@ $$
 
 with several configuration parameters:
 
-- $s*$ - ideal block fullnes; desired long term average block fullness.
+- $s*$ - ideal block fullness; desired long term average block fullness.
 - $v$ - variability factor; controls how fast the adjustment factor changes. If value is small, it will adjust slowly, and if it is large, it will adjust quickly.
 - $block\_weight$ - total weight of the previous block.
 - $c_{min}$ - the smallest possible value of fee multiplier $c$.
@@ -93,9 +93,9 @@ $$ethereum\_fee = used\_gas * (base\_fee\_per\_gas + priority\_fee\_per\_gas)$$
 - $base\_fee\_per\_gas$ - how much needs to be paid by the user per unit of gas.
 - $priority\_fee\_per\_gas$ - how much is the user tipping each unit of gas.
 
-Comparing it with the previous example using native fees, it’s clear that Ethereum transactions are less configurable and more information is abstracted from the user. One of the important differences compared to native fee model is the non-existance of rent fees: when storage is created, the price of that storage is included in the gas fee, and even if some storage is removed later on, the user doesn’t receive a refund.
+Comparing it with the previous example using native fees, it’s clear that Ethereum transactions are less configurable and more information is abstracted from the user. One of the important differences compared to native fee model is the non-existence of rent fees: when storage is created, the price of that storage is included in the gas fee, and even if some storage is removed later on, the user doesn’t receive a refund.
 
-In order to align fees between two different systems, EVM fee formula for Astar Network is adjusted in a way that $base\_fee\_per\_gas$ becomes a dynamic paramter calculated in each block $n$:
+In order to align fees between two different systems, EVM fee formula for Astar Network is adjusted in a way that $base\_fee\_per\_gas$ becomes a dynamic parameter calculated in each block $n$:
 
 $$
 \begin{align}

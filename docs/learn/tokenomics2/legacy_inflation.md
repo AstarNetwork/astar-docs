@@ -16,7 +16,7 @@ import inflation from '/docs/learn/img/inflation_1.png'
 [Astar Network]: https://astar.network/
 
 :::tip
-Astar and Shiden sharde the same economic model, though there were differences in their initial supply configurations.
+Astar and Shiden share the same economic model, though there were differences in their initial supply configurations.
 The following chapters focus on Astar and ASTR, however, this information also applies to Shiden and SDN token.
 :::
 
@@ -128,12 +128,12 @@ Note that in Polkadot's model, when ideal TVL is reached, staker rewards drop ex
 
 Using the parameters from the previous chapters, we can express yearly interest rate for the stakers:
 $$
-i = {inflation_{anual} * total_{staker} \over TVL_{\%}}
+i = {inflation_{annual} * total_{staker} \over TVL_{\%}}
 $$
 
-For example, in case $total_{staker} = 55\%$ and $TVL_{\%} = 40\%$, we end up with ${0.1 * 0.55 \over 0.4}$ which is `13.75%` anual interest rate.
+For example, in case $total_{staker} = 55\%$ and $TVL_{\%} = 40\%$, we end up with ${0.1 * 0.55 \over 0.4}$ which is `13.75%` annual interest rate.
 
-However, inflation dilutes the interest rate so it's more precise to consider *inflation adjusted anual interest rate*.
+However, inflation dilutes the interest rate so it's more precise to consider *inflation adjusted annual interest rate*.
 
 $$
 i_{adjusted} = {i + 1 \over inflation_{anual} + 1} - 1
