@@ -8,7 +8,7 @@ sidebar_label: dApp Staking FAQ
 
 ## General Info About Migration From v2 to v3
 
-These are major remars about the migration:
+These are major remarks about the migration:
 
 - All registered dApps will be migrated, no actions required from the owners.
 - Staker’s _locked_ tokens will be migrated.
@@ -43,7 +43,7 @@ Using the new delegated calls, anyone will be able to claim rewards for anyone e
 
 Astar team will ensure that all pending rewards are claimed during the decommissioning. We won’t launch v3 until all unclaimed rewards have been claimed.
 
-These transactions won’t be _free_, and whoever runs the _claim bot_ will need to be reimbursed by the treasury - but this is another topic. **TODO - please refer here for more info.**
+These transactions won’t be _free_, and whoever runs the _claim bot_ will need to be reimbursed by the treasury - but this is another topic. **TODO - please refer [here](https://forum.astar.network/t/dapp-staking-migration-from-v2-to-v3/5807?u=gaius_sama) for more info.**
 
 Please do your best to claim the rewards yourself, and encourage others to do the same. This is just a one time thing, and won’t be something used again in dApp staking v3. Everyone is responsible for claiming their own rewards - also, with the new periods system, stakers will need to claim rewards & stake again roughly every 3 months to continue earning rewards.
 
