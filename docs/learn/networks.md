@@ -40,6 +40,10 @@ Rococo is a test Relay Chain used by the Polkadot & Kusama communities. Astar te
 
 The Rocstar native token symbol is ROC.
 
+### zKatana
+
+ZKatana is the testnet for Astar zkEVM, a modular Layer-2 scaling solution leveraging Polygon's zero-knowledge rollups with validium-based storage to facilitate off-chain execution and data availability, with finality guaranteed by Ethereum.
+
 ## Mainnets
 
 Astar has two mainnets, like most parachains in the Polkadot ecosystem. One on Kusama Relay Chain, and the other on Polkadot Relay chain.
@@ -50,9 +54,14 @@ Shiden is a parachain connected to the Kusama Relay Chain, and used to deploy an
 
 The Shiden native token symbol is SDN.
 
-### Astar
+### Astar Substrate
 
-By now you may have already guessed that Astar network is a parachain on Polkadot Relay chain.
+A parachain of the Polkadot Relay chain that supports both EVM and Wasm smart contract execution environments. 
 
 The Astar native token symbol is ASTR.
+
+### Astar zkEVM
+
+A modular Layer-2 scaling solution leveraging Polygon's zero-knowledge rollups with validium-based storage to facilitate off-chain execution and data availability, with finality guaranteed by Ethereum.
+
 

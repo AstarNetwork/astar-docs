@@ -16,7 +16,7 @@ Modular blockchain solutions are purpose-built to *excel* at performing only the
 
 ## What is Astar zkEVM?
 
-Astar zkEVM is a modular Layer-2 scaling solution leveraging Polygon's zero-knowledge rollups combined with Avail's validium-based storage to facilitate off-chain execution and data availability, with finality guaranteed by Ethereum. 
+Astar zkEVM is a modular Layer-2 scaling solution leveraging Polygon's zero-knowledge rollups combined with validium-based storage to facilitate off-chain execution and data availability, with finality guaranteed by Ethereum. 
 
 In coordination with our key partners, Astar zkEVM is well-positioned to take advantage of the extensive developer base and well-established toolset existing in the Ethereum ecosystem, and boasts the following key features:
 
