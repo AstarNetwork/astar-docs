@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 title: FAQs related to dAppStaking v3
 sidebar_label: dApp Staking FAQ
 ---
@@ -35,18 +35,17 @@ In case she doesn’t want to stake anymore, she can _unlock_, which is similar 
 No stakes are getting carried over, but all TVL is getting carried over.
 
 ### Q: What About Unclaimed Rewards?
-Once v3 is launched, all of the unclaimed v2 rewards will become inaccessible. It doesn’t make sense to migrate rewards since the new [Tokenomics 2.0](/docs/learn/tokenomics2/) are tightly coupled with dApp staking - e.g. it’s not really possible to guarantee any inflation rate if we allow minting of over 2 year old rewards.
+Once v3 is launched, all of the unclaimed v2 rewards will become inaccessible. Please do your best to claim the rewards yourself, and encourage others to do the same.
 
-To prevent users from loosing long accumulated rewards, a special state will be introduced into v2: **Decommission Mode**. Once decommissioning has started, majority of the dApps staking v2 functionality will be disabled, with the exception of reward claim calls. Two new special calls will also become available - _delegated staker reward claim_ & _delegated reward destination setting_.
+However, to prevent users from loosing long accumulated rewards, a special state will be introduced into v2: **Decommission Mode** during which it will be possible that someone else can claim other stakers' rewards (and pay fees).
 
-Using the new delegated calls, anyone will be able to claim rewards for anyone else. E.g. `Alice` can claim rewards for `Bob` - this essentially means that `Alice` pays for the transaction fee to claim `Bob's`. Of course, `Bob's` rewards are deposited into his account, not `Alice's` :slightly_smiling_face:.
+Example: Using the special calls, anyone will be able to claim rewards for anyone else. E.g. `Alice` can claim rewards for `Bob` - this essentially means that `Alice` pays for the transaction fee to claim `Bob's`. Of course, `Bob's` rewards are deposited into his account, not `Alice's`.
 
 Astar team will ensure that all pending rewards are claimed during the decommissioning. We won’t launch v3 until all unclaimed rewards have been claimed.
 
-These transactions won’t be _free_, and whoever runs the _claim bot_ will need to be reimbursed by the treasury - but this is another topic. **TODO - please refer [here](https://forum.astar.network/t/dapp-staking-migration-from-v2-to-v3/5807) for more info.**
-
-Please do your best to claim the rewards yourself, and encourage others to do the same. This is just a one time thing, and won’t be something used again in dApp staking v3. Everyone is responsible for claiming their own rewards - also, with the new periods system, stakers will need to claim rewards & stake again roughly every 3 months to continue earning rewards.
-
+:::info
+Please refer to [this Astar Forum discssion](https://forum.astar.network/t/dapp-staking-migration-from-v2-to-v3/5807) for all the details regarding unclaimed rewards.
+:::
 
 ### Q: I am a Leger Astar Native App User, what do I need to do?
 
@@ -66,6 +65,8 @@ If you wish to actively participate in dApp Staking v3 right from the start, you
 
 :::info 
 It is possible that by the launch of dApp staking v3, Ledger generic app will be launched, completely removing this limitation.
+
+Keep an eye out on this page and official announcements for more info as it becomes available.
 :::
 
 ### Q: I am a Leger Astar EVM App User, what do I need to do?

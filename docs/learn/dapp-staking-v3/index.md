@@ -34,11 +34,11 @@ This market dynamic enables dApp stakers to get more long-term value from their 
 
 Please refer to [this section](/docs/build/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
-### Benefits for Builders: Build2Earn
+### Benefits for Builders: Earn Rewards
 
 For great dApps to be built, developers need to build them. For developers to build great dApps, they need financial incentives.
 
-Ultimately, the most precious human resource in the Web3 ecosystem is developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure in public blockchains.
+Ultimately, the most precious human resource in the Web3 ecosystem are developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure in public blockchains.
 
 With dApp staking, developers can earn a basic income while building dApps on Astar/Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the better off everyone is.
 
