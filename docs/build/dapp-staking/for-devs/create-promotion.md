@@ -16,7 +16,9 @@ You can create a PR once a month, at most.
 
 - Fork our [astar-apps](https://github.com/AstarNetwork/astar-apps) repository.
 
-- Find a file [dapp_promotion.json](https://github.com/AstarNetwork/astar-apps/blob/bd689c35347c47e9287039b74ae60ca4035378fa/src/data/dapp_promotions.json).
+- Find a file [dapp_promotion.json](https://github.com/AstarNetwork/astar-apps/blob/main/src/data/dapp_promotions.json) and put a promotion details there.
+
+- add a promotion image to [public/images/dapp_promotions](https://github.com/AstarNetwork/astar-apps/tree/main/public/images/dapp_promotions) folder.
 
 - Create a PR to the <code>release-hotfix</code> branch in [astar-apps](https://github.com/AstarNetwork/astar-apps).
 
