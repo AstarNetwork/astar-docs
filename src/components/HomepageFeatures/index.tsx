@@ -51,7 +51,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: <Translate>dApp Staking</Translate>,
-    link: '/docs/build/dapp-staking/',
+    link: '/docs/use/dapp-staking/',
     iconClass: 'staking',
     description: (
       <>

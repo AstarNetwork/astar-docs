@@ -37,6 +37,6 @@ Re-Stake rewards feature allows stakers to claim staked rewards which will be au
 
 ## For builders
 
-Please refer to [this section](/docs/build/dapp-staking) to learn more about participating. 
+Please refer to [this section](/docs/use/dapp-staking) to learn more about participating. 
 
 

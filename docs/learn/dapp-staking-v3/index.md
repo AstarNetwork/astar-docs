@@ -32,7 +32,7 @@ Another way for the value of tokens to increase is if the total circulation of t
 
 This market dynamic enables dApp stakers to get more long-term value from their tokens while earning high APRs from staking their tokens to dApps.
 
-Please refer to [this section](/docs/build/dapp-staking/for-stakers/) to learn more about participating as a staker.
+Please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
 ### Benefits for Builders: Earn Rewards
 
@@ -42,7 +42,7 @@ Ultimately, the most precious human resource in the Web3 ecosystem are developer
 
 With dApp staking, developers can earn a basic income while building dApps on Astar/Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the better off everyone is.
 
-Please refer to [this section](/docs/build/dapp-staking/for-devs/) to learn more about participating as a dApp builder.
+Please refer to [this section](/docs/use/dapp-staking/for-devs/) to learn more about participating as a dApp builder.
 
 ### Benefits for dApp Users: Increase in dApp & Network Utility
 
@@ -53,9 +53,9 @@ Having more (and better) dApps attracts and retains more users, creating a netwo
 
 ## What next?
 
-If you are ASTR token holder interested in staking please refer to [this section](/docs/build/dapp-staking/for-stakers/) to learn more about participating as a staker.
+If you are ASTR token holder interested in staking please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
-If you are a dApp developer building on Astar, please refer to [this section](/docs/build/dapp-staking/for-stakers/) to learn more about participating as a staker.
+If you are a dApp developer building on Astar, please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
 For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking-v3/dapp-staking-protocol.md)
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 7
 ---
 
 # Manually Claim dApp Staking Rewards On Polkadot.Js

@@ -10,7 +10,7 @@ If you have a campaign or new product you would like to share in the community, 
 
 You can create a PR once a month, at most.
 
-<Figure src={require('/docs/build/dapp-staking/for-devs/img/promotion-card.png').default} width="100%" />
+<Figure src={require('/docs/use/dapp-staking/for-devs/img/promotion-card.png').default} width="100%" />
 
 # Steps for creating a PR for the promotion card
 

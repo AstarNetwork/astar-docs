@@ -79,4 +79,3 @@ The unbonding panel is where you can see the progress of unbonding and withdraw.
 My dApps Panel is where you can see all dApps you have staked with and manage the assets.
 - **Add**: you can add more $ASTR in dApp staking.
 - **Unbond**: here you can select how many tokens you want to unbond from your staked amount.
-
