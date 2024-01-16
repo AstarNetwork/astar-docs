@@ -10,6 +10,12 @@ Discover [Astar dApp Staking](/docs/learn/build2earn.md), a unique mechanism tha
 
 You can educate yourself more by reading the technical documentation about [dApp Staking V3](/docs/learn/dapp-staking-v3/).
 
+:::warning
+
+dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp Staking users on Astar and Shiden Network, please refer to the [dApp Staking V2 section](/docs/use/dapp-staking/dapp-staking-v2/).
+
+:::
+
 ### Periods & Eras:
 
 `Eras`: Time units measured in blocks. Fairly short, a basic time division in dApp staking;

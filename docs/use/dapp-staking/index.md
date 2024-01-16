@@ -18,6 +18,12 @@ The third point, namely — the necessity for great dApps to be built —�
 Full overview of dAppStaking v3 can be found in the [Learn/dAppStaking](/docs/learn/dapp-staking/) section of the docs.
 :::
 
+:::warning
+
+dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp Staking users on Astar and Shiden Network, please refer to the [dApp Staking V2 section](/docs/use/dapp-staking/dapp-staking-v2/).
+
+:::
+
 ## What is dApp Staking?
 
 For great dApps to be built, developers need to build them. For developers to build great dApps, they need financial incentives.

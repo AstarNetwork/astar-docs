@@ -40,11 +40,11 @@ If you `unstake` some of your tokens from a dApp and your remaining tokens are b
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Unbonding_2.png').default } width="50%" /> 
 
-When unbonding tokens, a new window appears in your staking Panel: `Unbonding`.
+When unbonding tokens, a new window appears in your Staking Panel: **Unbonding**.
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Unbonding_1.png').default } width="85%" /> 
 
-- Remaining Eras gives you an estimation on how many Eras you have to wait before being able to withdraw your tokens.
+- Remaining Days gives you an estimation on how many days or eras you have to wait before being able to withdraw your tokens.
 - When your unbond period is over, you need to withdraw your funds by clicking on the **withdraw button**. Sign the transaction and your tokens will be made transferrable in your wallet.
 
 **Chunks**

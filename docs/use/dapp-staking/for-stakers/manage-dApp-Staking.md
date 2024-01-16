@@ -13,7 +13,7 @@ Once you have staked, a new panel named **Staking**  will appear in the [Assets 
 My Staking Panel is where you track your staking and locked tokens, see your pending rewards and take actions with your tokens and rewards;
 
 - **Locked but unstaked amount:** Total amount of tokens locked in the address;
-    - **Unbond:** Unbond your locked tokens (subject to unbonding rule & time)
+    - **Unbond:** Unbond your locked tokens (subject to [unbonding rule & time](/docs/use/dapp-staking/for-stakers/unstaking#overview))
     - **Stake:** Stake your locked tokens in dApp Staking
 - **Staked amount**: Total amount of tokens you have staked;
 - **Rewards**: Total of the estimated Basic and Bonus rewards;
@@ -42,7 +42,7 @@ My dApps Panel is where you can see all dApps you have staked with and manage yo
 The unbonding panel is where you can see the progress of unbonding and withdraw. 
 For the runtime logic, when unbonding, you don’t unbond from a specific dApp but unbond as `Chunks`. First pending unbonding gives Chunk 1, second pending unbonding gives Chunk 2 etc. 
 There is an unbonding period of 10 ERAs for Astar and 5 ERAs on Shiden. 
-After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unbonding](https://docs.astar.network/docs/build/dapp-staking/for-stakers/unbonding).
+After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unbonding](/docs/use/dapp-staking/for-stakers/unstaking/).
 
 - **Remaining eras:** The number of eras you have to wait before you can withdraw your tokens;
 - **Available to withdraw:** Unlock your tokens and make them `transferable`;
