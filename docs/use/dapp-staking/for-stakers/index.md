@@ -41,7 +41,7 @@ As an user, you need to take the following parameters into consideration before 
 | Eras Per Voting Subperiod | 8 (~48hours) | TBD | TBD |
 | Eras Per Build&Earn Subperiod | 20 (~120hours) | TBD |TBD  |
 | Blocks Per Era | 1800 (~6hours) | TBD | TBD |
-| Unbonding Period | TBD | 5 Eras (~5 days) | 10 Eras (~10 days) |
+| Unbonding Period | 4 Eras (~1 day) | 5 Eras (~5 days) | 10 Eras (~10 days) |
 | Minimum Amount to Stake | 5 SBY | 50 SDN | 500 ASTR |
 
 
