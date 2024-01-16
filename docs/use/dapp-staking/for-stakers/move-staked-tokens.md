@@ -23,6 +23,6 @@ Bear in mind that when you move tokens from one dApp to another, you are `unstak
 
 - If you move tokens from a dApp and your staked tokens are less than the [minimum staking](/docs/use/dapp-staking/for-stakers/#parameters) amount for a dApp, all your tokens will be `unstaked` from that dApp;
 - If you move your tokens from one dApp to another during an `Era` , you'll lose the **basic staking rewards** for that `Era` for the dApp you moved, and you won't earn rewards on the new dApp until the next `Era`;
-- During the Build&Earn Period, if you move your tokens from one dApp to another and your staked tokens on the initial dApp at the end of the **Build&Earn Period** are less than your staked tokens at the end of the **Voting Period** for the same dApp, you will no longer be eligible for the **Bonus Rewards** for that dApp;
+- During the Build&Earn subperiod, if you move your tokens from one dApp to another and your staked tokens on the initial dApp at the end of the **Build&Earn subperiod** are less than your staked tokens at the end of the **Voting subperiod** for the same dApp, you will no longer be eligible for the **Bonus Rewards** for that dApp;
 
 Typically, users only receive rewards for stakes that have been present throughout the entire `Era`, from the first to the last block. In a runtime logic, the protocol does not distribute rewards to a user who started staking in the last block of the `Era` compared to a user who staked throughout the entire `Era`.

@@ -17,8 +17,8 @@ My Staking Panel is where you track your staking and locked tokens, see your pen
     - **Stake:** Stake your locked tokens in dApp Staking
 - **Staked amount**: Total amount of tokens you have staked;
 - **Rewards**: Total of the estimated Basic and Bonus rewards;
-    - **Available**: Basic estimated rewards earned during the **Build&Earn Period**;
-    - **Bonus:** Bonus estimated rewards earned during the **Vote Period** if eligible;
+    - **Available**: Basic estimated rewards earned during the **Build&Earn subperiod**;
+    - **Bonus:** Bonus estimated rewards earned during the **Vote subperiod** if eligible;
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="75%" /> 
 

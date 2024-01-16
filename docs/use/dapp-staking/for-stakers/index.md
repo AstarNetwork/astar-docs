@@ -16,7 +16,7 @@ dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp
 
 :::
 
-### Periods & Eras:
+### Periods, Subperiods & Eras:
 
 `Eras`: Time units measured in blocks. Fairly short, a basic time division in dApp staking;
 
@@ -24,7 +24,7 @@ dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp
 
 **Voting** is the subperiod when stakers can decide to vote for dApp(s) to stake their tokens and when dApps owners and team can market their products, conduct campaign and attract stakers.
 
-No staking rewards are generated during the Voting Period but if users vote and stake on dApps during this period, they will become eligible for the **Bonus Reward**;
+No staking rewards are generated during the Voting subperiod but if users vote and stake on dApps during this subperiod, they will become eligible for the **Bonus Reward**;
 
 **Build&Earn** is the subperiod when stakers and dApps start earning rewards;
 Users can still stake tokens during the Build&Earn subperiod to increase the rewards they get from staking. However, the amount staked during Build&Earn does not contribute to the Bonus Reward.
@@ -79,9 +79,9 @@ If an user stake on dApp(s) during the **Voting Subperiod** and keep the same st
 
 **Example**
 
-- User stake 1500 ASTR on **dApp A** and 1000 ASTR on **dApp B** during the `Voting` Period.
+- User stake 1500 ASTR on **dApp A** and 1000 ASTR on **dApp B** during the `Voting`subperiod.
 - During the `Build&Earn` subperiod, user move 500 ASTR from **dApp B** to **dApp A**;
-- He now has 2000 ASTR on **dApp A** and 500 ASTR on **dApp B**, so he's still eligible for the `Bonus reward` for dApp A but no longer for **dApp B** because the tokens staked on **dApp** B are less than those staked at the end of the `Voting period` (500 < 1000 ASTR).
+- He now has 2000 ASTR on **dApp A** and 500 ASTR on **dApp B**, so he's still eligible for the `Bonus reward` for dApp A but no longer for **dApp B** because the tokens staked on **dApp** B are less than those staked at the end of the `Voting` subperiod (500 < 1000 ASTR).
 - To be eligible for the `Bonus reward` for **dApp B**, the user must stake an additional 500 ASTR on **dApp B** to reach 1000 ASTR.
 
 :::
@@ -93,7 +93,7 @@ Bonus rewards for a period can only be claimed after the period finishes.
 
 - You need to keep a minimum of 10 ASTR or 5 SDN tokens as transferable after staking.
 - **You need to claim to receive your rewards, we recommend claiming your staking rewards once a week.**
-- There is a unbonding period of around 5 days on Shiden and 10 days on Astar. Please note that this is based on a perfect block production of 12s. In case of any delay, your unbonding period can be a little longer.
+- When unlocking tokens, there is a unbonding period on Shiden and on Astar. The unbonding period lenghts can be consulted [here](/docs/use/dapp-staking/for-stakers/#parameters). Please note that this is based on a perfect block production of 12s. In case of any delay, your unbonding period can be a little longer.
 - The staking rewards are shown in APY by default. APY option is available for stakers who are compounding their rewards by manually re-staking after claiming. On the other hand, APR option is available for stakers who don’t do compounding. The difference is that APR represents the annual rate simply for earning your stake but APY takes compounding into account.
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/13_header.png').default } width="100%" /> 
