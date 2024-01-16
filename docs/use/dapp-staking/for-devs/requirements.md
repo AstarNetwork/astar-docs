@@ -15,7 +15,7 @@ Astar is aiming to become a DAO in a couple of years. While moving towards becom
 ## Astar Network
 
 - Your dApp is **launched and live on Astar Network**
-- Does your project contribute to Astar TVL, make sure you are listed on [DefilLama](/docs/build/integrations/dapp-listing/defillama).
+- Does your project contribute to Astar TVL? Make sure you are listed on [DefilLama](/docs/build/integrations/dapp-listing/defillama).
 - List your project on [DappRadar](/docs/build/integrations/dapp-listing/dappradar).
 - Your dApp has #astar-network, #dAppStaking tags at the GitHub repo.
 - You need to create a PR to the Ecosystem Page. As our website is open-source, you can contribute directly to it - just create a PR on your own! [Here](https://github.com/AstarNetwork/astarwebsite_v2/blob/349db39d724b57f58fbee84b3fa500bf0d29bee6/components/Header.vue)

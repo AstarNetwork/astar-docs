@@ -41,8 +41,10 @@ My dApps Panel is where you can see all dApps you have staked with and manage yo
 
 The unbonding panel is where you can see the progress of unbonding and withdraw. 
 For the runtime logic, when unbonding, you don’t unbond from a specific dApp but unbond as `Chunks`. First pending unbonding gives Chunk 1, second pending unbonding gives Chunk 2 etc. 
-There is an unbonding period of 10 ERAs for Astar and 5 ERAs on Shiden. 
+
 After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unbonding](/docs/use/dapp-staking/for-stakers/unstaking/).
+
+The unbonding period lenghts can be consulted [here](/docs/use/dapp-staking/for-stakers/#parameters). 
 
 - **Remaining eras:** The number of eras you have to wait before you can withdraw your tokens;
 - **Available to withdraw:** Unlock your tokens and make them `transferable`;

@@ -21,7 +21,7 @@ Once your tokens have been staked on a dApp, you always have the option of recon
 
 Bear in mind that when you move tokens from one dApp to another, you are `unstaking` from one dApp to `stake` on a new dApp, which therefore has an impact on your rewards for those dApps:
 
-- If you move tokens from a dApp and your staked tokens are less than the minimum staking amount for a dApp, all your tokens will be `unstaked` from that dApp;
+- If you move tokens from a dApp and your staked tokens are less than the [minimum staking](/docs/use/dapp-staking/for-stakers/#parameters) amount for a dApp, all your tokens will be `unstaked` from that dApp;
 - If you move your tokens from one dApp to another during an `Era` , you'll lose the **basic staking rewards** for that `Era` for the dApp you moved, and you won't earn rewards on the new dApp until the next `Era`;
 - During the Build&Earn Period, if you move your tokens from one dApp to another and your staked tokens on the initial dApp at the end of the **Build&Earn Period** are less than your staked tokens at the end of the **Voting Period** for the same dApp, you will no longer be eligible for the **Bonus Rewards** for that dApp;
 

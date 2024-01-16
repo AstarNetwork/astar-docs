@@ -58,7 +58,7 @@ Click on the project cards for more information, access to their communities or 
 
 :::tip
 
-Make sure to respect the minimum amount to stake and always keep some tokens free for gas to manage the claiming and re-staking transactions.. The minimum amount to stake per dApp is 50 SDN/500 ASTR.
+Make sure to always keep some tokens free for gas manage to claim your rewards.
 
 :::
 

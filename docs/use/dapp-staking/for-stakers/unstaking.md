@@ -8,11 +8,9 @@ import Figure from "/src/components/figure"
 
 ## Overview
 
-`Bonding` is a process by which tokens are temporarily `locked`. Staking is one of the scenarios that require tokens to be bonded. `Unbonding` is the action of telling the network that you want to unlock these tokens. After the unbonding time, which is 5 days for Shiden and 10 days for Astar, you can withdraw the tokens, and they become `transferable`. Please note that this is based on a perfect block production of 12s. In case of any delay, your unbonding period can be a little longer.
+`Bonding` is a process by which tokens are temporarily `locked`. Staking is one of the scenarios that require tokens to be bonded. `Unbonding` is the action of telling the network that you want to unlock these tokens. After the unbonding period, you can withdraw the tokens, and they become `transferable`. Please note that this is based on a perfect block production of 12s. In case of any delay, your unbonding period can be a little longer.
 
-| Network | Astar | Shiden |
-| --- | --- | --- |
-| Unbonding period | 10 days | 5 days |
+The unbonding period lenghts can be consulted [here](/docs/use/dapp-staking/for-stakers/#parameters). 
 
 :::warning
 
@@ -51,7 +49,9 @@ When unbonding tokens, a new window appears in your Staking Panel: **Unbonding**
 
 Each unbonding is called a Chunk. But what is a Chunk? 
 
-A chunk is the number of different ERAs you want to unbond your tokens. Chunks do not equal the amount of unbonding on dApps you requested but the amount of different ERA's you unbonded your tokens.
+An unlocking (or unbonding) chunk is some amount of ASTR that is undergoing the unlocking period. 
+
+***E.g.***: One chunk can be described as: *"1000 ASTR is undergoing the unlocking period and will be available for transfer on block 42000000"*.
 
 ### How to unbond locked tokens:
 
