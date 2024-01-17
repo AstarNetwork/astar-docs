@@ -1,16 +1,19 @@
 ---
-sidebar_position: 10
-title: Tokenomics
+sidebar_position: 3
+title: Legacy Tokenomics
 ---
+
+:::note
+The following subchapters cover legacy Astar tokenomics models.
+For the latest, please refer to the _Tokenomics 2.0_ model.
+:::
+
+# Tokenomics 1.0
 
 import tokenomics from '/docs/learn/img/tokenomics_1.png'
 import inflation from '/docs/learn/img/inflation_1.png'
 
 [Astar Network]: https://astar.network/
-
-:::note
-This section includes content for advanced users.
-:::
 
 :::tip
 Astar and Shiden share the same economic model, though there were differences in their initial supply configurations.
@@ -46,7 +49,7 @@ The reader might notice that Astar issues 95 times more tokens per block than Sh
 
 Each block reward is distributed to a set of beneficiaries.
 ​
-#### > Collators
+#### Collators
 
 The collator responsible for building the block will receive **collator's** portion of reward. This is the main financial incentive for the collators. Portion is configured as percentage of the block reward on-chain and is constant per block unless manually changed.
 
@@ -55,11 +58,11 @@ In addition, it will receive fees paid by the users for transactions that were i
 For **Shiden**, **100%** of the fees are burned, and the full tip is paid to the collator.
 For **Astar**, **20%** of the fees & tips are burned, and the rest is paid to the collator.
 
-#### > On-chain Treasury
+#### On-chain Treasury
 
 Treasury receives a variable portion of block reward. It is then allocated to a range of initiatives across the Astar ecosystem. This includes building reserves for parachain auctions, as well as supporting various projects and activities that help grow and strengthen our network. 
 
-#### > dApp Staking
+#### dApp Staking
 
 `dApp staking`, Astar's innovative developer incentive mechanism, receives a variable portion of the block rewards depending on current **total value locked** (or **TVL** in further text) in dApps staking.
 
@@ -125,12 +128,12 @@ Note that in Polkadot's model, when ideal TVL is reached, staker rewards drop ex
 
 Using the parameters from the previous chapters, we can express yearly interest rate for the stakers:
 $$
-i = {inflation_{anual} * total_{staker} \over TVL_{\%}}
+i = {inflation_{annual} * total_{staker} \over TVL_{\%}}
 $$
 
-For example, in case $total_{staker} = 55\%$ and $TVL_{\%} = 40\%$, we end up with ${0.1 * 0.55 \over 0.4}$ which is `13.75%` anual interest rate.
+For example, in case $total_{staker} = 55\%$ and $TVL_{\%} = 40\%$, we end up with ${0.1 * 0.55 \over 0.4}$ which is `13.75%` annual interest rate.
 
-However, inflation dilutes the interest rate so it's more precise to consider *inflation adjusted anual interest rate*.
+However, inflation dilutes the interest rate so it's more precise to consider *inflation adjusted annual interest rate*.
 
 $$
 i_{adjusted} = {i + 1 \over inflation_{anual} + 1} - 1
@@ -154,3 +157,34 @@ The following graph is a visualization of the described model.
 </div>
 
 You can check this model and configure parameters yourself [here](https://www.desmos.com/calculator/cjjkt6smk5).
+
+# Hybrid Inflation
+
+The hybrid inflation model served as a step between the _Tokenomics 1.0_ and _Tokenomics 2.0_.
+
+### Inflation Adjustment
+
+Inflation rates have been lowered. The maximum token reward per block, reached based on the optimal staking rate or staking TVL (Total Value Locked), has been reduced from 253.08 to 231.20. Please note that this is temporary until the next phase of Tokenomics 2.0 coming with dApp Staking v3.
+
+### Treasury rewards
+
+The dynamic treasury allocation has been removed in favor of a fixed annual inflation rate of 5%. Which correspond to a reward of 11.06 ASTR per block.
+
+### Collators rewards
+
+Collators will now receive a steady 3.2% of the annual inflation which correspond to a reward of 7.07 ASTR per block. Although this represents a reduction from the previous model, the upcoming alignment of EVM fees and Substrate native fees is expected to increase overall fee earnings for collators.
+
+### Stakers & dApp Rewards
+
+The rewards for dApp staking, both for users and dApps, will remain unchanged in absolute terms. No immediate modifications will be implemented in this area. Future updates, including the introduction of dApp staking v3, will occur in the third phase of Tokenomics 2.0.
+
+We use the blockReward distribution to ensure those three requirements (and calculate them from the reward per block):
+
+|                  | Percentage | Reward ASTR |
+|------------------|------------|-------------|
+| Block reward     | 100%       | 231.20      |
+| Treasury         | 4.78%      | 11.06       |
+| Collators        | 3.06%      | 7.07        |
+| dApp reward      | 17.27%     | 39.93       |
+| Base Staker      | 23.04%     | 53.27       |
+| Adjustable Staker | 51.84%     | 119.85      |

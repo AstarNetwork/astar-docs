@@ -28,10 +28,10 @@ It also incentives users to remove unused data from the chain by getting rent fe
 
 This fee is calculated with the price set for each storage item `DepositPerItem`, and for each byte of storage `DepositPerByte`. In Astar, the deposit fee are defined as follows (more detail is this [Astar forum post](https://forum.astar.network/t/revising-rent-fee-on-astar-shiden/4309/1)):
 
-| Deposit Type | Shiden               | Astar              |
-|--------------|----------------------|--------------------|
-| Per Storage Byte | 0.00002 SDN | 0.002 ASTR |
-| Per Storage Item |  	0.004 SDN   | 0.4 ASTR |
+| Deposit Type | Shiden          | Astar              |
+|--------------|-----------------|--------------------|
+| Per Storage Byte | 0.00000001 SDN     | 0.000001 ASTR |
+| Per Storage Item | 	 0.0000004 SDN | 0.00004 ASTR |
 
 ##### Calculation
 
@@ -99,9 +99,9 @@ mod rent {
         #[ink(message)]
         pub fn add_mapping_entry(&mut self) {
             let caller = self.env().caller();
-            // Insert one item to storage. fee = 1 * PricePerItem (0.04ASTAR) =
-            // Value of the mapping is a u32, 4 bytes. fee = 4 * PricePerByte (0.002ASTAR) = 0.008ASTAR
-            // Total fee = 0.408ASTAR
+            // Insert one item to storage. fee = 1 * PricePerItem (0.0004ASTAR) =
+            // Value of the mapping is a u32, 4 bytes. fee = 4 * PricePerByte (0.00002ASTAR) = 0.00008ASTAR
+            // Total fee = 0.00408ASTAR
             self.map.insert(caller, &1u32);
         }
 
@@ -109,18 +109,18 @@ mod rent {
         pub fn remove_mapping_entry(&mut self)  {
             let caller = self.env().caller();
             // Clears the value at key from storage.
-            // Remove one item from storage. fee = 1 * PricePerItem (0.04ASTR) =
-            // Remove the value of the mapping u32, 4 bytes. fee = 4 * PricePerByte (0.002ASTR) = 0.008ASTR
-            // Total reserve repatriated by caller = 0.408ASTR
+            // Remove one item from storage. fee = 1 * PricePerItem (0.0004ASTR) =
+            // Remove the value of the mapping u32, 4 bytes. fee = 4 * PricePerByte (0.00002ASTR) = 0.00008ASTR
+            // Total reserve repatriated by caller = 0.00408ASTR
             self.map.remove(caller);
         }
 
         #[ink(message)]
         pub fn remove_entry_account_id(&mut self, who: AccountId)  {
             // Clears the value at key from storage.
-            // Remove one item from storage. fee = 1 * PricePerItem (0.04ASTR) =
-            // Remove the value of the mapping u32, 4 bytes. fee = 4 * PricePerByte (0.002ASTR) = 0.008ASTR
-            // Total reserve repatriated by caller = 0.408ASTR
+            // Remove one item from storage. fee = 1 * PricePerItem (0.0004ASTR) =
+            // Remove the value of the mapping u32, 4 bytes. fee = 4 * PricePerByte (0.00002ASTR) = 0.00008ASTR
+            // Total reserve repatriated by caller = 0.00408ASTR
             self.map.remove(who);
         }
     }
@@ -130,20 +130,20 @@ mod rent {
 #### `add_mapping_entry`
 
 The fee (balance that is reserved (moved from free user balance to contract reserved balance)) will be:
-1. Insert one item to storage. fee = 1 * `PricePerItem` (0.04ASTR)
-2. Value of the mapping is u32, 4 bytes. fee = 4 * `PricePerByte` (0.002ASTR) = 0.008ASTR
-3. Total fee = 0.408ASTR
+1. Insert one item to storage. fee = 1 * `PricePerItem` (0.0004ASTR)
+2. Value of the mapping is u32, 4 bytes. fee = 4 * `PricePerByte` (0.00002ASTR) = 0.00008ASTR
+3. Total fee = 0.00408ASTR
 
 #### `remove_mapping_entry`
 
 The balance repatriated (balance that is moved from the reserve of the contract account to the user account) will be:
-1. Remove one item from storage. fee = 1 * PricePerItem (0.04ASTR)
-2. Remove the value of the mapping u32, 4 bytes. fee = 4 * PricePerByte (0.002ASTR) = 0.008ASTR
-3. Total reserve repatriated by caller = 0.408ASTR
+1. Remove one item from storage. fee = 1 * PricePerItem (0.0004ASTR)
+2. Remove the value of the mapping u32, 4 bytes. fee = 4 * PricePerByte (0.00002ASTR) = 0.00008ASTR
+3. Total reserve repatriated by caller = 0.00408ASTR
 
 #### `remove_entry_account_id`
 
-The caller will get balance repatriated (and not the user that was first charged for, because it is transferred from account reserved balance to free balance of caller). the caller will get the 0.408ASTR.
+The caller will get balance repatriated (and not the user that was first charged for, because it is transferred from account reserved balance to free balance of caller). the caller will get the 0.00408ASTR.
 
 #### `flip_bool` & `update_32`
 

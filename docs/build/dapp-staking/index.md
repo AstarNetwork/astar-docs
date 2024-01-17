@@ -19,6 +19,10 @@ At Astar Network, we are tackling these challenges head-on.
 
 The third point, namely — the necessity for great dApps to be built — is the driving force behind **Unstoppable Grants (our dApp staking initiative)** and the focus of this article.
 
+:::info
+Full overview of dAppStaking v3 can be found in the [Learn/dAppStaking](/docs/learn/dapp-staking/) section of the docs.
+:::
+
 ## What is dApp Staking?
 
 For great dApps to be built, developers need to build them. For developers to build great dApps, they need financial incentives.
