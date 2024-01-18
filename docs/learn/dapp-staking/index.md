@@ -57,6 +57,10 @@ If you are ASTR token holder interested in staking please refer to [this section
 
 If you are a dApp developer building on Astar, please refer to [this section](/docs/build/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
-For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking-v3/dapp-staking-protocol.md)
+For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking/dapp-staking-protocol.md)
 
-Still have a question? - check this FAQ specific to dAppStaking v3 planned to go live on Astar in Q1 2024.
+:::info
+
+Still have a question? - check the [FAQ section](/docs/learn/dapp-staking/dapp-staking-faq.md), especially covering topics around new version of dApp Staking (v3) planned to go live on Astar in Q1 2024.
+
+:::

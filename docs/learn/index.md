@@ -14,9 +14,9 @@ To expand your knowledge about building applications or utilizing various tools 
 
 [Polkadot](/docs/learn/polkadot_relay)
 
-[Build2Earn](/docs/learn/build2earn)
-
 [Smart Contracts](/docs/learn/smart-contracts)
+
+[dApp Staking](/docs/learn/dapp-staking)
 
 ## Advanced 
 [Tokenomics](/docs/learn/tokenomics2)
@@ -28,5 +28,3 @@ To expand your knowledge about building applications or utilizing various tools 
 [Proxy Accounts](/docs/learn/Proxies.md)
 
 [zkEVM](/docs/learn/zkEVM)
-
-[dApp Staking](/docs/learn/dapp-staking-v3)
