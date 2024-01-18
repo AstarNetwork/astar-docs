@@ -59,4 +59,8 @@ If you are a dApp developer building on Astar, please refer to [this section](/d
 
 For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking/dapp-staking-protocol/).
 
-Still have a question? - check this FAQ specific to dAppStaking v3 planned to go live on Astar in Q1 2024.
+:::info
+
+Still have a question? - check the [FAQ section](/docs/learn/dapp-staking/dapp-staking-faq.md), especially covering topics around new version of dApp Staking (v3) planned to go live on Astar in Q1 2024.
+
+:::
