@@ -1,5 +1,11 @@
 # dApp Staking & Web3
 
+:::info
+This section of dApp Staking V2 is a legacy of the current dApp Staking model and serves as a reference until the complete transition to dApp Staking v3.
+
+Full overview of dAppStaking v3 can be found in the [Learn/dAppStaking](/docs/learn/dapp-staking/) section of the docs.
+:::
+
 At Astar, we are on a mission to revolutionize the internet. We envision a future where the internet is truly decentralized, and not controlled by a handful of tech giants. We believe the internet should be free and owned by the people for the people. We believe that people should have ownership of their data and assets, and not be at the mercy of intermediaries. This is the essence of the Web3 vision and what drives Astar.
 
 *What does this have to do with dApp staking*? Well, to put it simply, a lot.
@@ -12,11 +18,7 @@ DApp staking is one of the catalysts that will accelerate the Web3 vision from a
 
 At Astar Network, we are tackling these three challenges head-on.
 
-The third point, namely — the necessity for great dApps to be built — is the driving force behind **#Build2Earn (our dApp staking initiative)** and the focus of this article.
-
-:::info
-Full overview of dAppStaking v3 can be found in the [Learn/dAppStaking](/docs/learn/dapp-staking/) section of the docs.
-:::
+The third point, namely — the necessity for great dApps to be built — is the driving force behind **dApp staking** and the focus of this article.
 
 ## What is dApp Staking?
 
@@ -57,12 +59,6 @@ Having more (and better) dApps attracts and retains more users, creating a netwo
 Ultimately, the most precious human resource in the Web3 ecosystem is developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure in public blockchains.
 
 With dApp staking, developers can earn a basic income while building dApps on Astar/Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the better off everyone is.
-
-## Build2Earn Program
-
-Our dApp staking initiative on Astar is foundational to our #Build2Earn program and is the natural continuation of our [#Stake2Earn](https://medium.com/astar-network/stake2earn-festival-411cb712a380) campaign. #Build2Earn is our financial incentive program whose aim is to provide a basic income to developers for building useful dApps on Astar/Shiden.
-
-In the coming days, we will be announcing more details about important projects being built on Astar/Shiden Network. We will also be sharing step-by-step details on how to stake your Astar/Shiden tokens so that you too can partake in dApp staking, and help build the Web3 internet of tomorrow.
 
 
 import DocCardList from '@theme/DocCardList';

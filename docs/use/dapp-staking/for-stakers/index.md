@@ -4,11 +4,11 @@ import Figure from "/src/components/figure"
 
 ## Overview
 
-Do you love to stake? Or do you want to support your favorite project on Astar Network? 
+Do you love to stake? Or do you want to support your favorite project on Astar Network or Shiden Network? 
 
-Discover [Astar dApp Staking](/docs/learn/build2earn.md), a unique mechanism that allows communities to support their favorite teams by staking ASTR or SDN with them. When staking ASTR on a dApp, users not only support the development of innovative apps but also receive staking rewards from inflation.
+Discover [dApp Staking](/docs/learn/dapp-staking/), a unique mechanism that allows communities to support their favorite teams by staking ASTR or SDN with them. When staking ASTR or SDN on a dApp, users not only support the development of innovative apps but also receive staking rewards from inflation.
 
-You can educate yourself more by reading the technical documentation about [dApp Staking V3](/docs/learn/dapp-staking-v3/).
+You can educate yourself more by reading the technical documentation about [dApp Staking](/docs/learn/dapp-staking/).
 
 :::warning
 
@@ -22,8 +22,7 @@ dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp
 
 **dApp Staking** is divided into **Periods** which consists of two **Subperiods**: **Voting** and **Build&Earn**.
 
-**Voting** is the subperiod when stakers can decide to vote for dApp(s) to stake their tokens and when dApps owners and team can market their products, conduct campaign and attract stakers.
-
+**Voting** is the subperiod when stakers can decide to vote for dApp(s) to stake their tokens and when dApps owners and team can market their products, conduct campaign and attract stakers.  
 No staking rewards are generated during the Voting subperiod but if users vote and stake on dApps during this subperiod, they will become eligible for the **Bonus Reward**;
 
 **Build&Earn** is the subperiod when stakers and dApps start earning rewards;
@@ -41,7 +40,7 @@ As an user, you need to take the following parameters into consideration before 
 | Eras Per Voting Subperiod | 8 (~48hours) | TBD | TBD |
 | Eras Per Build&Earn Subperiod | 20 (~120hours) | TBD |TBD  |
 | Blocks Per Era | 1800 (~6hours) | TBD | TBD |
-| Unbonding Period | 4 Eras (~1 day) | 5 Eras (~5 days) | 10 Eras (~10 days) |
+| Unlocking Period | 4 Eras (~1 day) | 5 Eras (~5 days) | 10 Eras (~10 days) |
 | Minimum Amount to Stake | 5 SBY | 50 SDN | 500 ASTR |
 
 
@@ -51,13 +50,12 @@ dApp Staking rewards are generated only if tokens have been staked on a dApp for
 
 :::tip
 
-For stakers, if you stake today, you will start earning tomorrow (next era), and the rewards will be distributed the day after tomorrow.
-
+For stakers, if you stake today, you will start earning tomorrow (next era), and the rewards will be distributed the day after tomorrow.  
 For dApps If you get into a tier today, you will start earning rewards tomorrow (next era) and the rewards will be distributed the day after tomorrow.
 
 :::
 
-For stakers, the APR is the same for all stakers, regardless of which dApp they stake on;
+For stakers, the APR is the same for all stakers, regardless of which dApp they stake on;  
 For dApps, staking rewards depends on the Tier system, dApps go into rewards tier based on the amount of tokens staked by users.
 
 Rewards must be claimed before trying to `stake` or `unstake`.
@@ -67,7 +65,7 @@ If a project is **unregistered** from dApp Staking, staked tokens on that projec
 
 :::warning
 
- There is no rewards during the Unbonding period when unstaking from dApp Staking;
+ There is no rewards during the Unlocking period when unstaking from dApp Staking;
 
  :::
 
@@ -81,7 +79,7 @@ If an user stake on dApp(s) during the **Voting Subperiod** and keep the same st
 
 - User stake 1500 ASTR on **dApp A** and 1000 ASTR on **dApp B** during the `Voting`subperiod.
 - During the `Build&Earn` subperiod, user move 500 ASTR from **dApp B** to **dApp A**;
-- He now has 2000 ASTR on **dApp A** and 500 ASTR on **dApp B**, so he's still eligible for the `Bonus reward` for dApp A but no longer for **dApp B** because the tokens staked on **dApp** B are less than those staked at the end of the `Voting` subperiod (500 < 1000 ASTR).
+- He now has 2000 ASTR on **dApp A** and 500 ASTR on **dApp B**, so he's still eligible for the `Bonus reward` for **dApp A** but no longer for **dApp B** because the tokens staked on **dApp** B are less than those staked at the end of the `Voting` subperiod (500 < 1000 ASTR).
 - To be eligible for the `Bonus reward` for **dApp B**, the user must stake an additional 500 ASTR on **dApp B** to reach 1000 ASTR.
 
 :::
@@ -93,12 +91,10 @@ Bonus rewards for a period can only be claimed after the period finishes.
 
 - You need to keep a minimum of 10 ASTR or 5 SDN tokens as transferable after staking.
 - **You need to claim to receive your rewards, we recommend claiming your staking rewards once a week.**
-- When unlocking tokens, there is a unbonding period on Shiden and on Astar. The unbonding period lenghts can be consulted [here](/docs/use/dapp-staking/for-stakers/#parameters). Please note that this is based on a perfect block production of 12s. In case of any delay, your unbonding period can be a little longer.
-- The staking rewards are shown in APY by default. APY option is available for stakers who are compounding their rewards by manually re-staking after claiming. On the other hand, APR option is available for stakers who don’t do compounding. The difference is that APR represents the annual rate simply for earning your stake but APY takes compounding into account.
+- When unlocking tokens, there is a unlocking period on Astar and on Shiden. The unlocking period lenghts can be consulted [here](/docs/use/dapp-staking/for-stakers/#parameters).  
+Please note that this is based on a perfect block production of 12s. In case of any delay, your unlocking period can be a little longer.
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/13_header.png').default } width="100%" /> 
-
-In case you have any questions, come and join our [Discord channel](https://discord.com/invite/astarnetwork).
+In case you have any questions, please check the [FAQ page](/docs/learn/dapp-staking/dapp-staking-faq/) in the Learn section or join our [Discord channel](https://discord.com/invite/astarnetwork).
 
 Other pages that can be of interest:
 

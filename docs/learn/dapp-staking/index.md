@@ -55,8 +55,8 @@ Having more (and better) dApps attracts and retains more users, creating a netwo
 
 If you are ASTR token holder interested in staking please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
-If you are a dApp developer building on Astar, please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
+If you are a dApp developer building on Astar, please refer to [this section](/docs/use/dapp-staking/for-devs/) to learn more about participating as a dApp.
 
-For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking-v3/dapp-staking-protocol.md)
+For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking/dapp-staking-protocol/).
 
 Still have a question? - check this FAQ specific to dAppStaking v3 planned to go live on Astar in Q1 2024.
