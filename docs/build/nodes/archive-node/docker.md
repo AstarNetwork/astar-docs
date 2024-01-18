@@ -71,7 +71,7 @@ astar-collator \
 --pruning archive \
 --rpc-cors all \
 --name {NODE_NAME} \
---chain astar \
+--chain shiden \
 --base-path /data \
 --rpc-external \
 --rpc-methods Safe \
@@ -96,7 +96,7 @@ astar-collator \
 --pruning archive \
 --rpc-cors all \
 --name {NODE_NAME} \
---chain astar \
+--chain shibuya \
 --base-path /data \
 --rpc-external \
 --rpc-methods Safe \

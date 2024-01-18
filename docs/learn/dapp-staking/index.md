@@ -32,6 +32,7 @@ Another way for the value of tokens to increase is if the total circulation of t
 
 This market dynamic enables dApp stakers to get more long-term value from their tokens while earning high APRs from staking their tokens to dApps.
 
+
 Please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
 ### Benefits for Builders: Earn Rewards
