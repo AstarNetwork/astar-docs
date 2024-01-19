@@ -20,7 +20,7 @@ These are major remarks about the migration:
 If any of the terms above are unclear to you (e.g. _staking_ vs _locking_) you can find detailed exaplanation the following sections:
 
 - [Tokenomics 2.0](/docs/learn/tokenomics2/)
-- [dApp Staking v3 Technical Overview](/docs/learn/dapp-staking/dapp-staking-protocol.md)
+- [dApp Staking v3 Technical Overview](/docs/learn/dapp-staking/dapp-staking-protocol/)
 
 ### Practical explanation with an example:
 
