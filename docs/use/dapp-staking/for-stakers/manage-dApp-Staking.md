@@ -20,7 +20,7 @@ My Staking Panel is where you track your staking and locked tokens, see your pen
     - **Available**: Basic estimated rewards earned during the **Build&Earn subperiod**;
     - **Bonus:** Bonus estimated rewards earned during the **Vote subperiod** if eligible;
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="85%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="100%" /> 
 
 To claim your rewards, you need to click on the **Claim Button** and sign the transaction;
 
@@ -37,7 +37,7 @@ My dApps Panel is where you can see all dApps you have staked with and manage yo
 - **Add (🡣) :** you can add more tokens in dApp staking on the desired dApp;
 - **Unlock (🡡) :** you can select how many tokens you want to unlock from your staked amount.
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="90%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="100%" /> 
 
 ### Unlocking Panel:
 
@@ -51,4 +51,4 @@ The unlocking period lenghts can be consulted [here](/docs/use/dapp-staking/for-
 - **Available to withdraw:** Unlock your tokens and make them `transferable`;
 - **Re-lock:** Lock your tokens again to use them in dApp Staking;
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Unbonding_1.png').default } width="85%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Unbonding_1.png').default } width="100%" /> 

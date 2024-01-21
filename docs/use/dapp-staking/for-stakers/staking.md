@@ -23,7 +23,7 @@ Make sure you are connected to the correct network.
 - **Shiden Network**: mainnet on Kusama
 - **Astar Network**: mainnet on Polkadot
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/1.png').default } width="35%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/networks.png').default } width="100%" /> 
 
 ### Discover Projects
 
@@ -55,7 +55,7 @@ Before using dApp Staking, make sure you understand all the parameters and rules
 
 2) Once on the voting page, you can choose as many projects as you would like to support;
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page.png').default } width="80%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page.png').default } width="85%" /> 
 
 3) To stake, enter the desired amount of tokens for the dApp(s) you have chosen. This may be the same or a different amount for each.
 
@@ -65,7 +65,7 @@ Make sure to always keep some tokens free for gas manage to claim your rewards.
 
 :::
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page_2.png').default } width="80%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page_2.png').default } width="85%" /> 
 
 :::note
 

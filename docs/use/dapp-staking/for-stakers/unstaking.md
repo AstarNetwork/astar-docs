@@ -24,7 +24,7 @@ When you unlock or unstake your tokens from dApps Staking, you won’t earn rewa
 
 If you have staked on one of the dApp(s), you can now click on `Unlock` from **My dApps Panel** in the [Asset Page](https://portal.astar.network/astar/assets) to make your tokens transferables.
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="90%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="100%" /> 
 
 1) Click on the **Unlock button (🡡)** on the dApp you want to unstake from;
 
@@ -39,11 +39,11 @@ If you `unstake` your tokens from one dApp during the Build&Earn subperiod and y
 
 :::
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Unbonding_2.png').default } width="50%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Unbonding_2.png').default } width="100%" /> 
 
 When unlocking tokens, a new window appears in your Staking Panel: **Unlocking**.
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Unbonding_1.png').default } width="90%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Unbonding_1.png').default } width="100%" /> 
 
 - **Remaining Days** gives you an estimation on how many days or `Eras` you have to wait before being able to withdraw your tokens.
 - When your unlock period is over, you need to withdraw your funds by clicking on the **withdraw button**. Sign the transaction and your tokens will be made transferrable in your wallet.
@@ -70,7 +70,7 @@ In the **My Staking Panel** on the [Asset Page](https://portal.astar.network/a
 
 1) To release them, click on **Unlock (🡡)**, which will trigger a transaction to `unlock` them all.
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="85%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="100%" /> 
 
 2) At the end of the unlocking period, you can withdraw them by clicking on the **withdraw button**.
 3) Sign the transaction and your tokens will be made transferrable in your wallet.

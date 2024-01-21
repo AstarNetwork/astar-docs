@@ -11,11 +11,11 @@ Once your tokens have been staked on a dApp, you always have the option of recon
 1) Go to the **Staking Panel** in the [Asset Page](https://portal.astar.network/astar/assets);
 2) Under **My dApps**, click on the **Move button (🡢)** of the dApp from which you want to move your tokens.
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="85%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="100%" /> 
 
 3) Select the dApp(s) to which you want to `Move` your tokens and enter the desired amount;
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page_3.png').default } width="75%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page_3.png').default } width="85%" /> 
 
 4) Confirm your decisions by clicking on the **Confirm Button** and sign the transaction on the network;
 
