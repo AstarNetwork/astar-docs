@@ -23,7 +23,7 @@ Make sure you are connected to the correct network.
 - **Shiden Network**: mainnet on Kusama
 - **Astar Network**: mainnet on Polkadot
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/networks.png').default } width="100%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Networks.png').default } width="100%" /> 
 
 ### Discover Projects
 
