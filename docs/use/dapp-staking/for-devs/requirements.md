@@ -27,7 +27,7 @@ Astar is aiming to become a DAO in a couple of years. While moving towards becom
 - After the proposal is created, we will get the community to discuss. You are expected to answer all the questions. This will take around 4-5 days.
 - The voting will be opened after the discussion period.
 - For now, only the forum members with `Trust Level 2` and above are allowed to vote.
-- After the voting is passed, you are can follow the registration instructions in the [Register dApp](/docs/use/dapp-staking/for-devs/register-dapp.md) page.
+- After the voting is passed, you are should follow the registration instructions in the [Register dApp](/docs/use/dapp-staking/for-devs/register-dapp.md) page.
 
 #### What about infrastructure partners?
 
@@ -40,7 +40,7 @@ You don’t have any dApp but you are providing infrastructure services to the A
 - After the proposal is created, we will get the community to discuss. You are expected to answer all the questions. This will take around 4-5 days.
 - The voting will be opened after the discussion period.
 - For now, only the forum members with Trust Level 2 and above are allowed to vote.
-- After the voting is passed, you are can follow the registration instructions in the [Register dApp](/docs/use/dapp-staking/for-devs/register-dapp.md) page.
+- After the voting is passed, you are should follow the registration instructions in the [Register dApp](/docs/use/dapp-staking/for-devs/register-dapp.md) page.
 
 #### What about other projects who can't meet the above requirements?
 
@@ -51,7 +51,7 @@ You can't add your project to DefilLama because it's not generating any TVL, als
 - After the proposal is created, we will get the community to discuss. You are expected to answer all the questions. This will take around 4-5 days.
 - The voting will be opened after the discussion period.
 - For now, only the forum members with Trust Level 2 and above are allowed to vote.
-- After the voting is passed, you are can follow the registration instructions in the [Register dApp](/docs/use/dapp-staking/for-devs/register-dapp.md) page.
+- After the voting is passed, you are should follow the registration instructions in the [Register dApp](/docs/use/dapp-staking/for-devs/register-dapp.md) page.
 
 ### Shiden Network
 

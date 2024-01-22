@@ -12,46 +12,17 @@ You can educate yourself more by reading the technical documentation about [dApp
 
 Please take the following parameters into consideration and make sure you meet the [requirements](/docs/use/dapp-staking/for-devs/requirements.md):
 
-- To register a dApp for dApp staking you need to have 100 SDN tokens or 1000 ASTR tokens depending on the network you would like to join as a project. dApp staking on our testnet Shibuya requires 100 SBY.
-- **You must claim your rewards to receive them. We recommend that you claim your rewards at the beginning of each new period.**
-
 :::warning
 
 dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp owners on Astar and Shiden Network, please refer to the [dApp Staking V2 section](/docs/use/dapp-staking/dapp-staking-v2/for-devs/).
 
 :::
 
-### Periods, Subperiods & Eras:
+:::tip
 
-`Eras`: Time units measured in blocks. Fairly short, a basic time division in dApp staking;
-
-**dApp Staking** is divided into **Periods** which consists of two **Subperiods**: **Voting** and **Build&Earn**.
-
-**Voting** is the subperiod when stakers can decide to vote for dApp(s) to stake their tokens.  
-No staking rewards are generated during the Voting subperiod but if users vote and stake on dApps during this subperiod, they will become eligible for the **Bonus Reward**;
-
-:::important
-
-It's very important for dApp owners and their teams to get organized before and during the voting subperiod to market their products, run campaigns to attract as many stakers and tokens as possible during this period.
+Before reading the dApp Staking section for dApp owner, make sure you understand the concept of periods, subperiods and eras, as well as the dApp Staking V3 parameters explained [here](/docs/use/dapp-staking/#periods-subperiods--eras).
 
 :::
-
-**Build&Earn** is the subperiod when stakers and dApps start earning rewards;
-Users can still stake tokens during the Build&Earn subperiod to increase the rewards they get from staking. However, the amount staked during Build&Earn does not contribute to the Bonus Reward.
-
-At the end of a **Build&Earn** subperiod, the current period ends. A new period begins, and all tokens are `unstaked` from dApp(s) but remain `locked`. A new **Voting Subperiod** starts.
-
-As a dApp owner, you need to take the following parameters into consideration before using dApp Staking:
-
-### Parameters:
-
-|  | Shibuya | Shiden Network | Astar Network |
-| --- | --- | --- | --- |
-| Eras Per Period | 28 (~7days) | TBD | TBD |
-| Eras Per Voting Subperiod | 8 (~48hours) | TBD | TBD |
-| Eras Per Build&Earn Subperiod | 20 (~120hours) | TBD |TBD  |
-| Blocks Per Era | 1800 (~6hours) | TBD | TBD |
-| Unlocking Period | 4 Eras (~1 day) | 5 Eras (~5 days) | 10 Eras (~10 days) |
 
 ### Tier System and Rewards
 
@@ -74,6 +45,11 @@ The threshold for tier 4 is fixed, but for the other tiers, the threshold is **d
 | Shibuya Network | TBD | TBD | TBD | TBD |
 
 The rewards of a tier are divided between all available slots and distributed to the dApps occupying slots. This means that the rewards for dApps within a tier are the same for each dApp, even if not all slots within a tier are occupied.
+
+:::tip
+You have to claim your rewards to receive them. We recommend that you claim your rewards at least once a week or, optimistically, 2 or 3 times a week.
+
+ :::
 
 :::info
 

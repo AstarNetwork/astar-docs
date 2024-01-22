@@ -12,7 +12,7 @@ Once you have been approved by the Astar Council under Astar governance, you can
 
 Before you can register your dApp or project, make sure you have :
 
-- An [Astar Native developer wallet](/docs/use/manage-wallets/create-wallet) with a least **100 SDN** or **1000 ASTR** tokens + gas fee;
+- An [Astar Native developer wallet](/docs/use/manage-wallets/create-wallet) with some tokens to cover gas fee;
 - Deploy a smart contract in our ecosystem and verify the contract in an explorer. The smart contract can be on Astar Native (WASM) or Astar EVM. For the explorer, you can use [Subscan](https://astar.subscan.io/) for Native or [Blockscout](https://astar.blockscout.com/) for EVM.
 
 :::info
