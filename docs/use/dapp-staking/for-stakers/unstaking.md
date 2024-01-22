@@ -26,7 +26,7 @@ If you have staked on one of the dApp(s), you can now click on `Unlock` from 
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="90%" /> 
 
-1) Click on the **Unlock button (🡡)** on the dApp you want to unstake from;
+1) Click on the **Unlock button (↓)** on the dApp you want to unstake from;
 
 2) Select the amount you want to **Unlock**, or click on **Max** to `unlock` your complete stake. 
 
@@ -68,7 +68,7 @@ These tokens will always be subject to the unlocking period.
 
 In the **My Staking Panel** on the [Asset Page](https://portal.astar.network/astar/assets), you may have tokens under **Locked amount**, which are tokens that are not staked but could be unlocked. 
 
-1) To release them, click on **Unlock (🡡)**, which will trigger a transaction to `unlock` them all.
+1) To release them, click on **Unlock (↓)**, which will trigger a transaction to `unlock` them all.
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="85%" /> 
 
