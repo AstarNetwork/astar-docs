@@ -13,8 +13,8 @@ Once you have staked, a new panel named **Staking**  will appear in the [Assets 
 My Staking Panel is where you track your staking and locked tokens, see your pending rewards and take actions with your tokens and rewards;
 
 - **Locked amount:** Total amount of tokens locked in the address;
-    - **Unlock (🡡):** Unlock your locked tokens *(subject to [unlocking parameters](/docs/use/dapp-staking/for-stakers/unstaking#overview)*);
-    - **Stake (🡣):** Stake your locked tokens in dApp Staking;
+    - **Unlock (↑):** Unlock your locked tokens *(subject to [unlocking parameters](/docs/use/dapp-staking/for-stakers/unstaking#overview)*);
+    - **Stake (↓):** Stake your locked tokens in dApp Staking;
 - **Staked amount**: Total amount of tokens you have staked;
 - **Rewards**: Total of the estimated Basic and Bonus rewards;
     - **Available**: Basic estimated rewards earned during the **Build&Earn subperiod**;
@@ -33,9 +33,9 @@ All pending rewards on a dApp must be claimed before staking again.
 My dApps Panel is where you can see all dApps you have staked with and manage your stake.
 
 - **Bonus:** if you are eligible for the [Bonus](/docs/use/dapp-staking/for-stakers/#bonus-staking-rewards) on this dApps;
-- **Move (🡢) :** you can move staked tokens between different dApps;
-- **Add (🡣) :** you can add more tokens in dApp staking on the desired dApp;
-- **Unlock (🡡) :** you can select how many tokens you want to unlock from your staked amount.
+- **Move (→) :** you can move staked tokens between different dApps;
+- **Add (↓) :** you can add more tokens in dApp staking on the desired dApp;
+- **Unlock (↑) :** you can select how many tokens you want to unlock from your staked amount.
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="100%" /> 
 
