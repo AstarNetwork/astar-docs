@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 Once your tokens have been staked on a dApp, you always have the option of reconsidering your decisions and moving them to another dApp.
 
 1) Go to the **Staking Panel** in the [Asset Page](https://portal.astar.network/astar/assets);
-2) Under **My dApps**, click on the **Move button (🡢)** of the dApp from which you want to move your tokens.
+2) Under **My dApps**, click on the **Move button (→)** of the dApp from which you want to move your tokens.
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="100%" /> 
 

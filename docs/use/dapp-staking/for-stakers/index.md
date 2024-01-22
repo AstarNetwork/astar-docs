@@ -96,7 +96,7 @@ Please note that this is based on a perfect block production of 12s. In case of 
 
 In case you have any questions, please check the [FAQ page](/docs/learn/dapp-staking/dapp-staking-faq/) in the Learn section or join our [Discord channel](https://discord.com/invite/astarnetwork).
 
-Other pages that can be of interest:
+### Other pages may be of interest:
 
 <br/>
 
