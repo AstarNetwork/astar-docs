@@ -34,3 +34,5 @@ Claiming will release all your pending rewards;
 - **Edit Project Page:** Allows you to edit information about your dApp Staking projects;
 - **Edit your owner info:** If you want to change the registered smart contract address and the address receiving developer rewards ;
 - **Add a promotion card:** If you are running a campaign, you can create a promotion card that will be added to the dApp Staking section of the Portal after review;
+
+<Figure src={require('/docs/use/dapp-staking/for-devs/img/dApp_owner_page_2.png').default} width="80%" />
