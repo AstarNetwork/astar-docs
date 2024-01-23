@@ -61,7 +61,7 @@ Ledger users will still be able to withdraw funds from dApp staking, they only w
 Ledger is currently developing a new generic app for all Polkadot/Kusama parachains, and that should be available soon (within months). Once that’s available, Ledger native users will be able to participate in dApp staking v3.
 
 **What can I do right now?**
-If you wish to actively participate in dApp Staking v3 right from the start, you should start the unboding period right now and move your funds to either Astar EVM Account supported by Ledger (see below) or alernatively move funds to a hot wallet.
+If you wish to actively participate in dApp Staking v3 right from the start, you should start the [unboding period right now](https://docs.astar.network/docs/use/dapp-staking/dapp-staking-v2/unbonding) and move your funds to either Astar EVM Account supported by Ledger (see below) or alernatively move funds to a hot wallet.
 
 :::info 
 It is possible that by the launch of dApp staking v3, Ledger generic app will be launched, completely removing this limitation.
