@@ -33,9 +33,9 @@ Astarは異なるフォーマットで2つのアドレスを持っています�
 - Astar Native アドレスー dApps Staking やWASMプロジェクトと連携するためのアドレス
 - Astar EVM アドレスー EVMプロジェクトと連携するためのアドレス
 
-あなたが Astar Native アカウントを作成する必要がある場合は、[こちらのページ](\i18n\ja\docusaurus-plugin-content-docs\current\use\manage-wallets\create-wallet.md) でアカウントを作成することができます。
+あなたが Astar Native アカウントを作成する必要がある場合は、[こちらのページ](/i18n/ja/docusaurus-plugin-content-docs/current/use/manage-wallets/create-wallet.md) でアカウントを作成することができます。
 
-もし、MetamaskにAstar Network を追加していない場合は、とてもシンプルです ー [Portal](https://portal.astar.network/) に行き、Metamaskを選択してください。 Metamaskは、Astar Network の追加許可を求めてくるでしょう。 別の方法や、ネットワーク追加の詳細については、 [こちら](\i18n\ja\docusaurus-plugin-content-docs\current\use\evm-guides\setup-metamask.md) を参照してください。
+もし、MetamaskにAstar Network を追加していない場合は、とてもシンプルです ー [Portal](https://portal.astar.network/) に行き、Metamaskを選択してください。 Metamaskは、Astar Network の追加許可を求めてくるでしょう。 別の方法や、ネットワーク追加の詳細については、 [こちら](/i18n/ja/docusaurus-plugin-content-docs/current/use/evm-guides/setup-metamask.md) を参照してください。
 
 <br />
 
@@ -61,7 +61,7 @@ Astar(EVM)をサポートするGate.ioを除き、ほとんどの取引所はAst
 
 <img width="1000" alt="network" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Poladot.js ウォレットを接続してください ー まだ完了していない場合は、 [Astar アカウントを作成](\i18n\ja\docusaurus-plugin-content-docs\current\use\manage-wallets\create-wallet.md) に戻ってください。
+3. Poladot.js ウォレットを接続してください ー まだ完了していない場合は、 [Astar アカウントを作成](/i18n/ja/docusaurus-plugin-content-docs/current/use/manage-wallets/create-wallet.md) に戻ってください。
 
 <img width="1000" alt="wallet" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
