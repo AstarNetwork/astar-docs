@@ -61,6 +61,8 @@ Finally, click on **Register** and sign the transaction on the network;
 
 Congratulations! 🎉 Your project is now listed in dApp Staking and you can start your campaign and communication to attract stakers.
 
+<Figure src={require('/docs/use/dapp-staking/for-devs/img/dApp_page_2.png').default} width="80%" />
+
 :::tip
 
 When your dApp is deployed, we would appreciate it if you shared this with your community. We have created a template that you can use to write the article. You can find it [here](https://astarnetwork.notion.site/dApp-staking-template-Astar-Network-07d029f2d89644f48a17650522968682).
