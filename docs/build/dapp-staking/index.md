@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # dApp Staking
 
 All content relating to dApp Staking has been moved to other sections of the documentation:
@@ -11,8 +7,15 @@ All content relating to dApp Staking has been moved to other sections of the doc
 
 If you are interested in developing on top of dApp Staking and integrating dApp Staking into your project, please refer to the section below:
 
-# Integrate dApp Staking
+### Integrate dApp Staking
 
 Learn how to integrate dApp staking into your EVM dApp in the precompiles chapter:
 
 [EVM Precompiled Contracts](/docs/build/evm/precompiles/staking/)
+
+### Other page may be of interest:
+
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+<DocCardList items={useCurrentSidebarCategory().items}/>
