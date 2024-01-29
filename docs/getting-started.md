@@ -19,4 +19,4 @@ Astar is an interoperable blockchain platform for Polkadot and Ethereum ecosyste
 
 ## Audit Reports
 
-A comprehensive list of finalized audit reports of Astar Network's codebase ia available on GitHub - [Astar Network Audit Reports](https://github.com/AstarNetwork/Audits)
+A comprehensive list of finalized audit reports of Astar Network's codebase is available on GitHub - [Astar Network Audit Reports](https://github.com/AstarNetwork/Audits)
