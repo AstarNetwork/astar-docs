@@ -17,7 +17,7 @@ dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp
 
 :::tip
 
-Before reading the dApp Staking section for stakers, make sure you understand the concept of periods, subperiods and eras, as well as the dApp Staking V3 parameters explained [here](/docs/use/dapp-staking/#periods-subperiods--eras).
+Before reading the dApp Staking section for stakers, make sure you understand the concept of periods, subperiods and eras, as well as the dApp Staking V3 parameters explained [here](/docs/learn/dapp-staking/#understand-the-terminology-and-parameters-of-dapp-staking).
 
 :::
 
@@ -36,7 +36,7 @@ For stakers, the APR is the same for all stakers, regardless of which dApp they 
 For dApps, staking rewards depends on the Tier system, dApps go into rewards tier based on the amount of tokens staked by users.
 
 Rewards must be claimed before trying to `stake` or `unstake`.
-*(If using the Astar Portal, the interface will automatically claim the rewards when voting)*
+*(If using the Astar Portal, the interface will automatically claim the rewards when trying to stake)*
 
 If a project is **unregistered** from dApp Staking, staked tokens on that project will still receive **basic rewards** as long as the tokens remain staked.
 
@@ -68,7 +68,7 @@ Bonus rewards for a period can only be claimed after the period finishes.
 
 - You need to keep a minimum of 10 ASTR or 5 SDN tokens as transferable after staking.
 - **You need to claim to receive your rewards, we recommend claiming your staking rewards once a week.**
-- When unlocking tokens, there is a unlocking period on Astar and on Shiden. The unlocking period lenghts can be consulted [here](/docs/use/dapp-staking/for-stakers/#parameters).  
+- When unlocking tokens, there is a unlocking period on Astar and on Shiden. The unlocking period lenghts can be consulted [here](/docs/learn/dapp-staking/#parameters). 
 Please note that this is based on a perfect block production of 12s. In case of any delay, your unlocking period can be a little longer.
 
 In case you have any questions, please check the [FAQ page](/docs/learn/dapp-staking/dapp-staking-faq/) in the Learn section or join our [Discord channel](https://discord.com/invite/astarnetwork).
