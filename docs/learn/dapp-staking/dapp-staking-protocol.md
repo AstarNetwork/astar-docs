@@ -108,11 +108,7 @@ Unregistration can be the result of bad performance, reorganization or any other
 which governance decides it's viable.
 
 After a dApp has been unregistered, it's no longer eligible to receive rewards.
-It's still possible however to claim past unclaimed rewards.
-
-Important to note that even if dApp has been unregistered, it still occupies a _slot_
-in the dApp staking protocol and counts towards maximum number of registered dApps.
-This will be improved in the future when dApp data will be cleaned up after some time.
+Past rewards also become unavailable, if they haven't been claimed already.
 
 ### Stakers
 
