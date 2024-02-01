@@ -42,7 +42,7 @@ The indexer is accessible from a [GraphQL Explorer UI](https://squid.subsquid.io
 | stakes                        | amount, dappAddress, stakerAddress, blockNumber, expiredAt, expiredBlockNumber, id, timestamp                                         |
 | stakers                       | amount, dappAddress, stakerAddress, id                                                                                                |
 | stakersCount                  | total                                                                                                                                 |
-| stakersCountAggregatedDailies | blockNumber, id, stakersCount                                                                                                         |
+| stakersCountAggregatedDailies | blockNumber, id, stakersCount, stakersAmount                                                                                          |
 | subperiods                    | blockNumber, id, timestamp, type                                                                                                      |
 | tvlAggregatedDailies          | blockNumber, id, tvl                                                                                                                  |
 | uniqueStakerAddresses         | id                                                                                                                                    |
@@ -98,7 +98,7 @@ async function tvlDaily() {
 ```mdx-code-block
 import Iframe from 'react-iframe';
 
-<iframe src="https://codesandbox.io/p/github/gluneau/Graph-the-Astar-Staking-V3-GraphQL-Indexer-and-API/main?embed=1&file=%2Fpages%2Findex.tsx"
+<iframe src="https://codesandbox.io/p/github/AstarNetwork/dapps-staking-v3-indexer-and-api-demo-ui/main?embed=1&file=%2Fpages%2Findex.tsx"
   width="100%"
   height="1000px"
   display="initial"
@@ -108,3 +108,5 @@ import Iframe from 'react-iframe';
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 />
 ```
+
+You can also look into [this repo](https://github.com/AstarNetwork/dapps-staking-v3-indexer-and-api-demo-ui) and clone and run it:  
