@@ -1,9 +1,9 @@
 # dApp Staking & Web3
 
 :::info
-This section of dApp Staking V2 is a legacy of the current dApp Staking model and serves as a reference until the complete transition to dApp Staking v3.
+This section of dApp Staking V2 is a legacy of the current dApp Staking model and serves as a reference until the complete transition to dApp Staking V3.
 
-Full overview of dAppStaking v3 can be found in the [Learn/dAppStaking](/docs/learn/dapp-staking/) section of the docs.
+Full overview of dAppStaking V3 can be found in the [Learn/dAppStaking](/docs/learn/dapp-staking/) section of the docs.
 :::
 
 At Astar, we are on a mission to revolutionize the internet. We envision a future where the internet is truly decentralized, and not controlled by a handful of tech giants. We believe the internet should be free and owned by the people for the people. We believe that people should have ownership of their data and assets, and not be at the mercy of intermediaries. This is the essence of the Web3 vision and what drives Astar.
@@ -60,6 +60,7 @@ Ultimately, the most precious human resource in the Web3 ecosystem is developers
 
 With dApp staking, developers can earn a basic income while building dApps on Astar/Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the better off everyone is.
 
+### Other pages may be of interest:
 
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';

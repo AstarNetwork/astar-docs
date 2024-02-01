@@ -5,63 +5,163 @@ title: dApp Staking overview
 
 # dApp Staking
 
+*At Astar, we're driven by the mission to transform the internet into a freely owned space by the people, where everyone has inviolable control over their data and assets. This commitment to a user-governed internet lies at the heart of the Web3 vision that inspires us.*
+
+dApp Staking is a crucial accelerator in realizing the Web3 vision, as it lays the foundation for the development of exceptional dApps for users and fuels the drive towards making Web3 accessible to all.
+
 ## What is dApp Staking
 
-On the Astar/Shiden Network, developers who build decentralized applications (dApps) have the opportunity to receive compensation through a process known as dApp staking. By engaging in dApp staking, developers can receive a basic income, which allows them to continue building and enhancing their dApps.
+dApp Staking is Astar’s unique mechanism to financially incentivise developers who build decentralized applications (dApps). By engaging in dApp staking, developers can receive a basic income, which allows them to continue building and enhancing their dApps. Moreover, it allows to build a strong relationship between developers, stakers and users of dApps, where everyone is rewarded.
 
-dApp staking on the Astar/Shiden Network operates similarly to staking on validators. However, in this new paradigm, individuals known as dApp stakers or nominators have the ability to nominate their Astar/Shiden tokens on specific dApps they wish to support.
+dApp staking on the Astar/Shiden Network operates similarly to staking on validators. However, in new paradigm, individuals known as dApp stakers have the ability to stake their Astar or Shiden tokens on specific dApps they wish to support.
 
-At every block on the network, a portion of the rewards is allocated to dApp staking. This reward is then distributed between the operators (developers) of the dApps and the nominators. This mechanism serves as a powerful incentive for developers to build and deploy their dApps on the Astar/Shiden Network.
+At every block on the network, a portion of the inflation is allocated to dApp staking. This reward is then distributed between the operators (developers) of the dApps and the stakers.
 
+The mechanism is simple: developers earn rewards while building their great projects and attracting supporters, while stakers earn by backing their favorite dApps.
 
-## Benefits of dApp Staking on Astar/Shiden
+## Benefits of dApp Staking on Astar and Shiden Network
 
-For Web3 to flourish, there needs to be a symbiotic relationship between dApp stakers (i.e. nominators), dApp developers, and dApp users. On Astar/Shiden, dApp staking is the mechanism that enables this mutually beneficial relationship to occur.
+For Web3 to flourish, there needs to be a symbiotic relationship between dApp stakers, dApp developers, and dApp users. On Astar and Shiden, dApp staking is the mechanism that enables this mutually beneficial relationship to occur.
 
-- Developer Compensation: Unlike traditional approaches where dApp developers need to rely on grant programs, token issuance, and fundraising efforts to generate income, dApp staking on Astar/Shiden provides developers with a basic income. As long as a dApp has been nominated, developers can receive a steady stream of rewards.
+- **Developer Compensation:** Unlike traditional approaches where dApp developers need to rely on grant programs, token issuance, and fundraising efforts to generate income, dApp staking on Astar/Shiden provides developers with a basic income. As long as a dApp has been nominated, developers can receive a steady stream of rewards.
 
-- Increased Popularity, Increased Reward: As a dApp gains popularity and attracts more nominators from the community, the developers who built the dApp can receive a larger percentage of the block rewards. This incentivizes developers to create high-quality dApps that resonate with users and foster community engagement.
+- **Increased Popularity, Increased Reward:** As a dApp gains popularity and attracts more nominators from the community, the developers who built the dApp can receive a larger percentage of the block rewards. This incentivizes developers to create high-quality dApps that resonate with users and foster community engagement.
 
-- Reduced Dependency on Gas Fees: Building on other blockchains often entails paying substantial gas fees for transactions and interactions. However, on the Astar/Shiden Network, developers can receive compensation through dApp staking, minimizing their reliance on gas fees and making it more economically feasible to continue dApp development.
+- **Reduced Dependency on Gas Fees:** Building on other blockchains often entails paying substantial gas fees for transactions and interactions. However, on the Astar and Shiden Network, developers can receive compensation through dApp staking, minimizing their reliance on gas fees and making it more economically feasible to continue dApp development.
 
-### Benefits for Stakers (Nominators): Increase in Token Value & High APRs
+### Benefits for Stakers: Increase in Token Value & Earn Tokens
 
-Astar/Shiden dApp stakers (i.e. nominators) want the value of their tokens to increase but for the value of their tokens to increase, the underlying value of the asset — the Astar/Shiden Network — needs to increase.
+Astar or Shiden dApp stakers want the value of their tokens to increase but for the value of their tokens to increase, the underlying value of the asset needs to increase.
 
-Another way for the value of tokens to increase is if the total circulation of tokens decreases. The more tokens are staked, the fewer tokens are in circulation, and the fewer tokens are in circulation, the higher the price.
+This increase in value can happen when the Network grows or when there are fewer tokens in circulation. This way, stakers can not only make their tokens more valuable over time but also earn high returns (APRs) by staking their tokens on dApps.
 
 This market dynamic enables dApp stakers to get more long-term value from their tokens while earning high APRs from staking their tokens to dApps.
 
+:::tip
 
-Please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
+Please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a **Staker**.
+
+:::
 
 ### Benefits for Builders: Earn Rewards
 
 For great dApps to be built, developers need to build them. For developers to build great dApps, they need financial incentives.
 
-Ultimately, the most precious human resource in the Web3 ecosystem are developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure in public blockchains.
+Ultimately, the most precious human resource in the Web3 ecosystem are developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure on public blockchains.
 
-With dApp staking, developers can earn a basic income while building dApps on Astar/Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the better off everyone is.
+With dApp staking, developers can **earn a basic income** while building dApps on Astar or Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the greater the benefits for the whole ecosystem.
 
-Please refer to [this section](/docs/use/dapp-staking/for-devs/) to learn more about participating as a dApp builder.
+That is why Astar considers it essential to provide developers with financial motivation and to ensure they are able to build and earn simultaneously, focusing on development without additional hustle.
+
+:::tip
+
+Please refer to [this section](/docs/use/dapp-staking/for-devs/) to learn more about participating as a **dApp builder**.
+
+:::
 
 ### Benefits for dApp Users: Increase in dApp & Network Utility
 
-For users, dApp staking enables the ecosystem to grow and improve in terms of its utility. This is because better dApps are built as a result of developers having a way to earn money while building them.
+dApp staking plays an essential role in improving the quality of the ecosystem, as it facilitates the growth and improvement of dApps. This gives developers the opportunity to generate revenue while building high-quality dApps.
 
-Having more (and better) dApps attracts and retains more users, creating a network effect, which helps to grow the ecosystem and increases the long-term intrinsic value of the network.
+The presence of more high-quality dApps not only attracts and retains more users, but also initiates a network effect. This phenomenon encourages ecosystem expansion and increases the intrinsic value of the network in the long term.
 
+In short, the importance of DApp staking lies in its contribution to the ongoing improvement and greater utility of the ecosystem. The multiplication of high-quality dApps, combined with a growing number of users, results in a network effect that increases the overall value of the ecosystem in the long term.
 
-## What next?
+### Understand the terminology and parameters of dApp Staking
 
-If you are ASTR token holder interested in staking please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
+To understand how dApp staking v3 works, it’s essential to grasp the following basics:
 
-If you are a dApp developer building on Astar, please refer to [this section](/docs/use/dapp-staking/for-devs/) to learn more about participating as a dApp.
+#### Era
 
-For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking/dapp-staking-protocol/).
+`Eras` is a basic time unit in dApp Staking. The length of an Era is 7200 blocks, equivalent to roughly 1 day.
 
-:::info
+#### Period & Subperiods
 
-Still have a question? - check the [FAQ section](/docs/learn/dapp-staking/dapp-staking-faq.md), especially covering topics around new version of dApp Staking (v3) planned to go live on Astar in Q1 2024.
+`Period` is a more lengthy time unit of dApp Staking.  
+
+*To put it simply, if we consider a Period in dApp Staking, it's similar to a concept of a month in human terms , made up of several days (Eras in this case).*
+
+Each Period consists of two Subperiods:
+
+- Voting
+- Build&Earn
+
+*Continuing with our human time analogy, it's like dividing a month into two (unequal) parts – the first part can be seen as the Voting phase, and the second part is the Build&Earn phase.*
+
+**Voting (Staking) Subperiod**
+
+A subperiod when stakers can decide to vote for dApp(s) to stake their tokens and when dApps owners and team can market their products, conduct campaign and attract stakers.  
+No staking rewards are generated during the Voting subperiod but if users vote and stake on dApps during this subperiod, they will become eligible for the **Bonus Reward**;
+
+:::important
+
+It's very important for dApp owners and their teams to get organized before and during the **voting subperiod** to market their products, run campaigns to attract as many stakers and tokens as possible during this period.
 
 :::
+
+**Build&Earn Subperiod** 
+
+A subperiod when stakers and dApps start earning rewards;
+Users can still stake tokens during the Build&Earn subperiod to increase the rewards they get from staking. However, the amount staked during Build&Earn does not contribute to the Bonus Reward.
+
+At the end of a **Build&Earn** subperiod, the current period ends. A new period begins, and all tokens are `unstaked` from dApp(s) but remain `locked`. A new **Voting Subperiod** starts.
+
+As an user or a dApp owner, you need to take the following parameters into consideration before using dApp Staking:
+
+#### Parameters:
+
+|  | Shibuya | Shiden Network | Astar Network |
+| --- | --- | --- | --- |
+| Eras Per Period | 28 (~7days) | TBD | TBD |
+| Eras Per Voting Subperiod | 8 (~48hours) | TBD | TBD |
+| Eras Per Build&Earn Subperiod | 20 (~120hours) | TBD |TBD  |
+| Blocks Per Era | 1800 (~6hours) | TBD | TBD |
+| Unlocking Period | 4 Eras (~1 day) | TBD |TBD  |
+| Minimum Amount to Stake | 5 SBY | 50 SDN | 500 ASTR |
+
+#### Tier System
+
+Tier System is a method to rank dApps based on the total value staked on them. The Tier System is updated at the end of each Build&Earn Subperiod era.
+
+There are a limited number of tiers, each with a set number of slots and a minimum threshold for dApps to qualify. 
+
+A dApp must gain enough support to enter a tier, with dynamic thresholds for fair competition. Higher tiers offer larger rewards.
+
+You can always view in what tier the dApp is in the Projects Leaderboard on the Astar Portal.
+
+:::tip
+
+Find out more about the Tier system for dApps [here](/docs/use/dapp-staking/for-devs/#tier-system-and-rewards).
+
+:::
+
+## What should I do next
+
+*The concept of dApp Staking is simple:*
+
+Users support dApps in the ecosystem by staking on them, and when the dApp gathers enough support, it receives rewards in native currency, sourced from inflation.
+
+As a result, stakers are rewarded for their commitment and staking efforts.
+
+:::tip
+
+- If you are **ASTR or SDN token holder** interested in **staking**, refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
+
+- If you are a **dApp developer** building on Astar, refer to [this section](/docs/use/dapp-staking/for-devs/) to learn more about participating as a dApp builder.
+
+- For detailed **technical overview** of dAppStaking protocol, visit this [page](/docs/learn/dapp-staking/dapp-staking-protocol/).
+
+-  Check the [**FAQ section**](/docs/learn/dapp-staking/dapp-staking-faq.md), especially covering topics around new version of dApp Staking (V3) planned to go live on Astar in Q1 2024.
+
+:::
+
+### Security Audit
+
+dApp staking v3 has been audited by [SR Labs](https://www.srlabs.de/). For more information check out [this link](https://github.com/AstarNetwork/Audits/blob/72337c6d9aede3c3ae4f72024077c651f9bf2886/reports/2024-01%20Astar%20dApp%20Staking%20v3%20-%20SR%20Labs.pdf)
+
+### Other pages may be of interest:
+
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+<DocCardList items={useCurrentSidebarCategory().items}/>
