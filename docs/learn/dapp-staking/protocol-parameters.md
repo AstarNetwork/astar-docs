@@ -1,11 +1,12 @@
 ---
 sidebar_position: 3
-title: Protocol Parameters
+title: dApp Staking Parameters
 ---
 
 ## Overview
 
-## TODO refer to tokneomics docs for other relevant params
+The following parameters are tightly tied to dApp staking, however, some parameters are shared with the _Tokenomics 2.0_ model.
+To find out more, please check the documentation [here](/docs/learn/tokenomics2/Inflation.md).
 
 ### Era Reward Span Length
 

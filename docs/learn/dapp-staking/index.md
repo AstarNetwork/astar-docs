@@ -1,9 +1,7 @@
 ---
 sidebar_position: 1
-title: dApp Staking overview
+title: dApp Staking Overview
 ---
-
-# dApp Staking
 
 ## What is dApp Staking
 
@@ -12,7 +10,6 @@ On the Astar/Shiden Network, developers who build decentralized applications (dA
 dApp staking on the Astar/Shiden Network operates similarly to staking on validators. However, in this new paradigm, individuals known as dApp stakers or nominators have the ability to nominate their Astar/Shiden tokens on specific dApps they wish to support.
 
 At every block on the network, a portion of the rewards is allocated to dApp staking. This reward is then distributed between the operators (developers) of the dApps and the nominators. This mechanism serves as a powerful incentive for developers to build and deploy their dApps on the Astar/Shiden Network.
-
 
 ## Benefits of dApp Staking on Astar/Shiden
 
@@ -32,7 +29,6 @@ Another way for the value of tokens to increase is if the total circulation of t
 
 This market dynamic enables dApp stakers to get more long-term value from their tokens while earning high APRs from staking their tokens to dApps.
 
-
 Please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
 ### Benefits for Builders: Earn Rewards
@@ -51,7 +47,6 @@ For users, dApp staking enables the ecosystem to grow and improve in terms of it
 
 Having more (and better) dApps attracts and retains more users, creating a network effect, which helps to grow the ecosystem and increases the long-term intrinsic value of the network.
 
-
 ## What next?
 
 If you are ASTR token holder interested in staking please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
@@ -61,7 +56,5 @@ If you are a dApp developer building on Astar, please refer to [this section](/d
 For detailed technical overview of dAppStaking protocol please go [here](/docs/learn/dapp-staking/dapp-staking-protocol/).
 
 :::info
-
 Still have a question? - check the [FAQ section](/docs/learn/dapp-staking/dapp-staking-faq.md), especially covering topics around new version of dApp Staking (v3) planned to go live on Astar in Q1 2024.
-
 :::

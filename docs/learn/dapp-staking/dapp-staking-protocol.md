@@ -27,6 +27,7 @@ Periods are another _time unit_ in dApp staking. They are expected to be more le
 Each period is denoted by a number, e.g. **1**, which increments each time a new period begins.
 
 Each period consists of two subperiods:
+
 * `Voting`
 * `Build&Earn`
 
@@ -46,6 +47,7 @@ Casting a vote, or staking, during the `Voting` subperiod makes the staker eligi
 
 `Voting` subperiod length is expressed in _standard_ era lengths, even though the entire voting subperiod is treated as a single _voting era_.
 E.g. if `Voting` subperiod lasts for **5 eras**, and each era lasts for **100 blocks**, total length of the `Voting` subperiod will be **500** blocks **BUT** it will consume only a single numeric era:
+
 * Block 1, Era 1 starts, Period 1 starts, `Voting` subperiod starts
 * Block 501, Era 2 starts, Period 1 continues, `Build&Earn` subperiod starts
 
@@ -72,6 +74,7 @@ since this will increase the staker rewards they earn.
 The only exemption is the **final era** of the `Build&Earn` subperiod - it's not possible to _stake_ then since the stake would be invalid anyhow (stake is only valid from the next era which would be in the next period when all stakes are reset to _zero_).
 
 To continue the previous example where era length is **100** blocks, let's assume that `Build&Earn` subperiod lasts for 10 eras:
+
 * Block 1, Era 1 starts, Period 1 starts, `Voting` subperiod starts
 * Block 501, Era 2 starts, Period 1 continues, `Build&Earn` subperiod starts
 * Block 601, Era 3 starts, Period 1 continues, `Build&Earn` subperiod continues
@@ -264,6 +267,7 @@ $\Delta\%_{threshold} = (\frac{100\%}{100\% + \Delta\%_{dApps}} - 1) * 100\%$
 where $\Delta\%_{dApps}$ is the change in the number of dApps, expressed as a percent. In case number has been reduced, the _delta_ will be negative.
 
 At the moment, there are two types of tier entry thresholds:
+
 * `Dynamic` - adjusts the threshold based on the aforementioned formula.
 * `Fixed` - defines a static, fixed threshold which doesn't adapt.
 
@@ -287,6 +291,7 @@ in this tier will earn **50 ASTR**. Even if only 3 dApps manage to enter this ti
 The rest, **350 ASTR** in this case, won't be minted.
 
 #### More On Tiers
+
 If there are more dApps eligible for a tier than there is capacity, the dApps with the higher score get the advantage.
 dApps which missed out on a higher tier get priority for entry into the next lower tier (if there still is any).
 
