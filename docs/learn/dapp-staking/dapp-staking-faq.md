@@ -204,14 +204,6 @@ It is possible that by the dApp staking v3 launch Ledger generic app will be ava
 Keep an eye out on this page and official announcement channels for more info as it becomes available.
 :::
 
-### Q: I am a Leger Astar EVM App User, what do I need to do?
-
-All users using Astar EVM Ledger App ([Astar EVM](https://support.ledger.com/hc/en-us/articles/5555310160669-Astar-EVM-ASTR)) users, there are not limitations moving to dApp Staking v3. You will be able to participate in dApp staking v3 immediately.
-
-### Q: We are a dApp participating in dAppStaking v2, What do we need to do?
-
-Inform your community and stakers that they should be active once dApp Staking v3 goes live and support your project by staking.
-
 ### Q: I am a Ledger Astar EVM App User, what do I need to do?
 
 All users using Astar EVM Ledger App ([Astar EVM](https://support.ledger.com/hc/en-us/articles/5555310160669-Astar-EVM-ASTR)) users, there are not limitations moving to dApp Staking V3. You will be able to participate in dApp staking V3 immediately.
