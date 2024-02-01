@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: dApp Staking v3 Technical overview
+title: dApp Staking v3 Technical Overview
 ---
 
 ## Introduction
