@@ -135,9 +135,9 @@ Astar team will ensure that all pending rewards are claimed during the decommiss
 Please refer to [this Astar Forum discussion](https://forum.astar.network/t/dapp-staking-migration-from-v2-to-v3/5807) for all the details regarding unclaimed rewards.
 :::
 
-### Q: What should you do to prepare for dApp Staking v3 migration?
+### Q: What should you do to prepare for dApp Staking V3 migration?
 
-*All you should do to prepare for dApp Staking v3 launch is to claim your rewards.* Nothing else is required from your side.
+*All you should do to prepare for dApp Staking V3 launch is to claim your rewards.* Nothing else is required from your side.
 
 **❗ Staker’s locked tokens will be migrated, but stakes WILL NOT.**
 
@@ -198,10 +198,10 @@ Ledger users will still be able to withdraw funds from dApp staking, they only w
 Ledger is currently developing a new generic app for all Polkadot/Kusama parachains, and that should be available soon (within months). Once that’s available, Ledger native users will be able to participate in dApp staking V3.
 
 **What can I do right now?**
-If you wish to actively participate in dApp Staking v3 from the start, you should [initiate the unbonding period immediately](https://docs.astar.network/docs/use/dapp-staking/dapp-staking-v2/unbonding) and move your funds to either an Astar EVM Account supported by Ledger (see below), or move funds to a hot wallet.
+If you wish to actively participate in dApp Staking V3 from the start, you should [initiate the unbonding period immediately](https://docs.astar.network/docs/use/dapp-staking/dapp-staking-v2/unbonding) and move your funds to either an Astar EVM Account supported by Ledger (see below), or move funds to a hot wallet.
 
 :::info 
-It is possible that by the dApp staking v3 launch Ledger generic app will be available, completely removing this limitation.
+It is possible that by the dApp staking V3 launch Ledger generic app will be available, completely removing this limitation.
 
 Keep an eye out on this page and official announcement channels for more info as it becomes available.
 :::
