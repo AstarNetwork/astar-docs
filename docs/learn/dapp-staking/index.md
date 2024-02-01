@@ -106,16 +106,18 @@ At the end of a **Build&Earn** subperiod, the current period ends. A new period 
 
 As an user or a dApp owner, you need to take the following parameters into consideration before using dApp Staking:
 
-#### Parameters:
+#### Parameters
 
-|  | Shibuya | Shiden Network | Astar Network |
-| --- | --- | --- | --- |
-| Eras Per Period | 28 (~7days) | 61 (~61days) | 122 (~122days) |
-| Eras Per Voting Subperiod | 8 (~48hours) | 6 (~6days) | 11 (~11days) |
-| Eras Per Build&Earn Subperiod | 20 (~120hours) | 55 (~55days) | 111 (~111days) |
-| Blocks Per Era | 1800 (~6hours) | 7200 (~24hours) | 7200 (~24hours) |
-| Unlocking Period | 4 Eras (~1 day) | 4 Eras (~4 day) |9 Eras (~9 day)  |
-| Minimum Amount to Stake | 5 SBY | 50 SDN | 500 ASTR |
+| Parameters                     | Astar Network       | Shiden Network      | Shibuya             |
+| ------------------------------ | ------------------- | ------------------- | ------------------- |
+| Eras Per Period                | 122 (~122 days)     | 61 (~61 days)       | 28 (~7 days)        |
+| Eras Per Voting Subperiod      | 11 (~11 days)       | 6 (~6 days)         | 8 (~48 hours)       |
+| Eras Per Build&Earn Subperiod  | 111 (~111 days)     | 55 (~55 days)       | 20 (~120 hours)     |
+| Blocks Per Era                 | 7200 (~24 hours)    | 7200 (~24 hours)    | 1800 (~6 hours)     |
+| Unlocking Period               | 9 Eras (~9 days)    | 4 Eras (~4 days)    | 4 Eras (~1 day)     |
+| Minimum Amount to Stake        | 500 ASTR            | 50 SDN              | 5 SBY               |
+
+For the full list of parameters, please check the [dApp staking parameters page](/docs/learn/dapp-staking/protocol-parameters.md) and [Tokenomics 2.0 page](/docs/learn/tokenomics2/Inflation.md#parameters).
 
 #### Tier System
 
@@ -149,7 +151,7 @@ As a result, stakers are rewarded for their commitment and staking efforts.
 
 - For detailed **technical overview** of dAppStaking protocol, visit this [page](/docs/learn/dapp-staking/dapp-staking-protocol/).
 
--  Check the [**FAQ section**](/docs/learn/dapp-staking/dapp-staking-faq.md), especially covering topics around new version of dApp Staking (V3) planned to go live on Astar in Q1 2024.
+- Check the [**FAQ section**](/docs/learn/dapp-staking/dapp-staking-faq.md), especially covering topics around new version of dApp Staking (V3) planned to go live on Astar in Q1 2024.
 
 :::
 
