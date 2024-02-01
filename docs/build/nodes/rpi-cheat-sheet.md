@@ -114,11 +114,16 @@ sudo nano /etc/systemd/system/astar.service
     Group=astar
     
     ExecStart=/usr/local/bin/astar-collator \
-    --pruning archive \
+    --state-pruning archive \
+    --blocks-pruning archive \
     --name {NODE_NAME} \
     --chain astar \
     --base-path /var/lib/astar \
-    --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+    --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+    -- \
+    --state-pruning 100 \
+    --blocks-pruning 100 \
+    --sync warp
 
     Restart=always
     RestartSec=10
@@ -134,3 +139,25 @@ Start the service: `sudo systemctl start astar.service`
 Check the node log to ensure proper syncing: `journalctl -f -u astar.service -n100`
 
 Enable the service: `sudo systemctl enable astar.service`
+
+## Extra 
+
+### Polkadot node management
+
+The Astar client embeeds an Astar node and a Polkadot node.
+
+To pass commands to the Polkadot node, you need to add `--` in between, just like we did in the service file above where we are passing a different pruning mode for the Polkadot node (this node doesn't need to be an archive as we only use its current state) and a warp sync mode (only possible on a full node, doesn't apply to an archive node).
+
+### Database location
+
+In case you want to change the database mode, you need to stop the node, delete the database, then restart the node.
+
+Astar db is located in `/var/lib/astar/chains/astar/db`.
+
+Polkadot db is located in `/var/lib/astar/polkadot/chains/polkadot/db`.
+
+Example: delete the Polkadot db after stopping the node:
+
+```bash
+sudo rm -rf /var/lib/astar/chains/astar/db
+```
