@@ -93,19 +93,18 @@ async function tvlDaily() {
 }
 ```
 
-## Examples on Replit
+## Examples on CodeSandBox
 
 ```mdx-code-block
 import Iframe from 'react-iframe';
 
-<Iframe
-  url="https://replit.com/@gluneau/Graph-the-Astar-Staking-V3-GraphQL-Indexer?embed=true"
+<iframe src="https://codesandbox.io/p/github/gluneau/Graph-the-Astar-Staking-V3-GraphQL-Indexer-and-API/main?embed=1&file=%2Fpages%2Findex.tsx"
   width="100%"
-  height="500px"
-  id="myId"
-  className="myClassname"
+  height="1000px"
   display="initial"
   position="relative"
   allowFullScreen
+  title="gluneau/Graph-the-Astar-Staking-V3-GraphQL-Indexer-and-API/main"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 />
 ```
