@@ -14,11 +14,12 @@ The API is accessible from a [Swagger User Interface](https://api.astar.network/
 | ------------------------------------------------------ | ------------------------------------------------------ |
 | List of dapps registed for staking                     | `/chaindapps`                                          |
 | TVL for a given network and period                     | `/tvl/{period}`                                        |
-| List of stakers per dapp with total stake              | `/stakerslist/{address}`                               |
+| List of stakers per dapp with total stake              | `/stakerslist/{contractAddress}`                               |
 | Stakers count for a given network for a dapp by period | `/stakerscount/{contractAddress}/{period}`             |
 | Total stakers count for a given network and period     | `/stakerscount-total/{period}`                         |
 | All reward events by type (optional) and network       | `/rewards/{period}/?transaction=BonusReward,Reward`    |
 | Aggregated daily rewards by staker or dapp by period   | `/rewards-aggregated/{address}/{period}`               |
+| Stake amount for one participant                       | `/stake-info/{address}`                                |
 
 ## The Indexer
 
@@ -39,6 +40,72 @@ The indexer is accessible from a [GraphQL Explorer UI](https://squid.subsquid.io
 | rewardEvents                  | amount, blockNumber, contractAddress, era, id, period, tierId, timestamp, transaction, userAddress                                    |
 | rewardAggregatedDailies       | amount, beneficiary, id, timestamp                                                                                                    |
 | stakes                        | amount, dappAddress, stakerAddress, blockNumber, expiredAt, expiredBlockNumber, id, timestamp                                         |
+| stakers                       | amount, dappAddress, stakerAddress, id                                                                                                |
+| stakersCount                  | total                                                                                                                                 |
 | stakersCountAggregatedDailies | blockNumber, id, stakersCount                                                                                                         |
 | subperiods                    | blockNumber, id, timestamp, type                                                                                                      |
 | tvlAggregatedDailies          | blockNumber, id, tvl                                                                                                                  |
+| uniqueStakerAddresses         | id                                                                                                                                    |
+
+## Coding Examples
+
+To obtain data from the API, you can use a GET request like this:
+
+```js
+async function getData() {
+  try {
+    const response = await fetch('https://api.astar.network/api/v3/shibuya/dapps-staking/chaindapps');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('There was a problem fetching the data: ', error);
+  }
+}
+```
+
+To get data from the indexer directly in case the enpoint you want to use does not include the data you're looking for, uses a POST request like so:
+
+```js
+async function tvlDaily() {
+  const response = await fetch(
+    "https://squid.subsquid.io/dapps-staking-indexer-shibuya/v/v1/graphql", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: `
+          query MyQuery {
+            tvlAggregatedDailies(orderBy: id_ASC) {
+              blockNumber
+              id
+              tvl
+            }
+          }
+        `,
+      }),
+      next: { revalidate: 10 }
+    }
+  );
+  const { data } = await response.json();
+  return data?.tvlAggregatedDailies;
+}
+```
+
+## Examples on Replit
+
+```mdx-code-block
+import Iframe from 'react-iframe';
+
+<Iframe
+  url="https://replit.com/@gluneau/Graph-the-Astar-Staking-V3-GraphQL-Indexer?embed=true"
+  width="100%"
+  height="500px"
+  id="myId"
+  className="myClassname"
+  display="initial"
+  position="relative"
+  allowFullScreen
+/>
+```
