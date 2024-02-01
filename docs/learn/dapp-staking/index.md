@@ -110,11 +110,11 @@ As an user or a dApp owner, you need to take the following parameters into consi
 
 |  | Shibuya | Shiden Network | Astar Network |
 | --- | --- | --- | --- |
-| Eras Per Period | 28 (~7days) | TBD | TBD |
-| Eras Per Voting Subperiod | 8 (~48hours) | TBD | TBD |
-| Eras Per Build&Earn Subperiod | 20 (~120hours) | TBD |TBD  |
-| Blocks Per Era | 1800 (~6hours) | TBD | TBD |
-| Unlocking Period | 4 Eras (~1 day) | TBD |TBD  |
+| Eras Per Period | 28 (~7days) | 61 (~61days) | 122 (~122days) |
+| Eras Per Voting Subperiod | 8 (~48hours) | 6 (~6days) | 11 (~11days) |
+| Eras Per Build&Earn Subperiod | 20 (~120hours) | 55 (~55days) | 111 (~111days) |
+| Blocks Per Era | 1800 (~6hours) | 7200 (~24hours) | 7200 (~24hours) |
+| Unlocking Period | 4 Eras (~1 day) | 4 Eras (~4 day) |9 Eras (~9 day)  |
 | Minimum Amount to Stake | 5 SBY | 50 SDN | 500 ASTR |
 
 #### Tier System
