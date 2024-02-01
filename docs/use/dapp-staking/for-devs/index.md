@@ -20,7 +20,7 @@ dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp
 
 :::tip
 
-Before reading the dApp Staking section for dApp owner, make sure you understand the concept of periods, subperiods and eras, as well as the dApp Staking V3 parameters explained [here](/docs/use/dapp-staking/#periods-subperiods--eras).
+Before reading the dApp Staking section for dApp owner, make sure you understand the concept of periods, subperiods and eras, as well as the dApp Staking V3 parameters explained [here](/docs/learn/dapp-staking/#period--subperiods).
 
 :::
 
@@ -65,6 +65,12 @@ You have to claim your rewards to receive them. We recommend that you claim your
 If there are more dApps eligible for a tier than there is capacity, the dApps with the higher score get the advantage. dApps which missed out on a higher tier get priority for entry into the next lower tier (if there still is any).
 
 In the case a dApp doesn't satisfy the entry threshold for any tier, even though there is still capacity, the dApp will simply be left out of tiers and won't earn any reward.
+
+:::warning
+
+In the event that a dApp is **unregistered** from dApp Staking following a governance decision, all developer unclaimed rewards will become unavailable. We recommend that dApp owners claim their rewards regularly.
+
+:::
 
 In case you have any questions, please check the [FAQ page](/docs/learn/dapp-staking/dapp-staking-faq/) in the Learn section or join our [Discord channel](https://discord.com/invite/astarnetwork).
 

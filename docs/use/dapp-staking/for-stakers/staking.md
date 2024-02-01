@@ -42,7 +42,7 @@ Click on the project cards for more information, access to their communities or 
 
 :::important
 
-Before using dApp Staking, make sure you understand all the parameters and rules described [here](/docs/use/dapp-staking/for-stakers/).
+Before using dApp Staking, make sure you understand all the parameters and rules described [here](/docs/learn/dapp-staking/#parameters).
 
 :::
 
