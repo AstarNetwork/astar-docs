@@ -159,5 +159,5 @@ Polkadot db is located in `/var/lib/astar/polkadot/chains/polkadot/db`.
 Example: delete the Polkadot db after stopping the node:
 
 ```bash
-sudo rm -rf /var/lib/astar/chains/astar/db
+sudo rm -rf /var/lib/astar/polkadot/chains/polkadot/db
 ```
