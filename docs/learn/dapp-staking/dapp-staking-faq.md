@@ -1,10 +1,8 @@
 ---
 sidebar_position: 2
-title: FAQs related to dAppStaking V3
+title: dApp Staking V3 FAQ
 sidebar_label: dApp Staking FAQ
 ---
-
-# dAppStaking V3 FAQ
 
 ## General Info About Migration From V2 to V3
 
@@ -200,13 +198,14 @@ Ledger is currently developing a new generic app for all Polkadot/Kusama paracha
 **What can I do right now?**
 If you wish to actively participate in dApp Staking v3 from the start, you should [initiate the unbonding period immediately](https://docs.astar.network/docs/use/dapp-staking/dapp-staking-v2/unbonding) and move your funds to either an Astar EVM Account supported by Ledger (see below), or move funds to a hot wallet.
 
-:::info 
+:::info
 It is possible that by the dApp staking v3 launch Ledger generic app will be available, completely removing this limitation.
 
 Keep an eye out on this page and official announcement channels for more info as it becomes available.
 :::
 
 ### Q: I am a Ledger Astar EVM App User, what do I need to do?
+
 All users using Astar EVM Ledger App ([Astar EVM](https://support.ledger.com/hc/en-us/articles/5555310160669-Astar-EVM-ASTR)) users, there are not limitations moving to dApp Staking V3. You will be able to participate in dApp staking V3 immediately.
 
 ### Still got a question?
