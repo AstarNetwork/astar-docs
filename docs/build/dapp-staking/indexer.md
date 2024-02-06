@@ -23,12 +23,12 @@ The API is accessible from a [Swagger User Interface](https://api.astar.network/
 
 ## The Indexer
 
-The indexer is accessible from a [GraphQL Explorer UI](https://squid.subsquid.io/dapps-staking-indexer-shibuya/v/v1/graphql).
+The indexer is accessible from a [GraphQL Explorer UI](https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql).
 
 |        |                                                                      |
 | ------ | -------------------------------------------------------------------- |
-| UI     | https://squid.subsquid.io/dapps-staking-indexer-shibuya/v/v1/graphql |
-| API    | https://squid.subsquid.io/dapps-staking-indexer-shibuya/v/v1/graphql |
+| UI     | https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql |
+| API    | https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql |
 | Github | https://github.com/AstarNetwork/dapps-staking-indexer-v3             |
 
 ### Available indexes
@@ -71,7 +71,7 @@ To get data from the indexer directly in case the enpoint you want to use does n
 ```js
 async function tvlDaily() {
   const response = await fetch(
-    "https://squid.subsquid.io/dapps-staking-indexer-shibuya/v/v1/graphql", {
+    "https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
