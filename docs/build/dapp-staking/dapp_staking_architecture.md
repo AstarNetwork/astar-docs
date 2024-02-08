@@ -177,7 +177,7 @@ The dApp score is simply the total staked amount on the dApp (value can be read 
 Tiers are described using `TierConfiguration` struct which is stored in `TierConfig` storage.
 Using that information, dApps are sorted out and assigned into appropriate tiers.
 
-Once tiers have been assigned, they are stored into `DAppTiers` storage map. This is done at the end of every `Build&Earn`` subperiod era, or at the beginning of the block of the next era to be more precise.
+Once tiers have been assigned, they are stored into `DAppTiers` storage map. This is done at the end of every `Build&Earn` subperiod era, or at the beginning of the block of the next era to be more precise.
 
 Essentially, it is enough to check that storage item once it’s been written to understand how many tier slots have been occupied and how many are unused.
 
