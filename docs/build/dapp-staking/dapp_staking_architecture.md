@@ -7,7 +7,7 @@ title: Technical Solution
 The target audience for this page are developers.
 :::
 
-Please make sure to check the (existing)(/docs/learn/dapp-staking/dapp-staking-protocol) dApp staking protocol documentation before diving into this document.
+Please make sure to check the [existing](/docs/learn/dapp-staking/dapp-staking-protocol) dApp staking protocol documentation before diving into this document.
 
 ## Pallet Internals
 
