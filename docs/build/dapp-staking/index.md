@@ -1,6 +1,7 @@
 # dApp Staking
 
 All content relating to dApp Staking has been moved to other sections of the documentation:
+
 - For general and technical documentation on dApp Staking, refer to [dApp Staking](/docs/learn/dapp-staking/) in the Learn section ;
 - For Stakers, refer to [dApp Staking for stakers](/docs/use/dapp-staking/for-stakers/) in the Use section;
 - For projects looking to join the dApp Staking program, refer to [dApp Staking for devs](/docs/use/dapp-staking/for-devs/) in the Use section;

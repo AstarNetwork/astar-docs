@@ -1,366 +1,66 @@
 ---
 sidebar_position: 1
-title: V3 Technical Architecture
+title: Technical Solution 
 ---
 
-## Introduction
-
 :::important
-Please note that this is a technical document on the design of the dApp Staking V3 as it has been imagined. It serves as a reference and helps to better understand its architecture. 
-
+The target audience for this page are developers.
 :::
 
-For the final implementation on Astar Network or Shiden, please refer to the documentations on Astar Github.
+Please make sure to check the (existing)(/docs/learn/dapp-staking/dapp-staking-protocol) dApp staking protocol documentation before diving into this document.
 
-**Resources:**   
-https://docs.astar.network/docs/learn/dapp-staking/dapp-staking-protocol
-https://github.com/AstarNetwork/Astar/tree/master/pallets/dapp-staking-v3
-https://github.com/AstarNetwork/Astar/tree/master/precompiles/dapp-staking-v3
+## Pallet Internals
 
-# I. Overview
+To avoid duplicating information, please check the code documentation for respective crates/modules:
 
-### Eras & Periods
+* [dApp Staking pallet](https://github.com/AstarNetwork/Astar/tree/master/pallets/dapp-staking-v3)
+* [dApp Staking precompile](https://github.com/AstarNetwork/Astar/tree/master/precompiles/dapp-staking-v3)
+* [inflation pallet](https://github.com/AstarNetwork/Astar/tree/master/pallets/inflation)
 
-The concept of eras is kept from the old dApp staking and a new concept of `periods` is introduced.
+At the moment of writing this document, _crate pages_ aren't hosted anywhere, but you can build them locally like:
 
-Each `period` consists of two `subperiods` - `voting subperiod` followed by a `build&earn subperiod`:
-- `voting subperiod` length is expressed in eras, but it only lasts for a single era:
-    - **E.g.** if standard era length is 7200 blocks, and voting period lasts for 7 standard eras, it means that voting period lasts for 7200 x 7 = 50400 blocks. For the sake of simplicity, this is considered to be a single voting period era.
-- `build&earn subperiod` length is also expressed in eras but unlike `voting period`, can consist of 1 or more standard era lenghts:
-    - **E.g.** if it is said that build&earn subperiod lasts for 30 eras, it means that 30 distinct eras will happen during that period, before a new voting period is triggered.
-
-Rewards are only earned from eras that are part of build&earn period.
-
-### Register & Unregister Contracts
-
-This will remain a permissioned action, same as the old dApp Staking.
-
-A new configurable origin type will be introduced: `ManagerOrigin`, which will have the privilege to register & unregister contracts 
-- This will be useful for integrating with OpenGov style governance (special origin type for contract registration);
-
-Contract unregister action cleans up all storage entries related to the contract, except the info when contract was unregistered.  
-It’s not possible to re-register a contract after it has been unregistered.
-
-### Contract Owner & Reward Destination
-
-When contract is registered, it has an *owner* account. By default, this account is beneficiary of dApp rewards.
-
-Owner can be changed via an *change owner* call and reward beneficiary account can also be changed via a dedicated call.
-
-### Locking & Unlocking Funds
-
-Locking funds means making them eligible for staking usage. Once funds are locked, they become eligible for staking immediately.  
-User can only unlock funds which **aren’t** staked.
-
-Unlocking funds will trigger unlocking period (same as old dApp Staking’s unbonding period) but this time it will be measured in blocks instead of eras.  
-Once unlocking period passes, user can withdraw their unlocked funds into their free balance.
-
-Users will also have an option to *relock* all of their unlocking chunks if they change their minds later.
-
-### Staking & Unstaking Funds
-
-Users can at any point decide to stake or to unstake funds from a contract.
-
-Unlike in dApp staking v2, in v3 it’s not possible to stake for the current era, but only for the next one instead. 
-- This is to prevent stakers earning rewards even though they were only active stakers for e.g. a single block of an era;
-- Staker can unstake from the current era though;
-
-Those who stake during the `voting subperiod` and don’t reduce their stake amount below what was staked during the `voting subperiod` during the `build&earn subperiod` will be eligible for bonus rewards.
-
-If users have unclaimed rewards from the previous period or eras, they **NEED** to `claim` them first before staking in the new period.
-- To put into another words, calling `stake` or `unstake` won’t be possible unless **ALL** pending rewards have been claimed;
-- This will help prevent unbounded storage growth and make the overall runtime logic much simpler;
-
-Since there is no `unbonding period` related to unstaking, the `transfer_nomination` call **won’t be** included in the public API. However, the same functionality can be achieved just by batching `[stake, unstake]` calls.
-
-### Claiming Stake Rewards
-
-Stake rewards are rewarded for those who `stake` their tokens on a dApp. Even if tokens are `locked`, they won’t earn any rewards unless they are `staked`. Even though stakes are specific to a dApp, reward claiming will be done for all staked dApps via a single call (this is a change compared to v2 and it will make claiming more efficient & cheaper).
-
-Single call will be able to claim rewards for multiple eras (while retaining **O(1)** complexity).
-
-Unlike v2, there won’t be an option for compounding rewards, at least not directly via an extrinsic call to make compounding rewards work, frontend will need to correctly estimate the reward from claims, and call `lock & stake` extrinsic calls in a batch. The main reason why there’s no intrinsic compounding reward support is that reward claiming isn’t done for a specific contract, but for all of them at once. What dApp would user re-stake their funds on?
-
-The reward for user is calculated using a simple formula:
-
-$user\_reward = total\_stake\_reward * \frac{user\_stake}{total\_staked}$
-
-Rewards are ONLY issued when they are being claimed.
-
-### Claiming Bonus Rewards
-
-If staker staked X **amount** during `voting subperiod` and hasn’t reduced their stake amount below X during `build&earn subperiod`, they will be eligible for extra rewards
-
-$bonus\_reward = total\_bonus\_reward * \frac{user\_contract\_vp\_stake}{total\_vp\_stake}$
-
-The formula demonstrates that bonus reward is calculated per contract and if user was a *loyal staker* for two distinct contracts, they will need to execute two `claim` calls, one for each contract. **vp** refers to `voting subperiod`.
-
-It will only be possible to claim bonus reward for **1 past period**, and only if this period isn’t beyond history depth limit. This shouldn't be a problem, since it's safe to assume that the periods will last longer than a month.
-
-Rewards are ONLY issued when they are being claimed..
-
-### Claiming Dapp Rewards
-
-After an era ends, dApps will be assigned into tiers.
-
-The call footprint is kept the same as in v2, where both smart contract & era need to be specified when calling `claim`.  
-Rewards are ONLY issued when they are being claimed.
-
-## II. Public Calls & Internals
-
-These are the name of the calls exposed by the pallet. Whatever naming is used in frontend can be entirely different.
-
-### 1. Internals
-
-This covers important internal calls which are critical part of the dApps staking v3 design.
-
-#### >> on_initialize
-Executed at the beginning of each block. The solution can be easily extended to utilize scheduler pallet later instead of `on_initialize`.
-
-Checks if new era or new period needs to begin:
-- In case no new era/periods should start from this block, do nothing;
-- If pallet is in maintenance mode, do nothing;
-- In case changes are needed:
-    - **New era during build&earn period:**
-        - calculate dApp tier allocation & reward pool;
-     - assign staker reward pool;
-    - **Final era of build&earn period:**
-        - switch over to the voting period;
-        - this also means switching over to the next period;
-        - calculate new tier configuration;
-    - **New era during voting period:**
-        - switch over to the build&earn period;
-
-:::note
-
-Storage cleanup should occur after switching over to a new period, or can be done lazily via hooks.
-
-:::
-
-#### >> get_dapp_tier_assignment
-
-Iterates over all dApps and their stake, and distributes them into tiers. A simple way of tier assignment is used, no complex formula is involved - **total stake amount**.  
-dApps are assigned into tiers, and reward per tier is calculated.
-
-:::note
-There are two features missing from the current implementation:  
-Handling for a corner case when multiple dApps have the same score, but tier hasn’t got enough capacity.
-:::
-
-The calculation is heavy on the DB reads, and includes two sorts.
-
-### 2. Register
-
-`register(developer, contract)` : Registers a new developer *account < > smart contract* pair. 
-
-It's a permissioned action, origin defined by a configurable type. *(In case normal user calls `register`, an error is thrown)*  
-There is no registration deposit.
-
-Even though each dApp has a unique address, an additional unique `u16` dApp Id is assigned to the dApp once it’s been created.
-
-### 3. Unregister
-
-`unregister(contract)` : Unregisters the contract, marking it as unregistered from current era. 
-
-Removes storage entry (or entries) related to that contract, except for info when it was unregistered.
-
-### 4. Lock
-
-`lock(amount)` : Locks up some amount in dApps staking.
-
-*Frontend will ensure user never locks their entire balance in dApp staking, preventing them from paying fees in the future.* 
-
-It’s enough to store how much user has locked **right now**, there's no need for historical data.
-Locked amount should always be above some threshold to prevent account spamming (inflating number of dApp staking participants).
-
-In case user specifies value which is higher than what is available for locking, lock what’s available.
-
-### 5. Unlock
-
-`unlock(amount)` : Unlocks some *amount* from dApps staking.
-
-Unlocking can be only be used if there is a locked amount which isn’t used for staking. Otherwise, user should first unstake from a contract, after which they can unlock.
-
-Each time some amount is unlocked, it must undergo unlocking period before it can be withdrawn back to the free balance by the user.
-
-In case user specifies more than is currently locked, everything is unlocked.  
-In case unlocking the specified amount would bring user below minimum lock amount, everything is unlocked.  
-
-Unlocking period is expressed in eras, but these eras are converted to block numbers. *This is a change compared to dApp staking v2 where eras were counted directly.*
-
-### 6. Claim_unlocked
-
-`claim_unlocked()` : claims all of the eligible unlocking chunks into the user’s free balance.
-
-In case total locked amount is brought to zero, and no more staker info entries remain, ledger is cleaned up from the storage:
-- If some staker info entries remain, full unlock will not be possible and user will first have to clean up those entries (either by claiming rewards or calling a dedicated cleanup function);
-- This is important since it ensures no leftover storage remains after an account fully exits the protocol;
-
-### 7. Relock_unlocking
-
-`relock_unlocking()` : Relocks all of the unlocking chunks. Same as lock call but uses existing locked funds.
-
-### 8. Stake
-
-`stake(contract, amount)` : Stakes (or nominates) some amount on the specified contract. 
-
-Contract must be active, not in the `Unregistered` state.
-
-The stake amount is applied either to the `voting subperiod` stake or `build&earn subperiod` stake, depending on what is active right now. If the next era marks the end of the `build&earn subperiod`, it’s not possible to call stake.
-
-`amount` can only be used if it was locked before and hasn’t been used for staking already.
-
-Account **MUST** claim all pending rewards (or cleanup the expired ones) before they can call stake.  
-
-There is a minimum staking amount per dApp to prevent having small stake amounts per dApp.  
-The stake amount specified **MUST be precise**, it mustn’t exceed what’s available for staking, otherwise the call will fail.
-
-When user stakes, it only becomes active (eligible for rewards) from **the next era onwards**.
-
-### 9. unstake
-
-`unstake(amount, contract)` : Unstakes some amount from the contract.
-
-If executed during `voting subperiod`, will reduce `amount` of stake in the `voting subperiod`.  
-If executed during `build&earn subperiod`, will first reduce amount of stake from `build&earn subperiod`, and if that’s not enough, it will reduce stake from the `voting subperiod`
-- In case `voting subperiod` staked amount is modified during `build&earn subperiod`, the staker is no longer considered loyal.
-- In case total stake is reduced to zero, DB entry should be deleted. 
-
-The unstake `amount` must be precise, it must not exceed what’s staked, otherwise the call will fail.
-
-All pending rewards **MUST** be claimed (or expired rewards cleaned up) before unstake can be called.
-
-### 10. claim_staker_reward
-
-`claim_staker_reward()` : Claims staker rewards for eligible eras.
-
-There are two distinct scenarios:
-- Rewards are being claimed for past period: ( **eligible_era** ≤ *period_ending_era*);
-- Rewards are being claimed for the ongoing period: ( **eligible_era** < *current_era*);
-
-If the call is successful, at least one reward will be claimed, with the possibility of more if certain conditions are met. Era rewards are stored into spans allowing claim to claim up to span length number of rewards.
-
-Staker no longer needs to specify from which contract they are claiming since this reward is only calculated based on the staked amount.
-
-### 11. claim_bonus
-
-`claim_bonus(smart_contract)` : claims bonus reward for a past period, if applicable.
-
-In case current period is **P**, user can claim bonus reward for period **P - 1** (or older) if it has a DB entry which proves they were a loyal staker.
-
-Using `AccountLedger`, `ContractStakingInfo` and `PeriodInfo`, it is possible to calculate rewards and pay them out.
-
-### 12. claim_dapp_reward
-
-`claim_dapp_reward(contract, era)` : claims dapp reward for a single era.
-
-Amount of the reward only depends on the tier in which the dapp was at the end of an era.
-
-For each `build&earn` era, there will be tier distribution and tier rewards saved.
-
-### 13. force
-
-`force(force_type)` : Force new era, or new period type.
-
-The forced change will be made in the block AFTER the one in which this call is included.
-
-### 14. maintenance_mode
-
-`maintenance_mode(enabled)` : Enable or disable maintenance mode.
-
-This prevents all calls (except for maintenance mode call) and stops any changes in the dApps staking DB entries.
-
-### 15. set_dapp_reward_beneficiary
-
-`set_dapp_reward_beneficiary(contract, Some<AccountId>)` : Can be used by developer or by already configured destination account to change the reward destination account Id for developer rewards.
-
-### 16. set_dapp_owner
-
-`set_dapp_owner(contract, AccountId)` : Can be used by dapp owner to change ownership to another account.
-
-## 3. Storage
-
-`ActiveProtocolState` : *StorageValue*, **ProtocolState**  
-
-`IntegratedDApps` : *StorageMap*, **(Config::SmartContract) ⇒ DappInfo**  
-
-`NextDAppId` : *StorageValue*, **u16**  
-
-`Ledger` : *StorageMap*, **(Config::AccountId) ⇒ AccountLedger**  
-
-`StakerInfo` : *DoubleStorageMap*, **(T::AccountId, T::SmartContract) ⇒ SingularStakingInfo**  
-
-`ContractStakeInfo` : *StorageMap*, **(T::SmartContract) ⇒ ContractStakingInfoSeries**  
-
-`CurrentEraInfo` : *StorageValue*, **EraInfo**  
-
-`EraRewards` : *StorageMap*, **(Era) ⇒ EraRewardSpan**  
-
-`PeriodEnd` : *StorageMap*, **(PeriodNumber) ⇒ PeriodEndInfo**  
-
-`PeriodStakesAndRewards` : *StorageMap*, **(Period) ⇒ PeriodInfo**  
-
-`StaticTierParams` : *StorageValue*, **TierParameters**  
-
-`NextTierConfig` : *StorageValue*, **TiersConfiguration**  
-
-`TierConfig` : *StorageValue*, **TiersConfiguration**  
-
-`DAppTiers` : *StorageMap*, (Era) ⇒ **DAppTierRewards**
-
-## 4. Scenarios
-
-:::note
-
-The code and explanations may have been modified since the features were audited and developed after this doument was designed.
-
-:::
-
-### Understanding Staked Amounts In Ledger
-
-```rust
-#[pallet::storage]
-pub type Ledger<T: Config> =
-    StorageMap<_, Blake2_128Concat, T::AccountId, AccountLedgerFor<T>, ValueQuery>;
-
-pub struct AccountLedger {
-    /// How much active locked amount an account has.
-    #[codec(compact)]
-    pub locked: Balance,
-    /// Vector of all the unlocking chunks.
-    pub unlocking: BoundedVec<UnlockingChunk<BlockNumber>, UnlockingLen>,
-    /// Primary field used to store how much was staked in a particular era.
-    pub staked: StakeAmount,
-    /// Secondary field used to store 'stake' information for the 'next era'.
-    /// This is needed since stake amount is only applicable from the next era after it's been staked.
-    ///
-    /// Both `stake` and `staked_future` must ALWAYS refer to the same period.
-    /// If `staked_future` is `Some`, it will always be **EXACTLY** one era after the `staked` field era.
-    pub staked_future: Option<StakeAmount>,
-    /// Number of contract stake entries in storage.
-    #[codec(compact)]
-    pub contract_stake_count: u32,
-}
+```bash
+cargo doc --open --no-deps -p pallet-dapp-staking-v3
 ```
-The information above is interpreted as:
-- `locked` - with how much locked balance user is participating in dApp staking.
-- `unlocking` - vector of all unlocking chunks.
-- If `locked` and sum of `unlocking` are summed up together, this gives the TOTAL locked in dApp staking protocol by the user.
-- Both `staked` and `taked_future` carry information about how much user has staked:
-    - if `staked_future` is not `None` (or `null`), then it’s guaranteed to have `era` value equal to `staked.era + 1`;
-    - each of these entries caries information about certain era or time span;
-- There are 4 distinct scenarios how these values can appear:
-    - `staked` is empty (all zeroes), and `staked_future` is `None` ⇒staker has nothing staked;
-    - `staked` is non-empty and `staked_future` is `None` ⇒ this can be read as “Staker has staked `staked.voting + staked.build_and_earn` amount since era staked.era:
-        - E.g. if staked.era = 5 , and current era is 7, it means that entry covers eras **5, 6 and 7**;
-    - `staked` is empty (all zeroes), and `staked_future` has some non-zero value ⇒ It’s interpreted in the same way as the staked value in the previous example;
-    - `staked` is non-empty, and staked-future has some non-zero value ⇒ in this case, `staked` describes **A SINGLE ERA**, while `staked_future` describes one or more eras.
-        - E.g. if `staked.era = 5` , and `staked_future.era = 6` it’s interpreted as:
-            - In era 5, staker had staked `staked.voting + staked.build_and_earn` amount;
-            - From era 6 and onwards, staker had `staked staked_future.voting + staked_future.build_and_earn`
-- `stake` and `staked_future` entries are not valid indefinitely, they will expire after the period finishes. However, to expire doesn’t mean they are deleted or anything
+
+_Make sure to replace package name with whatever package you're interested in._
+
+The generated documentation will contain exhaustive description of pallet extrinsic calls, types, evens, errors, storage items, examples, and more.
+
+## Scenarios
+
+The following subchapters are aimed to help users understand the logic behind some internal workings of the pallet.
+This information is intended to be complimentary to the aforementioned pallet documentation.
+
+### Staked Amounts In Ledger
+
+The `AccountLedger` struct contains various pieces of information related to someone's locked & staked amounts.
+For each staker, an entry of `AccountLedger` is stored in `Ledger` storage map.
+
+Both `staked` and `staked_future` fields carry information about how much user has staked at some point.
+If `staked_future` is not `None` (or `null`), then it’s guaranteed to have `era` value equal to `staked.era + 1`.
+Each of these entries caries information about certain era or time span.
+
+There are 4 distinct scenarios how these values can appear:
+
+1. `staked` is empty (all zeroes), and `staked_future` is `None`. This means the account has nothing staked.
+
+2. `staked` is non-empty and `staked_future` is `None`. This can be read as _“Staker has staked `staked.voting + staked.build_and_earn` amount since era `staked.era`:
+    E.g., if `staked.era = 5` and current era is 7, it means that the `staked` entry is valid for eras **5, 6 and 7** (assuming they all belong to the same period).
+
+3. `staked` is empty (all zeroes), and `staked_future` has some non-zero value. This is interpreted in the same way as the staked value in the previous example.
+
+4. `staked` is non-empty, and `staked_future` has some non-zero value. In this case, `staked` describes **a single era**, while `staked_future` describes one or more eras.
+   E.g. if `staked.era = 5` , and `staked_future.era = 6` it’s interpreted as:
+   * In era 5, staker has staked `staked.voting + staked.build_and_earn` amount.
+   * From era 6 and onwards, staker has staked `staked_future.voting + staked_future.build_and_earn`
+
+`stake` and `staked_future` entries are not valid indefinitely, they will expire after the period finishes. However, to expire doesn’t mean they are deleted or anything
 similar to that. Instead, `staked.period` or `staked_future.period` need to be checked to understand whether they match the ongoing period number.
-    - If they don’t match, they can be ignored & treated as if stake amount is **zero**.
+If they don’t match, they can be ignored & treated as if stake amount is **zero**.
+
+E.g. if `staked.era = 5` and `staked.period = 1`, and current period is `2`, we need to check `PeriodEnd` storage map to find out when did `period 1` end.
+Let's assume that `period 1` ended in era 20 - it would mean that the `staked` entry is valid from era 5 up to era 20.
 
 ### Understanding Claimable Eras For Stakers
 
