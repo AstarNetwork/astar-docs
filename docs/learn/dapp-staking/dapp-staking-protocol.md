@@ -135,6 +135,10 @@ In case amount specified for locking is greater than what user has available, on
 Once tokens have been locked, they can be used to stake immediately.
 Users should ensure to do so since _locking_ doesn't bring any rewards, unless tokens are staked as well.
 
+:::note
+It's not possible to use the same account for dApp staking & as the collator candidate.
+:::
+
 #### Unlocking Tokens
 
 User can at any time decide to unlock their tokens. However, it's not possible to unlock tokens which are staked, so user has to unstake them first.
