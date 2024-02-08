@@ -47,7 +47,7 @@ There are 4 distinct scenarios how these values can appear:
 
 1. `staked` is empty (all zeroes), and `staked_future` is `None`. This means the account has nothing staked.
 
-2. `staked` is non-empty and `staked_future` is `None`. This can be read as _“Staker has staked `staked.voting + staked.build_and_earn` amount since era `staked.era`:
+2. `staked` is non-empty and `staked_future` is `None`. This can be read as Staker has staked `staked.voting + staked.build_and_earn` amount since era `staked.era`:
     E.g., if `staked.era = 5` and current era is 7, it means that the `staked` entry is valid for eras **5, 6 and 7** (assuming they all belong to the same period).
 
 3. `staked` is empty (all zeroes), and `staked_future` has some non-zero value. This is interpreted in the same way as the staked value in the previous example.
