@@ -4,7 +4,7 @@ title: Technical Solution
 ---
 
 :::important
-The target audience for this page are developers.
+The target audience for this page are developers building projects which interact with dApp Staking protocol.
 :::
 
 Please make sure to check the [existing](/docs/learn/dapp-staking/dapp-staking-protocol) dApp staking protocol documentation before diving into this document.
