@@ -243,7 +243,7 @@ There is a limited amount of slots for dApps which means dApps have to compete f
 The amount isn't static but is recalculated at the start of each period.
 
 Since the purpose of dApp staking isn't for dApps to earn obscene amounts of rewards, but to provide
-basic income, number of slots is scaled with the value of **ASTR** expressed in **USD**.
+support to operate and furter develop existing dApp, number of slots is scaled with the value of **ASTR** expressed in **USD**.
 
 At the beginning of each period, using the average **ASTR** price during the former period, new number of slots is calculated:
 
