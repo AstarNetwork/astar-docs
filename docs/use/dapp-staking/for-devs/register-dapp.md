@@ -35,7 +35,7 @@ Connect your wallet and choose the network on which you are going to register fo
 
 If the wallet has been whitelisted, a banner with a `Register Now` button, like the one below, will appear:
 
-<Figure src={require('/docs/use/dapp-staking/for-devs/img/Registration_banner.png').default} width="80%" />
+<Figure src={require('/docs/use/dapp-staking/for-devs/img/Registration_banner.png').default} width="85%" />
 
 Click on **Register Now** and fill in the form with all your project details:
 
@@ -55,13 +55,13 @@ Click on **Register Now** and fill in the form with all your project details:
 
 Once you've filled in all your details, click **Next** button and enter the description that will appear on your **New Listing Card**;
 
-<Figure src={require('/docs/use/dapp-staking/for-devs/img/Promotion_card_2.png').default} width="100%" />
+<Figure src={require('/docs/use/dapp-staking/for-devs/img/Promotion_card_2.png').default} width="85%" />
 
 Finally, click on **Register** and sign the transaction on the network;
 
 Congratulations! 🎉 Your project is now listed in dApp Staking and you can start your campaign and communication to attract stakers.
 
-<Figure src={require('/docs/use/dapp-staking/for-devs/img/dApp_page_2.png').default} width="80%" />
+<Figure src={require('/docs/use/dapp-staking/for-devs/img/dApp_page_2.png').default} width="90%" />
 
 :::tip
 

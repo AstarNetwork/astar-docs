@@ -26,6 +26,10 @@ Before the asset's Metadata can be set, we will need to create an asset on the n
 6. When everything is filled in, click **Next** on the next screen.
 7. Set your **roles** and create the asset by signing with the creator account.
 
+:::note
+Please make sure the account creating the asset has sufficient balance to pay the [rent fee](/docs/learn/tokenomics2/tokenomics2-network-fees.md#Rent_Fee).
+:::
+
 ![Create your asset](img/5.png)
 ![Set roles](img/6.png)
 
@@ -43,7 +47,7 @@ The asset is now created on our network, but has no supply. To mint the tokens, 
 ![Mint your assets](img/7.png)
 
 1. Only the **issuer account** has permission to mint the token.
-2. Enter the address that will receive the minted tokens. We recommend using a [multisig](/docs/use/manage-wallets/create-multisig.md).
+2. Enter the address that will receive the minted tokens. We recommend using a [multisig](/docs/use/manage-wallets/create-multisig/).
 
 ## Set Asset Metadata
 

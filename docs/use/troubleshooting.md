@@ -46,7 +46,26 @@ Some of you may be unable to execute certain funtions. Please try these steps.
 2. dApps concerned:
     - **Arthswap**, contract: `0xE915D2393a08a00c5A463053edD31bAe2199b9e7`
     - **Sirius Finance**, contract: `0x9448610696659de8F72e1831d392214aE1ca4838`
+    - **ADAO**, contract: `0x1de7c3A07918fb4BE9159703e73D6e0b0736CaBC`
 3. To release these funds, you must `claim` all your pending ASTR rewards.
 4. Once all your pending rewards have been claimed, your tokens will be unlocked without any unbonding period and will become directly transferable.
+
+## "You do not have enough tokens to pay the transaction fee."
+
+1. As the sentence indicates, you do not have enough transferable tokens to cover the transaction fees.
+2. Top up your wallet with new ASTR or SDN tokens and you'll be able to complete your transaction.
+3. Bear in mind that tokens locked in dApp Staking, vesting or reserved balances cannot be used to pay gas fees.
+
+## "No reponse received from RPC endpoint in 60s."
+
+<Figure src={require('/docs/use/img/Endpoint_error.png').default } width="35%" /> 
+
+1. If you encounter this problem, it's probably due to a synchronization problem with the RPC endpoint used by the portal.
+2. To solve this problem, you need to reset the connection with the RPC by changing the Portal endpoint.
+3. On the Astar portal, click on the Astar logo in the top right-hand corner.
+4. Under `Network`, expand the **advanced** panel by clicking on the 3 dots.
+5. Modify the endpoint and click on the `Change Network` button to confirm your action.
+
+<Figure src={require('/docs/use/img/Network_modal.png').default } width="40%" /> 
 
 If none of the above is helpful, please contact any of the team members or agents on [Discord](https://discord.gg/2FGq5KqwBh).
