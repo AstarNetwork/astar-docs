@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # dApp Staking
@@ -18,3 +18,10 @@ Learn how to integrate dApp staking into your EVM dApp in the precompiles chapte
 
 - [EVM Precompiled Contracts](/docs/build/evm/precompiles/staking/)
 - [Getting data from the API and the Indexer](/docs/build/dapp-staking/indexer/)
+
+### Other page may be of interest:
+
+import DocCardList from '@theme/DocCardList';
+import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+
+<DocCardList items={useCurrentSidebarCategory().items}/>

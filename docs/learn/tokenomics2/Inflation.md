@@ -151,17 +151,17 @@ a single cycle.
 
 ## Parameters
 
-|                          | Shibuya       |
-|--------------------------|---------------|
-| Periods Per Cycle        | 2             |
-| Eras Per Voting Subperiod| 8             |
-| Eras Per Build&Earn Subperiod | 20      |
-| Blocks Per Era           | 1800 (~6 hours) |
-| Cycle Inflation Rate     | 1%            |
-| Treasury Part            | 5%            |
-| Collators Part           | 3%            |
-| dApps Part               | 20%           |
-| Base Staker Part         | 25%           |
-| Adjustable Staker Part   | 35%           |
-| Bonus Part               | 12%           |
-| Ideal Staking Rate       | 20%           |
+| Parameter                    | Astar | Shiden | Shibuya |
+|------------------------------|-------|--------|---------|
+| Periods Per Cycle            | 3     | 6      | 2       |
+| Eras Per Voting Subperiod    | 11    | 6      | 8       |
+| Eras Per Build&Earn Subperiod| 111    | 55     | 20      |
+| Blocks Per Era               | 7200 (~24 hours) | 7200 (~24 hours) | 1800 (~6 hours) |
+| Cycle Inflation Rate         | 7%    | 7%     | 1%      |
+| Treasury Part                | 5%    | 5%     | 5%      |
+| Collators Part               | 3.2%  | 3.2%   | 3%      |
+| dApps Part                   | 13%   | 13%    | 20%     |
+| Base Staker Part             | 25%   | 10%    | 25%     |
+| Adjustable Staker Part       | 40%   | 58.8%  | 35%     |
+| Bonus Part                   | 13.8% | 10%    | 12%     |
+| Ideal Staking Rate           | 50%   | 50%    | 20%     |

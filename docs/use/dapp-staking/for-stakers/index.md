@@ -8,41 +8,18 @@ Do you love to stake? Or do you want to support your favorite project on Astar N
 
 Discover [dApp Staking](/docs/learn/dapp-staking/), a unique mechanism that allows communities to support their favorite teams by staking ASTR or SDN with them. When staking ASTR or SDN on a dApp, users not only support the development of innovative apps but also receive staking rewards from inflation.
 
-You can educate yourself more by reading the technical documentation about [dApp Staking](/docs/learn/dapp-staking/).
-
+You can educate yourself more by reading the technical documentation about [dApp Staking](/docs/learn/dapp-staking/). 
 :::warning
 
 dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp Staking users on Astar and Shiden Network, please refer to the [dApp Staking V2 section](/docs/use/dapp-staking/dapp-staking-v2/).
 
 :::
 
-### Periods, Subperiods & Eras:
+:::tip
 
-`Eras`: Time units measured in blocks. Fairly short, a basic time division in dApp staking;
+Before reading the dApp Staking section for stakers, make sure you understand the concept of periods, subperiods and eras, as well as the dApp Staking V3 parameters explained [here](/docs/learn/dapp-staking/#understand-the-terminology-and-parameters-of-dapp-staking).
 
-**dApp Staking** is divided into **Periods** which consists of two **Subperiods**: **Voting** and **Build&Earn**.
-
-**Voting** is the subperiod when stakers can decide to vote for dApp(s) to stake their tokens and when dApps owners and team can market their products, conduct campaign and attract stakers.  
-No staking rewards are generated during the Voting subperiod but if users vote and stake on dApps during this subperiod, they will become eligible for the **Bonus Reward**;
-
-**Build&Earn** is the subperiod when stakers and dApps start earning rewards;
-Users can still stake tokens during the Build&Earn subperiod to increase the rewards they get from staking. However, the amount staked during Build&Earn does not contribute to the Bonus Reward.
-
-At the end of a **Build&Earn** subperiod, the current period ends. A new period begins, and all tokens are `unstaked` from dApp(s) but remain `locked`. A new **Voting Subperiod** starts.
-
-As an user, you need to take the following parameters into consideration before using dApp Staking:
-
-### Parameters:
-
-|  | Shibuya | Shiden Network | Astar Network |
-| --- | --- | --- | --- |
-| Eras Per Period | 28 (~7days) | TBD | TBD |
-| Eras Per Voting Subperiod | 8 (~48hours) | TBD | TBD |
-| Eras Per Build&Earn Subperiod | 20 (~120hours) | TBD |TBD  |
-| Blocks Per Era | 1800 (~6hours) | TBD | TBD |
-| Unlocking Period | 4 Eras (~1 day) | 5 Eras (~5 days) | 10 Eras (~10 days) |
-| Minimum Amount to Stake | 5 SBY | 50 SDN | 500 ASTR |
-
+:::
 
 ### Basic Staking Rewards:
 
@@ -59,7 +36,7 @@ For stakers, the APR is the same for all stakers, regardless of which dApp they 
 For dApps, staking rewards depends on the Tier system, dApps go into rewards tier based on the amount of tokens staked by users.
 
 Rewards must be claimed before trying to `stake` or `unstake`.
-*(If using the Astar Portal, the interface will automatically claim the rewards when voting)*
+*(If using the Astar Portal, the interface will automatically claim the rewards when trying to stake)*
 
 If a project is **unregistered** from dApp Staking, staked tokens on that project will still receive **basic rewards** as long as the tokens remain staked.
 
@@ -91,12 +68,12 @@ Bonus rewards for a period can only be claimed after the period finishes.
 
 - You need to keep a minimum of 10 ASTR or 5 SDN tokens as transferable after staking.
 - **You need to claim to receive your rewards, we recommend claiming your staking rewards once a week.**
-- When unlocking tokens, there is a unlocking period on Astar and on Shiden. The unlocking period lenghts can be consulted [here](/docs/use/dapp-staking/for-stakers/#parameters).  
+- When unlocking tokens, there is a unlocking period on Astar and on Shiden. The unlocking period lenghts can be consulted [here](/docs/learn/dapp-staking/#parameters). 
 Please note that this is based on a perfect block production of 12s. In case of any delay, your unlocking period can be a little longer.
 
 In case you have any questions, please check the [FAQ page](/docs/learn/dapp-staking/dapp-staking-faq/) in the Learn section or join our [Discord channel](https://discord.com/invite/astarnetwork).
 
-Other pages that can be of interest:
+### Other pages may be of interest:
 
 <br/>
 

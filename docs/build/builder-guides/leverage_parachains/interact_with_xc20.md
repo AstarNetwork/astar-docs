@@ -46,6 +46,10 @@ Currently, the best way to create XC20 asset is via [Polkadot.js](https://polkad
         - **Note**:  We suggest setting the `minimum balance` to `1 Pico`, which will only require 0.000000000001 unit of the asset.
     - `asset id`: the selected id for the asset. This should not match an already-existing asset id.
 
+:::note
+Please make sure the account creating the asset has sufficient balance to pay the [rent fee](/docs/learn/tokenomics2/tokenomics2-network-fees.md#Rent_Fee).
+:::
+
 ![Untitled](mintable-xc20-cookbook/Untitled.png)
 
 - Set the managing addresses for the XC20 asset:

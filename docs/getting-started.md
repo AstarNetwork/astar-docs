@@ -11,6 +11,7 @@ Astar is an interoperable blockchain platform for Polkadot and Ethereum ecosyste
 - [**Build**](/docs/build) - Provides the resources you need to start building, testing, deploying, and interacting with smart contracts on Astar network.
 - [**EVM**](/docs/build/evm) - Dives deeper into the EVM on Astar and explains how EVM smart contracts can interact with non-EVM modules and the Wasm virtual machine through [precompiles](https://docs.astar.network/docs/build/EVM/precompiles/).
 - [**Wasm**](/docs/build/wasm) - Provides an overview of the [Wasm stack](https://docs.astar.network/docs/build/wasm/smart-contract-wasm) on Astar, [Wasm contract frameworks](/docs/build/wasm/dsls), and [Swanky Suite](/docs/build/wasm/swanky-suite/).
+- [**dApp Staking**](/docs/learn/dapp-staking/) - Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking.
 - [**zkEVM**](/docs/build/zkEVM) - Contains everything developers need to know to start building on Astar's Layer 2 scaling solution for Ethereum.
 - [**Nodes**](/docs/build/nodes) - Explains how to run full nodes, collators, indexers, and everything else related to infrastructure.
 - [**XCM**](/docs/learn/interoperability/xcm) - Explains how XCM is used in Astar and also how developers can use it to interact with the rest of the Polkadot network.
@@ -19,4 +20,4 @@ Astar is an interoperable blockchain platform for Polkadot and Ethereum ecosyste
 
 ## Audit Reports
 
-A comprehensive list of finalized audit reports of Astar Network's codebase ia available on GitHub - [Astar Network Audit Reports](https://github.com/AstarNetwork/Audits)
+A comprehensive list of finalized audit reports of Astar Network's codebase is available on GitHub - [Astar Network Audit Reports](https://github.com/AstarNetwork/Audits)
