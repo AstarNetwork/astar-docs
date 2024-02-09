@@ -11,21 +11,10 @@ Please make sure to check the [existing](/docs/learn/dapp-staking/dapp-staking-p
 
 ## Pallet Internals
 
-To avoid duplicating information, please check the code documentation for respective crates/modules:
+To avoid duplicating information, please check the code documentation for respective crates/modules.
+The _rustdoc_ can be found [here](https://astarnetwork.github.io/Astar/astar_collator/index.html).
 
-* [dApp Staking pallet](https://github.com/AstarNetwork/Astar/tree/master/pallets/dapp-staking-v3)
-* [dApp Staking precompile](https://github.com/AstarNetwork/Astar/tree/master/precompiles/dapp-staking-v3)
-* [inflation pallet](https://github.com/AstarNetwork/Astar/tree/master/pallets/inflation)
-
-At the moment of writing this document, _crate pages_ aren't hosted anywhere, but you can build them locally like:
-
-```bash
-cargo doc --open --no-deps -p pallet-dapp-staking-v3
-```
-
-_Make sure to replace package name with whatever package you're interested in._
-
-The generated documentation will contain exhaustive description of pallet extrinsic calls, types, evens, errors, storage items, examples, and more.
+User is encouraged to check out `pallet-dapp-staking`, `pallet-evm-precompile-dapp-staking` and `pallet-inflation`.
 
 ## Scenarios
 
