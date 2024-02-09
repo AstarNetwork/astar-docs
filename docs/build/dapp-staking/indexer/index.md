@@ -2,6 +2,10 @@
 
 The API is accessible from a [Swagger User Interface](https://api.astar.network/) to test the endpoints out.
 
+:::info
+The API is available as a complimentary endpoint for developers with restricted usage and may not be appropriate for high-demand scenarios and continuous fetching of data. Users should note that excessive use could lead to instability of the free Token API. For those requiring high data availability, it is advisable to host their own API.
+:::
+
 |        |                                                                |
 | ------ | -------------------------------------------------------------- |
 | UI     | https://api.astar.network/                                     |
@@ -14,7 +18,7 @@ The API is accessible from a [Swagger User Interface](https://api.astar.network/
 | ------------------------------------------------------ | ------------------------------------------------------ |
 | List of dapps registed for staking                     | `/chaindapps`                                          |
 | TVL for a given network and period                     | `/tvl/{period}`                                        |
-| List of stakers per dapp with total stake              | `/stakerslist/{contractAddress}`                               |
+| List of stakers per dapp with total stake              | `/stakerslist/{contractAddress}`                       |
 | Stakers count for a given network for a dapp by period | `/stakerscount/{contractAddress}/{period}`             |
 | Total stakers count for a given network and period     | `/stakerscount-total/{period}`                         |
 | All reward events by type (optional) and network       | `/rewards/{period}/?transaction=BonusReward,Reward`    |
