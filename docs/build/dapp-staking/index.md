@@ -16,7 +16,7 @@ If you are interested in developing on top of dApp Staking and integrating dApp 
 
 Learn how to integrate dApp staking into your EVM dApp in the precompiles chapter:
 
-[EVM Precompiled Contracts](/docs/build/evm/precompiles/staking/)
+- [EVM Precompiled Contracts](/docs/build/evm/precompiles/staking/)
 
 ### Other page may be of interest:
 
