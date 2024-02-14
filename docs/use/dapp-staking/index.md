@@ -10,12 +10,6 @@ As a dApp gains popularity and attracts more stakers, the developers stand to re
 
 For a more detailed explanation of dApp Staking, refer to the comprehensive presentation in the [Learn section](/docs/learn/dapp-staking/).
 
-:::warning
-
-dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp Staking users on Astar and Shiden Network, please refer to the [dApp Staking V2 section](/docs/use/dapp-staking/dapp-staking-v2/).
-
-:::
-
 ### User & Developers guides
 
 In the following sections, you'll find all the help you need to interact with dApp Staking as a staker or dApp owner. 

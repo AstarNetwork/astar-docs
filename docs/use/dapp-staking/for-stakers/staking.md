@@ -42,8 +42,8 @@ Click on the project cards for more information, access to their communities or 
 
 :::important
 
-Before using dApp Staking, make sure you understand all the parameters and rules described [here](/docs/learn/dapp-staking/#parameters).
-
+Before using dApp Staking, make sure you understand all the parameters and rules described [here](/docs/learn/dapp-staking/#parameters).  
+An address can only stake on a maximum of 16 contracts (dApps).
 :::
 
 1) On the [dApp staking](https://portal.astar.network/astar/dapp-staking/discover) page, you can either:
@@ -53,7 +53,8 @@ Before using dApp Staking, make sure you understand all the parameters and rules
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Vote_Page.png').default } width="100%" /> 
 
-2) Once on the voting page, you can choose as many projects as you would like to support;
+2) Once on the voting page, you can choose up to 16 projects that you would like to support;
+
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page.png').default } width="85%" /> 
 
@@ -69,7 +70,7 @@ Make sure to always keep some tokens free for gas manage to claim your rewards.
 
 :::note
 
-You can see how many tokens you have available to stake from transferable or locked balances in the section above the `Confirm` button;
+You can see how many tokens you have available to stake from **transferable** or **locked balances** in the section above the `Confirm` button;
 
 :::
 
