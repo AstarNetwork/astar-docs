@@ -247,7 +247,7 @@ support to operate and further develop existing dApp, number of slots is scaled 
 
 At the beginning of each period, using the average **ASTR** price during the former period, new number of slots is calculated:
 
-$ number\_of\_slots = floor(1000 + ASTR_{USD} + 50)$
+$ number\_of\_slots = floor(1000 * ASTR_{USD} + 50)$
 
 This approach means that as **ASTR** value increases, so does the number of slots for dApp staking, and vice-versa.
 
