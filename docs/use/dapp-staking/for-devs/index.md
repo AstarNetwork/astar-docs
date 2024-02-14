@@ -12,12 +12,6 @@ You can educate yourself more by reading the technical documentation about [dApp
 
 Please take the following parameters into consideration and make sure you meet the [requirements](/docs/use/dapp-staking/for-devs/requirements.md):
 
-:::warning
-
-dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp owners on Astar and Shiden Network, please refer to the [dApp Staking V2 section](/docs/use/dapp-staking/dapp-staking-v2/for-devs/).
-
-:::
-
 :::tip
 
 Before reading the dApp Staking section for dApp owner, make sure you understand the concept of periods, subperiods and eras, as well as the dApp Staking V3 parameters explained [here](/docs/learn/dapp-staking/#period--subperiods).
@@ -38,13 +32,9 @@ The threshold for tier 4 is fixed, but for the other tiers, the threshold is **d
 
 **Rewards** for dApps are also **dynamic**, fluctuating from tier to tier. The higher the tier, the greater the number of ASTR tokens allocated from inflation as rewards for that tier.
 
-| Rewards allocated | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
-| --- | --- | --- | --- | --- |
-| Astar Network | TBD | TBD | TBD | TBD |
-| Shiden Network | TBD | TBD | TBD | TBD |
-| Shibuya Network | TBD | TBD | TBD | TBD |
-
 The rewards of a tier are divided between all available slots and distributed to the dApps occupying slots. This means that the rewards for dApps within a tier are the same for each dApp, even if not all slots within a tier are occupied.
+
+*Refer to the [dApp staking parameters](/docs/learn/dapp-staking/protocol-parameters#network-values) page to find out more about the tier system and reward allocation.*
 
 :::tip
 You have to claim your rewards to receive them. We recommend that you claim your rewards at least once a week or, optimistically, 2 or 3 times a week.

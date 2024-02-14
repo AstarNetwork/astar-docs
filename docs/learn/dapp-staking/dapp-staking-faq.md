@@ -4,6 +4,8 @@ title: dApp Staking V3 FAQ
 sidebar_label: dApp Staking FAQ
 ---
 
+import Figure from "/src/components/figure"
+
 ## General Info About Migration From V2 to V3
 
 These are major remarks about the migration:
@@ -140,6 +142,14 @@ Please refer to [this Astar Forum discussion](https://forum.astar.network/t/dapp
 **❗ Staker’s locked tokens will be migrated, but stakes WILL NOT.**
 
 As a staker, you will need to pick which dApp(s) to stake on again. **It’s important to do so to continue earning rewards.**
+
+### Q: I've staked 16 dApps and now I can't add or move tokens and I'm getting an error. What should I do?
+
+<Figure src={require('/docs/learn/img/Maxium_contracts_error.png').default } width="50%" /> 
+
+An address can stake on a maximum of 16 contracts (dApps).
+- You must unstake all your tokens from one of these dApps, so that you'll be staking on 15 dApps instead of 16.
+- You can then add more tokens in staking or move your staked tokens.
 
 ## For Developers
 

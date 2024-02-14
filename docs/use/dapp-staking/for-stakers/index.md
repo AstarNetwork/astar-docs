@@ -9,11 +9,6 @@ Do you love to stake? Or do you want to support your favorite project on Astar N
 Discover [dApp Staking](/docs/learn/dapp-staking/), a unique mechanism that allows communities to support their favorite teams by staking ASTR or SDN with them. When staking ASTR or SDN on a dApp, users not only support the development of innovative apps but also receive staking rewards from inflation.
 
 You can educate yourself more by reading the technical documentation about [dApp Staking](/docs/learn/dapp-staking/). 
-:::warning
-
-dApp Staking V3 is launched and accessible only on the Shibuya testnet. For dApp Staking users on Astar and Shiden Network, please refer to the [dApp Staking V2 section](/docs/use/dapp-staking/dapp-staking-v2/).
-
-:::
 
 :::tip
 
