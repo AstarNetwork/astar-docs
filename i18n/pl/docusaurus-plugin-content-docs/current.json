@@ -1,0 +1,310 @@
+{
+  "version.label": {
+    "message": "次へ",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.dApp Staking": {
+    "message": "dApp Staking",
+    "description": "The label for category dApp Staking in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Stakers": {
+    "message": "ステーカー向け",
+    "description": "The label for category For Stakers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Devs": {
+    "message": "開発者向け",
+    "description": "The label for category For Devs in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Your First Contract": {
+    "message": "初めてのコントラクト",
+    "description": "The label for category Your First Contract in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run A Node": {
+    "message": "ノードの実行",
+    "description": "The label for category Run A Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run an Archive Node": {
+    "message": "アーカイブノードの実行",
+    "description": "The label for category Run an Archive Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Run a Collator Node": {
+    "message": "Collator ノードの実行",
+    "description": "The label for category Run a Collator Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Secure Setup Guide": {
+    "message": "セキュアなセットアップガイド",
+    "description": "The label for category Secure Setup Guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integrate Toolings": {
+    "message": "連携ツール",
+    "description": "The label for category Integrate Toolings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Bridges": {
+    "message": "ブリッジ",
+    "description": "The label for category Bridges in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.dApp Listings": {
+    "message": "dApp 一覧",
+    "description": "The label for category dApp Listings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Wallets": {
+    "message": "ウォレット",
+    "description": "The label for category Wallets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ledger": {
+    "message": "Ledger",
+    "description": "The label for category Ledger in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Node Providers": {
+    "message": "ノードプロバイダー",
+    "description": "The label for category Node Providers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Oracles": {
+    "message": "オラクル",
+    "description": "The label for category Oracles in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Cross-Chain Messaging - XCM": {
+    "message": "Cross-Chain Messaging - XCM",
+    "description": "The label for category Cross-Chain Messaging - XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Building with XCM": {
+    "message": "XCMでの構築",
+    "description": "The label for category Building with XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration": {
+    "message": "連携",
+    "description": "The label for category Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Builder Guides": {
+    "message": "ビルダーガイド",
+    "description": "The label for category Builder Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration and Toolings": {
+    "message": "統合とツール",
+    "description": "The label for category Integration and Toolings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Learn": {
+    "message": "Learn",
+    "description": "The label for category Learn in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Interoperability": {
+    "message": "Interoperability",
+    "description": "The label for category Interoperability in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Astar zkEVM": {
+    "message": "Astar zkEVM",
+    "description": "The label for category Astar zkEVM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Use": {
+    "message": "Use",
+    "description": "The label for category Use in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Manage Assets": {
+    "message": "Manage Assets",
+    "description": "The label for category Manage Assets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Manage Wallets": {
+    "message": "Manage Wallets",
+    "description": "The label for category Manage Wallets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Wallet Providers": {
+    "message": "Wallet Providers",
+    "description": "The label for category Wallet Providers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Staking": {
+    "message": "Staking",
+    "description": "The label for category Staking in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.evm-guides": {
+    "message": "evm-guides",
+    "description": "The label for category evm-guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Build": {
+    "message": "Build",
+    "description": "The label for category Build in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Introduction": {
+    "message": "Introduction",
+    "description": "The label for category Introduction in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Build Environment": {
+    "message": "Build Environment",
+    "description": "The label for category Build Environment in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Wasm Smart Contracts": {
+    "message": "Wasm Smart Contracts",
+    "description": "The label for category Wasm Smart Contracts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Swanky Suite": {
+    "message": "Swanky Suite",
+    "description": "The label for category Swanky Suite in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorials": {
+    "message": "Tutorials",
+    "description": "The label for category Tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Your First Flipper Contract": {
+    "message": "Your First Flipper Contract",
+    "description": "The label for category Your First Flipper Contract in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.NFT Contract with PSP34": {
+    "message": "NFT Contract with PSP34",
+    "description": "The label for category NFT Contract with PSP34 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Manic Minter": {
+    "message": "Manic Minter",
+    "description": "The label for category Manic Minter in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Build Uniswap V2 core DEX": {
+    "message": "Build Uniswap V2 core DEX",
+    "description": "The label for category Build Uniswap V2 core DEX in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Structure": {
+    "message": "Structure",
+    "description": "The label for category Structure in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Pair Contract": {
+    "message": "Pair Contract",
+    "description": "The label for category Pair Contract in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Factory Contract": {
+    "message": "Factory Contract",
+    "description": "The label for category Factory Contract in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Contract Environment": {
+    "message": "Contract Environment",
+    "description": "The label for category Contract Environment in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Chain Extensions": {
+    "message": "Chain Extensions",
+    "description": "The label for category Chain Extensions in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Interact": {
+    "message": "Interact",
+    "description": "The label for category Interact in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tools and Libraries": {
+    "message": "Tools and Libraries",
+    "description": "The label for category Tools and Libraries in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.EVM Smart contracts": {
+    "message": "EVM Smart contracts",
+    "description": "The label for category EVM Smart contracts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Developer Tooling": {
+    "message": "Developer Tooling",
+    "description": "The label for category Developer Tooling in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Precompiles": {
+    "message": "Precompiles",
+    "description": "The label for category Precompiles in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.XCM - xTokens": {
+    "message": "XCM - xTokens",
+    "description": "The label for category XCM - xTokens in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.API": {
+    "message": "API",
+    "description": "The label for category API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.GraphQL & Indexers": {
+    "message": "GraphQL & Indexers",
+    "description": "The label for category GraphQL & Indexers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.VRF": {
+    "message": "VRF",
+    "description": "The label for category VRF in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.FAQ": {
+    "message": "FAQ",
+    "description": "The label for category FAQ in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integrations": {
+    "message": "Integrations",
+    "description": "The label for category Integrations in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.How to leverage other Parachains": {
+    "message": "How to leverage other Parachains",
+    "description": "The label for category How to leverage other Parachains in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.XVM and Wasm": {
+    "message": "XVM and Wasm",
+    "description": "The label for category XVM and Wasm in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Use Astar Features": {
+    "message": "Use Astar Features",
+    "description": "The label for category Use Astar Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Astar Hacker Guide": {
+    "message": "Astar Hacker Guide",
+    "description": "The label for category Astar Hacker Guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Astar Beta Labs": {
+    "message": "Astar Beta Labs",
+    "description": "The label for category Astar Beta Labs in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Account Unification": {
+    "message": "Account Unification",
+    "description": "The label for category Account Unification in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.From Zero to ink! Hero": {
+    "message": "From Zero to ink! Hero",
+    "description": "The label for category From Zero to ink! Hero in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Migrating from Web2 to Web3": {
+    "message": "Migrating from Web2 to Web3",
+    "description": "The label for category Migrating from Web2 to Web3 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tokenomics 2.0": {
+    "message": "Tokenomics 2.0",
+    "description": "The label for category Tokenomics 2.0 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.EVM Guides": {
+    "message": "EVM Guides",
+    "description": "The label for category EVM Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.ChainIDE for Astar WASM": {
+    "message": "ChainIDE for Astar WASM",
+    "description": "The label for category ChainIDE for Astar WASM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.ChainIDE for Astar EVM": {
+    "message": "ChainIDE for Astar EVM",
+    "description": "The label for category ChainIDE for Astar EVM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Account Abstraction": {
+    "message": "Account Abstraction",
+    "description": "The label for category Account Abstraction in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Biconomy Account Abstraction SDK": {
+    "message": "Biconomy Account Abstraction SDK",
+    "description": "The label for category Biconomy Account Abstraction SDK in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Smart Contracts": {
+    "message": "Smart Contracts",
+    "description": "The label for category Smart Contracts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.zkNode": {
+    "message": "zkNode",
+    "description": "The label for category zkNode in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Web3Auth": {
+    "message": "Web3Auth",
+    "description": "The label for category Web3Auth in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Relayers": {
+    "message": "Relayers",
+    "description": "The label for category Relayers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Automation & Off-Chain Data": {
+    "message": "Automation & Off-Chain Data",
+    "description": "The label for category Automation & Off-Chain Data in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Bridges & Relays": {
+    "message": "Bridges & Relays",
+    "description": "The label for category Bridges & Relays in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Indexers": {
+    "message": "Indexers",
+    "description": "The label for category Indexers in sidebar tutorialSidebar"
+  }
+}

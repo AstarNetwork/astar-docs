@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "Astar ドキュメント",
+    "description": "The title in the navbar"
+  },
+  "item.label.Docs": {
+    "message": "ドキュメント",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Medium": {
+    "message": "Medium",
+    "description": "Navbar item with label Medium"
+  },
+  "item.label.Youtube": {
+    "message": "Youtube",
+    "description": "Navbar item with label Youtube"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "logo.alt": {
+    "message": "Astar",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Start Building": {
+    "message": "Start Building",
+    "description": "Navbar item with label Start Building"
+  },
+  "item.label.zkEVM": {
+    "message": "zkEVM",
+    "description": "Navbar item with label zkEVM"
+  }
+}
