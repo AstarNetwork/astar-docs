@@ -65,6 +65,8 @@ Next, start the GraphQL server in a separate terminal with:
 sqd serve
 ```
 
+[http://localhost:4350/graphql](http://localhost:4350/graphql)
+
 ## Develop
 
 ### Types
