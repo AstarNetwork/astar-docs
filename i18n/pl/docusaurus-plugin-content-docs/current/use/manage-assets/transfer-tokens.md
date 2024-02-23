@@ -8,21 +8,15 @@ sidebar_position: 4
 
 <br />
 
-- [Astarのアカウント(Native と EVM)を作成](#create-astar-accountsnative-and-evm)
-
-- [中央主権型取引所（CEX）から Astar Network にASTR/SDNを送信](#sending-astrsdn-to-astar-network-from-central-exchanges)
-
-- [Astar Network から中央主権型取引所（CEX）にASTR/SDNを送信](#sending-astrsdn-to-central-exchanges-from-astar-network)
-
-- [Astar Native から Astar EVM にASTR/SDNを送信](#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)
-
-- [Astar EVM から Astar Native にASTR/SDNを送信](#sending-astrsdn-to-astar-native-from-astar-evm)
-
-- [クロスチェーン転送（XCM）](#cross-chain-transferxcm)
-
-- [クロスチェーン（XCM）資産を Astar Network に転送](#transferring-cross-chainxcm-assets-into-astar-network)
-
-- [Astar Network から他のチェーンにクロスチェーン（XCM）資産を転送](#transferring-cross-chainxcm-assets-to-other-chains-from-astar-network)
+- [トークンを転送する方法](#トークンを転送する方法)
+  - [Astarのアカウント(Native と EVM)を作成](#astarのアカウントnative-と-evmを作成)
+  - [中央取引所から Astar Network にASTR/SDNを送信](#中央取引所から-astar-network-にastrsdnを送信)
+  - [Astar Network から中央主権型取引所（CEX）にASTR/SDNを送信](#astar-network-から中央主権型取引所cexにastrsdnを送信)
+  - [Astar Native から Astar EVM にASTR/SDNを送信（またはアカウント内の任意のトークン）](#astar-native-から-astar-evm-にastrsdnを送信またはアカウント内の任意のトークン)
+  - [Astar EVM から Astar Native にASTR/SDNを送信](#astar-evm-から-astar-native-にastrsdnを送信)
+  - [クロスチェーン転送（XCM）](#クロスチェーン転送xcm)
+  - [クロスチェーン（XCM）資産を Astar Network に転送](#クロスチェーンxcm資産を-astar-network-に転送)
+  - [Astar Network から他のチェーンにクロスチェーン（XCM）資産を転送](#astar-network-から他のチェーンにクロスチェーンxcm資産を転送)
 
 <br />
 
@@ -33,9 +27,9 @@ Astarは異なるフォーマットで2つのアドレスを持っています�
 - Astar Native アドレスー dApps Staking やWASMプロジェクトと連携するためのアドレス
 - Astar EVM アドレスー EVMプロジェクトと連携するためのアドレス
 
-あなたが Astar Native アカウントを作成する必要がある場合は、[こちらのページ](/i18n/ja/docusaurus-plugin-content-docs/current/use/manage-wallets/create-wallet.md) でアカウントを作成することができます。
+あなたが Astar Native アカウントを作成する必要がある場合は、[こちらのページ](/i18n/pl/docusaurus-plugin-content-docs/current/use/manage-wallets/create-wallet.md) でアカウントを作成することができます。
 
-もし、MetamaskにAstar Network を追加していない場合は、とてもシンプルです ー [Portal](https://portal.astar.network/) に行き、Metamaskを選択してください。 Metamaskは、Astar Network の追加許可を求めてくるでしょう。 別の方法や、ネットワーク追加の詳細については、 [こちら](/i18n/ja/docusaurus-plugin-content-docs/current/use/evm-guides/setup-metamask.md) を参照してください。
+もし、MetamaskにAstar Network を追加していない場合は、とてもシンプルです ー [Portal](https://portal.astar.network/) に行き、Metamaskを選択してください。 Metamaskは、Astar Network の追加許可を求めてくるでしょう。 別の方法や、ネットワーク追加の詳細については、 [こちら](/i18n/pl/docusaurus-plugin-content-docs/current/use/evm-guides/setup-metamask.md) を参照してください。
 
 <br />
 
@@ -61,7 +55,7 @@ Astar(EVM)をサポートするGate.ioを除き、ほとんどの取引所はAst
 
 <img width="1000" alt="network" src="https://user-images.githubusercontent.com/77480847/188528854-79fd1c65-52e1-4289-ba1c-e3e0f00d8b1d.png" />
 
-3. Poladot.js ウォレットを接続してください ー まだ完了していない場合は、 [Astar アカウントを作成](/i18n/ja/docusaurus-plugin-content-docs/current/use/manage-wallets/create-wallet.md) に戻ってください。
+3. Poladot.js ウォレットを接続してください ー まだ完了していない場合は、 [Astar アカウントを作成](/i18n/pl/docusaurus-plugin-content-docs/current/use/manage-wallets/create-wallet.md) に戻ってください。
 
 <img width="1000" alt="wallet" src="https://user-images.githubusercontent.com/77480847/188529014-3309a569-8ceb-4fc0-b12b-7bf44316f592.png" />　
 
