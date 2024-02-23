@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "Astar ドキュメント",
+    "message": "Dokumentacja Astar",
     "description": "The title in the navbar"
   },
   "item.label.Docs": {
-    "message": "ドキュメント",
+    "message": "Dokumentacja",
     "description": "Navbar item with label Docs"
   },
   "item.label.Medium": {

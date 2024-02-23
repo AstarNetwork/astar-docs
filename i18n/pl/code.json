@@ -9,43 +9,43 @@
 		"message": "Buduj własne aplikacje"
 	},
 	"Find all the resources you need to start testing, deploying, and interacting with smart contracts on Astar networks.": {
-		"message": "テスト、デプロイ、Astar Network上のスマートコントラクトとのやりとりに必要な情報を全てお伝えいたします。"
+		"message": "Znajdź wszystkie informacje, których potrzebujesz, aby rozpocząć testowanie, wdrażanie i interakcję z inteligentnymi kontraktami na sieci."
 	},
 	"Build on Astar zkEVM": {
-		"message": "Astar zkEVM上での開発"
+		"message": "Buduj na Astar zkEVM"
 	},
 	"Jump right into building on Astar zkEVM the Layer 2 scaling solution for Ethereum, powered by Polygon CDK.": {
-		"message": "Polygon CDKの技術提供を受けたAstar zkEVM Layer2 スケーリングソリューション for Ethereum上での開発に今すぐ取り組みましょう。"
+		"message": "Przejdź od razu do budowy na Astar zkEVM, rozwiązaniu skalowalności warstwy 2 dla Ethereum, opartym na Polygon CDK."
 	},
 	"dApp Staking": {
 		"message": "dApp Staking"
 	},
 	"Earn tokens for yourself and your dApp by staking tokens and registering your dApp with Astar’s dApp Staking.": {
-		"message": "AstarのdApp StakingにdAppを登録して、トークンをステーキングすることであなた自身とあなたのdAppのためにトークンを獲得できます。"
+		"message": "Zarabiaj tokeny dla siebie i swojej dApp, stawiając tokeny i rejestrując swoją dApp w Stakingu dApp Astar."
 	},
 	"Run A Node": {
-		"message": "ノードの実行"
+		"message": "Uruchom węzeł"
 	},
 	"Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.": {
-		"message": "フルノード、コレーター、インデクサーの実行方法をはじめとする、インフラストラクチャーに関して知っておくべきことをここで説明します。"
+		"message": "Wyjaśnij, jak uruchomić pełne węzły, collators, indeksatory i wszystko, co musisz wiedzieć związane z infrastrukturą."
 	},
 	"Learn Cross-Chain Message (XCM)": {
-		"message": "Cross-Chain Message (XCM) を学ぶ"
+		"message": "Dowiedz się o Cross-Chain Message (XCM)"
 	},
 	"Explains how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.": {
-		"message": "XCMがどのようにしてAstar上で用いられているか、また開発者はどのようにしてXCMを他のPolkadotネットワークと相互作用するために使うことができるかを説明します。"
+		"message": "Wyjaśnia, jak XCM jest używane w Astar i jak programiści mogą go używać do współpracy z resztą sieci Polkadot."
 	},
 	"Integrate Toolings": {
-		"message": "連携ツール"
+		"message": "Zintegruj narzędzia"
 	},
 	"Contains relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network.": {
-		"message": "networkに組み込まれているウォレット、ブリッジ、インデクサー、オラクルに関する情報をご提供します。"
+		"message": "Zawiera istotne informacje na temat portfeli, mostów, indeksatorów i orakul, które są zintegrowane z siecią."
 	},
 	"User Guides": {
-		"message": "ユーザーガイド"
+		"message": "Przewodniki dla użytkownika"
 	},
 	"Learn how to create different types of wallets, obtain tokens, and manage your assets.": {
-		"message": "様々な種類のウォレットの作成方法、トークンの入手方法、資産の管理方法などをご紹介します。"
+		"message": "Dowiedz się, jak tworzyć różne rodzaje portfeli, zdobywać tokeny i zarządzać swoimi aktywami."
 	},
 	"theme.ErrorPageContent.title": {
 		"message": "ページがクラッシュしました。",
