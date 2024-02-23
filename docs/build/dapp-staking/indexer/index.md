@@ -14,26 +14,29 @@ The API is available as a complimentary endpoint for developers with restricted 
 
 ## Available endpoints
 
-| Data                                                   | Endpoint, start with `/api/v3/{network}/dapps-staking` |
-| ------------------------------------------------------ | ------------------------------------------------------ |
-| List of dapps registed for staking                     | `/chaindapps`                                          |
-| TVL for a given network and period                     | `/tvl/{period}`                                        |
-| List of stakers per dapp with total stake              | `/stakerslist/{contractAddress}`                       |
-| Stakers count for a given network for a dapp by period | `/stakerscount/{contractAddress}/{period}`             |
-| Total stakers count for a given network and period     | `/stakerscount-total/{period}`                         |
-| All reward events by type (optional) and network       | `/rewards/{period}/?transaction=BonusReward,Reward`    |
-| Aggregated daily rewards by staker or dapp by period   | `/rewards-aggregated/{address}/{period}`               |
-| Stake amount for one participant                       | `/stake-info/{address}`                                |
+| Data                                                           | Endpoint, start with `/api/v3/{network}/dapps-staking` |
+| -------------------------------------------------------------- | ------------------------------------------------------ |
+| List of dapps registed for staking                             | `/chaindapps`                                          |
+| TVL for a given network and period                             | `/tvl/{period}`                                        |
+| List of stakers per dapp with total stake                      | `/stakerslist/{contractAddress}`                       |
+| Stakers count for a given network for a dapp by period         | `/stakerscount/{contractAddress}/{period}`             |
+| Total stakers count for a given network and period             | `/stakerscount-total/{period}`                         |
+| Total stakers count and amount by network and period           | `/stakers-total/{period}`                              |
+| Total lockers count and amount by network and period           | `/lockers-total/{period}`                              |
+| Total lockers & stakers count and amount by network and period | `/lockers-and-stakers-total/{period}`                  |
+| All reward events by type (optional) and network               | `/rewards/{period}/?transaction=BonusReward,Reward`    |
+| Aggregated daily rewards by staker or dapp by period           | `/rewards-aggregated/{address}/{period}`               |
+| Stake amount for one participant                               | `/stake-info/{address}`                                |
 
 ## The Indexer
 
-The indexer is accessible from a [GraphQL Explorer UI](https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql).
+The indexer is accessible from a [GraphQL Explorer UI](https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql)
 
-|        |                                                                      |
-| ------ | -------------------------------------------------------------------- |
-| UI     | https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql |
-| API    | https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql |
-| Github | https://github.com/AstarNetwork/dapps-staking-indexer-v3             |
+|        |                                                                   |
+| ------ | ----------------------------------------------------------------- |
+| UI     | https://squid.subsquid.io/dapps-staking-indexer-{network}/graphql |
+| API    | https://squid.subsquid.io/dapps-staking-indexer-{network}/graphql |
+| Github | https://github.com/AstarNetwork/dapps-staking-indexer-v3          |
 
 ### Available indexes
 
@@ -48,8 +51,9 @@ The indexer is accessible from a [GraphQL Explorer UI](https://squid.subsquid.io
 | stakersCount                  | total                                                                                                                                 |
 | stakersCountAggregatedDailies | blockNumber, id, stakersCount, stakersAmount                                                                                          |
 | subperiods                    | blockNumber, id, timestamp, type                                                                                                      |
-| tvlAggregatedDailies          | blockNumber, id, tvl                                                                                                                  |
+| tvlAggregatedDailies          | blockNumber, id, tvl, lockersCount                                                                                                    |
 | uniqueStakerAddresses         | id                                                                                                                                    |
+| uniqueLockerAddresses         | id                                                                                                                                    |
 
 ## Coding Examples
 
@@ -58,14 +62,16 @@ To obtain data from the API, you can use a GET request like this:
 ```js
 async function getData() {
   try {
-    const response = await fetch('https://api.astar.network/api/v3/shibuya/dapps-staking/chaindapps');
+    const response = await fetch(
+      "https://api.astar.network/api/v3/shibuya/dapps-staking/chaindapps"
+    );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('There was a problem fetching the data: ', error);
+    console.error("There was a problem fetching the data: ", error);
   }
 }
 ```
@@ -75,7 +81,8 @@ To get data from the indexer directly in case the enpoint you want to use does n
 ```js
 async function tvlDaily() {
   const response = await fetch(
-    "https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql", {
+    "https://squid.subsquid.io/dapps-staking-indexer-shibuya/graphql",
+    {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -89,7 +96,7 @@ async function tvlDaily() {
           }
         `,
       }),
-      next: { revalidate: 10 }
+      next: { revalidate: 10 },
     }
   );
   const { data } = await response.json();
@@ -113,4 +120,4 @@ import Iframe from 'react-iframe';
 />
 ```
 
-You can also look into [this repo](https://github.com/AstarNetwork/dapps-staking-v3-indexer-and-api-demo-ui) and clone and run it:  
+You can also look into [this repo](https://github.com/AstarNetwork/dapps-staking-v3-indexer-and-api-demo-ui) and clone and run it:
