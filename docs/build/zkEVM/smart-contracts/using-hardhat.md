@@ -23,9 +23,9 @@ To create the sample project, run `npx hardhat init` in your project folder:
 <Figure src={require('/docs/build/zkEVM/smart-contracts/img/hardhat-init.png').default} width="100%" />
 
 - **Press** `<ENTER>` choose javascript, typescript or empty project
-- **Press** `<ENTER>` to set the project root 
+- **Press** `<ENTER>` to set the project root
 - **Press** `<ENTER>` again to accept addition of `.gitignore`
-- **Press** `<ENTER>` to install `hardhat @nomicfoundation/hardhat-toolbox` 
+- **Press** `<ENTER>` to install `hardhat @nomicfoundation/hardhat-toolbox`
 
 ## Create deployer account
 - Create the `.env` file in your project root folder and add the following line:
@@ -75,6 +75,10 @@ Verify that your .gitignore file contains `.env` to prevent your private key fro
             url: `https://rpc.zkatana.gelato.digital`,
             accounts: [process.env.ACCOUNT_PRIVATE_KEY],
             },
+            astarZkEvm: {
+            url: `https://rpc.startale.com/astar-zkevm`,
+            accounts: [process.env.ACCOUNT_PRIVATE_KEY],
+            },
         },
     };
 ```
@@ -99,6 +103,10 @@ Verify that your .gitignore file contains `.env` to prevent your private key fro
             zKatana: {
             url: `https://rpc.zkatana.gelato.digital`,
             accounts: [ACCOUNT_PRIVATE_KEY]
+            },
+            astarZkEvm: {
+            url: `https://rpc.startale.com/astar-zkevm`,
+            accounts: [process.env.ACCOUNT_PRIVATE_KEY],
             },
         },
     };

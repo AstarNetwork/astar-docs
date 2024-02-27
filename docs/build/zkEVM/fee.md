@@ -30,9 +30,36 @@ curl https://rpc.zkatana.gelato.digital/ \
   The result is the hex value of the gas price in wei.
 
 ## Use Blockscout Price Oracle
-Blockscout Price Oracle calculates the gas price from the average of previous blocks. It doesn't call `eth_gasPrice`. 
+Blockscout Price Oracle calculates the gas price from the average of previous blocks. It doesn't call `eth_gasPrice`.
+
 <Tabs>
-<TabItem value="testnet" label="zKatana testnet" default>
+<TabItem value="Mainnet" label="Astar zkEVM" default>
+
+Send a GET request to the [Blockscout Price Oracle endpoint](https://astar-zkevm.explorer.startale.com/api/v1/gas-price-oracle) to get a gas price recommendation from this oracle.
+
+#### cURL
+
+```bash
+curl https://astar-zkevm.explorer.startale.com/api/v1/gas-price-oracle
+```
+
+#### JavaScript
+
+```javascript
+fetch('https://astar-zkevm.explorer.startale.com/api/v1/gas-price-oracle')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
+
+#### Python
+
+```python
+import requests
+requests.get('https://astar-zkevm.explorer.startale.com/api/v1/gas-price-oracle').json()
+```
+</TabItem>
+
+<TabItem value="testnet" label="zKatana testnet">
 
 Send a GET request to the [Blockscout Price Oracle endpoint](https://zkatana.blockscout.com/api/v1/gas-price-oracle) to get a gas price recommendation from this oracle.
 
@@ -56,10 +83,6 @@ fetch('https://zkatana.blockscout.com/api/v1/gas-price-oracle')
 import requests
 requests.get('https://zkatana.blockscout.com/api/v1/gas-price-oracle').json()
 ```
-
-</TabItem>
-<TabItem value="Mainnet" label="Astar zkEVM">
-coming soon...
 </TabItem>
 
 </Tabs>
@@ -70,9 +93,9 @@ An example JSON response from Blockscout Price Oracle will look like this:
 
 ```json
 {
-    "average":0.02,
-    "fast":0.02,
-    "slow":0.02,
+    "average":3.02,
+    "fast":3.02,
+    "slow":3.02,
 }
 ```
 

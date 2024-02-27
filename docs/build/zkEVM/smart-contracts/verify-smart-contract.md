@@ -7,7 +7,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Figure from '/src/components/figure'
 
-Once a smart contract is deployed to zKatana testnet, it can be verified in various ways depending on the framework of deployment as well as the complexity of the contract. The aim here is to use examples to illustrate how you can manually verify a deployed smart contract. 
+Once a smart contract is deployed to zKatana testnet, it can be verified in various ways depending on the framework of deployment as well as the complexity of the contract. The aim here is to use examples to illustrate how you can manually verify a deployed smart contract.
 
 Ensure that your wallet is connected while following this guide. We will use Metamask wallet throughout this tutorial.
 For detailed explanation on how to verify smart contracts, please refer to the [Blockscout documentation](https://docs.blockscout.com/for-developers/verify-contracts).
@@ -16,9 +16,9 @@ For detailed explanation on how to verify smart contracts, please refer to the [
 
 After successfully compiling a smart contract, follow the next steps to verify your smart contract.
 
-1. Copy the **Address** to which the smart contract is deployed. 
+1. Copy the **Address** to which the smart contract is deployed.
 
-2. Navigate to the [zKatana Explorer](https://zkatana.blockscout.com) and paste the contract address into the Search box. This opens a window with a box labelled **Contract Details**.
+2. Navigate to the [block Explorer](docs/build/zkEVM/quickstart.md) and paste the contract address into the Search box. This opens a window with a box labelled **Contract Details**.
 
 3. Scroll down to the box with tabs labelled - **Transactions**, **Token transfers** **Internal txns**, **Coin Balance History**, and **Contract**.
 
@@ -30,10 +30,10 @@ After successfully compiling a smart contract, follow the next steps to verify y
 
 ### Solidity, Flattened Source Code
 
-1. Click **Next** after selecting the **via Flattened Source Code** option. 
-2. In order to update the **Compiler** based on your contract's compiler version, 
+1. Click **Next** after selecting the **via Flattened Source Code** option.
+2. In order to update the **Compiler** based on your contract's compiler version,
 
-    - Click the &#8595; for a list of compiler versions. 
+    - Click the &#8595; for a list of compiler versions.
 
     - Select the corresponding version. For example, select `v0.8.9+commit.e5eed63a` if your code has `pragma solidity ^0.8.9;`.
 3. Select the Optimization option based on your contract's optimization settings.
@@ -47,7 +47,7 @@ In order to flatten the contract code with Hardhat, one needs to only run the fo
 npx hardhat flatten
 ```
 The result will be printed to stdout. You can create a file with the flattened sources using the `>` redirection operator:
-    
+
 ```bash
 npx hardhat flatten > flattened.sol
 ```
@@ -63,7 +63,7 @@ After selecting **Flatten**, a new `.sol` file with the suffix `_flatten.sol` is
 </TabItem>
 
 <TabItem value="foundry" label="Foundry">
-In order to flatten the code using Foundry, the following command can be used: 
+In order to flatten the code using Foundry, the following command can be used:
 
 ```bash
 forge flatten src/<Contract-Name> -o <Any-Name-For-Flattened-Code>.sol
@@ -80,9 +80,9 @@ Select the Optimization option based on your contract's optimization settings.
 
 Click **Next** after selecting the **via Standard JSON Input** option.
 
-1. In order to update the **Compiler** based on your contract's compiler version, 
+1. In order to update the **Compiler** based on your contract's compiler version,
 
-    - Click the &#8595; for a list of compiler versions. 
+    - Click the &#8595; for a list of compiler versions.
 
     - Select the corresponding version. For example, select `v0.8.9+commit.e5eed63a` if your code has `pragma solidity ^0.8.9;`.
 

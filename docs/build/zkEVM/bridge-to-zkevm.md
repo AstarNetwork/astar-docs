@@ -15,14 +15,14 @@ import walletselect from '/docs/build/zkEVM/img/wallet-select.jpg'
 
 ## Overview
 
-Here you will find information about how to bridge assets to the Astar zkEVM. Presently, there are two options for bridging assets to the zkEVM: 
+Here you will find information about how to bridge assets to the Astar zkEVM, both to **zKatana testnet** and to **Astar zkEVM mainnet**. Presently, there are two options for bridging assets to the zkEVM:
 
 1. Ethereum L1 to Astar zkEVM -> Bridged ETH is the native token required for testing and deployment of dApps on the Astar zkEVM, so before using the network, developers need to bridge some ETH from Layer 1 to Layer 2. Accessible through the Astar Portal, which can take approximately 10-30 minutes, depending on network usage.
 2. _Astar Parachain to Astar zkEVM (currently under development) -> A 3rd-party asset bridge or message network facilitating locking and minting of synthetic (wrapped) assets between Astar Substrate EVM and Astar zkEVM. See the [integrations section](/docs/build/zkEVM/integrations/bridges-relays/) for more information about how to use 3rd-party bridge services and compatible assets._
 
 ### Transfer ETH using the Astar Portal
 
-Visit the [Astar Portal](https://portal.astar.network) and connect MetaMask. 
+Visit the [Astar Portal](https://portal.astar.network) and connect MetaMask. This example is for the testnet but same applies for the mainnet.
 
 
 <div style={{textAlign: 'center'}}>
@@ -38,7 +38,7 @@ Use the network selector and switch to zKatana network, or allow MetaMask to swi
   </div>
 
 
-Click on the Bridge tab on the left-hand side. Ensure Sepolia is selected as Bridge source, and zKatana is selected as destination. After you have entered the amount of ETH to transfer, press the Confirm button. 
+Click on the Bridge tab on the left-hand side. Ensure Sepolia is selected as Bridge source, and zKatana is selected as destination. After you have entered the amount of ETH to transfer, press the Confirm button.
 
 
 <div style={{textAlign: 'center'}}>
@@ -46,7 +46,7 @@ Click on the Bridge tab on the left-hand side. Ensure Sepolia is selected as Bri
   </div>
 
 
-Sign the MetaMask transaction. 
+Sign the MetaMask transaction.
 
 :::note
 Once the transaction shows as confirmed on the MetaMask Activity tab, it will take approximately 5-10 minutes for the Astar Portal and MetaMask to update your balance on the zKatana network side.
