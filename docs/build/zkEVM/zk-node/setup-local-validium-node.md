@@ -1,4 +1,4 @@
-conta---
+---
 sidebar_position: 1
 title: Setup Local Validium Node
 sidebar_label: Setup Local Validium Node
@@ -157,11 +157,11 @@ zkevm-bridge-ui                  /bin/sh /app/scripts/deploy.sh   Up            
 
 If a service isn’t running (i.e. it is in `Exit 1` state), investigate further using the logs:
 ```bash
-sudo docker compose logs \<container_name>
+sudo docker compose logs <container_name>
 ```
 :::info
 
-Find the **<container_name>** in the docker command output.
+Find the **\<container_name>** in the docker command output.
 
 :::
 
