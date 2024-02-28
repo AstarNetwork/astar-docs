@@ -20,20 +20,25 @@ Solidity developers are right at home on Astar zkEVM. Simply switch to the zkEVM
 No special tools or wallets are required to build or interact with Astar zkEVM.
 :::
 
-Developers can deploy existing contracts from other EVM chains to the zkEVM, and users are able to deposit assets from Ethereum to transact on the zkEVM in batches, which are ultimately finalized through novel use of zero-knowledge proofs. Native account abstraction means developers can craft user interfaces that are more intuitive and web2-like, that eliminate complexity and drastically simplify the onboarding process. 
+Developers can deploy existing contracts from other EVM chains to the zkEVM, and users are able to deposit assets from Ethereum to transact on the zkEVM in batches, which are ultimately finalized through novel use of zero-knowledge proofs. Native account abstraction means developers can craft user interfaces that are more intuitive and web2-like, that eliminate complexity and drastically simplify the onboarding process.
 
 ## Connecting to zkEVM
 
 :::info Reminder
-**Astar zKatana testnet and its related documentation are under active development.** 
+**Astar zKatana testnet and its related documentation are under active development.**
 
 All feedback is welcome and highly appreciated, so please report errors or inconsistencies to a team member or as an issue on the [Astar Docs Github repo](https://github.com/AstarNetwork/astar-docs/issues), thank you.
 :::
 
 To add the **Astar zkEVM** network to your wallet manually, enter the following details :
 <Tabs>
-<TabItem value="testnet" label="zKatana Testnet" default>
+<TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
+| RPC URL | ChainID | Block Explorer URL | Currency |
+| ------------------------------- | ---------------- | ---------------- | ----- |
+| `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** | []
+</TabItem>
 
+<TabItem value="testnet" label="zKatana Testnet">
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/zkatana` | `1261120` | [https://zkatana.explorer.startale.com/](https://zkatana.explorer.startale.com/) | **ETH** |
@@ -41,19 +46,13 @@ To add the **Astar zkEVM** network to your wallet manually, enter the following 
 | `https://astar-zkatana-rpc.dwellir.com` | `1261120` | | **ETH** |
 </TabItem>
 
-<TabItem value="mainnet" label="Astar zkEVM Mainnet" disabled>
-
-| RPC URL | ChainID | Block Explorer URL | Currency |
-| ------------------------------- | ---------------- | ---------------- | ----- |
-| `coming soon...` | `-` | `-` | **ETH** |
-</TabItem>
 </Tabs>
 
 To add the network to MetaMask, use the data above or the link at the bottom of the respective block explorer page.
 
 ## Bridging Assets
 
-The next step is to [bridge assets](/docs/build/zkEVM/bridge-to-zkevm.md) from Ethereum &rarr; Astar zkEVM. 
+The next step is to [bridge assets](/docs/build/zkEVM/bridge-to-zkevm.md) from Ethereum &rarr; Astar zkEVM.
 
 :::important
 Astar's canonical [zkEVM Bridge](https://portal.astar.network) does not inherit any counterparty risk compared to 3rd party bridge services, and is trustless at the protocol level.
@@ -65,7 +64,7 @@ The development experience on zkEVM is seamless and identical to the Ethereum Vi
 
 ## Astar zkEVM Support for Developers
 
-Developers requiring support can open an issue on [Ethereum StackExchange](https://ethereum.stackexchange.com/) and tag it with `Astar` (preferred) or join the [Astar Discord server](https://discord.gg/astarnetwork). 
+Developers requiring support can open an issue on [Ethereum StackExchange](https://ethereum.stackexchange.com/) and tag it with `Astar` (preferred) or join the [Astar Discord server](https://discord.gg/astarnetwork).
 
 <details>
 <summary>Ethereum StackExchange</summary>
