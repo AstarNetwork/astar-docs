@@ -22,8 +22,11 @@ Here you will find information about how to bridge assets to the Astar zkEVM, bo
 
 ### Transfer ETH using the Astar Portal
 
-Visit the [Astar Portal](https://portal.astar.network) and connect your wallet. This example is using MetaMask wallet and examples are with for the testnet but same applies for the mainnet.
+Visit the [Astar Portal](https://portal.astar.network) and connect your wallet.
 
+:::note
+This example is using MetaMask wallet and examples are with for the testnet but same applies for the mainnet.
+:::
 
 <div style={{textAlign: 'center'}}>
   <img src={walletselect} style={{width: 400}} />
