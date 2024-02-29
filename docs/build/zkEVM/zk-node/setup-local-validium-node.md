@@ -64,7 +64,17 @@ The tutorial for current version of the environment requires `go` and `docker` t
 
 - [Go](https://go.dev/doc/install)
 - [Docker and Docker compose](https://docs.docker.com/engine/install/ubuntu/)
+- make tool
 
+```bash
+sudo apt install make
+```
+
+:::note 
+
+This document uses docker compose v2.
+
+:::
 
 ## Clone the repo
 
@@ -102,60 +112,47 @@ You should see the following output:
 <summary>Container status details</summary>
 
 ```bash
-
-             Name                           Command                  State                                   Ports                            
-----------------------------------------------------------------------------------------------------------------------------------------------
-cdk-validium-aggregator          /bin/sh -c /app/cdk-validi ...   Up             0.0.0.0:50081->50081/tcp,:::50081->50081/tcp, 8123/tcp,      
-                                                                                 0.0.0.0:9093->9091/tcp,:::9093->9091/tcp                     
-cdk-validium-approve             /bin/sh -c /app/cdk-validi ...   Exit 0                                                                      
-cdk-validium-data-availability   /bin/sh -c /app/cdk-data-a ...   Up             0.0.0.0:8444->8444/tcp,:::8444->8444/tcp                     
-cdk-validium-data-node-db        docker-entrypoint.sh postg ...   Up (healthy)   0.0.0.0:5444->5432/tcp,:::5444->5432/tcp                     
-cdk-validium-eth-tx-manager      /bin/sh -c /app/cdk-validi ...   Up             8123/tcp, 0.0.0.0:9094->9091/tcp,:::9094->9091/tcp           
-cdk-validium-event-db            docker-entrypoint.sh postg ...   Up             0.0.0.0:5435->5432/tcp,:::5435->5432/tcp                     
-cdk-validium-explorer-json-rpc   /bin/sh -c /app/cdk-validi ...   Up             8123/tcp, 0.0.0.0:8124->8124/tcp,:::8124->8124/tcp,          
-                                                                                 0.0.0.0:8134->8134/tcp,:::8134->8134/tcp                     
-explorer-sig-provider            ./sig-provider-serv ...          Up             0.0.0.0:8151->8050/tcp        
-visualizer-proxy                 /docker-entrypoint ...           Up             80/tcp, 0.0.0.0:8083->8081/tcp        
-explorer-visualizer              ./visualizer-server ...          Up             0.0.0.0:8152->8050/tcp        
-explorer-smart-contract-verifier ./smart-contract-ve ...          Up             0.0.0.0:8150->8050/tcp        
-explorer-stats-l1                ./stats-server                   Up             0.0.0.0:8153->8050/tcp        
-explorer-stats-db-l1             docker-entrypoint.s ...          Up             0.0.0.0:7433->5432/tcp        
-explorer-frontend-l1             sh -c 'bin/blocksco ...          Up             0.0.0.0:3000->3000/tcp        
-explorer-backend-l1              sh -c 'bin/blocksco ...          Up             0.0.0.0:4000->4000/tcp                   
-explorer-backend-l1-db           docker-entrypoint.sh postg ...   Up             0.0.0.0:5436->5432/tcp                     
-explorer-proxy-l2                /docker-entrypoint ...           Up             0.0.0.0:80->80/tcp, 0.0.0.0:8084->8080/tcp        
-explorer-stats-l2                ./stats-server                   Up             0.0.0.0:8154->8050/tcp        
-explorer-stats-db-l2             docker-entrypoint.s ...          Up             0.0.0.0:7434->5432/tcp        
-explorer-frontend-l2             sh -c 'bin/blocksco ...          Up             0.0.0.0:3001->3000/tcp        
-explorer-backend-l2              sh -c 'bin/blocksco ...          Up             0.0.0.0:4001->4000/tcp                    
-explorer-backend-l2-db           docker-entrypoint.sh postg ...   Up             0.0.0.0:5437->5432/tcp                     
-cdk-validium-json-rpc            /bin/sh -c /app/cdk-validi ...   Up             0.0.0.0:8123->8123/tcp,:::8123->8123/tcp,                    
-                                                                                 0.0.0.0:8133->8133/tcp,:::8133->8133/tcp,                    
-                                                                                 0.0.0.0:9091->9091/tcp,:::9091->9091/tcp                     
-cdk-validium-l2gaspricer         /bin/sh -c /app/cdk-validi ...   Up             8123/tcp                                                     
-cdk-validium-mock-l1-network     geth --http --http.api adm ...   Up             30303/tcp, 30303/udp,                                        
-                                                                                 0.0.0.0:8545->8545/tcp,:::8545->8545/tcp,                    
-                                                                                 0.0.0.0:8546->8546/tcp,:::8546->8546/tcp                     
-cdk-validium-pool-db             docker-entrypoint.sh postg ...   Up             0.0.0.0:5433->5432/tcp,:::5433->5432/tcp                     
-cdk-validium-prover              zkProver -c /usr/src/app/c ...   Up             0.0.0.0:50052->50052/tcp,:::50052->50052/tcp,                
-                                                                                 0.0.0.0:50061->50061/tcp,:::50061->50061/tcp,                
-                                                                                 0.0.0.0:50071->50071/tcp,:::50071->50071/tcp                 
-cdk-validium-sequence-sender     /bin/sh -c /app/cdk-validi ...   Up             8123/tcp                                                     
-cdk-validium-sequencer           /bin/sh -c /app/cdk-validi ...   Up             0.0.0.0:6060->6060/tcp,:::6060->6060/tcp, 8123/tcp,          
-                                                                                 0.0.0.0:9092->9091/tcp,:::9092->9091/tcp                     
-cdk-validium-state-db            docker-entrypoint.sh postg ...   Up             0.0.0.0:5432->5432/tcp,:::5432->5432/tcp                     
-cdk-validium-sync                /bin/sh -c /app/cdk-validi ...   Up             8123/tcp                                                     
-dac-setup-committee              docker-entrypoint.sh npm r ...   Exit 0                                                                      
-zkevm-bridge-db                  docker-entrypoint.sh postg ...   Up             0.0.0.0:5438->5432/tcp,:::5438->5432/tcp                     
-zkevm-bridge-service             /bin/sh -c /app/zkevm-brid ...   Up             0.0.0.0:8080->8080/tcp,:::8080->8080/tcp,                    
-                                                                                 0.0.0.0:9090->9090/tcp,:::9090->9090/tcp                     
-zkevm-bridge-ui                  /bin/sh /app/scripts/deploy.sh   Up             0.0.0.0:8088->80/tcp,:::8088->80/tcp 
-
+$ sudo docker ps --format "table {{.Names}}\t{{.Command}}\t{{.Status}}\t{{.Ports}}"
+NAMES                              COMMAND                  STATUS                    PORTS
+explorer-sig-provider              "./sig-provider-serv…"   Up 11 minutes             0.0.0.0:8151->8050/tcp, :::8151->8050/tcp
+visualizer-proxy                   "/docker-entrypoint.…"   Up 11 minutes             80/tcp, 0.0.0.0:8083->8081/tcp, :::8083->8081/tcp
+explorer-visualizer                "./visualizer-server"    Up 11 minutes             0.0.0.0:8152->8050/tcp, :::8152->8050/tcp
+explorer-smart-contract-verifier   "./smart-contract-ve…"   Up 11 minutes             0.0.0.0:8150->8050/tcp, :::8150->8050/tcp
+explorer-proxy-l2                  "/docker-entrypoint.…"   Up 11 minutes             0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:8084->8080/tcp, :::8084->8080/tcp
+explorer-stats-l2                  "./stats-server"         Up 11 minutes             0.0.0.0:8154->8050/tcp, :::8154->8050/tcp
+explorer-stats-db-l2               "docker-entrypoint.s…"   Up 11 minutes             0.0.0.0:7434->5432/tcp, :::7434->5432/tcp
+explorer-frontend-l2               "./entrypoint.sh nod…"   Up 11 minutes             0.0.0.0:3001->3000/tcp, :::3001->3000/tcp
+explorer-backend-l2                "sh -c 'bin/blocksco…"   Up 11 minutes             0.0.0.0:4001->4000/tcp, :::4001->4000/tcp
+zkevm-explorer-json-rpc            "/bin/sh -c '/app/zk…"   Up 11 minutes             0.0.0.0:8124->8124/tcp, :::8124->8124/tcp, 8123/tcp, 0.0.0.0:8134->8134/tcp, :::8134->8134/tcp
+explorer-backend-l2-db             "docker-entrypoint.s…"   Up 11 minutes             0.0.0.0:5437->5432/tcp, :::5437->5432/tcp
+explorer-proxy-l1                  "/docker-entrypoint.…"   Up 11 minutes             0.0.0.0:81->80/tcp, :::81->80/tcp, 0.0.0.0:8082->8080/tcp, :::8082->8080/tcp
+explorer-stats-l1                  "./stats-server"         Up 12 minutes             0.0.0.0:8153->8050/tcp, :::8153->8050/tcp
+explorer-stats-db-l1               "docker-entrypoint.s…"   Up 12 minutes             0.0.0.0:7433->5432/tcp, :::7433->5432/tcp
+explorer-frontend-l1               "./entrypoint.sh nod…"   Up 12 minutes             0.0.0.0:3000->3000/tcp, :::3000->3000/tcp
+explorer-backend-l1                "sh -c 'bin/blocksco…"   Up 12 minutes             0.0.0.0:4000->4000/tcp, :::4000->4000/tcp
+explorer-backend-l1-db             "docker-entrypoint.s…"   Up 12 minutes             0.0.0.0:5436->5432/tcp, :::5436->5432/tcp
+zkevm-bridge-ui                    "/bin/sh /app/script…"   Up 12 minutes             0.0.0.0:8088->80/tcp, :::8088->80/tcp
+zkevm-bridge-service               "/bin/sh -c '/app/zk…"   Up 12 minutes             0.0.0.0:8080->8080/tcp, :::8080->8080/tcp, 0.0.0.0:9090->9090/tcp, :::9090->9090/tcp
+zkevm-bridge-db                    "docker-entrypoint.s…"   Up 12 minutes             5438/tcp, 0.0.0.0:5438->5432/tcp, :::5438->5432/tcp
+zkevm-json-rpc                     "/bin/sh -c '/app/zk…"   Up 12 minutes             0.0.0.0:8123->8123/tcp, :::8123->8123/tcp, 0.0.0.0:8133->8133/tcp, :::8133->8133/tcp, 0.0.0.0:9091->9091/tcp, :::9091->9091/tcp
+zkevm-aggregator                   "/bin/sh -c '/app/zk…"   Up 12 minutes             8123/tcp, 0.0.0.0:50081->50081/tcp, :::50081->50081/tcp, 0.0.0.0:9093->9091/tcp, :::9093->9091/tcp
+zkevm-l2gaspricer                  "/bin/sh -c '/app/zk…"   Up 12 minutes             8123/tcp
+zkevm-sequence-sender              "/bin/sh -c '/app/zk…"   Up 12 minutes             8123/tcp
+zkevm-sequencer                    "/bin/sh -c '/app/zk…"   Up 12 minutes             0.0.0.0:6060->6060/tcp, :::6060->6060/tcp, 0.0.0.0:6900->6900/tcp, :::6900->6900/tcp, 8123/tcp, 0.0.0.0:9092->9091/tcp, :::9092->9091/tcp
+zkevm-eth-tx-manager               "/bin/sh -c '/app/zk…"   Up 12 minutes             8123/tcp, 0.0.0.0:9094->9091/tcp, :::9094->9091/tcp
+zkevm-sync                         "/bin/sh -c '/app/zk…"   Up 12 minutes             8123/tcp, 0.0.0.0:9095->9091/tcp, :::9095->9091/tcp
+zkevm-prover                       "zkProver -c /usr/sr…"   Up 12 minutes             0.0.0.0:50061->50061/tcp, :::50061->50061/tcp, 0.0.0.0:50071->50071/tcp, :::50071->50071/tcp
+zkevm-data-availability            "/bin/sh -c '/app/cd…"   Up 12 minutes             0.0.0.0:8444->8444/tcp, :::8444->8444/tcp
+zkevm-data-node-db                 "docker-entrypoint.s…"   Up 12 minutes (healthy)   0.0.0.0:5444->5432/tcp, :::5444->5432/tcp
+zkevm-mock-l1-network              "geth --http --http.…"   Up 12 minutes             0.0.0.0:8545-8546->8545-8546/tcp, :::8545-8546->8545-8546/tcp, 30303/tcp, 30303/udp
+zkevm-event-db                     "docker-entrypoint.s…"   Up 12 minutes             0.0.0.0:5435->5432/tcp, :::5435->5432/tcp
+zkevm-pool-db                      "docker-entrypoint.s…"   Up 12 minutes             0.0.0.0:5433->5432/tcp, :::5433->5432/tcp
+zkevm-state-db                     "docker-entrypoint.s…"   Up 12 minutes             0.0.0.0:5432->5432/tcp, :::5432->5432/tcp
 ```
 </details>
 
 
-If a service isn’t running (i.e. it is in `Exit 1` state), investigate further using the logs:
+If a service isn’t running (i.e. it is in **Exit 1** state), investigate further using the logs:
 ```bash
 sudo docker compose logs <container_name>
 ```
