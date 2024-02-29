@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Setup Local Rollup Node
 sidebar_label: Setup Local Rollup Node
 ---
-:::warning 
+:::info 
 
 Rollup version of ZK is used on Astar zKatana environment.
 
