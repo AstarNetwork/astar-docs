@@ -52,9 +52,7 @@ Edit the configuration files to implement your own custom setups.
 
 :::caution
 
-Currently the zkProver does not run on ARM-powered Macs. For Windows users, using WSL/WSL2 is not recommended.
-
-Unfortunately, Apple M1 chips are not supported for now - since some optimizations on the zkProver require specific Intel instructions. This means some non-M1 computers won't work regardless of the OS, for example: AMD.
+CDK does not support ARM-based Macs.
 
 :::
 
@@ -64,17 +62,19 @@ The tutorial for current version of the environment requires `go` and `docker` t
 
 - [Go](https://go.dev/doc/install)
 - [Docker and Docker compose](https://docs.docker.com/engine/install/ubuntu/)
-- make tool
-
-```bash
-sudo apt install make
-```
 
 :::note 
 
 This document uses docker compose v2.
 
 :::
+
+## Install make
+
+Install make on Ubuntu: 
+```bash
+sudo apt install make
+```
 
 ## Clone the repo
 
