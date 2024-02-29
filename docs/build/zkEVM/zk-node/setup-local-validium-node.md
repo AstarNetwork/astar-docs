@@ -107,7 +107,7 @@ To ensure all services are running properly, check the status of each container:
 sudo docker compose ps
 ```
 
-You should see the following output:
+You should see similar to this output:
 <details>
 <summary>Container status details</summary>
 
@@ -211,7 +211,7 @@ Switch to the new network:
 
 :::important
 
-- An account with test funds is available with private key `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`.
+- An account with test funds is available with private key `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`
 - NEVER transfer real assets to the address associated with this private key.
 
 :::
