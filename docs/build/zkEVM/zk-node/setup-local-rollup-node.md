@@ -1,8 +1,13 @@
 ---
 sidebar_position: 1
-title: Setup Local zkNode
-sidebar_label: Setup Local zkNode
+title: Setup Local Rollup Node
+sidebar_label: Setup Local Rollup Node
 ---
+:::info 
+
+Rollup version of ZK is used on Astar zKatana environment.
+
+:::
 
 :::warning
 Due to an open [issue](https://github.com/ethereum/go-ethereum/issues/27274) you may encounter problems running a local node.
@@ -16,7 +21,7 @@ Astar zkEVM has a local development environment setup for this reason. This tuto
 
 Currently the zkProver does not run on ARM-powered Macs. For Windows users, using WSL/WSL2 is not recommended.
 
-Unfortunately, Apple M1 chips are not supported for now - since some optimizations on the zkProver require specific Intel instructions. This means some non-M1 computers won't work regardless of the OS, for example: AMD.
+Unfortunately, Apple M chips are not supported for now - since some optimizations on the zkProver require specific Intel instructions. This means some non-M computers won't work regardless of the OS, for example: AMD.
 
 :::
 
@@ -33,7 +38,10 @@ After completing this tutorial, you will have the following components running:
 
 The tutorial for current version of the environment requires `go`, `docker` and `docker-compose` to be previously installed on your machine. If you don’t have these installed, check out the links provided below:
 
-- [https://go.dev/doc/install](https://go.dev/doc/install)- [https://www.docker.com/get-started](https://www.docker.com/get-started)- [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+- [https://go.dev/doc/install](https://go.dev/doc/install)
+- [https://www.docker.com/get-started](https://www.docker.com/get-started)
+- [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+  
 ### System Requirements
 
 - zkEVM Node: 16GB RAM with 4-core CPU
@@ -144,13 +152,16 @@ To configure your MetaMask to use your local zkEVM environment, follow these ste
 4. Click on **Add Network** button
 5. Fill up the L2 network information
     * **Network Name:** Astar zkEVM - Local
-    * **New RPC URL:** [http://localhost:8123](http://localhost:8123)    * **ChainID:** 1001
+    * **New RPC URL:** [http://localhost:8123](http://localhost:8123)
+    * **ChainID:** 1001
     * **Currency Symbol:** ETH
-    * **Block Explorer URL:** [http://localhost:4000](http://localhost:4000)6. Click on **Save**
+    * **Block Explorer URL:** [http://localhost:4000](http://localhost:4000)
+6. Click on **Save**
 7. Click on **Add Network** button
 8. Fill up the L1 network information
     * **Network Name:** Geth - Local
-    * **New RPC URL:** [http://localhost:8545](http://localhost:8545)    * **ChainID:** 1337
+    * **New RPC URL:** [http://localhost:8545](http://localhost:8545)
+    * **ChainID:** 1337
     * **Currency Symbol:** ETH
 9. Click on **Save**
 
