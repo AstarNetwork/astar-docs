@@ -3,6 +3,11 @@ sidebar_position: 1
 title: Setup Local Rollup Node
 sidebar_label: Setup Local Rollup Node
 ---
+:::warning 
+
+Rollup version of ZK is used on Astar zKatana environment.
+
+:::
 
 :::warning
 Due to an open [issue](https://github.com/ethereum/go-ethereum/issues/27274) you may encounter problems running a local node.
@@ -34,8 +39,9 @@ After completing this tutorial, you will have the following components running:
 The tutorial for current version of the environment requires `go`, `docker` and `docker-compose` to be previously installed on your machine. If you don’t have these installed, check out the links provided below:
 
 - [https://go.dev/doc/install](https://go.dev/doc/install)
-- https://www.docker.com/get-started](https://www.docker.com/get-started)
+- [https://www.docker.com/get-started](https://www.docker.com/get-started)
 - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+  
 ### System Requirements
 
 - zkEVM Node: 16GB RAM with 4-core CPU
