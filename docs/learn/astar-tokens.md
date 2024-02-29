@@ -63,4 +63,4 @@ Shibuya's token is SBY.
 There are ways to get SBY for testing purposes via Faucet on the Astar Portal.
 
 ## Learn more
-Get SBY tokens
+Get [SBY tokens](/docs/build/environment/faucet.md)

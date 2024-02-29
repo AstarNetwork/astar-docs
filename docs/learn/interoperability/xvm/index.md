@@ -74,7 +74,7 @@ EVM and Wasm contracts have a similar interface for XVM calls. The common argume
 - `input`: the encoded call arguments.
 - `value`: the amount of native token to transfer, used for payable calls.
 
-Note that in the context of callee VM, the caller address is always the address of the caller contract, instead of the user address. For instance, Alice calls an EVM smart contract `ContractA` that calls into an ink! contract, within the ink! contract’s call, the `self.env.caller` is `ContractA` address instead of Alice.
+Note that in the context of caller VM, the caller address is always the address of the caller contract, instead of the user address. For instance, Alice calls an EVM smart contract `ContractA` that calls into an ink! contract, within the ink! contract’s call, the `self.env.caller` is `ContractA` address instead of Alice.
 
 #### `input` encoding
 
@@ -86,10 +86,10 @@ For calls to Wasm (`0x1F` as VM Id), the `input` is encoded as: `selector_bytes 
 
 #### Gaps between EVM and Wasm contracts
 
-In the case of calling from EVM to Wasm, to call XVM in EVM, an extra parameter `storage_deposit_limit` is needed. It is required by `pallet-contracts`, to specify the maximum storage deposit to pay storage rent. As mentioned above, as the caller’s address is always a contract address instead of a user, it’s the caller contract’s address that pays for the storage rent. For Solidity contracts that call Wasm contracts via XVM, developers need to make sure the contract has enough balance for the payment, or the call fails. To pass a sufficient `storage_deposit_limit` value, developers need to know how much is required from the callee contract. For instance, they can benchmark the target call and get the limit in worst-case scenario `N`, and pass `2 x N` for margin of safety.
+In the case of calling from EVM to Wasm, to call XVM in EVM, an extra parameter `storage_deposit_limit` is needed. It is required by `pallet-contracts`, to specify the maximum storage deposit to pay storage rent. As mentioned above, as the caller’s address is always a contract address instead of a user, it’s the caller contract’s address that pays for the storage rent. For Solidity contracts that call Wasm contracts via XVM, developers need to make sure the contract has enough balance for the payment, or the call fails. To pass a sufficient `storage_deposit_limit` value, developers need to know how much is required from the caller contract. For instance, they can benchmark the target call and get the limit in worst-case scenario `N`, and pass `2 x N` for margin of safety.
 
 Another worth mentioning gap for payable calls from EVM to Wasm is the concept of *ED(existential deposit)* in `pallet-contracts`. Using the `pallet-balances` in Substrate for payable calls, `pallet-contracts` assumes all addresses, including EVM contracts address, need to meet the minimum balance requirement to keep alive (which is not true as there are no ED requirements in EVM). As mentioned above, the caller address is always the calling contract, for payable calls from EVM to Wasm, developers need to make sure their EVM contract address meets the ED requirement, otherwise, the payable call will fail in Wasm and be reverted.
 
 ### Error handling
 
-The errors incurred in XVM calls bubble up from the callee VM to the caller VM. If an error is returned in either EVM or Wasm, the whole XVM call will be reverted.
+The errors incurred in XVM calls bubble up from the caller VM to the caller VM. If an error is returned in either EVM or Wasm, the whole XVM call will be reverted.
