@@ -26,7 +26,7 @@ import cdk15 from '/docs/build/zkEVM/img/add-cdk-15.png'
 This quick start guide shows you how to set up a CDK validium on your local machine that sets up and runs the following components:
 
 - zkEVM databases: data node, event, explorer L1 and L2, pool, state, and bridge service
-- zkEVM node components: aggregator, approve service, sequencer and sequence sender, sync
+- zkEVM node components: aggregator, approve service, sequencer and sequence sender, synchronizer
 - L1 network (mock)
 - Prover
 - Explorers L1, L2
@@ -37,8 +37,8 @@ This quick start guide shows you how to set up a CDK validium on your local mach
 
 :::note 
 
-- The documentation describes standard deployments.
-- Edit the configuration files to implement your own custom setups.
+The documentation describes standard deployments. 
+Edit the configuration files to implement your own custom setups.
 
 :::
 
@@ -243,6 +243,8 @@ You can also view the transaction details in the block explorer by clicking on t
   <img src={cdk7} style={{width: 1000}} />
 </div>
 
+<br/><br/>
+
 :::warning[Troubleshooting stuck transactions with MetaMask]
 
 If you encounter a stuck transaction, it is likely due to an incorrect nonce setting.
@@ -257,7 +259,7 @@ To resolve this issue, follow the steps below:
 
 :::
 
-## Test the bridge¶
+## Test the bridge
 
 CDK has a native bridge with UI that allows you to transfer funds between the L1 and the L2 validium.
 
@@ -273,7 +275,7 @@ Switch to the L1 network and you will see the previously imported account with ~
 
 Verify the bridge UI by navigating to [localhost:8088](http://localhost:8088/).
 
-Click on Connect a wallet > MetaMask.
+Click on **Connect a wallet > MetaMask**.
 
 :::note 
 
