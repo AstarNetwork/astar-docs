@@ -13,7 +13,7 @@ The following contracts addresses have been established:
 <Tabs>
 <TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
 
-| Contract Name                | Layer            | Contract Address                           |
+| Contract Name                | Network          | Contract Address                           |
 | ---------------------------- | ---------------- | ------------------------------------------ |
 | PolToken                     | L1 (Ethereum)    | 0x455e53cbb86018ac2b8092fdcd39d8444affc3f6 |
 | Verifier                     | L1 (Ethereum)    | 0x1c3a3da552b8662cd69538356b1e7c2e9cc1ebd8 |
@@ -36,3 +36,21 @@ More documentation about the Polygon CDK Validium contracts can be found in the 
 
 TODO - refer to a link in CDK Docs which covers which precompiles are available for CDK
 
+## Astar zkEVM Common Goods Contracts
+
+### Layer Zero Bridge
+<Tabs>
+<TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
+
+| Contract Name                | Network                       | Contract Address                           |
+| ---------------------------- | ------------------------------|------------------------------------------ |
+| LZ Contract 1                | L1 (Astar EVM (Substrate))    | 0x.... |
+| LZ Contract 2                | L1 (Astar EVM (Substrate))    | 0x.... |
+| LZ Contract 3                | L2 (Astar zkEVM)              | 0x.... |
+| LZ Contract 4                | L1 (Astar zkEVM)              | 0x.... |
+</TabItem>
+<TabItem value="testnet" label="zKatana Testnet">
+</TabItem>
+</Tabs>
+
+More documentation about the Layer Zero Bridge can be found in [this section](/docs/build/zkEVM/integrations/bridges-relays/AstarEVM-zkEVM.md) 
