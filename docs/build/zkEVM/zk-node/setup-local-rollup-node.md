@@ -21,7 +21,7 @@ Astar zkEVM has a local development environment setup for this reason. This tuto
 
 Currently the zkProver does not run on ARM-powered Macs. For Windows users, using WSL/WSL2 is not recommended.
 
-Unfortunately, Apple M1 chips are not supported for now - since some optimizations on the zkProver require specific Intel instructions. This means some non-M1 computers won't work regardless of the OS, for example: AMD.
+Unfortunately, Apple M chips are not supported for now - since some optimizations on the zkProver require specific Intel instructions. This means some non-M computers won't work regardless of the OS, for example: AMD.
 
 :::
 
