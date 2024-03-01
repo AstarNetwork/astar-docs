@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
-title: Astar zkEVM 蛇口
-sidebar_label: 蛇口
+title: Astar zkEVM Faucet
+sidebar_label: Faucet
 ---
 import sepolia from '/docs/build/zkEVM/img/metamask-sepolia-select.png'
 import useBaseUrl from '@docusaurus/useBaseUrl';

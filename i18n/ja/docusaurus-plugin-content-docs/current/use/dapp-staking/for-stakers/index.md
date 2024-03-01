@@ -6,9 +6,9 @@ import Figure from "/src/components/figure"
 
 あなたはステークすることが好きですか？ Astar NetworkまたはShiden Networkでお気に入りのプロジェクトを支援したいですか?
 
-[dApp Staking](/docs/learn/dapp-staking/)を探求しましょう。これは、コミュニティがお気に入りのチームを支援するために、ASTRまたはSDNをステーキングすることができるユニークなメカニズムです。dAppにASTRまたはSDNをステーキングすると、ユーザーは革新的なアプリの開発を支援するだけでなく、インフレーションからのステーキング報酬も受け取ることができます。
+Discover [dApp Staking](/docs/learn/dapp-staking/), a unique mechanism that allows communities to support their favorite teams by staking ASTR or SDN with them. When staking ASTR or SDN on a dApp, users not only support the development of innovative apps but also receive staking rewards from inflation.
 
-[dApp Staking](/docs/learn/dapp-staking/)に関する技術文書を読むことで、さらに学びを深めることができます。
+You can educate yourself more by reading the technical documentation about [dApp Staking](/docs/learn/dapp-staking/).
 
 :::tip
 
@@ -65,9 +65,9 @@ Period 中のボーナス報酬は、期間が終了した後にのみ請求す�
 - トークンをロック解除する際には、AstarとShidenの両方にロック解除期間が設けられています。 ロック解除期間の長さは [こちら](/docs/use/dapp-staking/for-stakers/#parameters) で確認することができます。\
   これは完全なブロック生成の時間がおよそ12秒である事に基づいてることに注意してください。 遅延が発生した場合は、ロック解除期間が少し長くなることがあります。
 
-ご質問がある場合は、Learnセクションの[FAQ](/docs/learn/dapp-staking/dapp-staking-faq/)ページをご確認いただくか、[Discord](https://discord.com/invite/astarnetwork)チャンネルにご参加ください。
+In case you have any questions, please check the [FAQ page](/docs/learn/dapp-staking/dapp-staking-faq/) in the Learn section or join our [Discord channel](https://discord.com/invite/astarnetwork).
 
-### 他、興味があるページ:
+### Other pages may be of interest:
 
 <br/>
 
