@@ -45,9 +45,9 @@ TODO - refer to a link in CDK Docs which covers which precompiles are available 
 | Contract Name                | Contract Address                           |
 | ---------------------------- | ------------------------------------------ |
 | Wrapped Ether (WETH)         | 0x.... |
-| LZ Contract 2                | 0x.... |
-| LZ Contract 3                | 0x.... |
-| LZ Contract 4                | 0x.... |
+| wXXXX                        | 0x.... |
+| wYYYY                        | 0x.... |
+| wZZZZ                        | 0x.... |
 </TabItem>
 <TabItem value="testnet" label="zKatana Testnet">
 </TabItem>
