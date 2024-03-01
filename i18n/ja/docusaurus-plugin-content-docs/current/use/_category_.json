@@ -1,0 +1,38 @@
+---
+sidebar_position: 0
+---
+
+# Polkadot.jsでdApp Staking報酬を手動で請求する
+
+Astar PortalでdApp Staking報酬を請求する際に問題がある場合は、Polkadot.jsのウェブサイトで手動で請求することができます。 以下の手順に従ってください。
+
+***
+
+**ステップ 1: あなたがステーキングしているコントラクトアドレスを確認する**
+
+1. [Astar Portal](https://portal.astar.network/)にアクセスし、希望のネットワークに接続してください。
+2. dApp Stakingに移動し、「Re-Stake after claiming」をオフにします。
+3. 「My dApps」に移動します。
+4. あなたがステーキングしているdAppsのリストを見ることができます。
+5. ステーキングしている各dAppの情報に移動し、コントラクトアドレスを見ることができます。
+6. 次のステップの参照としてコントラクトアドレスをメモ帳等に保存しておきます。
+
+***
+
+**ステップ 2: Polkadot.jsで報酬を受け取る**
+
+1. 新しいブラウザタブを開き、[Polkadot.Js web appl](https://polkadot.js.org/apps/#/extrinsics)を開きます。
+2. 正しいチェーン(Astar/Shiden/Shibuya) に接続していることを確認してください。
+3. 正しいウォレットで接続していることを確認してください。
+4. 「Developer 」の「Extrinsics」をクリックします。
+5. 左のドロップダウンメニューで「dappsStaking」を選択します。
+6. 右のドロップダウンメニューで、 「claimStaker」を選択します。
+7. 「EVM: H160」に、あなたがメモ帳に記録していたコントラクトアドレスを貼り付けます。例：「0xaab44542c72f88f7b98fffda418e3efe94bc13af」
+8. 「Submit Transaction」をクリックし、トランザクションにサインをする前にチップを追加します。
+9. 大量の未請求の報酬がある場合は、すべての報酬が請求されるまで何度もこの手順を繰り返す必要があります。
+10. 一度に一つのERAを請求しなければなりません。
+11. すべての報酬を請求した後、Portalに戻って「Re-Stake after claiming」をオンにすることができます。
+
+***
+
+以上です。 上記のいずれを実施しても解決出来ない場合は、 <a href="https://discord.gg/2FGq5KqwBh">Discord</a> にてチームメンバーまたはエコシステムエージェントに連絡してください。

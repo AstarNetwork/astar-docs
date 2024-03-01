@@ -3,7 +3,6 @@ sidebar_position: 1
 title: Writing Smart Contracts using OpenZeppelin Wizard
 sidebar_label: Write A Contract
 ---
-
 import Figure from '/src/components/figure'
 
 This document explains how to automatically write any smart contract using the OpenZeppelin Wizard. The resulting smart contract code can either be integrated with Remix by Clicking the **Open in Remix** button, or copied to clipboard and pasted in the user's intended IDE.

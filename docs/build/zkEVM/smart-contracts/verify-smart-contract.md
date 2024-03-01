@@ -24,7 +24,7 @@ After successfully compiling a smart contract, follow the next steps to verify y
 
 4. Select the **Contract** tab and click the **Verify and Publish** button.
 
-6. There are 3 options to provide the Contract's code. We will be diving into the following two options:
+5. There are 3 options to provide the Contract's code. We will be diving into the following two options:
    - Solidity, Flattened Source Code
    - Solidity, Standard Input JSON
 
@@ -105,4 +105,4 @@ Click **Next** after selecting the **via Standard JSON Input** option.
 
 </details>
 
-3. Click on **Verify & Publish** button to verify your deployed smart contract.
+5. Click on **Verify & Publish** button to verify your deployed smart contract.

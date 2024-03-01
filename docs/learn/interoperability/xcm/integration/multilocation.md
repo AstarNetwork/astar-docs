@@ -18,7 +18,7 @@ You can use these `MultiLocation` values to add Astar native assets to a paracha
 `{ parents: 1, interior: X1(Parachain(2006)) }`
 
 - Name: **Astar**
-- Symbold: **ASTR**
+- Symbol: **ASTR**
 - Decimals: **18**
 - Existential deposit: **1_000_000**
 
@@ -27,7 +27,7 @@ You can use these `MultiLocation` values to add Astar native assets to a paracha
 `{ parents: 1, interior: X1(Parachain(2007)) }`
 
 - Name: **Shiden**
-- Symbold: **SDN**
+- Symbol: **SDN**
 - Decimals: **18**
 - Existential deposit: **1_000_000**
 
