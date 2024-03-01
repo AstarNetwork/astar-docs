@@ -201,7 +201,7 @@ Since we are sending four XCM instructions, the total weight of the *raw* XCM in
 | XCM instructions   | 4_000_000_000               |
 | Total  | 4_886_264_000               |
 
-The total weight is **4_886_264_000** units of `ref_time` and **24_668** of `proof_size`. In oder to maximize the chance of successful execution, we should add a sefety limit of +10% to the total weight. So `ref_time`: **5_374_890_400** and `proof_size`: **27_134**.
+The total weight is **4_886_264_000** units of `ref_time` and **24_668** of `proof_size`. In order to maximize the chance of successful execution, we should add a sefety limit of +10% to the total weight. So `ref_time`: **5_374_890_400** and `proof_size`: **27_134**.
 
 The weight to fee calculated is **4.2998 mASTR**.
 

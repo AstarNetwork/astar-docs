@@ -50,7 +50,7 @@ In the next example we will examie how to wrap an existing ERC20 token into **XC
 
 In this example, the underlying token will be an existing ERC20, called BURRITO. We want to wrap some BURRITOs and make them cross-chain-ready. Using a standard [ERC20Wrapper](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC20Wrapper.sol) token spec from OpenZeppelin will not be enough. Therefore we will need to override some of the ERC20Wrapper functions, and use **XC20+** functions.
 Let's call the newly wrapped token xcBURRITO.
-xcBURRITO takes the address of the underlaying token (BURITTO) and the newly created asset's address as constructor parameters. And we’ll set values for the other required parameters, but notice that we have to include the ERC20Permit constructor call, because xcBURRITO is now a parent of BURITTO.
+xcBURRITO takes the address of the underlaying token (BURRITO) and the newly created asset's address as constructor parameters. And we’ll set values for the other required parameters, but notice that we have to include the ERC20Permit constructor call, because xcBURRITO is now a parent of BURITTO.
 ```Solidity
 constructor(IERC20 burrito)
    ERC20("Wrapped Burrito", "xcBUR")
@@ -63,7 +63,7 @@ Since we can't use ERC20Wrapper out of box we'll override it and use the **XC20+
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Wrapper.sol";
 import "./Burrito.sol";
 
-contract XcBurrito is Xc20Plus, ERC20Wrapper, BURITTO{
+contract XcBurrito is Xc20Plus, ERC20Wrapper, BURRITO{
     constructor(IERC20 burrito)
     Xc20Plus("Wrapped Burrito", "xcBUR")
     ERC20Permit("Wrapped Burrito")

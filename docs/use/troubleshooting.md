@@ -31,8 +31,8 @@ Some of you may be unable to execute certain funtions. Please try these steps.
 5. Use VPN.
 
 ## Unable To Claim Staking Rewards;
-1. If you can't claim the staking rewards on the portal. Visit [HERE](https://docs.astar.network/docs/use/user-guides/manual_claim).
-2. If the transferrable balance in the wallet is too low, you might not be able to claim the staking rewards. Top up your wallet or turn off `auto-restake` and then claim the rewards. Turning off `auto-restake` reduces the amount of transactions therefore reducing the amount of gas needed.
+1. If you can't claim the staking rewards on the portal. Visit [HERE](/docs/use/dapp-staking/for-stakers/manage-dApp-Staking#my-staking-panel).
+2. If the transferrable balance in the wallet is too low, you might not be able to claim the staking rewards. Top up your wallet and then claim the rewards.
 
 ## After signing the transaction, the portal spins indefinitely;
 1. If the portal spins indefinitely after you've signed a transaction, your transferable balance in the wallet is too low to pay for the transaction. 
