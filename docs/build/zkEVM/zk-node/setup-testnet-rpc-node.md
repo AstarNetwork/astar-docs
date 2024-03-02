@@ -1,14 +1,14 @@
 ---
 sidebar_position: 1
-title: Setup Astar zkEVM Permissionless RPC Node
-sidebar_label: Setup zkEVM RPC
+title: Setup Astar zkEVM Testnet Permissionless RPC Node
+sidebar_label: Setup zkEVM Testnet RPC
 ---
 
 ## Overview
 
-Operators can deploy permissionless RPC nodes for **Astar zkEVM**.
+Operators can deploy permissionless RPC nodes for **Astar zkEVM** testnet, named **zKatana**.
 
-DApp projects need to run their own RPC node to the retrieve necessary blockchain data and not to rely on public infrastructure. Public endpoints may respond slower because of the large amount of users connected, and are rate limited.
+DApp projects must run their own RPC node to retrieve the necessary blockchain data and shouldn't rely on public infrastructure. Public endpoints may respond slowly or not at all during times of high network traffic, and are rate limited.
 
 ## Requirements
 
@@ -31,8 +31,8 @@ This tutorial requires `docker` and `docker-compose` to be installed on your mac
 
 ### Ethereum RPC Node
 
-An Ethereum RPC node is required for running an **Astar zkEVM** node.
-There are two options are available:
+A Sepolia (Ethereum testnet) RPC node is required for running an **Astar zkEVM** testnet node.
+There are two options available:
 
 - Setup your own - the [Geth client](https://geth.ethereum.org/docs/getting-started/installing-geth) is one example.
 - Use an RPC provider endpoint - developers building on Astar may be entitled to special offers or promos. 
@@ -124,7 +124,7 @@ Verify that all containers are up and running: you should see the 5 containers w
 sudo docker ps
 ```
 
-Now you have an **Astar zkEVM** RPC node up and running on port 8545, you just have to wait for it to synchronize.
+Now you have an **Astar zkEVM** testnet RPC node up and running on port 8545, you just have to wait for it to synchronize.
 
 ## Using RPC
 
