@@ -33,7 +33,9 @@ sidebar_label: ローカル環境における zkNode のセットアップ
 
 現在のバージョンの環境におけるチュートリアルには、前もってコンピューターに `go`、`docker`、`docker-compose`がインストールされている必要があります。 インストールされていない場合は、以下のリンクを確認してください:
 
--
+- [https://go.dev/doc/install](https://go.dev/doc/install)
+- [https://www.docker.com/get-started](https://www.docker.com/get-started)
+- [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
 ### システム要件
 
@@ -47,11 +49,13 @@ sidebar_label: ローカル環境における zkNode のセットアップ
 zkEVMノードのセットアップを開始する前に、Polygon zkEVM Githubから[公式のzkNodeリポジトリ](https://github.com/0xPolygonHermez/zkevm-node)をクローンする必要があります。
 
 ```bash
+git clone https://github.com/0xPolygonHermez/zkevm-node.git
 ```
 
 `zkevm-node` docker イメージは、少なくとも1回、加えてコードが変更されるたびにビルドする必要があります。 `zkevm-node`イメージをまだビルドしていない場合は、以下のコマンドを実行する必要があります:
 
 ```bash
+make build-docker
 ```
 
 :::caution Docker イメージのビルド
@@ -75,21 +79,25 @@ zkEVMノードのセットアップを開始する前に、Polygon zkEVM Github�
 `test/`ディレクトリには、開発とデバッグのためのスクリプトとファイルが含まれています。 ローカルマシンの作業ディレクトリを `test/` に移動します。
 
 ```bash
+cd test/
 ```
 
 ここで、zkNode 環境を実行します:
 
 ```bash
+make run
 ```
 
 zkNodeを停止するには:
 
 ```bash
+make stop
 ```
 
 zkNode 環境全体を再起動するには:
 
 ```bash
+make restart
 ```
 
 ## 設定パラメーター
@@ -150,3 +158,4 @@ MetaMaskを設定している間、ネットワークが動作している必要
 8. **保存**をクリックします
 
 これで、ローカルのzkEVMネットワークとやり取りし、MetaMaskウォレットからトランザクションに署名できるようになりました。
+
