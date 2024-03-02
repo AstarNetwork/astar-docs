@@ -8,7 +8,7 @@ sidebar_label: Setup zkEVM Testnet RPC
 
 Operators can deploy permissionless RPC nodes for **Astar zkEVM** testnet, named **zKatana**.
 
-DApp projects need to run their own RPC node to the retrieve necessary blockchain data and not to rely on public infrastructure. Public endpoints may respond slower because of the large amount of users connected, and are rate limited.
+DApp projects must run their own RPC node to retrieve the necessary blockchain data and shouldn't rely on public infrastructure. Public endpoints may respond slowly or not at all during times of high network traffic, and are rate limited.
 
 ## Requirements
 
