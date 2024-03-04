@@ -51,4 +51,4 @@ Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) does no
 
 ## Astar zkEVM Support
 
-If you have a question about using the Astar zkEVM please join and ask in the [Astar Discord server](https://discord.gg/astarnetwork), or consult the [FAQs](/docs/learn/zkEVM/faq.md)
+If you have a question about using the Astar zkEVM please join and ask in the [Astar Discord server](https://discord.gg/astarnetwork), or consult the [FAQs](https://docs.astar.network/docs/learn/zkEVM/faq)
