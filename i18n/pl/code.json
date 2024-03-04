@@ -310,7 +310,7 @@
 		"description": "The search page title for non-empty query"
 	},
 	"theme.SearchPage.emptyResultsTitle": {
-		"message": "ドキュメントを検索する",
+		"message": "Przeszukaj dokumentację",
 		"description": "The search page title for empty query"
 	},
 	"theme.SearchPage.inputPlaceholder": {
@@ -318,7 +318,7 @@
 		"description": "The placeholder for search page input"
 	},
 	"theme.SearchPage.inputLabel": {
-		"message": "検索",
+		"message": "Szukaj",
 		"description": "The ARIA label for search page input"
 	},
 	"theme.SearchPage.algoliaLabel": {
@@ -334,7 +334,7 @@
 		"description": "The paragraph for fetching new search results"
 	},
 	"theme.SearchBar.label": {
-		"message": "検索",
+		"message": "Szukaj",
 		"description": "The ARIA label and placeholder for search button"
 	},
 	"theme.SearchModal.searchBox.resetButtonTitle": {
@@ -346,7 +346,7 @@
 		"description": "The label and ARIA label for search box cancel button"
 	},
 	"theme.SearchModal.startScreen.recentSearchesTitle": {
-		"message": "最近",
+		"message": "Nazwa ostatniego wyszukania",
 		"description": "The title for recent searches"
 	},
 	"theme.SearchModal.startScreen.noRecentSearchesText": {
@@ -378,7 +378,7 @@
 		"description": "The help text for error screen of search modal"
 	},
 	"theme.SearchModal.footer.selectText": {
-		"message": "で選択",
+		"message": "Wybierz używając przycisków",
 		"description": "The explanatory text of the action for the enter key"
 	},
 	"theme.SearchModal.footer.selectKeyAriaLabel": {
@@ -386,7 +386,7 @@
 		"description": "The ARIA label for the Enter key button that makes the selection"
 	},
 	"theme.SearchModal.footer.navigateText": {
-		"message": "で移動",
+		"message": "Strzałka góra i dół",
 		"description": "The explanatory text of the action for the Arrow up and Arrow down key"
 	},
 	"theme.SearchModal.footer.navigateUpKeyAriaLabel": {
@@ -398,7 +398,7 @@
 		"description": "The ARIA label for the Arrow down key button that makes the navigation"
 	},
 	"theme.SearchModal.footer.closeText": {
-		"message": "で閉じる",
+		"message": "Wyjdź",
 		"description": "The explanatory text of the action for Escape key"
 	},
 	"theme.SearchModal.footer.closeKeyAriaLabel": {
@@ -406,7 +406,7 @@
 		"description": "The ARIA label for the Escape key button that close the modal"
 	},
 	"theme.SearchModal.footer.searchByText": {
-		"message": "Search by",
+		"message": "Szukaj",
 		"description": "The text explain that the search is making by Algolia"
 	},
 	"theme.SearchModal.noResultsScreen.noResultsText": {
@@ -426,7 +426,7 @@
 		"description": "The text for the link to report missing results"
 	},
 	"theme.SearchModal.placeholder": {
-		"message": "ドキュメントを検索",
+		"message": "Przeszukaj dokumentację",
 		"description": "The placeholder of the input of the DocSearch pop-up modal"
 	},
 	"theme.tags.tagsPageTitle": {
