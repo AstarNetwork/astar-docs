@@ -2,17 +2,17 @@ import Figure from "/src/components/figure"
 
 # Astar zkEVM FAQs
 
-## よくある質問
+## Często zadawane pytania
 
-Astar zkEVM に関する最もよくある質問に対する答えをここにまとめています。（どのように動作するか、どのように相互作用するか、Astar の Polkadot パラチェーン、Polygon PoS チェーン、Ethereum ネットワークとどう相互作用するか等）
+Tutaj znajdziesz odpowiedzi na najczęściej zadawane pytania dotyczące Astar zkEVM, takie jak działanie, interakcja oraz związki z parachainem Polkadot Astar, Polygon i siecią Ethereum.
 
-### Polygon PoS と Astar zkEVM の違いは何ですか?
+### Jaka jest relacja między Polygon a Astar zkEVM?
 
-Polygon PoS と Astar zkEVM はどちらも Ethereum にスケーリングソリューションを提供します。しかし、アーキテクチャやコンセンサスメカニズム、データ可用性のオプションに違いがあります。
+Zarówno Polygon PoS, jak i Astar zkEVM zapewniają rozwiązania skalujące dla Ethereum. Istnieją jednak różnice w architekturze, mechanizmach konsensusu oraz możliwościach dostępności danych.
 
-Astar zkEVM は特に、より良いスケーラビリティ、セキュリティ、EVM 等価性の達成のため、Ethereum Layer 2 の zk ロールアップの技術を活用します。一方で、Polygon PoS は Ethereum の独立したサイドチェーンで、独自のコンセンサスメカニズムとセキュリティを持つ独自の Layer 1 として機能します。
+Astar zkEVM w szczególności wykorzystuje technologię zk rollup warstwy drugiej Ethereum, aby osiągnąć lepszą skalowalność, bezpieczeństwo i równoważność EVM. Z drugiej strony Polygon PoS jest niezależnym łańcuchem bocznym Ethereum, który działa jako własna warstwa 1 z własnym mechanizmem konsensusu i zabezpieczeniami.
 
-Ethereum と Layer 2 の間のブリッジはトラストレスです。つまり、Ethereum と Polygon Pos のようなその他の Layer 1 チェーンの間でのブリッジがセキュリティを保証している特定のブリッジプロバイダーに依存している一方で、Astar zkEVM は Ethereum のセキュリティを継承しているということです。
+Most pomiędzy Ethereum a warstwą 2 jest pozbawiony zaufania (trustless). Oznacza to, że podczas gdy mosty pomiędzy Ethereum a innymi łańcuchami warstwy 1, takimi jak Polygon Pos, korzystają z usług konkretnego dostawcy mostów, który gwarantuje bezpieczeństwo, Astar zkEVM dziedziczy bezpieczeństwo Ethereum.
 
 ### Astar は Polkadot を離れようとしているのですか?
 
