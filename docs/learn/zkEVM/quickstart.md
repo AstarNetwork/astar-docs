@@ -25,8 +25,8 @@ To add **Astar zkEVM** networks to your wallet manually, enter the following det
 <TabItem value="mainnet" label="Astar zkEVM">
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
-| `https://rpc.startale.com/astarzkevm` | `1261120` | [https://astarzkevm.explorer.startale.com/](https://astarzkevm.explorer.startale.com/) | **ETH** |
-| `https://rpc.astarzkevm.gelato.digital` | `1261120` | [https://astarzkevm.blockscout.com/](https://astarzkevm.blockscout.com/) | **ETH** |
+| `https://rpc.startale.com/astar-zkevm` | `1261120` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
+| `https://rpc.astar-zkevm.gelato.digital` | `1261120` | [https://astar-zkevm.blockscout.com/](https://astar-zkevm.blockscout.com/) | **ETH** |
 | `https://astar-zkevm-rpc.dwellir.com` | `1261120` | | **ETH** |
 </TabItem>
 
@@ -40,7 +40,7 @@ To add **Astar zkEVM** networks to your wallet manually, enter the following det
 
 </Tabs>
 
-To add the network to MetaMask either use the data above, or find a link to add at the bottom of the respective block explorer page.
+To add the network to MetaMask you can either use the data above, or find a link to add the network at the bottom of the respective block explorer page.
 
 ## Bridging Assets
 
