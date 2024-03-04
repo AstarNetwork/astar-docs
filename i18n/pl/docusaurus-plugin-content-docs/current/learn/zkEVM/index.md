@@ -1,16 +1,15 @@
 # Astar zkEVM
 
-## Astar zkEVM とは?
+## Czym jest Astar zkEVM?
 
-Astar zkEVM は日本だけでなく、世界規模でブロックチェーン技術の導入を加速させるための万能なソリューションとして機能しています。特に、国際的なゲームやエンターテイメントのベンチャー企業が利益の大きい日本市場に参入するための入り口として位置づけられています。Astar の変革の中心にあるのは Ethereum Layer-2 スケーリングソリューションを採用したことです。
+Astar zkEVM służy jako wszechstronne rozwiązanie przyspieszające adopcję technologii blockchain nie tylko w Japonii, ale także na całym świecie. W szczególności sieć Astar jest pozycjonowana jako brama dla międzynarodowych przedsięwzięć z zakresu gier i rozrywki, aby wejść na duży rynek japoński. Sercem sieci Astar jest przyjęcie rozwiązania skalującego Ethereum Layer2.
 
-Astar zkEVM の主な機能は以下のようになります:
+Główne cechy Astar zkEVM są następujące:
 
-- ゼロ知識技術を通じた、高いトランザクション量の中でも円滑な運用を保証するスケーラビリティ
+- Skalowalność dzięki technologii o wiedzy zerowej (zero knowledge) zapewniającej płynne działanie nawet przy dużych wolumenach transakcji
+- Kompatybilność z Ethereum Virtual Machine (EVM)
+- Mechanizm bezpieczeństwa wywodzący się z Ethereum.
+- Bezproblemowa interoperacyjność z Ethereum. Spraw, aby różne integracje były płynniejsze.
+- Znacząco obniżone koszty transakcyjne w porównaniu do Ethereum. Zapewnij użytkownikom korzyści ekonomiczne.
 
-- EVM 等価性
-- Ethereum に由来するセキュリティ機構。頑強で安全なフレームワークを保証する。
-- Ethereum とのトラストレスな相互運用性。様々な統合をよりスムーズにする。
-- Ethereum と比較して明かに削減されたトランザクションコスト。ユーザーにとって経済的な利点を与える。
-
-詳細は zkEVM [FAQ](/learn/zkEVM/faq.md) のページをご覧ください。
+Więcej informacji można znaleźć na stronie zkEVM zkEVM [FAQ](/learn/zkEVM/faq.md)

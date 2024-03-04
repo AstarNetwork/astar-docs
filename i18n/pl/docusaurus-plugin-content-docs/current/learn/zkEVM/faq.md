@@ -8,7 +8,7 @@ Tutaj znajdziesz odpowiedzi na najczęściej zadawane pytania dotyczące Astar z
 
 ### Jaka jest relacja między Polygon a Astar zkEVM?
 
-Zarówno Polygon PoS, jak i Astar zkEVM zapewniają rozwiązania skalujące dla Ethereum. Istnieją jednak różnice w architekturze, mechanizmach konsensusu oraz możliwościach dostępności danych.
+Zarówno Polygon PoS, jak i Astar zkEVM zapewniają rozwiązania skalujące dla sieci Ethereum. Istnieją jednak różnice w architekturze, mechanizmach konsensusu oraz możliwościach dostępności do danych.
 
 Astar zkEVM w szczególności wykorzystuje technologię zk rollup warstwy drugiej Ethereum, aby osiągnąć lepszą skalowalność, bezpieczeństwo i równoważność EVM. Z drugiej strony Polygon PoS jest niezależnym łańcuchem bocznym Ethereum, który działa jako własna warstwa 1 z własnym mechanizmem konsensusu i zabezpieczeniami.
 
