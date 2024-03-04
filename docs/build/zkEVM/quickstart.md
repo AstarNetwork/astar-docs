@@ -32,8 +32,11 @@ All feedback is welcome and highly appreciated, so please report errors or incon
 
 To add the **Astar zkEVM** network to your wallet manually, enter the following details :
 <Tabs>
-
-
+<TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
+| RPC URL | ChainID | Block Explorer URL | Currency |
+| ------------------------------- | ---------------- | ---------------- | ----- |
+| `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** | []
+</TabItem>
 <TabItem value="testnet" label="zKatana Testnet">
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
