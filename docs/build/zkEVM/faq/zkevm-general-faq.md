@@ -13,20 +13,20 @@ This document compiles some of the frequently asked questions related to the Ast
 
 ### What is Astar zkEVM?
 
-Astar zkEVM is a layer 2 scaling solution for Ethereum that offers an EVM-equivalent smart contract environment. This means that most of the existing smart contracts, developer tools, and wallets for Ethereum also work with the Astar zkEVM. 
+Astar zkEVM is a Layer 2 scaling solution for Ethereum that offers an EVM-equivalent smart contract environment. This means that most of the existing smart contracts, developer tools, and wallets for Ethereum also work with the Astar zkEVM. 
 
-Astar zkEVM harnesses the power of Zero-Knowledge proofs to reduce transaction costs and increase throughput on L2, all while inheriting the security of Ethereum L1.
+Astar zkEVM harnesses the power of Zero-Knowledge proofs to reduce transaction costs and increase throughput on Layer 2, all while inheriting the security of Ethereum Layer 1.
 
 ### What are the main features of Astar zkEVM?
 
 - **EVM-equivalence**: Most Ethereum smart contracts, wallets, and tools work seamlessly on Astar zkEVM.
 - Inherits its **security from Ethereum.**
-- Lower cost compared to L1 and **faster finality compared to other L2 solutions** such as Optimistic Rollups
+- Lower cost compared to Layer 1 and **faster finality compared to other Layer 2 solutions** such as Optimistic Rollups
 - **Zero-Knowledge Proof-powered scalability** aiming for similar throughput to PoS.
 
 ### What kind of gas fee reduction can users expect from Astar zkEVM?
 
-Compared to Ethereum Layer 1, users can expect a significant reduction in gas fees. Astar's layer 2 scaling solution batches transactions together, effectively spreading the cost of a single layer 1 transaction across multiple layer 2 transactions.
+Compared to Ethereum Layer 1, users can expect a significant reduction in gas fees. Astar's Layer 2 scaling solution batches transactions together, effectively spreading the cost of a single Layer 1 transaction across multiple Layer 2 transactions.
 
 ### How do zk Rollups work?
 
@@ -34,9 +34,9 @@ zk Rollups aggregate large batches of transactions and finalize them on the Ethe
 
 ### What is so unique about zkEVMs?
 
-ZkEVMs were thought to be years away; not practical or competitive with other ZK L2s as there seemed to loom an unavoidable tradeoff - Full EVM equivalence or high performance, but not both.
+ZkEVMs were thought to be years away; not practical or competitive with other zk Layer 2s as there seemed to loom an unavoidable tradeoff - Full EVM equivalence or high performance, but not both.
 
-However, given the proving system breakthroughs pioneered by Polygon Labs, full EVM equivalence is now possible while at the same time offering higher performance and lower costs than alternative L1s, optimistic rollups, and other kinds of zk Rollups.
+However, given the proving system breakthroughs pioneered by Polygon Labs, full EVM equivalence is now possible while at the same time offering higher performance and lower costs than alternative Layer 1s, optimistic rollups, and other kinds of zk rollups.
 
 ### How do I connect Astar zkEVM to a Metamask Wallet?
 
@@ -64,7 +64,7 @@ Any dApp that is compatible with EVM can be deployed, except for those which req
 
 ### Can this Layer 2 zkEVM work with other chains?
 
-**At the moment, the answer is No**. Aspirationally, the goal in the future is to build one of many chains that allow users' assets to move from layer 2 (L2) to layer 2. With that being said, users will not be able to utilize this functionality at launch, but L2 to L2 movement is included in our future roadmap.
+**At the moment, the answer is No**. Aspirationally, the goal in the future is to build one of many chains that allow users' assets to move from Layer 2 (Layer 2) to Layer 2. With that being said, users will not be able to utilize this functionality at launch, but Layer 2 to Layer 2 movement is included in our future roadmap.
 
 ### What are some of the main use cases for Astar zkEVM?
 
@@ -74,7 +74,7 @@ Any dApp that is compatible with EVM can be deployed, except for those which req
 
 **Payments**: Users interested in transacting with each other in real-time within a near-instantaneous and low-fee environment will appreciate the value Astar zkEVM provides.
 
-### When Astar zkEVM publishes a proof on L1, how can someone trust that that proof is accurate and includes all the transactions it claims it does?
+### When Astar zkEVM publishes a proof on Layer 1, how can someone trust that that proof is accurate and includes all the transactions it claims it does?
 
 Our zkRollup smart contract warranties it. It's trustworthy due to data availability and the fact that the published validity proofs are quick and easily verifiable SNARK proofs.
 
