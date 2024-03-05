@@ -17,17 +17,17 @@ This document compiles some of the frequently asked questions related to the Ast
 
 ### Are there any time or transaction intervals for a sequencer to wait before moving forward to make a Rollup batch?
 
-The sequencer always has an open batch. Transactions are added to this batch until this batch is full or a big timeout happens. Those batches are also accumulated until it reaches 128K of batches (or a big timeout) and then a sequencing transaction to L1 is sent.
+The sequencer always has an open batch. Transactions are added to this batch until this batch is full or a big timeout happens. Those batches are also accumulated until it reaches 128K of batches (or a big timeout) and then a sequencing transaction to Layer 1 is sent.
 
-From the L2 user perspective, a new L2 block (different from the L2 batch) is closed and sent to the user. The user perceives the transaction finality even if the L2 batch is not closed. **One L2 Transaction is one L2 Block**.
+From the Layer 2 user perspective, a new Layer 2 block (different from the Layer 2 batch) is closed and sent to the user. The user perceives the transaction finality even if the Layer 2 batch is not closed. **One Layer 2 Transaction is one Layer 2 Block**.
 
-### What are the stages that a transaction goes through in order to be finalized on L1?
+### What are the stages that a transaction goes through in order to be finalized on Layer 1?
 
 The process of validating a specific transaction within the batch typically involves three steps:
 
-1. **Trusted State:** This state is given by the trusted sequencer almost instantaneously. No L1 transactions are required.
+1. **Trusted State:** This state is given by the trusted sequencer almost instantaneously. No Layer 1 transactions are required.
 
-2. **Virtual State:** Transactions are in L1. These transactions and their order cannot be modified as the state is final and anybody could calculate. 
+2. **Virtual State:** Transactions are on Layer 1. These transactions and their order cannot be modified as the state is final and anybody could calculate. 
 
 3. **Verified State:** When the virtual state is verified by the smart contract, the funds can be withdrawn.
 
@@ -47,7 +47,7 @@ Once the transaction is deemed valid, the Sequencer applies the transaction to t
 
 **If the user trusts the Sequencer**, transactions are considered final once the Sequencer sequences it (or Trusted State).
 
-**If the user trusts only the L1 state**, then the transaction will be final at the moment it reaches **Virtual State**. This means, once the data is available and the transaction is already on L1.
+**If the user trusts only the Layer 1 state**, then the transaction will be final at the moment it reaches **Virtual State**. This means, once the data is available and the transaction is already on Layer 1.
 
 **In case the user needs to withdraw funds**, he/she needs to wait for the Prover to convert the implicit state to an explicit state. We call this last state the **Consolidated or Verified State**.
 
@@ -63,15 +63,15 @@ A zkNode can potentially serve as both a sequencer and an aggregator, depending 
 
 In some implementations, a node may only be able to perform one function or the other. The role a node can play is determined by the specific implementation of the protocol and the requirements of the network. For example, some protocols may require a certain number of nodes to perform the role of sequencer and a certain number to perform the role of aggregator in order to ensure the security and efficiency of the network.
 
-### How exactly do the state sync components do the syncing in L2 after a transaction batch and its validity proof is mined on L1?
+### How exactly do the state sync components do the syncing in Layer 2 after a transaction batch and its validity proof is mined on Layer 1?
 
-An easy way to summarize is that for each batch, one hash named `globalExitRoot` is transferred from **L1 &rarr; L2** and another hash is transferred from **L2 &rarr; L1** named `localExitRoot`.
+An easy way to summarize is that for each batch, one hash named `globalExitRoot` is transferred from **Layer 1 &rarr; Layer 2** and another hash is transferred from **Layer 2 &rarr; Layer 1** named `localExitRoot`.
 
 `globalExitRoot` mainly includes all the deposits and `localExitRoot` includes all the withdrawals.
 
 ### What is Forced Batches?
 
-A Forced Batch is an L2 batch included in an L1 transaction. Trusted Sequencer is forced to include those batches. This is how a user guarantees that they can withdraw funds even if they are censored by Trusted Sequencer.
+A Forced Batch is an Layer 2 batch included in an Layer 1 transaction. Trusted Sequencer is forced to include those batches. This is how a user guarantees that they can withdraw funds even if they are censored by Trusted Sequencer.
 
 This property is what memes the system censorship resistance.
 
