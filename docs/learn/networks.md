@@ -37,6 +37,8 @@ A local Validium instance based on Polygon CDK that includes the following compo
 - DAC: data availability service, dac setup committee
 - zkEVM bridge service and UI
 
+For more information about zkEVM nodes including the rollup-based zKatana version, check out the [zkEVM Build section](/docs/build/zkEVM/zk-node/).
+
 ## Testnets
 
 ### Shibuya (Substrate)
