@@ -36,6 +36,8 @@ A local Validium instance based on Polygon CDK that includes the following compo
 - DAC: data availability service, dac setup committee
 - zkEVM bridge service and UI
 
+For more information about zkEVM nodes including the rollup-based zKatana version, check out the [zkEVM Build section](/docs/build/zkEVM/zk-node/).
+
 ## Testnets
 
 ### Shibuya (Substrate)
@@ -57,7 +59,7 @@ zKyoto is a Validium-based network connected to the Ethereum Sepolia testnet and
 
 ## Mainnets
 
-Astar has three mainnets. One parachain on Kusama, One parachain on Polkadot, and a zkEVM-based network on Ethereum Layer 2.
+Astar has three mainnets. One parachain on Kusama, One parachain on Polkadot, and a zkEVM-based Validium network on Ethereum Layer 2.
 
 ### Shiden Parachain (Substrate)
 
