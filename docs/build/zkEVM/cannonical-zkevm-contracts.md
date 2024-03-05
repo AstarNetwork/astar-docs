@@ -59,12 +59,12 @@ TODO - refer to a link in CDK Docs which covers which precompiles are available 
 <Tabs>
 <TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
 
-| Contract Name                | Network                       | Contract Address                           |
-| ---------------------------- | ------------------------------|------------------------------------------ |
-| LZ Contract 1                | L1 (Astar EVM (Substrate))    | 0x.... |
-| LZ Contract 2                | L1 (Astar EVM (Substrate))    | 0x.... |
-| LZ Contract 3                | L2 (Astar zkEVM)              | 0x.... |
-| LZ Contract 4                | L1 (Astar zkEVM)              | 0x.... |
+| Contract Name                | Network                       | Contract Address ( Endpoint )              | endpointId   |
+| ---------------------------- | ------------------------------|------------------------------------------- |--------------|
+| LayerZero endpoint V1        | L1 (Astar EVM (Substrate))    | 0xb6319cC6c8c27A8F5dAF0dD3DF91EA35C4720dd7 | 210          |
+| LayerZero endpoint V2        | L1 (Astar EVM (Substrate))    | 0x1a44076050125825900e736c501f859c50fe728c | 30210        |
+| LayerZero endpoint V1        | L2 (Astar zkEVM)              | 0xb6319cC6c8c27A8F5dAF0dD3DF91EA35C4720dd7 | 257          |
+| LayerZero endpoint V2        | L1 (Astar zkEVM)              | 0x1a44076050125825900e736c501f859c50fE728c | 30257        |
 </TabItem>
 <TabItem value="testnet" label="zKatana Testnet">
 </TabItem>
