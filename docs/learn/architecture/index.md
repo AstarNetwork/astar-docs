@@ -5,9 +5,13 @@ title: Architecture
 import Figure from '/src/components/figure'
 
 # Overview
-Before you get started on your journey towards becoming an Astar network hacker, it will be beneficial to know about what Polkadot and Ethereum are, and their relationships to Astar, which we'll cover in the following section. For now, let's go over some basics that apply to all blockchains whether they are sovereign layer 1 networks, or are dependant on a 'parent' chain in the case of the Polkadot Relay Chain, or a lower level of the protocol stack in the case of Ethereum for shared security and interoperability.
+Before you get started on your journey towards becoming an Astar network hacker, it will be beneficial to know about what Polkadot and Ethereum are, because Astar Network connects to both, and each have their own set of benefits benefits and limitations.
 
 <Figure src={require('/docs/learn/architecture/img/fig3.jpg').default} />
+
+Some highlights on the Polkadot parachain side are dApp Staking, ink! smart contracts, cross-chain messaging (XCM), and forkless upgradability, and on the Ethereum layer 2 side are the highest levels of EVM equivalence, shared liquidity across layer 2 networks, and access to the largest pool of developers in the blockchain industry that we can tailor our products for, on-demand.
+
+For now, let's go over some basics that apply to all blockchains whether they are sovereign layer 1 networks, or rely on another blockchain such as the Polkadot Relay Chain for shared security and interoperability. 
 
 ## Blockchain Basics
 A blockchain is a decentralized ledger that records information in a sequence of blocks. The information contained in a block is an ordered set of instructions that may or may not result in a change in state.
