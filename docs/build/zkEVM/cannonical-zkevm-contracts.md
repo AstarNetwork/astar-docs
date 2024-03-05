@@ -8,6 +8,26 @@ import TabItem from '@theme/TabItem';
 
 The following contracts addresses have been established:
 
+## Astar zkEVM Common Goods Contracts
+
+Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0FE37680d36F1ED55e38`](https://astar-zkevm.explorer.startale.com/address/0xE9CC37904875B459Fa5D0FE37680d36F1ED55e38).
+
+### Bridged Tokens
+
+<Tabs>
+<TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
+
+| Contract Name                | Source     | Contract Address                           |
+| ---------------------------- | ---------- | ------------------------------------------ |
+| ASTR                         | Layer Zero Bridge from Astar EVM (L1) | 0x.... |
+| USDC                        | Cannonical Bridge (LxLy) | [0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035](https://astar-zkevm.blockscout.com/token/0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035) |
+| wYYYY                        | ---------- | 0x.... |
+| wZZZZ                        | ---------- | 0x.... |
+</TabItem>
+<TabItem value="testnet" label="zKatana Testnet">
+</TabItem>
+</Tabs>
+
 
 ## Polygon CDK Validium Specific Contracts
 <Tabs>
@@ -35,25 +55,6 @@ More documentation about the Polygon CDK Validium contracts can be found in the 
 ## Ethereum Specific Precompiles
 
 TODO - refer to a link in CDK Docs which covers which precompiles are available for CDK
-
-## Astar zkEVM Common Goods Contracts
-
-### Bridged Tokens
-<Tabs>
-<TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
-
-| Contract Name                | Contract Address                           |
-| ---------------------------- | ------------------------------------------ |
-| Wrapped Ether (WETH)         | 0x.... |
-| wXXXX                        | 0x.... |
-| wYYYY                        | 0x.... |
-| wZZZZ                        | 0x.... |
-</TabItem>
-<TabItem value="testnet" label="zKatana Testnet">
-</TabItem>
-</Tabs>
-
-
 
 ### Layer Zero Bridge
 <Tabs>
