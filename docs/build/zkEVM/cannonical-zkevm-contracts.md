@@ -19,7 +19,7 @@ Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0F
 
 | Contract Name                | Source     | Contract Address                           |
 | ---------------------------- | ---------- | ------------------------------------------ |
-| ASTR                         | Layer Zero Bridge from Astar EVM (L1) | 0x.... |
+| ASTR                         | Layer Zero Bridge from Astar EVM (L1) | [0x112cA47f9c891aB3813d8196ca7530D3cE26336C](https://astar-zkevm.blockscout.com/address/0x112cA47f9c891aB3813d8196ca7530D3cE26336C) |
 | USDC                        | Cannonical Bridge (LxLy) | [0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035](https://astar-zkevm.blockscout.com/token/0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035) |
 | wYYYY                        | ---------- | 0x.... |
 | wZZZZ                        | ---------- | 0x.... |
