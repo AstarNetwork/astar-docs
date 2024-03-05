@@ -40,12 +40,6 @@ The Shibuya native token symbol is SBY.
 
 To obtain test tokens from the faucet, please visit the Astar Portal and connect to Shibuya. If for any reason the faucet is empty, please contact the Astar team on Discord.
 
-### Rocstar (Substrate)
-
-Rococo is a test Relay Chain used by the Polkadot & Kusama communities. Astar team has deployed a parachain to it called Rocstar, which is mainly used for cross-chain integrations with other teams in the ecosystem. To obtain test tokens for Rocstar, please contact Astar team on Discord.
-
-The Rocstar native token symbol is ROC.
-
 ### zKyoto (Sepolia)
 
 zKyoto is a Validium-based network connected to the Ethereum Sepolia testnet and Polygon AggLayer. It is the testing and proving ground for dApps deployed on the Astar zkEVM.
