@@ -7,10 +7,11 @@ sidebar_position: 6
 
 Prior to commencing development, especially, it's important to understand the Astar Network family, and choose an appropriate network based on what you would like to do. Currently, there are a number of networks available, including the Local network which runs exclusively within your development environment. All networks support EVM RPCs, and Astar Parachain supports Substrate RPC as well.
 
+![Astar networks](img/fig3.jpg)
 
-## Local Networks - Astar Polkadot Parachain
+## Local Networks
 
-### Local Substrate Node
+### Substrate Node
 You can clone the Astar repository and run the local node provided, or download the precompiled binary and run it, instead. Both methods are described in the [Build](/docs/build) section.
 
 ### Swanky Node
@@ -22,12 +23,19 @@ For more information about Swanky Node, check out the [Swanky Suite](https://doc
 
 With Zombienet users can download arbitrary Relay Chain and parachain binaries (or use images) to setup a configurable local test network. Users will have access to all privileged actions on the Relay Chain and parachains, which simplifies testing. For more information about Zombienet, check out the [Build Environment](https://docs.astar.network/docs/build/environment/zombienet-testing) chapter.
 
-## Local Networks - Astar zkEVM
+### zkEVM Node
 
-### Local zkEVM Node
+A local Validium instance based on Polygon CDK that includes the following components:
 
-On a local zkEVM node, all validity proofs are set to true by default, so smart contracts and code can be tested without the massive overhead required to run an independent prover.
-
+- zkEVM databases: data node, event, explorer L1 and L2, pool, state, and bridge service
+- zkEVM node components: aggregator, approve service, sequencer and sequence sender, synchronizer
+- L1 network (mock)
+- Prover
+- Explorers L1, L2
+- JSON RPC explorer
+- L2 gas pricer
+- DAC: data availability service, dac setup committee
+- zkEVM bridge service and UI
 
 ## Testnets
 
@@ -39,6 +47,10 @@ Shibuya is running as a parachain of the Tokio Relay Chain, which is managed int
 The Shibuya native token symbol is SBY.
 
 To obtain test tokens from the faucet, please visit the Astar Portal and connect to Shibuya. If for any reason the faucet is empty, please contact the Astar team on Discord.
+
+### zKatana (Sepolia)
+
+An early iteration of the zkEVM testnet that used zk rollup architecture. Now deprecated.
 
 ### zKyoto (Sepolia)
 
