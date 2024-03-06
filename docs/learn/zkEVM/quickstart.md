@@ -18,23 +18,30 @@ Astar zkEVM is Layer 2 scaling solution for Ethereum offering a blazing fast and
 
 ## Connecting to Astar zkEVM
 
-To add **Astar zkEVM** networks to your wallet manually, enter the following details :
+To add **Astar zkEVM** or any testnet networks to your wallet manually, enter the following details :
 <Tabs>
 
 <TabItem value="mainnet" label="Astar zkEVM">
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
-| `https://rpc.astar-zkevm.gelato.digital` | `3776` | [https://astar-zkevm.blockscout.com/](https://astar-zkevm.blockscout.com/) | **ETH** |
+| `https://rpc.astar-zkevm.gelato.digital` | `3776` | | **ETH** |
 | `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
 </TabItem>
 
-<TabItem value="testnet" label="zKatana Testnet">
+<TabItem value="testnet 1" label="zKatana Testnet">
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/zkatana` | `1261120` | [https://zkatana.explorer.startale.com/](https://zkatana.explorer.startale.com/) | **ETH** |
 | `https://rpc.zkatana.gelato.digital` | `1261120` | [https://zkatana.blockscout.com/](https://zkatana.blockscout.com/) | **ETH** |
 | `https://astar-zkatana-rpc.dwellir.com` | `1261120` | | **ETH** |
+</TabItem>
+
+<TabItem value="testnet 2" label="zKyoto Testnet">
+| RPC URL | ChainID | Block Explorer URL | Currency |
+| ------------------------------- | ---------------- | ---------------- | ----- |
+| `https://rpc.startale.com/zkyoto` | `6038361` | [https://astar-zkyoto.blockscout.com](https://astar-zkyoto.blockscout.com) | **ETH** |
+| `https://rpc.zkyoto.gelato.digital` | `6038361` | | **ETH** |
 </TabItem>
 
 </Tabs>
