@@ -30,9 +30,16 @@ Developers can deploy existing contracts from other EVM chains to the zkEVM, and
 All feedback is welcome and highly appreciated, so please report errors or inconsistencies to a team member or as an issue on the [Astar Docs Github repo](https://github.com/AstarNetwork/astar-docs/issues), thank you.
 :::
 
-To add the **Astar zkEVM** network to your wallet manually, enter the following details :
+To add **Astar zkEVM** networks to your wallet manually, enter the following details :
 <Tabs>
 
+<TabItem value="mainnet" label="Astar zkEVM">
+| RPC URL | ChainID | Block Explorer URL | Currency |
+| ------------------------------- | ---------------- | ---------------- | ----- |
+| `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
+| `https://rpc.astar-zkevm.gelato.digital` | `3776` | [https://astar-zkevm.blockscout.com/](https://astar-zkevm.blockscout.com/) | **ETH** |
+| `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
+</TabItem>
 
 <TabItem value="testnet" label="zKatana Testnet">
 | RPC URL | ChainID | Block Explorer URL | Currency |
@@ -44,7 +51,7 @@ To add the **Astar zkEVM** network to your wallet manually, enter the following 
 
 </Tabs>
 
-To add the network to MetaMask, use the data above or the link at the bottom of the respective block explorer page.
+To add the network to MetaMask you can either use the data above, or find a link to add the network at the bottom of the respective block explorer page.
 
 ## Bridging Assets
 
