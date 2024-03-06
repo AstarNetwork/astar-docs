@@ -33,7 +33,10 @@ sidebar_position: 5
 Often abbreviated to DA, Data Availability refers to a component of modular blockchains that handles off-chain storage of ephemeral-type data that is referenced rarely, though for which availability needs to be guaranteed for historical reference and security purposes. Data Availability systems are highly specialized to provide resilient data storage for sovereign rollups and layer 1 networks. 
 
  ### EVM
- short for Ethereum Virtual Machine.  A software environment that executes smart contracts on the Ethereum compatible blockchain networks.
+ Short for Ethereum Virtual Machine.  A software environment that executes smart contracts on the Ethereum compatible blockchain networks.
+
+ ### Existential Deposit
+ The minimum amount of a native token required for an account to exist. If at any point in time the balance drops below the existential deposit amount, it is reaped (balance set to zero) to prevent long-term network bloat.  
 
  ### H160
  An Ethereum format address for Substrate-based blockchains.
