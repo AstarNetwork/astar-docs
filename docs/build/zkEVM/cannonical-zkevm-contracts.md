@@ -19,7 +19,7 @@ Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0F
 
 | Contract Name                | Source     | Contract Address                           |
 | ---------------------------- | ---------- | ------------------------------------------ |
-| ASTR                         | Layer Zero Bridge from Astar EVM (L1) | [0x112cA47f9c891aB3813d8196ca7530D3cE26336C](https://astar-zkevm.blockscout.com/address/0x112cA47f9c891aB3813d8196ca7530D3cE26336C) |
+| ASTR                         | LayerZero Bridge from Astar EVM (L1) | [0xdf41220C7e322bFEF933D85D01821ad277f90172](https://astar-zkevm.blockscout.com/address/0xdf41220C7e322bFEF933D85D01821ad277f90172) |
 | USDC                        | Cannonical Bridge (LxLy) | [0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035](https://astar-zkevm.blockscout.com/token/0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035) |
 | wYYYY                        | ---------- | 0x.... |
 | wZZZZ                        | ---------- | 0x.... |
@@ -56,7 +56,7 @@ More documentation about the Polygon CDK Validium contracts can be found in the 
 
 TODO - refer to a link in CDK Docs which covers which precompiles are available for CDK
 
-### Layer Zero Bridge
+### LayerZero Bridge
 <Tabs>
 <TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
 
@@ -65,10 +65,12 @@ TODO - refer to a link in CDK Docs which covers which precompiles are available 
 | LayerZero endpoint V1        | L1 (Astar EVM (Substrate))    | 0xb6319cC6c8c27A8F5dAF0dD3DF91EA35C4720dd7 | 210          |
 | LayerZero endpoint V2        | L1 (Astar EVM (Substrate))    | 0x1a44076050125825900e736c501f859c50fe728c | 30210        |
 | LayerZero endpoint V1        | L2 (Astar zkEVM)              | 0xb6319cC6c8c27A8F5dAF0dD3DF91EA35C4720dd7 | 257          |
-| LayerZero endpoint V2        | L1 (Astar zkEVM)              | 0x1a44076050125825900e736c501f859c50fE728c | 30257        |
+| LayerZero endpoint V2        | L2 (Astar zkEVM)              | 0x1a44076050125825900e736c501f859c50fE728c | 30257        |
+| LayerZero OFT ASTR           | L2 (Astar zkEVM)              | 0xdf41220C7e322bFEF933D85D01821ad277f90172 | -            |
+| LayerZero NativeOFT ASTR     | L1 (Astar EVM (Substrate))    | 0xdf41220C7e322bFEF933D85D01821ad277f90172 | -            |
 </TabItem>
 <TabItem value="testnet" label="zKatana Testnet">
 </TabItem>
 </Tabs>
 
-More documentation about the Layer Zero Bridge can be found in [this section](/docs/build/zkEVM/integrations/bridges-relays/AstarEVM-zkEVM.md) 
+More documentation about the LayerZero Bridge can be found in [this section](/docs/build/zkEVM/integrations/bridges-relays/AstarEVM-zkEVM.md) 
