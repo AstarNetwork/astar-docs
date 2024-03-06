@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 
 # Overview
-The Astar zkEVM is a Layer 2 scaling solution for Ethereum connected to Polygon Aggregation Layer (AggLayer) for shared interoperability and data availability, otherwise known as a Validium. Smart contracts that run on the Ethereum Virtual Machine also run on Astar zkEVM. The zkEVM boasts the following key features:
+The Astar zkEVM is a Layer 2 scaling solution for Ethereum connected to Polygon Aggregation Layer (AggLayer) for shared interoperability. It's a modular Validium blockchain. Smart contracts that run on the Ethereum Virtual Machine also run on Astar zkEVM. The zkEVM boasts the following key features:
 
 - **Lower Transaction Fees compared to Ethereum** - Due to the transaction batching, as explained above.
 - **Full EVM-equivalence** - Not only EVM compatibility; Equivalence. Smart contracts that work on Ethereum also work on Astar zkEVM. See the [smart contract section](/docs/build/zkEVM/smart-contracts/) for more information.
