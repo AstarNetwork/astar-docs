@@ -33,4 +33,4 @@ To add **Astar zkEVM** network to MetaMask or any other EVM wallet, enter the fo
 
 </Tabs>
 
-<Figure src={require('/docs/use/zkevm-guides/img/setup_zkevm_1.png').default} width="50%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Setup_zkevm_1.png').default} width="50%" />
