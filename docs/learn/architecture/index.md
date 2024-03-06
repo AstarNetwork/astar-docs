@@ -7,7 +7,7 @@ import Figure from '/src/components/figure'
 # Overview
 Before you get started on your journey towards becoming an Astar network hacker, it will be beneficial to know about what Polkadot and Ethereum are, because Astar Network connects to both, and each have their own set of benefits benefits and limitations.
 
-<Figure src={require('/docs/learn/architecture/img/fig3.jpg').default} />
+<Figure src={require('/docs/learn/architecture/img/fig4.jpg').default} />
 
 Some highlights on the Polkadot parachain side are dApp Staking, ink! smart contracts, cross-chain messaging (XCM), and forkless upgradability, and on the Ethereum layer 2 side are the highest levels of EVM equivalence, shared liquidity across layer 2 networks, and access to the largest pool of developers in the blockchain industry that we can tailor our products for, on-demand.
 
