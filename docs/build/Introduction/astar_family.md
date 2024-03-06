@@ -75,7 +75,7 @@ The Astar native token symbol is ASTR.
 
 ### Astar zkEVM
 
-Astar zkEVM is a Layer 2 scaling solution for Ethereum, powered by Polygon AggLayer. Technically referred to as a Validium, the zkEVM combines zk rollups with modular data availability, synthesizing the best features of each.
+Astar zkEVM is an Ethereum Layer 2 network, powered by Polygon CDK. Technically referred to as Validium, it combines zk rollup technology with modular data availability, synthesizing the best features of each.
 
 ## Questions and Assignments:
 
