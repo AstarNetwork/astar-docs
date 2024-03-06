@@ -23,22 +23,6 @@ For more information about Swanky Node, check out the [Swanky Suite](https://doc
 
 With Zombienet users can download arbitrary Relay Chain and parachain binaries (or use images) to setup a configurable local test network. Users will have access to all privileged actions on the Relay Chain and parachains, which simplifies testing. For more information about Zombienet, check out the [Build Environment](https://docs.astar.network/docs/build/environment/zombienet-testing) chapter.
 
-### zkEVM Node
-
-A local Validium instance based on Polygon CDK that includes the following components:
-
-- zkEVM databases: data node, event, explorer L1 and L2, pool, state, and bridge service
-- zkEVM node components: aggregator, approve service, sequencer and sequence sender, synchronizer
-- L1 network (mock)
-- Prover
-- Explorers L1, L2
-- JSON RPC explorer
-- L2 gas pricer
-- DAC: data availability service, dac setup committee
-- zkEVM bridge service and UI
-
-For more information about zkEVM nodes including the rollup-based zKatana version, check out the [zkEVM Build section](/docs/build/zkEVM/zk-node/).
-
 ## Testnets
 
 ### Shibuya (Substrate)
