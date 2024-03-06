@@ -16,10 +16,15 @@ On the Astar zkEVM side, the contract is [OFT](https://github.com/AstarNetwork/s
 
 | Contract   | Network | Address                                        |
 |------------|---------|------------------------------------------------|
-| OFT Native | Astar   | [0xC0297833040Df48141d31BF860A3f4766cec69c2](https://astar.blockscout.com/address/0xC0297833040Df48141d31BF860A3f4766cec69c2) |
-| OFT        | zkEVM   | [0x9fC8d99a5eC47cDDea778fd28E1d67094075c603](https://astar-zkevm.blockscout.com/address/0x9fC8d99a5eC47cDDea778fd28E1d67094075c603) |
+| OFT Native | Astar   | [0xdf41220C7e322bFEF933D85D01821ad277f90172](https://astar.blockscout.com/address/0xdf41220C7e322bFEF933D85D01821ad277f90172?tab=txs) |
+| OFT        | zkEVM   | [0xdf41220C7e322bFEF933D85D01821ad277f90172](https://astar-zkevm.explorer.startale.com/address/0xdf41220C7e322bFEF933D85D01821ad277f90172?tab=txs) |
 
 ### Bridging ASTR
+
+:::note
+Token bridging will be integrated to Stargate UI https://stargate.finance/transfer shortly to make it easier for users to bridge tokens.
+
+:::
 
 To facilitate token transfer, we have provided a sample repository containing a utility script:
 
