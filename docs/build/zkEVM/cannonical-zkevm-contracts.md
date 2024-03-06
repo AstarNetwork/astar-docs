@@ -33,6 +33,10 @@ Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0F
 <TabItem value="testnet" label="zKatana Testnet">
 coming soon...
 </TabItem>
+<TabItem value="testnet" label="zKyoto Testnet">
+coming soon...
+</TabItem>
+
 </Tabs>
 
 
@@ -56,6 +60,10 @@ coming soon...
 <TabItem value="testnet" label="zKatana Testnet">
 coming soon...
 </TabItem>
+<TabItem value="testnet" label="zKyoto Testnet">
+coming soon...
+</TabItem>
+
 </Tabs>
 
 More documentation about the Polygon CDK Validium contracts can be found in the [cdk-validium-contracts GitHub repository](https://github.com/0xPolygon/cdk-validium-contracts)
@@ -78,6 +86,9 @@ TODO - refer to a link in CDK Docs which covers which precompiles are available 
 | LayerZero NativeOFT ASTR     | L1 (Astar EVM (Substrate))    | `0xdf41220C7e322bFEF933D85D01821ad277f90172` | -            |
 </TabItem>
 <TabItem value="testnet" label="zKatana Testnet">
+coming soon...
+</TabItem>
+<TabItem value="testnet" label="zKyoto Testnet">
 coming soon...
 </TabItem>
 </Tabs>
