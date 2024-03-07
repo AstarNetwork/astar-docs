@@ -22,7 +22,7 @@ The developer or user must ensure that the destination chain supports the encode
 
 ### XCM Sequence
 
-At the moment, remote execution from origins other than parachain accounts are only allowed to be initiated by the `Shibuya` runtime (including RocStar) and `Shiden` runtime.
+At the moment, remote execution from origins other than parachain accounts are only allowed to be initiated by the `Shibuya` runtime and `Shiden` runtime.
 
 A permissible sequence of instructions will therefore have to start like:
 1. `DescendOrigin`

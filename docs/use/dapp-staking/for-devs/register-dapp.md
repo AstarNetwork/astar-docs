@@ -124,12 +124,11 @@ Format: `YQnbw3oWxBnCUarnbePrjFcrSgVPP2jqTZYzWcccmN8fXhd`
 
 2. The second option is reserved for those who don't handle smart contracts. Deploy our `helloworld.sol` contract and provide all the information in the header of the contract. [Template contract](https://github.com/AstarNetwork/builders-program/blob/main/hellowold.sol).
 
-The smart contract can be on Astar Native (WASM), Astar EVM or Astar zkEVM.
+The smart contract can be on Astar Native (WASM) or Astar EVM ([Public Endpoints](/docs/build/environment/endpoints/#public-endpoints)). *(Not on Astar zkEVM)*
 
 For the explorer, you can use:
 - [Subscan](https://astar.subscan.io/) for Astar Native;
 - [Blockscout EVM](https://astar.blockscout.com/) for EVM;
-- [Astar zkEVM explorer](https://astar-zkevm.explorer.startale.com/) for Astar zkEVM.
 
 #### 3. Once the vote is passed, share your addresses with the Astar Foundation.
 
