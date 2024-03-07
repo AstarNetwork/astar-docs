@@ -20,12 +20,12 @@ This page explains how to transfer `ETH` and other `ERC20` assets between **Asta
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_2.png').default} width="40%" />
 
-3. Click on the Bridge tab on the left and select `Ethereum Bridge` (*Native Bridge*);
+3. Click on the Bridge tab on the left and select `Native Bridge` (*ERC20*);
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_3.png').default} width="120%" />
 
 4. Ensure Ethereum is selected as the Bridge source, and that Astar zkEVM is selected as the destination;  
-After entering the amount of ETH to be transferred, press the `Confirm` button;
+After entering the amount of ETH to be transferred, press the `Bridge` button;
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_4.png').default} width="120%" />
 
