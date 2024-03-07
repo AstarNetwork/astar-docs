@@ -12,7 +12,9 @@ To expand your knowledge about building applications or utilizing various tools 
 
 [Account](/docs/learn/Accounts)
 
-[Polkadot](/docs/learn/polkadot_relay)
+[Polkadot](/docs/learn/architecture/astar-parachain)
+
+[Astar zkEVM](/docs/learn/architecture/astar-zkevm)
 
 [Smart Contracts](/docs/learn/smart-contracts)
 

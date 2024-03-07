@@ -10,10 +10,6 @@ Developers can interact with Polkadot and its parachains using the [Polkadot\{.j
 
 First, visit the Polkadot apps portal, and switch to an Astar node by selecting Astar under **Polkadot & Parachains** and press Switch. You will be able to toggle network selection by clicking on the network name in the top left.
 
-
-
-
-
 ![Switch to Astar](img/switch_astar.png)
 
 ## Review Accounts and Balances
