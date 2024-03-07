@@ -10,7 +10,7 @@ The following contracts addresses have been established:
 
 ## Astar zkEVM Common Goods Contracts
 
-Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0FE37680d36F1ED55e38`](https://astar-zkevm.explorer.startale.com/address/0xE9CC37904875B459Fa5D0FE37680d36F1ED55e38).
+Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0FE37680d36F1ED55e38`](https://astar-zkevm.explorer.startale.com/token/0xE9CC37904875B459Fa5D0FE37680d36F1ED55e38).
 
 ### Bridged Tokens
 
@@ -19,10 +19,10 @@ Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0F
 
 | Contract Name                            | Source                               | Contract Address                                                                                                                         |
 | ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| ASTR                                     | LayerZero Bridge from Astar EVM (L1) | [`0xdf41220C7e322bFEF933D85D01821ad277f90172`](https://astar-zkevm.blockscout.com/address/0xdf41220C7e322bFEF933D85D01821ad277f90172)      |
+| ASTR                                     | LayerZero Bridge from Astar EVM (L1) | [`0xdf41220C7e322bFEF933D85D01821ad277f90172`](https://astar-zkevm.explorer.startale.com/token/0xdf41220C7e322bFEF933D85D01821ad277f90172)      |
 | Dai Stablecoin (DAI)                     | Cannonical Bridge (LxLy)             | [`0xC5015b9d9161Dca7e18e32f6f25C4aD850731Fd4`](https://astar-zkevm.explorer.startale.com/token/0xC5015b9d9161Dca7e18e32f6f25C4aD850731Fd4) |
 | Matic Token (MATIC)                      | Cannonical Bridge (LxLy)             | [`0xa2036f0538221a77A3937F1379699f44945018d0`](https://astar-zkevm.explorer.startale.com/token/0xa2036f0538221a77A3937F1379699f44945018d0) |
-| USD Coin (USDC)                          | Cannonical Bridge (LxLy)             | [`0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035`](https://astar-zkevm.blockscout.com/token/0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035)        |
+| USD Coin (USDC)                          | Cannonical Bridge (LxLy)             | [`0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035`](https://astar-zkevm.explorer.startale.com/token/0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035)        |
 | Tether USD (USDT)                        | Cannonical Bridge (LxLy)             | [`0x1E4a5963aBFD975d8c9021ce480b42188849D41d`](https://astar-zkevm.explorer.startale.com/token/0x1E4a5963aBFD975d8c9021ce480b42188849D41d) |
 | Wrapped BTC (WBTC)                       | Cannonical Bridge (LxLy)             | [`0xEA034fb02eB1808C2cc3adbC15f447B93CbE08e1`](https://astar-zkevm.explorer.startale.com/token/0xEA034fb02eB1808C2cc3adbC15f447B93CbE08e1) |
 | Wrapped eETH (weETH)                     | Cannonical Bridge (LxLy)             | [`0xcD68DFf4415358c35a28f96Fd5bF7083B22De1D6`](https://astar-zkevm.explorer.startale.com/token/0xcD68DFf4415358c35a28f96Fd5bF7083B22De1D6) |
