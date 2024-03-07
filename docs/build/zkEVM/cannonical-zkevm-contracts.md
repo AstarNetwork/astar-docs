@@ -1,12 +1,12 @@
 ---
 sidebar_position: 10
-title: Cannonical Contracts
-sidebar_label: Cannonical Contracts
+title: Canonical Contracts
+sidebar_label: Canonical Contracts
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The following contracts addresses have been established:
+The following contract addresses have been established:
 
 ## Astar zkEVM Common Goods Contracts
 
