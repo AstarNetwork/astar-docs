@@ -22,7 +22,7 @@ import Figure from "/src/components/figure"
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_2.png').default} width="40%" />
 
-3. 左側のBridgeタブをクリックし、`Ethereum Bridge`（*Native Bridge*）を選択します;
+3. 左側のBridgeタブをクリックし、`Native Bridge` (*ERC20*) を選択します;
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_3.png').default} width="120%" />
 
