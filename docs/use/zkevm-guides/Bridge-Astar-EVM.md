@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 # Bridge to Astar zkEVM from Astar EVM.
 
 This page explains how to transfer `ASTR` and other assets (`DOT`, `vASTR`, etc.) between **Astar EVM** and **Astar zkEVM**.  
-If you have `ASTR` and other assets on Astar native (substrate), you can consult [this guide](/docs/use/manage-assets/transfer-tokens#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account) to transfer them from Astar native to Astar EVM.
+If you have `ASTR` and other assets on Astar native (Substrate) instead, consult [this guide](/docs/use/manage-assets/transfer-tokens#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account) to transfer them from Astar native to Astar EVM.
 
 ### Transfer using Stargate:
 
