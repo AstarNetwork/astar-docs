@@ -42,6 +42,8 @@ Once the transaction has been confirmed in your wallet extension, it will take a
 
 The second option is to use **[Relay Link](https://www.relay.link/bridge/astar-zkevm/)**, a cross-chain payments system that enables instant, low-cost bridging and cross-chain execution. [More information](https://docs.relay.link/what-is-relay).
 
+*Please be advised that Astar Foundation assumes no responsibility or liability for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from your utilization of any third-party application presented in our documentation.*
+
 :::info
 For the moment, Relay Link supports only **ETH token** for cross-chain transfers!
 
