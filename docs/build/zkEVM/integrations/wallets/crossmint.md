@@ -5,6 +5,7 @@ sidebar_position: 2
 
 # Overview 
 [Crossmint](https://crossmint.com/?utm_source=backlinks&utm_medium=docs&utm_campaign=astar) is an enterprise-grade web3 development platform that lets you deploy smart contracts, create email wallets, enable credit-card and cross chain payments, and use APIs to create, distribute, sell, store, and edit NFTs. 
+
 By abstracting away the core complexities of the Blockchain, Crossmint allows you to build NFT applications without requiring any blockchain experience or holding cryptocurrency, and making the blockchain invisible to end users. Crossmint enables you to provide a Web2 experience for your Web3 apps and onboard users.
 
 Crossmint allows you to create email wallets for your users to store NFTs. You can use Crossmint's API to create a custodial wallet that will be assigned to the user's wallet address. 
@@ -22,7 +23,7 @@ Click [here](https://staging.crossmint.com/console/overview/?utm_source=backlink
 
 ## How to Create an Email Wallet for your users
 
-1. Create an API Key using Crossmint's [Console](https://crossmint.com/console/overview/?utm_source=backlinks&utm_medium=docs&utm_campaign=astar)
+1. Create an API Key using Crossmint's [Console.](https://crossmint.com/console/overview/?utm_source=backlinks&utm_medium=docs&utm_campaign=astar)
 2. Use the code snippet below to create a custodial wallet for your user's email address.
 
 ```javascript
