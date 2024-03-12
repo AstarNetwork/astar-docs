@@ -247,12 +247,16 @@ support to operate and further develop existing dApp, number of slots is scaled 
 
 At the beginning of each period, using the average **ASTR** price during the former period, new number of slots is calculated:
 
-$ number\_of\_slots = floor(1000 * ASTR_{USD} + 50)$
+$ number\_of\_slots_{Astar} = floor(1000 * ASTR_{USD} + 50)$
 
 This approach means that as **ASTR** value increases, so does the number of slots for dApp staking, and vice-versa.
 
 Once number of slots is calculated, it is divided up into slots per tier.
 The portions are statically configured, e.g. _tier 1_ gets **10%** of the slots, _tier 2_ gets **25%** of the slots, and so on.
+
+Same principle is applied to Shiden, but with a slightly modified formula:
+
+$ number\_of\_slots_{Shiden} = floor(100 * SDN_{USD} + 50)$
 
 #### Tier Threshold Entry
 
