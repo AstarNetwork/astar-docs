@@ -140,7 +140,7 @@ The Astar Foundation will whitelist your addresses for dApp Staking registration
 
 After whitelisting, visit the dApp Staking page on the [Astar portal](https://portal.astar.network/astar/dapp-staking/discover).  
 
-Connect your wallet and choose the network on which you are going to register for dApp Staking *(Astar Network or Shiden Network)*;
+Connect your native wallet and choose the network on which you are going to register for dApp Staking *(Astar Network or Shiden Network)*;
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Networks.png').default } width="90%" /> 
 
