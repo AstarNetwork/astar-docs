@@ -1,14 +1,15 @@
 ---
 sidebar_position: 10
 title: Canonical Contracts
-sidebar_label: Canonical Contracts
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The following contract addresses have been established:
+# Overview
 
-## Astar zkEVM Common Goods Contracts
+The following contract addresses are canonical on the Astar zkEVM:
+
+## Common Good Contracts
 
 Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0FE37680d36F1ED55e38`](https://astar-zkevm.explorer.startale.com/token/0xE9CC37904875B459Fa5D0FE37680d36F1ED55e38).
 
