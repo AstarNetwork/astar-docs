@@ -12,7 +12,7 @@ import Figure from "/src/components/figure"
 
 ## Stargateを使用した転送:
 
-**[Stargate](https://stargate.finance/transfer)**は、LayerZero上で完全に構成可能なネイティブアセットブリッジを構築するコミュニティ主導の組織です。[詳細情報](https://stargateprotocol.gitbook.io/stargate/v/user-docs)。
+**[Stargate](https://stargate.finance/transfer)** は、LayerZero上で完全に構成可能なネイティブアセットブリッジを構築するコミュニティ主導の組織です。[詳細情報](https://stargateprotocol.gitbook.io/stargate/v/user-docs)。
 
 *ご利用の皆様へ、Astar Foundationは、当社のドキュメントに記載されている第三者のアプリケーションを利用したことにより生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、一切の責任または義務を負わないことをご了承ください。*
 
