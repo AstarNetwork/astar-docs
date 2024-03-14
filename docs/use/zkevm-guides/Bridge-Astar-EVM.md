@@ -23,7 +23,7 @@ If you have `ASTR` on Astar native (Substrate) instead, consult [this guide](/do
 2. Select the token that you want to transfer and select `Astar EVM` for the **source network**;
 3. Select the token that you want to receive and select `Astar zkEVM` for the **destination network**;
 4. Enter the amount of tokens you want to transfer and confirm the transaction by clicking `Transfer` ;  
-*The gas cost corresponds to the gas fees for the destination transaction and is deducted from the amount transferred.*
+*The gas cost corresponds to the gas fees for the destination transaction and is paid up-front.*
 
 <Figure src={require('/docs/use/zkevm-guides/img/Stargate_2.png').default} width="60%" />
 
