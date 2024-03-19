@@ -21,7 +21,6 @@ No special tools or wallets are required to build or interact with Astar zkEVM.
 :::
 
 Developers can deploy existing contracts from other EVM chains to the zkEVM, and users are able to deposit assets from Ethereum to transact on the zkEVM in batches, which are ultimately finalized through novel use of zero-knowledge proofs. Native account abstraction means developers can craft user interfaces that are more intuitive and web2-like, that eliminate complexity and drastically simplify the onboarding process.
-Developers can deploy existing contracts from other EVM chains to the zkEVM, and users are able to deposit assets from Ethereum to transact on the zkEVM in batches, which are ultimately finalized through novel use of zero-knowledge proofs. Native account abstraction means developers can craft user interfaces that are more intuitive and web2-like, that eliminate complexity and drastically simplify the onboarding process.
 
 ## Connecting to zkEVM
 
