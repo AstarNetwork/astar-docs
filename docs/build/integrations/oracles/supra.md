@@ -16,7 +16,7 @@ Check out our developer docs [here](https://supra.com/docs/overview/).
 
 ## Supra on Astar zkEVM
 
-Please refer to this [page](https://supra.com/docs/data-feeds/data-feeds-index) to find all price feeds available.
+Please refer to this [page](https://supra.com/data) to find all price feeds available. And please refer to this [page](https://supra.com/docs/data-feeds/pull-model/networks) for price feed contract address.
 
 ## Other
 
