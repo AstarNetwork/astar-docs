@@ -1,12 +1,11 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
+title: Supra
 ---
-
-# Supra
 
 [Supra]: https://supra.com
 
-## Overview
+# Overview
 
 [Supra](https://supra.com) is a novel, high-throughput Oracle & IntraLayer: A vertically integrated toolkit of cross-chain solutions (data oracles, asset bridges, automation network, and more) that interlink all blockchains, public (L1s and L2s) or private (enterprises).
 
