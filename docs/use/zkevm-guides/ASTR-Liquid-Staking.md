@@ -76,5 +76,4 @@ Note that there is a unstaking period of **0 to 10 days**;
 
 5. As the transaction takes place on several networks (*Astar zkEVM, Astar EVM & Bifrost*), it can take **up to 10 minutes** before the transaction is finalized and the unstaking process begins;
 
-6. You can check the statut of your unstaking position in the Unstaking panel;
-7. When the unstaking period arrives to an end, click on the `Claim` button and sign the transaction to redeem your ASTR tokens and your rewards.
+6. At the end of the unstaking period, your ASTR tokens and rewards will automatically arrive in your wallet.
