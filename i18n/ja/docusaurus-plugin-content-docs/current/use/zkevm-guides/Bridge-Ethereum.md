@@ -16,20 +16,20 @@ import Figure from "/src/components/figure"
 
 1. [Astar Portal](https://portal.astar.network/astar-zkevm/bridge/ethereum) にアクセスし、Astar zkEVMネットワーク上であなたのウォレットを接続します;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_1.png').default} width="50%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_1.png').default} width="60%" />
 
 2. ネットワークモーダルウィンドウを使用してAstar zkEVMネットワークに切り替えるか、MetaMaskをAstar zkEVMに切り替えます;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_2.png').default} width="40%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_2.png').default} width="70%" />
 
 3. 左側のBridgeタブをクリックし、`Native Bridge` (*ERC20*) を選択します;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_3.png').default} width="120%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_3.png').default} width="100%" />
 
 4. Ethereumがブリッジの転送元として選択され、Astar zkEVMが転送先として選択されていることを確認します;
 転送するETHの量を入力した後`Bridge`ボタンを押します;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_4.png').default} width="120%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_4.png').default} width="100%" />
 
 5. ウォレットでトランザクションに署名します;
 
@@ -58,21 +58,21 @@ import Figure from "/src/components/figure"
 
 1. [Relay Link](https://www.relay.link/bridge/astar-zkevm/) にアクセスし、あなたのEVMウォレットを接続します;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_5.png').default} width="70%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_1.png').default} width="70%" />
 
 2. 資産を転送する**元のチェーン**を選択し、**転送先チェーン**として`Astar zkEVM`を選択します;
 
 3. 転送したいETHの量を入力し、`Bridge`をクリックしてトランザクションを確認します;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_6.png').default} width="70%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_2.png').default} width="70%" />
 
 4. ウォレットでトランザクションに署名します;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_7.png').default} width="70%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_3.png').default} width="70%" />
 
 5. トランザクションがネットワーク上で確認されると、EVMウォレットにブリッジされた資産が表示され、Astar zkEVMで使用する準備が整います;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_8.png').default} width="70%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_4.png').default} width="70%" />
 
 
 

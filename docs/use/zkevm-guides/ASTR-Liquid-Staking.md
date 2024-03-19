@@ -26,28 +26,55 @@ The Liquid Staking version of the ASTR token is called **vASTR** (voucher ASTR) 
 Bifrost charges a 10% commission on staking rewards.
 :::
 
-## How to stake ASTR & get vASTR:
+## How to stake ASTR & receive vASTR:
 
-1. Visit [Bifrost OmniLS](https://omni.ls/) and connect your EVM wallet on **Astar zkEVM** network;
+1. Visit [Bifrost OmniLS](https://omni.ls/), select `vASTR`  and connect your EVM wallet on **Astar zkEVM** network;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_1.png').default} width="60%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_1.png').default} width="70%" />
 
 2. Enter the amount of `ASTR` you want to stake in Liquid Staking. In return, you will receive `vASTR` tokens according to the ASTR/vASTR ratio;  
 *Remember to take into consideration the cross-chain transaction fee (deducted from the stake amount);*
-3. Authorize Bifrost to access your funds by clicking on `Approve` and signing the transaction in your wallet;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_2.png').default} width="60%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_2.png').default} width="80%" />
+
+3. Authorize Bifrost to access your funds by clicking on `Approve` and signing the transaction in your wallet;
 
 4. Click on `Stake Now` to initiate the transaction and sign it in your wallet;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_3.png').default} width="60%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_3.png').default} width="80%" />
 
-5. As the transaction takes place on several networks (*Astar zkEVM, Astar EVM & Bifrost*), it can take up to 10 minutes before the transaction is finalized and the vASTR appears in your wallet.
+5. As the transaction takes place on several networks (*Astar zkEVM, Astar EVM & Bifrost*), it can take **up to 10 minutes** before the transaction is finalized and the vASTR appears in your wallet.
 6. Once you have received the vASTR tokens, they are ready for use on Astar zkEVM.
 
-<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_4.png').default} width="60%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_4.png').default} width="80%" />
 
 :::info
 To add tokens to your EVM wallet manually, use the following contract addresses:
 - **vASTR:** `0x7746ef546d562b443AE4B4145541a3b1a3D75717`
 :::
+
+## How to unstake vASTR & receive ASTR:
+
+1. Visit [Bifrost OmniLS](https://omni.ls/), select `vASTR`  and connect your EVM wallet on **Astar zkEVM** network;
+
+<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_1.png').default} width="70%" />
+
+2. Switch to the **Unstake Panel** and enter the amount of `vASTR` you want to redeem. In return, you will receive `ASTR` tokens according to the ASTR/vASTR ratio including your staking rewards;  
+*Remember to take into consideration the cross-chain transaction fee (deducted from the stake amount);*
+
+<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_5.png').default} width="90%" />
+
+3. Authorize Bifrost to access your funds by clicking on `Approve` and signing the transaction in your wallet;
+
+4. Click on `Unstake Now` to initiate the transaction and sign it in your wallet;  
+
+:::warning
+Note that there is a unstaking period of **0 to 10 days**;
+:::
+
+<Figure src={require('/docs/use/zkevm-guides/img/Bifrost_6.png').default} width="90%" />
+
+5. As the transaction takes place on several networks (*Astar zkEVM, Astar EVM & Bifrost*), it can take **up to 10 minutes** before the transaction is finalized and the unstaking process begins;
+
+6. You can check the statut of your unstaking position in the Unstaking panel;
+7. When the unstaking period arrives to an end, click on the `Claim` button and sign the transaction to redeem your ASTR tokens and your rewards.
