@@ -9,6 +9,10 @@ import Figure from '/src/components/figure'
 
 # Overview 
 
+:::note
+The Graph team have prepared a highly informative video featuring an overview of the Graph protocol along with some hands-on examples you can try [here.](https://youtu.be/GSdORXxmqz0). This video covers everything you need to know to build support for The Graph into your full stack application, and create subgraphs to query the relevant data.
+:::
+
 The Graph is a decentralized protocol for indexing and querying blockchain data that makes it possible to query historical data that is difficult to query from smart contracts directly.
 
 Projects with complex smart contracts such as Uniswap and NFT projects like Bored Ape Yacht Club store data on the Ethereum blockchain, making it difficult to read anything but the most basic information.
@@ -299,30 +303,20 @@ These ordering rules are subject to change.
 If you are using The Graph's Subgraph Studio, there is no need to spin up a standalone Graph node. After creating your account you can jump straight into defining a subgraph.
 
 :::note
-As of the time of this publication Astar zKatana network is not supported, however, Astar zkEVM will become available within Subgraph Studio once mainnet is live in Q1 2024.
-
 In order to use your subgraph with the Graph's decentralized network services, you will need to create an API key. It is also recommended that you [add signal](https://thegraph.com/docs/en/network/curating/#how-to-signal) to your subgraph with at least 10,000 GRT.
 :::
 
-Login to [Subgraph Studio](https://thegraph.com/studio/) with your Github account, and connect your wallet:
+1. Login to [Subgraph Studio](https://thegraph.com/studio/) with your Github account, and connect your wallet:
 
 <Figure caption="Connect your wallet" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph2-connectwallet.png').default} width="100%" />
 
 <Figure caption="Choose wallet" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph3-connectwallet2.png').default} width="65%"/>
 
-API keys are required to use subgraphs. Click on the **API Keys** tab and then create an API Key:
+2. API keys are required to use subgraphs. Click on the **API Keys** tab and then create an API Key:
 
-<Figure caption="Create API Key" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph5-createfirstAPI.png').default} width="100%" />
+3. Now, return to the **My Dashboard** tab and click create a subgraph. 
 
-<Figure caption="Choose an appropriate name" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph6-createAPIkey.png').default} width="35%"/>
-
-<Figure caption="Bonus for new users" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph7-freequeries.png').default} width="35%"/>
-
-<Figure caption="The API Keys tab" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph8-subgraphstudio.png').default} width="100%" />
-
-Now, return to the **My Subgraphs** tab and create a subgraph. In this example we are using Ethereum Goerli testnet, but you should be able to choose zKatana testnet:
-
-<Figure caption="Create Subgraph" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph9-createsubgraph.png').default} width="35%"/>
+4. Add relevant details to your Subgraph.
 
 <Figure caption="New subgraph details" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph10-subgraph.png').default} width="85%" />
 
