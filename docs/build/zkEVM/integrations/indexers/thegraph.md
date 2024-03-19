@@ -10,7 +10,7 @@ import Figure from '/src/components/figure'
 # Overview 
 
 :::note
-The Graph team have prepared a highly informative video featuring an overview of the Graph protocol along with some hands-on examples you can try [here.](https://youtu.be/GSdORXxmqz0). This video covers everything you need to know to build support for The Graph into your full stack application, and create subgraphs to query the relevant data.
+The Graph team have prepared a highly informative video featuring an overview of the Graph protocol along with some hands-on examples you can try [here.](https://youtu.be/GSdORXxmqz0) This video covers everything you need to know to build support for The Graph into your full stack application, and create subgraphs to query the relevant data.
 :::
 
 The Graph is a decentralized protocol for indexing and querying blockchain data that makes it possible to query historical data that is difficult to query from smart contracts directly.
@@ -19,15 +19,13 @@ Projects with complex smart contracts such as Uniswap and NFT projects like Bore
 
 In the case of Bored Ape Yacht Club, it's possible to perform basic read operations on the contract such as getting the owner of a certain Ape, getting the content URI of an Ape based on their ID, or the total supply, as these read operations are programmed directly into the smart contract. More advanced real-world queries and operations like aggregation, search, relationships, and non-trivial filtering however are *not possible.* For example, if we would like to query all Apes owned by a certain address and filter results by one of its characteristics, we cannot rely on the contract itself; it cannot provide historical information.
 
-To obtain this kind of data, we would need to process every transfer event ever emitted from the BAYC smart contract, read the metadata from IPFS using the Token ID and IPFS hash, and then aggregate all the results. Put simply, to answer these kinds of (relatively) simple questions, it would take *hours* or even *days* for a decentralized application running in a browser to obtain a result.
-
-As a solution, a server could be used to process the transactions and save them to a database, and an API endpoint could be configured on top to query the data. However, this would open up a whole new can of worms, which is why The Graph exists.
+To obtain this kind of data, we would need to process every transfer event ever emitted from the BAYC smart contract, read the metadata from IPFS using the Token ID and IPFS hash, and then aggregate all the results. Put simply, to answer these kinds of (relatively) simple questions, it would take *hours* or even *days* for a decentralized application running in a browser to obtain a result, which is why The Graph exists - to make these kinds of queries simpler.
 
 ## How do developers integrate The Graph?
 
 Developers can either run a standalone Graph node and define their own subgraph(s), or choose a subgraph that is publicly available on the Graph's decentralized network. The Graph processes subgraphs and makes the data accessible through GraphQL, a popular query language.
 
-### Subgraph Overview
+## Subgraph Overview
 
 A subgraph is essentially a definition created by a developer that specifies which data The Graph should index from the blockchain, and how it should be stored.
 
@@ -68,59 +66,6 @@ After running the command, the tail end of the output should be similar to that 
 ### Modifying the Ethereum Environment
 
 Once everything is set up, you will need to modify the "Ethereum environment" inside the `docker-compose.yml` file, so that the Graph node points to the endpoint of the RPC that you are connecting with. Note that the `setup.sh` file detects the RPC's Host IP and writes its value, so you'll need to modify it accordingly.
-
-### zKatana specific setup
-
-```sh
-# open docker-compose.yml
-nano docker-compose.yml
-
-# modify file and save
-ethereum: 'zkatana:https://<IP address or domain>:<PORT>'
-```
-
-The entire `docker-compose.yml` should appear as below:
-
-```yaml
-version: '3'
-services:
-  graph-node:
-    image: graphprotocol/graph-node
-    ports:
-      - '8000:8000'
-      - '8001:8001'
-      - '8020:8020'
-      - '8030:8030'
-      - '8040:8040'
-    depends_on:
-      - ipfs
-      - postgres
-    environment:
-      postgres_host: postgres
-      postgres_user: graph-node
-      postgres_pass: let-me-in
-      postgres_db: graph-node
-      ipfs: 'ipfs:5001'
-      ethereum: 'zkatana:https://<IP address or DOMAIN>:<PORT>'
-      RUST_LOG: info
-  ipfs:
-    image: ipfs/go-ipfs:v0.4.23
-    ports:
-      - '5001:5001'
-    volumes:
-      - ./data/ipfs:/data/ipfs
-  postgres:
-    image: postgres
-    ports:
-      - '5432:5432'
-    command: ["postgres", "-cshared_preload_libraries=pg_stat_statements"]
-    environment:
-      POSTGRES_USER: graph-node
-      POSTGRES_PASSWORD: let-me-in
-      POSTGRES_DB: graph-node
-    volumes:
-      - ./data/postgres:/var/lib/postgresql/data
-```
 
 ### Running The Graph containers
 
@@ -169,7 +114,7 @@ Once installed, the `graph init` command can be used to set up a new subgraph pr
 
 ### From An Existing Contract⁠
 
-The following command creates a subgraph that indexes all events of an existing contract. It attempts to fetch the contract ABI from Etherscan and falls back to requesting a local file path. 
+The following command creates a subgraph that indexes all events of an existing contract. It attempts to fetch the contract ABI from Etherscan and fails back to requesting a local file path. 
 
 ```js
 graph init \
@@ -182,13 +127,19 @@ graph init \
 
 The `<SUBGRAPH_SLUG>` is the ID of your subgraph in Subgraph Studio, it can be found on your subgraph details page.
 
-If any of the optional arguments are missing, it takes you through an interactive mode, shown below:
+If any of the optional arguments are missing, `graph init` will fail back to interactive mode, shown below:
 
 <Figure src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph11-initializesubgraph.png').default} width="50%" />
 
+
+:::note
+Astar zKatana network is referred to as `astar-zkevm-sepolia` and Astar zkEVM is referred to as `astar-zkevm` within `graph init` interactive mode.
+<Figure src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph14-astar-zkevm-networks.png').default} width="50%" />
+:::
+
 ### Add New dataSources To An Existing Subgraph
 
-Since v0.31.0 the graph-cli supports adding new dataSources to an existing subgraph through the graph add command.
+Since v0.31.0 the graph-cli supports adding new dataSources to an existing subgraph through the `graph add` command.
 
 ```js
 graph add <address> [<subgraph-manifest default: "./subgraph.yaml">]
@@ -210,7 +161,7 @@ If true: the new dataSource should use existing eventHandlers & entities.
 If false: a new entity & event handler should be created with `${dataSourceName}{EventName}`.
 The contract address will be written to the networks.json for the relevant network.
 
-Note: When using the interactive cli, after successfully running graph init, you'll be prompted to add a new dataSource.
+Note: When using the interactive cli, after successfully running `graph init`, you'll be prompted to add a new dataSource.
 
 ### The Subgraph Manifest
 
@@ -312,14 +263,14 @@ In order to use your subgraph with the Graph's decentralized network services, y
 
 <Figure caption="Choose wallet" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph3-connectwallet2.png').default} width="65%"/>
 
-2. API keys are required to use subgraphs. Click on the **API Keys** tab and then create an API Key:
+2. API keys are required to use subgraphs. Click on the **API Keys** tab and then create an API Key.
 
-3. Now, return to the **My Dashboard** tab and click create a subgraph. 
+3. Return to **My Dashboard** tab and click 'Create a Subgraph'. 
 
 4. Add relevant details to your Subgraph.
 
 <Figure caption="New subgraph details" src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph10-subgraph.png').default} width="85%" />
 
-At this point, the new subgraph is ready to initialize.
+At this point, the new subgraph is ready to initialize by following the instructions on the right-hand side.
 
 For more information and advanced configuration, consult the [Graph Documentation](https://thegraph.com/docs/en/developing/creating-a-subgraph)
