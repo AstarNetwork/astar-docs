@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 
 This page explains how to transfer `ETH` and other `ERC20` assets between **Astar zkEVM** and **Ethereum Mainnet** and other EVM-based chains. There are three options for bridging assets to the zkEVM:
 
-## Transfer using the Astar Portal:
+## 1. Transfer using the Astar Portal:
 
 1. Visit the [Astar Portal](https://portal.astar.network/astar-zkevm/bridge/ethereum) and connect your wallet on Astar zkEVM Network;
 
@@ -19,12 +19,12 @@ This page explains how to transfer `ETH` and other `ERC20` assets between **Asta
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_2.png').default} width="40%" />
 
-3. Click on the Bridge tab on the left and select `Native Bridge` (*ERC20*);
+3. Click on the Bridge tab on the left and select `Native Bridge` (_ERC20_);
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_3.png').default} width="120%" />
 
 4. Ensure Ethereum is selected as the Bridge source, and that Astar zkEVM is selected as the destination;  
-After entering the amount of ETH to be transferred, press the `Bridge` button;
+   After entering the amount of ETH to be transferred, press the `Bridge` button;
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_4.png').default} width="120%" />
 
@@ -37,7 +37,8 @@ The transfer can take between 10 and 30 minutes, depending on Ethereum network u
 Once the transaction has been confirmed in your wallet extension, it will take approximately **5-10 minutes** for the Astar portal and MetaMask to update your balance on the Astar zkEVM network.
 :::
 
-## Transfer using Layerswap:
+## 2. Transfer using Layerswap:
+
 
 The second option is to use **[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)**, a reliable solution for transferring crypto assets across Centralized Exchanges, blockchains and banks in a matter of minutes. [More information](https://docs.layerswap.io/user-docs).
 
@@ -63,23 +64,24 @@ For the moment, Layerswap supports only **ETH token** for cross-chain transfers!
 
 6. Once the transaction has been confirmed on the network, you should now see the bridged assets in your EVM wallet, ready for use on Astar zkEVM.
 
-## Transfer using Relay Link:
+## 3. Transfer using Relay Link:
 
 The third option is to use **[Relay Link](https://www.relay.link/bridge/astar-zkevm/)**, a cross-chain payments system that enables instant, low-cost bridging and cross-chain execution. [More information](https://docs.relay.link/what-is-relay).
 
-*Please be advised that Astar Foundation assumes no responsibility or liability for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from your utilization of any third-party application presented in our documentation.*
+_Please be advised that Astar Foundation assumes no responsibility or liability for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from your utilization of any third-party application presented in our documentation._
 
 :::info
 For the moment, Relay Link supports only **ETH token** for cross-chain transfers!
 
 You can transfer assets to Astar zkEVM from the following chains:
+
 - Ethereum
 - Arbitrum
 - Optimism
 - zkSync Era
 - Base
 - Blast
-:::
+  :::
 
 1. Visit [Relay Link](https://www.relay.link/bridge/astar-zkevm/) and connect your EVM wallet;
 
