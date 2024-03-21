@@ -28,12 +28,10 @@ ASTRトークンのLiquid Stakingバージョンは**vASTR** (voucher ASTR)と�
 
 ## ASTRをステーキングしてvASTRを受け取る方法：
 
-1. Visit [Bifrost OmniLS](https://omni.ls/), select `vASTR`  and connect your EVM wallet on **Astar zkEVM** network;
 1. [Bifrost OmniLS](https://omni.ls/) にアクセスし、`vASTR`を選択し、**Astar zkEVM**ネットワーク上のEVMウォレットを接続します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bifrost_1.png').default} width="70%" />
 
-2. Enter the amount of `ASTR` you want to stake in Liquid Staking. In return, you will receive `vASTR` tokens according to the ASTR/vASTR ratio;  
 2. Liquid Stakingでステーキングしたい`ASTR`の量を入力します。その結果、ASTR/vASTRの比率に従って`vASTR`トークンを受け取ります。
 *クロスチェーン取引手数料（ステーキング額から差し引かれる）を考慮に入れてください。*
 
