@@ -30,7 +30,7 @@ import Figure from "/src/components/figure"
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_4.png').default} width="100%" />
 
-2. あなたのウォレットでトランザクションに署名します。
+2. ウォレットでトランザクションに署名します。
 3. Astar zkEVMで使用するために、MetaMaskにブリッジされた資産が表示されます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_5.png').default} width="70%" />
@@ -53,7 +53,7 @@ import Figure from "/src/components/figure"
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_6.png').default} width="100%" />
 
-2. あなたのウォレットでトランザクションに署名します。
+2. ウォレットでトランザクションに署名します。
 3. トランザクションが送信されると、**履歴タブ**に表示されます。
 4. Ethereum上でトークンを受け取るには、 `Claim` ボタンをクリックします。
 
@@ -93,7 +93,7 @@ import Figure from "/src/components/figure"
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Layerswap_3.png').default} width="80%" />
 
-5. あなたのウォレットでトランザクションに署名します。
+5. ウォレットでトランザクションに署名します。
 6. ネットワーク上でトランザクションが確認されたら、Astar zkEVMで使用する準備ができたEVMウォレットにブリッジされた資産が表示されます。
 
 ## Relay Link を使用した転送:
