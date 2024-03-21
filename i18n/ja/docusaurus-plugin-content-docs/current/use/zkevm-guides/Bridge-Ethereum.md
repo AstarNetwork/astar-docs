@@ -1,113 +1,115 @@
----
+﻿---
 sidebar_position: 2
-title: Bridge From Ethereum to Astar zkEVM
+title: Ethereumおよび他のEVMベースのチェーンからAstar zkEVMへのブリッジ
+
+sidebar_label: Bridge Astar <> Ethereum
 ---
 
 import Figure from "/src/components/figure"
 
-# Bridge Assets to Astar zkEVM from Ethereum and other EVM-based chains
+# Ethereum および他の EVM ベースのチェーンから Astar zkEVM へのブリッジ
 
-This page explains how to transfer `ETH` and other `ERC20` assets between **Astar zkEVM** and **Ethereum Mainnet** and other EVM-based chains. There are three options for bridging assets to the zkEVM:
+このページでは、**Astar zkEVM**と**Ethereum メインネット**および他の EVM ベースのチェーン間で`ETH`および他の`ERC20`資産を転送する方法について説明します。zkEVM への資産のブリッジには 2 つのオプションがあり
+ます：
 
-## Transfer using the Astar Portal:
+### 1. Astar Portal を使用した転送:
 
-1. Visit the [Astar Portal](https://portal.astar.network/astar-zkevm/bridge/ethereum) and connect your wallet on Astar zkEVM Network;
+1. [Astar Portal](https://portal.astar.network/astar-zkevm/bridge/ethereum) にアクセスし、Astar zkEVM ネットワーク上であなたのウォレットを接続します;
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_1.png').default} width="60%" />
 
-2. Use the network modal window and switch to the Astar zkEVM network, or let MetaMask switch to Astar zkEVM for you;
+2. ネットワークモーダルウィンドウを使用して Astar zkEVM ネットワークに切り替えるか、MetaMask を Astar zkEVM に切り替えます;
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_2.png').default} width="70%" />
 
-3. Click on the Bridge tab on the left and select `Native Bridge` (*ERC20*);
+3. 左側の Bridge タブをクリックし、`Native Bridge` (_ERC20_) を選択します;
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_3.png').default} width="100%" />
 
-### From Ethereum to Astar zkEVM
+### EthereumからAstar zkEVMへ
 
 1. Ensure `Ethereum` is selected as the **source network**, and that `Astar zkEVM` is selected as the **destination network**;  
 After entering the amount of ETH to be transferred, press the `Bridge` button;
+**送信元ネットワーク**として `Ethereum` が選択されていること、そして**送信先ネットワーク**として `Astar zkEVM` が選択されていることを確認します。
+転送するETHの量を入力した後、 `Bridge` ボタンを押します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_4.png').default} width="100%" />
 
-2. Sign the transaction in your wallet;
-3. You should now see the bridged assets in MetaMask for use on Astar zkEVM.
+2. あなたのウォレットでトランザクションに署名します。
+3. Astar zkEVMで使用するために、MetaMaskにブリッジされた資産が表示されます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_5.png').default} width="70%" />
 
 :::info
 The transfer can take between 10 and 30 minutes, depending on Ethereum network usage.
+転送には、Ethereumネットワークの使用状況に応じて、10分から30分かかる場合があります。
 
-Once the transaction has been confirmed in your wallet extension, it will take approximately **5-10 minutes** for the Astar portal and MetaMask to update your balance on the Astar zkEVM network.
+ウォレット拡張機能でトランザクションが確認されると、Astar PortalとMetaMaskがAstar zkEVMネットワーク上での残高を更新するまでに約5-10分かかります。
 :::
 
-### From Astar zkEVM to Ethereum
+### Astar zkEVMからEthereumへ
 
 :::warning
-This is a two-step process in which you will need to claim your tokens on Ethereum's mainnet and pay the corresponding gas fees.  
-Make sure you have enough `ETH` tokens on mainnet to cover the fees.
+これは二段階のプロセスであり、Ethereumのメインネットでトークンを請求し、対応するガス料金を支払う必要があります。
+手数料をカバーするために、メインネット上に十分なETHトークンを持っていることを確認してください。
 :::
 
-1. Ensure `Astar zkEVM` is selected as the **source network**, and that `Ethereum` is selected as the **destination network**;  
-After entering the amount of ETH to be transferred, press the `Bridge` button;
+1. 送信元ネットワークとして `Astar zkEVM` が選択されていること、そして送信先ネットワークとして `Ethereum` が選択されていることを確認します。 
+転送するETHの量を入力した後、 `Bridge` ボタンを押します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_6.png').default} width="100%" />
 
-2. Sign the transaction in your wallet;
-3. Once the transaction has been sent, it will appear in the **History tab**;
-4. To receive your tokens on Ethereum, click on the `Claim` button;
+2. あなたのウォレットでトランザクションに署名します。
+3. 取引が送信されると、**履歴タブ**に表示されます。
+4. Ethereum上でトークンを受け取るには、 `Claim` ボタンをクリックします。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_7.png').default} width="70%" />
 
-
-5. Sign the transaction in your wallet;
-6. You should now see the bridged assets in MetaMask for use on Ethereum.
+5. ウォレットでトランザクションに署名します。
+6. Ethereumで使用するために、MetaMaskにブリッジされた資産が表示されます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_8.png').default} width="70%" />
 
-:::info
-The transfer can take between 10 and 30 minutes, depending on Ethereum network usage.
+:::info 転送は、Ethereum ネットワークの使用状況により、10 分から 30 分かかることがあります。
 
-Once the transaction has been confirmed in your wallet extension, it will take approximately **5-10 minutes** for the Astar portal and MetaMask to update your balance on the Astar zkEVM network.
+トランザクションがあなたのウォレット拡張で確認されたら、Astar Portal と MetaMask が Astar zkEVM ネットワーク上のあなたの残高を更新するのに**約 5-10 分**かかります。
 :::
 
-
-## Transfer using Layerswap:
+## Layerswapを使用した転送:
 
 The second option is to use **[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)**, a reliable solution for transferring crypto assets across Centralized Exchanges, blockchains and banks in a matter of minutes. [More information](https://docs.layerswap.io/user-docs).
-
-*Please be advised that Astar Foundation assumes no responsibility or liability for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from your utilization of any third-party application presented in our documentation.*
+2つ目のオプションは、**[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)**, を使用することです。これは、中央集権型取引所、ブロックチェーン、銀行間で暗号資産を数分で転送する信頼できるソリューションです。[詳細情報](https://docs.layerswap.io/user-docs)。
+*第三者のアプリケーションを利用することによって生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、Astar Foundationは一切の責任を負わないことをご了承ください。*
 
 :::info
-For the moment, Layerswap supports only **ETH token** for cross-chain transfers!
+現時点では、Layerswapはクロスチェーン転送に**ETHトークン**のみをサポートしています！
 :::
 
-1. Visit [Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET) and connect your EVM wallet;
+1. [Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)  にアクセスし、あなたのEVMウォレットを接続してください。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Layerswap_1.png').default} width="80%" />
 
-2. Select the **origin network** or **Centralized Exchanges** from which you want to transfer your assets, and select `Astar zkEVM` for the **destination network**;
-3. Enter the amount of ETH you want to transfer. You can also choose the address to which you want to send your assets;
+2. 資産を転送したい**origin ネットワーク**または**中央集権型取引所**を選択し、**送信先ネットワーク**には `Astar zkEVM` を選択します。
+3. 転送したいETHの量を入力します。また、資産を送信したいアドレスも選択できます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Layerswap_2.png').default} width="80%" />
 
-4. Confirm the transaction by clicking on `Swap now`;
+4. `Swap now` をクリックして取引を確認します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Layerswap_3.png').default} width="80%" />
 
-5. Sign the transaction in your wallet;
-6. Once the transaction has been confirmed on the network, you should now see the bridged assets in your EVM wallet, ready for use on Astar zkEVM.
+5. あなたのウォレットでトランザクションに署名します。
+6. ネットワーク上でトランザクションが確認されたら、Astar zkEVMで使用する準備ができたEVMウォレットにブリッジされた資産が表示されます。
 
-## Transfer using Relay Link:
+### 2. Relay Link を使用した転送:
 
-The third option is to use **[Relay Link](https://www.relay.link/bridge/astar-zkevm/)**, a cross-chain payments system that enables instant, low-cost bridging and cross-chain execution. [More information](https://docs.relay.link/what-is-relay).
-
-*Please be advised that Astar Foundation assumes no responsibility or liability for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from your utilization of any third-party application presented in our documentation.*
+3つ目のオプションは、**[Relay Link](https://www.relay.link/bridge/astar-zkevm/)** を使用することです。これは、即時かつ低コストでブリッジングとクロスチェーン実行を可能にするクロスチェーン決済システムです。[詳細情報](https://docs.relay.link/what-is-relay)。
+*第三者のアプリケーションを利用することによって生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、Astar Foundationは一切の責任を負わないことをご了承ください。*
 
 :::info
-For the moment, Relay Link supports only **ETH token** for cross-chain transfers!
+現時点では、Relay Linkはクロスチェーン転送に **ETHトークン** のみをサポートしています！
 
-You can transfer assets to Astar zkEVM from the following chains:
+以下のチェーンからAstar zkEVMへの資産転送が可能です：
 - Ethereum
 - Arbitrum
 - Optimism
@@ -116,19 +118,19 @@ You can transfer assets to Astar zkEVM from the following chains:
 - Blast
 :::
 
-1. Visit [Relay Link](https://www.relay.link/bridge/astar-zkevm/) and connect your EVM wallet;
+1. [Relay Link](https://www.relay.link/bridge/astar-zkevm/) にアクセスし、あなたのEVMウォレットを接続してください。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_1.png').default} width="70%" />
 
-2. Select the **origin chain** from which you want to transfer your assets, and select `Astar zkEVM` for the **destination chain**;
-3. Enter the amount of ETH you want to transfer and confirm the transaction by clicking `Bridge`;
+2. 資産を転送したい**origin 起源チェーン**を選択し、**送信先チェーン**には `Astar zkEVM` を選択します。
+3. 転送したいETHの量を入力し、 `Bridge` をクリックしてトランザクションを確認します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_2.png').default} width="70%" />
 
-4. Sign the transaction in your wallet;
+4. あなたのウォレットでトランザクションに署名します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_3.png').default} width="70%" />
 
-5. Once the transaction has been confirmed on the network, you should now see the bridged assets in your EVM wallet, ready for use on Astar zkEVM.
+5. ネットワーク上でトランザクションが確認されたら、Astar zkEVMで使用する準備ができたEVMウォレットにブリッジされた資産が表示されます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_4.png').default} width="70%" />
