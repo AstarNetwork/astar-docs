@@ -1,10 +1,7 @@
 ﻿---
 sidebar_position: 2
-title: Bridge From Ethereum to Astar zkEVM
----
-
-sidebar_position: 2
 title: Ethereum からAstar zkEVM へブリッジ
+---
 
 import Figure from "/src/components/figure"
 
@@ -48,7 +45,7 @@ import Figure from "/src/components/figure"
 
 :::warning
 これは二段階のプロセスであり、Ethereumのメインネットでトークンを請求し、対応するガス料金を支払う必要があります。
-手数料をカバーするために、メインネット上に十分なETHトークンを持っていることを確認してください。
+手数料をカバーするために、メインネット上に十分な `ETH` トークンを持っていることを確認してください。
 :::
 
 1. 送信元ネットワークとして `Astar zkEVM` が選択されていること、そして送信先ネットワークとして `Ethereum` が選択されていることを確認します。 
@@ -69,13 +66,14 @@ import Figure from "/src/components/figure"
 
 :::info 転送は、Ethereum ネットワークの使用状況により、10 分から 30 分かかることがあります。
 
-トランザクションがあなたのウォレット拡張で確認されたら、Astar Portal と MetaMask が Astar zkEVM ネットワーク上のあなたの残高を更新するのに**約 5-10 分**かかります。
+トランザクションがあなたのウォレット拡張機能で確認されたら、Astar Portal と MetaMask が Astar zkEVM ネットワーク上のあなたの残高を更新するのに**約 5-10 分**かかります。
 :::
 
 ## Layerswapを使用した転送:
 
-The second option is to use **[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)**, a reliable solution for transferring crypto assets across Centralized Exchanges, blockchains and banks in a matter of minutes. [More information](https://docs.layerswap.io/user-docs).
-2つ目のオプションは、**[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)**, を使用することです。これは、中央集権型取引所、ブロックチェーン、銀行間で暗号資産を数分で転送する信頼できるソリューションです。[詳細情報](https://docs.layerswap.io/user-docs)。
+2つ目のオプションは、**[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)** を使用することです。これは、中央集権型取引所、ブロックチェーン、銀行間で暗号資産を数分で転送する信頼できるソリューションです。[詳細情報](https://docs.layerswap.io/user-docs)。
+
+
 *第三者のアプリケーションを利用することによって生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、Astar Foundationは一切の責任を負わないことをご了承ください。*
 
 :::info
@@ -86,12 +84,12 @@ The second option is to use **[Layerswap](https://www.layerswap.io/app?to=ASTARZ
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Layerswap_1.png').default} width="80%" />
 
-2. 資産を転送したい**origin ネットワーク**または**中央集権型取引所**を選択し、**送信先ネットワーク**には `Astar zkEVM` を選択します。
+2. 資産を転送したい**送信元ネットワーク**または**中央集権型取引所**を選択し、**送信先ネットワーク**には `Astar zkEVM` を選択します。
 3. 転送したいETHの量を入力します。また、資産を送信したいアドレスも選択できます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Layerswap_2.png').default} width="80%" />
 
-4. `Swap now` をクリックして取引を確認します。
+4. `Swap now` をクリックしてトランザクションを確認します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Layerswap_3.png').default} width="80%" />
 
@@ -119,7 +117,7 @@ The second option is to use **[Layerswap](https://www.layerswap.io/app?to=ASTARZ
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_1.png').default} width="70%" />
 
-2. 資産を転送したい**origin 起源チェーン**を選択し、**送信先チェーン**には `Astar zkEVM` を選択します。
+2. 資産を転送したい**送信元チェーン**を選択し、**送信先チェーン**には `Astar zkEVM` を選択します。
 3. 転送したいETHの量を入力し、 `Bridge` をクリックしてトランザクションを確認します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_2.png').default} width="70%" />
