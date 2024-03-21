@@ -1,7 +1,10 @@
 ﻿---
 sidebar_position: 2
-title: Ethereum からAstar zkEVM へブリッジ
+title: Bridge From Ethereum to Astar zkEVM
 ---
+
+sidebar_position: 2
+title: Ethereum からAstar zkEVM へブリッジ
 
 import Figure from "/src/components/figure"
 
@@ -25,7 +28,6 @@ import Figure from "/src/components/figure"
 
 ### EthereumからAstar zkEVMへ
 
-After entering the amount of ETH to be transferred, press the `Bridge` button;
 1. **送信元ネットワーク**として `Ethereum` が選択されていること、そして**送信先ネットワーク**として `Astar zkEVM` が選択されていることを確認します。
 転送するETHの量を入力した後、 `Bridge` ボタンを押します。
 
