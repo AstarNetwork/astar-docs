@@ -1,4 +1,4 @@
-﻿---
+---
 sidebar_position: 2
 title: Ethereum からAstar zkEVM へブリッジ
 ---
