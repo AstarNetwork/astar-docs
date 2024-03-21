@@ -7,28 +7,26 @@ import Figure from "/src/components/figure"
 
 # Ethereum および他の EVM ベースのチェーンから Astar zkEVM へのブリッジ
 
-このページでは、**Astar zkEVM**と**Ethereum メインネット**および他の EVM ベースのチェーン間で`ETH`および他の`ERC20`資産を転送する方法について説明します。zkEVM への資産のブリッジには 3 つのオプションがあり
-ます：
+このページでは、**Astar zkEVM**と**Ethereum メインネット**および他の EVM ベースのチェーン間で`ETH`および他の`ERC20`資産を転送する方法について説明します。zkEVM への資産のブリッジには 3 つのオプションがあります。
 
 ## Astar Portal を使用した転送:
 
-1. [Astar Portal](https://portal.astar.network/astar-zkevm/bridge/ethereum) にアクセスし、Astar zkEVM ネットワーク上であなたのウォレットを接続します;
+1. [Astar Portal](https://portal.astar.network/astar-zkevm/bridge/ethereum) にアクセスし、Astar zkEVM ネットワーク上であなたのウォレットを接続します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_1.png').default} width="60%" />
 
-2. ネットワークモーダルウィンドウを使用して Astar zkEVM ネットワークに切り替えるか、MetaMask を Astar zkEVM に切り替えます;
+2. ネットワークモーダルウィンドウを使用して Astar zkEVM ネットワークに切り替えるか、MetaMask を Astar zkEVM に切り替えます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_2.png').default} width="70%" />
 
-3. 左側の Bridge タブをクリックし、`Native Bridge` (_ERC20_) を選択します;
+3. 左側の Bridge タブをクリックし、`Native Bridge` (_ERC20_) を選択します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_3.png').default} width="100%" />
 
 ### EthereumからAstar zkEVMへ
 
-1. Ensure `Ethereum` is selected as the **source network**, and that `Astar zkEVM` is selected as the **destination network**;  
 After entering the amount of ETH to be transferred, press the `Bridge` button;
-**送信元ネットワーク**として `Ethereum` が選択されていること、そして**送信先ネットワーク**として `Astar zkEVM` が選択されていることを確認します。
+1. **送信元ネットワーク**として `Ethereum` が選択されていること、そして**送信先ネットワーク**として `Astar zkEVM` が選択されていることを確認します。
 転送するETHの量を入力した後、 `Bridge` ボタンを押します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_4.png').default} width="100%" />
@@ -39,7 +37,6 @@ After entering the amount of ETH to be transferred, press the `Bridge` button;
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_5.png').default} width="70%" />
 
 :::info
-The transfer can take between 10 and 30 minutes, depending on Ethereum network usage.
 転送には、Ethereumネットワークの使用状況に応じて、10分から30分かかる場合があります。
 
 ウォレット拡張機能でトランザクションが確認されると、Astar PortalとMetaMaskがAstar zkEVMネットワーク上での残高を更新するまでに約5-10分かかります。
