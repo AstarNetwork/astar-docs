@@ -5,19 +5,16 @@ title: Astar EVMからAstar zkEVMへのブリッジ
 
 import Figure from "/src/components/figure"
 
-# Astar EVMからAstar zkEVMへのアセットのブリッジング
+# Astar EVMからAstar zkEVMへの資産のブリッジング
 
 このページでは、**Astar EVM**と**Astar zkEVM**間で`ASTR`を転送する方法について説明しています。
-もしAstarネイティブ（Substrate）に`ASTR`を持っている場合、AstarネイティブからAstar EVMへ転送する方法については[こちらのガイド](/docs/use/manage-assets/transfer-tokens#sending-ast
-rsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)を参照してください。
+もしAstarネイティブ（Substrate）に`ASTR`を持っている場合、AstarネイティブからAstar EVMへ転送する方法については[こちらのガイド](/docs/use/manage-assets/transfer-tokens#sending-astrsdn-to-astar-evm-from-astar-native-or-any-tokens-in-the-account)を参照してください。
 
 ## Stargateを使用した転送:
 
-**[Stargate](https://stargate.finance/transfer)** は、LayerZero上で完全に構成可能なネイティブアセットブリッジを構築するコミュニティ主導の組織です。[詳細情報](https://stargateprot
-ocol.gitbook.io/stargate/v/user-docs)。
+**[Stargate](https://stargate.finance/transfer)** は、LayerZero上で完全に構成可能なネイティブアセットブリッジを構築するコミュニティ主導の組織です。[詳細情報](https://stargateprotocol.gitbook.io/stargate/v/user-docs)。
 
-*ご利用の皆様へ、Astar Foundationは、当社のドキュメントに記載されている第三者のアプリケーションを利用したことにより生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害
-について、一切の責任または義務を負わないことをご了承ください。*
+*ご利用の皆様へ、Astar Foundationは、当社のドキュメントに記載されている第三者のアプリケーションを利用したことにより生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、一切の責任または義務を負わないことをご了承ください。*
 
 [Stargate](https://stargate.finance/transfer) アプリケーションにアクセスし、あなたのEVMウォレットを接続してください。
 
@@ -53,7 +50,7 @@ Astar zkEVMでガストークン（`ETH`）をリクエストするオプショ�
 
 1. 転送したいトークンを選択し、送信元ネットワークには `Astar zkEVM` を選択します。
 2. 受け取りたいトークンを選択し、送信先ネットワークには `Astar EVM` を選択します。
-3. 転送したいトークンの量を入力し、 `Transfer` をクリックして取引を確認します。 
+3. 転送したいトークンの量を入力し、 `Transfer` をクリックしてトランザクションを確認します。 
 *ガスコストは送信先取引のガス料金に相当し、前払いで支払われます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Stargate_5.png').default} width="85%" />
@@ -64,8 +61,8 @@ Astar EVM（`ASTR`）でガストークンをリクエストするオプショ�
 <Figure src={require('/docs/use/zkevm-guides/img/Stargate_6.png').default} width="85%" />
 :::
 
-4. あなたのウォレットで取引に署名します。
+4. あなたのウォレットでトランザクションに署名します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Stargate_4.png').default} width="75%" />
 
-5. ネットワーク上で取引が確認されると、Astar EVMで使用する準備ができたEVMウォレットにブリッジされた資産が表示されます。
+5. ネットワーク上でトランザクションが確認されると、Astar EVMで使用する準備ができたEVMウォレットにブリッジされた資産が表示されます。

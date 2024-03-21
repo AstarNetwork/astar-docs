@@ -1,18 +1,16 @@
 ﻿---
 sidebar_position: 2
-title: Ethereumおよび他のEVMベースのチェーンからAstar zkEVMへのブリッジ
-
-sidebar_label: Bridge Astar <> Ethereum
+title: Ethereum からAstar zkEVM へブリッジ
 ---
 
 import Figure from "/src/components/figure"
 
 # Ethereum および他の EVM ベースのチェーンから Astar zkEVM へのブリッジ
 
-このページでは、**Astar zkEVM**と**Ethereum メインネット**および他の EVM ベースのチェーン間で`ETH`および他の`ERC20`資産を転送する方法について説明します。zkEVM への資産のブリッジには 2 つのオプションがあり
+このページでは、**Astar zkEVM**と**Ethereum メインネット**および他の EVM ベースのチェーン間で`ETH`および他の`ERC20`資産を転送する方法について説明します。zkEVM への資産のブリッジには 3 つのオプションがあり
 ます：
 
-### 1. Astar Portal を使用した転送:
+## Astar Portal を使用した転送:
 
 1. [Astar Portal](https://portal.astar.network/astar-zkevm/bridge/ethereum) にアクセスし、Astar zkEVM ネットワーク上であなたのウォレットを接続します;
 
@@ -60,7 +58,7 @@ The transfer can take between 10 and 30 minutes, depending on Ethereum network u
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_6.png').default} width="100%" />
 
 2. あなたのウォレットでトランザクションに署名します。
-3. 取引が送信されると、**履歴タブ**に表示されます。
+3. トランザクションが送信されると、**履歴タブ**に表示されます。
 4. Ethereum上でトークンを受け取るには、 `Claim` ボタンをクリックします。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_7.png').default} width="70%" />
