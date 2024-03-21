@@ -38,7 +38,7 @@ import Figure from "/src/components/figure"
 :::info
 転送には、Ethereumネットワークの使用状況に応じて、10分から30分かかる場合があります。
 
-ウォレット拡張機能でトランザクションが確認されると、Astar PortalとMetaMaskがAstar zkEVMネットワーク上での残高を更新するまでに約5-10分かかります。
+ウォレット拡張機能でトランザクションが確認されると、Astar PortalとMetaMaskがAstar zkEVMネットワーク上での残高を更新するまでに約**5-10分**かかります。
 :::
 
 ### Astar zkEVMからEthereumへ
@@ -48,7 +48,7 @@ import Figure from "/src/components/figure"
 手数料をカバーするために、メインネット上に十分な `ETH` トークンを持っていることを確認してください。
 :::
 
-1. 送信元ネットワークとして `Astar zkEVM` が選択されていること、そして送信先ネットワークとして `Ethereum` が選択されていることを確認します。 
+1. **送信元ネットワーク**として `Astar zkEVM` が選択されていること、そして**送信先ネットワーク**として `Ethereum` が選択されていることを確認します。 
 転送するETHの量を入力した後、 `Bridge` ボタンを押します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_6.png').default} width="100%" />
@@ -124,7 +124,7 @@ import Figure from "/src/components/figure"
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_2.png').default} width="70%" />
 
-4. あなたのウォレットでトランザクションに署名します。
+4. ウォレットでトランザクションに署名します。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_3.png').default} width="70%" />
 
