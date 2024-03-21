@@ -33,6 +33,7 @@ There are two primary ways to index EVM contracts deployed to [Astar networks](/
 Subsquid supports the following Astar networks for native EVM indexing:
 * `astar`
 * `astar-zkatana`
+* `astar-zkevm`
 * `shiden`
 * `shibuya`
 

@@ -8,6 +8,10 @@ import Figure from '/src/components/figure'
 
 ## Overview: Why is The Graph needed?
 
+:::note
+The Graph team have prepared a highly informative video featuring an overview of the Graph protocol along with some hands-on examples you can try [here.](https://youtu.be/GSdORXxmqz0) This video covers everything you need to know to build support for The Graph into your full stack application, and create subgraphs to query the relevant data.
+:::
+
 [The Graph](https://thegraph.com/en) is a permissionless and decentralized protocol for indexing and querying data from blockchains. It makes querying fast, reliable, and secure, and allows anyone to build and publish application programming interfaces (APIs) called subgraphs, which act as intermediaries; allowing applications to communicate with one another.
 
 ## Prerequisites
@@ -81,7 +85,16 @@ ethereum: 'shibuya:https://<IP address or domain>:<PORT>'
 # open docker-compose.yml
 nano docker-compose.yml
 # modify file and save
-ethereum: 'zkatana:https://<IP address or domain>:<PORT>'
+ethereum: 'astar-zkevm-sepolia:https://<IP address or domain>:<PORT>'
+```
+
+### Astar zkEVM
+
+```sh
+# open docker-compose.yml
+nano docker-compose.yml
+# modify file and save
+ethereum: 'astar-zkevm:https://<IP address or domain>:<PORT>'
 ```
 
 For example, if you are building a Graph node for Shiden, the entire `docker-compose.yml` now should appear as below:

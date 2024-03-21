@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # DIA Wasm Oracle
 ## Introduction
 DIA has a dedicated Wasm-based oracle. It can be universally deployed on any chain that supports substrate Wasm environment.

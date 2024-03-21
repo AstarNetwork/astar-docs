@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# DIA
+# DIA Oracle
 
 [DIA]: https://www.diadata.org/
 
@@ -53,21 +53,13 @@ DIA Development Oracle contracts are not intended to be integrated into a dApp. 
 The oracle contains information about crypto assets. You can access a price quotation (see [sources](https://docs.diadata.org/documentation/methodology/digital-assets/cryptocurrency-trading-data) and [methodology](https://docs.diadata.org/documentation/methodology/digital-assets/exchangeprices)) and the current circulating supply as well as the timestamp of the last update.
 
 1. Access the corresponding oracle smart contract (see table above).
-2. Call `getCoinInfo(coin_name)` with `coin_name` being the full coin name such as `Bitcoin`. You can use the "Read" section on Etherscan to execute this call.
-3. The response of the call contains four values:
-   1. The current asset price in USD with a fix-comma notation of five decimals.
-   2. The current circulating supply.
-   3. The [UNIX timestamp](https://www.unixtimestamp.com/) of the last oracle update.
-   4. The short name of the asset, e.g., `BTC` for Bitcoin.
+2. Call `getValue(symbol)` with `symbol` being the asset symbol such as `BTC/USD`. You can use the "Read" section on Etherscan to execute this call.
+3. The response of the call contains two values:
+   1. The current asset price in USD with a fix-comma notation of eight decimals.
+   2. The [UNIX timestamp](https://www.unixtimestamp.com/) of the last oracle update.
 
 The development oracle supports price quotations for, at the very least, the following assets:
 
 - BTC
-- ETH
 - DIA
 - USDC
-- FTM
-- SDN
-- KSM
-- MOVR
-- ASTR
