@@ -16,7 +16,7 @@ import Figure from "/src/components/figure"
 
 *ご利用の皆様へ、Astar Foundationは、当社のドキュメントに記載されている第三者のアプリケーションを利用したことにより生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、一切の責任または義務を負わないことをご了承ください。*
 
-[Stargate](https://stargate.finance/transfer) アプリケーションにアクセスし、あなたのEVMウォレットを接続してください。
+[Stargate アプリケーション](https://stargate.finance/transfer)  にアクセスし、あなたのEVMウォレットを接続してください。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Stargate_1.png').default} width="75%" />
 
