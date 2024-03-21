@@ -69,7 +69,7 @@ import Figure from "/src/components/figure"
 トランザクションがあなたのウォレット拡張機能で確認されたら、Astar Portal と MetaMask が Astar zkEVM ネットワーク上のあなたの残高を更新するのに**約 5-10 分**かかります。
 :::
 
-## Layerswapを使用した転送:
+## Layerswap を使用した転送:
 
 2つ目のオプションは、**[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)** を使用することです。これは、中央集権型取引所、ブロックチェーン、銀行間で暗号資産を数分で転送する信頼できるソリューションです。[詳細情報](https://docs.layerswap.io/user-docs)。
 
@@ -96,9 +96,11 @@ import Figure from "/src/components/figure"
 5. あなたのウォレットでトランザクションに署名します。
 6. ネットワーク上でトランザクションが確認されたら、Astar zkEVMで使用する準備ができたEVMウォレットにブリッジされた資産が表示されます。
 
-### 2. Relay Link を使用した転送:
+## Relay Link を使用した転送:
 
 3つ目のオプションは、**[Relay Link](https://www.relay.link/bridge/astar-zkevm/)** を使用することです。これは、即時かつ低コストでブリッジングとクロスチェーン実行を可能にするクロスチェーン決済システムです。[詳細情報](https://docs.relay.link/what-is-relay)。
+
+
 *第三者のアプリケーションを利用することによって生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、Astar Foundationは一切の責任を負わないことをご了承ください。*
 
 :::info
