@@ -16,30 +16,54 @@ If you have `ASTR` on Astar native (Substrate) instead, consult [this guide](/do
 
 *Please be advised that Astar Foundation assumes no responsibility or liability for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from your utilization of any third-party application presented in our documentation.*
 
-1. Visit [Stargate](https://stargate.finance/transfer) and connect your EVM wallet;
+Visit [Stargate application](https://stargate.finance/transfer) and connect your EVM wallet;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Stargate_1.png').default} width="70%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Stargate_1.png').default} width="75%" />
 
-2. Select the token that you want to transfer and select `Astar EVM` for the **source network**;
-3. Select the token that you want to receive and select `Astar zkEVM` for the **destination network**;
-4. Enter the amount of tokens you want to transfer and confirm the transaction by clicking `Transfer` ;  
+### From Astar EVM to Astar zkEVM:
+
+1. Select the token that you want to transfer and select `Astar EVM` for the **source network**;
+2. Select the token that you want to receive and select `Astar zkEVM` for the **destination network**;
+3. Enter the amount of tokens you want to transfer and confirm the transaction by clicking `Transfer`;  
 *The gas cost corresponds to the gas fees for the destination transaction and is paid up-front.*
 
-<Figure src={require('/docs/use/zkevm-guides/img/Stargate_2.png').default} width="60%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Stargate_2.png').default} width="85%" />
 
 :::tip
 You have the option of requesting gas tokens on Astar zkEVM (`ETH`). Stargate will swap a portion of your assets in ETH and transfer them to your wallet on Astar zkEVM.
 
-<Figure src={require('/docs/use/zkevm-guides/img/Stargate_3.png').default} width="95%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Stargate_3.png').default} width="85%" />
 :::
 
-5. Sign the transaction in your wallet:
+4. Sign the transaction in your wallet;
 
-<Figure src={require('/docs/use/zkevm-guides/img/Stargate_4.png').default} width="50%" />
+<Figure src={require('/docs/use/zkevm-guides/img/Stargate_4.png').default} width="75%" />
 
-6. Once the transaction has been confirmed on the network, you should now see the bridged assets in your EVM wallet, ready for use on Astar zkEVM.
+5. Once the transaction has been confirmed on the network, you should now see the bridged assets in your EVM wallet, ready for use on Astar zkEVM.
 
 :::info
 To add tokens to your EVM wallet manually, use the following contract addresses:
 - **ASTR:** `0xdf41220C7e322bFEF933D85D01821ad277f90172`
+- **DOT:** `0x7Cb5d4D178d93D59ea0592abF139459957898a59`
 :::
+
+### From Astar zkEVM to Astar EVM:
+
+1. Select the token that you want to transfer and select `Astar zkEVM` for the **source network**;
+2. Select the token that you want to receive and select `Astar EVM` for the **destination network**;
+3. Enter the amount of tokens you want to transfer and confirm the transaction by clicking `Transfer`;  
+*The gas cost corresponds to the gas fees for the destination transaction and is paid up-front.*
+
+<Figure src={require('/docs/use/zkevm-guides/img/Stargate_5.png').default} width="85%" />
+
+:::tip
+You have the option of requesting gas tokens on Astar EVM (`ASTR`). Stargate will swap a portion of your assets in ASTR and transfer them to your wallet on Astar EVM.
+
+<Figure src={require('/docs/use/zkevm-guides/img/Stargate_6.png').default} width="85%" />
+:::
+
+4. Sign the transaction in your wallet;
+
+<Figure src={require('/docs/use/zkevm-guides/img/Stargate_4.png').default} width="75%" />
+
+5. Once the transaction has been confirmed on the network, you should now see the bridged assets in your EVM wallet, ready for use on Astar EVM.
