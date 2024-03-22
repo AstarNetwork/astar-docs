@@ -20,7 +20,7 @@ import Figure from "/src/components/figure"
 
 <Figure src={require('/docs/use/zkevm-guides/img/Stargate_1.png').default} width="75%" />
 
-### Astar EVMからAstar zkEVMへ
+### Astar EVMからAstar zkEVMへ:
 
 1. 転送したいトークンを選択し、**送信元ネットワーク**として`Astar EVM`を選択してください。
 2. 受け取りたいトークンを選択し、**送信先ネットワーク**として`Astar zkEVM`を選択してください。

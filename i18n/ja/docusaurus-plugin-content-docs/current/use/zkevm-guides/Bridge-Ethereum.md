@@ -32,7 +32,6 @@ import Figure from "/src/components/figure"
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_4.png').default} width="100%" />
 
 2. ウォレットでトランザクションに署名します。
-
 3. Astar zkEVMで使用するために、MetaMaskにブリッジされた資産が表示されます。
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Portal_5.png').default} width="70%" />
@@ -72,40 +71,11 @@ import Figure from "/src/components/figure"
 :::
 
 ## Layerswap を使用した転送:
-=======
-6. これで、Astar zkEVM で使用するためのブリッジされた資産が MetaMask に表示されます;
 
-:::info 転送は、Ethereum ネットワークの使用状況により、10 分から 30 分かかることがあります。
+2つ目のオプションは、**[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)** を使用することです。これは、中央集権型取引所、ブロックチェーン、銀行間で暗号資産を数分で転送する信頼できるソリューションです。[詳細情報](https://docs.layerswap.io/user-docs)。
 
-トランザクションがあなたのウォレット拡張で確認されたら、Astar Portal と MetaMask が Astar zkEVM ネットワーク上のあなたの残高を更新するのに**約 5-10 分**かかります。
-:::
-
-## Relay Link を使用した転送:
-
-2 つ目のオプションは、**[Relay Link](https://www.relay.link/bridge/astar-zkevm/)** を使用することです。これは、即時で低コストのブリッジングとクロスチェーン実行を可能にするクロスチェーン決済システムです。[詳細情報](https://docs.relay.link/what-is-relay)。
-
-_Astar Foundation は、このドキュメント内で言及される第三者の(自社のサービスでない)アプリケーションの利用により生じる損失に関して、法律上も職務上も責任を負うことはないことをご了承ください。これは、損失が直接的か間接的か、偶発的なものか、重大か、もしくは典型的か例外的かに関わらず適用されます。_
-
-:::info 現時点では、Relay Link はクロスチェーン転送に対して**ETH トークン**のみをサポートしています！
-
-以下のチェーンから Astar zkEVM への資産の転送が可能です:
-
-- Ethereum
-- Arbitrum
-- Optimism
-- zkSync Era
-- Base
-- Blast
-  :::
-
-1. [Relay Link](https://www.relay.link/bridge/astar-zkevm/) にアクセスし、あなたの EVM ウォレットを接続します;
-
-
-2. つ目のオプションは、**[Layerswap](https://www.layerswap.io/app?to=ASTARZK_MAINNET)** を使用することです。これは、中央集権型取引所、ブロックチェーン、銀行間で暗号資産を数分で転送する信頼できるソリューションです。[詳細情報](https://docs.layerswap.io/user-docs)。
 
 *第三者のアプリケーションを利用することによって生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、Astar Foundationは一切の責任を負わないことをご了承ください。*
-=======
-3. 転送したい ETH の量を入力し、`Bridge`をクリックしてトランザクションを確認します;
 
 :::info
 現時点では、Layerswapはクロスチェーン転送に**ETHトークン**のみをサポートしています！
@@ -130,7 +100,6 @@ _Astar Foundation は、このドキュメント内で言及される第三者�
 ## Relay Link を使用した転送:
 
 3つ目のオプションは、**[Relay Link](https://www.relay.link/bridge/astar-zkevm/)** を使用することです。これは、即時かつ低コストでブリッジングとクロスチェーン実行を可能にするクロスチェーン決済システムです。[詳細情報](https://docs.relay.link/what-is-relay)。
-
 
 
 *第三者のアプリケーションを利用することによって生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、Astar Foundationは一切の責任を負わないことをご了承ください。*
