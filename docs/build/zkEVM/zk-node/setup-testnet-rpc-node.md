@@ -6,7 +6,7 @@ sidebar_label: Setup zkEVM Testnet RPC
 
 ## Overview
 
-Operators can deploy permissionless RPC nodes for **Astar zkEVM** testnet, named **zKatana**.
+Operators can deploy permissionless RPC nodes for **Astar zkEVM** testnet, named **zKyoto**.
 
 DApp projects must run their own RPC node to retrieve the necessary blockchain data and shouldn't rely on public infrastructure. Public endpoints may respond slowly or not at all during times of high network traffic, and are rate limited.
 
@@ -49,7 +49,7 @@ In this section, we are going to start the five containers necessary for the **A
 - zkevm-pool-db
 - zkevm-prover
 
-At the time of this writing, **zKatana testnet** is the only network available for the **Astar zkEVM**, and is connected to the L1 Ethereum **Sepolia testnet**.
+At the time of this writing, **zKyoto testnet** is the only network available for the **Astar zkEVM**, and is connected to the L1 Ethereum **Sepolia testnet**.
 
 Let's build on this.
 
@@ -72,8 +72,8 @@ ZKEVM_CONFIG_DIR=/etc/zkevm/config
 Download and extract the artifacts.
 
 ```bash
-wget https://shared-assets.astar.network/files/zkevm/zkatana/zkatana.tar.gz
-tar -xf zkatana.tar.gz -C $ZKEVM_DIR && rm zkatana.tar.gz
+wget https://shared-assets.astar.network/files/zkevm/zkyoto/zkyoto.tar.gz
+tar -xf zkyoto.tar.gz -C $ZKEVM_DIR && rm zkyoto.tar.gz
 ```
 
 Copy the env file and edit the L1 RPC URL.
