@@ -1,0 +1,62 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Learn": {
+    "message": "Aprender",
+    "description": "The label for category Learn in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Interoperability": {
+    "message": "Interoperabilidad",
+    "description": "The label for category Interoperability in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Cross-Chain Messaging - XCM": {
+    "message": "Mensajería cross-chain - XCM",
+    "description": "The label for category Cross-Chain Messaging - XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Building with XCM": {
+    "message": "Construyendo con XCM",
+    "description": "The label for category Building with XCM in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration": {
+    "message": "Integration",
+    "description": "The label for category Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Use": {
+    "message": "Usar",
+    "description": "The label for category Use in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Manage Assets": {
+    "message": "Manejar activos",
+    "description": "The label for category Manage Assets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Manage Wallets": {
+    "message": "Manejar billeteras",
+    "description": "The label for category Manage Wallets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Wallet Providers": {
+    "message": "Proveedores de billeteras",
+    "description": "The label for category Wallet Providers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.evm-guides": {
+    "message": "Guías de EVM",
+    "description": "The label for category evm-guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Stakers": {
+    "message": "Para Stakers",
+    "description": "The label for category For Stakers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Devs": {
+    "message": "Para Desarrolladores",
+    "description": "The label for category For Devs in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Build": {
+    "message": "Construir",
+    "description": "The label for category Build in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorials": {
+    "message": "Tutorials",
+    "description": "The label for category Tutorials in sidebar tutorialSidebar"
+  }
+}
