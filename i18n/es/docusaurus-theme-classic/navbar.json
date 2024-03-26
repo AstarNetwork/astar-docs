@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "Astar Documentación",
+    "description": "El título en el navbar"
+  },
+  "item.label.Docs": {
+    "message": "Documentación",
+    "description": "Elemento del navbar con la etiqueta doc"
+  },
+  "item.label.Medium": {
+    "message": "Medium",
+    "description": "Elemento del navbar con la etiqueta Medium"
+  },
+  "item.label.Youtube": {
+    "message": "Youtube",
+    "description": "Elemento del navbar con la etiqueta Youtube"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Elemento del navbar con la etiqueta GitHub"
+  },
+  "logo.alt": {
+    "message": "Astar",
+    "description": "Texto alternativo del logo del navbar"
+  },
+  "item.label.Start Building": {
+    "message": "Empezar a construir",
+    "description": "Elemento del navbar con la etiqueta Empezar a construir"
+  },
+  "item.label.zkEVM": {
+    "message": "zkEVM",
+    "description": "Elemento del navbar con la etiqueta zkEVM"
+  }
+}

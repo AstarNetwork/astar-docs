@@ -117,7 +117,7 @@ As an user or a dApp owner, you need to take the following parameters into consi
 | Unlocking Period               | 9 Eras (~9 days)    | 4 Eras (~4 days)    | 4 Eras (~1 day)     |
 | Minimum Amount to Stake        | 500 ASTR            | 50 SDN              | 5 SBY               |
 
-For the full list of parameters, please check the [dApp staking parameters page](/docs/learn/dapp-staking/protocol-parameters.md) and [Tokenomics 2.0 page](/docs/learn/tokenomics2/Inflation.md#parameters).
+For the full list of parameters, please check the [dApp staking parameters page](/docs/learn/dapp-staking/protocol-parameters.md) and [Tokenomics 2.0 page](/docs/learn/tokenomics2/Inflation/#parameters).
 
 #### Tier System
 
