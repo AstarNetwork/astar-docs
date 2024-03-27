@@ -6,7 +6,7 @@ sidebar_label: Setup zkEVM Testnet RPC
 
 ## Overview
 
-Operators can deploy permissionless RPC nodes for **Astar zkEVM** testnet, named **zKatana**.
+Operators can deploy permissionless RPC nodes for **Astar zkEVM** testnet, named **zKyoto**.
 
 DApp projects must run their own RPC node to retrieve the necessary blockchain data and shouldn't rely on public infrastructure. Public endpoints may respond slowly or not at all during times of high network traffic, and are rate limited.
 
@@ -49,14 +49,14 @@ In this section, we are going to start the five containers necessary for the **A
 - zkevm-pool-db
 - zkevm-prover
 
-At the time of this writing, **zKatana testnet** is the only network available for the **Astar zkEVM**, and is connected to the L1 Ethereum **Sepolia testnet**.
+At the time of this writing, **zKyoto testnet** is the only network available for the **Astar zkEVM**, and is connected to the L1 Ethereum **Sepolia testnet**.
 
 Let's build on this.
 
 Create dedicated directories for config, install and data.
 
 ```bash
-sudo mkdir -p /etc/zkevm/{install,config} && sudo chown -R $USER:$USER /etc/zkevm
+sudo mkdir -p /etc/zkevm && sudo chown -R $USER:$USER /etc/zkevm
 sudo mkdir -p /var/lib/zkevm/{statedb,pooldb} && sudo chown -R $USER:$USER /var/lib/zkevm/
 ```
 
@@ -65,22 +65,21 @@ Set local variables.
 ```
 # define installation and config path
 ZKEVM_NET=testnet
-ZKEVM_DIR=/etc/zkevm/install
-ZKEVM_CONFIG_DIR=/etc/zkevm/config
+ZKEVM_DIR=/etc/zkevm
 ```
 
 Download and extract the artifacts.
 
 ```bash
-wget https://shared-assets.astar.network/files/zkevm/zkatana/zkatana.tar.gz
-tar -xf zkatana.tar.gz -C $ZKEVM_DIR && rm zkatana.tar.gz
+wget https://shared-assets.astar.network/files/zkevm/zkyoto/zkyoto.tar.gz
+tar -xf zkyoto.tar.gz -C $ZKEVM_DIR && rm zkyoto.tar.gz
 ```
 
 Copy the env file and edit the L1 RPC URL.
 
 ```bash
-cp $ZKEVM_DIR/$ZKEVM_NET/example.env $ZKEVM_CONFIG_DIR/.env
-nano $ZKEVM_CONFIG_DIR/.env
+cp $ZKEVM_DIR/example.env $ZKEVM_DIR/.env
+nano $ZKEVM_DIR/.env
 ```
 
 Modify the parameters.
@@ -93,7 +92,7 @@ ZKEVM_NODE_ETHERMAN_URL = "https://eth-sepolia-public.unifra.io"
 Edit the node config file.
 
 ```bash
-nano $ZKEVM_DIR/$ZKEVM_NET/config/environments/$ZKEVM_NET/node.config.toml
+nano $ZKEVM_DIR/config/environments/$ZKEVM_NET/node.config.toml
 ```
 
 Modify the following parameters, you may also want to change the databases default user/passwords for more security.
@@ -113,9 +112,9 @@ Start the containers.
 ```bash
 
 # start all the containers
-sudo docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml up -d
+sudo docker compose --env-file $ZKEVM_DIR/.env -f $ZKEVM_DIR/docker-compose.yml up -d
 # or start containers on by one
-sudo docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml up -d <container-name>
+sudo docker compose --env-file $ZKEVM_DIR/.env -f $ZKEVM_DIR/docker-compose.yml up -d <container-name>
 ```
 
 Verify that all containers are up and running: you should see the 5 containers with a status Up.
@@ -148,7 +147,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 Stop containers.
 
 ```bash
-sudo docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml down
+sudo docker compose --env-file $ZKEVM_DIR/.env -f $ZKEVM_DIR/docker-compose.yml down
 ```
 
 ## Extra
