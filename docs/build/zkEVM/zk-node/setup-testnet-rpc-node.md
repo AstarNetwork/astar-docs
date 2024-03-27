@@ -98,6 +98,10 @@ nano $ZKEVM_DIR/config/environments/$ZKEVM_NET/node.config.toml
 Modify the following parameters, you may also want to change the databases default user/passwords for more security.
 
 ```
+[Etherman]
+# Set your own Sepolia RPC URL
+URL = "https://eth-sepolia-public.unifra.io"
+
 # Enable if you want to exploit metrics from nodes
 [Metrics]
 Enabled = true
