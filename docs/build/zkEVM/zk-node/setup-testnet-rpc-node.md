@@ -147,7 +147,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 Stop containers.
 
 ```bash
-sudo docker compose --env-file $ZKEVM_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml down
+sudo docker compose --env-file $ZKEVM_DIR/.env -f $ZKEVM_DIR/docker-compose.yml down
 ```
 
 ## Extra
