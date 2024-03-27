@@ -41,18 +41,10 @@ To add **Astar zkEVM** or any testnet networks to your wallet manually, enter th
 | `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
 </TabItem>
 
-<TabItem value="testnet 1" label="zKatana Testnet">
-| RPC URL | ChainID | Block Explorer URL | Currency |
-| ------------------------------- | ---------------- | ---------------- | ----- |
-| `https://rpc.startale.com/zkatana` | `1261120` | [https://zkatana.explorer.startale.com/](https://zkatana.explorer.startale.com/) | **ETH** |
-| `https://rpc.zkatana.gelato.digital` | `1261120` | [https://zkatana.blockscout.com/](https://zkatana.blockscout.com/) | **ETH** |
-| `https://astar-zkatana-rpc.dwellir.com` | `1261120` | | **ETH** |
-</TabItem>
-
 <TabItem value="testnet 2" label="zKyoto Testnet">
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
-| `https://rpc.startale.com/zkyoto` | `6038361` | [https://astar-zkyoto.blockscout.com](https://astar-zkyoto.blockscout.com) | **ETH** |
+| `https://rpc.startale.com/zkyoto` | `6038361` | [hhttps://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
 | `https://rpc.zkyoto.gelato.digital` | `6038361` | | **ETH** |
 </TabItem>
 
