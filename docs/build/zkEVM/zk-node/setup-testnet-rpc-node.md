@@ -56,7 +56,7 @@ Let's build on this.
 Create dedicated directories for config, install and data.
 
 ```bash
-sudo mkdir -p /etc/zkevm/{install,config} && sudo chown -R $USER:$USER /etc/zkevm
+sudo mkdir -p /etc/zkevm && sudo chown -R $USER:$USER /etc/zkevm
 sudo mkdir -p /var/lib/zkevm/{statedb,pooldb} && sudo chown -R $USER:$USER /var/lib/zkevm/
 ```
 
@@ -65,8 +65,7 @@ Set local variables.
 ```
 # define installation and config path
 ZKEVM_NET=testnet
-ZKEVM_DIR=/etc/zkevm/install
-ZKEVM_CONFIG_DIR=/etc/zkevm/config
+ZKEVM_DIR=/etc/zkevm
 ```
 
 Download and extract the artifacts.
@@ -99,10 +98,6 @@ nano $ZKEVM_DIR/$ZKEVM_NET/config/environments/$ZKEVM_NET/node.config.toml
 Modify the following parameters, you may also want to change the databases default user/passwords for more security.
 
 ```
-[Etherman]
-# Set your own Sepolia RPC URL
-URL = "https://eth-sepolia-public.unifra.io"
-
 # Enable if you want to exploit metrics from nodes
 [Metrics]
 Enabled = true
@@ -113,9 +108,9 @@ Start the containers.
 ```bash
 
 # start all the containers
-sudo docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml up -d
+sudo docker compose --env-file $ZKEVM_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml up -d
 # or start containers on by one
-sudo docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml up -d <container-name>
+sudo docker compose --env-file $ZKEVM_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml up -d <container-name>
 ```
 
 Verify that all containers are up and running: you should see the 5 containers with a status Up.
@@ -148,7 +143,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 Stop containers.
 
 ```bash
-sudo docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml down
+sudo docker compose --env-file $ZKEVM_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml down
 ```
 
 ## Extra
