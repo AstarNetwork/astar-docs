@@ -90,7 +90,7 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 
 </TabItem>
 
-<TabItem value="zKatana" label="zKyoto Network" default>
+<TabItem value="zKyoto" label="zKyoto Network" default>
 
 |   | Public endpoint zKyoto                         |
 | --- |------------------------------------------------|
