@@ -79,7 +79,7 @@ nano docker-compose.yml
 ethereum: 'shibuya:https://<IP address or domain>:<PORT>'
 ```
 
-### zKatana
+### zKyoto
 
 ```sh
 # open docker-compose.yml

@@ -34,7 +34,7 @@ The Shibuya native token symbol is SBY.
 
 To obtain test tokens from the faucet, please visit the Astar Portal and connect to Shibuya. If for any reason the faucet is empty, please contact the Astar team on Discord.
 
-### zKatana (Sepolia)
+### zKatana (Sepolia) - Deprecated
 
 An early iteration of the zkEVM testnet that used zk rollup architecture. Now deprecated.
 
