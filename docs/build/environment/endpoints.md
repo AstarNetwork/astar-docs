@@ -90,17 +90,15 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 
 </TabItem>
 
-<TabItem value="zKatana" label="zKatana Network" default>
+<TabItem value="zKatana" label="zKyoto Network" default>
 
-|   | Public endpoint zKatana |
-| --- | --- |
-| Network | zKatana (zkEVM testnet) |
-| Parent chain | Sepolia |
-| ChainID | 1261120 |
-| HTTPS | Startale Labs: https://rpc.startale.com/zkatana |
-|         | Gelato: https://rpc.zkatana.gelato.digital |
-| Websocket | Gelato: wss://ws.zkatana.gelato.digital |
-| Symbol | ETH |
+|   | Public endpoint zKyoto                         |
+| --- |------------------------------------------------|
+| Network | zKyoto (zkEVM testnet)                         |
+| Parent chain | Sepolia                                        |
+| ChainID | 6038361                                        |
+| HTTPS | Startale Labs: https://rpc.startale.com/zkyoto |
+| Symbol | ETH                                            |
 
 </TabItem>
 </Tabs>

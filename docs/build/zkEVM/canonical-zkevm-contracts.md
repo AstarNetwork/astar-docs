@@ -31,9 +31,6 @@ Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0F
 
 
 </TabItem>
-<TabItem value="testnet2" label="zKatana Testnet">
-coming soon...
-</TabItem>
 <TabItem value="testnet" label="zKyoto Testnet">
 coming soon...
 </TabItem>
@@ -57,9 +54,6 @@ coming soon...
 | Timelock                     | L2 (Astar zkEVM) | `0xbba0935fa93eb23de7990b47f0d96a8f75766d13` |
 | PolygonZkEVMBridge           | L2 (Astar zkEVM) | `0x2a3dd3eb832af982ec71669e178424b10dca2ede` |
 | PolygonZkEVMGlobalExitRootL2 | L2 (Astar zkEVM) | `0xa40d5f56745a118d0906a34e69aec8c0db1cb8fa` |
-</TabItem>
-<TabItem value="testnet2" label="zKatana Testnet">
-coming soon...
 </TabItem>
 <TabItem value="testnet" label="zKyoto Testnet">
 coming soon...
@@ -85,9 +79,6 @@ TODO - refer to a link in CDK Docs which covers which precompiles are available 
 | LayerZero endpoint V2        | L2 (Astar zkEVM)              | `0x1a44076050125825900e736c501f859c50fE728c` | 30257        |
 | LayerZero OFT ASTR           | L2 (Astar zkEVM)              | `0xdf41220C7e322bFEF933D85D01821ad277f90172` | -            |
 | LayerZero NativeOFT ASTR     | L1 (Astar EVM (Substrate))    | `0xdf41220C7e322bFEF933D85D01821ad277f90172` | -            |
-</TabItem>
-<TabItem value="testnet2" label="zKatana Testnet">
-coming soon...
 </TabItem>
 <TabItem value="testnet" label="zKyoto Testnet">
 coming soon...
