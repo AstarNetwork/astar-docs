@@ -44,7 +44,7 @@ To add **Astar zkEVM** or any testnet networks to your wallet manually, enter th
 <TabItem value="testnet 2" label="zKyoto Testnet">
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
-| `https://rpc.startale.com/zkyoto` | `6038361` | [hhttps://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
+| `https://rpc.startale.com/zkyoto` | `6038361` | [https://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
 | `https://rpc.zkyoto.gelato.digital` | `6038361` | | **ETH** |
 </TabItem>
 
