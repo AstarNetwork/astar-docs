@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Introduction
 
-thirdweb is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks
+[thirdweb](https://thirdweb.com/) is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks
 
 ## Prerequisites
 

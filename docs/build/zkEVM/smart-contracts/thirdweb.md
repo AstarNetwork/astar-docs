@@ -5,7 +5,7 @@ sidebar_position: 5
 
 ### Introduction
 
-Thirdweb is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks. Thirdweb supports smart contract development and deployment on Astar EVM-compatible networks, including Astar zkEVM.
+[thirdweb](https://thirdweb.com/) is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks. Thirdweb supports smart contract development and deployment on Astar EVM-compatible networks, including Astar zkEVM.
 
 :::caution
 API keys are required for access to thirdweb infrastructure services.
