@@ -8,7 +8,7 @@ sidebar_position: 5
 
 Yes. visit Polkadot.js, connect your wallet and go to Network > Balances and select the token you are interested in. The example below demonstrates how to view the SDN balance:
 
-![Viewing KSM balance on Shiden Network] (img/1.png)
+![Viewing KSM balance on Shiden Network](img/1.png)
 
 ### Q: I used XCM to transfer 5 DOT from Polkadot to Astar, but only received 4.999
 

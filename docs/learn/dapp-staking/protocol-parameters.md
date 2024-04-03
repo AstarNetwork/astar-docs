@@ -6,7 +6,7 @@ title: dApp Staking Parameters
 ## Overview
 
 The following parameters are tightly tied to dApp staking, however, some parameters are shared with the _Tokenomics 2.0_ model.
-To find out more, please check the documentation [here](/docs/learn/tokenomics2/Inflation.md).
+To find out more, please check the documentation [here](/docs/learn/tokenomics2/Inflation/).
 
 ### Era Reward Span Length
 
