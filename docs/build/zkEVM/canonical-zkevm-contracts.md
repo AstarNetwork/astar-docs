@@ -81,7 +81,8 @@ TODO - refer to a link in CDK Docs which covers which precompiles are available 
 | LayerZero NativeOFT ASTR     | L1 (Astar EVM (Substrate))    | `0xdf41220C7e322bFEF933D85D01821ad277f90172` | -            |
 </TabItem>
 <TabItem value="testnet" label="zKyoto Testnet">
-coming soon...
+| LayerZero endpoint V1        | L2 (Astar zKyoto)    | `0x6098e96a28E02f27B1e6BD381f870F1C8Bd169d3` | 10266        |
+| LayerZero endpoint V2        | L2 (Astar zKyoto)    | `0x6EDCE65403992e310A62460808c4b910D972f10f` | 40266        |
 </TabItem>
 </Tabs>
 
