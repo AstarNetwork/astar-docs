@@ -11,27 +11,27 @@ The extension is available on Chrome, Brave, Edge and Firefox. Download and inst
 ## Create a new account
 
 1.  After installation, select “Get Started” at the onboarding screen.
-![](https://lh7-us.googleusercontent.com/i7OmVc4p1WA5DbIe9-HTTFRKNEJt1jgwO8PVbJ-5A8dEAEjzRVb8SS4VJAr3EEkSF5OfZH6MR_AM-ngm7t2P5uvXcjPYc8OH6YQG__HlfWrNBGipl7OmjbNhFSof548OcyZA52476w8M7icENRP4mys)
+![Multi-chain](https://github.com/0byt/astar-docs/assets/119995565/df6964f6-dc27-43e3-a5ac-633258b8ef9c)
 
-2.  Set a secure password
+3.  Set a secure password
 ![](https://lh7-us.googleusercontent.com/GcSnFv09gmE_zZNnduL6SvQRk_qxAwdpWze16r5OPuLBP5isqRxOjq0hbYXbn6rIds1zEUdm2YjBr9z0ZOtHrGYgBnF8Rm_Z5QvYZfFllHX4MNCjYiV7VLYPXNXrqQ126wul3R71N-hmwxhnGoQYRw4)
 
-3.  Opt in/out of analytics and error reporting
+4.  Opt in/out of analytics and error reporting
 ![](https://lh7-us.googleusercontent.com/2KJHLy0wAqeqtgD2Bjl3yb6LhuKgdMapATn3-P6vvUjyFq-3zkXpX2rljOZ49V3_5RtPdaEp7pMAW1vdWnFdimmu7f6waAs1w7a32KkvCUUmNrR-MWFvPdOkOcBzJHoJG58GY2xKSi1qpFG1eCnBby4)
 
-4.  Select “New”
+5.  Select “New”
 ![](https://lh7-us.googleusercontent.com/S3p9g-LzKpNMmH84jJmY4Nubv89CHKC2ZYaEs5w8yYGioX6YewXonYzAKDiKSO8dL4rVjdLH1_WYwIQqEltfSUk1Pws2_3CObGY--r_13NNSVsw6XtdD6bqloxcXSlE08cxXYfrzUugXZQH1USLbdRk)
 
-5.  Select either “Ethereum” to create an EVM compatible account, or “Polkadot” to create a substrate account. You can create additional accounts later, within the wallet.
+6.  Select either “Ethereum” to create an EVM compatible account, or “Polkadot” to create a substrate account. You can create additional accounts later, within the wallet.
 ![](https://lh7-us.googleusercontent.com/YCr1B5nW0BJqW2vbh6-mwe5Vvuy60SYn8tuCRr0DUN5cQtWvThhMC15zgd5lRmuhD9OMDNuN6HTtVwy57LDooTnE2jtWgBEWmrMtcIb3Ea5VmgFamggJNVPUv1BEZT7m8zZKqMA1JBjwct0AejnlrEw)
 
-6.  Choose an account name and click “Create”
+7.  Choose an account name and click “Create”
 ![](https://lh7-us.googleusercontent.com/1KQo7Mx8dDuZyrxL4cz3V7xeEezkuxUoY9DCrPS6BGFlc5XP0GxZiJkHzv2AUpCNeyyokpbIKDefhUf-b4S37zn4jRMCsGpDREOTEIN47NJ89xbxpithpUJ8avtmSHuYVyBS_-odaA-zhzviPFhjUV8)
 
-7.  You will be presented with your recovery phrase. Make sure to store this recovery phrase in a secure place. An article on how to backup your recovery phrase is available [here](https://docs.talisman.xyz/talisman/navigating-the-paraverse/account-management/back-up-your-secret-phrase). Click continue once you have completed backing up your recovery phrase.
+8.  You will be presented with your recovery phrase. Make sure to store this recovery phrase in a secure place. An article on how to backup your recovery phrase is available [here](https://docs.talisman.xyz/talisman/navigating-the-paraverse/account-management/back-up-your-secret-phrase). Click continue once you have completed backing up your recovery phrase.
 ![](https://lh7-us.googleusercontent.com/vEkPdGb6VYkHoM5xvKlx2xeOl6Y7n8n1lgzSnwoefScNq-93N2Qss-vBijExv4NKrq44JejWWP9JWS7d1ex9qstahH-LXPwhQ2AnqW5lO4qvCDkvXZeHmrusRTzivPy1UwN7cCsIZlOeH-wQJSPFtRE)
 
-8.  You’re ready to use Talisman on Astar now.
+9.  You’re ready to use Talisman on Astar now.
 ![](https://lh7-us.googleusercontent.com/krl8HHHFRzskvlVX-uR2pNHzLiLdHQYxLxKjSfnVUmKptMkvFAQm1jPr1Mn3pmo5r_SMzooNboQecnOXeZRSA5mGQjxY5EUVTFE4zsTjW7SRxjl6GOfL726_mpnTYO7SCXQ6xKwuN3-QLKHR_knBdVE)
 
 # Import account
@@ -40,7 +40,6 @@ The extension is available on Chrome, Brave, Edge and Firefox. Download and inst
 
 1.  Follow the same steps as creating a new account, but instead,
     select “Import” then “Import via JSON”
-
 ![](https://lh7-us.googleusercontent.com/q1Jb8ZB9k_mUBfR_9qzvZMyKuqRosWLEe75PKqPB3ZVJsp6_Lp7yqPgJak8jp7YHIDgSmAvyNWbScWX8LOnaQFJAagB0ebvjclBpc7VYn_10iURVgHtstQo8s94JnJhMaoVWZ4-ZqxPKztOqFqP_KAo)
 
 2.  Choose the JSON file that you exported from P.JS. Thereafter, enter the password that you used to encrypt this JSON file and select "Unlock JSON File". If you have locked accounts will multiple passwords, the JSON importer will prompt you for multiple passwords.
@@ -60,7 +59,6 @@ The extension is available on Chrome, Brave, Edge and Firefox. Download and inst
 **Using recovery phrase/private key**
 1. Repeat steps 1 - 3 outlined above
 2.  Select import then select import via Recovery Phrase
-
 ![](https://lh7-us.googleusercontent.com/I6dZH3A2YmfrgWR4ppNsNdcuompxK5xMYr1kRQb0XfoqmTP2e_vmIaIBOW0j5YRLO1uJDYwVIoMcFgI0TL9R5iYmsNlBIRBNXvwwMI_j0GN70Xy5OviwwaAUab7_kz1SKsDmQ5yN8GkV8tjMpWJkskY)
 
 3.  To import an EVM account, choose Ethereum as your account type (or import a Polkadot account)
@@ -90,7 +88,7 @@ The extension is available on Chrome, Brave, Edge and Firefox. Download and inst
 
 # Send ASTR
 
-   1. Open the popup, select send
+1. Open the popup, select send
 ![](https://lh7-us.googleusercontent.com/MpwTln_Yyn4da50id0C8UeiMAZLNe_DjGWUbjkWL1lKNZpaXX4_nmWQdNSQstz33LM95KrumeYQegznz8pRz77FB2ZpeVJCykyKcDrk8rxkn4Yl4w4Q3kAb5_qpIh5XsVNfzkJy1tn_OhdgupznJp8c)
 
 2. Select the correct token from the list (you can search the token or network name). Check that the token is on the correct network (located under the token name)
