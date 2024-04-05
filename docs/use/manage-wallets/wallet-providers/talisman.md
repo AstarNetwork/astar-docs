@@ -80,7 +80,6 @@ The extension is available on Chrome, Brave, Edge and Firefox. Download and inst
 ![](https://lh7-us.googleusercontent.com/SruT2mBoq6T8p2OKmwpj6VynPDPkF3wJYByDvYniRigEkohXKjztpFxkOAUt2k5_i9UwhshB8DmCsThNYfippXA_b_CVdJ6v93QY68mL3tsQUBA-nfOHYqCcAusffF_4r2jwpSOP7uyCVp-eX07fNLM)
 
 2. You will be presented with a drop-down list, select the ASTR token on the network you will be receiving the tokens on ( such as Ethereum or Substrate). Make sure to select the correct network, indicated under the token name.
-   
 ![](https://lh7-us.googleusercontent.com/v9SabVXxVPOBnrwqgH7051moC8O9WHv25ZftbCL87Nznr1tBckRwLwO7o6P7t-M5XnWowVkzG-NPDEOPWygmbBNJ2igrTEjzakPyqoD-62ga_2qlTab-4ooL2bfHkX2RYET85uMxpsFwwxiqYPoZolw)
 
 3. Select the account you will be receiving the tokens in
@@ -92,8 +91,6 @@ The extension is available on Chrome, Brave, Edge and Firefox. Download and inst
 # Send ASTR
 
    1. Open the popup, select send
-    
-
 ![](https://lh7-us.googleusercontent.com/MpwTln_Yyn4da50id0C8UeiMAZLNe_DjGWUbjkWL1lKNZpaXX4_nmWQdNSQstz33LM95KrumeYQegznz8pRz77FB2ZpeVJCykyKcDrk8rxkn4Yl4w4Q3kAb5_qpIh5XsVNfzkJy1tn_OhdgupznJp8c)
 
 2. Select the correct token from the list (you can search the token or network name). Check that the token is on the correct network (located under the token name)
@@ -114,7 +111,6 @@ The extension is available on Chrome, Brave, Edge and Firefox. Download and inst
 # Connect to dApp
 
 1. Head to [Astar Portal](https://portal.astar.network/), you will be prompted to connect your wallet.
-
 ![](https://lh7-us.googleusercontent.com/pR7hCuxznW-_fSCQOKH44gEyplpP2lpzGa7A50BX7qlBcapMJuL9fdyQQBzpYRCe1MmJstbALKdT7N_-ujY-88-kjYtVizAk_YLjZuhHLmrjSZNtTzpL7tYIWAaNa0Yo5-7aXliVO3NTpkD4o5626tU)
 
 2. To connect an Ethereum account, select Talisman under EVM accounts.
@@ -143,7 +139,6 @@ The extension is available on Chrome, Brave, Edge and Firefox. Download and inst
 4.  Enter the amount you’d like to stake (minimum staking amount is 500 Astr) and choose the dApp from the dropdown menu. Thereafter, click “Stake” after you’ve reviewed your transaction
    
 Please note: there is an unbonding period of 9 days on Astar
-
 ![](https://lh7-us.googleusercontent.com/HG6fdBVVIyhfcK6Ed3FqXM39Uyn-nkHE9xI6G-Vq7vNVyMXiCy2CFSPgINYF1k5xFpzSBX75jvn_mGsW-YkYN_QoQaqQL-Pd-BKziykL4FPQIgJTrCpo5L2XGzs8K7EuNnx8k6C08iH4BBEshrRii-Q)
 
 5.  From the “positions” tab, you can see your staking position
