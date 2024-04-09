@@ -28,7 +28,7 @@ You can find more details on the various functions available to you when interac
 
 ## Pyth on Astar zkEVM
 
-The Pyth Network smart contract is available at the following address: [0xA2aa501b19aff244D90cc15a4Cf739D2725B5729](https://zkatana.explorer.startale.com/address/0xA2aa501b19aff244D90cc15a4Cf739D2725B5729).
+The Pyth Network smart contract is available at the following address: [0xA2aa501b19aff244D90cc15a4Cf739D2725B5729](https://zkatana.blockscout.com/address/0xA2aa501b19aff244D90cc15a4Cf739D2725B5729).
 
 You may also refer to this [page](https://docs.pyth.network/documentation/pythnet-price-feeds/evm) to find the various Pyth contracts.
 
