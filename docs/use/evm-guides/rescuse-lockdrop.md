@@ -2,8 +2,11 @@ import lockdropaccount from "/docs/build/img/lockdropacc.png"
 
 # Regaining Access to Lockdrop Accounts
 
-Due to potential security issues, the use of lockdrop accounts was discontinued, leaving some users unable to access their funds if they hadn't withdrawn them within the provided short window. We're updating Shiden and Astar to restore access to these lockdrop accounts. The steps to reconnect your lockdrop account remain unchanged:
+We want to remind our users that lockdrop accounts were specifically created for the purpose of claiming ASTR lockdrop rewards and were not intended for ongoing transactions or use as regular accounts. Importantly, access to these accounts was disabled one and a half years following the claim period, impacting users who had not withdrawn their funds within this extended timeframe.
 
+To support our users in accessing their funds, we are temporarily updating Shiden and Astar to restore access to these lockdrop accounts. This initiative represents a limited support window aimed at facilitating the withdrawal of funds from a feature that is gradually being phased out.
+
+### Reconnecting Your Lockdrop Account:
 1. Visit the Astar portal.
 2. Log in using your Ethereum lockdrop address.
 3. Select "Switch to lockdrop account."
@@ -17,12 +20,11 @@ Due to potential security issues, the use of lockdrop accounts was discontinued,
 
 :::caution
 
-Please note that the access will be discontinued in 6 months, so move your funds ASAP.
+Please note that the access will be discontinued 31-Aug 2024, so move your funds ASAP.
 
-Transfer all your assets to a new address under your control, whether it's an EVM or Native address. We always advise testing with a small transaction first.
+Be aware that engaging in transactions from lockdrop accounts incurs higher fees than usual. This is specific to the use of lockdrop accounts and underlines the need of transferring your funds out of this account.     
 
-Please note, transaction fees for the following actions are temporarily increased to facilitate the transfer of funds to a new address without regular use:
-
+Every call implying moving of funds are possible in Astar Portal:
 - Native transfer
 - Asset transfer
 - dApp Staking unbond and withdraw
