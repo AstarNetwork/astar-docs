@@ -1,8 +1,12 @@
 ---
 sidebar_position: 0
-title: ローカル環境における zkNode のセットアップ
-sidebar_label: ローカル環境における zkNode のセットアップ
+title: ローカル Rollup ノードのセットアップ
+sidebar_label: ローカル Rollup ノードのセットアップ
 ---
+
+:::info
+ZK の Rollup バージョンは、Astar zKatana 環境で使用されます。
+:::
 
 :::warning
 [issue](https://github.com/etherum/go-ethereum/issues/27274) が開いているため、ローカルノードの実行中に問題が発生する可能性があります。
