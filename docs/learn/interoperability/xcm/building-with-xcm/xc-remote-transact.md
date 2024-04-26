@@ -4,18 +4,20 @@ sidebar_position: 6
 
 # Remote Transact via XCM
 
-:::warning
+:::danger
+This section contains contents for developers only.
 
-XCM message format is not meant be used by normal user, these are low level instructions and can easily cause loss of funds if used without proper knowledge.
-It's advised for normal users to use DApps and tooling build around XCM instead. The section below is targeted for developers only.
+XCM message format is generally used for low level instruction and information exchange between parachains and can cause loss of funds if used improperly.
+
+Network users are advised to use dApps and tooling built around XCM instead. 
 
 :::
 
 ## Feature Overview
 
-The XCM `Transact` instruction allows the sender to execute arbitrary calls on the destination chain. This feature is extremely useful since it allows us to control an account on a remote chain.
+The XCM `Transact` instruction allows the sender to execute arbitrary calls on the destination chain. This feature is extremely useful since it allows us to control accounts on a remote chain.
 
-For example, a user is able to send a `Transact` instruction from **Astar** to **Polkadot** that will transfer `DOT` from the user's derived account on **Polkadot** to an arbitrary receiver account on **Polkadot**. The user doesn't need to interact directly with the **Polkadot** chain in this case, but nevertheless is able to change its state. It's important to note that this is only an example - any call that can be interpreted by the remote (destination) chain is able to be sent and executed.
+For example, a user can send a `Transact` instruction from **Astar** to **Polkadot** that transfers `DOT` from their derived account on **Polkadot** to an arbitrary receiver account on **Polkadot**. They don't need to interact directly with the **Polkadot** chain, but nevertheless are able to change its state. It's important to note that this is only one example - any call that can be interpreted by the remote (destination) chain is able to be sent and executed.
 
 This is of particular use for smart contracts, since it allows them to integrate custom logic for cross-chain interoperability.
 
@@ -23,7 +25,7 @@ It's important to understand the difference between sending an XCM instruction s
 
 Sending an XCM transaction from `Astar` or `Shiden` to a remote chain may be successful on the sender side, but fail to execute on the destination, and the same is true for the opposite scenario. This can happen for multiple reasons - the XCM sequence might be incorrect, the remote chain doesn't know how to inrerpret the provided `call`, or the remote chain doesn't allow remote execution, at all.
 
-The developer or user must ensure that the destination chain supports the encoded call and remote transactions, in general.
+The developer or user must ensure that the destination chain supports the encoded call and remote transactions, in general, before they initiate the XCM transaction.
 
 ## Remotely Transact on Astar/Shiden/Shibuya
 
