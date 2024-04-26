@@ -49,6 +49,10 @@ To add tokens to your EVM wallet manually, use the following contract addresses:
 
 ### From Astar zkEVM to Astar EVM:
 
+:::warning
+Please note that it takes up to **8 days** to complete a transfer from Astar zkEVM to Astar EVM.
+:::
+
 1. Select the token that you want to transfer and select `Astar zkEVM` for the **source network**;
 2. Select the token that you want to receive and select `Astar EVM` for the **destination network**;
 3. Enter the amount of tokens you want to transfer and confirm the transaction by clicking `Transfer`;  

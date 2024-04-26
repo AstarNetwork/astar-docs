@@ -8,7 +8,7 @@ import Figure from "/src/components/figure"
 
 # Ethereum および他の EVM ベースのチェーンから Astar zkEVM へのブリッジ
 
-このページでは、**Astar zkEVM**と**Ethereum メインネット**および他の EVM ベースのチェーン間で`ETH`および他の`ERC20`資産を転送する方法について説明します。zkEVM への資産のブリッジには 3 つのオプションがあります。
+このページでは、**Astar zkEVM**と**Ethereum メインネット**および他の EVM ベースのチェーン間で`ETH`および他の`ERC20`資産を転送する方法について説明します。zkEVM への資産のブリッジには 2 つのオプションがあります。
 
 ## Astar Portal を使用した転送:
 
@@ -96,39 +96,3 @@ import Figure from "/src/components/figure"
 
 5. ウォレットでトランザクションに署名します。
 6. ネットワーク上でトランザクションが確認されたら、Astar zkEVMで使用する準備ができたEVMウォレットにブリッジされた資産が表示されます。
-
-## Relay Link を使用した転送:
-
-3つ目のオプションは、**[Relay Link](https://www.relay.link/bridge/astar-zkevm/)** を使用することです。これは、即時かつ低コストでブリッジングとクロスチェーン実行を可能にするクロスチェーン決済システムです。[詳細情報](https://docs.relay.link/what-is-relay)。
-
-
-*第三者のアプリケーションを利用することによって生じる直接的、間接的、偶発的、特別、結果的、または模範的な損害について、Astar Foundationは一切の責任を負わないことをご了承ください。*
-
-:::info
-現時点では、Relay Linkはクロスチェーン転送に **ETHトークン** のみをサポートしています！
-
-以下のチェーンからAstar zkEVMへの資産転送が可能です：
-- Ethereum
-- Arbitrum
-- Optimism
-- zkSync Era
-- Base
-- Blast
-:::
-
-1. [Relay Link](https://www.relay.link/bridge/astar-zkevm/) にアクセスし、あなたのEVMウォレットを接続してください。
-
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_1.png').default} width="70%" />
-
-2. 資産を転送したい**送信元チェーン**を選択し、**送信先チェーン**には `Astar zkEVM` を選択します。
-3. 転送したいETHの量を入力し、 `Bridge` をクリックしてトランザクションを確認します。
-
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_2.png').default} width="70%" />
-
-4. ウォレットでトランザクションに署名します。
-
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_3.png').default} width="70%" />
-
-5. ネットワーク上でトランザクションが確認されたら、Astar zkEVMで使用する準備ができたEVMウォレットにブリッジされた資産が表示されます。
-
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_4.png').default} width="70%" />
