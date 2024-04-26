@@ -22,6 +22,10 @@ import Figure from "/src/components/figure"
 
 ### Astar EVMからAstar zkEVMへ:
 
+:::warning
+Astar zkEVMからAstar EVMへの移行を完了するには、最大**8日**かかりますのでご注意ください。
+:::
+
 1. 転送したいトークンを選択し、**送信元ネットワーク**として`Astar EVM`を選択してください。
 2. 受け取りたいトークンを選択し、**送信先ネットワーク**として`Astar zkEVM`を選択してください。
 3. 転送したいトークンの量を入力し、`Transfer`をクリックしてトランザクションを確認してください。

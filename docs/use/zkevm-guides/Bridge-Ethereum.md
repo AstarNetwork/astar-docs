@@ -7,7 +7,7 @@ import Figure from "/src/components/figure"
 
 # Bridge Assets to Astar zkEVM from Ethereum and other EVM-based chains
 
-This page explains how to transfer `ETH` and other `ERC20` assets between **Astar zkEVM** and **Ethereum Mainnet** and other EVM-based chains. There are three options for bridging assets to the zkEVM:
+This page explains how to transfer `ETH` and other `ERC20` assets between **Astar zkEVM** and **Ethereum Mainnet** and other EVM-based chains. There are two options for bridging assets to the zkEVM:
 
 ## Transfer using the Astar Portal:
 
@@ -99,39 +99,3 @@ For the moment, Layerswap supports only **ETH token** for cross-chain transfers!
 
 5. Sign the transaction in your wallet;
 6. Once the transaction has been confirmed on the network, you should now see the bridged assets in your EVM wallet, ready for use on Astar zkEVM.
-
-## 3. Transfer using Relay Link:
-
-The third option is to use **[Relay Link](https://www.relay.link/bridge/astar-zkevm/)**, a cross-chain payments system that enables instant, low-cost bridging and cross-chain execution. [More information](https://docs.relay.link/what-is-relay).
-
-_Please be advised that Astar Foundation assumes no responsibility or liability for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from your utilization of any third-party application presented in our documentation._
-
-:::info
-For the moment, Relay Link supports only **ETH token** for cross-chain transfers!
-
-You can transfer assets to Astar zkEVM from the following chains:
-
-- Ethereum
-- Arbitrum
-- Optimism
-- zkSync Era
-- Base
-- Blast
-  :::
-
-1. Visit [Relay Link](https://www.relay.link/bridge/astar-zkevm/) and connect your EVM wallet;
-
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_1.png').default} width="70%" />
-
-2. Select the **origin chain** from which you want to transfer your assets, and select `Astar zkEVM` for the **destination chain**;
-3. Enter the amount of ETH you want to transfer and confirm the transaction by clicking `Bridge`;
-
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_2.png').default} width="70%" />
-
-4. Sign the transaction in your wallet;
-
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_3.png').default} width="70%" />
-
-5. Once the transaction has been confirmed on the network, you should now see the bridged assets in your EVM wallet, ready for use on Astar zkEVM.
-
-<Figure src={require('/docs/use/zkevm-guides/img/Bridge_ETH_Relaylink_4.png').default} width="70%" />
