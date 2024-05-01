@@ -55,7 +55,7 @@ If an user stake on dApp(s) during the **Voting Subperiod** and keep the same st
 
 :::
 
-During the **Build&Earn Subperiod**, if an users unstakes his tokens from a dApp where he is eligible for a **Bonus Reward**, he will no longer be eligible for the **Bonus Reward** for that dApp.
+During the **Build&Earn Subperiod**, if an user unstakes his tokens from a dApp where he is eligible for a **Bonus Reward**, he will no longer be eligible for the **Bonus Reward** for that dApp.
 
 :::info
 
