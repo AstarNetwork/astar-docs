@@ -7,6 +7,11 @@ We want to remind our users that lockdrop accounts were specifically created for
 To support our users in accessing their funds, we are temporarily updating Shiden and Astar to restore access to these lockdrop accounts. This initiative represents a limited support window aimed at facilitating the withdrawal of funds from a feature that is gradually being phased out.
 
 ### Reconnecting Your Lockdrop Account:
+
+#### Prerequesite:
+The EVM address will be used to dispatch the call on behalf of the lockdrop account. Please ensure that the **EVM address holds native tokens (ASTR or SDN) to cover gas fees** for the dispatch call.
+
+#### Steps:
 1. Visit the Astar portal.
 2. Log in using your Ethereum lockdrop address.
 3. Select "Switch to lockdrop account."
