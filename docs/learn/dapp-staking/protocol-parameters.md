@@ -71,6 +71,14 @@ There are two types of thresholds:
 * `Fixed` - threshold has a fixed value and doesn't change
 * `Dynamic` - threshold has an initial value, which changes dynamically as the number of slots change, but also has a minimum allowed value.
 
+### Price Aggregation Duration
+
+Time period, expressed in blocks, during which native currency price is aggregated. When expired, average value is calculated and stored into the _moving-average_ circular buffer.
+
+## Circular Buffer Length
+
+Length of the circular buffer used to implement the _moving-average_ solution.
+
 ## Network Values
 
 | Parameter name                 | Astar                 | Shiden                | Shibuya              |
@@ -86,7 +94,9 @@ There are two types of thresholds:
 | Number Of Tiers                | 4                     | 4                     | 4                    |
 | Reward Distribution            | [25%, 47%, 25%, 3%]   | [25%, 47%, 25%, 3%]   | [40%, 30%, 20%, 10%] |
 | Slot Portions                  | [5%, 20%, 30%, 45%]   | [5%, 20%, 30%, 45%]   | [10%, 20%, 30%, 40%] |
-| Tier 1 Threshold               | Dynamic(300M/200M ASTR) | Dynamic(3M/2M SDN) | Dynamic(3000/2500 SBY) |
-| Tier 2 Threshold               | Dynamic(75M/50M ASTR) | Dynamic(750k/500k SDN) | Dynamic(2000/1500 SBY) |
-| Tier 3 Threshold               | Dynamic(20M/15M ASTR) | Dynamic(200k/150k SDN) | Dynamic(800/500 SBY) |
+| Tier 1 Threshold               | Dynamic(300M/200M ASTR) | Dynamic(3M/2M SDN)  | Dynamic(3000/2500 SBY) |
+| Tier 2 Threshold               | Dynamic(75M/50M ASTR) | Dynamic(750k/500k SDN)| Dynamic(2000/1500 SBY) |
+| Tier 3 Threshold               | Dynamic(20M/15M ASTR) | Dynamic(200k/150k SDN)| Dynamic(800/500 SBY) |
 | Tier 4 Threshold               | Fixed(1.5M ASTR)      | Fixed(50k SDN)        | Fixed(200 SBY)       |
+| Price Aggregation Duration     | 7200 blocks           | 7200 blocks           | 7200 blocks          |
+| Circular Buffer Length         | 7                     | 7                     | 7                    |
