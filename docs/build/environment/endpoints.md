@@ -101,4 +101,16 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 | Symbol | ETH                                            |
 
 </TabItem>
+
+<TabItem value="zkEVM" label="Astar zkEVM" default>
+
+|   | Public endpoint Astar zkEVM                         |
+| --- |------------------------------------------------|
+| Network | Astar zkEVM                       |
+| Parent chain | Ethereum                                        |
+| ChainID | 3776                                        |
+| HTTPS | Startale Labs: https://rpc.startale.com/astar-zkevm |
+| Symbol | ETH                                            |
+
+</TabItem>
 </Tabs>
