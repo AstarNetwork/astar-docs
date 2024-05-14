@@ -6,15 +6,13 @@ sidebar_label: Quickstart
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import metamask from '/docs/build/zkEVM/img/metamask-network.png'
-import zkHeader from '/docs/build/img/zkHeader.png'
+import evmHeader from '/docs/build/img/evm.png'
 
 <div style={{textAlign: 'center'}}>
-    <img src={zkHeader} style={{width: 1200}} />
+    <img src={evmHeader} style={{width: 1200}} />
 </div>
 
 Astar L1 EVM is the Virtual machine on Astar parachain, connected to Polkadot. It is a fully EVM-compatible environment that allows developers to deploy and run smart contracts on the Astar network.
-
-Solidity developers are right at home on Astar L1 EVM. Simply switch to the EVM RPC, and start building!
 
 :::info Reminder
 No special tools or wallets are required to build or interact with Astar L1 EVM. All your favorite EVM building tools will work out of the box.
@@ -52,11 +50,11 @@ To add the network to MetaMask you can either use the data above, or find a link
 
 ## Bridging Assets
 
-To move assets from Astar Native to Astar L1 EVM use [Astar Network portal]("https://portal.astar.network/").
+To move assets from Astar Native to Astar L1 EVM use [Astar Network portal](https://portal.astar.network/).
 
-To move assets from Ethereum to Astar L1 EVM use [cBridge]("https://cbridge.celer.network/").
+To move assets from Ethereum to Astar L1 EVM use [cBridge](https://cbridge.celer.network/).
 
-To get Testnet tokens use faucet on [Astar Network portal]("https://portal.astar.network/").
+To get testnet tokens (SBY) use faucet on [Astar Network portal](https://portal.astar.network/).
 
 ## Deploying Smart Contracts
 
