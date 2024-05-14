@@ -25,19 +25,19 @@ No special tools or wallets are required to build or interact with Astar L1 EVM.
 To add **Astar L1 EVM** or any testnet networks to your wallet manually, enter the following details:
 <Tabs>
 
-<TabItem value="astarL1" label="Astar L1 EVM">
+<TabItem value="astar" label="Astar L1 EVM">
 | RPC URL | ChainID | Block Explorer URL | WebSocket | Currency |
 | ------------------------------- | ---------------- | ---------------- |  ------------------------------- |----- |
 | `https://evm.astar.network` | `592` | [https://astar.blockscout.com/](https://astar.blockscout.com/) | `wss://rpc.astar.network` | **ASTR** |
 </TabItem>
 
-<TabItem value="shidenL1" label="Shiden Network">
+<TabItem value="shiden" label="Shiden Network">
 | RPC URL | ChainID | Block Explorer URL | WebSocket | Currency |
 | ------------------------------- | ---------------- | ---------------- |  ------------------------------- |----- |
 | `https://evm.shiden.astar.network` | `336` | [https://shiden.blockscout.com/](https://shiden.blockscout.com/) | `wss://rpc.shiden.astar.network` | **SDN** |
 </TabItem>
 
-<TabItem value="shibuyaL1" label="Shiden Network">
+<TabItem value="shibuya" label="Shibuya Network">
 | RPC URL | ChainID | Block Explorer URL | WebSocket | Currency |
 | ------------------------------- | ---------------- | ---------------- |------------------------------- | ----- |
 | `https://evm.shibuya.astar.network` | `81` | [https://shibuya.blockscout.com/](https://shibuya.blockscout.com/) | `wss://rpc.shibuya.astar.network` |**SBY** |
@@ -52,12 +52,15 @@ To add the network to MetaMask you can either use the data above, or find a link
 
 ## Bridging Assets
 
-To move assets from Astar Native to Astar L1 EVM use Astar Network Portal.
-To move assets from Ethereum to Astar L1 EVM use cBridge.
+To move assets from Astar Native to Astar L1 EVM use [Astar Network portal]("https://portal.astar.network/").
+
+To move assets from Ethereum to Astar L1 EVM use [cBridge]("https://cbridge.celer.network/").
+
+To get Testnet tokens use faucet on [Astar Network portal]("https://portal.astar.network/").
 
 ## Deploying Smart Contracts
 
-The development experience on Astar L1 EVM is seamless and identical to the Ethereum Virtual Machine. The EVM Developers building on Astar can use their existing code and tools to deploy on Astar, and dApp users will benefit from higher transaction throughput and lower fees. Read more about deploying smart contracts on the zkEVM [here.](/docs/build/EVM/infra/)
+The development experience on Astar L1 EVM is seamless and identical to the Ethereum Virtual Machine. The EVM Developers building on Astar can use their existing code and tools to deploy on Astar. Read more about using smart contracts on the Astar L1 EVM [here.](/docs/build/EVM/infra/)
 
 ## Astar zkEVM Support for Developers
 
