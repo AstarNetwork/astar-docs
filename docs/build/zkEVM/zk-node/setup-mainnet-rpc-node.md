@@ -24,8 +24,9 @@ Storage space requirements will increase as the network grows.
 
 ### Prerequisites
 
-This tutorial requires `docker` and `docker-compose` to be installed on your machine. If you don’t have these installed, check out the links provided below:
+This tutorial requires the latest version of `go`, `docker` and `docker-compose`. **Do not** use the versions included with your OS distribution; follow the instructions to *remove those* as necessary, and install the latest versions.
 
+- [https://go.dev/doc/install](https://go.dev/doc/install)
 - [https://www.docker.com/get-started](https://www.docker.com/get-started)
 - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
