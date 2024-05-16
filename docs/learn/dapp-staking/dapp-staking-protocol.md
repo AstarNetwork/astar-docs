@@ -245,7 +245,7 @@ The amount isn't static but is recalculated at the start of each period.
 Since the purpose of dApp staking isn't for dApps to earn obscene amounts of rewards, but to provide
 support to operate and further develop existing dApp, number of slots is scaled with the value of **ASTR** expressed in **USD**.
 
-At the beginning of each period, using the average **ASTR** price during the former period, new number of slots is calculated:
+At the beginning of **each era**, using the _moving average_ **ASTR** price, new number of slots is calculated:
 
 $ number\_of\_slots_{Astar} = floor(1000 * ASTR_{USD} + 50)$
 
@@ -323,3 +323,17 @@ However, this should not be a problem given how the system is designed.
 There is no longer _stake&forget_ - users are expected to revisit dApp staking at least at the
 beginning of each new period to pick out old or new dApps on which to stake on.
 If they don't do that, they miss out on the bonus reward & won't earn any staker rewards.
+
+### Oracle Price Feed
+
+Tier slots, thresholds and rewards need to be adjusted for the native currency price. This has been mentioned in previous chapters. E.g. if price of the **ASTR** goes up, the protocol can accommodate more dApps, and vice-versa.
+
+This is done in multiple steps:
+
+1. Permissioned oracle feeds the native currency price on-chain.
+2. Price is aggregated over the defined time period (e.g. the entire day), and average value is calculated.
+3. Aggregated price is stored into a circular buffer used to calculate moving average.
+4. dApp staking tier configuration re-calculation relies on the moving average price.
+
+The _moving-average_ approach is utilized to soften the impact of crypto's high price volatility.
+It's important to keep the _window_ small enough to be able to react to price changes in timely manner, but long enough to _dampen_ sudden & temporary spikes.
