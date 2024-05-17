@@ -1,20 +1,22 @@
 ---
-sidebar_position: 9
-title: Ledger Astar/Shiden EVM on MetaMask
+sidebar_position: 1
+sidebar_label: Ledger for Astar EVM
+title: Interact with Ledger on Astar EVM using MetaMask
 ---
 
 import Figure from '/src/components/figure'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-## Using Astar and Shiden EVM Ledger apps with MetaMask
+## Introduction
 
-## Intro
+**Ledger devices** can be used on **Astar EVM Network** to perform and sign transactions using the Ledger default `Ethereum` application.  
+This means that MetaMask users can now sign transactions for EVM accounts on Astar Network using Ledger Nano S (plus) or Ledger X devices.
 
-**Astar EVM** and **Shiden EVM** apps are now available on Ledger hardware wallet devices. This means that MetaMask users can now sign transactions for EVM accounts on those networks using Ledger Nano S (plus) or Ledger X devices.
-
-This guide will show you how to set up Astar EVM and Shiden EVM on your Ledger hardware wallet and how to use it in combination with MetaMask.
+This guide will show you how to set up **Astar EVM** on your Ledger hardware wallet and how to use it in combination with **MetaMask**.
 
 :::info
-Photos are taken using Nano S Plus device, and the example shows interaction with Astar EVM app, but the process is the same with Nano S and Nano X devices, as well as Shiden EVM app.
+Photos are taken using Nano S Plus device, and the example shows interaction with Ethereum app, but the process is the same with Nano S and Nano X devices.
 :::
 
 ## Requirements
@@ -29,67 +31,65 @@ Photos are taken using Nano S Plus device, and the example shows interaction wit
 - [Download and install Ledger Live app for your OS](https://support.ledger.com/hc/en-us/articles/4404389606417-Download-and-install-Ledger-Live?docs=true)
 - [Download and install MetaMask for your browser](https://metamask.io/download/)
 
-### Astar/Shiden network set up on Metamask
+### Astar Network set up on Metamask
 
 If you already have this, feel free to skip this part.
 
-1. In the MetaMask menu navigate to Settings → Networks, and click “Add a network”
-2. Enter following details for Astar:
-   1. Network name: `Astar Network Mainnet`
-   2. New RPC URL:<br />
-  `https://astar.public.blastapi.io/`<br />
-  `https://astar-rpc.dwellir.com/`<br />
-  `https://astar.api.onfinality.io/public`
-   3. Chain ID: `592`
-   4. Currency Symbol: `ASTR`
-   5. Block Explorer URL(Optional): `https://astar.subscan.io/`
-3. Click the “Save” button
-4. Repeat steps 1-3 for Shiden network with following details:
-   1. Network name: `Shiden Network Mainnet`
-   2. New RPC URL:<br />
-    `https://shiden.public.blastapi.io`<br />
-    `https://shiden-rpc.dwellir.com`<br />
-    `https://shiden.api.onfinality.io/public`
-   3. Chain ID: `336`
-   4. Currency Symbol: `SDN`
-   5. Block Explorer URL(Optional): `https://shiden.subscan.io/`
-5. Close the Settings menu and from the dropdown select the network you wish to interact with
+1. In the MetaMask menu, navigate to `Settings` → `Networks`, and click **Add a network**;
+2. Enter following details:
 
-### Install apps to your Ledger device
+<TabItem value="astar" label="Astar Network" default>
+    |   | Public endpoint Astar |
+    | --- | --- |
+    | Network name | Astar Network |
+    | New RPC URL | Astar Team: https://evm.astar.network |
+    |         | BlastAPI: https://astar.public.blastapi.io |
+    |         | Dwellir: https://astar-rpc.dwellir.com |
+    |         | OnFinality: https://astar.api.onfinality.io/public |
+    | Chain ID | 592 |
+    | Currency symbol | ASTR |
+    | Block Explorer URL | https://astar.blockscout.com/ |
+</TabItem>
+<br></br>
 
-1. Open Ledger Live app and navigate to “Manager”
-2. Connect your Ledger Device and unlock it
-   1. If asked, confirm Ledger Manager on your device
-3. Search for “Astar EVM” or “Shiden EVM” in the app catalog
-4. Click install
+3. Close the `Settings` menu and, from the drop-down menu, select the network you wish to interact with.
 
-After this step, you should have one or both of these apps:
+### Install Ethereum app to your Ledger device
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/1-AstarEVM.jpg').default} height='200px' />
+1. Open **My Ledger** in Ledger Live.
+2. Connect and unlock your Ledger device.
+    If asked, allow `My Ledger` to access your device.
+3. Search for **Ethereum** in the app catalog.
+4. Click Install. 
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/2-ShidenEVM.jpg').default} height='400px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/ledger-live-ethereum.png').default} width="80%" />
+
+After this step, you should have the Ethereum app installed:
+
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/ledger-ethereum-app.png').default} width="60%" />
+
 
 ## Connecting your Ledger device to MetaMask
 
-1. In MetaMask menu select “Connect Hardware wallet:
+1. In MetaMask menu, select **Connect Hardware wallet**;
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/connect_hw_wallet.png').default} height='400px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/ledger-ethereum-app_2.png').default} width="70%" />
 
-2. On the next screen select “Ledger” and click “Continue:
+2. On the next screen select **Ledger** and click **Continue**;
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/select_ledger.png').default} height='400px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/ledger-ethereum-app_3.png').default} width="70%" />
 
-3. Pair and connect your Device when prompted by the browser:
+3. Pair and **Connect** your Device when prompted by the browser;
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/pair_hid.png').default} height='400px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/ledger-ethereum-app_4.png').default} width="70%" />
 
-4. Select an account you wish to connect and click “Unlock”:
+4. Select an account you wish to connect and click **Unlock**;
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/select_acc.png').default} height='400px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/ledger-ethereum-app_5.png').default} width="70%" />
 
 5. You should now see your account and balance:
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/acc_balance.png').default} height='400px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/ledger-ethereum-app_6.png').default} width="70%" />
 
 # Receiving tokens
 
@@ -97,17 +97,17 @@ To receive tokens, copy the address of your connected account by clicking your a
 
 # Sending tokens
 
-1. In MetaMask click “Send” button and enter the address you wish to send to
-2. Enter the amount to send and click “Next”
-3. Connect your Ledger device and unlock it. Due to MetaMask limitations, it will prompt you to open Ethereum App. Ignore this and open Astar EVM app.
+1. In MetaMask, click **Send** button and enter the address you wish to send to;
+2. Enter the amount to send and click **Next**;
+3. Connect your Ledger device and unlock it;
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/confirm_tx.png').default} height='400px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/ledger-ethereum-app_7.png').default} width="80%" />
 
-4. When your Ledger device screen is showing “Application is ready”, click “Confirm” in MetaMask:
+4. When your Ledger device screen is showing `Application is ready`, click **Confirm** in MetaMask;
 
 <Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/3-ApplicationIsReady.jpg').default} height='200px' />
 
-5. Review the transaction on your Ledger device:
+5. Review the transaction on your Ledger device;
 
 <Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/4-ReviewTransaction.jpg').default} height='200px' />
 
@@ -130,13 +130,13 @@ To receive tokens, copy the address of your connected account by clicking your a
 
 <Figure src={require('/docs/build/integrations/wallets/ledger/img/evm/12-Reject.jpg').default} height='200px' />
 
-6. Check the transaction result in MetaMask “Activity” tab.
+6. Check the transaction result in MetaMask `Activity` tab.
 
 ## Interacting with smart contracts
 
 In order to interact with smart contracts, you need to enable blind signing in the Astar EVM app on your Ledger device:
 
-1. Open the app
-2. Navigate to “Settings” and confirm
-3. Confirm the “Blind signing” option, so it turns to “Enabled”
-4. Navigate to “Back” and confirm
+1. Open the app;
+2. Navigate to `Settings` and **Confirm**;
+3. Confirm the `Blind signing` option, so it turns to `Enabled`;
+4. Navigate to `Back` and **Confirm**.

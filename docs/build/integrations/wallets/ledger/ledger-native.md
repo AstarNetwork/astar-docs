@@ -1,84 +1,101 @@
 ---
-sidebar_position: 10
-title: Ledger for Astar Native Accounts
+sidebar_position: 2
+sidebar_label: Ledger for Astar Native
+title: Interact with Ledger using Astar Native Accounts
 ---
 import Figure from "/src/components/figure"
 
-# Using a Ledger device with Astar Native Accounts
+## Introduction
 
-Astar Native app is an app integrated with Ledger that users can use a ledger device as an account and sign transactions for substrate accounts. **Ledger Live is not supported hence user will not be able to create an account with Ledger Live**.
+**Astar Native app** is an app integrated with Ledger that users can use a ledger device as an account and sign transactions for substrate accounts.  
+
+- [Release Version `2.83.0` by Zondax](https://github.com/Zondax/ledger-astar/releases/tag/v2.83.0) 
+
+**Ledger Live is not supported hence user will not be able to create an account with Ledger Live**.
 
 :::danger
-At the time of this release, the following operations are **NOT SUPPORTED:** on Ledger devices:
+At the time of this release (Version `2.83.0`), the following operations are **NOT SUPPORTED** on Ledger devices:
+
+- **EVM withdrawal**: It is not possible to claim tokens from the Astar EVM side.
 - **XCM transfers**
+- **Vesting**
 :::
 
-This tutorial walks through the process of setting up a Ledger device to participate in dApp staking using ASTR native tokens, initiating the first interaction between the device and the network, and also explains some limitations of using Ledger devices with the native dApp staking system.
+This tutorial describes the process of configuring a Ledger device to manage assets, connect to the Astar portal and participate in dApp staking using native ASTR tokens. It also includes the initiation of the first interaction between the device and the network.
 
-### Before staking, confirm that:
-1. Ledger Live is up to date, and the Astar app is installed.
-2. The Ledger device firmware is up to date.
-3. A Ledger account has been imported to Polkadot.js.
-4. A Chromium-based browser is available for all web-based operations, such as Google Chrome or Brave.
-5. The Ledger device is configured to use WebHID as the preferred hardware connection method.
+## Your Ledger device is ready for use
 
-### Update Ledger Live and Device Firmware
+- [Make sure you have set up your Ledger device](https://support.ledger.com/hc/en-us/articles/360000613793?docs=true)
+- Update your device to latest firmware
+  - [Nano S](https://support.ledger.com/hc/en-us/articles/360002731113?docs=true)
+  - [Nano S Plus](https://support.ledger.com/hc/en-us/articles/4445777839901?docs=true)
+  - [Nano X](https://support.ledger.com/hc/en-us/articles/360013349800?docs=true)
+- [Download and install Ledger Live app for your OS](https://support.ledger.com/hc/en-us/articles/4404389606417-Download-and-install-Ledger-Live?docs=true)
+- [Download and install Polkadot.js extension for your browser](https://polkadot.js.org/extension/)
 
-Ensure Ledger Live is up to date.
+## Install Astar app to your Ledger device
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger1.png').default} width='1200px' />
+1. Open **My Ledger** in Ledger Live.
+2. Connect and unlock your Ledger device.
+    If asked, allow `My Ledger` to access your device.
+3. Search for **Astar** (Version `2.83.0`) in the app catalog.
+4. Click Install. 
 
-- If prompted to update the device Firmware do so, as it will update the Astar app as well.
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger-live-astar-app.png').default} width="80%" />
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger2.png').default} width='1200px' />
+After this step, you should have the Astar Native app installed:
 
-- Once Ledger Live is up to date, ensure the latest Astar app (version 2.52.2 or higher) is installed.
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger-astar-app.png').default} width="60%" />
 
 :::tip
-Ledger NanoS users should install the Astar XL version of the app, shown in the image below:
+Ledger NanoS users should install the Astar XL (Version `2.83.0`) of the app, shown in the image below:
 :::
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger3.png').default} width='1200px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger-live-astar-app-2.png').default} width="80%" />
 
-### Import Ledger account to Polkadot.js
+## Connect your Ledger device to Astar Network using Polkadot.js
 
-- Open the Polkadot.js extension.
-- Click the + sign menu option.
-- Choose ‘Attach ledger account.’ Make sure your ledger is unlocked.
+1. Install **[Polkadot.js extension](https://polkadot.js.org/extension/)**;
+2. Open extenstion;
+3. Open the extension and select **Attach Ledger account** as shown below;
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger4.png').default} width='600px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger-astar-app-2.png').default} width="70%" />
 
-- Follow through the process of Importing a Ledger Account by specifying a descriptive name. The default name and settings are shown in the image below:
+4. Make sure your Ledger device is connected to your PC and Astar app is open;
+5. Select **Astar Network** and name your **Astar** account;
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger5.png').default} width='600px' />
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger-astar-app-3.png').default} width="70%" />
 
-### Configure the Ledger device connection method
+6. Click **Import Account**.
 
-- Once the Ledger account has been imported, visit the [Astar Network settings page on the Polkadot.js apps portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/settings) and ensure **Attach Ledger via WebHID** is the preferred connection method listed under *account options* > *manage hardware connections*, as shown in the image below:
+You successfully connected to Ledger Astar account.
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger7.png').default} width='1200px' />
+**Configure the Ledger device connection method**
 
-### Visit the Astar Portal
+1. Go to the **[Astar settings page on the Polkadot.js portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/settings)**;
+2. Ensure **Attach Ledger via WebHID** is the preferred connection method listed under *account options* > *manage hardware connections*, as shown in the image below:
 
-- Open a browser and visit the [Astar Portal](https://portal.astar.network).
-- Connect the Polkadot.js extension to the Portal.
-- Select the Ledger account that was imported during the last step.  Check the toggle so Portal knows the device is a ledger. It can now be used to participate in dApp staking.
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger-astar-app-4.png').default} width="80%" />
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger8.png').default} width='600px' />
+## Connect your Ledger device to the Astar Portal
+
+1. Open your browser and visit the [Astar Portal](https://portal.astar.network).
+2. Connect the [Polkadot.js extension](https://polkadot.js.org/extension/) to the Portal.
+3. Open the Astar Native app on your Ledger device;
+
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger-astar-app.png').default} width="60%" />
+
+4. Select the Ledger account that was imported during the last step. Check the toggle to let Portal recognize the device as a ledger.
+
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger-astar-app-5.png').default} width="80%" />
 
 For detailed information about dApp staking or how to stake on the EVM side of Astar Portal using a Ledger device, please refer to the [Astar official documentation](/docs/use/dapp-staking/for-stakers/) or [Ledger EVM staking guide](./ledger-evm.md)
 
 :::tip
-If you receive a **Ledger error: Failed to execute 'claimInterface' on 'USBDevice': Unable to claim interface** message during the dApp staking claim process, ensure you are performing the operation using a Chromium-based browser such as Chrome or Brave, and the Ledger device connection method is WebHID, as outlined in the previous step.
+If you receive a **Ledger error: Failed to execute 'claimInterface' on 'USBDevice': Unable to claim interface** message during the dApp staking claim process, ensure you are performing the operation:
+- Using a Chromium-based browser such as Chrome or Brave,
+- The Ledger device connection method is WebHID, as outlined in the previous step
+- The Ledger device is correctly connected to the Portal with the toggle activated.
 :::
 
-<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger6.png').default} width='600px' />
-
-## Ledger NanoS and S-plus/X device limitations
-
-Consider the following scenario: You stake on 2 dApps, and accumulate 2 eras worth of rewards each day. What happens if you do not claim the rewards for an entire month?
-
-- Ledger Nano-S - The Nano-S device supports claiming a maximum of **2 eras** at a time, so for as long as there are more eras to claim in the dApp staking dashboard, you should continue to claim. Based on a month's worth of accumulated rewards (30 eras), 30 claims would need to be initiated using a Nano-S.
-- Ledger Nano X - Based on a maximum of **6 eras per claim,** 10 claims would need to be initiated using a Nano X.
-
-Staking on multiple dApps using a Ledger device may substantially increase the amount of time and/or administrative overhead required to participate in dApp staking in order to maximize benefits. However, although multiple claims may be required to retrieve all rewards from the Portal using a Ledger device, the fees remain the same per era claimed whether they occur in batches, or as individual transactions.
+<Figure src={require('/docs/build/integrations/wallets/ledger/img/native/ledger-astar-app-6.png').default} width="80%" />
