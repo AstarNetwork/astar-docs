@@ -84,7 +84,7 @@ The extension is available on Chrome, Brave, Edge and Firefox. Download and inst
 <img src="https://github.com/0byt/astar-docs/assets/119995565/e1dad11a-3da3-47f4-866d-116bf457ed05" width="400" />
 
 4. Finally, copy your address
-<img src="https://github.com/0byt/astar-docs/assets/119995565/1aa228c1-269a-4741-9175-8673ec346c4f" width="400" />
+ <img src="https://github.com/0byt/astar-docs/assets/119995565/1aa228c1-269a-4741-9175-8673ec346c4f" width="400" />
 
 # Send ASTR
 
