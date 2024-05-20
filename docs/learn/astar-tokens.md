@@ -44,7 +44,7 @@ At Astar Network, we believe in the power of decentralized decision-making. That
 
 ## Shiden and Shibuya
 
-Both Shiden and Shibuya ahs their own tokens. 
+Both Shiden and Shibuya has their own tokens. 
 Shiden's token is SDN. 
 You can see the SDN initial allocation below:
 
