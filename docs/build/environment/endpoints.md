@@ -38,12 +38,14 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 |         | BlastAPI: https://astar.public.blastapi.io |
 |         | Dwellir: https://astar-rpc.dwellir.com |
 |         | OnFinality: https://astar.api.onfinality.io/public |
+|         | RadiumBlock: https://astar.public.curie.radiumblock.co/http |
 |         | Automata 1RPC: https://1rpc.io/astr, get started [here](https://www.1rpc.io) |
 | Websocket | Astar Team: wss://rpc.astar.network |
 |           | Alchemy: Get started [here](https://www.alchemy.com/astar) |
 |           | BlastAPI: wss://astar.public.blastapi.io |
 |           | Dwellir: wss://astar-rpc.dwellir.com |
 |           | OnFinality: wss://astar.api.onfinality.io/public-ws |
+|           | RadiumBlock: wss://astar.public.curie.radiumblock.co/ws |
 |           | Automata 1RPC: wss://1rpc.io/astr, get started [here](https://www.1rpc.io) |
 | chainID | 592 |
 | Symbol | ASTR |
