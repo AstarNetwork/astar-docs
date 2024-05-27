@@ -11,7 +11,7 @@ import Figure from '/src/components/figure'
   <div style={{ marginRight: '10px' }}>
     ## Introduction
 
-    The Astar Wallet Snap extends MetaMask's functionality, specifically for blockchains built with Astar’s Substrate technology. The Astar Wallet Snap enables you to quickly generate a Substrate wallet with MetaMask for signing transactions and interacting with decentralized applications (dApps) that utilize the @polkadot/extension-dapp package. You can seamlessly interact with all dApps in the Astar ecosystem through MetaMask, thereby expanding MetaMask's utility beyond Ethereum and EVM-compatible networks.
+    The Astar Wallet Snap extends MetaMask's functionality, specifically for blockchains built with Substrate technology. The Astar Wallet Snap enables you to quickly generate a Substrate wallet with MetaMask for signing transactions and interacting with decentralized applications (dApps) that utilize the @polkadot/extension-dapp package. You can seamlessly interact with all dApps in the Astar ecosystem through MetaMask, thereby expanding MetaMask's utility beyond Ethereum and EVM-compatible networks.
 
     
   </div>
