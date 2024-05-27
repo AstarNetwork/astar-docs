@@ -63,10 +63,12 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 |         | BlastAPI: https://shiden.public.blastapi.io |
 |         | Dwellir: https://shiden-rpc.dwellir.com |
 |         | OnFinality: https://shiden.api.onfinality.io/public |
+|         | RadiumBlock: https://shiden.public.curie.radiumblock.co/http |
 | Websocket |  Astar Team: wss://rpc.shiden.astar.network |
 |           | BlastAPI: wss://shiden.public.blastapi.io |
 |           | Dwellir: wss://shiden-rpc.dwellir.com |
 |           | OnFinality: wss://shiden.api.onfinality.io/public-ws |
+|           | RadiumBlock: https://shiden.public.curie.radiumblock.co/ws |
 | chainID | 336 |
 | Symbol | SDN |
 
