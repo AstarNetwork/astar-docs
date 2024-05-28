@@ -28,7 +28,7 @@ This chain extension adds query to `pallet_unified_accounts` so that you can que
 | Chain extension      | Shibuya | Shiden | Astar |
 |---------------------|---|---|---|
 | XVM                 | :white_check_mark: | :white_large_square: | :white_large_square: |
-| Assets              | :white_check_mark: | :white_large_square: | :white_large_square: |
+| Assets              | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Account Unification | :white_check_mark: | :white_large_square: | :white_large_square: |
 
 
@@ -47,8 +47,7 @@ On contract side the implementation is made using [ChainExtensionMethod](https:/
 
 #### Contracts examples
 
-- [PSP22 pallet-assets wrapper](https://github.com/swanky-dapps/chain-extension-contracts/tree/main/contracts/psp22_pallet_wrapper)
-- [Asset Chain Extension](https://github.com/swanky-dapps/chain-extension-contracts/tree/main/examples/assets)
+- [Asset Chain Extension](https://github.com/AstarNetwork/chain-extension-contracts)
 - [dApp Staking](https://github.com/swanky-dapps/chain-extension-contracts/tree/main/examples/dapps-staking)
 
 #### Video tutorials
