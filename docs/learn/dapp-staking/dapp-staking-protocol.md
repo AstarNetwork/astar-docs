@@ -258,6 +258,11 @@ Same principle is applied to Shiden, but with a slightly modified formula:
 
 $ number\_of\_slots_{Shiden} = floor(100 * SDN_{USD} + 50)$
 
+These formulas were designed with a _baseline_ price in mind.
+Using the _baseline_ price, the _baseline_ number of slots can be calculated.
+
+This value is important since it's used as a reference when calculating tier threshold adjustment.
+
 #### Tier Threshold Entry
 
 A dApp isn't entitled to a tier by just participating in the dApp Staking.
@@ -273,6 +278,9 @@ The formula for adjusting tier entry threshold:
 $\Delta\%_{threshold} = (\frac{100\%}{100\% + \Delta\%_{dApps}} - 1) * 100\%$
 
 where $\Delta\%_{dApps}$ is the change in the number of dApps, expressed as a percent. In case number has been reduced, the _delta_ will be negative.
+The comparison is always done between the _baseline_ number of slots and the new number of slots.
+
+$new\_threshold = base\_threshold * (1 + \Delta\%_{threshold})$
 
 At the moment, there are two types of tier entry thresholds:
 
