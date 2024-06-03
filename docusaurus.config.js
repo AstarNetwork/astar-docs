@@ -166,7 +166,7 @@ const config = {
         appId: "S7S4T6Q4KC",
 
         // Public API key: it is safe to commit it
-        apiKey: "4eacb78946fd33fdd34c5954c4658a7b",
+        apiKey: "daf10229cac599f39cd3de3e87f85e6d",
 
         indexName: "astar",
 
