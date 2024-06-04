@@ -1,0 +1,31 @@
+---
+sidebar_position: 5
+description: "All That Node is the most comprehensive multi-chain development suite, designed to support multiple networks from a single platform."
+
+# All That Node
+
+## Overview
+
+All That Node@DSRV is the most comprehensive multi-chain development suite, designed to support multiple networks from a single platform. 
+
+Built by the industry-leading validator for blockchain developers, All That Node aims to lower financial and technological barriers, redefining what's possible in the multi-chain ecosystem. 
+
+With cutting-edge blockchain infrastructure across over 40 blockchains, All That Node offers various APIs, meticulous customer support, and expertly curated resources to cater to a diverse use cases.
+
+## Instructions
+
+1. Sigh up and sign in All That Node: [https://www.allthatnode.com/login.dsrv)
+
+2. Now you can go to your dashboard 
+![14](img/14.png)
+
+3. Click “Create New Project” and select “Shared” for node type. Than select Free for the subscription type.
+![15](img/15.png)
+
+4. Now you can see your shared plan project created in the "My Project".
+
+5. Click the “Add Protocol” button to add endpoints, then select “Astar” to set the network name endpoins and click “Save”.
+![16](img/16.png)
+
+6. The Network name endpoints have now been added to your dashboard. 
+![17](img/17.png)
