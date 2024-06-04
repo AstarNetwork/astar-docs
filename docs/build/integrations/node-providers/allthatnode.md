@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 description: "All That Node is the most comprehensive multi-chain development suite, designed to support multiple networks from a single platform."
+---
 
 # All That Node
 
@@ -10,11 +11,11 @@ All That Node@DSRV is the most comprehensive multi-chain development suite, desi
 
 Built by the industry-leading validator for blockchain developers, All That Node aims to lower financial and technological barriers, redefining what's possible in the multi-chain ecosystem. 
 
-With cutting-edge blockchain infrastructure across over 40 blockchains, All That Node offers various APIs, meticulous customer support, and expertly curated resources to cater to a diverse use cases.
+With cutting-edge blockchain infrastructure across over 40 blockchains, All That Node offers various APIs, meticulous customer support, and expertly curated resources to cater to diverse use cases.
 
 ## Instructions
 
-1. Sigh up and sign in All That Node: [https://www.allthatnode.com/login.dsrv)
+1. Sign up and sign in to All That Node: [https://www.allthatnode.com/login.dsrv)
 
 2. Now you can go to your dashboard 
 ![14](img/14.png)
