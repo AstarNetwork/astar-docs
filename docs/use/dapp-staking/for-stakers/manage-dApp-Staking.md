@@ -28,6 +28,14 @@ If you have a lot of unclaimed rewards (`Eras`), you may have to make several `C
 
 All pending rewards on a dApp must be claimed before staking again.
 
+:::tip
+
+You can manage your rewards from the dApp Staking page and collect them by clicking the **Claim Button** and signing the transaction.
+
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Claiming_Rewards.png').default } width="100%" /> 
+
+:::
+
 ### My dApps Panel:
 
 My dApps Panel is where you can see all dApps you have staked with and manage your stake.
