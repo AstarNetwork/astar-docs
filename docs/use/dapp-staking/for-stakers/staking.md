@@ -48,17 +48,18 @@ An address can only stake on a maximum of 16 contracts (dApps).
 
 1) On the [dApp staking](https://portal.astar.network/astar/dapp-staking/discover) page, you can either:
 
-- Click on the `Vote/Stake today` button;
+- Click on the `Choose dApp(s)` button;
 - Select your favorite project and click on the `Vote & Stake` button on the project page;
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Vote_Page.png').default } width="100%" /> 
 
-2) Once on the voting page, you can choose up to 16 projects that you would like to support;
-
+2) You can choose up to 16 projects that you would like to support;  
+After making your selection, click `Done` to proceed to the next step;
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page.png').default } width="85%" /> 
 
-3) To stake, enter the desired amount of tokens for the dApp(s) you have chosen. This may be the same or a different amount for each.
+3) Enter the desired amount of tokens for the dApp(s) you have chosen. This may be the same or a different amount for each.  
+After entering the amount(s), click `Next` to continue;
 
 :::tip
 
@@ -70,8 +71,11 @@ Make sure to always keep some tokens free for gas manage to claim your rewards.
 
 :::note
 
-You can see how many tokens you have available to stake from **transferable** or **locked balances** in the section above the `Confirm` button;
+You can see how many tokens you have available to stake from **transferable** or **locked balances** at the bottom of the page;
 
 :::
 
-5) Confirm your decisions by clicking on `Confirm` and sign the transaction on the network;
+5) Review your choice and confirm your decisions by clicking on `Confirm` and sign the transaction on the network;  
+If you have unclaimed rewards, clicking `Confirm` will claim and transfer them to your address.
+
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page_3.png').default } width="85%" /> 
