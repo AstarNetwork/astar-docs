@@ -18,13 +18,15 @@ Collators are responsible for the network stability, it is very important to be 
 
 ```sh
 ./astar-collator \
+  --state-pruning 1000 \
+  --blocks-pruning 1000 \
   --collator \
   --name {COLLATOR_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
-  --pruning archive \
-  --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/0' \
+  -- \
+  --sync warp
 ```
 
 </TabItem>
@@ -32,13 +34,15 @@ Collators are responsible for the network stability, it is very important to be 
 
 ```sh
 ./astar-collator \
+  --state-pruning 1000 \
+  --blocks-pruning 1000 \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
-  --pruning archive \
-  --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/0' \
+  -- \
+  --sync warp
 ```
 
 </TabItem>
@@ -46,13 +50,15 @@ Collators are responsible for the network stability, it is very important to be 
 
 ```sh
 ./astar-collator \
+  --state-pruning 1000 \
+  --blocks-pruning 1000 \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
-  --pruning archive \
-  --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 ```
 
 </TabItem>

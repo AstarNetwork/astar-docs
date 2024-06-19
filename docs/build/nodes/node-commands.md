@@ -32,13 +32,15 @@ User=astar
 Group=astar
 
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
+  --state-pruning 1000 \
+  --blocks-pruning 1000 \
   --collator \
   --name {COLLATOR_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
-  --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10
@@ -59,13 +61,15 @@ User=astar
 Group=astar
 
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
+  --state-pruning 1000 \
+  --blocks-pruning 1000 \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
-  --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10
@@ -86,13 +90,15 @@ User=astar
 Group=astar
 
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
+  --state-pruning 1000 \
+  --blocks-pruning 1000 \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
-  --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10
@@ -117,13 +123,15 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
---pruning archive \
+--state-pruning 1000 \
+--blocks-pruning 1000 \
 --collator \
 --name {COLLATOR_NAME} \
 --chain astar \
 --base-path /data \
---trie-cache-size 0 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+-- \
+--sync warp
 ```
 
 </TabItem>
@@ -137,13 +145,15 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
---pruning archive \
+--state-pruning 1000 \
+--blocks-pruning 1000 \
 --collator \
 --name {COLLATOR_NAME} \
 --chain shiden \
 --base-path /data \
---trie-cache-size 0 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+-- \
+--sync warp
 ```
 
 </TabItem>
@@ -157,13 +167,15 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
---pruning archive \
+--state-pruning 1000 \
+--blocks-pruning 1000 \
 --collator \
 --name {COLLATOR_NAME} \
 --chain shibuya \
 --base-path /data \
---trie-cache-size 0 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+-- \
+--sync warp
 ```
 
 </TabItem>
@@ -186,16 +198,16 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
+  --state-pruning archive \
   --rpc-cors all \
   --name {NODE_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
   --rpc-external \
   --rpc-methods Safe \
-  --rpc-max-request-size 1 \
-  --rpc-max-response-size 1 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
   
 Restart=always
 RestartSec=10
@@ -216,16 +228,16 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
+  --state-pruning archive \
   --rpc-cors all \
   --name {NODE_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
   --rpc-external \
   --rpc-methods Safe \
-  --rpc-max-request-size 1 \
-  --rpc-max-response-size 1 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
   
 Restart=always
 RestartSec=10
@@ -246,16 +258,16 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
+  --state-pruning archive \
   --rpc-cors all \
   --name {NODE_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
   --rpc-external \
   --rpc-methods Safe \
-  --rpc-max-request-size 1 \
-  --rpc-max-response-size 1 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10
@@ -281,16 +293,16 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
---pruning archive \
+--state-pruning archive \
 --rpc-cors all \
 --name {NODE_NAME} \
 --chain astar \
 --base-path /data \
 --rpc-external \
 --rpc-methods Safe \
---rpc-max-request-size 1 \
---rpc-max-response-size 1 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+-- \
+--sync warp
 ```
 
 </TabItem>
@@ -305,16 +317,16 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
---pruning archive \
+--state-pruning archive \
 --rpc-cors all \
 --name {NODE_NAME} \
 --chain astar \
 --base-path /data \
 --rpc-external \
 --rpc-methods Safe \
---rpc-max-request-size 1 \
---rpc-max-response-size 1 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+-- \
+--sync warp
 ```
 
 </TabItem>
@@ -329,16 +341,16 @@ docker run -d \
 -v "/var/lib/astar/:/data" \
 staketechnologies/astar-collator:latest \
 astar-collator \
---pruning archive \
+--state-pruning archive \
 --rpc-cors all \
 --name {NODE_NAME} \
 --chain astar \
 --base-path /data \
 --rpc-external \
 --rpc-methods Safe \
---rpc-max-request-size 1 \
---rpc-max-response-size 1 \
---telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+--telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+-- \
+--sync warp
 ```
 
 </TabItem>
@@ -375,7 +387,15 @@ Enable EVM tracing log:
 --prometheus-external
 ```
 
----
+### Relay chain
+
+To pass commands to the relay chain node, add `--' after the parachain commands.
+In the examples above, we are passing the warp sync node to the relay chain.
+
+```
+-- \
+--sync warp
+```
 
 ## Full command documentation
 

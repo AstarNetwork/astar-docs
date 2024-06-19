@@ -122,8 +122,7 @@ sudo nano /etc/systemd/system/astar.service
     --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
     -- \
     --state-pruning 100 \
-    --blocks-pruning 100 \
-    --sync warp
+    --blocks-pruning 100
 
     Restart=always
     RestartSec=10
