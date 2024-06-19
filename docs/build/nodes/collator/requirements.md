@@ -68,7 +68,7 @@ To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz pe
 
 | Component | Requirement |
 |---|---|
-| System | Ubuntu 20.04 |
+| System | Ubuntu 22.04 |
 | CPU | 12 cores - minimum 4 Ghz per core |
 | Memory | 32 GB |
 | Hard Disk | 1 TB SSD NVMe |
@@ -79,7 +79,7 @@ To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz pe
 
 | Component | Requirement |
 |---|---|
-| System | Ubuntu 20.04 |
+| System | Ubuntu 22.04 |
 | CPU | 12 cores - minimum 4 Ghz per core |
 | Memory | 32 GB |
 | Hard Disk | 1 TB SSD NVMe |
@@ -90,7 +90,7 @@ To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz pe
 
 | Component | Requirement |
 |---|---|
-| System | Ubuntu 20.04 |
+| System | Ubuntu 22.04 |
 | CPU | 4 cores - minimum 3.5 Ghz per core |
 | Memory | 16 GB |
 | Hard Disk | 500 GB SSD NVMe |

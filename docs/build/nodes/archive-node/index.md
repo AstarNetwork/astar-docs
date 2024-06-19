@@ -34,7 +34,7 @@ We maintain 3 different networks: the testnet Shibuya, Shiden as a parachain of 
 
 | Component | Requirement |
 |---|---|
-| System | Ubuntu 20.04 |
+| System | Ubuntu 22.04 |
 | CPU | 8 cores |
 | Memory | 16 GB |
 | Hard Disk | 500 GB SSD (NVMe preferable) |
@@ -45,7 +45,7 @@ We maintain 3 different networks: the testnet Shibuya, Shiden as a parachain of 
 
 | Component | Requirement |
 |---|---|
-| System | Ubuntu 20.04 |
+| System | Ubuntu 22.04 |
 | CPU | 8 cores |
 | Memory | 16 GB |
 | Hard Disk | 500 GB SSD (NVMe preferable) |
@@ -56,7 +56,7 @@ We maintain 3 different networks: the testnet Shibuya, Shiden as a parachain of 
 
 | Component | Requirement |
 |---|---|
-| System | Ubuntu 20.04 |
+| System | Ubuntu 22.04 |
 | CPU | 4 cores |
 | Memory | 8 GB |
 | Hard Disk | 200 GB SSD (NVMe preferable) |
