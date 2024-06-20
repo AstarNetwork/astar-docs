@@ -43,9 +43,9 @@ npm install -g @graphprotocol/graph-cli
 ### Initialize your Subgraph⁠
 
 You can copy this directly from your subgraph page to include your specific subgraph slug:
-
+```
 graph init --studio <SUBGRAPH_SLUG>
-
+```
 You’ll be prompted to provide some info on your subgraph like this:
 
 ![cli sample](https://lh7-us.googleusercontent.com/docsz/AD_4nXdTAUsUb5vbs3GtCrhKhuXM1xYoqqooYTxw6lfJfYtLJNP8GKVOhTPmjxlM1b6Qpx-pXNVOzRuc8BL12wZXqy4MIj8ja0tp15znfuJD_Mg84SSNj3JpQ4d31lNTxPYnpba4UOzZx8pmgOIsbI7vCz70v9gC?key=fnI6SyFgXU9SZRNX5C5vPQ)
