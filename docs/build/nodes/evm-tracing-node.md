@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-Running a tracing node on an Astar chain allows you to debug EVM transactions and have enhanced access to transaction pool using EVM debug RPC (INSERT_LINK also see link below).
+Running a tracing node on an Astar chain allows you to debug EVM transactions and have enhanced access to transaction pool using [EVM debug RPC](/docs/build/EVM/evm-debug-api).
 
 ## Requirements
 
@@ -28,7 +28,7 @@ An EVM tracing node binary is different because it includes additional tracing f
 
 :::important
 
-EVM RPC calls are disabled by default, and require the `--enable-evm-rpc` flag to be enabled. Please refer to this page (INSERT_LINK) for more info.
+EVM RPC calls are disabled by default, and require the `--enable-evm-rpc` flag to be enabled. Please refer to this [page](/docs/build/EVM/evm-debug-api) for more info.
 
 :::
 
@@ -84,15 +84,15 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name {NODE_NAME} \
   --base-path /var/lib/astar \
-  --state-pruning archive \
-  --blocks-pruning archive \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
   --rpc-max-response-size 50 \
   --enable-evm-rpc \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10
@@ -119,15 +119,15 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name {NODE_NAME} \
   --base-path /var/lib/astar \
-  --state-pruning archive \
-  --blocks-pruning archive \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
   --rpc-max-response-size 10 \
   --enable-evm-rpc  \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10
@@ -148,20 +148,21 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
+  --state-pruning archive \
+  --blocks-pruning archive \
   --rpc-cors all \
   --name {NODE_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
-  --state-pruning archive \
-  --blocks-pruning archive \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
   --rpc-max-response-size 10 \
   --enable-evm-rpc  \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10
