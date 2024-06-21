@@ -29,7 +29,6 @@ MetaMaskや他のEVMウォレットに**Astar zkEVM**ネットワークを追加
 | ネットワーク名 | RPC URL | チェーンID | ブロックエクスプローラのURL | 通貨記号 |
 | ---- | ------------------------------- | ---------------- | ---------------- | ----- |
 | **Astar zkEVM Network** | `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
-| **Astar zkEVM Network** | `https://rpc.astar-zkevm.gelato.digital` | `3776` | | **ETH** |
 | **Astar zkEVM Network** | `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
 </TabItem>
 

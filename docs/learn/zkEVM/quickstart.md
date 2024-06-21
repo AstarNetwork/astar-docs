@@ -25,7 +25,6 @@ To add **Astar zkEVM** or any testnet networks to your wallet manually, enter th
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
-| `https://rpc.astar-zkevm.gelato.digital` | `3776` | | **ETH** |
 | `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
 </TabItem>
 
@@ -33,7 +32,7 @@ To add **Astar zkEVM** or any testnet networks to your wallet manually, enter th
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/zkyoto` | `6038361` | [hhttps://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
-| `https://rpc.zkyoto.gelato.digital` | `6038361` | | **ETH** |
+| `https://astar-zkyoto-rpc.dwellir.com` | `6038361` | | **ETH** |
 </TabItem>
 
 </Tabs>
