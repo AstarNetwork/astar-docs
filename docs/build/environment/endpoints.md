@@ -52,6 +52,19 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 
 </TabItem>
 
+<TabItem value="astarzk" label="Astar zkEVM" default>
+
+|   | Public endpoint Astar zkEVM |
+| --- | --- |
+| Network | Astar zkEVM (Astar L2 mainnet) |
+| Parent chain | Ethereum |
+| ChainID | 3776 |
+| HTTPS | Startale Labs: https://rpc.startale.com/astar-zkevm |
+|         | Dwellir: https://astar-zkevm-rpc.dwellir.com |
+| Symbol | ETH |
+
+</TabItem>
+
 <TabItem value="shiden" label="Shiden Network" default>
 
 |   | Public endpoint Shiden |
@@ -73,8 +86,6 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 | Symbol | SDN |
 
 </TabItem>
-
-
 
 <TabItem value="shibuya" label="Shibuya Network" default>
 
@@ -102,6 +113,7 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 | Parent chain | Sepolia                                        |
 | ChainID | 6038361                                        |
 | HTTPS | Startale Labs: https://rpc.startale.com/zkyoto |
+|         | Dwellir: https://astar-zkyoto-rpc.dwellir.com|
 | Symbol | ETH                                            |
 
 </TabItem>
