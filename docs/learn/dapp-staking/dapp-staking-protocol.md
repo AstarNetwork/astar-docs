@@ -320,6 +320,19 @@ others will be left out. There is no strict rule which defines this behavior - i
 having a larger stake than the other dApp(s). Technically, at the moment, the dApp with the lower `dApp Id` will have the advantage over a dApp with
 the larger Id but this can change in the future.
 
+### Tier ranking system
+Because dApps at the same tier receive equal rewards regardless of their staked amount, we introduced a ranking system for dApps within the tier itself. This will improve reward distribution for dApps that perform better within a tier if there are available rewards to be distributed.
+
+dApps are not only grouped into tiers but they're also ranked inside each tier (except highest tier which doesn't have ranking).
+When a dApp has the minimum stake amount to just enter the tier, its rank will be **0** (zero). As they progress towards the upper tier, their rank will increase.
+If a dApp is halfway to the next tier, its rank is **5** (five). If they are almost at the next tier, their rank is **9** (nine).
+If a dApp reaches the threshold to enter the next tier but there is no empty slot in that tier and the dApp remains in the current tier, they will get the highest rank of **10** (ten).
+
+#### Rank reward
+Each rank provides up to a **10%** extra reward on top of the tier reward. To respect inflation, each rank reward comes from empty slots within the same tier. Each tier has its own portion of rewards to distribute. If all tier slots are occupied, the tier reward is distributed equally to each dApp in that tier, leaving no remaining reward for ranks. If there is a remaining reward, it goes towards rewarding the ranks. Depending on the availability, the rank reward can go up to **10%** of the tier reward. For example, if you are in tier **2** with a rank of **5** and the tier reward is **1000 ASTR**, then your reward will be **1000 ASTR + 0.5 * 1000 ASTR = 1500 ASTR**.
+
+__NOTE__: If **10%** of tier reward cannot be satisfied then the following formula is used ${rank\_reward} = \frac{remaining\_reward}{\sum \forall dApp\_rank}$
+
 ### Reward Expiry
 
 Unclaimed rewards aren't kept indefinitely in storage. Eventually, they expire.
