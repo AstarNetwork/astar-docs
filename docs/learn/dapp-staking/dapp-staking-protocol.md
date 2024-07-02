@@ -331,7 +331,10 @@ If a dApp reaches the threshold to enter the next tier but there is no empty slo
 #### Rank reward
 Each rank provides up to a **10%** extra reward on top of the tier reward. To respect inflation, each rank reward comes from empty slots within the same tier. Each tier has its own portion of rewards to distribute. If all tier slots are occupied, the tier reward is distributed equally to each dApp in that tier, leaving no remaining reward for ranks. If there is a remaining reward, it goes towards rewarding the ranks. Depending on the availability, the rank reward can go up to **10%** of the tier reward. For example, if you are in tier **2** with a rank of **5** and the tier reward is **1000 ASTR**, then your reward will be **1000 ASTR + 0.5 * 1000 ASTR = 1500 ASTR**.
 
-__NOTE__: If **10%** of tier reward cannot be satisfied then the following formula is used ${rank\_reward} = \frac{remaining\_reward}{\sum \forall dApp\_rank}$
+:::note
+If **10%** of tier reward cannot be satisfied then the following formula is used ${rank\_reward} = \frac{remaining\_reward}{\sum \forall dApp\_rank}$
+where $\sum \forall dApp\_rank$ is the sum of all dApp ranks in a tier.
+:::
 
 ### Reward Expiry
 
