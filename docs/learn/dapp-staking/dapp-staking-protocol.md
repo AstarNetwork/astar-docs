@@ -329,11 +329,27 @@ If a dApp is halfway to the next tier, its rank is **5** (five). If they are alm
 If a dApp reaches the threshold to enter the next tier but there is no empty slot in that tier and the dApp remains in the current tier, they will get the highest rank of **10** (ten).
 
 #### Rank reward
-Each rank provides up to a **10%** extra reward on top of the tier reward. To respect inflation, each rank reward comes from empty slots within the same tier. Each tier has its own portion of rewards to distribute. If all tier slots are occupied, the tier reward is distributed equally to each dApp in that tier, leaving no remaining reward for ranks. If there is a remaining reward, it goes towards rewarding the ranks. Depending on the availability, the rank reward can go up to **10%** of the tier reward. For example, if you are in tier **2** with a rank of **5** and the tier reward is **1000 ASTR**, then your reward will be **1000 ASTR + 0.5 * 1000 ASTR = 1500 ASTR**.
+Each rank provides up to a **10%** extra reward on top of the tier reward. To respect inflation, each rank reward comes from empty slots within the same tier. Each tier has its own portion of rewards to distribute. If all tier slots are occupied, the tier reward is distributed equally to each dApp in that tier, leaving no remaining reward for ranks. If there is a remaining reward, it goes towards rewarding the ranks. Depending on the availability, the rank reward can go up to **10%** of the tier reward. For example, if you are in tier **2** with a rank of **5** and the tier reward is **1000 ASTR**, then rank reward will be **rank_reward = 0.1 * 1000 ASTR = 100 ASTR**. Therefore given formula
+
+${total\_reward} = {tier\_reward} + {rank} * {rank\_reward}$
+
+Total reward for dApp will be **1000 ASTR + 5 * 100 ASTR = 1500 ASTR**.
 
 :::note
-If **10%** of tier reward cannot be satisfied then the following formula is used ${rank\_reward} = \frac{remaining\_reward}{\sum \forall dApp\_rank}$
+If **10%** of tier reward cannot be satisfied then the following formula is used
+
+${rank\_reward} = \frac{remaining\_reward}{\sum \forall dApp\_rank}$
+
 where $\sum \forall dApp\_rank$ is the sum of all dApp ranks in a tier.
+
+**e.g.** Given a tier **2** with a slot capacity of **3**, where **2** slots are occupied by dApp _Alice_ with rank **9** and dApp _Bob_ with rank **7**. The rank reward comes from the empty slots, which in this case is only **1**. Therefore, a **10%** rank reward cannot be achieved. In this scenario, the remaining reward will be divided by ranks sum.
+
+${rank\_reward} = \frac {1000 ASTR} {7 + 9} = 62.5 ASTR$
+
+Total reward for _Alice_ will be: **1000 ASTR + 9 * 62.5 ASTR = 1562.5 ASTR**
+
+Total reward for _Bob_ will be: **1000 ASTR + 7 * 62.5 ASTR = 1437.5 ASTR**
+
 :::
 
 ### Reward Expiry
