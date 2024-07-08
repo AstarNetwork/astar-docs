@@ -31,6 +31,7 @@
     "sass": "^1.53.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@docusaurus/module-type-aliases": "^3.0.0",
     "@docusaurus/tsconfig": "3.0.0",
     "@types/react": "^18.2.29",
