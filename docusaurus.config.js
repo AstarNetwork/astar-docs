@@ -69,10 +69,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Astar Docs",
         logo: {
           alt: "Astar",
-          src: "img/astar-logo.svg",
+          src: "img/astar-logo-text.svg",
         },
         items: [
           {
