@@ -8,8 +8,8 @@ const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Astar Docs",
-  tagline: "A comprehensive library of useful information about Astar Network",
+  title: "Welcome to Astar",
+  tagline: "Here you will find documentation on how to develop dApps on Astar.",
   url: "https://docs.astar.network",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -72,6 +72,7 @@ const config = {
         logo: {
           alt: "Astar",
           src: "img/astar-logo-text.svg",
+          srcDark: "img/astar-logo-text-dark.svg",
         },
         items: [
           {

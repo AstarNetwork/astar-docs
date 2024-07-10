@@ -47,6 +47,9 @@ $astar-blue-dark: #05b6fd;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.footer {
+  background-color: var(--box-background);
+}
 $xs: 375px;
 $sm: 640px;
 $md: 768px;
