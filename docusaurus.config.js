@@ -29,6 +29,10 @@ const config = {
       integrity: "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
       crossorigin: "anonymous",
     },
+    {
+      href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap",
+      type: "text/css",
+    },
   ],
   clientModules: [require.resolve("./static/astarAi.js")],
 
