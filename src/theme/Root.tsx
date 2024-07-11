@@ -1,11 +1,13 @@
 import React, { createContext, useContext, useState } from "react";
 
-const SearchContext = createContext({ isOpen: false, setIsOpen: (boolean) => {} });
+const SearchContext = createContext({
+  query: "",
+  setQuery: (string) => {},
+});
 
 export function SearchProvider({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return <SearchContext.Provider value={{ isOpen, setIsOpen }}>{children}</SearchContext.Provider>;
+  const [query, setQuery] = useState("");
+  return <SearchContext.Provider value={{ query, setQuery }}>{children}</SearchContext.Provider>;
 }
 
 export function useSearch() {
@@ -14,6 +16,5 @@ export function useSearch() {
 
 // Default implementation, that you can customize
 export default function Root({ children }) {
-  console.log("Root", children);
   return <SearchProvider>{children}</SearchProvider>;
 }

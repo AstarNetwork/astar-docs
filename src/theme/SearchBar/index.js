@@ -46,7 +46,7 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
     ...props.searchParameters,
     facetFilters,
   };
-  const { setIsOpen: setIsOpenExternal, isOpen: isOpenExternal } = useSearch();
+  const { query: externalQuery } = useSearch();
   const history = useHistory();
   const searchContainer = useRef(null);
   const searchButtonRef = useRef(null);
@@ -73,7 +73,6 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
   }, [importDocSearchModalIfNeeded, setIsOpen]);
   const onClose = useCallback(() => {
     setIsOpen(false);
-    setIsOpenExternal(false);
     searchContainer.current?.remove();
   }, [setIsOpen]);
   const onInput = useCallback(
@@ -121,11 +120,14 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
   );
 
   useEffect(() => {
-    console.log("isOpenExternal", isOpenExternal);
-    if (isOpenExternal === true) {
-      onOpen();
+    if (externalQuery) {
+      setInitialQuery(externalQuery);
     }
-  }, [isOpenExternal, onOpen]);
+  }, [externalQuery]);
+
+  useEffect(() => {
+    if (initialQuery) onOpen();
+  }, [initialQuery, onOpen]);
 
   useDocSearchKeyboardEvents({
     isOpen,
