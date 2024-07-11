@@ -20,6 +20,9 @@ $astar-blue-dark: #05b6fd;
   --box-background: #ffffff;
   --text-color-description: #64748B;
   --text-color-title: #020617;
+  --gradient-start: #0047FF;
+  --gradient-end: #00D1FF;
+  --text-input-background: #FFFFFF;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -34,6 +37,9 @@ $astar-blue-dark: #05b6fd;
   --box-background: #1b1e21;
   --text-color-description: #94A3B8;
   --text-color-title: #F8FAFC;
+  --gradient-start: #0050EB;
+  --gradient-end: #008BF0;
+  --text-input-background: #020617;
 }
 
 .docusaurus-highlight-code-line {

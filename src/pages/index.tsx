@@ -12,11 +12,13 @@ export default function Home(): JSX.Element {
       title={`${siteConfig.title}`}
       description="Astar Network Official Documentation Portal - User Guides, Tutorials, and Tools for Developers."
     >
-      <Hero />
-      <Search />
-      <main>
-        <HomepageFeatures />
-      </main>
+      <div className="contentWrapper">
+        <Hero />
+        <Search />
+        <main>
+          <HomepageFeatures />
+        </main>
+      </div>
     </Layout>
   );
 }
