@@ -2,9 +2,8 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Layout from "@theme/Layout";
-import { createContext, useContext, useEffect, useRef, useState } from "react";
-import './index.scss';
-import docsearch from "@docsearch/js";
+import { useRef } from "react";
+import "./index.scss";
 import "@docsearch/css";
 import { useSearch } from "../theme/Root";
 

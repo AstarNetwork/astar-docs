@@ -185,11 +185,5 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
 }
 export default function SearchBar() {
   const { siteConfig } = useDocusaurusContext();
-  // debugger;
-  console.log("siteConfig", siteConfig);
-  return (
-    // <SearchProvider>
-    <DocSearch {...siteConfig.themeConfig.algolia} />
-    // </SearchProvider>
-  );
+  return <DocSearch {...siteConfig.themeConfig.algolia} />;
 }
