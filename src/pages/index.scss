@@ -1,5 +1,25 @@
 @import '../css/custom.scss';
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer__title {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-color-title)
+}
+
+.footer__item {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color-description);
+}
+
+.navbar__logo {
+  height: 40px;
+}
+
 .hero--banner {
   padding: 4rem 0;
   text-align: center;
