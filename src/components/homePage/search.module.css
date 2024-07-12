@@ -35,6 +35,7 @@
   width: 80px;
   color: white;
   background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  opacity: 0.6;
   padding: 0 15px; /* Adjust padding as needed */
   cursor: pointer;
   border-radius:30px;
@@ -44,10 +45,38 @@
   justify-content: center; /* Center horizontally */
 }
 
+html[data-theme='dark'] .searchBar button {
+  opacity: 1;
+}
 .suggestionsContainer {
   width: 100%;
   display: flex;
+  gap: 10px;
   flex-direction: column;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 500;
+  p {
+    margin: 0;
+  }
+}
+
+.tagsContainer {
+  display: flex;
+  gap: 10px;
+
+  span {
+    font-weight: 400;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+}
+
+.diffusedBackground {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 @media (min-width: 996px) {
@@ -59,5 +88,17 @@
 
   .searchBar button {
     width: 100px;
+  }
+
+  .suggestionsContainer {
+    font-size: 14px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .tagsContainer {
+    span {
+      padding: 4px 12px;
+    }
   }
 }
