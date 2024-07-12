@@ -65,7 +65,7 @@ html[data-theme='dark'] .searchBar button {
 .tagsContainer {
   display: flex;
   gap: 10px;
-
+  flex-wrap: wrap;
   span {
     font-weight: 400;
     cursor: pointer;
