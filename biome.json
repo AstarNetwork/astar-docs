@@ -9,6 +9,9 @@
       "recommended": true,
       "suspicious": {
         "noExplicitAny": "off"
+      },
+      "a11y": {
+        "noNoninteractiveTabindex": "off"
       }
     }
   },

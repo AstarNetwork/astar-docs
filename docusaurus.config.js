@@ -242,6 +242,9 @@ const config = {
         //... other Algolia params
       },
     }),
+  customFields: {
+    searchTags: ["zkEvm", "dApp Staking", "node", "wallets", "ledger"],
+  },
 };
 
 module.exports = config;

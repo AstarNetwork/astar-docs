@@ -14,7 +14,7 @@ export default function Home(): JSX.Element {
     >
       <div className="contentWrapper">
         <Hero />
-        <Search />
+        <Search searchTags={siteConfig.customFields.searchTags as string[]} />
         <main>
           <HomepageFeatures />
         </main>

@@ -1,16 +1,29 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useSearch } from "../../theme/Root";
 import styles from "./search.module.css";
-export function Search() {
+
+export function Search({ searchTags }: { searchTags: string[] }): JSX.Element {
   const { setQuery } = useSearch();
   const inputRef = useRef(null);
+
   function handleSearch() {
     setQuery(inputRef.current.value);
     inputRef.current.value = "";
   }
+
   function handleEnter(event) {
     if (event.key === "Enter") {
       handleSearch();
+    }
+  }
+
+  function handleTagClick(tag: string) {
+    setQuery(tag);
+  }
+
+  function handleTagEnter(event, tag: string) {
+    if (event.key === "Enter") {
+      setQuery(tag);
     }
   }
 
@@ -46,8 +59,15 @@ export function Search() {
       <div className={styles.suggestionsContainer}>
         <p>Popular searches:</p>
         <div className={styles.tagsContainer}>
-          <span>#zkEVM</span>
-          <span>#dApp Staking</span>
+          {searchTags.map((tag, index) => (
+            <span
+              tabIndex={0}
+              key={`tag-${tag}`}
+              className={styles.diffusedBackground}
+              onClick={() => handleTagClick(tag)}
+              onKeyUp={(event) => handleTagEnter(event, tag)}
+            >{`#${tag}`}</span>
+          ))}
         </div>
       </div>
     </div>

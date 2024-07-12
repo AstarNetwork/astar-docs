@@ -22,7 +22,7 @@
     height: 50px;
     border-radius: 30px;
     border: none;
-    padding: 10px 60px 10px 20px; /* Adjust padding to make space for the button */
+    padding: 10px 60px 10px 20px;
     box-sizing: border-box;
     font-size: 16px;
 }
@@ -36,18 +36,19 @@
   color: white;
   background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
   opacity: 0.6;
-  padding: 0 15px; /* Adjust padding as needed */
+  padding: 0 15px;
   cursor: pointer;
   border-radius:30px;
   border: 2px solid var(--text-input-background);
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  align-items: center;
+  justify-content: center;
 }
 
 html[data-theme='dark'] .searchBar button {
   opacity: 1;
 }
+
 .suggestionsContainer {
   width: 100%;
   display: flex;
