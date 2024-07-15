@@ -321,7 +321,7 @@ having a larger stake than the other dApp(s). Technically, at the moment, the dA
 the larger Id but this can change in the future.
 
 ### Tier ranking system
-Because dApps at the same tier receive equal rewards regardless of their staked amount, we introduced a ranking system for dApps within the tier itself. This will improve reward distribution for dApps that perform better within a tier if there are available rewards to be distributed.
+Because dApps at the same tier receive equal rewards regardless of their staked amount, ranking system has been introduced for dApps within the tier itself. This will improve reward distribution for dApps that perform better within a tier if there are available rewards to be distributed.
 
 dApps are not only grouped into tiers but they're also ranked inside each tier (except highest tier which doesn't have ranking).
 When a dApp has the minimum stake amount to just enter the tier, its rank will be **0** (zero). As they progress towards the upper tier, their rank will increase.
