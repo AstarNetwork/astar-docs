@@ -328,6 +328,16 @@ When a dApp has the minimum stake amount to just enter the tier, its rank will b
 If a dApp is halfway to the next tier, its rank is **5** (five). If they are almost at the next tier, their rank is **9** (nine).
 If a dApp reaches the threshold to enter the next tier but there is no empty slot in that tier and the dApp remains in the current tier, they will get the highest rank of **10** (ten).
 
+Formula to calculate rank threshold is as follows ${rank\_threshold} = {\frac{{upper\_tier\_treshold} - {tier\_threshold}}{10}}$
+
+Lastly, we can determine the rank for the dApp ${rank} = \frac{{stake\_amount} - {tier\_threshold}}{rank\_threshold}$
+
+
+For example, if the tier thresholds are [100, 500, 1000] and the dApp has 300 ASTR staked, the dApp will enter **2nd** tier with a rank of **5**. The calculations are as follows: ${rank\_threshold} = \frac{500 - 100}{10} = 40$ and ${rank} = \frac{300 - 100}{40} = 5$
+:::note
+The maximum rank is **10**, regardless of the staked amount.
+:::
+
 #### Rank reward
 Each rank provides up to a **10%** extra reward on top of the tier reward. To respect inflation, each rank reward comes from empty slots within the same tier. Each tier has its own portion of rewards to distribute. If all tier slots are occupied, the tier reward is distributed equally to each dApp in that tier, leaving no remaining reward for ranks. If there is a remaining reward, it goes towards rewarding the ranks. Depending on the availability, the rank reward can go up to **10%** of the tier reward. For example, if you are in tier **2** with a rank of **5** and the tier reward is **1000 ASTR**, then rank reward will be **rank_reward = 0.1 * 1000 ASTR = 100 ASTR**. Therefore given formula
 
