@@ -328,12 +328,12 @@ When a dApp has the minimum stake amount to just enter the tier, its rank will b
 If a dApp is halfway to the next tier, its rank is **5** (five). If they are almost at the next tier, their rank is **9** (nine).
 If a dApp reaches the threshold to enter the next tier but there is no empty slot in that tier and the dApp remains in the current tier, they will get the highest rank of **10** (ten).
 
-Formula to calculate rank threshold is as follows ${rank\_threshold} = {\frac{{upper\_tier\_treshold} - {tier\_threshold}}{10}}$
+Formula to calculate rank divisor is as follows ${rank\_divisor} = {\frac{{upper\_tier\_treshold} - {tier\_threshold}}{10}}$
 
-Lastly, we can determine the rank for the dApp ${rank} = \frac{{stake\_amount} - {tier\_threshold}}{rank\_threshold}$
+Lastly, we can determine the rank for the dApp ${rank} = \frac{{stake\_amount} - {tier\_threshold}}{rank\_divisor}$
 
 
-For example, if the tier thresholds are [100, 500, 1000] and the dApp has 300 ASTR staked, the dApp will enter **3rd** tier with a rank of **5**. The calculations are as follows: ${rank\_threshold} = \frac{500 - 100}{10} = 40$ and ${rank} = \frac{300 - 100}{40} = 5$
+For example, if the tier thresholds are [100, 500, 1000] and the dApp has 300 ASTR staked, the dApp will enter **3rd** tier with a rank of **5**. The calculations are as follows: ${rank\_divisor} = \frac{500 - 100}{10} = 40$ and ${rank} = \frac{300 - 100}{40} = 5$
 :::note
 The maximum rank is **10**, regardless of the staked amount.
 :::
