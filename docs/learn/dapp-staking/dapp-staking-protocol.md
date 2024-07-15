@@ -333,7 +333,7 @@ Formula to calculate rank threshold is as follows ${rank\_threshold} = {\frac{{u
 Lastly, we can determine the rank for the dApp ${rank} = \frac{{stake\_amount} - {tier\_threshold}}{rank\_threshold}$
 
 
-For example, if the tier thresholds are [100, 500, 1000] and the dApp has 300 ASTR staked, the dApp will enter **2nd** tier with a rank of **5**. The calculations are as follows: ${rank\_threshold} = \frac{500 - 100}{10} = 40$ and ${rank} = \frac{300 - 100}{40} = 5$
+For example, if the tier thresholds are [100, 500, 1000] and the dApp has 300 ASTR staked, the dApp will enter **3rd** tier with a rank of **5**. The calculations are as follows: ${rank\_threshold} = \frac{500 - 100}{10} = 40$ and ${rank} = \frac{300 - 100}{40} = 5$
 :::note
 The maximum rank is **10**, regardless of the staked amount.
 :::
