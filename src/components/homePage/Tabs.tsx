@@ -39,12 +39,64 @@ interface Multi {
 const { useGreater } = BreakPointHooks({ lg: 996 });
 
 export function Tabs(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-  const tabs = siteConfig.customFields.tabs as Tab[];
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isGreater = useGreater("lg");
+  const { siteConfig } = useDocusaurusContext();
 
+  const tabs = siteConfig.customFields.tabs as Tab[];
+
+  const activeTab = tabs[activeTabIndex];
+  if (isGreater) {
+    return (
+      <div className={styles.menuWrapper}>
+        <TabsMenu activeTabIndex={activeTabIndex} setActiveTabIndex={setActiveTabIndex} />
+        <TabContent articles={activeTab.content} highlight={activeTab.highlight} />
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.menuWrapper}>
+      <DropDownMenu activeTabIndex={activeTabIndex} setActiveTabIndex={setActiveTabIndex} />
+      <TabContent articles={activeTab.content} highlight={activeTab.highlight} />
+    </div>
+  );
+}
+
+function TabContent({
+  articles,
+  highlight,
+}: { articles: TabContent[]; highlight: Highlight }): JSX.Element {
+  return (
+    <div className={styles.contentWrapper}>
+      {articles.map((article) => (
+        <div key={article.title} className={styles.article}>
+          <a href={article.url}>
+            <h3>{article.title}</h3>
+          </a>
+          <p>{article.caption}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function TabsMenu({
+  activeTabIndex,
+  setActiveTabIndex,
+}: { activeTabIndex: number; setActiveTabIndex: (index: number) => void }) {
+  return <div>TABS</div>;
+}
+function DropDownMenu({
+  activeTabIndex,
+  setActiveTabIndex,
+}: { activeTabIndex: number; setActiveTabIndex: (index: number) => void }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { siteConfig } = useDocusaurusContext();
+
+  const tabs = siteConfig.customFields.tabs as Tab[];
+
+  const activeTab = tabs[activeTabIndex];
   function handleMenuOpen() {
     setIsMenuOpen(true);
   }
@@ -58,32 +110,26 @@ export function Tabs(): JSX.Element {
     setIsMenuOpen(false);
   }
 
-  const activeTab = tabs[activeTabIndex];
   return (
-    <div className={styles.wrapper}>
+    <>
       <CategoryTitle
         title={activeTab.label}
         handler={handleMenuOpen}
         isVisible={!isMenuOpen}
         iconName={activeTab.iconCssVarName}
       />
-      {/* <div className={styles.articles}>
-        <div className={styles.dummyArticle}>Article 1</div>
-        <div className={styles.dummyArticle}>Article 2</div>
-        <div className={styles.dummyArticle}>Article 3</div>
-      </div> */}
       {isMenuOpen && (
-        <CategoryList
+        <DropDownList
           tabs={tabs}
           setActiveTabIndex={handleMenuSelect}
           handleClose={handleMenuClose}
         />
       )}
-    </div>
+    </>
   );
 }
 
-function CategoryList({
+function DropDownList({
   tabs,
   setActiveTabIndex,
   handleClose,
