@@ -9,6 +9,7 @@
   margin: 2rem;
   background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
   border-radius: 8px;
+  min-width: 350px;
 }
 
 .searchBar {
