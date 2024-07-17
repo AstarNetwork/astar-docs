@@ -132,9 +132,6 @@ A concept of layer 2 scaling. Modular blockchain systems move two or more of the
  ### XCM 
  Short for Cross-Consensus Messaging, a **messaging format**  and language used to communicate between consensus systems.
 
- ### XVM
-  Short for Cross Virtual Machine, a pallet that provides interfaces for smart contracts that run on different virtual machines to interact with each other.
-
  ### Zero-knowledge proof
  A cryptographic protocol that allows one party to prove knowledge of a secret without revealing the secret itself.
  

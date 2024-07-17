@@ -11,7 +11,7 @@ The Astar Substrate chain consists of:
 - Astar Substrate EVM: This is powered by [`frontier`](https://github.com/paritytech/frontier) and uses ETH address schemes where user address is `H160`
 - Astar Substrate Native (Wasm): The address scheme is `AccountId32` where user address is described in `SS58` format.
 
-All the solutions that require performing actions on other VMs, i.e interoperability between VMs like `XVM` and `frontier`, require a deterministic way of converting their addresses to the other VM’s address scheme.
+All the solutions that require performing actions on other VMs, i.e interoperability between VMs like `frontier`, require a deterministic way of converting their addresses to the other VM’s address scheme.
 
 :::caution
 Throughout this doc we will use words “address” and “account” interchangeably, although they are different in literal sense, in the context of this doc they are treated the same.
@@ -43,14 +43,6 @@ Problems associated with this,
 - Since the SS58 address is generated using hashed derivation formula, there is no known private key attached to it. Thus, a user can’t control it directly; actually, no one can.
 - The mapping happens in one direction only, i.e from H160 → SS58. We can obtain an SS58 address that's associated with an H160 but it doesn't go the other way around in order to derive an H160 address from a given SS58.
 
-### How does `XVM` handle accounts?
-
-Since XVM allows smart contracts from either VM to call each other, we require a way to convert addresses both ways.
-
-Before Account Unification, the XVM pallet used the same `AddressMapping` trait from the `frontier` pallet for conversions from H160 → SS58 and `AccountMapping` (a new trait) for conversions from SS58 → H160.
-
-Since the conversions are one way only, this is not a complete solution. That means there is no way to derive the original address from a generated address, if wanting to go in the other direction.
-
 ## What is Account Unification?
 
 AU is designed to solve the core problems described above:
@@ -58,11 +50,7 @@ AU is designed to solve the core problems described above:
 - **No double mapping**: This has the most impact since without it we can’t go back on a generated address. For example, if we have a SS58 corresponding to H160, we can’t know which H160 it belonged to.
 - **Users can’t control the generated address:** This is more on UX side, since Astar is a Cross-VM, users are encouraged to engage with both EVM and native Wasm ecosystems equally, but managing two different accounts for two VMs that are not interchangeable with one another is bad UX, from user’s perspective.
 
-Account Unification (AU) provides users the ability to bind their H160 and SS58 addresses together and create double mappings, which can then be used by low-level solutions that require address conversions, such as EVM (i.e `frontier`) and XVM.
-
-![Without-Unification](./img/without.png)
-
-![With-Unification](./img/with.png)
+Account Unification (AU) provides users the ability to bind their H160 and SS58 addresses together and create double mappings, which can then be used by low-level solutions that require address conversions, such as EVM (i.e `frontier`).
 
 ## How does AU work?
 
@@ -77,7 +65,7 @@ The pallet has two dispatch-able calls,
 - `claim_evm_address` : Users can submit a signature to prove their ownership over the EVM address and therefore claim it, thus creating a double mapping between these accounts, SS58 and H160.
 - `claim_default_evm_address`: If a user is not interested in controlling the generated account and only wants to have a double mapping, this is used. It creates a double mapping based on the (existing) default generated EVM address.
 
-The Unified Accounts pallet provides implementations of various address conversion traits that can consumed by other solutions, such as `AddressMapping` for `frontier` and `AccountMapping` for `XVM`.
+The Unified Accounts pallet provides implementations of various address conversion traits that can consumed by other solutions, such as `AddressMapping` for `frontier`.
 
 **Signature Scheme**
 
@@ -138,8 +126,6 @@ Since accounts are dispensable, if a user wishes to change mappings he/she can s
 
 Since before unifying the accounts any interaction from the EVM to the Native side is performed via the default derived account, including all the holdings
 of native funds like XC20, dAppStaking rewards (if interacted with staking precompiles), etc, thus they need to be transferred to the new SS58 account before accounts are unified otherwise the funds will be lost. The pallet only handles the transfer of native balances, and all other native assets need to be transferred manually.
-
-Also for EVM smart contract developers, if a contract is XVM enabled and it calls into a Wasm contract, there should be a mechanism in place to migrate the state to a new SS58 account so that users can do that before unifying accounts.
 
 :::caution
 It is strongly advised to use only the Astar Portal for unifying accounts as it is designed to handle the asset transfer process properly. **If the pallet’s extrinsics are used directly then native funds will be lost forever.**

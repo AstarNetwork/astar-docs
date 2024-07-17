@@ -148,10 +148,6 @@ Un estándar para activos de cadena cruzada en el ecosistema Polkadot con interf
 
 Abreviatura de Cross-Consensus Messaging, un **formato de mensajería** y lenguaje utilizado para comunicarse entre sistemas de consenso.
 
-### XVM
-
-Abreviatura de Cross Virtual Machine, una paleta que proporciona interfaces para que los contratos inteligentes que se ejecutan en diferentes máquinas virtuales interactúen entre sí.
-
 ### Zero-knowledge proof
 
 Protocolo criptográfico que permite a una parte demostrar el conocimiento de un secreto sin revelar el propio secreto.

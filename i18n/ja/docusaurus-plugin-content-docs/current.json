@@ -227,9 +227,9 @@
     "message": "How to leverage other Parachains",
     "description": "The label for category How to leverage other Parachains in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.XVM and Wasm": {
-    "message": "XVM and Wasm",
-    "description": "The label for category XVM and Wasm in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.WebAssembly Smart Contracts": {
+    "message": "WebAssembly Smart Contracts",
+    "description": "The label for category WebAssembly Smart Contracts in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Use Astar Features": {
     "message": "Use Astar Features",
