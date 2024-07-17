@@ -45,36 +45,63 @@ export function Tabs(): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isGreater = useGreater("lg");
 
-  function handleMenuButtonClick() {
-    setIsMenuOpen((prev) => !prev);
+  function handleMenuOpen() {
+    setIsMenuOpen(true);
+  }
+
+  function handleMenuSelect(activeTabIndex: number) {
+    setActiveTabIndex(activeTabIndex);
+    setIsMenuOpen(false);
   }
 
   const activeTab = tabs[activeTabIndex];
   return (
-    <div className={styles.categoryList}>
+    <div className={styles.wrapper}>
       <CategoryTitle
         title={activeTab.label}
-        handler={handleMenuButtonClick}
+        handler={handleMenuOpen}
         isVisible={!isMenuOpen}
         iconName={activeTab.iconCssVarName}
       />
-      <div className={styles.articles}>
+      {/* <div className={styles.articles}>
         <div className={styles.dummyArticle}>Article 1</div>
         <div className={styles.dummyArticle}>Article 2</div>
         <div className={styles.dummyArticle}>Article 3</div>
-      </div>
-      {isMenuOpen && (
-        <div className={styles.menuModal}>
-          <div className={styles.menuItem}>Category 1</div>
-          <div className={styles.menuItem}>Category 2</div>
-          <div className={styles.menuItem}>Category 3</div>
-          <div className={styles.menuItem}>Category 4</div>
-          <div className={styles.menuItem}>Category 5</div>
-        </div>
-      )}
+      </div> */}
+      {isMenuOpen && <CategoryList tabs={tabs} setActiveTabIndex={handleMenuSelect} />}
     </div>
   );
 }
+
+function CategoryList({
+  tabs,
+  setActiveTabIndex,
+}: {
+  tabs: Tab[];
+  setActiveTabIndex: (index: number) => void;
+}): JSX.Element {
+  return (
+    <div className={styles.menuModal}>
+      {tabs.map((tab, index) => (
+        <button
+          key={tab.id}
+          onClick={() => setActiveTabIndex(index)}
+          type="button"
+          className={styles.menuItem}
+        >
+          <div
+            className={styles.buttonIcon}
+            style={{
+              backgroundImage: `var(--${tab.iconCssVarName})`,
+            }}
+          />
+          <span>{tab.label}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
 
 function CategoryTitle({
   title,

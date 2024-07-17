@@ -293,7 +293,7 @@ const config = {
       {
         label: "dApp Staking",
         id: "staking",
-        icon: "stake.svg",
+        iconCssVarName: "staking-icon",
         content: [
           {
             title: "What is dApp Staking",
@@ -339,7 +339,7 @@ const config = {
       {
         label: "Users Guides",
         id: "guides",
-        icon: "guide.svg",
+        iconCssVarName: "guide-icon",
         content: [
           {
             title: "Astar Wallet",
@@ -379,6 +379,7 @@ const config = {
       {
         label: "Builders",
         id: "builders",
+        iconCssVarName: "builders-icon",
         content: [
           {
             title: "Introduction",

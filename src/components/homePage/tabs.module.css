@@ -1,12 +1,18 @@
 :root {
   --astar-icon: url('/img/astar-logo.svg');
+  --builders-icon: url('/img/builders.svg');
+  --staking-icon: url('/img/stake.svg');
+  --guide-icon: url('/img/guide.svg');
 }
 
 html[data-theme='dark'] {
   --astar-icon: url('/img/astar-logo-white.svg');
+  --builders-icon: url('/img/builders-white.svg');
+  --staking-icon: url('/img/stake-white.svg');
+  --guide-icon: url('/img/guide-white.svg');
 }
 
-.categoryList {
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,6 +61,49 @@ html[data-theme='dark'] .categoryButton {
   opacity: 0;
 }
 
+.menuModal {
+  position: absolute;
+  top: 30px; /* Adjust this to start from the button */
+  width: 100%;
+  min-width: 350px;
+  max-width: 500px;
+  border: 1px solid var(--text-input-background);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  animation: slide-down 0.3s ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--box-background);
+  padding: 16px;
+}
+
+.menuItem {
+  border: none;
+  border-radius: 8px;
+  width: 320px;
+  padding: 4px;
+  background-color: var(--box-background);
+  color: var(--text-color-title);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+.menuItem:hover {
+  background-color: var(--box-background-hover);
+}
+
 .articles {
   display: flex;
   flex-direction: column;
@@ -74,28 +123,6 @@ html[data-theme='dark'] .categoryButton {
   padding: 10px;
   width: 100%;
   text-align: center;
-}
-
-.menuModal {
-  position: absolute;
-  top: 50px; /* Adjust this to start from the button */
-  width: 100%;
-  max-width: 500px;
-  background-color: white;
-  border: 1px solid #ddd;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  animation: slide-down 0.3s ease forwards;
-}
-
-.menuItem {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
-.menuItem:last-child {
-  border-bottom: none;
 }
 
 @keyframes slide-down {
