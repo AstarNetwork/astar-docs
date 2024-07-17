@@ -157,3 +157,24 @@ Once your collator is active, you will see your name inside **Network** tab ever
 <center>
 <img src="https://i.imgur.com/e70Tpbq.png" border="1"></img>
 </center>
+
+### Leave candidacy
+
+Once you become a collator and enter a session, you are required to produce blocks for that session. To avoid slashing, candidates must first initiate the leave process.
+
+On the Polkadot.js portal select _**Developer > Extrinsic**_.
+
+Select your **collator account** and extrinsic type: _**CollatorSelection / leaveIntent**_:
+<center>
+<img src="/img/tutorial/collator-selection-leave-intent.png" border="1"></img>
+</center>
+
+The collator has now removed themselves from the next session. After the current session has ended, candidates can withdraw their bond.
+
+On the Polkadot.js portal select _**Developer > Extrinsic**_.
+
+Select your **collator account** and extrinsic type: _**CollatorSelection / withdrawBond**_:
+
+<center>
+<img src="/img/tutorial/collator-selection-withdraw-bond.png" border="1"></img>
+</center>
