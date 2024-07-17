@@ -2785,6 +2785,18 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
+"@react-hooks-library/core@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@react-hooks-library/core/-/core-0.6.2.tgz#1898d32e0dc174ec3b0af82a6edeb4dcd7150ede"
+  integrity sha512-Ca6ccj9mfUiQ0hbDJV0hzUaweZU7D0E5Xwtp3ba5oT6/yWj1tzoPe0y3AwGQyUSUKA5G6OADylU2fwEqZwrpNA==
+  dependencies:
+    "@react-hooks-library/shared" "0.6.2"
+
+"@react-hooks-library/shared@0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@react-hooks-library/shared/-/shared-0.6.2.tgz#aea5fe91397f8cfe3ba5175717b8496f7ea32127"
+  integrity sha512-tasvVgcoRhnHYZSVfQjDK7VDviVrO9BqqS/yEvjJ4/QRTVFQTNmt5Jfj3ym0Uju2B63Dc9892DuLhb9V9oysWA==
+
 "@sideway/address@^4.1.3":
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/@sideway/address/-/address-4.1.4.tgz#03dccebc6ea47fdc226f7d3d1ad512955d4783f0"
