@@ -243,7 +243,203 @@ const config = {
       },
     }),
   customFields: {
-    searchTags: ["zkEvm", "dApp Staking", "node", "wallets", "ledger"],
+    searchTags: ["dApp Staking", "smart contracts", "IDE", "zkEVM", "API", "Faucet", "Oracles"],
+    tabs: [
+      {
+        label: "About Astar",
+        id: "about",
+        iconCssVarName: "astar-icon",
+        content: [
+          {
+            title: "About Astar Network",
+            caption: "Japan's Scalable, Interoperable Smart Contract Platform",
+            url: "https://docs.astar.network/docs/learn/astar",
+          },
+          {
+            title: "Architecture",
+            caption: "Ecosystem Architecture: Ethereum zkEVM Layer 2 & Polkadot Parachain",
+            url: "https://docs.astar.network/docs/learn/architecture/",
+          },
+          {
+            title: "Networks",
+            caption: "Networks accessible within the Astar Ecosystem",
+            url: "https://docs.astar.network/docs/learn/networks",
+          },
+          {
+            title: "Astar Token",
+            caption: "ASTR token: utilities, allocation, and values",
+            url: "https://docs.astar.network/docs/learn/astar-tokens",
+          },
+          {
+            title: "Tokenomics 2.0",
+            caption: "Astar Tokenomics: Inflation and Fees Model",
+            url: "https://docs.astar.network/docs/learn/tokenomics2/",
+          },
+          {
+            title: "Astar zkEVM",
+            caption: "Layer 2 scaling solution connected to AggLayer",
+            url: "https://docs.astar.network/docs/learn/zkEVM/",
+          },
+        ],
+        highlight: {
+          single: {
+            title: "Connecting you to web3",
+            caption: "Creating opportunities for individuals to use web3 technology",
+            buttonText: "Astar website",
+            buttonUrl: "https://astar.network",
+          },
+        },
+      },
+      {
+        label: "dApp Staking",
+        id: "staking",
+        icon: "stake.svg",
+        content: [
+          {
+            title: "What is dApp Staking",
+            caption: "Unique stacking mechanism to provide financial incentives for developers",
+            url: "https://docs.astar.network/docs/learn/dapp-staking/",
+          },
+          {
+            title: "Technical Overview",
+            caption: "Technical and detailed presentation of dApp Staking",
+            url: "https://docs.astar.network/docs/learn/dapp-staking/dapp-staking-protocol",
+          },
+          {
+            title: "Parameters",
+            caption:
+              "Parameters such as time, rewards, slot allocations, tier assignments, and thresholds.",
+            url: "https://docs.astar.network/docs/learn/dapp-staking/protocol-parameters",
+          },
+          {
+            title: "For Users",
+            caption: "How ASTR holders can take part in dApp Staking",
+            url: "https://docs.astar.network/docs/use/dapp-staking/for-stakers/",
+          },
+          {
+            title: "For Developers",
+            caption: "How project owners can participate in dApp Staking",
+            url: "https://docs.astar.network/docs/use/dapp-staking/for-devs/",
+          },
+          {
+            title: "Building with dApp Staking",
+            caption: "Leveraging and building on top of dApp Staking",
+            url: "https://docs.astar.network/docs/build/dapp-staking/",
+          },
+        ],
+        highlight: {
+          single: {
+            title: "dApp Staking",
+            caption: "Incentivized program connecting devs to Astar community",
+            buttonText: "Build & Earn",
+            buttonUrl: "https://docs.astar.network/docs/learn/dapp-staking/",
+          },
+        },
+      },
+      {
+        label: "Users Guides",
+        id: "guides",
+        icon: "guide.svg",
+        content: [
+          {
+            title: "Astar Wallet",
+            caption: "Set up your Ethereum or Polkadot wallet for the Astar Ecosystem",
+            url: "https://docs.astar.network/docs/use/manage-wallets/create-wallet",
+          },
+          {
+            title: "Transfer assets",
+            caption: "Transfer assets within and outside the Astar Ecosystem",
+            url: "https://docs.astar.network/docs/use/manage-assets/transfer-tokens",
+          },
+          {
+            title: "Astar zkEVM",
+            caption: "Explore and utilize the Layer 2 Astar zkEVM",
+            url: "https://docs.astar.network/docs/use/zkevm-guides/",
+          },
+          {
+            title: "dApp Staking",
+            caption: "How ASTR holders or project owners can take part in dApp Staking",
+            url: "https://docs.astar.network/docs/use/dapp-staking/",
+          },
+          {
+            title: "Troubleshooting",
+            caption: "For users encountering issues on the Astar network",
+            url: "https://docs.astar.network/docs/use/troubleshooting",
+          },
+        ],
+        highlight: {
+          single: {
+            title: "Astar Portal",
+            caption: "Multi-chain platform hub for asset management",
+            buttonText: "Try it out!",
+            buttonUrl: "https://portal.astar.network/",
+          },
+        },
+      },
+      {
+        label: "Builders",
+        id: "builders",
+        content: [
+          {
+            title: "Introduction",
+            caption: "A Developer's Overview of the Astar Ecosystem",
+            url: "https://docs.astar.network/docs/build/Introduction/",
+          },
+          {
+            title: "Nodes",
+            caption: "Set up a permissionless node and become a collator",
+            url: "https://docs.astar.network/docs/build/nodes/",
+          },
+          {
+            title: "Build Environment",
+            caption: "Set up a local environment tailored to your development requirements",
+            url: "https://docs.astar.network/docs/build/environment/",
+          },
+          {
+            title: "Astar zkEVM",
+            caption: "Everything you need to build on Astar zkEVM Layer 2",
+            url: "https://docs.astar.network/docs/build/zkEVM/",
+          },
+          {
+            title: "Integrations",
+            caption: "Common services and infrastructure tools integrated on Astar Network",
+            url: "https://docs.astar.network/docs/build/integrations/",
+          },
+          {
+            title: "WASM smart-contracts",
+            caption: "Build and deploy a smart contract using the WASM tech stack",
+            url: "https://docs.astar.network/docs/build/wasm/",
+          },
+          {
+            title: "EVM smart-contracts",
+            caption: "Build and deploy a smart contract using the EVM tech stack",
+            url: "https://docs.astar.network/docs/build/EVM/",
+          },
+        ],
+        highlight: {
+          multi: [
+            {
+              title: "Faucet",
+              subtitle: "Need tokens for testing?",
+              icon: null,
+              url: "https://astar.network/faucet",
+            },
+            {
+              title: "Support",
+              subtitle: "Encountering issues?",
+              icon: "discord.svg",
+              url: "https://astar.network/support",
+            },
+            {
+              title: "Check our Ecosystem",
+              subtitle: "Developer toolings",
+              icon: null,
+              url: "https://astar.network/ecosystem",
+            },
+          ],
+        },
+      },
+    ],
   },
 };
 
