@@ -1,7 +1,7 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { Hero } from "@site/src/components/homePage/Hero";
 import { Search } from "@site/src/components/homePage/Search";
+import { Tabs } from "@site/src/components/homePage/Tabs";
 import Layout from "@theme/Layout";
 import "./index.scss";
 
@@ -15,9 +15,7 @@ export default function Home(): JSX.Element {
       <div className="contentWrapper">
         <Hero />
         <Search searchTags={siteConfig.customFields.searchTags as string[]} />
-        <main>
-          <HomepageFeatures />
-        </main>
+        <Tabs />
       </div>
     </Layout>
   );
