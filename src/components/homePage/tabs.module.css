@@ -96,11 +96,18 @@ html[data-theme='dark'] .categoryButton {
   gap: 8px;
 }
 
-.menuItem:last-child {
-  border-bottom: none;
+.closeButton {
+ align-self: flex-end;
+ background: none;
+ border: none;
+ border-radius: 12px;
+ cursor: pointer;
+ font-size: 18px;
+ font-weight: 500;
+ color: var(--text-color-description);
 }
 
-.menuItem:hover {
+.menuItem:hover, .closeButton:hover {
   background-color: var(--box-background-hover);
 }
 

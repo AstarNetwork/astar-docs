@@ -49,6 +49,10 @@ export function Tabs(): JSX.Element {
     setIsMenuOpen(true);
   }
 
+  function handleMenuClose() {
+    setIsMenuOpen(false);
+  }
+
   function handleMenuSelect(activeTabIndex: number) {
     setActiveTabIndex(activeTabIndex);
     setIsMenuOpen(false);
@@ -68,7 +72,13 @@ export function Tabs(): JSX.Element {
         <div className={styles.dummyArticle}>Article 2</div>
         <div className={styles.dummyArticle}>Article 3</div>
       </div> */}
-      {isMenuOpen && <CategoryList tabs={tabs} setActiveTabIndex={handleMenuSelect} />}
+      {isMenuOpen && (
+        <CategoryList
+          tabs={tabs}
+          setActiveTabIndex={handleMenuSelect}
+          handleClose={handleMenuClose}
+        />
+      )}
     </div>
   );
 }
@@ -76,12 +86,17 @@ export function Tabs(): JSX.Element {
 function CategoryList({
   tabs,
   setActiveTabIndex,
+  handleClose,
 }: {
   tabs: Tab[];
   setActiveTabIndex: (index: number) => void;
+  handleClose: () => void;
 }): JSX.Element {
   return (
     <div className={styles.menuModal}>
+      <button className={styles.closeButton} type="button" onClick={handleClose}>
+        X
+      </button>
       {tabs.map((tab, index) => (
         <button
           key={tab.id}
