@@ -428,7 +428,7 @@ const config = {
             {
               title: "Support",
               subtitle: "Encountering issues?",
-              icon: "discord.svg",
+              icon: "/img/socials/discord-color.svg",
               url: "https://astar.network/support",
             },
             {

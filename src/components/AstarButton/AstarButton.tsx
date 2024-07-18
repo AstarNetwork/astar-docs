@@ -28,7 +28,7 @@ export function AstarButton({ href = "", color = "blue", size = "md", children }
   );
 }
 
-function ArrowRightIcon({ arrowClass }: { arrowClass: string }) {
+export function ArrowRightIcon({ arrowClass }: { arrowClass: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

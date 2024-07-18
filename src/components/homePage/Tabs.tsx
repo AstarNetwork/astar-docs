@@ -1,8 +1,8 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { BreakPointHooks } from "@react-hooks-library/core";
 import { useEffect, useState } from "react";
+import { ArrowRightIcon, AstarButton } from "../AstarButton/AstarButton";
 import styles from "./tabs.module.css";
-
 interface Tab {
   label: string;
   id: string;
@@ -39,7 +39,7 @@ interface Multi {
 const { useGreater } = BreakPointHooks({ lg: 996 });
 
 export function Tabs(): JSX.Element {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTabIndex, setActiveTabIndex] = useState(3);
   const isGreater = useGreater("lg");
   const { siteConfig } = useDocusaurusContext();
 
@@ -77,6 +77,7 @@ function TabContent({
           <p>{article.caption}</p>
         </div>
       ))}
+      <ArticleHighlight content={highlight} />
     </div>
   );
 }
@@ -85,7 +86,13 @@ function TabsMenu({
   activeTabIndex,
   setActiveTabIndex,
 }: { activeTabIndex: number; setActiveTabIndex: (index: number) => void }) {
-  return <div>TABS</div>;
+  return (
+    <div>
+      <AstarButton>
+        <span className={styles.astarButtonText}>Click me</span>
+      </AstarButton>
+    </div>
+  );
 }
 function DropDownMenu({
   activeTabIndex,
@@ -163,7 +170,6 @@ function DropDownList({
   );
 }
 
-
 function CategoryTitle({
   title,
   handler,
@@ -191,4 +197,48 @@ function CategoryTitle({
       <span className={styles.arrow}>⌄</span>
     </button>
   );
+}
+
+function ArticleHighlight({ content }: { content: Highlight }) {
+  const { single, multi } = content;
+  if (single) {
+    return (
+      <div className={styles.highlightWrapper}>
+        <h3>{single.title}</h3>
+        <p>{single.caption}</p>
+        <AstarButton href={single.buttonUrl}>
+          <span className={styles.astarButtonText}>{single.buttonText}</span>
+        </AstarButton>
+      </div>
+    );
+  }
+
+  if (multi) {
+    return (
+      <div className={styles.column}>
+        {multi.map((block, index) => (
+          <a
+            className={styles.highlightWrapper}
+            key={`${index}_${block.title}`}
+            href={block.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className={styles.row}>
+              <div className={styles.multiCta}>
+                <span>{block.subtitle}</span>
+                <h3>
+                  {block.icon && <img src={block.icon} alt="social icon" />}
+                  <span>{block.title}</span>
+                </h3>
+              </div>
+              <div className={styles.arrowWrapper}>
+                <ArrowRightIcon arrowClass={styles.highlightArrow} />
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    );
+  }
 }

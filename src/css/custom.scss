@@ -24,6 +24,8 @@ $astar-blue-dark: #05b6fd;
   --gradient-start: #0047FF;
   --gradient-end: #00D1FF;
   --text-input-background: #FFFFFF;
+  --highlight-background: #D6EDFF;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -42,6 +44,8 @@ $astar-blue-dark: #05b6fd;
   --gradient-start: #0050EB;
   --gradient-end: #008BF0;
   --text-input-background: #020617;
+  --highlight-background: rgba(0, 117, 255, 0.15);
+  --box-shadow-color: rgba(255, 255, 255, 0.05);
 }
 
 .docusaurus-highlight-code-line {
