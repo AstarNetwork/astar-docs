@@ -9,6 +9,7 @@
   cursor: pointer;
   padding: 10px 20px;
   border: none;
+  height: 45px;
 }
 
 .astarButton::before {
@@ -16,13 +17,14 @@
   position: absolute;
   height: 0;
   width: 0;
-  border-radius: 9999px;
+  border-radius: 100%;
   transition: all 0.3s ease-out;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .astarButton:hover::before {
-  height: 64px;
-  width: 64px;
+  height: 200%;
+  width: 100%;
 }
 
 .astarButton.blue {
