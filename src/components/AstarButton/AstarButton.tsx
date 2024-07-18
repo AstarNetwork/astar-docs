@@ -9,6 +9,13 @@ export function AstarButton({ href = "", color = "blue", size = "md", children }
 
   return (
     <button className={buttonClass} type="button">
+      {href && (
+        <a
+          href={href}
+          target={href.includes("https") ? "_blank" : "_self"}
+          className="astarButtonLink"
+        />
+      )}
       <span className={innerButtonClass}>
         {children}
         <span className={circleClass}>
