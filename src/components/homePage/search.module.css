@@ -84,6 +84,10 @@ html[data-theme='dark'] .searchBar button {
 
 @media (min-width: 996px) {
 
+  .container {
+    margin-bottom: 50px;
+  }
+
   .searchBar input {
     height: 60px;
     font-size: 18px;

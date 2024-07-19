@@ -1,5 +1,9 @@
 @import '../css/custom.scss';
 
+:root {
+  --ifm-heading-font-family: "Poppins", sans-serif;
+  --ifm-font-family-base: "Poppins", sans-serif;
+}
 body {
   font-family: 'Poppins', sans-serif;
 }

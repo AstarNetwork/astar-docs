@@ -37,6 +37,7 @@ html[data-theme='dark'] {
   transition: opacity 0.3s ease;
   font-size: 18px;
   font-weight: 500;
+  font-family: "Poppins", sans-serif;
   margin-bottom: -30px;
   display: flex;
   align-items: center;
@@ -99,6 +100,7 @@ html[data-theme='dark'] .categoryButton {
   align-items: center;
   justify-content: left;
   gap: 8px;
+  font-family: "Poppins", sans-serif;
 }
 
 .closeButton {
@@ -126,18 +128,34 @@ html[data-theme='dark'] .categoryButton {
   width: 100%;
   min-width: 350px;
   max-width: 500px;
-  width: 100%;
   position: relative;
   gap: 20px;
-  h3 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 5px;
+}
+
+.contentWrapper h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contentWrapper p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color-description);
+}
+
+@media (min-width: 996px) {
+  .contentWrapper {
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto; /* Three equal columns and one auto column */
+    gap: 36px;
+
   }
-  p {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--text-color-description);
+
+  .contentWrapper > *:nth-last-child(1) {
+    grid-column: 4; /* Make the last item span the last column */
+    grid-row: 1 / span 3; /* Make it span all rows */
   }
 }
 
@@ -253,7 +271,7 @@ html[data-theme='dark'] .categoryButton {
   align-items: center;
   justify-content: center;
   gap: 8px;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .tabButton.active {
