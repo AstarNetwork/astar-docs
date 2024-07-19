@@ -429,7 +429,7 @@ const config = {
               title: "Support",
               subtitle: "Encountering issues?",
               icon: "/img/socials/discord-color.svg",
-              url: "https://astar.network/support",
+              url: "https://discord.gg/astarnetwork",
             },
             {
               title: "Check our Ecosystem",

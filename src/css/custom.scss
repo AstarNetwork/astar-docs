@@ -27,6 +27,7 @@ $astar-blue-dark: #05b6fd;
   --highlight-background: #D6EDFF;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
   --frosted-background: rgba(255, 255, 255, 0.5);
+  --hr-color: #CBD5E1;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -48,6 +49,7 @@ $astar-blue-dark: #05b6fd;
   --highlight-background: rgba(0, 117, 255, 0.15);
   --box-shadow-color: rgba(255, 255, 255, 0.05);
   --frosted-background: rgba(255, 255, 255, 0.05);
+  --hr-color: #334155;
 }
 
 .docusaurus-highlight-code-line {
