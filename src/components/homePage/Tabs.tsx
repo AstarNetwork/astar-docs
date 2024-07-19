@@ -1,6 +1,6 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { BreakPointHooks } from "@react-hooks-library/core";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRightIcon, AstarButton } from "../AstarButton/AstarButton";
 import styles from "./tabs.module.css";
 interface Tab {
@@ -86,14 +86,59 @@ function TabsMenu({
   activeTabIndex,
   setActiveTabIndex,
 }: { activeTabIndex: number; setActiveTabIndex: (index: number) => void }) {
+  const { siteConfig } = useDocusaurusContext();
+  const tabs = siteConfig.customFields.tabs as Tab[];
+  const activeTabElementRef = useRef(null);
+
+  function handleKeyUp(event: React.KeyboardEvent<HTMLButtonElement>) {
+    if (event.key === "ArrowRight") {
+      const nextIndex = activeTabIndex + 1;
+      if (nextIndex < tabs.length) {
+        setActiveTabIndex(nextIndex);
+      }
+    }
+    if (event.key === "ArrowLeft") {
+      const nextIndex = activeTabIndex - 1;
+      if (nextIndex >= 0) {
+        setActiveTabIndex(nextIndex);
+      }
+    }
+  }
+
   return (
-    <div>
-      <AstarButton>
-        <span className={styles.astarButtonText}>Click me</span>
-      </AstarButton>
+    <div className={styles.tabMenuWrapper}>
+      {tabs.map((tab, index) => (
+        <button
+          key={tab.id}
+          type="button"
+          data-tab={tab.label}
+          className={`${styles.tabButton} ${activeTabIndex === index ? styles.active : ""}`}
+          onClick={() => setActiveTabIndex(index)}
+          onKeyUp={handleKeyUp}
+          style={
+            {
+              "--active-bg-color":
+                "linear-gradient(to right, var(--gradient-start), var(--gradient-end))",
+              "--inactive-bg-color": "none",
+            } as React.CSSProperties
+          }
+        >
+          <div
+            className={styles.buttonIcon}
+            style={{
+              backgroundImage:
+                activeTabIndex === index
+                  ? `var(--${tab.iconCssVarName}-dark)`
+                  : `var(--${tab.iconCssVarName})`,
+            }}
+          />
+          <span>{tab.label}</span>
+        </button>
+      ))}
     </div>
   );
 }
+
 function DropDownMenu({
   activeTabIndex,
   setActiveTabIndex,

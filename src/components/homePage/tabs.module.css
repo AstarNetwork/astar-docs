@@ -3,13 +3,17 @@
   --builders-icon: url('/img/builders.svg');
   --staking-icon: url('/img/stake.svg');
   --guide-icon: url('/img/guide.svg');
+  --astar-icon-dark: url('/img/astar-logo-white.svg');
+  --builders-icon-dark: url('/img/builders-white.svg');
+  --staking-icon-dark: url('/img/stake-white.svg');
+  --guide-icon-dark: url('/img/guide-white.svg');
 }
 
 html[data-theme='dark'] {
-  --astar-icon: url('/img/astar-logo-white.svg');
-  --builders-icon: url('/img/builders-white.svg');
-  --staking-icon: url('/img/stake-white.svg');
-  --guide-icon: url('/img/guide-white.svg');
+  --astar-icon: var(--astar-icon-dark);
+  --builders-icon: var(--builders-icon-dark);
+  --staking-icon: var(--staking-icon-dark);
+  --guide-icon: var(--guide-icon-dark);
 }
 
 .menuWrapper {
@@ -214,6 +218,47 @@ html[data-theme='dark'] .categoryButton {
   width: 16px;
   color: #0075FF;
   stroke-width: 2;
+}
+
+.tabMenuWrapper {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: absolute;
+  align-items: center;
+  width: 810px;
+  height: 68px;
+  margin-bottom: -34px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  background-color: var(--frosted-background);
+  backdrop-filter: blur(10px);
+  display: flex;
+  z-index: 20;
+  padding: 4px;
+}
+
+.tabButton {
+  border: none;
+  height: 60px;
+  width: 200px;
+  color: var(--text-color-title);
+  background: none;
+  cursor: pointer;
+  border-radius: 32px;
+  position: relative;
+  transition: opacity 0.3s ease;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+}
+
+.tabButton.active {
+  color: white;
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
 }
 
 @keyframes slide-down {
