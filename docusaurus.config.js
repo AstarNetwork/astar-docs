@@ -3,8 +3,6 @@
 const { themes } = require("prism-react-renderer");
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
-const math = require("remark-math");
-const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -38,15 +36,17 @@ const config = {
 
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: "docs",
+          routeBasePath: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/AstarNetwork/astar-docs/tree/main/",
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          remarkPlugins: [require("remark-math")],
+          rehypePlugins: [require("rehype-katex")],
         },
         blog: {
           showReadingTime: true,
