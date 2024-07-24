@@ -36,6 +36,9 @@
   --lg: 1024px;
   --xl: 1280px;
   --xxl: 1440px;
+  --lp-background-color: #FFFFFF;
+  --lp-background-image: url("/img/background.svg");
+  --search-bar-border: #94A3B8;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -58,6 +61,9 @@
   --box-shadow-color: rgba(255, 255, 255, 0.05);
   --frosted-background: rgba(255, 255, 255, 0.05);
   --hr-color: #334155;
+  --lp-background-color: #020618;
+  --lp-background-image: url("/img/background_dark.svg");
+  --search-bar-border: #334155;
 }
 
 .docusaurus-highlight-code-line {
@@ -72,7 +78,7 @@
 }
 
 .footer {
-  background-color: var(--box-background);
+  background-color: var(--lp-background-color);
 }
 
 .footer__title {
@@ -85,6 +91,11 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--text-color-description);
+}
+
+.navbar {
+  background-color: var(--lp-background-color);
+  border-bottom: 1px solid var(--hr-color);
 }
 
 .navbar__logo {
@@ -100,6 +111,10 @@
   position: relative;
   top: -11px;
   left: 12px;
+}
+
+button.DocSearch.DocSearch-Button {
+  border: 1px solid var(--search-bar-border);
 }
 
 @media(min-width: 996px) {

@@ -81,7 +81,7 @@ html[data-theme='dark'] .categoryButton {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--box-background);
+  background-color: var(--lp-background-color);
   padding: 16px;
 }
 
@@ -90,7 +90,7 @@ html[data-theme='dark'] .categoryButton {
   border-radius: 8px;
   width: 320px;
   padding: 4px;
-  background-color: var(--box-background);
+  background-color: var(--lp-background-color);
   color: var(--text-color-title);
   font-size: 18px;
   font-weight: 500;
@@ -115,7 +115,7 @@ html[data-theme='dark'] .categoryButton {
 }
 
 .menuItem:hover, .closeButton:hover {
-  background-color: var(--box-background-hover);
+  background-color: var(--highlight-background);
 }
 
 .contentWrapper {
@@ -130,6 +130,8 @@ html[data-theme='dark'] .categoryButton {
   max-width: 500px;
   position: relative;
   gap: 20px;
+  background-color: var(--frosted-background);
+  backdrop-filter: blur(10px);
 }
 
 .contentWrapper h3 {
