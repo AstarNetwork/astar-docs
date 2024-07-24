@@ -40,7 +40,7 @@ gap: 28px;
   background-repeat: no-repeat;
 }
 
-@media (-min-width: 996px) {
+@media (min-width: 996px) {
   .socialsWrapper {
     margin-top: 100px;
   }
