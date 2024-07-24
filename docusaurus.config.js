@@ -15,7 +15,7 @@ const config = {
   favicon: "img/fav.png",
   organizationName: "AstarNetwork", // Usually your GitHub org/user name.
   projectName: "astar-docs", // Usually your repo name.
-  plugins: ["docusaurus-plugin-sass"],
+  plugins: [],
   markdown: {
     mermaid: true,
   },
@@ -54,7 +54,7 @@ const config = {
           editUrl: "https://github.com/AstarNetwork/astar-docs/tree/main/",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.scss"),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],

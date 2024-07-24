@@ -4,11 +4,11 @@
  * work well for content-centric websites.
  */
 
-$astar-blue: #0085ff;
-$astar-blue-dark: #05b6fd;
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-heading-font-family: "Poppins", sans-serif;
+  --ifm-font-family-base: "Poppins", sans-serif;
   --ifm-color-primary: #3578e7;
   --ifm-color-primary-dark: #3272d8;
   --ifm-color-primary-darker: #2c63bb;
@@ -28,6 +28,14 @@ $astar-blue-dark: #05b6fd;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
   --frosted-background: rgba(255, 255, 255, 0.5);
   --hr-color: #CBD5E1;
+  --astar-blue: #0085ff;
+  --astar-blue-dark: #05b6fd;
+  --xs: 375px;
+  --sm: 640px;
+  --md: 768px;
+  --lg: 1024px;
+  --xl: 1280px;
+  --xxl: 1440px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -66,9 +74,37 @@ $astar-blue-dark: #05b6fd;
 .footer {
   background-color: var(--box-background);
 }
-$xs: 375px;
-$sm: 640px;
-$md: 768px;
-$lg: 1024px;
-$xl: 1280px;
-$xxl: 1440px;
+
+.footer__title {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-color-title)
+}
+
+.footer__item {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color-description);
+}
+
+.navbar__logo {
+  height: 40px;
+}
+
+.navbar__logo::after {
+  content: "DOCS";
+  color: var(--text-color-title);
+  font-size: 24px;
+  font-weight: 600;
+  display:inline-block;
+  position: relative;
+  top: -11px;
+  left: 12px;
+}
+
+@media(min-width: 996px) {
+  .navbar__logo::after {
+    content: none;
+    display: none;
+  }
+}

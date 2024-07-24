@@ -3,7 +3,7 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": ["docusaurus-plugin-sass"]
+    "types": []
   },
   "exclude": [".docusaurus", "node_modules", "build", "dist"]
 }
