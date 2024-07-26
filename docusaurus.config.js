@@ -423,7 +423,7 @@ const config = {
               title: "Faucet",
               subtitle: "Need tokens for testing?",
               icon: null,
-              url: "https://astar.network/faucet",
+              url: "https://docs.astar.network/docs/build/environment/faucet",
             },
             {
               title: "Support",
