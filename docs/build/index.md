@@ -1,10 +1,4 @@
-import build from '/docs/build/img/build.png'
-
 # Build on Astar
-
-<div style={{textAlign: 'center'}}>
-  <img src={build} caption="Documentation of all the resources builders need in order to start testing, deploying and interacting with smart contracts on the Astar network" style={{width: 1200}} />
-  </div>
 
 ## Why build on Astar?
 

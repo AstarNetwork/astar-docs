@@ -6,11 +6,6 @@ sidebar_label: Quickstart
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import metamask from '/docs/build/zkEVM/img/metamask-network.png'
-import zkHeader from '/docs/build/img/zkHeader.png'
-
-<div style={{textAlign: 'center'}}>
-    <img src={zkHeader} style={{width: 1200}} />
-</div>
 
 Astar zkEVM is a zero-knowledge scaling solution for Ethereum that offers an **EVM-equivalent environment** on which existing EVM smart contracts, developer tools, and wallets can work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs to reduce transaction costs and increase throughput, while inheriting the security of Ethereum.
 

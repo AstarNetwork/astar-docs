@@ -6,11 +6,6 @@ sidebar_label: Quickstart
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import metamask from '/docs/build/zkEVM/img/metamask-network.png'
-import zkHeader from '/docs/build/img/zkHeader.png'
-
-<div style={{textAlign: 'center'}}>
-    <img src={zkHeader} style={{width: 1200}} />
-</div>
 
 # Overview of Astar zkEVM
 
@@ -44,7 +39,7 @@ To add the network to MetaMask you can either use the data above, or find a link
 The next step is to bridge funds to the Astar zkEVM. You can use the Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) if you already have funds on Astar Network.
 
 :::important
-Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) does not inherit any counterparty risk compared to 3rd party bridge services, so is therefore trustless. 
+Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) does not inherit any counterparty risk compared to 3rd party bridge services, so is therefore trustless.
 :::
 
 ## Astar zkEVM Support
