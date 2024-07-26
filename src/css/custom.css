@@ -79,6 +79,10 @@
   color: var(--text-color-description);
 }
 
+.footer__copyright {
+  padding: 80px 0;
+}
+
 .navbar {
   background-color: var(--lp-background-color);
   border-bottom: 1px solid var(--hr-color);
