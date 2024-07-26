@@ -7,7 +7,7 @@
   align-items: center;
   background-color: var(--lp-background-color);
   background-image: var(--lp-background-image);
-  background-position: top;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }

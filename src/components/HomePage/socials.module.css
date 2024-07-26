@@ -15,7 +15,7 @@ html[data-theme='dark'] {
 }
 
 .socialsWrapper {
-  margin-top: 50px;
+  margin-top: 80px;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -25,8 +25,8 @@ html[data-theme='dark'] {
 .socialsLinks {
   display: flex;
   justify-content: space-around;
-  padding: 30px 0;
-gap: 28px;
+  padding: 80px 0;
+  gap: 28px;
 }
 
 .socialsLink {
@@ -42,11 +42,11 @@ gap: 28px;
 
 @media (min-width: 996px) {
   .socialsWrapper {
-    margin-top: 100px;
+    margin-top: 80px;
   }
 
   .socialsLinks {
-    padding: 100px 0;
+    padding: 80px 0;
     gap: 32px;
   }
 
