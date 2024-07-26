@@ -193,7 +193,7 @@ function DropDownList({
   return (
     <div className={styles.menuModal}>
       <button className={styles.closeButton} type="button" onClick={handleClose}>
-        X
+        <CloseIcon />
       </button>
       {tabs.map((tab, index) => (
         <button
@@ -239,8 +239,37 @@ function CategoryTitle({
         }}
       />
       <span>{title}</span>
-      <span className={styles.arrow}>⌄</span>
+      <OpenIcon />
     </button>
+  );
+}
+
+function OpenIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21">
+      <title>Open</title>
+      <path
+        stroke="currentColor"
+        fill="currentColor"
+        clip-rule="evenodd"
+        d="M5.29289 7.79289C5.68342 7.40237 6.31658 7.40237 6.7071 7.79289L9.99999 11.0858L13.2929 7.79289C13.6834 7.40237 14.3166 7.40237 14.7071 7.79289C15.0976 8.18342 15.0976 8.81658 14.7071 9.20711L10.7071 13.2071C10.3166 13.5976 9.68341 13.5976 9.29289 13.2071L5.29289 9.20711C4.90237 8.81658 4.90237 8.18342 5.29289 7.79289Z"
+      />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+      <title>Close</title>
+      <path
+        stroke="currentColor"
+        d="M5 15L15 5M5 5L15 15"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
   );
 }
 
