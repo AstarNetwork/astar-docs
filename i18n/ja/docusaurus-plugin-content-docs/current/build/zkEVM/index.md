@@ -1,10 +1,5 @@
-import introduction from "/docs/build/img/buildZkEvm.png" 
 
 # Astar zkEVM 上での開発
-
-<div style={{textAlign: 'center'}}>
-    <img src={introduction} style={{width: 1200}} />
-</div>
 
 ## What is Astar zkEVM?
 
