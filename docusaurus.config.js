@@ -10,13 +10,13 @@ const katex = require("rehype-katex");
 const config = {
   title: "Astar Docs",
   tagline: "A comprehensive library of useful information about Astar Network",
-  url: "https://docs.astar.network",
+  url: "https://jiwon-lieb.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   favicon: "img/fav.png",
-  organizationName: "AstarNetwork", // Usually your GitHub org/user name.
-  projectName: "astar-docs", // Usually your repo name.
+  organizationName: "jiwon-lieb", // Usually your GitHub org/user name.
+  projectName: "jiwon-lieb.github.io", // Usually your repo name.
   plugins: ["docusaurus-plugin-sass"],
   markdown: {
     mermaid: true,
