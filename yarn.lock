@@ -4970,6 +4970,11 @@ docusaurus-plugin-sass@^0.2.2:
   dependencies:
     sass-loader "^10.1.1"
 
+docusaurus-pushfeedback@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/docusaurus-pushfeedback/-/docusaurus-pushfeedback-1.0.1.tgz#9bff88b897ed8024c95eef1c4a5a163f7c32cd71"
+  integrity sha512-pD9RvbKKivQmIcGrXfDD+UMlavK0yAt/OhhUG/pz8sdfgSU0Hx5AmlEc/xJAsEYj78aVSWX3SV6/XXoksudjDg==
+
 dom-converter@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"

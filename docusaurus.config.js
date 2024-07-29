@@ -16,7 +16,9 @@ const config = {
   favicon: "img/fav.png",
   organizationName: "jiwon-lieb", // Usually your GitHub org/user name.
   projectName: "jiwon-lieb.github.io", // Usually your repo name.
-  plugins: ["docusaurus-plugin-sass"],
+  plugins: ["docusaurus-plugin-sass", "docusaurus-pushfeedback",{
+    project: "qyhdnpui4p"
+}],
   markdown: {
     mermaid: true,
   },
