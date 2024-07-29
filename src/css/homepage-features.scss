@@ -62,8 +62,10 @@
   content: url('../../static/img/wasm.svg');
 }
 
-.zkevm::before {
-  content: url('../../static/img/zkevm.png');
+.zkevm {
+  content: url('../../static/img/zkevm.png') !important;
+  height: 38px;
+  width: 38px;
 }
 
 .ecosystem::before {
