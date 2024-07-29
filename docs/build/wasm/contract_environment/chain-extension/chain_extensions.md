@@ -10,10 +10,6 @@ Chain extension is a way to extend contracts API to add contracts to runtime pal
 
 ### What chain extensions are available ?
 
-#### XVM
-
-This chain extension enables usage of XVM in your contracts. More info in the [ink! XVM SDK repo](https://github.com/AstarNetwork/ink-xvm-sdk).
-
 #### Assets
 
 This chain extension adds call to `pallet_assets` so that you can use Assets in your contracts. More info in the [chain-extensions contracts repo](https://github.com/swanky-dapps/chain-extension-contracts).
@@ -27,7 +23,6 @@ This chain extension adds query to `pallet_unified_accounts` so that you can que
 
 | Chain extension      | Shibuya | Shiden | Astar |
 |---------------------|---|---|---|
-| XVM                 | :white_check_mark: | :white_large_square: | :white_large_square: |
 | Assets              | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Account Unification | :white_check_mark: | :white_large_square: | :white_large_square: |
 

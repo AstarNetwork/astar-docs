@@ -3,15 +3,19 @@ sidebar_position: 2
 ---
 
 # Create and manage a PSP22 assets on Shibuya
+
 ## TL;DR
+
 This guide will be help you in create and manage your PSP22 assets.
 
 ---
 
 ## What is a PSP22 asset?
+
 The PSP22 Fungible Token standard was inspired by ERC20. It targets every parachain that integrates with pallet contracts to enable WASM smart contracts. Defined at an ABI level, any language that compiles to WASM (and isn’t explicitly restricted to ink!) can use it. What PSP22 is on Polkadot is what ERC20 is on Ethereum.
 
 ## Create a PSP22 contract
+
 In this guide, we will use [OpenBrush](https://openbrush.io/) and their contract studio to build our PSP22 contract. OpenBrush contract studio is the fastest and easiest way to create your smart contract. It allows you to add extensions that will fit your needs for your asset.
 
 ![01](img/01.png)
@@ -31,21 +35,26 @@ Not available in the contract studio, but another utility is the [TokenTimelock]
 ---
 
 ## Compile your PSP22 contract
+
 When you decide on your PSP22 contract, you can download all files needed to compile by clicking on the ‘Download’ button on the top right. After downloading, unzip the files.
 :::caution
-Make sure your environment is set to compile ink! smart contract. If your environment is not set, follow the guide [here](https://docs.astar.network/docs/builder-guides/xvm_wasm/setup_your_ink_environment).
+Make sure your environment is set to compile ink! smart contract. If your environment is not set, follow the guide [here](https://docs.astar.network/docs/build/environment/ink_environment#ink-environment-setup).
 :::
+
 ### Step 1
+
 You can now open your Terminal and navigate to the folder with the downloaded files.
 
 ![02](img/02.png)
 
 ### Step 2
+
 Next is to compile your smart contract by using this line:
 
 ```rust
 cargo +nightly contract build
 ```
+
 When compiling is finished, you should see the following screen where 3 files are created. The contract, wasm, and JSON file.
 
 ![03](img/03.png)
@@ -54,9 +63,11 @@ You can find the files in your folder under `target > ink`.
 ---
 
 ### Deploy your PSP22 contract on Shibuya
-Astar ecosystem has 3 networks: Astar, our mainnet, connected to Polkadot; Shiden, our canary network; and Shibuya, our testnet. Deploying and using your contract is the same on all our networks. 
+
+Astar ecosystem has 3 networks: Astar, our mainnet, connected to Polkadot; Shiden, our canary network; and Shibuya, our testnet. Deploying and using your contract is the same on all our networks.
 
 ### Step 1
+
 Go to our testnet [Shibuya](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/accounts). In this guide, we will use [Polkadot.JS](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/accounts), but you can also use the contract UI or our Swanky all-in-one tool.
 
 :::caution
@@ -67,6 +78,7 @@ Navigate to the contract dashboard `Developer > Contracts`:
 ![04](img/04.png)
 
 ### Step 2
+
 We will now upload our contract and set the initial state. The PSP22 contract used in this guide has the metadata extension added to the contract. If you didn’t add this, you will not have the same screen.
 
 ![05](img/05.png)
