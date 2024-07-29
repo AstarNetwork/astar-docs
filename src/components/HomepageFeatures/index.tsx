@@ -96,6 +96,18 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
+  {
+    title: <Translate>Developer Toolings</Translate>,
+    link: '/docs/build/integrations',
+    iconClass: 'broadcast',
+    description: (
+      <>
+        <Translate>
+          Wallets, bridges, indexers, oracles and much more, integrated with Astar Network.
+        </Translate>
+      </>
+    ),
+  },
 ];
 
 function Feature({ title, iconClass, description, link }: FeatureItem) {
