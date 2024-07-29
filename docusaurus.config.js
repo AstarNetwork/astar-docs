@@ -9,7 +9,6 @@ const katex = require("rehype-katex");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Astar Docs",
-  tagline: "A comprehensive library of useful information about Astar Network",
   url: "https://jiwon-lieb.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
