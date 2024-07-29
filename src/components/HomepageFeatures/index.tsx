@@ -15,7 +15,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: <Translate>Learn About Astar Network</Translate>,
     link: '/docs/learn',
-    iconClass: 'docs',
+    iconClass: 'aboutastar',
     description: (
       <>
         <Translate>
