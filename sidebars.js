@@ -47,8 +47,8 @@ const sidebars = {
       label: "Architecture",
       link: { type: "doc", id: "learn/architecture/index"},
       items: [
-        "learn/dapp-staking/astar-parachain",
-        "learn/dapp-staking/astar-zkevm",
+        "learn/architecture/astar-parachain",
+        "learn/architecture/astar-zkevm",
       ],
     },
     "learn/Proxies",
@@ -59,7 +59,7 @@ const sidebars = {
       link: { type: "doc", id: "learn/tokenomics2/index"},
       items: [
         "learn/tokenomics2/tokenomics2-network-fees",
-        "learn/tokenomics2/inflation",
+        "learn/tokenomics2/Inflation",
         "learn/tokenomics2/legacy_inflation",
       ],
     },
@@ -69,7 +69,7 @@ const sidebars = {
     {
       type: "category",
       label: "Manage Assets",
-      link: { type: "doc", id: "use/manage-assets"},
+      link: { type: "doc", id: "use/manage-assets/index"},
       items: [
         "use/manage-assets/xcm-transactions",
         "use/manage-assets/manage-xc20-with-metamask",
