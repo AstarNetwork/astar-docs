@@ -39,15 +39,10 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
+          sidebarCollapsible: true,
           editUrl: "https://github.com/AstarNetwork/astar-docs/tree/main/",
           remarkPlugins: [math],
           rehypePlugins: [katex],
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: "https://github.com/AstarNetwork/astar-docs/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
@@ -79,7 +74,7 @@ const config = {
             docId: "learn/index",
             sidebarID: "learnSidebar",
             position: "left",
-            label: "Docs",
+            label: "Learn",
           },
           {
             type: "doc",
