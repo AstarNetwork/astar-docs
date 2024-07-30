@@ -1,3 +1,6 @@
+---
+displayed_sidebar: 'useSidebar'
+---
 # Use
 
 ## Overview

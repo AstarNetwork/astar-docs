@@ -1,3 +1,7 @@
+---
+displayed_sidebar: 'learnSidebar'
+---
+
 # Learn
 Greetings! We are delighted to welcome you to the educational segment of the Astar Docs.
 

@@ -26,6 +26,7 @@
 */
 const sidebars = {
   learnSidebar: [
+    "learn/index",
     "learn/astar",
     "learn/accounts",
     "learn/astar-tokens",
@@ -62,6 +63,21 @@ const sidebars = {
         "learn/tokenomics2/legacy_inflation",
       ],
     },
+  ],
+  useSidebar: [
+    "use/index",
+    {
+      type: "category",
+      label: "Manage Assets",
+      link: { type: "doc", id: "use/manage-assets"},
+      items: [
+        "use/manage-assets/xcm-transactions",
+        "use/manage-assets/manage-xc20-with-metamask",
+        "use/manage-assets/transfer-tokens",
+      ],
+    },
+    "use/astar-townhall",
+    "use/troubleshooting",
   ]
   }
 

@@ -78,25 +78,16 @@ const config = {
           },
           {
             type: "doc",
-            docId: "build/index",
+            docId: "use/index",
+            sidebarID: "useSidebar",
             position: "left",
-            label: "Start Building",
+            label: "Use",
           },
           {
             type: "doc",
             docId: "build/zkEVM/quickstart",
             position: "left",
             label: "zkEVM",
-          },
-          {
-            to: "https://medium.com/astar-network",
-            label: "Medium",
-            position: "left",
-          },
-          {
-            to: "https://www.youtube.com/channel/UC36JgEF6gqatVSK9xlzzrvQ",
-            label: "Youtube",
-            position: "left",
           },
           {
             type: "localeDropdown",
@@ -144,6 +135,10 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/AstarNetwork",
+              },
+              {
+                label: "YouTube",
+                href: "https://www.youtube.com/channel/UC36JgEF6gqatVSK9xlzzrvQ",
               },
             ],
           },
