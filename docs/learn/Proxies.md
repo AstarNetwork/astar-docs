@@ -10,14 +10,14 @@ On this page, you will find a detailed overview of the various proxy types, extr
 
 **Proxy Types**
 ---
-1. **Any** - This proxy type allow delegate account to make any call that are supported by proxy pallet. This is highest level of priveledge so should always use that with caution.
+1. **Any** - This proxy type allow delegate account to make any call that are supported by proxy pallet. This is the highest level of privilege so should always use that with caution.
 
-2. **NonTransfer** - This proxy type allow delegate account to make any call supported by proxy pallet expect for the asset transfer funtionalities. This can come handy when you want to keep your funds secure in cold storage and want to delegate all the other functionalities to a proxy account.
+2. **NonTransfer** - This proxy type allow delegate account to make any call supported by proxy pallet expect for the asset transfer functionalities. This can come handy when you want to keep your funds secure in cold storage and want to delegate all the other functionalities to a proxy account.
 To see complete list of functionality, checkout the source code in Astar repo.
 
 3. **Balances** - This proxy type gives control of handling accounts and balances to the delegate account. Complete list of calls can be found [here](https://docs.rs/pallet-balances/latest/pallet_balances/pallet/enum.Call.html).
 
-4. **Assets** - This proxy type allows delegate account to control the functionalities related to fungible assets which includes asset issuance, transferal, minting etc. This is to be notes that this proxy types doesn't control the native currency like Astar or Shiden which are controled by Balances proxy.
+4. **Assets** - This proxy type allows delegate account to control the functionalities related to fungible assets which includes asset issuance, transferal, minting etc. This is to be notes that this proxy types doesn't control the native currency like Astar or Shiden which are controlled by Balances proxy.
 
 5. **IdentityJudgement** - This proxy type allows a single functionality to delegate account which is to provide a judgement to an identity in a naming system. The delegator must be a registrar.
 
