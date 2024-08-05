@@ -65,11 +65,11 @@ E.g. `[5%, 15%, 20%, 60%]` means that `5%` of the total slots are assigned for *
 
 ### Tier Thresholds
 
-The threshold that dApp has to satisfy, essentially the total staked amount, in order to be eligible to enter a tier.
-There are two types of thresholds:
+The threshold a dApp must meet, based on a percentage of the total issuance staked, to enter a tier.
+There are two types of threshold percentages:
 
-* `Fixed` - threshold has a fixed value and doesn't change
-* `Dynamic` - threshold has an initial value, which changes dynamically as the number of slots change, but also has a minimum allowed value.
+* `Fixed` - A fixed percentage of the total issuance as staked funds, constant and unchanging between periods.
+* `Dynamic` - A percentage of the total issuance as staked funds that can change between periods, with a minimum percentage *minimum_required_percentage* that cannot be reduced below.
 
 ### Price Aggregation Duration
 
