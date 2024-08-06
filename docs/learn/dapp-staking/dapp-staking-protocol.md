@@ -295,6 +295,7 @@ $new\_threshold = 3.57\% * 8.0 billion = 285,600,000\ ASTR$
 
 If the number of slots changes, the threshold is further adjusted based on the delta percentage formula.
 
+*Refer to the [dApp staking parameters](/docs/learn/dapp-staking/protocol-parameters#network-values) page to find out more about the percentage values for each network.*
 
 #### Tier Rewards
 
