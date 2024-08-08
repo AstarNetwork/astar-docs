@@ -116,7 +116,7 @@ Astar zkEVM は EVM 等価性を持つため、EVM 互換のどんな dApp も�
 
 Astar zkEVM 自体はロールアップとして存在し、独立したコンセンサスは不要です。したがって Astar zkEVM は Ethereum のセキュリティを受け継いでいます。
 
-### ASTR トークンの保有者にとって、Asrar zkEVM の価値はなんですか?
+### ASTR トークンの保有者にとって、Astar zkEVM の価値はなんですか?
 
 Astar zkEVM は ASTR トークンを新たな 3 つの方法で使用します：
 
