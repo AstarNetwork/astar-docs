@@ -287,7 +287,7 @@ There are now two types of tier entry thresholds:
 * `Dynamic` - A percentage of the total issuance as staked funds that can change between periods. It includes a minimum percentage that the threshold cannot fall below. This type is used for _higher_ tiers.
 * `Fixed` - A constant percentage of the total issuance as staked funds, which does not change between periods. Used for the _lowest_ tier, and defines a static value.
 
-These percentages are calculated based on a total issuance of **8.4 billion ASTR** tokens when dApp Staking V3 was launched. As the total issuance changes (e.g. burn events), the dynamic thresholds will adjust accordingly, ensuring a fair and adaptive staking environment. However, the fixed threshold for the *lowest* tier remains constant.
+These percentages are calculated based on a total issuance of **8.4 billion ASTR** tokens when dApp Staking V3 was launched. As the total issuance changes (e.g. burn events), the dynamic thresholds will adjust accordingly, ensuring a fair and adaptive staking environment.
 
 For example, suppose the total issuance is **8.4 billion** ASTR tokens. For **Tier 1**, the dynamic threshold percentage is set at **3.57%** (*approximately 299,880,000 ASTR*), with a minimum required percentage of **2.38%** (*approximately 199,920,000 ASTR*). If the total issuance decreases due to a burn event, the threshold adjusts accordingly. For example, if the total issuance drops to **8.0 billion** ASTR, the **Tier 1** threshold adjusts to:
 
