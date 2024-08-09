@@ -273,7 +273,7 @@ Since number of slots is dynamic, so has to be the threshold to allow for more r
 It's not fair to define the same threshold for entering a tier if there are 50 slots or 500 slots since the
 staked amount will be more diluted between various dApps.
 
-The formula for adjusting tier entry threshold:
+The formula for adjusting tier entry threshold with dApps slot changes:
 
 $\Delta\%_{threshold} = (\frac{100\%}{100\% + \Delta\%_{dApps}} - 1) * 100\%$
 
@@ -282,16 +282,20 @@ The comparison is always done between the _baseline_ number of slots and the new
 
 $new\_threshold = base\_threshold * (1 + \Delta\%_{threshold})$
 
-At the moment, there are two types of tier entry thresholds:
+There are now two types of tier entry thresholds:
 
-* `Dynamic` - adjusts the threshold based on the aforementioned formula.
-* `Fixed` - defines a static, fixed threshold which doesn't adapt.
+* `Dynamic` - A percentage of the total issuance as staked funds that can change between periods. It includes a minimum percentage that the threshold cannot fall below. This type is used for _higher_ tiers.
+* `Fixed` - A constant percentage of the total issuance as staked funds, which does not change between periods. Used for the _lowest_ tier, and defines a static value.
 
-The `Dynamic` threshold is used for _higher_ tiers, and also defines the minimum amount to which the threshold can fall.
-E.g. a threshold might define _current_ value as **1,000,000 ASTR**. Since this can be decreased if number of slots goes up,
-it also defines a minimum amount the threshold can take, e.g. **500,000 ASTR**.
+These percentages are calculated based on a total issuance of **8.4 billion ASTR** tokens when dApp Staking V3 was launched. As the total issuance changes (e.g. burn events), the dynamic thresholds will adjust accordingly, ensuring a fair and adaptive staking environment.
 
-The `Fixed` threshold is used for the _lowest tier_, and defines a static value.
+For example, suppose the total issuance is **8.4 billion** ASTR tokens. For **Tier 1**, the dynamic threshold percentage is set at **3.57%** (*approximately 299,880,000 ASTR*), with a minimum required percentage of **2.38%** (*approximately 199,920,000 ASTR*). If the total issuance decreases due to a burn event, the threshold adjusts accordingly. For example, if the total issuance drops to **8.0 billion** ASTR, the **Tier 1** threshold adjusts to:
+
+$new\_threshold = 3.57\% * 8.0 billion = 285,600,000\ ASTR$
+
+If the number of slots changes, the threshold is further adjusted based on the delta percentage formula.
+
+*Refer to the [dApp staking parameters](/docs/learn/dapp-staking/protocol-parameters#network-values) page to find out more about the percentage values for each network.*
 
 #### Tier Rewards
 
