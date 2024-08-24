@@ -8,7 +8,7 @@ To support our users in accessing their funds, we are temporarily updating Shide
 
 ### Reconnecting Your Lockdrop Account:
 
-#### Prerequesite:
+#### Prerequisite:
 The EVM address will be used to dispatch the call on behalf of the lockdrop account. Please ensure that the **EVM address holds native tokens (ASTR or SDN) to cover gas fees** for the dispatch call.
 
 #### Steps:
