@@ -16,7 +16,7 @@ The private key is a cryptographically-secure sequence of randomly-generated num
 
 The address format used in Substrate-based chains like Astar is ss58. ss58 is a modification of Base-58-check from Bitcoin, with some minor modifications. Notably, the format contains an address type prefix that identifies an address as belonging to a specific network.
 
-Astar supports spezialized accounts, such as Proxy and Keyless accounts. 
+Astar supports specialized accounts, such as Proxy and Keyless accounts. 
 You can read more about Proxy accounts [here](/docs/learn/Proxies).
 
 ## EVM Accounts
@@ -25,8 +25,8 @@ Astar EVM side allows Ethereum-style addresses (H160 format), which is 40+2 hex-
 
 
 ## Learn more
-[Create a Substrate account](/docs/use/manage-wallets/create-wallet/)
+[Create a Substrate account](/docs/use/manage-wallets/create-wallet.md)
 
-[Create an EVM account](/docs/use/evm-guides/setup-metamask/)
+[Create an EVM account](/docs/use/evm-guides/setup-metamask.md)
 
 [Read about Substrate accounts](https://docs.substrate.io/learn/accounts-addresses-keys/)
