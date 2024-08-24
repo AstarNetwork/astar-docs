@@ -76,9 +76,9 @@ Astar zkEVM is censorship resistant from the protocol level, even though in the 
         
 ### How can developers get started with building on Astar zkEVM? Are there any specific toolkits or SDKs available?
 
-See the [buid section](/docs/build/zkEVM/quickstart.md) for more about how to get started.
+See the [build section](/docs/build/zkEVM/quickstart.md) for more about how to get started.
         
-Current developers within the Astar community can benefit significantly from the expansive developer resources present in the Ethereum ecosystem where suppport and tools, including Hardhat and Truffle, are highly accessible. Eventually, Astar will introduce tools and SDKs tailored to specific Astar zkEVM functionalities.
+Current developers within the Astar community can benefit significantly from the expansive developer resources present in the Ethereum ecosystem where support and tools, including Hardhat and Truffle, are highly accessible. Eventually, Astar will introduce tools and SDKs tailored to specific Astar zkEVM functionalities.
         
 ### How does gas pricing on Astar zkEVM compare to Ethereum and Polygon?
         
