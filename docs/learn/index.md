@@ -6,24 +6,24 @@ Whether you're an aspiring developer or a newcomer to the world of blockchain, t
 To expand your knowledge about building applications or utilizing various tools on Astar, we recommend exploring the [build](/docs/build) section. 
 
 ## Foundations
-[About Astar](/docs/learn/astar)
+[About Astar](/docs/learn/astar.md)
 
-[Astar Tokens](docs/learn/astar-tokens)
+[Astar Tokens](/docs/learn/astar-tokens.md)
 
-[Account](/docs/learn/Accounts)
+[Accounts](/docs/learn/accounts.md)
 
-[Polkadot](/docs/learn/architecture/astar-parachain)
+[Polkadot](/docs/learn/architecture/astar-parachain.md)
 
-[Astar zkEVM](/docs/learn/architecture/astar-zkevm)
+[Astar zkEVM](/docs/learn/architecture/astar-zkevm.md)
 
-[Smart Contracts](/docs/learn/smart-contracts)
+[Smart Contracts](/docs/learn/smart-contracts.md)
 
 [dApp Staking](/docs/learn/dapp-staking)
 
 ## Advanced 
 [Tokenomics](/docs/learn/tokenomics2)
 
-[Networks](/docs/learn/networks)
+[Networks](/docs/learn/networks.md)
 
 [Multichain Interoperability](/docs/learn/interoperability/xcm)
 

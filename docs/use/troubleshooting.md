@@ -23,7 +23,7 @@ This section will guide you to troubleshoot and solve most issues when connectin
 4. If you have other extensions installed, please revoke access of those extensions.
 
 ## Getting Errors Or Unable To Execute Certain Functions;
-Some of you may be unable to execute certain funtions. Please try these steps.
+Some of you may be unable to execute certain functions. Please try these steps.
 1. Update metadata (if required).
 2. Clear cache, restart browser and connect wallet to the portal again.
 3. On the top right corner, switch to a different endpoint.
@@ -31,7 +31,7 @@ Some of you may be unable to execute certain funtions. Please try these steps.
 5. Use VPN.
 
 ## Unable To Claim Staking Rewards;
-1. If you can't claim the staking rewards on the portal. Visit [HERE](/docs/use/dapp-staking/for-stakers/manage-dApp-Staking#my-staking-panel).
+1. If you can't claim the staking rewards on the portal. Visit [HERE](/docs/use/dapp-staking/for-stakers/manage-dApp-Staking.md#my-staking-panel).
 2. If the transferrable balance in the wallet is too low, you might not be able to claim the staking rewards. Top up your wallet and then claim the rewards.
 
 ## After signing the transaction, the portal spins indefinitely;
