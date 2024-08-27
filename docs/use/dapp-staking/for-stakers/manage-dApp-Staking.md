@@ -24,7 +24,7 @@ My Staking Panel is where you track your staking and locked tokens, see your pen
 
 To claim your rewards, you need to click on the **Claim Button** and sign the transaction.
 
-I you have active stakes a modal will pop up offering you to re-stake your rewards.
+If you have active stakes, a modal will pop up offering you to re-stake your rewards.
 
 <Figure src={require('/docs/use/dapp-staking/for-stakers/img/Re_Stake_Modal.png').default } />
 
