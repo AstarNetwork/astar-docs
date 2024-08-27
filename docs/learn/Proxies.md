@@ -12,7 +12,7 @@ On this page, you will find a detailed overview of the various proxy types, extr
 ---
 1. **Any** - This proxy type allows delegate account to make any call that is supported by proxy pallet. This is highest level of privilege so should always use that with caution.
 
-2. **NonTransfer** - This proxy type allows delegate account to make any call supported by proxy pallet excecp for the asset transfer functionalities. This can come handy when you want to keep your funds secure in cold storage and want to delegate all the other functionalities to a proxy account.
+2. **NonTransfer** - This proxy type allows delegate account to make any call supported by proxy pallet expect for the asset transfer functionalities. This can come handy when you want to keep your funds secure in cold storage and want to delegate all the other functionalities to a proxy account.
 To see complete list of functionality, checkout the source code in Astar repo.
 
 3. **Balances** - This proxy type gives control of handling accounts and balances to the delegate account. Complete list of calls can be found [here](https://docs.rs/pallet-balances/latest/pallet_balances/pallet/enum.Call.html).

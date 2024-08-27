@@ -10,7 +10,7 @@ To expand your knowledge about building applications or utilizing various tools 
 
 [Astar Tokens](/docs/learn/astar-tokens.md)
 
-[Account](/docs/learn/accounts.md)
+[Accounts](/docs/learn/accounts.md)
 
 [Polkadot](/docs/learn/architecture/astar-parachain.md)
 
