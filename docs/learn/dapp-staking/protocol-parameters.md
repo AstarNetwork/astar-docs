@@ -91,6 +91,7 @@ Length of the circular buffer used to implement the _moving-average_ solution.
 | Unlocking Period                    | 9                      | 4                      | 4                          |
 | Max Number Of Staked Contracts      | 16                     | 16                     | 8                          |
 | Minimum Stake Amount                | 500 ASTR               | 50 SDN                 | 5 SBY                      |
+| Baseline Native Currency Price      | 0.05 USD               | 0.05 USD               | 0.05 USD (mock)            |
 | Number Of Tiers                     | 4                      | 4                      | 4                          |
 | Reward Distribution                 | [25%, 47%, 25%, 3%]    | [25%, 47%, 25%, 3%]    | [40%, 30%, 20%, 10%]       |
 | Slot Portions                       | [5%, 20%, 30%, 45%]    | [5%, 20%, 30%, 45%]    | [10%, 20%, 30%, 40%]       |
