@@ -259,7 +259,7 @@ Same principle is applied to Shiden, but with a slightly modified formula:
 $ number\_of\_slots_{Shiden} = floor(100 * SDN_{USD} + 50)$
 
 These formulas were designed with a _baseline_ price in mind.
-Using the _baseline_ price, the _baseline_ number of slots can be calculated.
+Using the _baseline_ price, the _baseline_ number of slots can be calculated using the listed formulas.
 
 This value is important since it's used as a reference when calculating tier threshold adjustment.
 
@@ -278,7 +278,7 @@ The formula for adjusting tier entry threshold with dApps slot changes:
 $\Delta\%_{threshold} = (\frac{100\%}{100\% + \Delta\%_{dApps}} - 1) * 100\%$
 
 where $\Delta\%_{dApps}$ is the change in the number of dApps, expressed as a percent. In case number has been reduced, the _delta_ will be negative.
-The comparison is always done between the _baseline_ number of slots and the new number of slots.
+The comparison is always done between the _baseline_ number of slots (determined using the baseline price) and the new number of slots.
 
 $new\_threshold = base\_threshold * (1 + \Delta\%_{threshold})$
 
@@ -325,6 +325,7 @@ having a larger stake than the other dApp(s). Technically, at the moment, the dA
 the larger Id but this can change in the future.
 
 ### Tier ranking system
+
 Because dApps at the same tier receive equal rewards regardless of their staked amount, ranking system has been introduced for dApps within the tier itself. This will improve reward distribution for dApps that perform better within a tier if there are available rewards to be distributed.
 
 dApps are not only grouped into tiers but they're also ranked inside each tier (except highest tier which doesn't have ranking).
@@ -343,6 +344,7 @@ The maximum rank is **10**, regardless of the staked amount.
 :::
 
 #### Rank reward
+
 Each rank provides up to a **10%** extra reward on top of the tier reward. To respect inflation, each rank reward comes from empty slots within the same tier. Each tier has its own portion of rewards to distribute. If all tier slots are occupied, the tier reward is distributed equally to each dApp in that tier, leaving no remaining reward for ranks. If there is a remaining reward, it goes towards rewarding the ranks. Depending on the availability, the rank reward can go up to **10%** of the tier reward. For example, if you are in tier **2** with a rank of **5** and the tier reward is **1000 ASTR**, then rank reward will be **rank_reward = 0.1 * 1000 ASTR = 100 ASTR**. Therefore given formula
 
 ${total\_reward} = {tier\_reward} + {rank} * {rank\_reward}$
