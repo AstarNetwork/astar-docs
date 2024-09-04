@@ -35,7 +35,7 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
       - Create a new branch (`git checkout -b feat/new-feature-name-here`)
   - Create/update the docs as you please
       - Spin up live docs (`yarn start`)
-        - If you are working on a translation of a document use `yarn start --locale IT` (example for Italian) (checkout [Docusaurus docs or further reference](https://docusaurus.io/docs/i18n/tutorial)
+        - If you are working on a translation of a document use `yarn start --locale IT` (example for Italian) (checkout [Docusaurus docs or further reference](https://docusaurus.io/docs/i18n/tutorial))
       - Add new page/tweaks/etc
       - When you’re happy with it, ensure `yarn build` runs without errors
   - PR and staging environment
