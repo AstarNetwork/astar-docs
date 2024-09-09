@@ -18,13 +18,7 @@ Requirements for running a tracing node are similar to what we recommend for an 
 
 ## Node launch 
 
-Tracing node setup in general is similar to the [Archive Node setup](/docs/build/nodes/archive-node/), except for the location of the binary and some additional launch flags.
-
-:::info 
-
-An EVM tracing node binary is different because it includes additional tracing features. You can easily build it from source using `cargo build --release --features evm-tracing` command or download the `evm-tracing-artifacts` from [latest release](https://github.com/AstarNetwork/Astar/releases/latest), an executable EVM tracing binary is included in the compressed file `evm-tracing-artifacts.tar.gz`.
-
-:::
+Tracing node setup in general is similar to the [Archive Node setup](/docs/build/nodes/archive-node/), except for some additional launch flags.
 
 :::important
 
