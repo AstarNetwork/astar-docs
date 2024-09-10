@@ -20,6 +20,10 @@ Requirements for running a tracing node are similar to what we recommend for an 
 
 Tracing node setup in general is similar to the [Archive Node setup](/docs/build/nodes/archive-node/), except for some additional launch flags.
 
+:::note
+There's no need for special client to run EVM tracing since the release of [v5.44.0](https://github.com/AstarNetwork/Astar/releases/tag/v5.44.0)
+:::
+
 :::important
 
 EVM RPC calls are disabled by default, and require the `--enable-evm-rpc` flag to be enabled. Please refer to this [page](/docs/build/EVM/evm-debug-api) for more info.
