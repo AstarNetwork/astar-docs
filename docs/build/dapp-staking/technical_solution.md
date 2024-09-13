@@ -203,4 +203,4 @@ In that case, staker should simply claim their pending rewards before attempting
 
 Runtimes supporting `dapp-staking-v3` functionality will also expose runtime API called: `DappStakingApi`.
 
-Please refer [here](https://github.com/AstarNetwork/Astar/tree/master/pallets/dapp-staking-v3/rpc/runtime-api) for a list of supported functions.
+Please refer [here](https://github.com/AstarNetwork/Astar/tree/master/pallets/dapp-staking/rpc/runtime-api) for a list of supported functions.
