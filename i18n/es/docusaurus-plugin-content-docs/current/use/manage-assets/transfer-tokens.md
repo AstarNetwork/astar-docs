@@ -17,7 +17,6 @@ En este tutorial te guiaremos a través del proceso de envío y recepción de to
   - [Transferencia Cross-chain (XCM)](#cross-chain-transfer-xcm)
   - [Transferencia de activos de cadena cruzada (XCM) a Astar Network](#transferring-cross-chain-xcm-assets-to-astar-network)
   - [Transferencia de activos entre cadenas (XCM) a otras cadenas desde Astar Network](#transferring-cross-chain-xcm-assets-to-other-chains-from-astar-network)
-  - [Transferencia entre máquinas virtuales de tokens ERC20 (XVM)](#cross-virtual-machine-transfer-of-erc20-tokensxvm)
 
 <br />
 
@@ -207,39 +206,3 @@ Si desea mover activos de cadena cruzada (XCM) a cuentas Astar Native desde cuen
 <img width="1000" alt="Input-manually" src="https://user-images.githubusercontent.com/77480847/188535225-6a7afe9d-83db-4fa9-a519-def33c30391a.png" />
 
 6. Introduzca la cantidad que desea transferir y pulse el botón de confirmación.
-
-<br />
-
-## Transferencia entre máquinas virtuales de tokens ERC20 (XVM)
-
-:::tip
-
-Esta característica está disponible actualmente sólo en Shibuya.
-
-:::
-
-1. Conecta Metamask a https\://portal.astar.network
-2. En la esquina superior derecha, conecta con Shibuya.
-3. Ir a la página de activos.
-4. Si el activo que desea transferir no se muestra, necesitará agregar manualmente la dirección del contrato.
-
-![image](https://user-images.githubusercontent.com/37278708/213384226-66737a56-9708-4622-a48c-d41c777a7772.png)
-
-5. Haga clic en “transferir” en el activo que desea transferir.
-
-![image](https://user-images.githubusercontent.com/37278708/213384333-d480ba61-057d-4127-9d0b-270e2821ed2f.png)
-
-6. Introduzca la dirección nativa de destino.
-7. Introduzca la cantidad de fichas que desea transferir.
-8. Haga clic en confirmar.
-
-![image](https://user-images.githubusercontent.com/37278708/213384489-cb1419df-f31c-410a-95bd-1d9376899a40.png)
-
-10. Listo. Tus fichas ERC20 han sido transferidas de EVM a Native.
-11. Desconecte Metamask y conecte la cartera nativa a la que envió los tokens.
-12. Debería ser capaz de ver el activo XVM ERC20.
-
-![image](https://user-images.githubusercontent.com/37278708/213384947-72f72fe5-1758-4a21-92f8-47e8fff1d1b3.png)
-
-12. Si el activo no se muestra, necesitará añadirlo manualmente.
-13. Ahora debería ser capaz de transferir el activo de Native a EVM.

@@ -22,6 +22,6 @@ Astar Network está cambiando eso, y marcando el comienzo de la próxima generac
 
 ## Interoperabilidad
 
-Este marco de interoperabilidad, potenciado por la seguridad compartida de Polkadot junto con Astar XVM, permite a los desarrolladores utilizar y construir contratos inteligentes de formas nunca antes vistas. Al fomentar la cooperación y las integraciones a través de múltiples blockchains y aplicaciones, se pueden desarrollar sinergias complejas, lo que lleva a la realización de soluciones verdaderamente innovadoras que no se pueden replicar en ningún otro entorno.
+Este marco de interoperabilidad, potenciado por la seguridad compartida de Polkadot, permite a los desarrolladores utilizar y construir contratos inteligentes de formas nunca antes vistas. Al fomentar la cooperación y las integraciones a través de múltiples blockchains y aplicaciones, se pueden desarrollar sinergias complejas, lo que lleva a la realización de soluciones verdaderamente innovadoras que no se pueden replicar en ningún otro entorno.
 
 Existen muchas cadenas de bloques diferentes, pero pocas tienen interoperabilidad como su característica definitoria. Bienvenido a Astar Network.

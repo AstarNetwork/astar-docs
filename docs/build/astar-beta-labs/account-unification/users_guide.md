@@ -14,13 +14,11 @@ import guide06 from "./img/guide06.png"
 
 Creating a Unified account is simple, however, it's important to understand that this is still an emerging technology. We do not recommend attempting account unification until you are familiar with how it works.
 
-A Unified account provides a simplified experience for end-users of Astar Substrate-based networks. Since on Astar Substrate, native Wasm and the EVM use two different address formats, new users find it challenging to grasp how they function. While both Astar Native and Astar EVM accounts are *typically* required, with unified accounts, users don't have to worry about which wallet they are connected to. When unifed accounts work in conjuction with XVM, they are designed to form a powerful new way to abstract away the inner workings of the Substrate native VM side from end users, entirely, allowing them to interact with both networks seamlessly using only MetaMask.
+A Unified account provides a simplified experience for end-users of Astar Substrate-based networks. Since on Astar Substrate, native Wasm and the EVM use two different address formats, new users find it challenging to grasp how they function. While both Astar Native and Astar EVM accounts are *typically* required, with unified accounts, users don't have to worry about which wallet they are connected to.
 
 ## What is possible?
 
-- Two accounts; one balance. When accounts are unified, they share the same balance. The moment ASTR tokens are withdrawn from a CEX exchange to an Astar Native account, the balance is updated on the Astar EVM side. There's no need to transfer between them any longer; users can stake tokens immediately, for example, or use a DEX.
-
-- Furthermore, it's already possible to interact with Wasm dApps using a Unified account, as long as the dApp supports EVM wallets. The core team is currently developing XVM, which allows a Unified account to interact with EVM smart contracts.
+Two accounts; one balance. When accounts are unified, they share the same balance. The moment ASTR tokens are withdrawn from a CEX exchange to an Astar Native account, the balance is updated on the Astar EVM side. There's no need to transfer between them any longer; users can stake tokens immediately, for example, or use a DEX.
 
 ## How to create an unified account
 

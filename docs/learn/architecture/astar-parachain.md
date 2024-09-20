@@ -10,7 +10,7 @@ Polkadot is a multi-chain environment which enables specialized blockchains (cal
 
 Astar is a parachain connected to the Polkadot Relay chain, specialized for:
 * Executing all types of smart contracts.
-* Providing a hybrid EVM + Wasm environment supporting Cross-VM (XVM) smart contract calls.
+* Providing a hybrid EVM + Wasm environment with interoperability.
 * Incentivizing ecosystem innovation and providing basic income for dApp developers.
 * Seamlessly aggregating features or assets from parachains in the ecosystem.
 

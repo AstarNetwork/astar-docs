@@ -259,7 +259,7 @@ Same principle is applied to Shiden, but with a slightly modified formula:
 $ number\_of\_slots_{Shiden} = floor(100 * SDN_{USD} + 50)$
 
 These formulas were designed with a _baseline_ price in mind.
-Using the _baseline_ price, the _baseline_ number of slots can be calculated.
+Using the _baseline_ price, the _baseline_ number of slots can be calculated using the listed formulas.
 
 This value is important since it's used as a reference when calculating tier threshold adjustment.
 
@@ -273,25 +273,29 @@ Since number of slots is dynamic, so has to be the threshold to allow for more r
 It's not fair to define the same threshold for entering a tier if there are 50 slots or 500 slots since the
 staked amount will be more diluted between various dApps.
 
-The formula for adjusting tier entry threshold:
+The formula for adjusting tier entry threshold with dApps slot changes:
 
 $\Delta\%_{threshold} = (\frac{100\%}{100\% + \Delta\%_{dApps}} - 1) * 100\%$
 
 where $\Delta\%_{dApps}$ is the change in the number of dApps, expressed as a percent. In case number has been reduced, the _delta_ will be negative.
-The comparison is always done between the _baseline_ number of slots and the new number of slots.
+The comparison is always done between the _baseline_ number of slots (determined using the baseline price) and the new number of slots.
 
 $new\_threshold = base\_threshold * (1 + \Delta\%_{threshold})$
 
-At the moment, there are two types of tier entry thresholds:
+There are now two types of tier entry thresholds:
 
-* `Dynamic` - adjusts the threshold based on the aforementioned formula.
-* `Fixed` - defines a static, fixed threshold which doesn't adapt.
+* `Dynamic` - A percentage of the total issuance as staked funds that can change between periods. It includes a minimum percentage that the threshold cannot fall below. This type is used for _higher_ tiers.
+* `Fixed` - A constant percentage of the total issuance as staked funds, which does not change between periods. Used for the _lowest_ tier, and defines a static value.
 
-The `Dynamic` threshold is used for _higher_ tiers, and also defines the minimum amount to which the threshold can fall.
-E.g. a threshold might define _current_ value as **1,000,000 ASTR**. Since this can be decreased if number of slots goes up,
-it also defines a minimum amount the threshold can take, e.g. **500,000 ASTR**.
+These percentages are calculated based on a total issuance of **8.4 billion ASTR** tokens when dApp Staking V3 was launched. As the total issuance changes (e.g. burn events), the dynamic thresholds will adjust accordingly, ensuring a fair and adaptive staking environment.
 
-The `Fixed` threshold is used for the _lowest tier_, and defines a static value.
+For example, suppose the total issuance is **8.4 billion** ASTR tokens. For **Tier 1**, the dynamic threshold percentage is set at **3.57%** (*approximately 299,880,000 ASTR*), with a minimum required percentage of **2.38%** (*approximately 199,920,000 ASTR*). If the total issuance decreases due to a burn event, the threshold adjusts accordingly. For example, if the total issuance drops to **8.0 billion** ASTR, the **Tier 1** threshold adjusts to:
+
+$new\_threshold = 3.57\% * 8.0 billion = 285,600,000\ ASTR$
+
+If the number of slots changes, the threshold is further adjusted based on the delta percentage formula.
+
+*Refer to the [dApp staking parameters](/docs/learn/dapp-staking/protocol-parameters#network-values) page to find out more about the percentage values for each network.*
 
 #### Tier Rewards
 
@@ -319,6 +323,50 @@ leftover tier capacity to accommodate them all, this is considered _undefined_ b
 others will be left out. There is no strict rule which defines this behavior - instead dApps are encouraged to ensure their tier entry by
 having a larger stake than the other dApp(s). Technically, at the moment, the dApp with the lower `dApp Id` will have the advantage over a dApp with
 the larger Id but this can change in the future.
+
+### Tier ranking system
+
+Because dApps at the same tier receive equal rewards regardless of their staked amount, ranking system has been introduced for dApps within the tier itself. This will improve reward distribution for dApps that perform better within a tier if there are available rewards to be distributed.
+
+dApps are not only grouped into tiers but they're also ranked inside each tier (except highest tier which doesn't have ranking).
+When a dApp has the minimum stake amount to just enter the tier, its rank will be **0** (zero). As they progress towards the upper tier, their rank will increase.
+If a dApp is halfway to the next tier, its rank is **5** (five). If they are almost at the next tier, their rank is **9** (nine).
+If a dApp reaches the threshold to enter the next tier but there is no empty slot in that tier and the dApp remains in the current tier, they will get the highest rank of **10** (ten).
+
+Formula to calculate rank divisor is as follows ${rank\_divisor} = {\frac{{upper\_tier\_treshold} - {tier\_threshold}}{10}}$
+
+Lastly, we can determine the rank for the dApp ${rank} = \frac{{stake\_amount} - {tier\_threshold}}{rank\_divisor}$
+
+
+For example, if the tier thresholds are [100, 500, 1000] and the dApp has 300 ASTR staked, the dApp will enter **3rd** tier with a rank of **5**. The calculations are as follows: ${rank\_divisor} = \frac{500 - 100}{10} = 40$ and ${rank} = \frac{300 - 100}{40} = 5$
+:::note
+The maximum rank is **10**, regardless of the staked amount.
+:::
+
+#### Rank reward
+
+Each rank provides up to a **10%** extra reward on top of the tier reward. To respect inflation, each rank reward comes from empty slots within the same tier. Each tier has its own portion of rewards to distribute. If all tier slots are occupied, the tier reward is distributed equally to each dApp in that tier, leaving no remaining reward for ranks. If there is a remaining reward, it goes towards rewarding the ranks. Depending on the availability, the rank reward can go up to **10%** of the tier reward. For example, if you are in tier **2** with a rank of **5** and the tier reward is **1000 ASTR**, then rank reward will be **rank_reward = 0.1 * 1000 ASTR = 100 ASTR**. Therefore given formula
+
+${total\_reward} = {tier\_reward} + {rank} * {rank\_reward}$
+
+Total reward for dApp will be **1000 ASTR + 5 * 100 ASTR = 1500 ASTR**.
+
+:::note
+If **10%** of tier reward cannot be satisfied then the following formula is used
+
+${rank\_reward} = \frac{remaining\_reward}{\sum \forall dApp\_rank}$
+
+where $\sum \forall dApp\_rank$ is the sum of all dApp ranks in a tier.
+
+**e.g.** Given a tier **2** with a slot capacity of **3**, where **2** slots are occupied by dApp _Alice_ with rank **9** and dApp _Bob_ with rank **7**. The rank reward comes from the empty slots, which in this case is only **1**. Therefore, a **10%** rank reward cannot be achieved. In this scenario, the remaining reward will be divided by ranks sum.
+
+${rank\_reward} = \frac {1000 ASTR} {7 + 9} = 62.5 ASTR$
+
+Total reward for _Alice_ will be: **1000 ASTR + 9 * 62.5 ASTR = 1562.5 ASTR**
+
+Total reward for _Bob_ will be: **1000 ASTR + 7 * 62.5 ASTR = 1437.5 ASTR**
+
+:::
 
 ### Reward Expiry
 

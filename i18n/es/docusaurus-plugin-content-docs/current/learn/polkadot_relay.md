@@ -13,7 +13,7 @@ Polkadot es un entorno multicadena que permite a blockchains especializadas (lla
 Astar es una blockchain conectada a la Polkadot Relay Chain, especializada para:
 
 - Ejecución de todo tipo de contratos inteligentes.
-- Proporcionar un entorno híbrido EVM + Wasm que soporte llamadas a contratos inteligentes Cross-VM (XVM).
+- Proporcionar un entorno híbrido que soporte contratos inteligentes EVM + Wasm con interoperabilidad.
 - Incentivar la innovación del ecosistema y proporcionar ingresos básicos a los desarrolladores de dApps.
 - Agregación sin fisuras de características o activos de parachains en el ecosistema.
 
