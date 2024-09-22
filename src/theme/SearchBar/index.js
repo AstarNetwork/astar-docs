@@ -122,6 +122,7 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
   useEffect(() => {
     if (externalQuery) {
       setInitialQuery(externalQuery);
+      setExternalQuery(undefined);
     }
   }, [externalQuery]);
 
