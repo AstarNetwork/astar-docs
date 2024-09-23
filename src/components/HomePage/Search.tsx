@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { useSearch } from "../../theme/Root";
 import styles from "./search.module.css";
 
+const ENTER_KEY = "Enter";
+
 export function Search({ searchTags }: { searchTags: string[] }): JSX.Element {
   const { setQuery } = useSearch();
   const inputRef = useRef(null);
@@ -12,7 +14,7 @@ export function Search({ searchTags }: { searchTags: string[] }): JSX.Element {
   }
 
   function handleEnter(event) {
-    if (event.key === "Enter") {
+    if (event.key === ENTER_KEY) {
       handleSearch();
     }
   }
@@ -22,7 +24,7 @@ export function Search({ searchTags }: { searchTags: string[] }): JSX.Element {
   }
 
   function handleTagEnter(event, tag: string) {
-    if (event.key === "Enter") {
+    if (event.key === ENTER_KEY) {
       setQuery(tag);
     }
   }
