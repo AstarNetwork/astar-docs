@@ -46,7 +46,7 @@ function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
     ...props.searchParameters,
     facetFilters,
   };
-  const { query: externalQuery } = useSearch();
+  const { query: externalQuery, setQuery: setExternalQuery } = useSearch();
   const history = useHistory();
   const searchContainer = useRef(null);
   const searchButtonRef = useRef(null);
