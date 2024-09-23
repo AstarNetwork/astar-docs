@@ -1,0 +1,115 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-heading-font-family: "Poppins", sans-serif;
+  --ifm-font-family-base: "Poppins", sans-serif;
+  --ifm-color-primary: #3578e7;
+  --ifm-color-primary-dark: #3272d8;
+  --ifm-color-primary-darker: #2c63bb;
+  --ifm-color-primary-darkest: #2858a7;
+  --ifm-color-primary-light: #4daac6;
+  --ifm-color-primary-lighter: #5ecbec;
+  --ifm-color-primary-lightest: #64d7fb;
+  --ifm-code-font-size: 95%;
+  --text-color-description: #64748B;
+  --gradient-start: #0047FF;
+  --gradient-end: #00D4FF;
+  --text-input-background: #FFFFFF;
+  --highlight-background: #D6EDFF;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --frosted-background: rgba(255, 255, 255, 0.5);
+  --hr-color: #CBD5E1;
+  --lp-background-color: #FFFFFF;
+  --lp-background-image: url("/img/background.svg");
+  --search-bar-border: #94A3B8;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #3578e7;
+  --ifm-color-primary-dark: #3272d8;
+  --ifm-color-primary-darker: #2c63bb;
+  --ifm-color-primary-darkest: #2858a7;
+  --ifm-color-primary-light: #4daac6;
+  --ifm-color-primary-lighter: #5ecbec;
+  --ifm-color-primary-lightest: #64d7fb;
+  --text-color-description: #94A3B8;
+  --gradient-start: #0050EB;
+  --gradient-end: #008BF0;
+  --text-input-background: #020617;
+  --highlight-background: rgba(0, 117, 255, 0.15);
+  --box-shadow-color: rgba(255, 255, 255, 0.05);
+  --frosted-background: rgba(255, 255, 255, 0.05);
+  --hr-color: #334155;
+  --lp-background-color: #020618;
+  --lp-background-image: url("/img/background_dark.svg");
+  --search-bar-border: #334155;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  background-color: var(--lp-background-color);
+}
+
+.footer__title {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-color-title)
+}
+
+.footer__item {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color-description);
+}
+
+.footer__copyright {
+  padding: 80px 0;
+}
+
+.navbar {
+  background-color: var(--lp-background-color);
+  border-bottom: 1px solid var(--hr-color);
+}
+
+.navbar__logo {
+  height: 40px;
+}
+
+.navbar__logo::after {
+  content: "DOCS";
+  color: var(--text-color-title);
+  font-size: 24px;
+  font-weight: 600;
+  display:inline-block;
+  position: relative;
+  top: -11px;
+  left: 12px;
+}
+
+button.DocSearch.DocSearch-Button {
+  border: 1px solid var(--search-bar-border);
+}
+
+@media(min-width: 996px) {
+  .navbar__logo::after {
+    content: none;
+    display: none;
+  }
+}

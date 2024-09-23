@@ -7,8 +7,8 @@ import Figure from "/src/components/figure"
 
 # ASTR Liquid dApp Staking with Bifrost Finance
 
-This page explains how to participate in Astar dApp Staking via Bifrost Liquid Staking solution on **Astar zkEVM**.  
-[More information about dApp Staking](/docs/use/dapp-staking/index/).
+This page explains how to participate in Astar dApp Staking via Bifrost Liquid Staking solution on **Astar zkEVM**.
+[More information about dApp Staking](/docs/use/dapp-staking/).
 
 If you have `ASTR` on Astar L1 (Subtrate or EVM), consult [this guide](/docs/use/zkevm-guides/Bridge-Astar-EVM/) to transfer them from Astar to Astar zkEVM.
 
@@ -32,7 +32,7 @@ Bifrost charges a 10% commission on staking rewards.
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bifrost_1.png').default} width="70%" />
 
-2. Enter the amount of `ASTR` you want to stake in Liquid Staking. In return, you will receive `vASTR` tokens according to the ASTR/vASTR ratio;  
+2. Enter the amount of `ASTR` you want to stake in Liquid Staking. In return, you will receive `vASTR` tokens according to the ASTR/vASTR ratio;
 *Remember to take into consideration the cross-chain transaction fee (deducted from the stake amount);*
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bifrost_2.png').default} width="80%" />
@@ -59,14 +59,14 @@ To add tokens to your EVM wallet manually, use the following contract addresses:
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bifrost_1.png').default} width="70%" />
 
-2. Switch to the **Unstake Panel** and enter the amount of `vASTR` you want to redeem. In return, you will receive `ASTR` tokens according to the ASTR/vASTR ratio including your staking rewards;  
+2. Switch to the **Unstake Panel** and enter the amount of `vASTR` you want to redeem. In return, you will receive `ASTR` tokens according to the ASTR/vASTR ratio including your staking rewards;
 *Remember to take into consideration the cross-chain transaction fee (deducted from the stake amount);*
 
 <Figure src={require('/docs/use/zkevm-guides/img/Bifrost_5.png').default} width="90%" />
 
 3. Authorize Bifrost to access your funds by clicking on `Approve` and signing the transaction in your wallet;
 
-4. Click on `Unstake Now` to initiate the transaction and sign it in your wallet;  
+4. Click on `Unstake Now` to initiate the transaction and sign it in your wallet;
 
 :::warning
 Note that there is a unstaking period of **0 to 10 days**;

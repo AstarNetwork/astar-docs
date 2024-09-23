@@ -10,7 +10,7 @@ Astar は、Polkadot および Ethereum エコシステム向けの相互運用�
 
 - [**開発について**](/docs/build) - Astar ネットワーク上でスマートコントラクトを構築、テスト、デプロイし、運用を開始するために必要な情報をご提供します。
 
-- [**EVM**](/docs/build/evm) - Astar 上の EVM について詳しく掘り下げ、EVM スマートコントラクトが非 EVM モジュールおよび Wasm 仮想マシンと[precompiles](https://docs.astar.network/docs/build/EVM/precompiles/)を介してどのように相互作用できるかを説明します。
+- [**EVM**](/docs/build/EVM) - Astar 上の EVM について詳しく掘り下げ、EVM スマートコントラクトが非 EVM モジュールおよび Wasm 仮想マシンと[precompiles](https://docs.astar.network/docs/build/EVM/precompiles/)を介してどのように相互作用できるかを説明します。
 
 - [**Wasm**](/docs/build/wasm) - Astar 上の[Wasm stack](https://docs.astar.network/docs/build/wasm/smart-contract-wasm)、[Wasm contract frameworks](/docs/build/wasm/dsls)、および[Swanky Suite](/docs/build/wasm/swanky-suite/)の概要をご提供します。
 

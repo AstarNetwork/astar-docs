@@ -10,9 +10,9 @@ Para ampliar tus conocimientos sobre la creación de aplicaciones o la utilizaci
 
 [Acerca de Astar](/docs/learn/astar)
 
-[Astar Tokens](docs/learn/astar-tokens)
+[Astar Tokens](/docs/learn/astar-tokens)
 
-[Cuenta](/docs/learn/Accounts)
+[Cuenta](/docs/learn/accounts)
 
 [Polkadot](/docs/learn/architecture/astar-parachain)
 

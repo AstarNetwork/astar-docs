@@ -1,0 +1,165 @@
+.astarButton {
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 9999px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  height: 45px;
+}
+
+.astarButton::before {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-radius: 100%;
+  transition: all 0.3s ease-out;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.astarButton:hover::before {
+  height: 200%;
+  width: 100%;
+}
+
+.astarButton.blue {
+  background: linear-gradient(to right, #0047FF, #00D1FF);
+  color: white;
+}
+
+.astarButton.whiteBlue {
+  background: white;
+  color: blue;
+  border: 1px solid blue;
+}
+
+.astarButton.whiteGray {
+  background: white;
+  color: #2F2F2F;
+}
+
+.astarButton.outlinedGray {
+  background: transparent;
+  color: #707070;
+  border: 1px solid #707070;
+}
+
+.innerButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.innerButton.md {
+  gap: 10px;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
+.circle.md {
+  width: 24px;
+  height: 24px;
+}
+
+.circle.blue {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.circle.whiteBlue {
+  background: rgba(0, 71, 255, 0.3);
+}
+
+.circle.whiteGray {
+  background: rgba(119, 119, 119, 0.25);
+}
+
+.circle.outlinedGray {
+  background: rgba(112, 112, 112, 0.25);
+}
+
+.innerCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s;
+}
+
+.innerCircle.md {
+  width: 8px;
+  height: 8px;
+}
+
+.astarButton:hover .innerCircle.md {
+  width: 24px;
+  height: 24px;
+}
+
+.innerCircle.blue {
+  background: white;
+}
+
+.innerCircle.whiteBlue {
+  background: blue;
+}
+
+.innerCircle.whiteGray {
+  background: #2F2F2F;
+}
+
+.innerCircle.outlinedGray {
+  background: #707070;
+}
+
+.arrow {
+  transition: all 0.3s;
+}
+
+.arrow.md {
+  width: 0;
+  height: 0;
+}
+
+.astarButton:hover .arrow.md {
+  width: 16px;
+  height: 16px;
+}
+
+.arrow.blue {
+  color: blue;
+}
+
+.arrow.whiteBlue {
+  color: white;
+}
+
+.arrow.whiteGray {
+  color: white;
+}
+
+.arrow.outlinedGray {
+  color: white;
+}
+
+.astarButtonLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+}

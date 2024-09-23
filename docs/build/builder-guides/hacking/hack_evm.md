@@ -5,7 +5,6 @@ import CustomNet from './img/custom_net.png'
 import Zombie from './img/zombie.png'
 
 # Hack EVM Smart Contracts
-![banner](/docs/build/img/gradient2.jpg)
 
 Read the linked chapters or use tutorials to be able to answer following questions:
 
@@ -30,4 +29,4 @@ The Truffle and Hardhat are preferred tools to develop, deploy and test smart co
 Setup your Hardhat environment using [How to use Hardhat to deploy on Shibuya](/docs/build/builder-guides/astar_features/use_hardhat).
 
 
-What is [next](/docs/build/builder-guides/hacking/next)? 
+What is [next](/docs/build/builder-guides/hacking/next)?

@@ -8,7 +8,7 @@ import Figure from "/src/components/figure"
 # Bifrost Finance による ASTR Liquid dApp Staking
 
 このページでは、**Astar zkEVM**上でBifrost Liquid Stakingソリューションを通じてAstar dApp Stakingに参加する方法について説明します。
-[dApp Stakingについて詳細情報](/docs/use/dapp-staking/index/)。
+[dApp Stakingについて詳細情報](/docs/use/dapp-staking/)。
 
 Astar L1 (SubtrateまたはEVM)上に`ASTR`を持っている場合は、[このガイド](/docs/use/zkevm-guides/Bridge-Astar-EVM/) を参照して、それらをAstarからAstar zkEVMに転送してください。
 
