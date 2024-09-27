@@ -20,6 +20,8 @@ To expand your knowledge about building applications or utilizing various tools 
 
 [dApp Staking](/docs/learn/dapp-staking)
 
+[Governance](/docs/learn/governance)
+
 ## Advanced
 [Tokenomics](/docs/learn/tokenomics2)
 
