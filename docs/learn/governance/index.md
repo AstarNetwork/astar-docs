@@ -6,7 +6,7 @@ title: Overview
 ## Status
 
 * **LIVE** on `Shibuya` testnet
-* **To-Be-Deployed** on `Astar` _soon_
+* **To-Be-Deployed** on `Astar` _soon_ (docs will be updated accordingly prior to the deployment)
 
 ## Approach
 
@@ -92,6 +92,8 @@ The `Technical Committee` can decide to fast-track external proposals (e.g. in c
 
 When submitting a new proposal, token holders need to _deposit_ some amount of native tokens as an _insurance_ that the proposal is not _spam_. This amount can be arbitrary, but has a minimum amount. Users should be careful when setting large amounts here since the endorsement requirement is that the deposit is _matched_.
 
+In case the token holder votes corresponds to the _winning_ side, their tokens will be _locked_ for a certain period of time. This parameter is scaled by the _conviction_.
+
 | Parameter Name                           | Shibuya                   | Astar                   |
 | ---------------------------------------- | ------------------------- | ----------------------- |
 | Launch Period                            | 4 Days                    | TBD                     |
@@ -106,6 +108,18 @@ When submitting a new proposal, token holders need to _deposit_ some amount of n
 | Instant Track Origin                     | Unanimous Technical Committee | Unanimous Technical Committee |
 | Referendum Cancellation Origin           | 1/2 Main Council          | 2/3 Main Council        |
 | Public Proposal Cancellation Origin      | 1/2 Technical Committee   | 2/3 Technical Committee |
+
+#### Conviction Voting
+
+| Conviction | Base Lock Period Multiplier | Length In Days (Shibuya) | Length In Days (Astar) |
+| ---------- | ---------------------------- | ------------------------ | ---------------------- |
+| 0.1        | 0x _(No Lock)_               | 0 Days                   | 0 Days                 |
+| 1          | 1x                           | 1 Day                    | TBD                    |
+| 2          | 2x                           | 2 Days                   | TBD                    |
+| 3          | 4x                           | 4 Days                   | TBD                    |
+| 4          | 8x                           | 8 Days                   | TBD                    |
+| 5          | 16x                          | 16 Days                  | TBD                    |
+| 6          | 32x                          | 32 Days                  | TBD                    |
 
 ### Treasuries
 
