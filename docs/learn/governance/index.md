@@ -12,7 +12,7 @@ title: Overview
 
 `Astar` reuses Polkadot’s so-called **v1** governance model due to it's practicality. The core idea is to further decentralize the network, but not completely re-invent the wheel.
 
-User is advised to refer to [the official docs](https://wiki.polkadot.network/docs/learn/learn-governance) to learn more about how _Gov v1_ works. Further chapters will assume that the reader has read and has basic understanding of the mechanism.
+User is advised to refer to [the official docs](https://wiki.polkadot.network/docs/learn/learn-governance) to learn more about how _Gov v1_ works.
 
 The **Main Council** and the **Technical Committee** will be used same as in the linked documentation.
 
@@ -29,7 +29,48 @@ Tokens that are locked in dApp staking **CAN** and should be used to participate
 Users can steer the direction of the network while earning rewards.
 :::
 
+## Quick Overview
+
+To avoid duplicating the official [official Polkadot Gov v1 documentation](https://wiki.polkadot.network/docs/learn/learn-governance), here is a quick overview of the governance system in `Astar`.
+
+* Before a proposal can be made, a _preimage_ of the call must be submitted on-chain. For the sake of simplicity we can think of this as the proposal logic the submitter wants to execute (e.g. upgrade the runtime, transfer funds, etc.).
+
+* Public proposal can be made by any native token holder, and can be endorsed by other token holders. More than one proposal can exist at the same time.
+* External proposal can be made by the `Main Council`. Only one external proposal can exist at a time.
+* At the end of each `Launch Period`, either the most endorsed public proposal or the external proposal will be upgraded into a referendum (2 _tracks_).
+  * Every `Launch Period` will have an alternating _round_ (1st round is for public proposals, 2nd round is for external proposals).
+  * In case no eligible proposal exists for the given round's track preference, the other track will be used instead if a proposal exists.
+
+* Once a proposal is upgraded into a referendum, the token holders can vote on it during the `Voting Period`. In order for the referendum to pass, a certain quorum must be achieved before the `Voting Period` ends.
+* If the referendum passes, the proposal will be executed on-chain after the `Enactment Period` has passed. This is a _delay execution_ mechanism, allowing the token holders to prepare for the changes.
+* Conviction voting allows the token holder to amplify their vote by _locking_ their tokens for a certain period of time. The longer the lock period, the more _weight_ the vote has. E.g. voting with **1000 tokens** with conviction factor **3** will be equivalent to voting with **3000 tokens** but the tokens will be locked for a greater period of time compared to voting with conviction factor **1**.
+
+* In case the voter's vote corresponds to the _winning_ side, their tokens will be _locked_ for a certain period of time. Otherwise the tokens will be _unlocked_ immediately. Tokens never leave the voter's account, they just cannot be transferred or used to e.g. pay transaction fees.
+* Once the _lock_ period expires, user can execute an _unlock_ action to remove the lock and make the tokens _liquid_ again.
+
+* Token holder can delegate their voting power to another account. Tokens are never transferred, only the voting power is delegated.
+* It is not possible to have both voting delegation & actively vote at the same time. These actions are mutually exclusive.
+
+* There are 3 types of quorums (reader is **strongly** encouraged to refer to the official docs for more details):
+  * _Simple Majority_ requires more than 50% of the total votes to be _aye_. This is the quorum required for external proposal made by the _majority agreement_ of the `Main Council`
+  * _Super Majority Approve_ adapts to the voter turnout (how many voters participated in the referendum compared to the total token supply). For low turnout, the percentage of _aye_ votes is higher, but as turnout increased, the percentage of required _aye_ votes required decreases. This is the quorum required for regular public proposals.
+  * _Super Majority Against_ also adapts to the voter turnout. For low turnout, the percentage of _aye_ votes is lower, but as turnout increases, the percentage of required _aye_ votes increases. This is the quorum required for external proposal made by the _unanimous agreement_ of the `Main Council`.
+
+* The `Main Council` can **cancel** an ongoing referendum if it considers it harmful. This is an _emergency_ action only.
+* The `Technical Committee` can **fast-track** an external proposal in case of an emergency situation. This allows instant upgrade of the proposal into a referendum, and setting of the voting & enactment period to arbitrarily short durations.
+* The `Technical Committee` can **cancel** a public proposal if it considers it to be harmful for the network.
+* Any `Technical Committee` can **vet** an external proposal made by the `Main Council`, postponing it temporarily.
+
 ## Actors
+
+Different actors have different roles in the governance system.
+When executing any of the governance actions, the _origin_ of the call will determined the privileges it has.
+
+E.g. in case a regular user submits a democracy proposal, the _origin_ will be user's account, controlled by the user's private key.
+However, in case of a `Main Council` call, the _origin_ will be the `Main Council` collective with some level of agreement, e.g. 2/3 majority.
+Such a call will have more privileges than a regular user's call, but it requires some consensus among the council members.
+
+There is a special kind of _origin_ called `root`, which has the highest privilege level.
 
 ### Main Council
 
@@ -165,6 +206,9 @@ Other collective members can either vote _aye_ or _nay_ on the motion.
 Motions have a duration (sort of a voting period), and if they do not get the required quorum, they are considered _failed_.
 In case the quorum is reached, the motion is considered _passed_.
 
+A collective can have 0 or more members, up to a predefined limit.
+To check the current number of members, it's best to refer to the on-chain data, e.g. the `polkadot-js app` or the dedicated governance UI.
+
 | Parameter Name                          | Shibuya                  | Astar                    |
 | --------------------------------------- | ------------------------ | ------------------------ |
 | Main Council Motion Duration            | 5 Days                   | TBD                      |
@@ -173,3 +217,6 @@ In case the quorum is reached, the motion is considered _passed_.
 | Main Council Member Change Origin       | 1/2 Main Council         | 2/3 Main Council         |
 | Technical Committee Member Change Origin| 1/2 Technical Committee  | 2/3 Technical Committee  |
 | Community Council Member Change Origin  | 1/2 Community Council    | 2/3 Community Council    |
+| Main Council Member Limit               | 16                       | TBD                      |
+| Technical Committee Member Limit        | 8                        | TBD                      |
+| Community Council Member Limit          | 16                       | TBD                      |
