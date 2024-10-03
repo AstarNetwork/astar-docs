@@ -12,30 +12,127 @@ This is _work-in-progress_.
 All information here should be correct, but the guide will be updated prior to the launch on Astar.
 :::
 
-The purpose of this guide is to demonstrate how to utilize **SubSquare** platform for governance actions on Astar & Shibuya.
+The purpose of this guide is to demonstrate how to utilize **Subsquare** platform for governance actions on Astar & Shibuya.
 
-## User Guide
+* [Shibuya Subsquare](https://shibuya.subsquare.io/)
+* Astar Subsquare (_coming soon_)
 
-:::note
-All of the examples below were done on a `local` test network which can be easily started by downloading Astar binary from [the official releases](https://github.com/AstarNetwork/Astar/releases) (or building it manually), and starting it as `./astar-collator --dev --tmp`.
+## Preimages
 
-The settings & parameters of the `local` test network **DO NOT** reflect what will be used on Shibuya or on Astar.
-:::
+Select the `Preimage` tab on the sidebar.
 
-This does not describe how users are expected to use the governance since majority of this logic will be hidden behind a frontend.
+<Figure caption="Preimage - 1" src={require('/docs/learn/governance/img/17_Subsquare_preimage/preimage_1.png').default } width="100%" />
 
-### Token Holder
+The existing preimages are displayed on the page.
+They can be reused by anyone to propose a governance action, any number of times.
 
-#### Preimage
+---
 
-To put it simply, _preimage_ of the call hash is the call itself - the proposal we want to execute.
+In order to create a new preimage, click on the `New Preimage` button.
 
-The first step is to select `Governance -> Preimage` as shown in the image below.
+<Figure caption="Preimage - 2" src={require('/docs/learn/governance/img/17_Subsquare_preimage/preimage_2.png').default } width="100%" />
 
-<Figure caption="Governance Preimage - 1" src={require('/docs/learn/governance/img/01_Preimage/01_governance_preimage.png').default } width="100%" />
+--
 
-The second step is to click on the `Add preimage` button. Now the user can _define_ the call they wish to propose. For the sake of this example, it will be a registration of a smart contract into the dApp staking protocol.
+Again, click on the `New preimage` button.
+This will allow to create an arbitrary new preimage.
 
-<Figure caption="Governance Preimage - 2" src={require('/docs/learn/governance/img/01_Preimage/02_governance_preimage.png').default } width="100%" />
+For the sake of this example, we will create a preimage of a `remarkWithEvent` extrinsic call, containing **LGM!** as the _message_.
 
-This is the definition of the call that we’d like to see become a referendum, and ideally executed afterwards. It’s important to note the values of the `preimage hash` (and `preimage length`) as it serves as the _identifier_ of the actual call.
+Note the _hash_ and _length_, as these are important for later use.
+
+Submit the message and wait for the transaction to be confirmed & finalized.
+
+<Figure caption="Preimage - 3" src={require('/docs/learn/governance/img/17_Subsquare_preimage/preimage_3.png').default } width="100%" />
+
+---
+
+Once the preimage has been created, it will be displayed on the main `Preimage` page.
+
+<Figure caption="Preimage - 4" src={require('/docs/learn/governance/img/17_Subsquare_preimage/preimage_4.png').default } width="100%" />
+
+Note that the newly created image has an `Unnote` button. This is because the current user is the creator of the preimage.
+Since at this point the preimage is not yet used in any proposal, it can be unnoted, which will remove it from the list of preimages, refunding the deposit.
+
+## Public Proposal
+
+Select the `Public Proposal` tab on the sidebar, under the `Democracy` section.
+
+<Figure caption="Public Proposal - 1" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_1.png').default } width="100%" />
+
+Here the existing public proposals are displayed. Some have been tabled (upgraded to a referendum), some are just proposed, some might be cancelled.
+
+---
+
+Click on the `New Proposal` button to create a new public proposal.
+Since a preimage was created in the previous step, it can be used to create a new proposal.
+
+<Figure caption="Public Proposal - 2" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_2.png').default } width="100%" />
+
+---
+
+The hash of the preimage is required to create a new proposal.
+In this case, hash of the preimage created earlier is simply copied and pasted into the `Preimage` field.
+
+The `Locked Balance` refers to the amount being _deposited_ (not locked) for the proposal.
+In case the proposal is cancelled, the deposit will be slashed.
+In case the proposal is tabled, the deposit will be refunded.
+
+<Figure caption="Public Proposal - 3" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_8.png').default } width="100%" />
+
+---
+
+After submitting the proposal, some time needs to pass before the transaction is confirmed and finalized.
+
+<Figure caption="Public Proposal - 4" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_3.png').default } width="100%" />
+
+---
+
+Afterwards, it can be observed under the list of public proposals.
+The status will be marked as `Proposed`, since it hasn't been _tabled_ (or _cancelled_) yet.
+
+<Figure caption="Public Proposal - 5" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_4.png').default } width="100%" />
+
+---
+
+Clicking on the proposal will display more details, and allow to take further actions.
+
+<Figure caption="Public Proposal - 6" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_5.png').default } width="100%" />
+
+---
+
+Proposal can be edited by clicking on the `Edit` button. Title and description can be changed, even an graphical image can be uploaded.
+Users can discuss the proposal in the comments section.
+
+<Figure caption="Public Proposal - 7" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_6.png').default } width="100%" />
+
+---
+
+Clicking on the `Second` button will allow the user to second the proposal, increasing the chances of it being tabled and upgraded to a referendum.
+The user has to _match_ the deposit of the proposal, which is displayed on the page.
+It is possible to second a proposal multiple times.
+
+<Figure caption="Public Proposal - 8" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_7.png').default } width="100%" />
+
+## Treasury
+
+Clicking on the `Treasury` tab on the sidebar will display the current state of the treasury & spending requests.
+
+<Figure caption="Treasury - 1" src={require('/docs/learn/governance/img/19_Subsquare_Treasury/treasury_1.png').default } width="100%" />
+
+---
+
+Clicking on the `New Proposal` button will allow to create a new spending proposal.
+User needs to pick the payout amount & the beneficiary.
+The _Proposal bond_ refers to the amount that needs to be deposited in order to create the proposal.
+In case the proposal is rejected, the bond will be slashed.
+Otherwise, the bond will be refunded.
+
+<Figure caption="Treasury - 2" src={require('/docs/learn/governance/img/19_Subsquare_Treasury/treasury_2.png').default } width="100%" />
+
+---
+
+After submitting the proposal, it will be displayed on the treasury page.
+The proposal name & description can be edited.
+
+<Figure caption="Treasury - 3" src={require('/docs/learn/governance/img/19_Subsquare_Treasury/treasury_3.png').default } width="100%" />
