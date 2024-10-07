@@ -136,3 +136,45 @@ After submitting the proposal, it will be displayed on the treasury page.
 The proposal name & description can be edited.
 
 <Figure caption="Treasury - 3" src={require('/docs/learn/governance/img/19_Subsquare_Treasury/treasury_3.png').default } width="100%" />
+
+## Vote Delegation
+
+Click on the `Delegation` tab on the sidebar to access the vote delegation page.
+This is an overview of _delegation_ related actions and statistics.
+
+Clicking on the `+ Delegate` button will allow to delegate votes to another account.
+
+<Figure caption="Vote Delegation - 1" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_1.png').default } width="100%" />
+
+---
+
+The `Target` is the account to which the votes are being delegated to.
+The `Balance` is the amount of native currency we're delegating. This is the amount that will be _locked_.
+:::important
+The action of delegating voting power **DOES NOT** transfer the ownership of the tokens. They are merely _locked_ for normal use, but remain in the ownership of the delegator.
+:::
+
+The `Conviction` allows us to amplify the voting power being transferred, at the expense of a longer _unlock_ period.
+
+<Figure caption="Vote Delegation - 2" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_2.png').default } width="100%" />
+
+---
+
+Once the delegation has been submitted, it will be displayed on the delegation page.
+Clicking on the `Details` label will display more information about the delegation.
+
+<Figure caption="Vote Delegation - 3" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_3.png').default } width="100%" />
+
+---
+
+The amount and conviction are displayed.
+Clicking on the `X` button allows to _undelegate_ the votes, which will begin the unlocking period for the tokens.
+
+<Figure caption="Vote Delegation - 4" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_4.png').default } width="100%" />
+
+---
+
+Clicking on the `Account` tab on the sidebar will display the account details.
+The 100 SBY locked in previous steps with conviction set to **3** is displayed - equaling total of 8 days of unlocking period.
+
+<Figure caption="Vote Delegation - 5" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
