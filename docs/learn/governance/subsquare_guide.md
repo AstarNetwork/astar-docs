@@ -17,7 +17,9 @@ The purpose of this guide is to demonstrate how to utilize **Subsquare** platfor
 * [Shibuya Subsquare](https://shibuya.subsquare.io/)
 * Astar Subsquare (_coming soon_)
 
-## Preimages
+## Token Holder
+
+### Preimages
 
 Select the `Preimage` tab on the sidebar.
 
@@ -54,7 +56,7 @@ Once the preimage has been created, it will be displayed on the main `Preimage` 
 Note that the newly created image has an `Unnote` button. This is because the current user is the creator of the preimage.
 Since at this point the preimage is not yet used in any proposal, it can be unnoted, which will remove it from the list of preimages, refunding the deposit.
 
-## Public Proposal
+### Public Proposal
 
 Select the `Public Proposal` tab on the sidebar, under the `Democracy` section.
 
@@ -114,7 +116,7 @@ It is possible to second a proposal multiple times.
 
 <Figure caption="Public Proposal - 8" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_7.png').default } width="100%" />
 
-## Treasury
+### Treasury
 
 Clicking on the `Treasury` tab on the sidebar will display the current state of the treasury & spending requests.
 
@@ -137,7 +139,11 @@ The proposal name & description can be edited.
 
 <Figure caption="Treasury - 3" src={require('/docs/learn/governance/img/19_Subsquare_Treasury/treasury_3.png').default } width="100%" />
 
-## Vote Delegation
+:::note
+The exact same steps can be reused for the community treasury proposals.
+:::
+
+### Vote Delegation
 
 Click on the `Delegation` tab on the sidebar to access the vote delegation page.
 This is an overview of _delegation_ related actions and statistics.
@@ -178,3 +184,130 @@ Clicking on the `Account` tab on the sidebar will display the account details.
 The 100 SBY locked in previous steps with conviction set to **3** is displayed - equaling total of 8 days of unlocking period.
 
 <Figure caption="Vote Delegation - 5" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
+
+### Voting
+
+Clicking on the `Referenda` tab on the sidebar, under the `Democracy` tab, will display all of the referenda, including the ongoing ones, failed ones & executed ones.
+
+For the sake of this example, the referenda named **"Proposal for docs"** will be used.
+
+<Figure caption="Voting - 1" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_1.png').default } width="100%" />
+
+---
+
+Clicking on it will display more details about the referendum as can be seen below.
+
+The user can decide to vote by clicking on the `Vote` button.
+
+<Figure caption="Voting - 2" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_2.png').default } width="100%" />
+
+---
+
+Vote can be `aye` or `nay`, or can even be split between the two options if the user desires.
+
+The token amount to be used for voting needs to be specified - this is the amount that will be _locked_ for the duration of the referendum and more if the referendum passes in the favor of the users vote. E.g. voting `aye` for a referendum, and having it _fail_ will result in the tokens being immediately unlockable, without any waiting period.
+
+Conviction can be set to amplify (or diminish) the voting power, at the expense of a longer (or shorter) unlocking period.
+
+<Figure caption="Voting - 3" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_3.png').default } width="100%" />
+
+---
+
+After the transaction is confirmed and finalized, the vote will be displayed on the referendum page.
+Since only one user has voted (us), the total sum of the _aye_ votes is equal to the amount we've voted with.
+
+<Figure caption="Voting - 4" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_4.png').default } width="100%" />
+
+---
+
+In case user changes their mind, the vote can be removed by clicking on the `Remove Vote` button.
+This won't trigger any _unlocking period_ and user is free to cast their vote again.
+
+<Figure caption="Voting - 5" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_5.png').default } width="100%" />
+
+---
+
+This is an example of an account that is voting but has some votes delegated to it.
+In this particular situation, the account has:
+
+* 100 SBY free balance
+* 300 SBY worth of voting power delegated to it.
+
+Although not visible on this image, the account who delegated the votes did it with 100 SBY and conviction set to **3**.
+
+The account votes with 50 SBY, conviction set to **4**.
+This means that the total amount of votes for this account will be: **50 SBY x 4 + 300 SBY = 500 SBY**.
+
+<Figure caption="Voting - 6" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_6.png').default } width="100%" />
+
+---
+
+The new total turnout is 200 SBY - 50 SBY from the first `aye` vote, another 50 SBY from the second `aye` vote, and 100 SBY from the delegated vote.
+
+The total votes toward `aye` is 600 SBY in total - 100 SBY from the first `aye` vote, and another 500 SBY from the second `aye` vote.
+
+<Figure caption="Voting - 7" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_7.png').default } width="100%" />
+
+## Community Council
+
+### Treasury Spending Approval
+
+Clicking on the `Motions` tab under the `Community Council` sidebar tab will open a view of the `Community Council` motions.
+
+Clicking on the `New Proposal` button will prompt the user to create a new motion.
+
+<Figure caption="Community Treasury Voting - 1" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_1.png').default } width="100%" />
+
+---
+
+The focus of this example is community treasury spending approval.
+
+<Figure caption="Community Treasury Voting - 2" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_2.png').default } width="100%" />
+
+---
+
+The proposal Id (can be checked under Community Treasury tab) is required to create a new motion.
+Selecting an Id will display the proposal name, which also links to the proposal details.
+Community council members should ensure they're proposing and voting on the correct proposal.
+
+<Figure caption="Community Treasury Voting - 3" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_3.png').default } width="100%" />
+
+---
+
+Once the proposal creation is submitted, it will be displayed on the `Motions` page.
+
+<Figure caption="Community Treasury Voting - 4" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_4.png').default } width="100%" />
+
+---
+
+Clicking on it will display more details, and allow for a vote to be cast.
+
+<Figure caption="Community Treasury Voting - 5" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_5.png').default } width="100%" />
+
+---
+
+In this case, one of the council members votes _aye_.
+
+<Figure caption="Community Treasury Voting - 6" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_6.png').default } width="100%" />
+
+### dApp Staking With Community Treasury
+
+This is more complex since it requires user to understand basics of dApp staking backend.
+The proposal call needs to be manually crafted and submitted to the blockchain.
+
+The first thing to select is the threshold.
+This can be calculated by taking the expected vote threshold (e.g. 50% or 2/3 of the quorum) and comparing it to the total number of members in the council.
+For this particular case, the threshold is set to 2/3 of the council members and we have 3 council members so we set it to 2.
+
+The next is the call builder.
+When utilizing the community treasury, the call needs to start with `collectiveProxy -> executeCall`.
+After that, the dApp staking call needs to be built. It's possible, and encouraged, to use the _batch_ calls to simplify the voting process.
+
+<Figure caption="dApp Staking - 1" src={require('/docs/learn/governance/img/23_Subsquare_dapp_staking/comm_council_ds_1.png').default } width="100%" />
+
+### Registering a New dApp
+
+Unlike the actual staking with the community treasury, registering a new dApp **does not** require the `collectiveProxy`.
+Instead, the call should directly propose `dappStaking -> register`.
+
+<Figure caption="dApp Staking - 2" src={require('/docs/learn/governance/img/23_Subsquare_dapp_staking/comm_council_ds_2.png').default } width="100%" />
