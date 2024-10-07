@@ -1,6 +1,7 @@
 ---
-sidebar_position: 3
-title: Subsquare Guide
+sidebar_position: 1
+sidebar_label: On-chain Governance
+title: Astar Subsquare - On-chain Governance
 ---
 
 import Figure from "/src/components/figure"
@@ -13,6 +14,7 @@ All information here should be correct, but the guide will be updated prior to t
 :::
 
 The purpose of this guide is to demonstrate how to utilize **Subsquare** platform for governance actions on Astar & Shibuya.
+Working assumption is that the reader has familiarized themselves with the governance model, and will refer back to the docs if needed.
 
 * [Shibuya Subsquare](https://shibuya.subsquare.io/)
 * Astar Subsquare (_coming soon_)
@@ -23,7 +25,7 @@ The purpose of this guide is to demonstrate how to utilize **Subsquare** platfor
 
 Select the `Preimage` tab on the sidebar.
 
-<Figure caption="Preimage - 1" src={require('/docs/learn/governance/img/17_Subsquare_preimage/preimage_1.png').default } width="100%" />
+<Figure caption="Preimage - 1" src={require('/docs/use/img/17_Subsquare_preimage/preimage_1.png').default } width="100%" />
 
 The existing preimages are displayed on the page.
 They can be reused by anyone to propose a governance action, any number of times.
@@ -32,7 +34,7 @@ They can be reused by anyone to propose a governance action, any number of times
 
 In order to create a new preimage, click on the `New Preimage` button.
 
-<Figure caption="Preimage - 2" src={require('/docs/learn/governance/img/17_Subsquare_preimage/preimage_2.png').default } width="100%" />
+<Figure caption="Preimage - 2" src={require('/docs/use/img/17_Subsquare_preimage/preimage_2.png').default } width="100%" />
 
 --
 
@@ -45,13 +47,13 @@ Note the _hash_ and _length_, as these are important for later use.
 
 Submit the message and wait for the transaction to be confirmed & finalized.
 
-<Figure caption="Preimage - 3" src={require('/docs/learn/governance/img/17_Subsquare_preimage/preimage_3.png').default } width="100%" />
+<Figure caption="Preimage - 3" src={require('/docs/use/img/17_Subsquare_preimage/preimage_3.png').default } width="100%" />
 
 ---
 
 Once the preimage has been created, it will be displayed on the main `Preimage` page.
 
-<Figure caption="Preimage - 4" src={require('/docs/learn/governance/img/17_Subsquare_preimage/preimage_4.png').default } width="100%" />
+<Figure caption="Preimage - 4" src={require('/docs/use/img/17_Subsquare_preimage/preimage_4.png').default } width="100%" />
 
 Note that the newly created image has an `Unnote` button. This is because the current user is the creator of the preimage.
 Since at this point the preimage is not yet used in any proposal, it can be unnoted, which will remove it from the list of preimages, refunding the deposit.
@@ -60,7 +62,7 @@ Since at this point the preimage is not yet used in any proposal, it can be unno
 
 Select the `Public Proposal` tab on the sidebar, under the `Democracy` section.
 
-<Figure caption="Public Proposal - 1" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_1.png').default } width="100%" />
+<Figure caption="Public Proposal - 1" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_1.png').default } width="100%" />
 
 Here the existing public proposals are displayed. Some have been tabled (upgraded to a referendum), some are just proposed, some might be cancelled.
 
@@ -69,7 +71,7 @@ Here the existing public proposals are displayed. Some have been tabled (upgrade
 Click on the `New Proposal` button to create a new public proposal.
 Since a preimage was created in the previous step, it can be used to create a new proposal.
 
-<Figure caption="Public Proposal - 2" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_2.png').default } width="100%" />
+<Figure caption="Public Proposal - 2" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_2.png').default } width="100%" />
 
 ---
 
@@ -80,33 +82,33 @@ The `Locked Balance` refers to the amount being _deposited_ (not locked) for the
 In case the proposal is cancelled, the deposit will be slashed.
 In case the proposal is tabled, the deposit will be refunded.
 
-<Figure caption="Public Proposal - 3" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_8.png').default } width="100%" />
+<Figure caption="Public Proposal - 3" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_8.png').default } width="100%" />
 
 ---
 
 After submitting the proposal, some time needs to pass before the transaction is confirmed and finalized.
 
-<Figure caption="Public Proposal - 4" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_3.png').default } width="100%" />
+<Figure caption="Public Proposal - 4" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_3.png').default } width="100%" />
 
 ---
 
 Afterwards, it can be observed under the list of public proposals.
 The status will be marked as `Proposed`, since it hasn't been _tabled_ (or _cancelled_) yet.
 
-<Figure caption="Public Proposal - 5" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_4.png').default } width="100%" />
+<Figure caption="Public Proposal - 5" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_4.png').default } width="100%" />
 
 ---
 
 Clicking on the proposal will display more details, and allow to take further actions.
 
-<Figure caption="Public Proposal - 6" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_5.png').default } width="100%" />
+<Figure caption="Public Proposal - 6" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_5.png').default } width="100%" />
 
 ---
 
 Proposal can be edited by clicking on the `Edit` button. Title and description can be changed, even an graphical image can be uploaded.
 Users can discuss the proposal in the comments section.
 
-<Figure caption="Public Proposal - 7" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_6.png').default } width="100%" />
+<Figure caption="Public Proposal - 7" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_6.png').default } width="100%" />
 
 ---
 
@@ -114,13 +116,13 @@ Clicking on the `Second` button will allow the user to second the proposal, incr
 The user has to _match_ the deposit of the proposal, which is displayed on the page.
 It is possible to second a proposal multiple times.
 
-<Figure caption="Public Proposal - 8" src={require('/docs/learn/governance/img/18_Subsquare_public_proposal/public_proposal_7.png').default } width="100%" />
+<Figure caption="Public Proposal - 8" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_7.png').default } width="100%" />
 
 ### Treasury
 
 Clicking on the `Treasury` tab on the sidebar will display the current state of the treasury & spending requests.
 
-<Figure caption="Treasury - 1" src={require('/docs/learn/governance/img/19_Subsquare_Treasury/treasury_1.png').default } width="100%" />
+<Figure caption="Treasury - 1" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_1.png').default } width="100%" />
 
 ---
 
@@ -130,14 +132,14 @@ The _Proposal bond_ refers to the amount that needs to be deposited in order to 
 In case the proposal is rejected, the bond will be slashed.
 Otherwise, the bond will be refunded.
 
-<Figure caption="Treasury - 2" src={require('/docs/learn/governance/img/19_Subsquare_Treasury/treasury_2.png').default } width="100%" />
+<Figure caption="Treasury - 2" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_2.png').default } width="100%" />
 
 ---
 
 After submitting the proposal, it will be displayed on the treasury page.
 The proposal name & description can be edited.
 
-<Figure caption="Treasury - 3" src={require('/docs/learn/governance/img/19_Subsquare_Treasury/treasury_3.png').default } width="100%" />
+<Figure caption="Treasury - 3" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_3.png').default } width="100%" />
 
 :::note
 The exact same steps can be reused for the community treasury proposals.
@@ -150,7 +152,7 @@ This is an overview of _delegation_ related actions and statistics.
 
 Clicking on the `+ Delegate` button will allow to delegate votes to another account.
 
-<Figure caption="Vote Delegation - 1" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_1.png').default } width="100%" />
+<Figure caption="Vote Delegation - 1" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_1.png').default } width="100%" />
 
 ---
 
@@ -162,28 +164,28 @@ The action of delegating voting power **DOES NOT** transfer the ownership of the
 
 The `Conviction` allows us to amplify the voting power being transferred, at the expense of a longer _unlock_ period.
 
-<Figure caption="Vote Delegation - 2" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_2.png').default } width="100%" />
+<Figure caption="Vote Delegation - 2" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_2.png').default } width="100%" />
 
 ---
 
 Once the delegation has been submitted, it will be displayed on the delegation page.
 Clicking on the `Details` label will display more information about the delegation.
 
-<Figure caption="Vote Delegation - 3" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_3.png').default } width="100%" />
+<Figure caption="Vote Delegation - 3" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_3.png').default } width="100%" />
 
 ---
 
 The amount and conviction are displayed.
 Clicking on the `X` button allows to _undelegate_ the votes, which will begin the unlocking period for the tokens.
 
-<Figure caption="Vote Delegation - 4" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_4.png').default } width="100%" />
+<Figure caption="Vote Delegation - 4" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_4.png').default } width="100%" />
 
 ---
 
 Clicking on the `Account` tab on the sidebar will display the account details.
 The 100 SBY locked in previous steps with conviction set to **3** is displayed - equaling total of 8 days of unlocking period.
 
-<Figure caption="Vote Delegation - 5" src={require('/docs/learn/governance/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
+<Figure caption="Vote Delegation - 5" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
 
 ### Voting
 
@@ -191,7 +193,7 @@ Clicking on the `Referenda` tab on the sidebar, under the `Democracy` tab, will 
 
 For the sake of this example, the referenda named **"Proposal for docs"** will be used.
 
-<Figure caption="Voting - 1" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_1.png').default } width="100%" />
+<Figure caption="Voting - 1" src={require('/docs/use/img/21_Subsquare_voting/voting_1.png').default } width="100%" />
 
 ---
 
@@ -199,7 +201,7 @@ Clicking on it will display more details about the referendum as can be seen bel
 
 The user can decide to vote by clicking on the `Vote` button.
 
-<Figure caption="Voting - 2" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_2.png').default } width="100%" />
+<Figure caption="Voting - 2" src={require('/docs/use/img/21_Subsquare_voting/voting_2.png').default } width="100%" />
 
 ---
 
@@ -209,21 +211,21 @@ The token amount to be used for voting needs to be specified - this is the amoun
 
 Conviction can be set to amplify (or diminish) the voting power, at the expense of a longer (or shorter) unlocking period.
 
-<Figure caption="Voting - 3" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_3.png').default } width="100%" />
+<Figure caption="Voting - 3" src={require('/docs/use/img/21_Subsquare_voting/voting_3.png').default } width="100%" />
 
 ---
 
 After the transaction is confirmed and finalized, the vote will be displayed on the referendum page.
 Since only one user has voted (us), the total sum of the _aye_ votes is equal to the amount we've voted with.
 
-<Figure caption="Voting - 4" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_4.png').default } width="100%" />
+<Figure caption="Voting - 4" src={require('/docs/use/img/21_Subsquare_voting/voting_4.png').default } width="100%" />
 
 ---
 
 In case user changes their mind, the vote can be removed by clicking on the `Remove Vote` button.
 This won't trigger any _unlocking period_ and user is free to cast their vote again.
 
-<Figure caption="Voting - 5" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_5.png').default } width="100%" />
+<Figure caption="Voting - 5" src={require('/docs/use/img/21_Subsquare_voting/voting_5.png').default } width="100%" />
 
 ---
 
@@ -238,7 +240,7 @@ Although not visible on this image, the account who delegated the votes did it w
 The account votes with 50 SBY, conviction set to **4**.
 This means that the total amount of votes for this account will be: **50 SBY x 4 + 300 SBY = 500 SBY**.
 
-<Figure caption="Voting - 6" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_6.png').default } width="100%" />
+<Figure caption="Voting - 6" src={require('/docs/use/img/21_Subsquare_voting/voting_6.png').default } width="100%" />
 
 ---
 
@@ -246,7 +248,7 @@ The new total turnout is 200 SBY - 50 SBY from the first `aye` vote, another 50 
 
 The total votes toward `aye` is 600 SBY in total - 100 SBY from the first `aye` vote, and another 500 SBY from the second `aye` vote.
 
-<Figure caption="Voting - 7" src={require('/docs/learn/governance/img/21_Subsquare_voting/voting_7.png').default } width="100%" />
+<Figure caption="Voting - 7" src={require('/docs/use/img/21_Subsquare_voting/voting_7.png').default } width="100%" />
 
 ## Community Council
 
@@ -256,13 +258,13 @@ Clicking on the `Motions` tab under the `Community Council` sidebar tab will ope
 
 Clicking on the `New Proposal` button will prompt the user to create a new motion.
 
-<Figure caption="Community Treasury Voting - 1" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_1.png').default } width="100%" />
+<Figure caption="Community Treasury Voting - 1" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_1.png').default } width="100%" />
 
 ---
 
 The focus of this example is community treasury spending approval.
 
-<Figure caption="Community Treasury Voting - 2" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_2.png').default } width="100%" />
+<Figure caption="Community Treasury Voting - 2" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_2.png').default } width="100%" />
 
 ---
 
@@ -270,25 +272,25 @@ The proposal Id (can be checked under Community Treasury tab) is required to cre
 Selecting an Id will display the proposal name, which also links to the proposal details.
 Community council members should ensure they're proposing and voting on the correct proposal.
 
-<Figure caption="Community Treasury Voting - 3" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_3.png').default } width="100%" />
+<Figure caption="Community Treasury Voting - 3" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_3.png').default } width="100%" />
 
 ---
 
 Once the proposal creation is submitted, it will be displayed on the `Motions` page.
 
-<Figure caption="Community Treasury Voting - 4" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_4.png').default } width="100%" />
+<Figure caption="Community Treasury Voting - 4" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_4.png').default } width="100%" />
 
 ---
 
 Clicking on it will display more details, and allow for a vote to be cast.
 
-<Figure caption="Community Treasury Voting - 5" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_5.png').default } width="100%" />
+<Figure caption="Community Treasury Voting - 5" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_5.png').default } width="100%" />
 
 ---
 
 In this case, one of the council members votes _aye_.
 
-<Figure caption="Community Treasury Voting - 6" src={require('/docs/learn/governance/img/22_Subsquare_comm_treasury/comm_treasury_6.png').default } width="100%" />
+<Figure caption="Community Treasury Voting - 6" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_6.png').default } width="100%" />
 
 ### dApp Staking With Community Treasury
 
@@ -303,11 +305,11 @@ The next is the call builder.
 When utilizing the community treasury, the call needs to start with `collectiveProxy -> executeCall`.
 After that, the dApp staking call needs to be built. It's possible, and encouraged, to use the _batch_ calls to simplify the voting process.
 
-<Figure caption="dApp Staking - 1" src={require('/docs/learn/governance/img/23_Subsquare_dapp_staking/comm_council_ds_1.png').default } width="100%" />
+<Figure caption="dApp Staking - 1" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_1.png').default } width="100%" />
 
 ### Registering a New dApp
 
 Unlike the actual staking with the community treasury, registering a new dApp **does not** require the `collectiveProxy`.
 Instead, the call should directly propose `dappStaking -> register`.
 
-<Figure caption="dApp Staking - 2" src={require('/docs/learn/governance/img/23_Subsquare_dapp_staking/comm_council_ds_2.png').default } width="100%" />
+<Figure caption="dApp Staking - 2" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_2.png').default } width="100%" />
