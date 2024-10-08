@@ -13,7 +13,7 @@ This is _work-in-progress_.
 All information here should be correct, but the guide will be updated prior to the launch on Astar.
 :::
 
-Astar Network is transitioning its governance system from off-chain voting through Townhall to on-chain voting. This change will allow Astar stakeholders to vote on key network proposals and decisions directly on the blockchain. Astar governance allows ASTR token holders to influence and participate in decisions that affect the network, such as protocol improvements, runtime updates, and dApp Staking applications.
+Astar Network is transitioning its governance system from off-chain voting through Townhall to on-chain voting. This change empowers Astar stakeholders to directly vote on key network proposals and decisions on-chain. Astar governance allows ASTR token holders to influence and participate in decisions that affect the network, such as protocol improvements, runtime updates, and dApp Staking applications.
 
 To interact with the on-chain governance, users have two primary interfaces to choose from: [Subsquare](https://www.subsquare.io/) or the traditional [Polkadot.js](https://polkadot.js.org/apps/) interface. Subsquare provides a user-friendly interface for governance participation, while Polkadot.js offers a more technical approach.
 
@@ -59,13 +59,13 @@ In order to create a new preimage, click on the `New Preimage` button.
 ---
 
 Again, click on the `New preimage` button.
-This will allow the creation of an arbitrary new preimage.
+This allows you to create an arbitrary new preimage.
 
 For the sake of this example, we will create a preimage of a `remarkWithEvent` extrinsic call, containing **LGM!** as the _message_.
 
-Note the _hash_ and _length_, as these are important for later use.
+Note the _hash_ and _length_; these are important for later use.
 
-Submit the message and wait for the transaction to be confirmed & finalized.
+Submit the message and wait for the transaction to be confirmed and finalized.
 
 <Figure caption="Preimage - 3" src={require('/docs/use/img/17_Subsquare_preimage/preimage_3.png').default } width="100%" />
 
@@ -84,7 +84,7 @@ Select the `Public Proposal` tab on the sidebar, under the `Democracy` section.
 
 <Figure caption="Public Proposal - 1" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_1.png').default } width="100%" />
 
-Here the existing public proposals are displayed. Some have been tabled (upgraded to a referendum), some are just proposed, some might be canceled.
+Here the existing public proposals are displayed. Some have been tabled (upgraded to a referendum), some have been proposed, and others might be canceled.
 
 ---
 
@@ -125,14 +125,14 @@ Clicking on the proposal will display more details, and allow to take further ac
 
 ---
 
-Proposals can be edited by clicking on the `Edit` button. Title and description can be changed, even  a graphica image can be uploaded.
+Proposals can be edited by clicking on the `Edit` button. Title and description can be changed, even a graphic image can be uploaded.
 Users can discuss the proposal in the comments section.
 
 <Figure caption="Public Proposal - 7" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_6.png').default } width="100%" />
 
 ---
 
-Clicking on the `Second` button will allow the user to second the proposal, increasing the chances of it being tabled and upgraded to a referendum.
+Clicking the `Second` button to support the proposal, increase its chances of being tabled and upgraded to a referendum.
 The user has to _match_ the deposit of the proposal, which is displayed on the page.
 It is possible to second a proposal multiple times.
 
@@ -149,7 +149,7 @@ Clicking on the `Treasury` tab on the sidebar will display the current state of 
 Clicking on the `New Proposal` button will allow the creation of a new spending proposal.
 User needs to pick the payout amount & the beneficiary.
 The _Proposal bond_ refers to the amount that needs to be deposited in order to create the proposal.
-In case the proposal is rejected, the bond will be slashed.
+If the proposal is rejected, the bond will be slashed.
 Otherwise, the bond will be refunded.
 
 <Figure caption="Treasury - 2" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_2.png').default } width="100%" />
@@ -162,7 +162,7 @@ The proposal name & description can be edited.
 <Figure caption="Treasury - 3" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_3.png').default } width="100%" />
 
 :::note
-The exact same steps can be reused for the community treasury proposals.
+You can reuse the exact same steps for community treasury proposals.
 :::
 
 ### Vote Delegation
@@ -170,7 +170,7 @@ The exact same steps can be reused for the community treasury proposals.
 Click on the `Delegation` tab on the sidebar to access the vote delegation page.
 This is an overview of _delegation_ related actions and statistics.
 
-Clicking on the `+ Delegate` button will allow the delegation of votes to another account.
+Clicking on the `+ Delegate` button allows you to delegate votes to another account
 
 <Figure caption="Vote Delegation - 1" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_1.png').default } width="100%" />
 
@@ -182,7 +182,7 @@ The `Balance` is the amount of native currency we're delegating. This is the amo
 The action of delegating voting power **DOES NOT** transfer the ownership of the tokens. They are merely _locked_ for normal use, but remain in the ownership of the delegator.
 :::
 
-The `Conviction` allows us to amplify the voting power being transferred, at the expense of a longer _unlock_ period.
+The `Conviction` setting determines how much your voting power is amplified in exchange for a longer token lock period.
 
 <Figure caption="Vote Delegation - 2" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_2.png').default } width="100%" />
 
@@ -211,7 +211,7 @@ The 100 SBY locked in previous steps with conviction set to **3** is displayed -
 
 Clicking on the `Referenda` tab on the sidebar, under the `Democracy` tab, will display all of the referenda, including the ongoing ones, failed ones & executed ones.
 
-For the sake of this example, the referenda named **"Proposal for docs"** will be used.
+For the sake of this example, the referendum named **"Proposal for docs"** will be used.
 
 <Figure caption="Voting - 1" src={require('/docs/use/img/21_Subsquare_voting/voting_1.png').default } width="100%" />
 

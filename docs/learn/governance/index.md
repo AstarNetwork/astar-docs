@@ -12,13 +12,13 @@ title: Overview
 
 `Astar` reuses Polkadot’s so-called **v1** governance model due to its practicality. The core idea is to further decentralize the network, but not completely re-invent the wheel.
 
-User is advised to refer to [the official docs](https://wiki.polkadot.network/docs/learn/learn-governance) to learn more about how _Gov v1_ works.
+Users are advised to refer to [the official docs](https://wiki.polkadot.network/docs/learn/learn-governance) to learn more about how _Gov v1_ works.
 
 The **Main Council** and the **Technical Committee** will be used the same as in the linked documentation.
 
 A novelty will be the **Community Council** which will manage certain actions related to the _community treasury_. This council will be able to approve or reject community treasury spending requests, and will also be able to select which dApps to stake on using the community treasury funds. Additionally, they will have the privilege to fast track dApp registration into the dApp staking system.
 
-Community treasury is an independent treasury account (no ties to main on-chain treasury) which gets primarily funded through the dApp staking rewards. The community council must ensure to manage the treasury wisely to ensure it remains profitable, while simultaneously giving support to projects & ambassadors.
+Community treasury is an independent treasury account (no ties to main on-chain treasury) which gets primarily funded through the dApp staking rewards. The community council must manage the treasury wisely to maintain profitability while also supporting projects and ambassadors.
 
 Conviction voting is also utilized, essentially being the same as covered in the official Polkadot network Gov v1 docs, with the only difference being in parameters.
 
@@ -33,7 +33,7 @@ Users can steer the direction of the network while earning rewards.
 
 To avoid duplicating the [official Polkadot Gov v1 documentation](https://wiki.polkadot.network/docs/learn/learn-governance), here is a quick overview of the governance system in `Astar`.
 
-* Before a proposal can be made, a _preimage_ of the call must be submitted on-chain. For the sake of simplicity we can think of this as the proposal logic the submitter wants to execute (e.g. upgrade the runtime, transfer funds, etc.).
+* Before a proposal can be made, a _preimage_ of the call must be submitted on-chain. This is essentially the proposal logic the submitter wishes to execute (e.g., upgrade the runtime, transfer funds).
 
 * Public proposals can be made by any native token holder, and can be endorsed by other token holders. More than one proposal can exist at the same time.
 * External proposals can be made by the `Main Council`. Only one external proposal can exist at a time.
@@ -49,11 +49,11 @@ To avoid duplicating the [official Polkadot Gov v1 documentation](https://wiki.p
 * Once the _lock_ period expires, user can execute an _unlock_ action to remove the lock and make the tokens _liquid_ again.
 
 * Token holder can delegate their voting power to another account. Tokens are never transferred, only the voting power is delegated.
-* It is not possible to have both q voting delegation & actively vote at the same time. These actions are mutually exclusive.
+* It is not possible to have both voting delegation & actively vote at the same time. These actions are mutually exclusive.
 
 * There are 3 types of quorums (reader is **strongly** encouraged to refer to the official docs for more details):
   * _Simple Majority_ requires more than 50% of the total votes to be _aye_. This is the quorum required for external proposal made by the _majority agreement_ of the `Main Council`
-  * _Super Majority Approve_ adapts to the voter turnout (how many voters participated in the referendum compared to the total token supply). For low turnout, the percentage of _aye_ votes is higher, but as turnout increased, the percentage of required _aye_ votes decreases. This is the quorum required for regular public proposals.
+  * _Super Majority Approve_ adapts to the voter turnout (how many voters participated in the referendum compared to the total token supply). For low turnout, the percentage of _aye_ votes is higher, but as turnout increases, the percentage of required _aye_ votes decreases. This is the quorum required for regular public proposals.
   * _Super Majority Against_ also adapts to the voter turnout. For low turnout, the percentage of _aye_ votes is lower, but as turnout increases, the percentage of required _aye_ votes increases. This is the quorum required for an external proposal made by the _unanimous agreement_ of the `Main Council`.
 
 * The `Main Council` can **cancel** an ongoing referendum if it considers it harmful. This is an _emergency_ action only.
@@ -74,7 +74,7 @@ There is a special kind of _origin_ called `root`, which has the highest privile
 
 ### Main Council
 
-`Main Council` will initially consist of Astar Foundation leaders, individuals who have deep investment & understanding of the network & the ecosystem.
+The `Main Council` will initially consist of Astar Foundation leaders, individuals who have deep investment & understanding of the network & the ecosystem.
 
 The `Main Council` can:
 
@@ -82,31 +82,31 @@ The `Main Council` can:
 * approve or reject `Main Treasury` spending proposals
 * propose a _super majority approve_ & _simple majority_ external proposal via 2/3 majority agreement
 * propose a _super majority against_ external proposal via unanimous agreement
-* canceling a passed referendum via 2/3 majority agreement (this is an _emergency_ action)
+* cancelling a passed referendum via 2/3 majority agreement (this is an _emergency_ action)
 
 ### Technical Committee
 
-`Technical Committee` will initially consist of `Astar` runtime developers since this role requires deep technical understanding of the chain.
+The `Technical Committee` will initially consist of `Astar` runtime developers since this role requires deep technical understanding of the chain.
 
 The `Technical Committee` can:
 
 * fast-track an **external** proposal
   * standard fast tracking requires 2/3 majority agreement, and allows modification of the voting & enactment period durations
   * instant fast tracking requires unanimous agreement, and allows setting of the voting & enactment period to arbitrarily short periods (for emergency situations)
-* cancel a public proposal (not referendum!) in case the committee considers it harmful, requires 2/3 majority agreement
+* cancel a public proposal (not a referendum!) in case the committee considers it harmful, requires 2/3 majority agreement
 * enable or disable _maintenance_ mode on the **dApp staking** pallet, requires 2/3 majority agreement
 
 Any `Technical Committee` **member** can **veto** an external proposal made by the `Main Council`.
 
 ### Community Council
 
-`Community Council` will initially consist of a mix of Astar Foundation members with highly involved community members (ambassadors).
+The `Community Council` will initially consist of a mix of Astar Foundation members with highly involved community members (ambassadors).
 
 The `Community Council` can:
 
 * register a dApp into dApp staking protocol, requires 2/3 majority agreement
-* can utilize dApp staking on behalf of the community treasury, requires 2/3 majority agreement
-* can approve or reject `Community Treasury` spending requests, requires 2/3 majority agreement
+*utilize dApp staking on behalf of the community treasury, requires 2/3 majority agreement
+*approve or reject `Community Treasury` spending requests, requires 2/3 majority agreement
 
 ### Token Holders
 
