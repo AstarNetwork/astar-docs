@@ -13,7 +13,27 @@ This is _work-in-progress_.
 All information here should be correct, but the guide will be updated prior to the launch on Astar.
 :::
 
-The purpose of this guide is to demonstrate how to utilize **Subsquare** platform for governance actions on Astar & Shibuya.
+Astar Network is transitioning its governance system from off-chain voting through Townhall to on-chain voting. This change will allow Astar stakeholders to vote on key network proposals and decisions directly on the blockchain. Astar governance allows ASTR token holders to influence and participate in decisions that affect the network, such as protocol improvements, runtime updates, and dApp Staking applications.
+
+To interact with the on-chain governance, users have two primary interfaces to choose from: [Subsquare](https://www.subsquare.io/) or the traditional [Polkadot.js](https://polkadot.js.org/apps/) interface. Subsquare provides a user-friendly interface for governance participation, while Polkadot.js offers a more technical approach.
+
+This guide will walk you through the process of participating in Astar on-chain governance using the Subsquare platform. For those who prefer to use Polkadot.js, you can refer to the [Astar Governance Technical Guide](/docs/learn/governance/technical_guide.md).
+
+## What is Astar Governance?
+
+Astar governance is a decentralized mechanism where ASTR token holders can propose, discuss, and vote on important changes and initiatives within the Astar ecosystem. Proposals may cover a wide range of topics, such as protocol upgrades, treasury funding requests, and the management of dApp Staking. This governance system ensures that decisions are made collectively and transparently by the community, reflecting the interests of the network’s stakeholders.
+
+For a deeper understanding of Astar governance, including its structure and processes, we encourage you to read the [Astar Governance Overview](/docs/learn/governance/index.md) in our documentation.
+
+## Using Subsquare for On-Chain Governance
+[Subsquare](https://www.subsquare.io/) is designed to make on-chain governance participation easy for all users. Through Subsquare, you can:
+
+- View active proposals.
+- Participate in discussions.
+- Cast your votes on governance decisions.
+- Track the progress of proposals from submission to execution.
+
+The purpose of this guide is to demonstrate how to utilize the **Subsquare** platform for governance actions on Astar & Shibuya.
 Working assumption is that the reader has familiarized themselves with the governance model, and will refer back to the docs if needed.
 
 * [Shibuya Subsquare](https://shibuya.subsquare.io/)
@@ -36,10 +56,10 @@ In order to create a new preimage, click on the `New Preimage` button.
 
 <Figure caption="Preimage - 2" src={require('/docs/use/img/17_Subsquare_preimage/preimage_2.png').default } width="100%" />
 
---
+---
 
 Again, click on the `New preimage` button.
-This will allow to create an arbitrary new preimage.
+This will allow the creation of an arbitrary new preimage.
 
 For the sake of this example, we will create a preimage of a `remarkWithEvent` extrinsic call, containing **LGM!** as the _message_.
 
@@ -64,7 +84,7 @@ Select the `Public Proposal` tab on the sidebar, under the `Democracy` section.
 
 <Figure caption="Public Proposal - 1" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_1.png').default } width="100%" />
 
-Here the existing public proposals are displayed. Some have been tabled (upgraded to a referendum), some are just proposed, some might be cancelled.
+Here the existing public proposals are displayed. Some have been tabled (upgraded to a referendum), some are just proposed, some might be canceled.
 
 ---
 
@@ -78,9 +98,9 @@ Since a preimage was created in the previous step, it can be used to create a ne
 The hash of the preimage is required to create a new proposal.
 In this case, hash of the preimage created earlier is simply copied and pasted into the `Preimage` field.
 
-The `Locked Balance` refers to the amount being _deposited_ (not locked) for the proposal.
-In case the proposal is cancelled, the deposit will be slashed.
-In case the proposal is tabled, the deposit will be refunded.
+The `Locked Balance` refers to the amount being _deposited_ (not locked) for the proposal.  
+In case the proposal is canceled, the deposit will be slashed.  
+In case the proposal is tabled, the deposit will be refunded.  
 
 <Figure caption="Public Proposal - 3" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_8.png').default } width="100%" />
 
@@ -93,7 +113,7 @@ After submitting the proposal, some time needs to pass before the transaction is
 ---
 
 Afterwards, it can be observed under the list of public proposals.
-The status will be marked as `Proposed`, since it hasn't been _tabled_ (or _cancelled_) yet.
+The status will be marked as `Proposed`, since it hasn't been _tabled_ (or _canceled_) yet.
 
 <Figure caption="Public Proposal - 5" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_4.png').default } width="100%" />
 
@@ -105,7 +125,7 @@ Clicking on the proposal will display more details, and allow to take further ac
 
 ---
 
-Proposal can be edited by clicking on the `Edit` button. Title and description can be changed, even an graphical image can be uploaded.
+Proposals can be edited by clicking on the `Edit` button. Title and description can be changed, even  a graphica image can be uploaded.
 Users can discuss the proposal in the comments section.
 
 <Figure caption="Public Proposal - 7" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_6.png').default } width="100%" />
@@ -126,7 +146,7 @@ Clicking on the `Treasury` tab on the sidebar will display the current state of 
 
 ---
 
-Clicking on the `New Proposal` button will allow to create a new spending proposal.
+Clicking on the `New Proposal` button will allow the creation of a new spending proposal.
 User needs to pick the payout amount & the beneficiary.
 The _Proposal bond_ refers to the amount that needs to be deposited in order to create the proposal.
 In case the proposal is rejected, the bond will be slashed.
@@ -150,7 +170,7 @@ The exact same steps can be reused for the community treasury proposals.
 Click on the `Delegation` tab on the sidebar to access the vote delegation page.
 This is an overview of _delegation_ related actions and statistics.
 
-Clicking on the `+ Delegate` button will allow to delegate votes to another account.
+Clicking on the `+ Delegate` button will allow the delegation of votes to another account.
 
 <Figure caption="Vote Delegation - 1" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_1.png').default } width="100%" />
 
@@ -183,7 +203,7 @@ Clicking on the `X` button allows to _undelegate_ the votes, which will begin th
 ---
 
 Clicking on the `Account` tab on the sidebar will display the account details.
-The 100 SBY locked in previous steps with conviction set to **3** is displayed - equaling total of 8 days of unlocking period.
+The 100 SBY locked in previous steps with conviction set to **3** is displayed - equaling a total of 8 days of unlocking period.
 
 <Figure caption="Vote Delegation - 5" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
 
@@ -222,8 +242,8 @@ Since only one user has voted (us), the total sum of the _aye_ votes is equal to
 
 ---
 
-In case user changes their mind, the vote can be removed by clicking on the `Remove Vote` button.
-This won't trigger any _unlocking period_ and user is free to cast their vote again.
+In case a user changes their mind, the vote can be removed by clicking on the `Remove Vote` button.
+This won't trigger any _unlocking period_ and the user is free to cast their vote again.
 
 <Figure caption="Voting - 5" src={require('/docs/use/img/21_Subsquare_voting/voting_5.png').default } width="100%" />
 
@@ -268,7 +288,7 @@ The focus of this example is community treasury spending approval.
 
 ---
 
-The proposal Id (can be checked under Community Treasury tab) is required to create a new motion.
+The proposal Id (can be checked under the Community Treasury tab) is required to create a new motion.
 Selecting an Id will display the proposal name, which also links to the proposal details.
 Community council members should ensure they're proposing and voting on the correct proposal.
 
@@ -294,7 +314,7 @@ In this case, one of the council members votes _aye_.
 
 ### dApp Staking With Community Treasury
 
-This is more complex since it requires user to understand basics of dApp staking backend.
+This is more complex since it requires the user to understand the basics of dApp staking backend.
 The proposal call needs to be manually crafted and submitted to the blockchain.
 
 The first thing to select is the threshold.

@@ -10,11 +10,11 @@ title: Overview
 
 ## Approach
 
-`Astar` reuses Polkadot’s so-called **v1** governance model due to it's practicality. The core idea is to further decentralize the network, but not completely re-invent the wheel.
+`Astar` reuses Polkadot’s so-called **v1** governance model due to its practicality. The core idea is to further decentralize the network, but not completely re-invent the wheel.
 
 User is advised to refer to [the official docs](https://wiki.polkadot.network/docs/learn/learn-governance) to learn more about how _Gov v1_ works.
 
-The **Main Council** and the **Technical Committee** will be used same as in the linked documentation.
+The **Main Council** and the **Technical Committee** will be used the same as in the linked documentation.
 
 A novelty will be the **Community Council** which will manage certain actions related to the _community treasury_. This council will be able to approve or reject community treasury spending requests, and will also be able to select which dApps to stake on using the community treasury funds. Additionally, they will have the privilege to fast track dApp registration into the dApp staking system.
 
@@ -31,12 +31,12 @@ Users can steer the direction of the network while earning rewards.
 
 ## Quick Overview
 
-To avoid duplicating the official [official Polkadot Gov v1 documentation](https://wiki.polkadot.network/docs/learn/learn-governance), here is a quick overview of the governance system in `Astar`.
+To avoid duplicating the [official Polkadot Gov v1 documentation](https://wiki.polkadot.network/docs/learn/learn-governance), here is a quick overview of the governance system in `Astar`.
 
 * Before a proposal can be made, a _preimage_ of the call must be submitted on-chain. For the sake of simplicity we can think of this as the proposal logic the submitter wants to execute (e.g. upgrade the runtime, transfer funds, etc.).
 
-* Public proposal can be made by any native token holder, and can be endorsed by other token holders. More than one proposal can exist at the same time.
-* External proposal can be made by the `Main Council`. Only one external proposal can exist at a time.
+* Public proposals can be made by any native token holder, and can be endorsed by other token holders. More than one proposal can exist at the same time.
+* External proposals can be made by the `Main Council`. Only one external proposal can exist at a time.
 * At the end of each `Launch Period`, either the most endorsed public proposal or the external proposal will be upgraded into a referendum (2 _tracks_).
   * Every `Launch Period` will have an alternating _round_ (1st round is for public proposals, 2nd round is for external proposals).
   * In case no eligible proposal exists for the given round's track preference, the other track will be used instead if a proposal exists.
@@ -49,12 +49,12 @@ To avoid duplicating the official [official Polkadot Gov v1 documentation](https
 * Once the _lock_ period expires, user can execute an _unlock_ action to remove the lock and make the tokens _liquid_ again.
 
 * Token holder can delegate their voting power to another account. Tokens are never transferred, only the voting power is delegated.
-* It is not possible to have both voting delegation & actively vote at the same time. These actions are mutually exclusive.
+* It is not possible to have both q voting delegation & actively vote at the same time. These actions are mutually exclusive.
 
 * There are 3 types of quorums (reader is **strongly** encouraged to refer to the official docs for more details):
   * _Simple Majority_ requires more than 50% of the total votes to be _aye_. This is the quorum required for external proposal made by the _majority agreement_ of the `Main Council`
-  * _Super Majority Approve_ adapts to the voter turnout (how many voters participated in the referendum compared to the total token supply). For low turnout, the percentage of _aye_ votes is higher, but as turnout increased, the percentage of required _aye_ votes required decreases. This is the quorum required for regular public proposals.
-  * _Super Majority Against_ also adapts to the voter turnout. For low turnout, the percentage of _aye_ votes is lower, but as turnout increases, the percentage of required _aye_ votes increases. This is the quorum required for external proposal made by the _unanimous agreement_ of the `Main Council`.
+  * _Super Majority Approve_ adapts to the voter turnout (how many voters participated in the referendum compared to the total token supply). For low turnout, the percentage of _aye_ votes is higher, but as turnout increased, the percentage of required _aye_ votes decreases. This is the quorum required for regular public proposals.
+  * _Super Majority Against_ also adapts to the voter turnout. For low turnout, the percentage of _aye_ votes is lower, but as turnout increases, the percentage of required _aye_ votes increases. This is the quorum required for an external proposal made by the _unanimous agreement_ of the `Main Council`.
 
 * The `Main Council` can **cancel** an ongoing referendum if it considers it harmful. This is an _emergency_ action only.
 * The `Technical Committee` can **fast-track** an external proposal in case of an emergency situation. This allows instant upgrade of the proposal into a referendum, and setting of the voting & enactment period to arbitrarily short durations.
@@ -64,9 +64,9 @@ To avoid duplicating the official [official Polkadot Gov v1 documentation](https
 ## Actors
 
 Different actors have different roles in the governance system.
-When executing any of the governance actions, the _origin_ of the call will determined the privileges it has.
+When executing any of the governance actions, the _origin_ of the call will determine the privileges it has.
 
-E.g. in case a regular user submits a democracy proposal, the _origin_ will be user's account, controlled by the user's private key.
+E.g. in case a regular user submits a democracy proposal, the _origin_ will be the user's account, controlled by the user's private key.
 However, in case of a `Main Council` call, the _origin_ will be the `Main Council` collective with some level of agreement, e.g. 2/3 majority.
 Such a call will have more privileges than a regular user's call, but it requires some consensus among the council members.
 
@@ -82,7 +82,7 @@ The `Main Council` can:
 * approve or reject `Main Treasury` spending proposals
 * propose a _super majority approve_ & _simple majority_ external proposal via 2/3 majority agreement
 * propose a _super majority against_ external proposal via unanimous agreement
-* cancelling a passed referendum via 2/3 majority agreement (this is an _emergency_ action)
+* canceling a passed referendum via 2/3 majority agreement (this is an _emergency_ action)
 
 ### Technical Committee
 
@@ -124,7 +124,7 @@ Anyone holding **ASTR** token is a token holder. They can:
 
 These parameters are related to `pallet-democracy` functionality, which is the _heart_ of the governance logic.
 
-The `Launch Period` is the time window during which public proposals are endorsed by the token holders or external proposal is made by the `Main Council`.
+The `Launch Period` is the time window during which public proposals are endorsed by the token holders or external proposals are made by the `Main Council`.
 Depending on the _round_, either the most endorsed public proposal or the external proposal will be upgraded into a referendum.
 The `Voting Period` is the time window during which the token holders can vote on the referendum.
 In case the referendum passes (quorum achieved during the `Voting Period`), the `Enactment Period` is the _delay_ before the proposal is actually executed on-chain.
@@ -133,7 +133,7 @@ The `Technical Committee` can decide to fast-track external proposals (e.g. in c
 
 When submitting a new proposal, token holders need to _deposit_ some amount of native tokens as an _insurance_ that the proposal is not _spam_. This amount can be arbitrary, but has a minimum amount. Users should be careful when setting large amounts here since the endorsement requirement is that the deposit is _matched_.
 
-In case the token holder votes corresponds to the _winning_ side, their tokens will be _locked_ for a certain period of time. This parameter is scaled by the _conviction_.
+In case the token holder votes correspond to the _winning_ side, their tokens will be _locked_ for a certain period of time. This parameter is scaled by the _conviction_.
 
 | Parameter Name                           | Shibuya                   | Astar                   |
 | ---------------------------------------- | ------------------------- | ----------------------- |
@@ -164,7 +164,7 @@ In case the token holder votes corresponds to the _winning_ side, their tokens w
 
 ### Treasuries
 
-Anyone with native token can request treasury payout, but they must _deposit_ some tokens when making a proposal.
+Anyone with native token can request a treasury payout, but they must _deposit_ some tokens when making a proposal.
 The deposit amount is taken as a percentage of the requested amount, and is used to prevent spamming the network with proposals.
 There are two parameters governing the minimum and maximum deposit amounts, which prevent the deposit from being either too high or too low.
 
