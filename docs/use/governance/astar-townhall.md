@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-sidebar_label: Astar Governance
+sidebar_position: 3
+sidebar_label: Off-chain Governance
 title: Astar Townhall - Off-chain Governance
 ---
 import Figure from '/src/components/figure'
