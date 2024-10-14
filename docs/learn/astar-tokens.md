@@ -4,7 +4,7 @@ sidebar_position: 3
 # Astar Token
 
 ## Overview
-The native token of Astar Network is Astar Token, with the ticker ASTR. The total initial supply of ASTR was 7,000,000,000 units.  The current tokenomics model of the network is inflationary and the inflation is estimated to be ~665,000,000 yearly. 
+The native token of Astar Network is Astar Token, with the ticker ASTR. The initial supply of ASTR was 7,000,000,000 units.  The current tokenomics model of the network is inflationary and the inflation is estimated to be ~665,000,000 yearly. 
 ASTR token has 18 decimals. 
 At the genesis, ASTR were allocated as follows: 
 
@@ -44,7 +44,7 @@ At Astar Network, we believe in the power of decentralized decision-making. That
 
 ## Shiden and Shibuya
 
-Both Shiden and Shibuya ahs their own tokens. 
+Both Shiden and Shibuya have their own tokens. 
 Shiden's token is SDN. 
 You can see the SDN initial allocation below:
 

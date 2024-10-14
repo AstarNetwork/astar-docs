@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-Running a tracing node on an Astar chain allows you to debug EVM transactions and have enhanced access to transaction pool using EVM debug RPC (INSERT_LINK also see link below).
+Running a tracing node on an Astar chain allows you to debug EVM transactions and have enhanced access to transaction pool using [EVM debug RPC](/docs/build/EVM/evm-debug-api).
 
 ## Requirements
 
@@ -18,17 +18,15 @@ Requirements for running a tracing node are similar to what we recommend for an 
 
 ## Node launch 
 
-Tracing node setup in general is similar to the [Archive Node setup](/docs/build/nodes/archive-node/), except for the location of the binary and some additional launch flags.
+Tracing node setup in general is similar to the [Archive Node setup](/docs/build/nodes/archive-node/), except for some additional launch flags.
 
-:::info 
-
-An EVM tracing node binary is different because it includes additional tracing features. You can easily build it from source using `cargo build --release --features evm-tracing` command or download the `evm-tracing-artifacts` from [latest release](https://github.com/AstarNetwork/Astar/releases/latest), an executable EVM tracing binary is included in the compressed file `evm-tracing-artifacts.tar.gz`.
-
+:::note
+There's no need for special client to run EVM tracing since the release of [v5.44.0](https://github.com/AstarNetwork/Astar/releases/tag/v5.44.0)
 :::
 
 :::important
 
-EVM RPC calls are disabled by default, and require the `--enable-evm-rpc` flag to be enabled. Please refer to this page (INSERT_LINK) for more info.
+EVM RPC calls are disabled by default, and require the `--enable-evm-rpc` flag to be enabled. Please refer to this [page](/docs/build/EVM/evm-debug-api) for more info.
 
 :::
 
@@ -56,7 +54,7 @@ To use tracing on an ancient blocks, you need to add the runtime that was in pla
 
 :::
 
-All Astar previous runtime overrides (prior to release on Github) can be downloaded [here](https://shared-assets.astar.network/files/runtime/astar-tracing-runtimes-3-69.tar.gz). They are necessary if you want to trace transactions on ancient blocks
+All Astar previous runtime overrides (prior to release on Github) can be downloaded [here](https://shared-assets.astar.network/files/runtime/astar-tracing-runtimes-3-73.tar.gz). They are necessary if you want to trace transactions on ancient blocks
 
 ## Service parameters
 
@@ -84,15 +82,15 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name {NODE_NAME} \
   --base-path /var/lib/astar \
-  --state-pruning archive \
-  --blocks-pruning archive \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
   --rpc-max-response-size 50 \
   --enable-evm-rpc \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10
@@ -119,15 +117,15 @@ ExecStart=/usr/local/bin/astar-collator \
   --rpc-cors all \
   --name {NODE_NAME} \
   --base-path /var/lib/astar \
-  --state-pruning archive \
-  --blocks-pruning archive \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
   --rpc-max-response-size 10 \
   --enable-evm-rpc  \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10
@@ -148,20 +146,21 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
-  --pruning archive \
+  --state-pruning archive \
+  --blocks-pruning archive \
   --rpc-cors all \
   --name {NODE_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
-  --state-pruning archive \
-  --blocks-pruning archive \
   --rpc-methods Safe \
   --rpc-max-request-size 10 \
   --rpc-max-response-size 10 \
   --enable-evm-rpc  \
   --ethapi=txpool,debug,trace \
   --wasm-runtime-overrides /var/lib/astar/wasm \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=10

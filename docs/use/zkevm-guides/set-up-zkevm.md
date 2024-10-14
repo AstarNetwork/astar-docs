@@ -27,7 +27,6 @@ To add **Astar zkEVM** network to MetaMask or any other EVM wallet, enter the fo
 | Name | RPC URL | ChainID | Block Explorer URL | Currency |
 | ---- | ------------------------------- | ---------------- | ---------------- | ----- |
 | **Astar zkEVM Network** | `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
-| **Astar zkEVM Network** | `https://rpc.astar-zkevm.gelato.digital` | `3776` | | **ETH** |
 | **Astar zkEVM Network** | `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
 </TabItem>
 

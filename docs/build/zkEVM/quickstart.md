@@ -6,11 +6,6 @@ sidebar_label: Quickstart
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import metamask from '/docs/build/zkEVM/img/metamask-network.png'
-import zkHeader from '/docs/build/img/zkHeader.png'
-
-<div style={{textAlign: 'center'}}>
-    <img src={zkHeader} style={{width: 1200}} />
-</div>
 
 Astar zkEVM is a zero-knowledge scaling solution for Ethereum that offers an **EVM-equivalent environment** on which existing EVM smart contracts, developer tools, and wallets can work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs to reduce transaction costs and increase throughput, while inheriting the security of Ethereum.
 
@@ -37,7 +32,6 @@ To add **Astar zkEVM** or any testnet networks to your wallet manually, enter th
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
-| `https://rpc.astar-zkevm.gelato.digital` | `3776` | | **ETH** |
 | `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
 </TabItem>
 
@@ -45,7 +39,7 @@ To add **Astar zkEVM** or any testnet networks to your wallet manually, enter th
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/zkyoto` | `6038361` | [https://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
-| `https://rpc.zkyoto.gelato.digital` | `6038361` | | **ETH** |
+| `https://astar-zkyoto-rpc.dwellir.com` | `6038361` | | **ETH** |
 </TabItem>
 
 </Tabs>

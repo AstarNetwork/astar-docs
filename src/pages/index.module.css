@@ -1,0 +1,13 @@
+
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: var(--lp-background-color);
+  background-image: var(--lp-background-image);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

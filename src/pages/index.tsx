@@ -1,38 +1,24 @@
-import React from 'react';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import './index.scss';
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className="hero hero--primary hero--banner">
-      <div className="container">
-        <h1 className="hero__title text--hero">{siteConfig.title}</h1>
-        <p className="hero__subtitle text--hero">{siteConfig.tagline}</p>
-        <div className="buttons">
-          <Link className="button--start" to="/docs/getting-started">
-            <span>Get Started</span>
-            <i />
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { Hero } from "@site/src/components/HomePage/Hero";
+import { Search } from "@site/src/components/HomePage/Search";
+import { Socials } from "@site/src/components/HomePage/Socials";
+import { Tabs } from "@site/src/components/HomePage/Tabs";
+import Layout from "@theme/Layout";
+import styles from "./index.module.css";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Astar Network Official Documentation Portal - User Guides, Tutorials, and Tools for Developers.">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      description="Astar Network Official Documentation Portal - User Guides, Tutorials, and Tools for Developers."
+    >
+      <div className={styles.contentWrapper}>
+        <Hero />
+        <Search searchTags={siteConfig.customFields.searchTags as string[]} />
+        <Tabs />
+        <Socials />
+      </div>
     </Layout>
   );
 }

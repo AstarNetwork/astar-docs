@@ -21,7 +21,8 @@ Users of Startale Web3 Service have the ability to utilize the API for free with
 
 Startale provides a Public Endpoint for Astar zkEVM. Users can utilize the API for free within certain limitations.
 
-`https://rpc.startale.com/zkatana`
+zKyoto: `https://rpc.startale.com/zkyoto`
+Mainnet: `https://rpc.startale.com/astar-zkevm`
 
 ## Getting started
 

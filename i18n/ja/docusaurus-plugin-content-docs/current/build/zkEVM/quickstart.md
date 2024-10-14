@@ -38,9 +38,8 @@ Astar zkEVM 上での開発および運用に特別なツールやウォレッ�
 <TabItem value="testnet" label="zKatana Testnet">
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
-| `https://rpc.startale.com/zkatana` | `1261120` | [https://zkatana.explorer.startale.com/](https://zkatana.explorer.startale.com/) | **ETH** |
-| `https://rpc.zkatana.gelato.digital` | `1261120` | [https://zkatana.blockscout.com/](https://zkatana.blockscout.com/) | **ETH** |
-| `https://astar-zkatana-rpc.dwellir.com` | `1261120` | | **ETH** |
+| `https://rpc.startale.com/zkyoto` | `6038361` | [https://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
+| `https://astar-zkyoto-rpc.dwellir.com` | `6038361` | | **ETH** |
 </TabItem>
 
 </Tabs>

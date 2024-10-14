@@ -21,7 +21,7 @@ The support for congestion mechanism based EIP-1559 [here](https://eips.ethereum
 The gas price can be fetched from the Astar zkEVM Sequencer using the following RPC call:
 
 ```bash
-curl https://rpc.zkatana.gelato.digital/ \
+curl https://rpc.startale.com/zkyoto \
   -X POST \
   -H "Content-Type: application/json" \
   --data '{"method":"eth_gasPrice","params":[],"id":1,"jsonrpc":"2.0"}'

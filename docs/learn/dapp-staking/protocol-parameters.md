@@ -65,28 +65,39 @@ E.g. `[5%, 15%, 20%, 60%]` means that `5%` of the total slots are assigned for *
 
 ### Tier Thresholds
 
-The threshold that dApp has to satisfy, essentially the total staked amount, in order to be eligible to enter a tier.
-There are two types of thresholds:
+The threshold a dApp must meet, based on a percentage of the total issuance staked, to enter a tier.
+There are two types of threshold percentages:
 
-* `Fixed` - threshold has a fixed value and doesn't change
-* `Dynamic` - threshold has an initial value, which changes dynamically as the number of slots change, but also has a minimum allowed value.
+* `Fixed` - A percentage of the total issuance as staked funds.
+* `Dynamic` - A percentage of the total issuance as staked funds. This variant includes an additional adjustment in later calculations with a delta based on changes in the number of slots for each era. The threshold amount derived cannot drop below a defined minimum percentage, *minimum_required_percentage*.
+
+### Price Aggregation Duration
+
+Time period, expressed in blocks, during which native currency price is aggregated. When expired, average value is calculated and stored into the _moving-average_ circular buffer.
+
+## Circular Buffer Length
+
+Length of the circular buffer used to implement the _moving-average_ solution.
 
 ## Network Values
 
-| Parameter name                 | Astar                 | Shiden                | Shibuya              |
-| ------------------------------ | --------------------- | --------------------- | -------------------- |
-| Era Reward Span Length         | 16                    | 16                    | 16                   |
-| Reward Retention In Periods    | 4                     | 3                     | 2                    |
-| Max Number Of Contracts        | 500                   | 500                   | 500                  |
-| Max Unlocking Chunks           | 8                     | 8                     | 8                    |
-| Minimum Locked Amount          | 500 ASTR              | 50 SDN                | 5 SBY                |
-| Unlocking Period               | 9                     | 4                     | 4                    |
-| Max Number Of Staked Contracts | 16                    | 16                    | 8                    |
-| Minimum Stake Amount           | 500 ASTR              | 50 SDN                | 5 SBY                |
-| Number Of Tiers                | 4                     | 4                     | 4                    |
-| Reward Distribution            | [25%, 47%, 25%, 3%]   | [25%, 47%, 25%, 3%]   | [40%, 30%, 20%, 10%] |
-| Slot Portions                  | [5%, 20%, 30%, 45%]   | [5%, 20%, 30%, 45%]   | [10%, 20%, 30%, 40%] |
-| Tier 1 Threshold               | Dynamic(300M/200M ASTR) | Dynamic(3M/2M SDN) | Dynamic(3000/2500 SBY) |
-| Tier 2 Threshold               | Dynamic(75M/50M ASTR) | Dynamic(750k/500k SDN) | Dynamic(2000/1500 SBY) |
-| Tier 3 Threshold               | Dynamic(20M/15M ASTR) | Dynamic(200k/150k SDN) | Dynamic(800/500 SBY) |
-| Tier 4 Threshold               | Fixed(1.5M ASTR)      | Fixed(50k SDN)        | Fixed(200 SBY)       |
+| Parameter name                      | Astar                  | Shiden                 | Shibuya                    |
+| ----------------------------------- | ---------------------- | ---------------------- | -------------------------- |
+| Era Reward Span Length              | 16                     | 16                     | 16                         |
+| Reward Retention In Periods         | 4                      | 3                      | 2                          |
+| Max Number Of Contracts             | 500                    | 500                    | 500                        |
+| Max Unlocking Chunks                | 8                      | 8                      | 8                          |
+| Minimum Locked Amount               | 500 ASTR               | 50 SDN                 | 5 SBY                      |
+| Unlocking Period                    | 9                      | 4                      | 4                          |
+| Max Number Of Staked Contracts      | 16                     | 16                     | 8                          |
+| Minimum Stake Amount                | 500 ASTR               | 50 SDN                 | 5 SBY                      |
+| Baseline Native Currency Price      | 0.05 USD               | 0.05 USD               | 0.05 USD (mock)            |
+| Number Of Tiers                     | 4                      | 4                      | 4                          |
+| Reward Distribution                 | [25%, 47%, 25%, 3%]    | [25%, 47%, 25%, 3%]    | [40%, 30%, 20%, 10%]       |
+| Slot Portions                       | [5%, 20%, 30%, 45%]    | [5%, 20%, 30%, 45%]    | [10%, 20%, 30%, 40%]       |
+| Tier 1 Threshold (total issuance %) | Dynamic(3.57%/2.38%)   | Dynamic(3.57%/2.38%)   | Dynamic(0.0020%/0.0017%)   |
+| Tier 2 Threshold (total issuance %) | Dynamic(0.89%/0.6%)    | Dynamic(0.89%/0.6%)    | Dynamic(0.0013%/0.0010%)   |
+| Tier 3 Threshold (total issuance %) | Dynamic(0.238%/0.179%) | Dynamic(0.238%/0.179%) | Dynamic(0.00054%/0.00034%) |
+| Tier 4 Threshold (total issuance %) | Fixed(0.02%)           | Fixed(0.06%)           | Fixed(0.00014%)            |
+| Price Aggregation Duration          | 7200 blocks            | 7200 blocks            | 7200 blocks                |
+| Circular Buffer Length              | 7                      | 7                      | 7                          |

@@ -15,7 +15,7 @@ Once your tokens have been staked on a dApp, you always have the option of recon
 
 3) Select the dApp(s) to which you want to `Move` your tokens and enter the desired amount;
 
-<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Staking_Page_3.png').default } width="85%" /> 
+<Figure src={require('/docs/use/dapp-staking/for-stakers/img/Move_Stake_Page.png').default } width="85%" /> 
 
 4) Confirm your decisions by clicking on the **Confirm Button** and sign the transaction on the network;
 

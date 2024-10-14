@@ -3,7 +3,6 @@ sidebar_position: 2
 ---
 
 # Hack Wasm Smart Contracts
-![banner](/docs/build/img/gradient4.jpg)
 
 Read the linked chapters or use tutorials to be able to answer following questions:
 
@@ -19,7 +18,7 @@ Read the linked chapters or use tutorials to be able to answer following questio
 * Can you unit test ink! smart contract without running test node like Swanky-node?
 
 ## Run [Swanky](https://github.com/AstarNetwork/swanky-node) Node
-* Start your Swanky node and connect [polkadot-JS UI](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer) to it. Please note that for Swanky node there will be no node production if there is no interaction with it. 
+* Start your Swanky node and connect [polkadot-JS UI](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer) to it. Please note that for Swanky node there will be no node production if there is no interaction with it.
 
 :::note
 
@@ -37,4 +36,4 @@ Depending on your confidence, use any of these tutorial. If you are just startin
   * Use Polkadot-JS UI to reload same contract you just deployed using Contracts-UI.
 
 
-What is [next](/docs/build/builder-guides/hacking/next)? 
+What is [next](/docs/build/builder-guides/hacking/next)?

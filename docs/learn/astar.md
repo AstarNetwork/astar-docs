@@ -22,6 +22,6 @@ Astar Network is changing that, and ushering in the next generation of multichai
 
 ## Interoperability
 
-This interoperability framework, empowered by the shared security of Polkadot coupled with Astar XVM, allows developers to use and build smart contracts in ways they never have before. By fostering cooperation and integrations across multiple blockchains and applications, complex synergies can be developed, leading to the realization of truly innovative solutions that can't be replicated in any other environment.
+This interoperability framework, empowered by the shared security of Polkadot, allows developers to use and build smart contracts in ways they never have before. By fostering cooperation and integrations across multiple blockchains and applications, complex synergies can be developed, leading to the realization of truly innovative solutions that can't be replicated in any other environment.
 
 Many different blockchains exist, but few have interoperability as their defining feature. Welcome to Astar Network.

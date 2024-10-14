@@ -22,7 +22,7 @@ Ensure you create a backup of the keystore folder on your local machine using th
 
 `rsync --rsync-path="sudo rsync" -r {MAIN_SERVER_IP}:/var/lib/astar/chains/{NETWORK}/keystore .`
 
-:::caution
+:::
 
 ### In case of an incident on the main collator
 
@@ -56,7 +56,7 @@ journalctl -fu astar-collator -n100
 
 ## Upgrade node
 
-When a node upgrade is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk), Astar Discord (INSERT_LINK), and [The Astar Node Upgrade Element channel](https://matrix.to/#/#shiden-runtime-ann:matrix.org). Join and follow any of these channels to receive news about node updates and node upgrades.
+When a node upgrade is necessary, node operators are notified with instructions in the [Astar Dev Announcement Telegram](https://t.me/+cL4tGZiFAsJhMGJk) and [Astar Discord](https://discord.gg/astarnetwork). Join and follow these channels to receive news about node updates and node upgrades.
 
 Download the [latest release](https://github.com/AstarNetwork/Astar/releases/latest) from Github:
 
@@ -91,4 +91,3 @@ sudo systemctl start {NETWORK}.service
 ## Snapshot
 
 Please refer to **snapshot page**(/docs/build/nodes/snapshots).
-:::

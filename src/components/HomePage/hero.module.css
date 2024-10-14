@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+
+.title {
+font-size: 36px;
+font-weight: 700;
+}
+
+.subtitle {
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
+text-align: center;
+}
+
+@media (min-width: 996px) {
+  .container {
+    padding-top: 6rem;
+  }
+
+  .title {
+    font-size: 72px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

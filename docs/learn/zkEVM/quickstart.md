@@ -6,11 +6,6 @@ sidebar_label: Quickstart
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import metamask from '/docs/build/zkEVM/img/metamask-network.png'
-import zkHeader from '/docs/build/img/zkHeader.png'
-
-<div style={{textAlign: 'center'}}>
-    <img src={zkHeader} style={{width: 1200}} />
-</div>
 
 # Overview of Astar zkEVM
 
@@ -25,7 +20,6 @@ To add **Astar zkEVM** or any testnet networks to your wallet manually, enter th
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
-| `https://rpc.astar-zkevm.gelato.digital` | `3776` | | **ETH** |
 | `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
 </TabItem>
 
@@ -33,7 +27,7 @@ To add **Astar zkEVM** or any testnet networks to your wallet manually, enter th
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/zkyoto` | `6038361` | [hhttps://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
-| `https://rpc.zkyoto.gelato.digital` | `6038361` | | **ETH** |
+| `https://astar-zkyoto-rpc.dwellir.com` | `6038361` | | **ETH** |
 </TabItem>
 
 </Tabs>
@@ -45,7 +39,7 @@ To add the network to MetaMask you can either use the data above, or find a link
 The next step is to bridge funds to the Astar zkEVM. You can use the Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) if you already have funds on Astar Network.
 
 :::important
-Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) does not inherit any counterparty risk compared to 3rd party bridge services, so is therefore trustless. 
+Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) does not inherit any counterparty risk compared to 3rd party bridge services, so is therefore trustless.
 :::
 
 ## Astar zkEVM Support

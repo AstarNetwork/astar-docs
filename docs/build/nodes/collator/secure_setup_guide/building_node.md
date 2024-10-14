@@ -126,7 +126,7 @@ Now, let's go to our binary directory and start the collator manually:
 ```
 cd /usr/local/bin
 
-sudo -u astar ./astar-collator --collator --chain astar --pruning archive --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+sudo -u astar ./astar-collator --collator --chain astar --state-pruning 1000 --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' -- --sync warp
 ```
 
 </TabItem>
@@ -135,7 +135,7 @@ sudo -u astar ./astar-collator --collator --chain astar --pruning archive --name
 ```
 cd /usr/local/bin
 
-sudo -u astar ./astar-collator --collator --chain shiden --pruning archive --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+sudo -u astar ./astar-collator --collator --chain shiden --state-pruning 1000 --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' -- --sync warp
 ```
 
 </TabItem>
@@ -144,7 +144,7 @@ sudo -u astar ./astar-collator --collator --chain shiden --pruning archive --nam
 ```
 cd /usr/local/bin
 
-sudo -u astar ./astar-collator --collator --chain shibuya --pruning archive --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+sudo -u astar ./astar-collator --collator --chain shibuya --state-pruning 1000 --name {COLLATOR_NAME} --base-path /var/lib/astar --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' -- --sync warp
 ```
 
 </TabItem>
@@ -191,13 +191,14 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
+  --state-pruning archive \
   --collator \
   --name {COLLATOR_NAME} \
   --chain astar \
   --base-path /var/lib/astar \
-  --pruning archive \
-  --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=120
@@ -218,13 +219,14 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shiden \
   --base-path /var/lib/astar \
-  --pruning archive \
-  --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=120
@@ -245,13 +247,14 @@ User=astar
 Group=astar
   
 ExecStart=/usr/local/bin/astar-collator \
+  --pruning archive \
   --collator \
   --name {COLLATOR_NAME} \
   --chain shibuya \
   --base-path /var/lib/astar \
-  --pruning archive \
-  --trie-cache-size 0 \
-  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' \
+  -- \
+  --sync warp
 
 Restart=always
 RestartSec=120

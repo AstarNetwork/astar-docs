@@ -13,7 +13,7 @@ Polkadot es un entorno multicadena que permite a blockchains especializadas (lla
 Astar es una blockchain conectada a la Polkadot Relay Chain, especializada para:
 
 - Ejecución de todo tipo de contratos inteligentes.
-- Proporcionar un entorno híbrido EVM + Wasm que soporte llamadas a contratos inteligentes Cross-VM (XVM).
+- Proporcionar un entorno híbrido que soporte contratos inteligentes EVM + Wasm con interoperabilidad.
 - Incentivar la innovación del ecosistema y proporcionar ingresos básicos a los desarrolladores de dApps.
 - Agregación sin fisuras de características o activos de parachains en el ecosistema.
 
@@ -71,7 +71,7 @@ El Polkadot Relay Chain no soporta contratos inteligentes. Los contratos intelig
 
 ### Máquina virtual de Ethereum (EVM)
 
-La máquina virtual Ethereum (EVM) es un ordenador virtual con componentes que permiten a los participantes en la red Ethereum almacenar datos y acordar el estado de los mismos. En una cadena de bloques basada en Substrate, las principales responsabilidades del EVM se implementan en la paleta EVM, que se encarga de ejecutar el código de bytes del contrato de Ethereum escrito en un lenguaje de alto nivel como Solidity. Astar EVM proporciona una plataforma totalmente compatible con la Máquina Virtual Ethereum, de la que puedes aprender más en el [capítulo EVM](/docs/build/evm).
+La máquina virtual Ethereum (EVM) es un ordenador virtual con componentes que permiten a los participantes en la red Ethereum almacenar datos y acordar el estado de los mismos. En una cadena de bloques basada en Substrate, las principales responsabilidades del EVM se implementan en la paleta EVM, que se encarga de ejecutar el código de bytes del contrato de Ethereum escrito en un lenguaje de alto nivel como Solidity. Astar EVM proporciona una plataforma totalmente compatible con la Máquina Virtual Ethereum, de la que puedes aprender más en el [capítulo EVM](/docs/build/EVM).
 
 ### Máquina virtual de Substrate para contratos Wasm
 

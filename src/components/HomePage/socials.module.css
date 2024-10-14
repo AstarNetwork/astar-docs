@@ -1,0 +1,61 @@
+:root {
+  --socials-github: url("/img/socials/github.svg");
+  --socials-twitter: url("/img/socials/x.svg");
+  --socials-telegram: url("/img/socials/telegram.svg");
+  --socials-discord: url("/img/socials/discord.svg");
+  --socials-youtube: url("/img/socials/youtube.svg");
+}
+
+html[data-theme='dark'] {
+  --socials-github: url("/img/socials/github-white.svg");
+  --socials-twitter: url("/img/socials/x-white.svg");
+  --socials-telegram: url("/img/socials/telegram-white.svg");
+  --socials-discord: url("/img/socials/discord-white.svg");
+  --socials-youtube: url("/img/socials/youtube-white.svg");
+}
+
+.socialsWrapper {
+  margin-top: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  border-top: solid 1px var(--hr-color);
+}
+
+.socialsLinks {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px 0;
+  gap: 28px;
+}
+
+.socialsLink {
+  padding: 7px;
+}
+
+.socialsIcon {
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 996px) {
+  .socialsWrapper {
+    margin-top: 80px;
+  }
+
+  .socialsLinks {
+    padding: 80px 0;
+    gap: 32px;
+  }
+
+  .socialsLink {
+    padding: 10px;
+  }
+
+  .socialsIcon {
+    width: 32px;
+    height: 32px;
+  }
+}

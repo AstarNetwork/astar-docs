@@ -10,7 +10,7 @@ This cookbook will learn you on how to started using AstarBase. AstarBase is an 
 
 ## What is AstarBase
 
-AstarBase is an on-chain EVM database. AstarBase contains the mapping of users's EVM and native address. An EVM address is usually referred as a Metamask address or H160, native address can be referred as a SS58 address. These two are now interchangeable through the mapping that AstarBase offers. 
+AstarBase is an on-chain EVM database. AstarBase contains the mapping of users's EVM and native address. An EVM address is usually referred as a Metamask address or H160, native address can be referred as a SS58 address. These two are now interchangeable through the mapping that AstarBase offers.
 
 The main goal of AstarBase is creating more end-user cases for users to participate in the Astar ecosystem by offering some mechanisms such as rewarding users easily.
 
@@ -19,8 +19,8 @@ The main goal of AstarBase is creating more end-user cases for users to particip
 We have three major functions in AstarBase.
 
 ```jsx
-function isRegistered(address evmAddress) 
-    external view 
+function isRegistered(address evmAddress)
+    external view
     returns (bool);
 ```
 This code snippet checks if the given address was registered in AstarBase.
@@ -41,7 +41,7 @@ This code snippet checks if the pair of addresses (SS58 & EVM) is an active stak
 
 ## Create a simple dApp using AstarBase
 
-We will work on a simple “Hello World” dApp which has a simple frontend to show a practical use case of AstarBase. 
+We will work on a simple “Hello World” dApp which has a simple frontend to show a practical use case of AstarBase.
 
 Our showcase checks if certain user is a registered user in AstarBase. One application of this would be to pick a loyal user.
 
@@ -384,7 +384,7 @@ const address = "0xF183f51D3E8dfb2513c15B046F848D4a68bd3F5D";
 ```
 
 ### Step 6:
-We will combine all what we wrote in the previous steps. For #EVM_ADDRESS, you can replace it with your specified address in EVM format. 
+We will combine all what we wrote in the previous steps. For #EVM_ADDRESS, you can replace it with your specified address in EVM format.
 
 ```jsx
 const smartContract = new web3.eth.Contract(abi, address);
@@ -397,7 +397,7 @@ That’s a wrap! Happy hacking!
 
 ## Reference
 
-- Official Document for AstarBase: 
-   - [/docs/build/evm/astarbase/](/docs/build/evm/astarbase/)
+- Official Document for AstarBase:
+   - [/docs/build/EVM/astarbase/](/docs/build/EVM/astarbase/)
 - Official Document for creating a React app:
    - [https://reactjs.org/docs/create-a-new-react-app.html](https://reactjs.org/docs/create-a-new-react-app.html)

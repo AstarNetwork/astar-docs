@@ -1,0 +1,299 @@
+:root {
+  --astar-icon: url('/img/astar-logo.svg');
+  --builders-icon: url('/img/builders.svg');
+  --staking-icon: url('/img/stake.svg');
+  --guide-icon: url('/img/guide.svg');
+  --astar-icon-dark: url('/img/astar-logo-white.svg');
+  --builders-icon-dark: url('/img/builders-white.svg');
+  --staking-icon-dark: url('/img/stake-white.svg');
+  --guide-icon-dark: url('/img/guide-white.svg');
+}
+
+html[data-theme='dark'] {
+  --astar-icon: var(--astar-icon-dark);
+  --builders-icon: var(--builders-icon-dark);
+  --staking-icon: var(--staking-icon-dark);
+  --guide-icon: var(--guide-icon-dark);
+}
+
+.menuWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.categoryButton {
+  border: none;
+  height: 60px;
+  width: 250px;
+  background-color: white;
+  color: var(--text-color-title);
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: opacity 0.3s ease;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.buttonIcon {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrow {
+  font-size: 20px;
+  margin-top: -12px;
+  margin-left: 8px;
+}
+
+html[data-theme='dark'] .categoryButton {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+}
+
+.categoryButton.fadeOut {
+  opacity: 0;
+}
+
+.menuModal {
+  position: absolute;
+  top: 30px; /* Adjust this to start from the button */
+  width: 90vw;
+  max-width: 500px;
+  border: 1px solid var(--text-input-background);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  animation: slide-down 0.3s ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--lp-background-color);
+  padding: 16px;
+  margin: 0 12px;
+}
+
+.menuItem {
+  border: none;
+  border-radius: 8px;
+  width: 320px;
+  padding: 4px;
+  background-color: var(--lp-background-color);
+  color: var(--text-color-title);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+  background: none;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  color: var(--text-color-description);
+  padding: 4px;
+}
+
+.menuItem:hover, .closeButton:hover {
+  background-color: var(--highlight-background);
+}
+
+.contentWrapper {
+  padding: 16px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90vw;
+  min-width: 350px;
+  max-width: 500px;
+  position: relative;
+  gap: 20px;
+  background-color: var(--frosted-background);
+  backdrop-filter: blur(10px);
+  margin: 0 12px;
+}
+
+.contentWrapper h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contentWrapper p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color-description);
+}
+
+@media (min-width: 996px) {
+  .contentWrapper {
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto; /* Three equal columns and one auto column */
+    gap: 36px;
+    padding-top: 80px;
+  }
+
+  .contentWrapper > *:nth-last-child(1) {
+    grid-column: 4; /* Make the last item span the last column */
+    grid-row: 1 / span 3; /* Make it span all rows */
+    align-self: start;
+  }
+}
+
+.astarButtonText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.highlightWrapper {
+  align-self: center;
+  width: 300px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--highlight-background);
+  gap:10px;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  text-decoration: none;
+  p {
+    color: var(--text-color-description);
+  }
+}
+
+.highlightWrapper:hover {
+  text-decoration: none;
+  box-shadow: 0px 4px 8px var(--box-shadow-color);
+}
+
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.multiCta {
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    color: var(--text-color-description)
+  }
+  h3 {
+    display: flex;
+    align-items: center;
+    span {
+      color: var(--text-color-title);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 26px;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+    }
+  }
+}
+.arrowWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.highlightArrow {
+  height: 16px;
+  width: 16px;
+  color: #0075FF;
+  stroke-width: 2;
+}
+
+.tabMenuWrapper {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: absolute;
+  align-items: center;
+  width: 810px;
+  height: 68px;
+  margin-bottom: -34px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  background-color: var(--frosted-background);
+  backdrop-filter: blur(10px);
+  display: flex;
+  z-index: 20;
+  padding: 4px;
+}
+
+.tabButton {
+  border: none;
+  height: 60px;
+  width: 200px;
+  color: var(--text-color-title);
+  background: none;
+  cursor: pointer;
+  border-radius: 32px;
+  position: relative;
+  transition: opacity 0.3s ease;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.tabButton.active {
+  color: white;
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
