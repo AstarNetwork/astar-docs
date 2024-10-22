@@ -185,6 +185,8 @@ These parameters are related to the _main treasury_ logic.
 | Maximum Proposal Bond     | 10000 SBY          | TBD                |
 | Spend Period              | 3 Days             | TBD                |
 
+The address representing the main treasury is: `YQnbw3oWxBnCUarnbePrjFcrSgVPP2jqTZYzWcccmN8fXhd`
+
 #### Community Treasury
 
 These parameters are related to the _community treasury_ logic.
@@ -196,6 +198,8 @@ These parameters are related to the _community treasury_ logic.
 | Minimum Proposal Bond     | 100 SBY                | TBD                    |
 | Maximum Proposal Bond     | 10000 SBY              | TBD                    |
 | Spend Period              | 3 Days                 | TBD                    |
+
+The address representing the community treasury is: `YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix`
 
 ### Collectives
 
