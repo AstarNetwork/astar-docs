@@ -333,3 +333,28 @@ Unlike the actual staking with the community treasury, registering a new dApp **
 Instead, the call should directly propose `dappStaking -> register`.
 
 <Figure caption="dApp Staking - 2" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_2.png').default } width="100%" />
+
+## Main Council
+
+The `Main Council` UI support is rudimentary at the moment.
+They can approve & reject _main treasury_ spending proposals, same as the `Community Council`.
+However, other actions require building the call manually.
+
+Please refer to [the technical guide](/docs/learn/governance/technical_guide) for more information on how to construct this calls using the Polkadot-js App interface.
+
+Calls can also be constructed using the `Subsquare` interface, but user should refer to the linked technical guide for more information.
+
+<Figure caption="Main Council - 1" src={require('/docs/use/img/24_Subsquare_main_council/main_council_1.png').default } width="100%" />
+
+Clicking on the `New Common` will allow the council member to create a new motion.
+It's important to keep mind of the threshold number, since requirement might differ between different calls.
+
+For external proposals, it is recommended to use the Polkadot-js App interface.
+
+## Technical Committee
+
+The `Technical Committee` UI support is rudimentary and requires manual call construction.
+
+Please refer to [the technical guide](/docs/learn/governance/technical_guide) for more information on how to construct this calls using the Polkadot-js App interface.
+
+The assumption is that technical committee members are technically proficient and will refer to the linked technical guide for more information.
