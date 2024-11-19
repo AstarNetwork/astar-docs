@@ -228,3 +228,13 @@ To check the current number of members, it's best to refer to the on-chain data,
 | Main Council Member Limit               | 16                       | 16                       |
 | Technical Committee Member Limit        | 8                        | 8                        |
 | Community Council Member Limit          | 16                       | 32                       |
+
+### dApp Staking
+
+These parameters are related to the _dApp staking_ logic.
+
+| Parameter Name                          | Shibuya                  | Astar                    |
+| --------------------------------------- | ------------------------ | ------------------------ |
+| dApp Register Origin                    | 1/2 Community Council    | 2/3 Community Council    |
+| dApp Unregister Origin                  | 4/5 Community Council    | 4/5 Community Council    |
+| Community Council Staking Operations    | 1/2 Community Council    | 2/3 Community Council    |
