@@ -105,10 +105,10 @@ The `Community Council` will initially consist of a mix of Astar Foundation memb
 
 The `Community Council` can:
 
-* register a dApp into dApp staking protocol, requires 2/3 majority agreement
-* unregister a dApp from dApp staking protocol, requires 4/5 majority agreement
-* utilize dApp staking on behalf of the community treasury, requires 2/3 majority agreement
-* approve or reject `Community Treasury` spending requests, requires 2/3 majority agreement
+* register a dApp in the dApp staking protocol, which requires a 2/3 majority agreement
+* unregister a dApp from the dApp staking protocol, which requires a 4/5 majority agreement
+* utilize the dApp staking on behalf of the community treasury, which requires a 2/3 majority agreement
+* approve or reject spending requests from the `Community Treasury`, which requires a 2/3 majority agreement
 
 ### Token Holders
 
@@ -188,7 +188,7 @@ These parameters are related to the _main treasury_ logic.
 | Maximum Proposal Bond     | 10000 SBY          | 1000 ASTR          |
 | Spend Period              | 3 Days             | 7 Days             |
 
-The address representing the main treasury is: `YQnbw3oWxBnCUarnbePrjFcrSgVPP2jqTZYzWcccmN8fXhd`
+The address of the main treasury is: `YQnbw3oWxBnCUarnbePrjFcrSgVPP2jqTZYzWcccmN8fXhd`
 
 #### Community Treasury
 
@@ -201,9 +201,9 @@ These parameters are related to the _community treasury_ logic.
 | Bond Percentage           | 5%                     | 5%                     |
 | Minimum Proposal Bond     | 100 SBY                | 100 ASTR               |
 | Maximum Proposal Bond     | 10000 SBY              | 1000 ASTR              |
-| Spend Period              | 3 Days                 | 7 days                 |
+| Spend Period              | 3 Days                 | 7 Days                 |
 
-The address representing the community treasury is: `YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix`
+The address of the community treasury is: `YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix`
 
 ### Collectives
 
@@ -215,7 +215,7 @@ Motions have a duration (sort of a voting period), and if they do not get the re
 In case the quorum is reached, the motion is considered _passed_.
 
 A collective can have 0 or more members, up to a predefined limit.
-To check the current number of members, it's best to refer to the on-chain data, e.g. the `polkadot-js app` or the dedicated governance UI.
+To check the current number of members, it is best to refer to the on-chain data, e.g. the `polkadot-js app` or the dedicated governance UI.
 
 | Parameter Name                          | Shibuya                  | Astar                    |
 | --------------------------------------- | ------------------------ | ------------------------ |
