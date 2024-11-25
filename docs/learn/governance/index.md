@@ -5,8 +5,9 @@ title: Overview
 
 ## Status
 
-* **LIVE** on `Shibuya` testnet
-* **To-Be-Deployed** on `Astar` _soon_ (docs will be updated accordingly prior to the deployment)
+The solution is live on both **Shibuya** and **Astar** networks.
+
+There is no plan to deploy the solution on **Shiden** network.
 
 ## Approach
 
@@ -104,9 +105,10 @@ The `Community Council` will initially consist of a mix of Astar Foundation memb
 
 The `Community Council` can:
 
-* register a dApp into dApp staking protocol, requires 2/3 majority agreement
-*utilize dApp staking on behalf of the community treasury, requires 2/3 majority agreement
-*approve or reject `Community Treasury` spending requests, requires 2/3 majority agreement
+* register a dApp in the dApp staking protocol, which requires a 2/3 majority agreement
+* unregister a dApp from the dApp staking protocol, which requires a 4/5 majority agreement
+* utilize the dApp staking on behalf of the community treasury, which requires a 2/3 majority agreement
+* approve or reject spending requests from the `Community Treasury`, which requires a 2/3 majority agreement
 
 ### Token Holders
 
@@ -137,12 +139,12 @@ In case the token holder votes correspond to the _winning_ side, their tokens wi
 
 | Parameter Name                           | Shibuya                   | Astar                   |
 | ---------------------------------------- | ------------------------- | ----------------------- |
-| Launch Period                            | 4 Days                    | TBD                     |
-| Voting Period                            | 4 Days                    | TBD                     |
-| Enactment Period                         | 2 Days                    | TBD                     |
-| Minimum Fast Track Voting Period         | 1 Hour                    | TBD                     |
-| Vetoed External Proposal Cooloff Period  | 1 Day                     | TBD                     |
-| Minimum Public Referendum Deposit        | 10 SBY                    | TBD                     |
+| Launch Period                            | 4 Days                    | 7 Days                  |
+| Voting Period                            | 4 Days                    | 7 Days                  |
+| Enactment Period                         | 2 Days                    | 2 Days                  |
+| Minimum Fast Track Voting Period         | 1 Hour                    | 2 Hours                 |
+| Vetoed External Proposal Cooloff Period  | 1 Day                     | 7 Days                  |
+| Minimum Public Referendum Deposit        | 10 SBY                    | 1000 ASTR               |
 | Simple Majority Proposal Origin          | 1/2 Main Council          | 2/3 Main Council        |
 | Super Majority Against Proposal Origin   | Unanimous Main Council    | Unanimous Main Council  |
 | Fast Track Origin                        | 1/2 Technical Committee   | 2/3 Technical Committee |
@@ -155,12 +157,12 @@ In case the token holder votes correspond to the _winning_ side, their tokens wi
 | Conviction | Base Lock Period Multiplier | Length In Days (Shibuya) | Length In Days (Astar) |
 | ---------- | ---------------------------- | ------------------------ | ---------------------- |
 | 0.1        | 0x _(No Lock)_               | 0 Days                   | 0 Days                 |
-| 1          | 1x                           | 1 Day                    | TBD                    |
-| 2          | 2x                           | 2 Days                   | TBD                    |
-| 3          | 4x                           | 4 Days                   | TBD                    |
-| 4          | 8x                           | 8 Days                   | TBD                    |
-| 5          | 16x                          | 16 Days                  | TBD                    |
-| 6          | 32x                          | 32 Days                  | TBD                    |
+| 1          | 1x                           | 1 Day                    | 9 Days                 |
+| 2          | 2x                           | 2 Days                   | 18 Days                |
+| 3          | 4x                           | 4 Days                   | 36 Days                |
+| 4          | 8x                           | 8 Days                   | 56 Days                |
+| 5          | 16x                          | 16 Days                  | 144 Days               |
+| 6          | 32x                          | 32 Days                  | 288 Days               |
 
 ### Treasuries
 
@@ -181,11 +183,12 @@ These parameters are related to the _main treasury_ logic.
 | ------------------------- | ------------------ | ------------------ |
 | Approve Origin            | 1/2 Main Council   | 2/3 Main Council   |
 | Reject Origin             | 1/2 Main Council   | 2/3 Main Council   |
-| Minimum Proposal Bond     | 100 SBY            | TBD                |
-| Maximum Proposal Bond     | 10000 SBY          | TBD                |
-| Spend Period              | 3 Days             | TBD                |
+| Bond Percentage           | 5%                 | 5%                 |
+| Minimum Proposal Bond     | 100 SBY            | 100 ASTR           |
+| Maximum Proposal Bond     | 10000 SBY          | 1000 ASTR          |
+| Spend Period              | 3 Days             | 7 Days             |
 
-The address representing the main treasury is: `YQnbw3oWxBnCUarnbePrjFcrSgVPP2jqTZYzWcccmN8fXhd`
+The address of the main treasury is: `YQnbw3oWxBnCUarnbePrjFcrSgVPP2jqTZYzWcccmN8fXhd`
 
 #### Community Treasury
 
@@ -195,11 +198,12 @@ These parameters are related to the _community treasury_ logic.
 | ------------------------- | ---------------------- | ---------------------- |
 | Approve Origin            | 1/2 Community Council  | 2/3 Community Council  |
 | Reject Origin             | 1/2 Community Council  | 2/3 Community Council  |
-| Minimum Proposal Bond     | 100 SBY                | TBD                    |
-| Maximum Proposal Bond     | 10000 SBY              | TBD                    |
-| Spend Period              | 3 Days                 | TBD                    |
+| Bond Percentage           | 5%                     | 5%                     |
+| Minimum Proposal Bond     | 100 SBY                | 100 ASTR               |
+| Maximum Proposal Bond     | 10000 SBY              | 1000 ASTR              |
+| Spend Period              | 3 Days                 | 7 Days                 |
 
-The address representing the community treasury is: `YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix`
+The address of the community treasury is: `YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix`
 
 ### Collectives
 
@@ -211,16 +215,26 @@ Motions have a duration (sort of a voting period), and if they do not get the re
 In case the quorum is reached, the motion is considered _passed_.
 
 A collective can have 0 or more members, up to a predefined limit.
-To check the current number of members, it's best to refer to the on-chain data, e.g. the `polkadot-js app` or the dedicated governance UI.
+To check the current number of members, it is best to refer to the on-chain data, e.g. the `polkadot-js app` or the dedicated governance UI.
 
 | Parameter Name                          | Shibuya                  | Astar                    |
 | --------------------------------------- | ------------------------ | ------------------------ |
-| Main Council Motion Duration            | 5 Days                   | TBD                      |
-| Technical Committee Motion Duration     | 5 Days                   | TBD                      |
-| Community Council Motion Duration       | 5 Days                   | TBD                      |
+| Main Council Motion Duration            | 5 Days                   | 5 Days                   |
+| Technical Committee Motion Duration     | 5 Days                   | 5 Days                   |
+| Community Council Motion Duration       | 5 Days                   | 5 Days                   |
 | Main Council Member Change Origin       | 1/2 Main Council         | 2/3 Main Council         |
-| Technical Committee Member Change Origin| 1/2 Technical Committee  | 2/3 Technical Committee  |
-| Community Council Member Change Origin  | 1/2 Community Council    | 2/3 Community Council    |
-| Main Council Member Limit               | 16                       | TBD                      |
-| Technical Committee Member Limit        | 8                        | TBD                      |
-| Community Council Member Limit          | 16                       | TBD                      |
+| Technical Committee Member Change Origin| 1/2 Main Council         | 2/3 Main Council         |
+| Community Council Member Change Origin  | 1/2 Main Council         | 2/3 Main Council         |
+| Main Council Member Limit               | 16                       | 16                       |
+| Technical Committee Member Limit        | 8                        | 8                        |
+| Community Council Member Limit          | 16                       | 32                       |
+
+### dApp Staking
+
+These parameters are related to the _dApp staking_ logic.
+
+| Parameter Name                          | Shibuya                  | Astar                    |
+| --------------------------------------- | ------------------------ | ------------------------ |
+| dApp Register Origin                    | 1/2 Community Council    | 2/3 Community Council    |
+| dApp Unregister Origin                  | 4/5 Community Council    | 4/5 Community Council    |
+| Community Council Staking Operations    | 1/2 Community Council    | 2/3 Community Council    |
