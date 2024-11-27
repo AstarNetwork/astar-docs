@@ -8,11 +8,6 @@ import Figure from "/src/components/figure"
 
 ## Intro
 
-:::note
-This is _work-in-progress_.
-All information here should be correct, but the guide will be updated prior to the launch on Astar.
-:::
-
 Astar Network is transitioning its governance system from off-chain voting through Townhall to on-chain voting. This change empowers Astar stakeholders to directly vote on key network proposals and decisions on-chain. Astar governance allows ASTR token holders to influence and participate in decisions that affect the network, such as protocol improvements, runtime updates, and dApp Staking applications.
 
 To interact with the on-chain governance, users have two primary interfaces to choose from: [Subsquare](https://www.subsquare.io/) or the traditional [Polkadot.js](https://polkadot.js.org/apps/) interface. Subsquare provides a user-friendly interface for governance participation, while Polkadot.js offers a more technical approach.
@@ -26,7 +21,8 @@ Astar governance is a decentralized mechanism where ASTR token holders can propo
 For a deeper understanding of Astar governance, including its structure and processes, we encourage you to read the [Astar Governance Overview](/docs/learn/governance/index.md) in our documentation.
 
 ## Using Subsquare for On-Chain Governance
-[Subsquare](https://www.subsquare.io/) is designed to make on-chain governance participation easy for all users. Through Subsquare, you can:
+
+[Subsquare](https://astar.subsquare.io/) is designed to make on-chain governance participation easy for all users. Through Subsquare, you can:
 
 - View active proposals.
 - Participate in discussions.
@@ -38,6 +34,20 @@ Working assumption is that the reader has familiarized themselves with the gover
 
 - [Shibuya Subsquare](https://shibuya.subsquare.io/)
 - [Astar Subsquare](https://astar.subsquare.io/)
+
+## Account Selection
+
+Both Substrate & EVM style accounts can participate in governance actions.
+
+When connecting account to the Subsquare platform, the user can choose between different wallets & account types.
+
+<Figure caption="Substrate Account Selection" src={require('/docs/use/img/25_Subsquare_wallet_account_selection/wallet_account_1.png').default } width="100%" />
+
+Different _Substrate_ account compatible wallets are available. In case user wants to use their EVM account, they should select `EVM` under the option.
+
+<Figure caption="EVM Account Selection" src={require('/docs/use/img/25_Subsquare_wallet_account_selection/wallet_account_2.png').default } width="100%" />
+
+Here user can select the desired EVM wallet.
 
 ## Token Holder
 

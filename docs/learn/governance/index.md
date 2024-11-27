@@ -9,6 +9,8 @@ The solution is live on both **Shibuya** and **Astar** networks.
 
 There is no plan to deploy the solution on **Shiden** network.
 
+Regular _Substrate-style_ SS58 accounts can be used to participate in governance, as well as _Ethereum-style_ H160 accounts (via the `dispatch` precompile).
+
 ## Approach
 
 `Astar` reuses Polkadot’s so-called **v1** governance model due to its practicality. The core idea is to further decentralize the network, but not completely re-invent the wheel.
