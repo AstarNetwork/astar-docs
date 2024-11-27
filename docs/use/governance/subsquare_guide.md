@@ -36,8 +36,8 @@ For a deeper understanding of Astar governance, including its structure and proc
 The purpose of this guide is to demonstrate how to utilize the **Subsquare** platform for governance actions on Astar & Shibuya.
 Working assumption is that the reader has familiarized themselves with the governance model, and will refer back to the docs if needed.
 
-* [Shibuya Subsquare](https://shibuya.subsquare.io/)
-* Astar Subsquare (_coming soon_)
+- [Shibuya Subsquare](https://shibuya.subsquare.io/)
+- [Astar Subsquare](https://astar.subsquare.io/)
 
 ## Token Holder
 
