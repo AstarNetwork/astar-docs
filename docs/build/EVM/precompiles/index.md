@@ -9,26 +9,35 @@ The Frontier EVM used on Astar network provides several useful precompiled contr
 
 ## Ethereum Native Precompiles
 
-| Precompile | Address |
-| -------- | -------- |
-| ECRecover     | 0x0000000000000000000000000000000000000001     |
-| Sha256     | 0x0000000000000000000000000000000000000002     |
-| Ripemd160     | 0x0000000000000000000000000000000000000003     |
-| Identity     | 0x0000000000000000000000000000000000000004     |
-| Modexp     | 0x0000000000000000000000000000000000000005     |
-| Bn128Add     | 0x0000000000000000000000000000000000000006     |
-| Bn128Mul     | 0x0000000000000000000000000000000000000007     |
-| Bn128Pairing     | 0x0000000000000000000000000000000000000008     |
+| Precompile    | Address                                      |
+| ------------- | -------------------------------------------- |
+| ECRecover     | 0x0000000000000000000000000000000000000001   |
+| Sha256        | 0x0000000000000000000000000000000000000002   |
+| Ripemd160     | 0x0000000000000000000000000000000000000003   |
+| Identity      | 0x0000000000000000000000000000000000000004   |
+| Modexp        | 0x0000000000000000000000000000000000000005   |
+| Bn128Add      | 0x0000000000000000000000000000000000000006   |
+| Bn128Mul      | 0x0000000000000000000000000000000000000007   |
+| Bn128Pairing  | 0x0000000000000000000000000000000000000008   |
+
+## Non-Ethereum Native Precompiles
+
+| Precompile          | Address                                      |
+| ------------------- | -------------------------------------------- |
+| Sha3FIPS256         | 0x0000000000000000000000000000000000000400   |
+| Dispatch            | 0x0000000000000000000000000000000000000401   |
+| ECRecoverPublicKey  | 0x0000000000000000000000000000000000000402   |
+| Ed25519Verify       | 0x0000000000000000000000000000000000000403   |
 
 ## Astar Specific Precompiles
 
-| Precompile | Address |
-| -------- | -------- |
-| [DappsStaking](staking.md) | 0x0000000000000000000000000000000000005001     |
-| [Sr25519](sr25519.md) | 0x0000000000000000000000000000000000005002     |
-| [SubstrateEcdsa](substrate-ecdsa.md) | 0x0000000000000000000000000000000000005003     |
-| [XCM](xcm/xcm.md) | 0x0000000000000000000000000000000000005004     |
-| [assets-erc20](xc20.md) | ASSET_PRECOMPILE_ADDRESS_PREFIX |
+| Precompile                        | Address                                      |
+| --------------------------------- | -------------------------------------------- |
+| [DappsStaking](staking.md)        | 0x0000000000000000000000000000000000005001   |
+| [Sr25519](sr25519.md)             | 0x0000000000000000000000000000000000005002   |
+| [SubstrateEcdsa](substrate-ecdsa.md) | 0x0000000000000000000000000000000000005003   |
+| [XCM](xcm/xcm.md)                 | 0x0000000000000000000000000000000000005004   |
+| [assets-erc20](xc20.md)           | ASSET_PRECOMPILE_ADDRESS_PREFIX              |
 
 The interface descriptions for these precompiles can be found in the `precompiles` folder: [Astar repo](https://github.com/AstarNetwork/Astar/).
 The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork/Astar/tree/master/runtime) for each runtime in `precompile.rs` files.
