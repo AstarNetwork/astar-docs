@@ -39,15 +39,15 @@ Working assumption is that the reader has familiarized themselves with the gover
 
 Both Substrate & EVM style accounts can participate in governance actions.
 
-When connecting account to the Subsquare platform, the user can choose between different wallets & account types.
+When connecting an account to the Subsquare platform, the user can choose between different wallets and account types.
 
 <Figure caption="Substrate Account Selection" src={require('/docs/use/img/25_Subsquare_wallet_account_selection/wallet_account_1.png').default } width="100%" />
 
-Different _Substrate_ account compatible wallets are available. In case user wants to use their EVM account, they should select `EVM` under the option.
+Different _Substrate_ account compatible wallets are available. If the user wants to use their EVM account, they should select `EVM` under the option.
 
 <Figure caption="EVM Account Selection" src={require('/docs/use/img/25_Subsquare_wallet_account_selection/wallet_account_2.png').default } width="100%" />
 
-Here user can select the desired EVM wallet.
+Here, the user can select the desired EVM wallet.
 
 ## Token Holder
 
