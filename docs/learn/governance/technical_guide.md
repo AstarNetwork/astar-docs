@@ -65,8 +65,8 @@ The _pallet-collective-proxy_ is a special pallet that allows calls to be made o
 * `Democracy->cancelProposal` - cancels a public proposal
 * `Democracy->vetoExternal` - vetoes an external proposal
 * `DappStaking->maintenanceMode` - enable or disable maintenance mode
-* `SafeMode->forceEnter/forceExit` - 	enables/disables **Safe Mode** for the chain
-* `TxPause->pause/unpause` - 	pauses/unpauses specific transactions
+* `SafeMode->forceEnter/forceExit` - enables/disables **Safe Mode** for the chain
+* `TxPause->pause/unpause` - pauses/unpauses specific transactions
 
 ### Community Council
 
