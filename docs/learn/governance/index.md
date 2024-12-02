@@ -62,7 +62,7 @@ To avoid duplicating the [official Polkadot Gov v1 documentation](https://wiki.p
 * The `Main Council` can **cancel** an ongoing referendum if it considers it harmful. This is an _emergency_ action only.
 * The `Technical Committee` can **fast-track** an external proposal in case of an emergency situation. This allows instant upgrade of the proposal into a referendum, and setting of the voting & enactment period to arbitrarily short durations.
 * The `Technical Committee` can **cancel** a public proposal if it considers it to be harmful for the network.
-* Any `Technical Committee` can **vet** an external proposal made by the `Main Council`, postponing it temporarily.
+* Any `Technical Committee` can **veto** an external proposal made by the `Main Council`, postponing it temporarily.
 
 ## Actors
 
@@ -98,6 +98,10 @@ The `Technical Committee` can:
   * instant fast tracking requires unanimous agreement, and allows setting of the voting & enactment period to arbitrarily short periods (for emergency situations)
 * cancel a public proposal (not a referendum!) in case the committee considers it harmful, requires 2/3 majority agreement
 * enable or disable _maintenance_ mode on the **dApp staking** pallet, requires 2/3 majority agreement
+* enable or disable emergency maintenance functions on the Astar Network, requiring 2/3 majority agreement, such as
+  * the _maintenance_ mode on the **dApp staking**, or
+  * pausing/unpausing specific compromised transactions, or
+  * entering/exiting **Safe Mode** for the entire chain.
 
 Any `Technical Committee` **member** can **veto** an external proposal made by the `Main Council`.
 
@@ -240,3 +244,29 @@ These parameters are related to the _dApp staking_ logic.
 | dApp Register Origin                    | 1/2 Community Council    | 2/3 Community Council    |
 | dApp Unregister Origin                  | 4/5 Community Council    | 4/5 Community Council    |
 | Community Council Staking Operations    | 1/2 Community Council    | 2/3 Community Council    |
+
+### Emergency Maintenance Pallets
+
+#### Safe Mode
+
+The **SafeMode** pallet introduces an emergency STOP mechanism for the chain, restricting operations to a predefined set of permitted calls (only system calls). This mechanism is especially useful during chain anomalies or attacks. The `Technical Committee` can force-enter or exit _Safe Mode_. The _dApp staking_ maintenance mode is triggered when entering/exiting **Safe Mode**.
+
+These parameters are related to the _Safe Mode_ logic.
+
+| Parameter Name                          | Shibuya                  | Astar                    |
+| --------------------------------------- | ------------------------ | ------------------------ |
+| Enter Duration                          | 4 hours                  | 4 hours                  |
+| Extend Duration                         | 2 hours                  | 2 hours                  |
+| Force Enter Origin                      | 1/2 Technical Committee  | 2/3 Technical Committee  |
+| Force Exit Origin                       | 2/3 Technical Committee  | 4/5 Technical Committee  |
+
+#### Tx Pause
+
+The **TxPause** pallet provides the ability to pause specific transaction calls dynamically. This feature is useful for mitigating issues with specific modules or calls without halting the entire chain. The `Technical Committee` can pause and resume individual calls dynamically as needed.
+
+These parameters are related to the _Tx Pause_ logic.
+
+| Parameter Name                          | Shibuya                  | Astar                    |
+| --------------------------------------- | ------------------------ | ------------------------ |
+| Pause Origin                            | 1/2 Technical Committee  | 2/3 Technical Committee  |
+| Unpause Origin                          | 1/2 Technical Committee  | 2/3 Technical Committee  |
