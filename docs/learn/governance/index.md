@@ -258,7 +258,7 @@ These parameters are related to the _Safe Mode_ logic.
 | Enter Duration                          | 4 hours                  | 4 hours                  |
 | Extend Duration                         | 2 hours                  | 2 hours                  |
 | Force Enter Origin                      | 1/2 Technical Committee  | 2/3 Technical Committee  |
-| Force Exit Origin                       | 2/3 Technical Committee  | 4/5 Technical Committee  |
+| Force Exit Origin                       | 2/3 Technical Committee  | ALL Technical Committee  |
 
 #### Tx Pause
 
