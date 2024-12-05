@@ -29,7 +29,7 @@ Each **cycle** consists of one or more **periods**.
 **Periods** are a core time unit in the dApp Staking protocol. Each period consists of a `Voting` and `Build&Earn` subperiods.
 
 During the `Voting` subperiod, neither stakers nor dApp owners can earn any rewards, only _collators_ and _treasury_ continue earning.
-During the the `Build&Earn` subperiod, stakers earn staking rewards per **era** and have the opportunity to earn bonus reward at the end of a period.
+During the `Build&Earn` subperiod, stakers earn staking rewards per **era** and have the opportunity to earn bonus reward at the end of a period.
 dApp owners also earn rewards, based on how well their dApp is performing in dApp staking, at the end of each **era**.
 
 ### Eras

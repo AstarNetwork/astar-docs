@@ -156,7 +156,7 @@ You can quickly check the presence and versions of required dependencies by runn
 <Figure caption="Verify dependencies" src={require('../img/swanky/check.png').default} width="65%" />
 
 :::info
-For now, you will need to be be in a project folder to run this command.
+For now, you will need to be in a project folder to run this command.
 
 This command will be updated to fix that, and provide more useful information.
 :::

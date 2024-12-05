@@ -74,7 +74,7 @@ Any dApp that is compatible with EVM can be deployed, except for those which req
 
 **Payments**: Users interested in transacting with each other in real-time within a near-instantaneous and low-fee environment will appreciate the value Astar zkEVM provides.
 
-### When Astar zkEVM publishes a proof on Layer 1, how can someone trust that that proof is accurate and includes all the transactions it claims it does?
+### When Astar zkEVM publishes a proof on Layer 1, how can someone trust that proof is accurate and includes all the transactions it claims it does?
 
 Our zkRollup smart contract warranties it. It's trustworthy due to data availability and the fact that the published validity proofs are quick and easily verifiable SNARK proofs.
 

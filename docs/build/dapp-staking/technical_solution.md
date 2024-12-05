@@ -82,7 +82,7 @@ _(please note that `.amount` notation is just a simplification for `staked.votin
 Stakers can have many pending rewards if they don't claim regularly. This is normal and expected.
 One `claim_staker_rewards` call can claim more than 1 such reward.
 
-To calculate number of calls required to claim **all** rewards, we need to to the following:
+To calculate number of calls required to claim **all** rewards, we need to the following:
 
 1. Repeat the step from the subchapter which explains how to get list of claimable eras.
 

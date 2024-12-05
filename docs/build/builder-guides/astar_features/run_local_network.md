@@ -105,7 +105,7 @@ You can check a full list of subcommand and explanation using the following comm
 ### Access the local blockchain via explorer
 
 - Go to [local explorer](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer)
-- You will be able to to view the recent blocks, accounts info, etc. as the on-chain environment of Astar Network
+- You will be able to view the recent blocks, accounts info, etc. as the on-chain environment of Astar Network
     
 ![Untitled](img-localchain-cookbook/Untitled%203.png)
     
