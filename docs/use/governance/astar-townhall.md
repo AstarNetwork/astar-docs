@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: Off-chain Governance
 title: Astar Townhall - Off-chain Governance
 ---
