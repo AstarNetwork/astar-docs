@@ -16,18 +16,10 @@ To add **Astar zkEVM** to your wallet manually, enter the following details :
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
-| `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
 
 
 To add the network to MetaMask you can either use the data above, or find a link to add the network at the bottom of the respective block explorer page.
 
-## Bridging Assets
-
-The next step is to bridge funds to the Astar zkEVM. You can use the Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) if you already have funds on Astar Network.
-
-:::important
-Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) does not inherit any counterparty risk compared to 3rd party bridge services, so is therefore trustless.
-:::
 
 ## Astar zkEVM Support
 

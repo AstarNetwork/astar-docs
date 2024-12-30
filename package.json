@@ -21,7 +21,7 @@
     "@docusaurus/mdx-loader": "^3.6.3",
     "@docusaurus/plugin-content-docs": "^3.6.3",
     "@docusaurus/preset-classic": "3.6.3",
-    "@docusaurus/theme-mermaid": "3.4.0",
+    "@docusaurus/theme-mermaid": "3.6.3",
     "@docusaurus/types": "3.6.3",
     "@mdx-js/react": "3.1.0",
     "@react-hooks-library/core": "0.6.2",

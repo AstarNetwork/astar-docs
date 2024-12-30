@@ -132,11 +132,6 @@ If any of the optional arguments are missing, `graph init` will fail back to int
 <Figure src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph11-initializesubgraph.png').default} width="50%" />
 
 
-:::note
-Astar zKatana network is referred to as `astar-zkevm-sepolia` and Astar zkEVM is referred to as `astar-zkevm` within `graph init` interactive mode.
-<Figure src={require('/docs/build/zkEVM/integrations/indexers/img/thegraph14-astar-zkevm-networks.png').default} width="50%" />
-:::
-
 ### Add New dataSources To An Existing Subgraph
 
 Since v0.31.0 the graph-cli supports adding new dataSources to an existing subgraph through the `graph add` command.

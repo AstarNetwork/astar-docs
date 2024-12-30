@@ -135,9 +135,6 @@ A concept of layer 2 scaling. Modular blockchain systems move two or more of the
  ### Zero-knowledge proof
  A cryptographic protocol that allows one party to prove knowledge of a secret without revealing the secret itself.
  
-  ### zKatana
- A testnet for Astar zkEVM. For more info refer to the [Networks](/docs/learn/networks.md) section.
-
  ### Zombienet
  A CLI tool to easily spawn ephemeral Substrate-based networks and perform tests against them.
 

@@ -42,7 +42,7 @@ There will be a number of different ways participants in the zkEVM ecosystem can
 
 ### Is Astar zkEVM a zk rollup? 
         
-Early iterations of zKatana testnet used zk rollup architecture exclusively, however, adding modular data availability while connecting to Polygon AggLayer means Astar zkEVM may be more accurately categorized as a **Validium** (zk proofs + data availability) though transactions are still 'rolled up' and submitted on-chain to be finalized in batches.
+Early iterations used zk rollup architecture exclusively, however, adding modular data availability while connecting to Polygon AggLayer means Astar zkEVM may be more accurately categorized as a **Validium** (zk proofs + data availability) though transactions are still 'rolled up' and submitted on-chain to be finalized in batches.
         
 ### What is the difference between Astar zkEVM and Ethereum mainnet?
         

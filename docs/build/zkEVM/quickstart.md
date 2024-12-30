@@ -19,12 +19,6 @@ Developers can deploy existing contracts from other EVM chains to the zkEVM, and
 
 ## Connecting to zkEVM
 
-:::info Reminder
-**Astar zKatana testnet and its related documentation are under active development.**
-
-All feedback is welcome and highly appreciated, so please report errors or inconsistencies to a team member or as an issue on the [Astar Docs Github repo](https://github.com/AstarNetwork/astar-docs/issues), thank you.
-:::
-
 To add **Astar zkEVM** or any testnet networks to your wallet manually, enter the following details :
 <Tabs>
 
@@ -32,14 +26,6 @@ To add **Astar zkEVM** or any testnet networks to your wallet manually, enter th
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
-| `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
-</TabItem>
-
-<TabItem value="testnet 2" label="zKyoto Testnet">
-| RPC URL | ChainID | Block Explorer URL | Currency |
-| ------------------------------- | ---------------- | ---------------- | ----- |
-| `https://rpc.startale.com/zkyoto` | `6038361` | [https://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
-| `https://astar-zkyoto-rpc.dwellir.com` | `6038361` | | **ETH** |
 </TabItem>
 
 </Tabs>
@@ -48,10 +34,9 @@ To add the network to MetaMask you can either use the data above, or find a link
 
 ## Bridging Assets
 
-The next step is to [bridge assets](/docs/build/zkEVM/bridge-to-zkevm.md) from Ethereum &rarr; Astar zkEVM.
-
 :::important
-Astar's canonical [zkEVM Bridge](https://portal.astar.network) does not inherit any counterparty risk compared to 3rd party bridge services, and is trustless at the protocol level.
+Astar's canonical [zkEVM Bridge](https://portal.astar.network) will be deprecated.
+We recommend not to transfer any funds to Astar zkEVM because of being transitioned to Soneium layer 2 in 2025, more info [here](https://astar.network/blog/astar-evolution-phase-1-56). 
 :::
 
 ## Deploying Smart Contracts
