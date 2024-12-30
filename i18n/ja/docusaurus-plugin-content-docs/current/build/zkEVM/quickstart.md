@@ -32,23 +32,11 @@ Astar zkEVM 上での開発および運用に特別なツールやウォレッ�
 
 **Astar zkEVM**ネットワークをウォレットに手動で追加するには、以下の詳細情報を入力してください：
 
-<Tabs>
-
-
-<TabItem value="testnet" label="zKatana Testnet">
-| RPC URL | ChainID | Block Explorer URL | Currency |
-| ------------------------------- | ---------------- | ---------------- | ----- |
-| `https://rpc.startale.com/zkyoto` | `6038361` | [https://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
-| `https://astar-zkyoto-rpc.dwellir.com` | `6038361` | | **ETH** |
-</TabItem>
-
-</Tabs>
-
 MetaMaskにネットワークを追加するには、上記のデータを使用するか、対応するブロックエクスプローラーのページ下部にあるリンクを使用します。
 
 ## アセットのブリッジ
 
-次のステップは Ethereum &rarr; Astar zkEVM のアセットの[ブリッジ](/docs/build/zkEVM/bridge-to-zkevm)です。
+次のステップは Ethereum &rarr; Astar zkEVM のアセットのブリッジです。
 
 :::important
 Astar 正規の[zkEVM Bridge](https://portal.astar.network)はサードパーティーのブリッジサービスとは違い、カウンターパーティーリスク(信用リスク)を持ちません。そして、プロトコルレベルでトラストレスです。
@@ -56,7 +44,7 @@ Astar 正規の[zkEVM Bridge](https://portal.astar.network)はサードパーテ
 
 ## スマートコントラクトのデプロイ
 
-zkEVM 上の開発体験は、EVM とシームレスであり、全く同じです。 zkEVM 上の開発者は、既存のコードとツールを使用して zkEVM にデプロイでき、dApp ユーザーはより高いトランザクション処理速度と低い手数料を享受できます。 zkEVM 上でスマートコントラクトをデプロイする方法について詳しくは、[こちら](/docs/build/zkEVM/smart-contracts/)をご覧ください。
+zkEVM 上の開発体験は、EVM とシームレスであり、全く同じです。 zkEVM 上の開発者は、既存のコードとツールを使用して zkEVM にデプロイでき、dApp ユーザーはより高いトランザクション処理速度と低い手数料を享受できます。 zkEVM 上でスマートコントラクトをデプロイする方法について詳しくは、こちらをご覧ください。
 
 ## 開発者向けの Astar zkEVM サポート
 

@@ -7,7 +7,7 @@ Astar zkEVM は、Polygon の Chain Development Kit (チェーン開発ツール
 
 - **Ethereum や Astar Substrate EVM よりも高い TPS(Transaction Per Second)** - zk ロールアップのアーキテクチャを活用し、トランザクションは Layer 2 上で並列化、バッチ化されて Layer 1 に送信されます。これにより、高性能を必要とする Web3 ゲームや DeFi アプリケーションのパフォーマンスが大幅に向上します。
 - **Ethereum と比較して安いトランザクション手数料** - 上述の通り、トランザクションのバッチ処理を行うことで安いトランザクション手数料を実現しています。
-- **完全な EVM 等価性** - EVM 互換性ではなく、EVM 等価性を実現しています。 すなわち、Ethereum 上のスマートコントラクトが Astar zkEVM 上でも同じように動いているということです。 詳細は[smart contract](/docs/build/zkEVM/smart-contracts/)をご確認ください。
+- **完全な EVM 等価性** - EVM 互換性ではなく、EVM 等価性を実現しています。 すなわち、Ethereum 上のスマートコントラクトが Astar zkEVM 上でも同じように動いているということです。 詳細はsmart contractをご確認ください。
 - **ネイティブの Account Abstraction** - Astar zkEVM は、エンドユーザーの UX を刷新し、シームレスにするために設計された機能をネイティブで提供しています。 詳細については、[Account Abstraction](/docs/build/zkEVM/integrations/account-abstraction/)を参照して、UX を向上させる方法についてご覧ください。
 - **著名なパートナー** - Astar zkEVM は、開発者の信頼を得ている組織やブランドにサポートされています。 詳細については、[integrations](/docs/build/zkEVM/integrations/)を参照して、サードパーティのサービスを提供する企業や組織に関する情報をご覧ください。
 - **相互運用性とマルチチェーン** - Astar zkEVM では、Ethereum と Polkadot のエコシステム間の相互運用性をサポートし、コミュニティを結びつけ、広く知られているマルチチェーンの理念を通じて Web3 のアクセシビリティを強化しています。
