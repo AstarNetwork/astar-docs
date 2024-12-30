@@ -1,13 +1,13 @@
 ---
 sidebar_position: 4
-sidebar_label: Off-chain Governance
-title: Astar Townhall - Off-chain Governance
+sidebar_label: Offchain Governance
+title: Astar Townhall - Offchain Governance
 ---
 import Figure from '/src/components/figure'
 
-[Astar Off-chain Governance](https://astargov.com/astar) is powered by Townhall, a platform designed to empower Protocol or DAO communities with governance tools and features. For more information, visit the [Townhall website](https://polkadot.townhallgov.com/).
+[Astar Offchain Governance](https://astargov.com/astar) is powered by Townhall, a platform designed to empower Protocol or DAO communities with governance tools and features. For more information, visit the [Townhall website](https://polkadot.townhallgov.com/).
 
-Currently, Astar Governance operates off-chain, meaning no governance actions occur or are executed on the blockchain directly. Voting power on Astar Townhall is determined by ASTR stakeholders' token balances. ASTR holders can vote using tokens that are either transferable or locked in dApp Staking on Astar Native (Substrate), or transferable on Astar EVM. However, ASTR tokens used in DeFi smart contracts or in dApp staking on Astar EVM do not count towards voting power.
+Currently, Astar Governance operates offchain, meaning no governance actions occur or are executed on the blockchain directly. Voting power on Astar Townhall is determined by ASTR stakeholders' token balances. ASTR holders can vote using tokens that are either transferable or locked in dApp Staking on Astar Native (Substrate), or transferable on Astar EVM. However, ASTR tokens used in DeFi smart contracts or in dApp staking on Astar EVM do not count towards voting power.
 
 This documentation explains the entire process of a governance proposal on Astar Network, from initiating a discussion to opening a vote and participating in voting as Astar stakeholders.
 
