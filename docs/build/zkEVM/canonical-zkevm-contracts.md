@@ -69,5 +69,3 @@ More documentation about the Polygon CDK Validium contracts can be found in the 
 | LayerZero NativeOFT ASTR     | L1 (Astar EVM (Substrate))    | `0xdf41220C7e322bFEF933D85D01821ad277f90172` | -            |
 </TabItem>
 </Tabs>
-
-More documentation about the LayerZero Bridge can be found in [this section](/docs/build/zkEVM/integrations/bridges-relays/AstarEVM-zkEVM.md) 
