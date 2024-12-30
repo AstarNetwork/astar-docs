@@ -41,12 +41,6 @@ The CLI can be installed and used in different ways:
 Note that using the precompiled binaries, NPM, or compiling it yourself requires you to have the [local environment set up](/docs/build/environment/ink_environment.md) correctly
 :::
 
-### Dev container
-
-Using [dev container](/docs/build/environment/dev-container) is the easiest way to use `swanky-cli`, it includes all the environment setup and will support auto-updates in the future.
-
-To run your project in the dev container follow the steps on [swanky-dev-container Github](https://github.com/AstarNetwork/swanky-dev-container).
-
 ### Cloud based environments
 
 Similar to using the dev container locally, GitHub will detect the `.devcontainer` config in your project and let you run the project in a cloud-based IDE.

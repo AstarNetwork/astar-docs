@@ -60,7 +60,6 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 | Parent chain | Ethereum |
 | ChainID | 3776 |
 | HTTPS | Startale Labs: https://rpc.startale.com/astar-zkevm |
-|         | Dwellir: https://astar-zkevm-rpc.dwellir.com |
 | Symbol | ETH |
 
 </TabItem>
@@ -102,19 +101,6 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 |           | Dwellir: wss://shibuya-rpc.dwellir.com |
 | chainID | 81 |
 | Symbol | SBY |
-
-</TabItem>
-
-<TabItem value="zKyoto" label="zKyoto Network" default>
-
-|   | Public endpoint zKyoto                         |
-| --- |------------------------------------------------|
-| Network | zKyoto (zkEVM testnet)                         |
-| Parent chain | Sepolia                                        |
-| ChainID | 6038361                                        |
-| HTTPS | Startale Labs: https://rpc.startale.com/zkyoto |
-|         | Dwellir: https://astar-zkyoto-rpc.dwellir.com|
-| Symbol | ETH                                            |
 
 </TabItem>
 </Tabs>

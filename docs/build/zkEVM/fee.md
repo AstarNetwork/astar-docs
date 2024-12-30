@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 3
 title: Astar zkEVM Fee Calculation
 sidebar_label: Fee Calculation
 ---

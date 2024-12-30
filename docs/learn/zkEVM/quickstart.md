@@ -3,8 +3,6 @@ sidebar_position: 1
 title: Quickstart Guide
 sidebar_label: Quickstart
 ---
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import metamask from '/docs/build/zkEVM/img/metamask-network.png'
 
 # Overview of Astar zkEVM
@@ -13,34 +11,15 @@ Astar zkEVM is Layer 2 scaling solution for Ethereum offering a blazing fast and
 
 ## Connecting to Astar zkEVM
 
-To add **Astar zkEVM** or any testnet networks to your wallet manually, enter the following details :
-<Tabs>
+To add **Astar zkEVM** to your wallet manually, enter the following details :
 
-<TabItem value="mainnet" label="Astar zkEVM">
 | RPC URL | ChainID | Block Explorer URL | Currency |
 | ------------------------------- | ---------------- | ---------------- | ----- |
 | `https://rpc.startale.com/astar-zkevm` | `3776` | [https://astar-zkevm.explorer.startale.com/](https://astar-zkevm.explorer.startale.com/) | **ETH** |
-| `https://astar-zkevm-rpc.dwellir.com` | `3776` | | **ETH** |
-</TabItem>
 
-<TabItem value="testnet 2" label="zKyoto Testnet">
-| RPC URL | ChainID | Block Explorer URL | Currency |
-| ------------------------------- | ---------------- | ---------------- | ----- |
-| `https://rpc.startale.com/zkyoto` | `6038361` | [hhttps://zkyoto.explorer.startale.com/](https://zkyoto.explorer.startale.com/) | **ETH** |
-| `https://astar-zkyoto-rpc.dwellir.com` | `6038361` | | **ETH** |
-</TabItem>
-
-</Tabs>
 
 To add the network to MetaMask you can either use the data above, or find a link to add the network at the bottom of the respective block explorer page.
 
-## Bridging Assets
-
-The next step is to bridge funds to the Astar zkEVM. You can use the Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) if you already have funds on Astar Network.
-
-:::important
-Astar official [zkEVM Bridge](https://portal.astar.network/astar/bridge) does not inherit any counterparty risk compared to 3rd party bridge services, so is therefore trustless.
-:::
 
 ## Astar zkEVM Support
 

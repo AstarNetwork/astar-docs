@@ -3,21 +3,12 @@ sidebar_position: 6
 ---
 
 # Networks
-## Overview
-
-Prior to commencing development, especially, it's important to understand the Astar Network family, and choose an appropriate network based on what you would like to do. Currently, there are a number of networks available, including the Local network which runs exclusively within your development environment. All networks support EVM RPCs, and Astar Parachain supports Substrate RPC as well.
-
-![Astar networks](img/fig4.jpg)
+Prior to commencing development, it's important to understand the Astar Network family, and choose an appropriate network based on what you would like to do. Currently, there are a number of networks available, including the Local network which runs exclusively within your development environment. All networks support Substrate and EVM RPCs.
 
 ## Local Networks
 
 ### Substrate Node
 You can clone the Astar repository and run the local node provided, or download the precompiled binary and run it, instead. Both methods are described in the [Build](/docs/build) section.
-
-### Swanky Node
-
-Swanky Node is a Substrate based blockchain configured to enable the smart contract module `pallet-contracts`, and other features that assist local development of Wasm smart contracts.
-For more information about Swanky Node, check out the [Swanky Suite](https://docs.astar.network/docs/build/wasm/swanky-suite/) section.
 
 ### Zombienet
 
@@ -34,31 +25,26 @@ The Shibuya native token symbol is SBY.
 
 To obtain test tokens from the faucet, please visit the Astar Portal and connect to Shibuya. If for any reason the faucet is empty, please contact the Astar team on Discord.
 
-### zKatana (Sepolia) - Deprecated
+### zKyoto (Sepolia) (Deprecated)
 
-An early iteration of the zkEVM testnet that used zk rollup architecture. Now deprecated.
-
-### zKyoto (Sepolia)
-
-zKyoto is a Validium-based network connected to the Ethereum Sepolia testnet and Polygon AggLayer. It is the testing and proving ground for dApps deployed on the Astar zkEVM.
+zKyoto was connected to the Ethereum Sepolia testnet and Polygon AggLayer. Testing ground for dApps deployed on the Astar zkEVM. This testnet has now been transitioned to [Soneium Minato](https://docs.soneium.org/).
 
 ## Mainnets
 
-Astar has three mainnets. One parachain on Kusama, One parachain on Polkadot, and a zkEVM-based network on Ethereum Layer 2.
+Astar Collective, with the ASTR token, supports three mainnets:
 
-### Shiden Parachain (Substrate)
+1. Astar Network (Parachain) 
+2. Astar zkEVM (soon to be deprecated)
+3. Soneium
 
-Shiden is a parachain connected to the Kusama Relay Chain, and used to deploy and test new releases of Astar runtime in a live production (canary) environment. Shiden is not considered a testnet since SDN has its own tokenomics and value, but is used to validate and stabilize new software releases and upgrades for Astar Network.
+### Astar Network (Parachain)
 
-The Shiden native token symbol is SDN.
-
-### Astar Parachain (Substrate)
-
-By now you may have guessed that Astar parachain is connected to Polkadot Relay chain.
-
+Astar parachain is connected to Polkadot Relay chain supporting WASM & EVM smart contract deployments.
 The Astar native token symbol is ASTR.
 
 ### Astar zkEVM
 
-Astar zkEVM is a Layer 2 scaling solution for Ethereum, powered by Polygon AggLayer. Technically referred to as a Validium, the zkEVM combines zk rollups with modular data availability, synthesizing the best features of each.
+Astar zkEVM is an Ethereum Layer 2 network, powered by Polygon CDK. Technically referred to as Validium, it combines zk rollup technology with modular data availability. Next phase for Astar zkEVM is the transition to Soneium.
 
+### Soneium
+Soneium is a next-generation blockchain ecosystem designed to invoke emotion and empower creativity. It was founded by Sony Group Corporation, a global technology leader, and Startale, a Web3 innovator. Soneium stands as a versatile, general-purpose blockchain ready to serve diverse needs across all verticals and support users globally. Astar and it's token ASTR will play a crucial role in the ecosystem as driven asset.

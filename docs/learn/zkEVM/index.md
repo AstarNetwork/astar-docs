@@ -31,7 +31,7 @@ Astar zkEVM serves as a versatile solution for global enterprises, accelerating 
 In coordination with our key partners, Astar zkEVM is well-positioned to take advantage of the extensive developer base and well-established toolset existing in the Ethereum ecosystem, and boasts the following key features:
 
 - **Some of the lowest transaction fees in the Ethereum ecosystem** - Off-chain transaction batching and data availability provides some of the lowest costs for transacting in the Ethereum ecosystem.
-- **Full EVM-equivalence** - Smart contracts that work on Ethereum also work on Astar zkEVM. See the [smart contract section](/docs/build/zkEVM/smart-contracts/) for more technical information.
+- **Full EVM-equivalence** - Smart contracts that work on Ethereum also work on Astar zkEVM.
 - **Native Account Abstraction** - The Astar zkEVM provides native features designed to revolutionize the end-user experience and make it seamless. See the [Account Abstraction section](/docs/build/zkEVM/integrations/account-abstraction/) for more technical information about how to refine the end-user experience.
 - **Top-Tier Infrastructure Integrations** - Established names and brands that developers trust power the Astar zkEVM. See the [integrations section](/docs/build/zkEVM/integrations/) for more information about our 3rd party service providers.
 - **Interoperability and Exposure** - With Astar zkEVM, we are supporting interoperability between the Ethereum, Polkadot, and Polygon ecosystems, uniting communities through a common vision.

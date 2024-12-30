@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 2
 title: Canonical Contracts
 ---
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0F
 ### Bridged Tokens
 
 <Tabs>
-<TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
+<TabItem value="mainnet" label="Astar zkEVM" default>
 
 | Contract Name                            | Source                               | Contract Address                                                                                                                         |
 | ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,16 +31,12 @@ Wrapped ETH (wETH) on Astar zkEVM contract address is [`0xE9CC37904875B459Fa5D0F
 
 
 </TabItem>
-<TabItem value="testnet" label="zKyoto Testnet">
-coming soon...
-</TabItem>
-
 </Tabs>
 
 
 ## Polygon CDK Validium Specific Contracts
 <Tabs>
-<TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
+<TabItem value="mainnet" label="Astar zkEVM" default>
 
 | Contract Name                | Network          | Contract Address                             |
 | ---------------------------- | ---------------- | -------------------------------------------- |
@@ -55,21 +51,13 @@ coming soon...
 | PolygonZkEVMBridge           | L2 (Astar zkEVM) | `0x2a3dd3eb832af982ec71669e178424b10dca2ede` |
 | PolygonZkEVMGlobalExitRootL2 | L2 (Astar zkEVM) | `0xa40d5f56745a118d0906a34e69aec8c0db1cb8fa` |
 </TabItem>
-<TabItem value="testnet" label="zKyoto Testnet">
-coming soon...
-</TabItem>
-
 </Tabs>
 
 More documentation about the Polygon CDK Validium contracts can be found in the [cdk-validium-contracts GitHub repository](https://github.com/0xPolygon/cdk-validium-contracts)
 
-## Ethereum Specific Precompiles
-
-TODO - refer to a link in CDK Docs which covers which precompiles are available for CDK
-
 ### LayerZero Bridge
 <Tabs>
-<TabItem value="mainnet" label="Astar zkEVM Mainnet" default>
+<TabItem value="mainnet" label="Astar zkEVM" default>
 
 | Contract Name                | Network                       | Contract Address ( Endpoint )                | endpointId   |
 | ---------------------------- | ------------------------------|--------------------------------------------- |--------------|
@@ -80,10 +68,4 @@ TODO - refer to a link in CDK Docs which covers which precompiles are available 
 | LayerZero OFT ASTR           | L2 (Astar zkEVM)              | `0xdf41220C7e322bFEF933D85D01821ad277f90172` | -            |
 | LayerZero NativeOFT ASTR     | L1 (Astar EVM (Substrate))    | `0xdf41220C7e322bFEF933D85D01821ad277f90172` | -            |
 </TabItem>
-<TabItem value="testnet" label="zKyoto Testnet">
-| LayerZero endpoint V1        | L2 (Astar zKyoto)    | `0x6098e96a28E02f27B1e6BD381f870F1C8Bd169d3` | 10266        |
-| LayerZero endpoint V2        | L2 (Astar zKyoto)    | `0x6EDCE65403992e310A62460808c4b910D972f10f` | 40266        |
-</TabItem>
 </Tabs>
-
-More documentation about the LayerZero Bridge can be found in [this section](/docs/build/zkEVM/integrations/bridges-relays/AstarEVM-zkEVM.md) 

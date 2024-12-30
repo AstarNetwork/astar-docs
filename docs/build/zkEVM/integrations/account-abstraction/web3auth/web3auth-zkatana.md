@@ -1,5 +1,5 @@
 ---
-title: Using Web3Auth on Astar zKatana
+title: Using Web3Auth
 sidebar_position: 1
 ---
 
