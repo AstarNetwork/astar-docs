@@ -255,10 +255,10 @@ These parameters are related to the _Safe Mode_ logic.
 
 | Parameter Name                          | Shibuya                  | Astar                    |
 | --------------------------------------- | ------------------------ | ------------------------ |
-| Enter Duration                          | 4 hours                  | 4 hours                  |
-| Extend Duration                         | 2 hours                  | 2 hours                  |
-| Force Enter Origin                      | 1/2 Technical Committee  | 2/3 Technical Committee  |
-| Force Exit Origin                       | 2/3 Technical Committee  | ALL Technical Committee  |
+| Enter Duration                          | 4 hours                  | TBD                      |
+| Extend Duration                         | 2 hours                  | TBD                      |
+| Force Enter Origin                      | 1/2 Technical Committee  | TBD                      |
+| Force Exit Origin                       | 2/3 Technical Committee  | TBD                      |
 
 #### Tx Pause
 
@@ -268,5 +268,5 @@ These parameters are related to the _Tx Pause_ logic.
 
 | Parameter Name                          | Shibuya                  | Astar                    |
 | --------------------------------------- | ------------------------ | ------------------------ |
-| Pause Origin                            | 1/2 Technical Committee  | 2/3 Technical Committee  |
-| Unpause Origin                          | 1/2 Technical Committee  | 2/3 Technical Committee  |
+| Pause Origin                            | 1/2 Technical Committee  | TBD                      |
+| Unpause Origin                          | 1/2 Technical Committee  | TBD                      |
