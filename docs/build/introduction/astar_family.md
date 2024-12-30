@@ -32,7 +32,7 @@ zKyoto was connected to the Ethereum Sepolia testnet and Polygon AggLayer. Testi
 
 ## Mainnets
 
-Astar Collective with it's asset supports three mainnets:
+Astar Collective, with the ASTR token, supports three mainnets:
 
 1. Astar Network (Parachain) 
 2. Astar zkEVM (soon to be deprecated)
