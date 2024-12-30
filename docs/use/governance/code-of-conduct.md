@@ -4,14 +4,14 @@ sidebar_label: Code of Conduct
 title: Governance Code of Conduct
 ---
 
-These is the _Code of Conduct_ for the Astar on-chain governance system. It is a set of rules and guidelines that all participants in the governance process should follow. It aims to ensure that the governance process is fair, transparent, and efficient. However, nothing is written in stone, and can be changed in the future.
+These is the _Code of Conduct_ for the Astar onchain governance system. It is a set of rules and guidelines that all participants in the governance process should follow. It aims to ensure that the governance process is fair, transparent, and efficient. However, nothing is written in stone, and can be changed in the future.
 
 | #  | Guidelines                                                                                                                                                                                                 |
 |----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1  | Users should familiarize themselves with how governance works before making any proposals. This can be done by, for example, reading the official [documentation](https://docs.astar.network/docs/learn/governance/) or the [blog](https://astar.network/blog/astar-onchain-governance-153). |
-| 2  | Before making any on-chain proposal, it is strongly advised to discuss it first on the Astar forum to gather feedback and conduct a temperature check. The discussion section on Astar Subsquare can also be used for this purpose and to conduct polls. |
+| 2  | Before making any onchain proposal, it is strongly advised to discuss it first on the Astar forum to gather feedback and conduct a temperature check. The discussion section on Astar Subsquare can also be used for this purpose and to conduct polls. |
 | 3  | If a user makes a malicious proposal, it may be canceled, and deposits from the user and backers may be slashed.                                                                                           |
-| 4  | A malicious proposal is one that aims to execute an on-chain call with harmful consequences, such as stealing funds, minting new tokens, introducing technical bugs, bypassing security checks, or similar actions. |
+| 4  | A malicious proposal is one that aims to execute an onchain call with harmful consequences, such as stealing funds, minting new tokens, introducing technical bugs, bypassing security checks, or similar actions. |
 | 5  | The Main Council may cancel an ongoing referendum if it considers it to be against the network's best interest. Since this is an _unorthodox_ action, it must be properly explained and justified, either within the proposal itself or on the Astar forum. |
 | 6  | The Technical Committee may cancel a public proposal if it considers it technically malicious (e.g., a faulty runtime upgrade). As this is an _unorthodox_ action, it must be properly explained and justified, either within the proposal itself or on the Astar forum. |
 | 7  | The Main Council and Community Council must provide justification for accepting or rejecting a treasury spending proposal.                                                                                |
