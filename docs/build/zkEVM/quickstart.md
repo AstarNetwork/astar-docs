@@ -39,10 +39,6 @@ Astar's canonical [zkEVM Bridge](https://portal.astar.network) will be deprecate
 We recommend not to transfer any funds to Astar zkEVM because of being transitioned to Soneium layer 2 in 2025, more info [here](https://astar.network/blog/astar-evolution-phase-1-56). 
 :::
 
-## Deploying Smart Contracts
-
-The development experience on zkEVM is seamless and identical to the Ethereum Virtual Machine. Developers building on zkEVM can use their existing code and tools to deploy on zkEVM, and dApp users will benefit from higher transaction throughput and lower fees. Read more about deploying smart contracts on the zkEVM [here.](/docs/build/zkEVM/smart-contracts/)
-
 ## Astar zkEVM Support for Developers
 
 Developers requiring support can open an issue on [Ethereum StackExchange](https://ethereum.stackexchange.com/) and tag it with `Astar` (preferred) or join the [Astar Discord server](https://discord.gg/astarnetwork).

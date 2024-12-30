@@ -10,10 +10,10 @@ Astar is a interoperable smart contract platform providing native access to both
 ✅ Flexibility to deploy dApps on the platform and ecosystem that best suits their needs, while retaining interoperability with others. <br/>
 ✅ Familiar Tools and Libraries (Remix, Hardhat, Open Zeppelin) <br/>
 ✅ Social & biometric login and recovery (Google, x.com, LINE, Kakao, [Banana](/docs/build/integrations/account-abstraction/banana/)) <br/>
-✅ Gasless payments ([Gelato](/docs/build/zkEVM/integrations/account-abstraction/relayers/gelato-relay), [Safe](/docs/build/zkEVM/integrations/account-abstraction/safe--aa/))<br/>
+✅ Gasless payments<br/>
 ✅ NFT checkout with credit/debit cards <br/>
 ✅ Onramp / offramp solutions (Banxa, [Transak](/docs/build/integrations/wallets/transak)) <br/>
-✅ Interoperability between dApps & other blockchains ([The Graph](/docs/build/integrations/indexers/thegraph), [LayerZero](/docs/build/zkEVM/integrations/bridges-relays/AstarEVM-zkEVM)) <br/>
+✅ Interoperability between dApps & other blockchains<br/>
 ✅ Global Standard NFT Marketplace & DEX (Dew, Rarible, Quickswap) <br/>
 
 ## Build2Earn
