@@ -44,23 +44,35 @@ The Addresses can be checked in the [Astar repo](https://github.com/AstarNetwork
 
 ## Usage Example
 
-Here we'll demonstrate how to interact with the dApp staking precompile using Remix IDE. Other precompiles can be accessed in a similar manner.
+This section demonstrates how to interact with the dApp Staking precompile from your contract or using Remix IDE. Other precompiles can be accessed in a similar manner.
+
+### From contract
+
+`DappsStakingV3.sol` contains functions that _mimic_ the interface of the latest version of `dApp Staking`. The interface can be found in the [Astar repository](https://github.com/AstarNetwork/Astar/blob/master/precompiles/dapp-staking/DappsStakingV3.sol).
+Developers are encouraged to use this interface to fully utilize dApp staking functionality.
 
 ```solidity
-import "./DappsStaking.sol";
-contract A {
-    DappsStaking public constant DAPPS_STAKING = DappsStaking(0x0000000000000000000000000000000000005001);
+import "./DappsStakingV3.sol";
 
-    /// @notice Check current era
-    function checkCurrentEra() public view {
-        uint256 currentEra = DAPPS_STAKING.read_current_era();
+contract A {
+    DAppStaking public constant DAPPS_STAKING = DAppStaking(0x0000000000000000000000000000000000005001);
+
+    /// @notice Check protocol state
+    /// @return ProtocolState: The current protocol state.
+    function checkProtocolState() public view returns (DAppStaking.ProtocolState memory) {
+        DAppStaking.ProtocolState memory protocolState = DAPPS_STAKING.protocol_state();
+        return protocolState;
     }
 }
 ```
 
+### Using Remix IDE
+
+:::caution The example below uses a soft-deprecated interface from the older dApp Staking v2. While it is still supported by the network, it does not reflect the recommended usage for dApp Staking v3. Please use the `v3` interface in a similar way for the latest version of the dApp Staking precompile. :::
+
 Example use: check `current era` and `total staked amount` in the `pallet-dapps-staking` for Shiden Network. For this example we will use Remix.
 
-1. Copy `DappsStaking.sol` from [Astar repo](https://github.com/AstarNetwork/Astar/) and create new contract in Remix:
+1. Copy `DappsStakingV2.sol` from [Astar repo](https://github.com/AstarNetwork/Astar/blob/master/precompiles/dapp-staking/DappsStakingV2.sol) and create new contract in Remix:
 
 ![](https://i.imgur.com/mr0TcLq.png)
 
