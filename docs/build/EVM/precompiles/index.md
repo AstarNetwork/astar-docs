@@ -68,7 +68,13 @@ contract A {
 
 ### Using Remix IDE
 
-:::caution The example below uses a soft-deprecated interface from the older dApp Staking v2. While it is still supported by the network, it does not reflect the recommended usage for dApp Staking v3. Please use the `v3` interface in a similar way for the latest version of the dApp Staking precompile. :::
+:::caution
+
+The example below uses a soft-deprecated interface from the older dApp Staking v2.
+While it is still supported by the network, it does not reflect the recommended usage for dApp Staking v3.
+Please use the `v3` interface in a similar way for the latest version of the dApp Staking precompile.
+
+:::
 
 Example use: check `current era` and `total staked amount` in the `pallet-dapps-staking` for Shiden Network. For this example we will use Remix.
 
