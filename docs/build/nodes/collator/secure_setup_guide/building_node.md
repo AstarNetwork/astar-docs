@@ -115,7 +115,39 @@ Create a dedicated directory for the **chain storage data**:
 
 ```
 sudo mkdir /var/lib/astar
-sudo chown astar:astar /var/lib/astar
+```
+
+zeafr
+Before running a collator, you have to create a node identity key.
+
+<Tabs>
+<TabItem value="astar" label="Astar" default>
+
+```
+sudo astar-collator key generate-node-key --chain astar --base-path /var/lib/astar/
+```
+
+</TabItem>
+<TabItem value="shiden" label="Shiden" default>
+
+```
+sudo astar-collator key generate-node-key --chain shiden --base-path /var/lib/astar/
+```
+
+</TabItem>
+<TabItem value="shibuya" label="Shibuya" default>
+
+```
+sudo astar-collator key generate-node-key --chain shibuya --base-path /var/lib/astar/
+```
+
+</TabItem>
+</Tabs>
+
+Make ```astar``` user the owner of the chain directory:
+
+```
+sudo chown -R astar:astar /var/lib/astar
 ```
 
 Now, let's go to our binary directory and start the collator manually:
