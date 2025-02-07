@@ -32,6 +32,16 @@ Note: `{BASE_PATH}` is the path specified for chain data in the node command
 * The best practice is to set it to `/var/lib/astar`
 * The default path if you don't specify any is `~/.local/share/astar-collator`
 
+## Krews snapshots usage
+
+Krews snapshots support **Astar Mainnet, Shibuya Testnet, and Shiden**, providing a faster and more stable download experience using **rclone**.  
+All snapshots are in archive mode and they do not work with pruned nodes.  
+
+Detailed information and download instructions for each snapshot are available at the links below:
+
+- **Astar Mainnet & Shibuya Testnet:** [https://krews.xyz/snapshots/astar](https://krews.xyz/snapshots/astar)  
+- **Shiden:** [https://krews.xyz/snapshots/shiden](https://krews.xyz/snapshots/shiden)
+
 ## Relay chain
 
 Since the introduction of warp sync, it is not necessary and discouraged to use a relay chain snapshot.
