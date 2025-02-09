@@ -1,0 +1,19 @@
+soneium:
+  label: 'Soneium'
+  permalink: '/soneium'
+  description: 'Related section with information about Soneium and its ecosystem'
+
+astar:
+  label: 'Astar'
+  permalink: '/astar'
+  description: 'Related section with information about Astar and its ecosystem'
+
+intro:
+  label: 'Introduction'
+  permalink: '/introduction'
+  description: 'Page with an introduction to the section'
+
+devs:
+  label: 'Developers'
+  permalink: '/developers'
+  description: 'Page with information for developers'
