@@ -17,3 +17,8 @@ devs:
   label: 'Developers'
   permalink: '/developers'
   description: 'Page with information for developers'
+
+users:
+  label: 'Users'
+  permalink: '/users'
+  description: 'Page with information for users'
