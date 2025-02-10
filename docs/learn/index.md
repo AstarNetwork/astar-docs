@@ -18,12 +18,12 @@ import DocCardList from '@theme/DocCardList';
 
 ## Foundations
 <DocCardList items={[
-    { type: 'link', label: 'About Astar', href: '/docs/learn/astar.md' },
-    { type: 'link', label: 'Astar Tokens', href: '/docs/learn/astar-tokens.md' },
-    { type: 'link', label: 'Accounts', href: '/docs/learn/accounts.md' },
-    { type: 'link', label: 'Polkadot', href: '/docs/learn/architecture/astar-parachain.md' },
-    { type: 'link', label: 'Soneium', href: '/docs/learn/architecture/soneium.md' },
-    { type: 'link', label: 'Smart Contracts', href: '/docs/learn/smart-contracts.md' },
+    { type: 'link', label: 'About Astar', href: '/docs/learn/astar' },
+    { type: 'link', label: 'Astar Tokens', href: '/docs/learn/astar-token' },
+    { type: 'link', label: 'Accounts', href: '/docs/learn/accounts' },
+    { type: 'link', label: 'Polkadot', href: '/docs/learn/architecture/astar-parachain' },
+    { type: 'link', label: 'Soneium', href: '/docs/learn/architecture/soneium' },
+    { type: 'link', label: 'Smart Contracts', href: '/docs/learn/smart-contracts' },
     { type: 'link', label: 'dApp Staking', href: '/docs/learn/dapp-staking' },
     { type: 'link', label: 'Governance', href: '/docs/learn/governance' },
 ]} />
@@ -31,8 +31,9 @@ import DocCardList from '@theme/DocCardList';
 ## Advanced
 <DocCardList items={[
     { type: 'link', label: 'Tokenomics', href: '/docs/learn/tokenomics2' },
-    { type: 'link', label: 'Networks', href: '/docs/learn/networks.md' },
+    { type: 'link', label: 'Networks', href: '/docs/learn/networks' },
     { type: 'link', label: 'Multichain Interoperability', href: '/docs/learn/interoperability/xcm' },
-    { type: 'link', label: 'Proxy Accounts', href: '/docs/learn/Proxies.md' },
+    { type: 'link', label: 'Proxy Accounts', href: '/docs/learn/Proxies' },
     { type: 'link', label: 'Soneium', href: '/docs/learn/Soneium' },
+    { type: 'link', label: 'Architecture', href: '/docs/learn/Architecture' },
 ]} />

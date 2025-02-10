@@ -434,6 +434,16 @@ const config = {
             caption: "Build and deploy a smart contract using the EVM tech stack",
             url: "https://docs.astar.network/docs/build/EVM/",
           },
+          {
+            title: "Tutorials",
+            caption: "Learn how to build on Astar Network with our step-by-step tutorials",
+            url: "https://docs.astar.network/docs/tutorials/",  
+          },
+          {
+            title: "Astar Beta Labs",
+            caption: "experimental technologies and features that are still in development",
+            url: "https://docs.astar.network/docs/build/astar-beta-labs/",
+          }
         ],
         highlight: {
           multi: [
