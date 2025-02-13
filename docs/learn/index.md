@@ -5,6 +5,7 @@ tags:
     - intro
     - users
     - devs
+description: Learn section in the docs
 ---
 
 # Learn
@@ -12,14 +13,14 @@ Greetings! We are delighted to welcome you to the educational segment of the Ast
 
 Whether you're an aspiring developer or a newcomer to the world of blockchain, this section provides comprehensive insights into the inner workings of Astar network. Starting from the basics such as accounts, we delve into the intricate protocols that fuel the functionality of Astar.
 
-To expand your knowledge about building applications or utilizing various tools on Astar, we recommend exploring the [build](/docs/build) section.
+To expand your knowledge about building applications or utilizing various tools on Astar, we recommend exploring the [**Build**](/docs/build) section.
 
 import DocCardList from '@theme/DocCardList';
 
 ## Foundations
 <DocCardList items={[
     { type: 'link', label: 'About Astar', href: '/docs/learn/astar' },
-    { type: 'link', label: 'Astar Tokens', href: '/docs/learn/astar-token' },
+    { type: 'link', label: 'Astar Token', href: '/docs/learn/astar-tokens' },
     { type: 'link', label: 'Accounts', href: '/docs/learn/accounts' },
     { type: 'link', label: 'Polkadot', href: '/docs/learn/architecture/astar-parachain' },
     { type: 'link', label: 'Soneium', href: '/docs/learn/architecture/soneium' },
@@ -31,9 +32,9 @@ import DocCardList from '@theme/DocCardList';
 ## Advanced
 <DocCardList items={[
     { type: 'link', label: 'Tokenomics', href: '/docs/learn/tokenomics2' },
-    { type: 'link', label: 'Networks', href: '/docs/learn/networks' },
+    { type: 'link', label: 'Astar Networks', href: '/docs/learn/networks' },
     { type: 'link', label: 'Multichain Interoperability', href: '/docs/learn/interoperability/xcm' },
     { type: 'link', label: 'Proxy Accounts', href: '/docs/learn/Proxies' },
-    { type: 'link', label: 'Soneium', href: '/docs/learn/Soneium' },
-    { type: 'link', label: 'Architecture', href: '/docs/learn/Architecture' },
+    { type: 'link', label: 'Build on Soneium', href: '/docs/learn/Soneium' },
+    { type: 'link', label: 'Astar Architecture', href: '/docs/learn/Architecture' },
 ]} />

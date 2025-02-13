@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
+sidebar_label: About Astar
+description: About Astar Network and the problems it solves
 ---
 
 # About Astar Network
-
-[Astar Network]: https://astar.network/ 
 
 Astar Network is Japan's most popular smart contract platform, supporting both EVM and WebAssembly (Wasm) environments, and interoperability between them using a Cross-Virtual Machine. Astar Network is friendly to all kinds of developers, and the tools and languages they already know. Backed by the shared security of Polkadot, Astar shines brilliantly on its own within a vibrant and healthy ecosystem, and in the blockchain industry overall driving international corporate adoption, and consumer interest in Web3 technologies.
 
