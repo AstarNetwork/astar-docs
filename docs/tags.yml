@@ -22,3 +22,8 @@ users:
   label: 'Users'
   permalink: '/users'
   description: 'Page with information for users'
+
+astar-evolution:
+  label: 'Astar Evolution'
+  permalink: '/astar-evolution'
+  description: 'Page with information about the Astar Evolution Phase 1.5'
