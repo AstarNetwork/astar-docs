@@ -9,7 +9,9 @@ description: Getting started section of the docs
 
 # Getting Started
 
-Astar is an interoperable blockchain platform for Polkadot and Ethereum ecosystems supporting both Wasm and EVM smart contracts. Astar provides native access to Polkadot and Ethereum through its parachain slot and its direct integration with [**Soneium**](https://soneium.org/en/), while also offering bridges into other major blockchain ecosystems. Through the #Build2Earn program, Astar offers a basic income to dApp developers, and direct funding to projects through an *unstoppable grants* program.
+## Introduction
+
+Astar is an interoperable blockchain platform for [**Polkadot**](https://polkadot.com/) and [**Ethereum**](https://ethereum.org/en/) ecosystems supporting both Wasm and EVM smart contracts. Astar provides native access to Polkadot and Ethereum through its parachain slot and its direct integration with [**Soneium**](https://soneium.org/en/), while also offering bridges into other major blockchain ecosystems. Through the *#Build2Earn program*, Astar offers a basic income to dApp developers, and direct funding to projects through an *unstoppable grants* program.
 
 ## Overview of Docs
 

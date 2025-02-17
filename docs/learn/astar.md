@@ -12,27 +12,27 @@ description: About Astar Network and the problems it solves
 
 ## What is Astar?
 
-Astar Network is the largest Japanese blockchain protocol, enabling the creation of interoperable smart contracts for WebAssembly (Wasm) and EVM environments through its architecture, which is built on and supported by [**Polkadot**](https://polkadot.com/). It provides application developers with a robust suite of tools that streamline development and enhance the overall user experience. Astar stands out in the blockchain industry, driving international corporate adoption and increasing consumer interest in Web3 technologies.
+Astar Network is the largest Japanese blockchain protocol, enabling the creation of interoperable smart contracts for *WebAssembly* (Wasm) and EVM environments through its architecture, which is built on and supported by [**Polkadot**](https://polkadot.com/). It provides application developers with a robust suite of tools that streamline development and enhance the overall user experience. Astar stands out in the blockchain industry, driving international corporate adoption and increasing consumer interest in Web3 technologies.
 
 ## From Blockchain to Collective
 
 ![Astar Evolution Phase 1.5](/docs/learn/blockchain_to_collective.jpg)
 
-Astar is currently expanding its ecosystem, aiming to achieve this through the development of [**Soneium**](/docs/learn/soneium/) while prioritizing these two networks as the core layers of its entire ecosystem while leveraging the interoperability within the [**OP Superchain ecosystem**](https://www.superchain.eco/). Soneium is uniquely positioned to bring millions of people on-chain. With a shared vision and aligned goals among core contributors, Soneium is a natural fit for Astar’s ecosystem expansion driven by the ASTR token.
+Astar is currently expanding its ecosystem, aiming to achieve this through the development of [**Soneium**](/docs/learn/soneium/) while prioritizing these two networks as the core layers of its entire ecosystem while leveraging the interoperability within the [**OP Superchain ecosystem**](https://www.superchain.eco/). Soneium is uniquely positioned to bring millions of people on-chain. With a shared vision and aligned goals among core contributors, Soneium is a natural fit for Astar’s ecosystem expansion driven by the **ASTR** token.
 
 > The Next Chapter of Astar: *Three Core Pillars* ⤵️
 
 ### 1. Astar Interoperability
 
-Astar Network will be fully connected to Soneium through industry-leading interop solutions such as [**Chainlink CCIP**](https://chain.link/cross-chain), which, in extension, apply to the Superchain ecosystem. Through this interoperability, ASTR will be part of today’s most used interconnected network ever built to drive its adoption.
+Astar Network will be fully connected to Soneium through industry-leading interop solutions such as [**Chainlink CCIP**](https://chain.link/cross-chain), which, in extension, apply to the *Superchain ecosystem*. Through this interoperability, ASTR will be part of today’s most used interconnected network ever built to drive its adoption.
 
 ### 2. Astar Token Expansion
 
-The Astar token will play a central place in Soneium as an ecosystem token for major consumer applications and payment solutions. Its use will extend beyond Soneium, reaching the broader Superchain ecosystem and leading Ethereum protocols, amplifying its role in driving on-chain utility and broadening adoption.
+The Astar token will play a central place in **Soneium** as an ecosystem token for major consumer applications and payment solutions. Its use will extend beyond Soneium, reaching the broader Superchain ecosystem and leading Ethereum protocols, amplifying its role in driving on-chain utility and broadening adoption.
 
 ### 3. Astar Decentralized Governance
 
-Astar is evolving from its centralized roots to embrace Governance V1, empowering the community to lead through a decentralized framework.
+Astar is evolving from its centralized roots to embrace *Governance V1*, empowering the community to lead through a decentralized framework.
 
 Through these initiatives, Astar is building momentum to expand the utility of the ASTR token. With Soneium blending web3’s promise with web2’s familiarity, we aim to make dApps and decentralized solutions accessible to everyone, all of which are underpinned by the power of ASTR.
 
