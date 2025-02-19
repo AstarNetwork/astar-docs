@@ -1,85 +1,115 @@
 ---
 sidebar_position: 1
-title: dApp Staking Overview
+tags:
+    - astar
+    - dapp-staking
+    - astar-evolution
+description: Page with dApp information about dApp Staking mechanism
 ---
+
+# dApp Staking
+
+## Overview
 
 *At Astar, we're driven by the mission to transform the internet into a freely owned space by the people, where everyone has inviolable control over their data and assets. This commitment to a user-governed internet lies at the heart of the Web3 vision that inspires us.*
 
+:::info
+
 dApp Staking is a crucial accelerator in realizing the Web3 vision, as it lays the foundation for the development of exceptional dApps for users and fuels the drive towards making Web3 accessible to all.
+
+:::
 
 ## What is dApp Staking
 
-dApp Staking is Astar’s unique mechanism to financially incentivise developers who build decentralized applications (dApps). By engaging in dApp staking, developers can receive a basic income, which allows them to continue building and enhancing their dApps. Moreover, it allows to build a strong relationship between developers, stakers and users of dApps, where everyone is rewarded.
+**dApp Staking** is Astar’s unique mechanism to financially incentivise developers who build decentralized applications (**dApps**). By engaging in dApp staking, developers can receive a basic income, which allows them to continue building and enhancing their dApps. Moreover, it allows to build a strong relationship between developers, stakers and users of dApps, where everyone is rewarded.
 
-dApp staking on the Astar/Shiden Network operates similarly to staking on validators. However, in new paradigm, individuals known as dApp stakers have the ability to stake their Astar or Shiden tokens on specific dApps they wish to support.
+dApp staking on the *Astar/Shiden* Network operates similarly to **staking on validators**. However, in new paradigm, individuals known as **dApp stakers** have the ability to stake their *Astar or Shiden* tokens on specific dApps they wish to support. 
 
-At every block on the network, a portion of the inflation is allocated to dApp staking. This reward is then distributed between the operators (developers) of the dApps and the stakers.
+At every block on the network, a portion of the *inflation* is allocated to dApp staking. This reward is then distributed between the operators (developers) of the dApps and the stakers.
 
-The mechanism is simple: developers earn rewards while building their great projects and attracting supporters, while stakers earn by backing their favorite dApps.
+:::note[How it works?]
+
+The mechanism is simple: developers earn rewards while building their great projects and attracting supporters, while stakers earn by backing their favorite dApps using their ASTR.
+
+:::
 
 ## Benefits of dApp Staking on Astar and Shiden Network
 
-For Web3 to flourish, there needs to be a symbiotic relationship between dApp stakers, dApp developers, and dApp users. On Astar and Shiden, dApp staking is the mechanism that enables this mutually beneficial relationship to occur.
+For Web3 to flourish, there needs to be a *symbiotic relationship* between dApp stakers, dApp developers, and dApp users. On Astar and Shiden, dApp staking is the mechanism that enables this mutually beneficial relationship to occur.
 
 - **Developer Compensation:** Unlike traditional approaches where dApp developers need to rely on grant programs, token issuance, and fundraising efforts to generate income, dApp staking on Astar/Shiden provides developers with a basic income. As long as a dApp has been nominated, developers can receive a steady stream of rewards.
 
 - **Increased Popularity, Increased Reward:** As a dApp gains popularity and attracts more nominators from the community, the developers who built the dApp can receive a larger percentage of the block rewards. This incentivizes developers to create high-quality dApps that resonate with users and foster community engagement.
 
-- **Reduced Dependency on Gas Fees:** Building on other blockchains often entails paying substantial gas fees for transactions and interactions. However, on the Astar and Shiden Network, developers can receive compensation through dApp staking, minimizing their reliance on gas fees and making it more economically feasible to continue dApp development.
+- **Reduced Dependency on Gas Fees:** On the Astar and Shiden Network, developers can receive compensation through dApp staking, minimizing their reliance on gas fees and making it more economically feasible to continue dApp development.
 
-### Benefits for Stakers: Increase in Token Value & Earn Tokens
+:::note[dApp Staking & ASTR]
 
-Astar or Shiden dApp stakers want the value of their tokens to increase but for the value of their tokens to increase, the underlying value of the asset needs to increase.
+The Astar dApp Staking mechanism is the key system that continuously drives the growth of the Astar and Shiden ecosystems. Its primary fuel is ASTR, which organically enables the entire system to function efficiently.
 
-This increase in value can happen when the Network grows or when there are fewer tokens in circulation. This way, stakers can not only make their tokens more valuable over time but also earn high returns (APRs) by staking their tokens on dApps.
+:::
+
+### 1. Benefits for Stakers: Increase in Token Value & Earn Tokens
+
+Astar or Shiden dApp stakers want the value of their tokens to increase but for the value of their tokens to increase, the underlying value of the asset needs to increase. This increase in value can happen when the Network grows or when there are fewer tokens in circulation. Stakers can not only make their tokens more valuable over time but also earn high returns (APRs) by staking their tokens on dApps.
 
 This market dynamic enables dApp stakers to get more long-term value from their tokens while earning high APRs from staking their tokens to dApps.
 
-:::tip
+:::tip[Stakers]
 
-Please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a **Staker**.
+If you want to learn more about participating as a **Staker**, please visit → [**dApp Staking for Stakers**](/docs/use/dapp-staking/for-stakers/) 
 
 :::
 
-### Benefits for Builders: Earn Rewards
+### 2. Benefits for Builders: Earn Rewards
 
 For great dApps to be built, developers need to build them. For developers to build great dApps, they need financial incentives.
 
-Ultimately, the most precious human resource in the Web3 ecosystem are developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure on public blockchains.
+Ultimately, the most **precious human resource** in the Web3 ecosystem are *developers*. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure on public blockchains.
 
 With dApp staking, developers can **earn a basic income** while building dApps on Astar or Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the greater the benefits for the whole ecosystem.
 
-That is why Astar considers it essential to provide developers with financial motivation and to ensure they are able to build and earn simultaneously, focusing on development without additional hustle.
+That is why Astar considers it essential to provide developers with **financial motivation** and to ensure they are able to build and earn simultaneously, focusing on development without additional hustle.
 
-:::tip
+:::tip[Builders]
 
-Please refer to [this section](/docs/use/dapp-staking/for-devs/) to learn more about participating as a **dApp builder**.
+If you want to learn more about participating as a **dApp builder**, visit → [**dApp Staking for builders**](/docs/use/dapp-staking/for-devs/) 
 
 :::
 
-### Benefits for dApp Users: Increase in dApp & Network Utility
+### 3. Benefits for dApp Users: Increase in dApp & Network Utility
 
-dApp staking plays an essential role in improving the quality of the ecosystem, as it facilitates the growth and improvement of dApps. This gives developers the opportunity to generate revenue while building high-quality dApps.
+dApp staking plays an essential role in improving the **quality of the ecosystem**, as it facilitates the growth and improvement of dApps. This gives developers the opportunity to generate revenue while building **high-quality dApps**.
 
 The presence of more high-quality dApps not only attracts and retains more users, but also initiates a network effect. This phenomenon encourages ecosystem expansion and increases the intrinsic value of the network in the long term.
 
-In short, the importance of DApp staking lies in its contribution to the ongoing improvement and greater utility of the ecosystem. The multiplication of high-quality dApps, combined with a growing number of users, results in a network effect that increases the overall value of the ecosystem in the long term.
+In short, the importance of *dApp Staking* lies in its contribution to the ongoing improvement and greater utility of the ecosystem. The multiplication of high-quality dApps, combined with a growing number of users, results in a network effect that increases the overall value of the ecosystem in the long term.
 
-### Understand the terminology and parameters of dApp Staking
+:::tip[dApps]
+
+Meet the dApps that are part of the Astar y Shiden ecosystem → [**Ecosystem dApps**](https://astar.network/ecosystem)
+
+:::
+
+## Understand the terminology and parameters of dApp Staking
 
 To understand how dApp staking v3 works, it’s essential to grasp the following basics:
 
-#### Era
+### Era
 
 `Eras` is a basic time unit in dApp Staking. The length of an Era is 7200 blocks, equivalent to roughly 1 day.
 
-#### Period & Subperiods
+### Period & Subperiods
 
 `Period` is a more lengthy time unit of dApp Staking.  
 
-*To put it simply, if we consider a Period in dApp Staking, it's similar to a concept of a month in human terms , made up of several days (Eras in this case).*
+:::note[Period]
 
-Each Period consists of two Subperiods:
+*To put it simply, if we consider a Period in dApp Staking, it's similar to a concept of a month in human terms, made up of several days (Eras in this case).*
+
+:::
+
+Each `Period` consists of two `Subperiods`:
 
 - Voting
 - Build&Earn

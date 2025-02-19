@@ -27,3 +27,8 @@ astar-evolution:
   label: 'Astar Evolution'
   permalink: '/astar-evolution'
   description: 'Page with information about the Astar Evolution Phase 1.5'
+
+dapp-staking:
+  label: 'Dapp Staking'
+  permalink: '/dapp-staking'
+  description: 'Page with information about Dapp Staking mechanism'
