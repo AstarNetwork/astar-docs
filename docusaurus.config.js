@@ -7,7 +7,7 @@ const darkCodeTheme = themes.dracula;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Welcome to Astar",
-  tagline: "Here you will find documentation on how to develop dApps on Astar.",
+  tagline: "Here you will find documentation on how to develop dApps on Astar Collective.",
   url: "https://docs.astar.network",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -280,7 +280,7 @@ const config = {
           },
           {
             title: "Networks",
-            caption: "Networks accessible within the Astar Ecosystem",
+            caption: "Networks accessible within the Astar Collective Ecosystem",
             url: "https://docs.astar.network/docs/learn/networks",
           },
           {
@@ -326,7 +326,7 @@ const config = {
           {
             title: "Parameters",
             caption:
-              "Parameters such as time, rewards, slot allocations, tier assignments, and thresholds.",
+              "Parameters such as time, rewards, slot allocations, tier assignments and more",
             url: "https://docs.astar.network/docs/learn/dapp-staking/protocol-parameters",
           },
           {
@@ -361,12 +361,12 @@ const config = {
         content: [
           {
             title: "Astar Wallet",
-            caption: "Set up your Ethereum or Polkadot wallet for the Astar Network Ecosystem",
+            caption: "Set up your Ethereum or Polkadot wallet for the Astar Collective Ecosystem",
             url: "https://docs.astar.network/docs/use/manage-wallets/create-wallet",
           },
           {
             title: "Transfer assets",
-            caption: "Transfer assets within and outside the Astar Network Ecosystem",
+            caption: "Transfer assets within and outside the Astar Collective Ecosystem",
             url: "https://docs.astar.network/docs/use/manage-assets/transfer-tokens",
           },
           {
@@ -388,7 +388,7 @@ const config = {
         highlight: {
           single: {
             title: "Astar Portal",
-            caption: "Multi-chain platform hub for asset management",
+            caption: "Multi-chain platform hub for asset management on Astar Network",
             buttonText: "Try it out!",
             buttonUrl: "https://portal.astar.network/",
           },
@@ -401,7 +401,7 @@ const config = {
         content: [
           {
             title: "Introduction",
-            caption: "A Developer's Overview of the Astar Network Ecosystem",
+            caption: "A Developer's Overview of the Astar Collective Ecosystem",
             url: "https://docs.astar.network/docs/build/Introduction/",
           },
           {
@@ -436,7 +436,7 @@ const config = {
           },
           {
             title: "Tutorials",
-            caption: "Learn how to build on Astar Network with our step-by-step tutorials",
+            caption: "Learn how to build on Astar Collective with our step-by-step tutorials",
             url: "https://docs.astar.network/docs/tutorials/",  
           },
           {

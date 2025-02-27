@@ -14,9 +14,9 @@ description: Learn section in the docs
 
 Greetings! We are delighted to welcome you to the educational segment of the Astar Docs.
 
-Whether you're an aspiring developer or a newcomer to the world of blockchain, this section provides comprehensive insights into the inner workings of Astar network. Starting from the basics such as accounts, we delve into the intricate protocols that fuel the functionality of Astar.
+Whether you're an aspiring developer or a newcomer to the world of blockchain, this section provides comprehensive insights into the inner workings of Astar Collective. Starting from the basics such as accounts, we delve into the intricate protocols that fuel the functionality of Astar.
 
-To expand your knowledge about building applications or utilizing various tools on Astar, we recommend exploring the [**Build**](/docs/build) section.
+To expand your knowledge about building applications or utilizing various tools on Astar Collective, we recommend exploring the [**Build**](/docs/build) section.
 
 import DocCardList from '@theme/DocCardList';
 
@@ -38,6 +38,6 @@ import DocCardList from '@theme/DocCardList';
     { type: 'link', label: 'Astar Networks', href: '/docs/learn/networks' },
     { type: 'link', label: 'Multichain Interoperability', href: '/docs/learn/interoperability/xcm' },
     { type: 'link', label: 'Proxy Accounts', href: '/docs/learn/Proxies' },
-    { type: 'link', label: 'Build on Soneium', href: '/docs/learn/Soneium' },
+    { type: 'link', label: 'Build on Soneium', href: '/docs/build/Soneium' },
     { type: 'link', label: 'Astar Architecture', href: '/docs/learn/Architecture' },
 ]} />

@@ -5,14 +5,30 @@ tags:
     - astar
     - intro
     - astar-evolution
-description: About Astar Network and the problems it solves
+description: About Astar and the problems it solves
 ---
 
-# About Astar Network
+# About Astar
 
 ## What is Astar?
 
-Astar Network is the largest Japanese blockchain protocol, enabling the creation of interoperable smart contracts for *WebAssembly* (Wasm) and EVM environments through its architecture, which is built on and supported by [**Polkadot**](https://polkadot.com/). It provides application developers with a robust suite of tools that streamline development and enhance the overall user experience. Astar stands out in the blockchain industry, driving international corporate adoption and increasing consumer interest in Web3 technologies.
+Astar is a collective driving Web3 adoption, seamlessly bridging [**Astar Network**](https://astar.network) and [**Soneium**](https://soneium.org) ecosystems. By combining the strengths of Astar Network and Soneium, Astar Collective is pioneering a vision of interoperability and accessibility, empowering developers and users alike to unlock Web3’s full potential and bring blockchain technology to billions worldwide. Astar is a Web3 innovation collective!
+
+:::note[Soneium]
+
+Read more about Soneium and its key benefits here → [**Soneium**](https://astar.network/blog/astar-evolution-phase-1-56).
+
+:::
+
+## What is Astar Network?
+
+*Astar Network* is an interoperable blockchain originating from Japan, serving as the **governance** and **staking layer** within the **Astar Collective**. It provides a secure and scalable multi-VM environment, supporting smart contracts in *WebAssembly* (Wasm) and EVM. Built on a robust architecture and secure by [**Polkadot**](https://polkadot.com/), Astar Network enables interoperability through the **ASTR token**, which connects its ecosystem with multiple interoperable solutions.
+
+:::note[Polkadot]
+
+Read more about Polkadot and its architecture here → [**Polkadot**](/docs/learn/architecture/astar-parachain.md).
+
+:::
 
 ## From Blockchain to Collective
 
@@ -36,11 +52,15 @@ Astar is evolving from its centralized roots to embrace *Governance V1*, empower
 
 Through these initiatives, Astar is building momentum to expand the utility of the ASTR token. With Soneium blending web3’s promise with web2’s familiarity, we aim to make dApps and decentralized solutions accessible to everyone, all of which are underpinned by the power of ASTR.
 
-:::info
+:::info[Astar Evolution]
 
 Read the entire information here → [**Astar Evolution Phase 1.5**](https://astar.network/blog/astar-evolution-phase-1-5-from-blockchain-to-collective-66)
 
 :::
+
+## So, how does Astar Collective work?
+
+**Astar Network** operates as the governance & staking layer, providing a secure and scalable multi-VM environment, while **Soneium**, an advanced L2 solution developed by [**Sony Block Solutions Labs**](https://www.sonynetwork.co.jp/sonynetworkcomlabs/en/), acts as the adoption layer, leveraging Ethereum's OP Stack for high-speed, low-cost transactions tailored to entertainment and consumer applications. The two ecosystems are seamlessly interconnected through the **ASTR token**, which facilitates interoperability via multiple interoperable solutions. 
 
 ## What problems does Astar solve?
 
@@ -50,7 +70,7 @@ Astar's [**Build2Earn**](https://docs.astar.network/docs/build/#build2earn) syst
 
 Moreover, through the *Unstoppable Community Grant program*, project developers can access substantial financial support, allowing them to earn greater rewards and accelerate the growth of their projects more effectively.
 
-:::info
+:::info[UCG program]
 
 Check out the information about the program here → [**Unstoppable Community Grant program**](https://docs.astar.network/docs/use/governance/unstoppable-community-grant-program)
 
@@ -68,4 +88,4 @@ Astar Network is changing that, and ushering in the next generation of multichai
 
 This interoperability framework, empowered by the shared security of Polkadot, allows developers to use and build smart contracts in ways they never have before. By fostering cooperation and integrations across multiple blockchains and applications, complex synergies can be developed, leading to the realization of truly innovative solutions that can't be replicated in any other environment.
 
-Many different blockchains exist, but few have interoperability as their defining feature. Welcome to Astar Network!
+Many different ecosystems exist, but few have interoperability as their defining feature. Welcome to Astar Collective!
