@@ -25,6 +25,8 @@ To see complete list of functionality, checkout the source code in Astar repo.
 
 7. **DappsStaking** - This proxy type allows delegate account to perform DappStaking related transactions such as register, unregister contracts, claim rewards etc.
 
+8. **Governance** - This proxy type allows delegate account to perform Governance related transactions such as voting on a proposal, reserve funds to create preimages, proposals or treasury requests, etc.
+
 
 **Extrinsics**
 ---
