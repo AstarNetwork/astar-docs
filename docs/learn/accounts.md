@@ -12,9 +12,9 @@ description: Astar accounts
 
 ## Introduction
 
-An account on Astar consists of two parts - a **private key** and a **public key**. A public key is also known as an address of an account because it is accessible and known to the public - just like an e-mail address, for example. A private key is a key to access and manage your address. With that said, anybody can send tokens to your address, but only you can access them with your private key. Therefore, it is crucial to keep your private keys safe at all times and with security backups.
+An account on Astar Network consists of two parts - a **private key** and a **public key**. A public key is also known as an address of an account because it is accessible and known to the public - just like an e-mail address, for example. A private key is a key to access and manage your address. With that said, anybody can send tokens to your address, but only you can access them with your private key. Therefore, it is crucial to keep your private keys safe at all times and with security backups.
 
-:::note[Astar Network accounts]
+:::info[Astar Network accounts]
 
 Astar Network supports two virtual machines (Wasm VM and EVM) and therefore utilizes two account formats: ss58 y H160.
 
@@ -22,11 +22,11 @@ Astar Network supports two virtual machines (Wasm VM and EVM) and therefore util
 
 ## Substrate Accounts
 
-Astar is built with [**Substrate**](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate), a framework to build blockchains, and uses Substrate accounts. Substrate-based chains use the underlying public key to derive one or more public addresses. Instead of using the public key directly, Substrate allows you generate multiple addresses and address formats for an account, meaning you only need to generate your public key, private key pair once and derive different addresses for different Substrate-chains.
+Astar Network is built with [**Substrate**](https://docs.polkadot.com/develop/parachains/intro-polkadot-sdk/#substrate), a framework to build blockchains, and uses Substrate accounts. Substrate-based chains use the underlying public key to derive one or more public addresses. Instead of using the public key directly, Substrate allows you generate multiple addresses and address formats for an account, meaning you only need to generate your public key, private key pair once and derive different addresses for different Substrate-chains. Right now **Polkadot** uses Substrate in its core.
 
 :::info[Info about Substrate]
 
-The Parity Technologies team has merged the Substrate repository and all its information with the Polkadot SDK. Now, if you want to access information about Substrate, you must do so through the → [Polkadot website](https://polkadot.com/platform/sdk)
+The Parity Technologies team has merged the Substrate repository and all its information with the Polkadot SDK. Now, if you want to access information about Substrate, you must do so through the → [**Polkadot website**](https://polkadot.com/platform/sdk).
 
 :::
 
@@ -36,7 +36,7 @@ The address format used in Substrate-based chains like Astar is **ss58**. ss58 i
 
 :::tip[Learn more]
 
-Dive deeper into the topic with this guide → [**Substrate Address Format**](https://wiki.polkadot.network/docs/learn-account-advanced#:~:text=The%20address%20format%20used%20in,format%20is%20the%20MultiAddress%20type.)
+Dive deeper into the topic with this guide → [**Substrate Address Format**](https://wiki.polkadot.network/docs/learn-account-advanced#:~:text=The%20address%20format%20used%20in,format%20is%20the%20MultiAddress%20type.).
 
 :::
 
@@ -49,7 +49,7 @@ You can read more about **Proxy** accounts → [here](/docs/learn/Proxies).
 
 :::tip[Learn more]
 
-Dive deeper into the topic with this guide → [**EVM Accounts**](https://ethereum.org/en/developers/docs/accounts/)
+Dive deeper into the topic with this guide → [**EVM Accounts**](https://ethereum.org/en/developers/docs/accounts/).
 
 :::
 
@@ -60,4 +60,5 @@ import DocCardList from '@theme/DocCardList';
     { type: 'link', label: 'Create a Substrate account', href: '/docs/use/manage-wallets/create-wallet/' },
     { type: 'link', label: 'Create an EVM account', href: '/docs/use/evm-guides/setup-metamask/' },
     { type: 'link', label: 'Read Substrate accounts', href: 'https://docs.substrate.io/learn/accounts-addresses-keys' },
+    { type: 'link', label: 'Create a Proxy account', href: '/docs/use/manage-wallets/pallet-proxy/' },
 ]} />

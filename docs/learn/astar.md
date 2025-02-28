@@ -14,7 +14,7 @@ description: About Astar and the problems it solves
 
 Astar is a collective driving Web3 adoption, seamlessly bridging [**Astar Network**](https://astar.network) and [**Soneium**](https://soneium.org) ecosystems. By combining the strengths of Astar Network and Soneium, Astar Collective is pioneering a vision of interoperability and accessibility, empowering developers and users alike to unlock Web3’s full potential and bring blockchain technology to billions worldwide. Astar is a Web3 innovation collective!
 
-:::note[Soneium]
+:::info[Soneium]
 
 Read more about Soneium and its key benefits here → [**Soneium**](https://astar.network/blog/astar-evolution-phase-1-56).
 
@@ -24,7 +24,7 @@ Read more about Soneium and its key benefits here → [**Soneium**](https://asta
 
 *Astar Network* is an interoperable blockchain originating from Japan, serving as the **governance** and **staking layer** within the **Astar Collective**. It provides a secure and scalable multi-VM environment, supporting smart contracts in *WebAssembly* (Wasm) and EVM. Built on a robust architecture and secure by [**Polkadot**](https://polkadot.com/), Astar Network enables interoperability through the **ASTR token**, which connects its ecosystem with multiple interoperable solutions.
 
-:::note[Polkadot]
+:::info[Polkadot]
 
 Read more about Polkadot and its architecture here → [**Polkadot**](/docs/learn/architecture/astar-parachain.md).
 
@@ -54,7 +54,7 @@ Through these initiatives, Astar is building momentum to expand the utility of t
 
 :::info[Astar Evolution]
 
-Read the entire information here → [**Astar Evolution Phase 1.5**](https://astar.network/blog/astar-evolution-phase-1-5-from-blockchain-to-collective-66)
+Read the entire information here → [**Astar Evolution Phase 1.5**](https://astar.network/blog/astar-evolution-phase-1-5-from-blockchain-to-collective-66).
 
 :::
 
@@ -72,7 +72,7 @@ Moreover, through the *Unstoppable Community Grant program*, project developers 
 
 :::info[UCG program]
 
-Check out the information about the program here → [**Unstoppable Community Grant program**](https://docs.astar.network/docs/use/governance/unstoppable-community-grant-program)
+Check out the information about the program here → [**Unstoppable Community Grant program**](https://docs.astar.network/docs/use/governance/unstoppable-community-grant-program).
 
 :::
 
@@ -84,8 +84,14 @@ The solution to the issue, up until now, has been a patchwork of independent blo
 
 Astar Network is changing that, and ushering in the next generation of multichain smart contracts uniquely able to utilize the best features from both EVM and WebAssembly Virtual Machines, and any number of application-specific blockchains across the broader Polkadot ecosystem. All while being future-proof.
 
+:::info[Astar architecture]
+
+Check here to see how Astar's architecture works → [**Astar architecture**](/docs/learn/architecture/index.md).
+
+:::
+
 ### 3. Interoperability
 
 This interoperability framework, empowered by the shared security of Polkadot, allows developers to use and build smart contracts in ways they never have before. By fostering cooperation and integrations across multiple blockchains and applications, complex synergies can be developed, leading to the realization of truly innovative solutions that can't be replicated in any other environment.
 
-Many different ecosystems exist, but few have interoperability as their defining feature. Welcome to Astar Collective!
+> Many different ecosystems exist, but few have interoperability as their defining feature. Welcome to Astar Collective!

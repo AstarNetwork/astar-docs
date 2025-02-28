@@ -14,9 +14,13 @@ description: Learn section in the docs
 
 Greetings! We are delighted to welcome you to the educational segment of the Astar Docs.
 
-Whether you're an aspiring developer or a newcomer to the world of blockchain, this section provides comprehensive insights into the inner workings of Astar Collective. Starting from the basics such as accounts, we delve into the intricate protocols that fuel the functionality of Astar.
+Whether you're an aspiring developer or a newcomer to the world of blockchain, this section provides comprehensive insights into the inner workings of Astar Collective. Starting from the basics such as accounts, we delve into the intricate protocols that fuel the functionality of Astar Network.
 
-To expand your knowledge about building applications or utilizing various tools on Astar Collective, we recommend exploring the [**Build**](/docs/build) section.
+:::info[Build section]
+
+To expand your knowledge about building applications or utilizing various tools on Astar Collective, we recommend exploring the → [**Build**](/docs/build) section.
+
+:::
 
 import DocCardList from '@theme/DocCardList';
 
