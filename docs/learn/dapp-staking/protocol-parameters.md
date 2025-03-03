@@ -49,6 +49,14 @@ This is again a technical bound, to provide additional security to the pallet.
 Similar to the _minimum lock amount_, but refers to the _stake_ amount.
 It's suggested to keep this value same as the _minimum locked amount_.
 
+### Max Bonus Safe Moves Per Period
+
+The number of authorized safe move actions of the amount staked during the Voting subperiod to remain eligible for the bonus reward.
+Only a limited number of _safe move actions_ are allowed during the `build&earn` subperiod to preserve bonus reward eligibility. Move actions refer to either:
+
+-   A 'partial unstake that decreases the voting stake',
+-   A 'stake transfer between two contracts'. (check previous "Moving Stake Between Contracts" section)
+
 ### Number Of Tiers
 
 Number of distinct tiers in the protocol.
@@ -91,6 +99,7 @@ Length of the circular buffer used to implement the _moving-average_ solution.
 | Unlocking Period                    | 9                      | 4                      | 4                          |
 | Max Number Of Staked Contracts      | 16                     | 16                     | 8                          |
 | Minimum Stake Amount                | 500 ASTR               | 50 SDN                 | 5 SBY                      |
+| Max Bonus Safe Moves Per Period     | 2                      | 2                      | 2                          |
 | Baseline Native Currency Price      | 0.05 USD               | 0.05 USD               | 0.05 USD (mock)            |
 | Number Of Tiers                     | 4                      | 4                      | 4                          |
 | Reward Distribution                 | [25%, 47%, 25%, 3%]    | [25%, 47%, 25%, 3%]    | [40%, 30%, 20%, 10%]       |

@@ -104,6 +104,8 @@ Generally, it’s recommended to claim your rewards once a week.
 
 If a staker staked on a dApp during the `Voting` Subperiod and **keeps the same staked amount or higher** on a dApp through the whole `Build&Earn` Subperiod, they are eligible for the bonus rewards.
 
+Bonus eligibility can be safely transferred between projects, preserving it for a limited number of moves, as defined by `MaxBonusSafeMovesPerPeriod`. Exceeding this limit results in bonus forfeiture for the affected stake.
+
 ### Q: Can my rewards expire?
 
 Unclaimed rewards will eventually expire, so it's important to claim them in time or they'll miss out on earnings.
