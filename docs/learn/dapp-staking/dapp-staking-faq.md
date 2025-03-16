@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: dApp Staking V3 FAQ
 sidebar_label: dApp Staking FAQ
 ---
