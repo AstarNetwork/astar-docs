@@ -1,12 +1,21 @@
 ---
 sidebar_position: 2
 title: dApp Staking Parameters
+tags:
+    - astar
+    - dapp-staking
+    - users
+description: DApp Staking Parameters details
 ---
 
 ## Overview
 
+:::info[Parameters]
+
 The following parameters are tightly tied to dApp staking, however, some parameters are shared with the _Tokenomics 2.0_ model.
-To find out more, please check the documentation [here](/docs/learn/tokenomics2/Inflation/).
+To find out more, please check the documentation → [**here**](/docs/learn/tokenomics2/Inflation/).
+
+:::
 
 ### Era Reward Span Length
 
@@ -83,7 +92,7 @@ There are two types of threshold percentages:
 
 Time period, expressed in blocks, during which native currency price is aggregated. When expired, average value is calculated and stored into the _moving-average_ circular buffer.
 
-## Circular Buffer Length
+### Circular Buffer Length
 
 Length of the circular buffer used to implement the _moving-average_ solution.
 
