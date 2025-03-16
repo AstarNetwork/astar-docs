@@ -10,6 +10,8 @@ description: Page about Astar Network Token
 
 # Astar Token
 
+import Figure from "/src/components/figure"
+
 ## Overview
 
 The native token of Astar Network is **Astar** Token, with the ticker **ASTR**. The initial supply of ASTR was *7,000,000,000* units.  The current tokenomics model of the network is inflationary and the inflation is estimated to be *~665,000,000 yearly*. ASTR token has *18 decimals*. 
@@ -87,7 +89,7 @@ At *Astar Network*, we believe in the power of decentralized decision-making. Th
 
 ## ASTR Utility on Soneium
 
-![ASTR utility on Soneium](/docs/learn/astr-utility-on-soneium.jpg)
+<Figure caption="ASTR utility on Soneium" src={require('/docs/learn/astr-utility-on-soneium.jpg').default } width="100%" />
 
 **Astar Token** extends its utility beyond Astar Network, becoming a key asset within the *Soneium* ecosystem. ASTR on Soneium has the following functions:
 

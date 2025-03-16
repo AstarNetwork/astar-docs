@@ -10,6 +10,8 @@ description: About Astar and the problems it solves
 
 # About Astar
 
+import Figure from "/src/components/figure"
+
 ## What is Astar?
 
 Astar is a collective driving Web3 adoption, seamlessly bridging [**Astar Network**](https://astar.network) and [**Soneium**](https://soneium.org) ecosystems. By combining the strengths of Astar Network and Soneium, Astar Collective is pioneering a vision of interoperability and accessibility, empowering developers and users alike to unlock Web3’s full potential and bring blockchain technology to billions worldwide. Astar is a Web3 innovation collective!
@@ -32,7 +34,7 @@ Read more about Polkadot and its architecture here → [**Polkadot**](/docs/lear
 
 ## From Blockchain to Collective
 
-![Astar Evolution Phase 1.5](/docs/learn/blockchain_to_collective.jpg)
+<Figure caption="Astar Evolution Phase 1.5" src={require('/docs/learn/blockchain_to_collective.jpg').default } width="100%" /> 
 
 Astar is currently expanding its ecosystem, aiming to achieve this through the development of [**Soneium**](/docs/learn/soneium/) while prioritizing these two networks as the core layers of its entire ecosystem while leveraging the interoperability within the [**OP Superchain ecosystem**](https://www.superchain.eco/). Soneium is uniquely positioned to bring millions of people on-chain. With a shared vision and aligned goals among core contributors, Soneium is a natural fit for Astar’s ecosystem expansion driven by the **ASTR** token.
 
