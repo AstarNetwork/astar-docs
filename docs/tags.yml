@@ -1,0 +1,34 @@
+soneium:
+  label: 'Soneium'
+  permalink: '/soneium'
+  description: 'Related section with information about Soneium and its ecosystem'
+
+astar:
+  label: 'Astar'
+  permalink: '/astar'
+  description: 'Related section with information about Astar and its ecosystem'
+
+intro:
+  label: 'Introduction'
+  permalink: '/introduction'
+  description: 'Page with an introduction to the section'
+
+devs:
+  label: 'Developers'
+  permalink: '/developers'
+  description: 'Page with information for developers'
+
+users:
+  label: 'Users'
+  permalink: '/users'
+  description: 'Page with information for users'
+
+astar-evolution:
+  label: 'Astar Evolution'
+  permalink: '/astar-evolution'
+  description: 'Page with information about the Astar Evolution Phase 1.5'
+
+dapp-staking:
+  label: 'Dapp Staking'
+  permalink: '/dapp-staking'
+  description: 'Page with information about Dapp Staking mechanism'
