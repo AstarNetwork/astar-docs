@@ -1,12 +1,14 @@
 ---
 sidebar_position: 1
-title: dApp Staking Tech Overview
+sidebar_label: dApp Staking Tech Overview
 tags:
     - astar
     - dapp-staking
     - devs
 description: Page about dApp Staking Technical details
 ---
+
+# dApp Staking Tech Overview
 
 ## Introduction
 

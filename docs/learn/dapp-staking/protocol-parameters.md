@@ -1,12 +1,14 @@
 ---
 sidebar_position: 2
-title: dApp Staking Parameters
+sidebar_label: dApp Staking Parameters
 tags:
     - astar
     - dapp-staking
     - users
 description: DApp Staking Parameters details
 ---
+
+# dApp Staking Parameters
 
 ## Overview
 

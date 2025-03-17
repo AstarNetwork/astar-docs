@@ -1,6 +1,5 @@
 ---
 sidebar_position: 3
-title: dApp Staking V3 FAQ
 sidebar_label: dApp Staking FAQ
 tags:
     - astar
@@ -10,6 +9,8 @@ description: FAQs section about dApp Staking V3
 ---
 
 import Figure from "/src/components/figure"
+
+# dApp Staking V3 FAQ
 
 ## General Info About Migration From V2 to V3
 
