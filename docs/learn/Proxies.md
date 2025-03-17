@@ -13,7 +13,7 @@ On this page, you will find a detailed overview of the various proxy types, extr
 1. **Any** - This proxy type allows delegate account to make any call that is supported by proxy pallet. This is the highest level of privilege so should always use that with caution.
 
 2. **NonTransfer** - This proxy type allows delegate account to make any call supported by proxy pallet expect for the asset transfer functionalities. This can come handy when you want to keep your funds secure in cold storage and want to delegate all the other functionalities to a proxy account.
-To see complete list of functionality, checkout the source code in Astar repo.
+Currently this type is covering System, Identity, Multisig, Proxy, DappStaking, CollatorSelection, XcAssetConfig and Session transactions (such as `set_keys`) in addition to two specific transactions from Vesting which are `vest` and `vest_other`.
 
 3. **Balances** - This proxy type gives control of handling accounts and balances to the delegate account. Complete list of calls can be found [here](https://docs.rs/pallet-balances/latest/pallet_balances/pallet/enum.Call.html).
 
@@ -26,9 +26,6 @@ To see complete list of functionality, checkout the source code in Astar repo.
 7. **DappsStaking** - This proxy type allows delegate account to perform DappStaking related transactions such as register, unregister contracts, claim rewards etc.
 
 8. **Governance** - This proxy type allows delegate account to perform Governance related transactions such as voting on a proposal, reserve funds to create preimages, proposals or treasury requests, etc.
-
-9. **Session** - This proxy type allows delegate account to perform Session related transactions such as setting keys for a collator node. It's often needed as part of the key rotation process which is documented [here](https://docs.astar.network/docs/build/nodes/collator/spinup_collator/#session-keys). 
-
 
 **Extrinsics**
 ---
