@@ -27,6 +27,8 @@ To see complete list of functionality, checkout the source code in Astar repo.
 
 8. **Governance** - This proxy type allows delegate account to perform Governance related transactions such as voting on a proposal, reserve funds to create preimages, proposals or treasury requests, etc.
 
+9. **Session** - This proxy type allows delegate account to perform Session related transactions such as setting keys for a collator node. It's often needed as part of the key rotation process which is documented [here](https://docs.astar.network/docs/build/nodes/collator/spinup_collator/#session-keys). 
+
 
 **Extrinsics**
 ---
