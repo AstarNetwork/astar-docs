@@ -7,7 +7,7 @@ const darkCodeTheme = themes.dracula;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Welcome to Astar",
-  tagline: "Here you will find documentation on how to develop dApps on Astar.",
+  tagline: "Here you will find documentation on how to develop dApps on Astar Collective.",
   url: "https://docs.astar.network",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -60,7 +60,7 @@ const config = {
     ],
   ],
 
-  //Enable multilanguage support. Portuguese added as first language
+  //Enable multilanguage support.
   i18n: {
     defaultLocale: "en",
     locales: ["en", "ja", "es"],
@@ -72,6 +72,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       navbar: {
         logo: {
           alt: "Astar",
@@ -113,7 +119,7 @@ const config = {
               },
               {
                 label: "Startale Labs",
-                href: "https://astar.network",
+                href: "https://startale.com/en",
               },
               {
                 label: "Astar Japan Lab",
@@ -121,7 +127,7 @@ const config = {
               },
               {
                 label: "Astar 2.0",
-                href: "https://astar.network",
+                href: "https://astar.network/blog/introducing-astar-2.0",
               },
             ],
           },
@@ -130,15 +136,15 @@ const config = {
             items: [
               {
                 label: "Portal",
-                href: "https://astar.network",
+                href: "https://portal.astar.network/",
               },
               {
                 label: "dApp Staking",
-                href: "https://astar.network",
+                href: "https://portal.astar.network/astar/dapp-staking/discover/",
               },
               {
                 label: "Ecosystem",
-                href: "https://astar.network",
+                href: "https://astar.network/ecosystem/",
               },
             ],
           },
@@ -147,11 +153,23 @@ const config = {
             items: [
               {
                 label: "Start Building",
-                href: "https://astar.network",
+                href: "https://docs.astar.network/docs/build/Introduction/",
+              },
+              {
+                label: "Integrations",
+                href: "https://docs.astar.network/docs/build/integrations/",
+              },
+              {
+                label: "Tutorials",
+                href: "https://docs.astar.network/docs/tutorials/",
+              },
+              {
+                label: "Soneium",
+                href: "https://docs.astar.network/docs/build/soneium/",
               },
               {
                 label: "Docs",
-                to: "https://astar.network",
+                to: "https://docs.astar.network/docs/getting-started/",
               },
             ],
           },
@@ -160,23 +178,23 @@ const config = {
             items: [
               {
                 label: "Community",
-                href: "https://astar.network",
+                href: "https://astar.network/community",
               },
               {
                 label: "Blog",
-                href: "https://astar.network",
+                href: "https://astar.network/blog",
               },
               {
                 label: "Become our Agent",
-                href: "https://astar.network",
+                href: "https://startale.notion.site/Astar-Space-Club-2024-5e396c75fcf34d698baf288d9aa9230f",
               },
               {
                 label: "Discord Community",
-                href: "https://astar.network",
+                href: "https://discord.gg/astarnetwork",
               },
               {
                 label: "Astar Forum",
-                href: "https://astar.network",
+                href: "https://forum.astar.network/",
               },
             ],
           },
@@ -185,15 +203,15 @@ const config = {
             items: [
               {
                 label: "Brand Asset Kit",
-                href: "https://astar.network",
+                href: "https://astar.network/brand-asset-kit",
               },
               {
                 label: "Careers",
-                href: "https://astar.network",
+                href: "https://startale.com/en/career",
               },
               {
                 label: "Contact Us",
-                href: "https://astar.network",
+                href: "https://astar.network/contact",
               },
             ],
           },
@@ -202,11 +220,11 @@ const config = {
             items: [
               {
                 label: "Privacy Policy",
-                href: "https://astar.network",
+                href: "https://astar.network/privacy-policy",
               },
               {
                 label: "Terms of Use",
-                href: "https://astar.network",
+                href: "https://astar.network/term-of-use",
               },
             ],
           },
@@ -243,7 +261,7 @@ const config = {
       },
     }),
   customFields: {
-    searchTags: ["dApp Staking", "smart contracts", "IDE", "zkEVM", "API", "Faucet", "Oracles"],
+    searchTags: ["dApp Staking", "Soneium", "API", "smart contracts", "IDE", "Faucet", "Oracles"],
     tabs: [
       {
         label: "About Astar",
@@ -252,17 +270,17 @@ const config = {
         content: [
           {
             title: "About Astar Network",
-            caption: "Japan's Scalable, Interoperable Smart Contract Platform",
+            caption: "Japan's Scalable, Interoperable and Descentralized Smart Contract Platform",
             url: "https://docs.astar.network/docs/learn/astar",
           },
           {
             title: "Architecture",
-            caption: "Ecosystem Architecture: Ethereum zkEVM Layer 2 & Polkadot Parachain",
+            caption: "Ecosystem Architecture: Polkadot Parachain and Ethereum Optimistic L2",
             url: "https://docs.astar.network/docs/learn/architecture/",
           },
           {
             title: "Networks",
-            caption: "Networks accessible within the Astar Ecosystem",
+            caption: "Networks accessible within the Astar Collective Ecosystem",
             url: "https://docs.astar.network/docs/learn/networks",
           },
           {
@@ -276,9 +294,9 @@ const config = {
             url: "https://docs.astar.network/docs/learn/tokenomics2/",
           },
           {
-            title: "Astar zkEVM",
-            caption: "Layer 2 scaling solution connected to AggLayer",
-            url: "https://docs.astar.network/docs/learn/zkEVM/",
+            title: "Soneium",
+            caption: "Ethereum Optimistic Rollup connected to the Superchain Ecosystem",
+            url: "https://docs.astar.network/docs/learn/soneium/",
           },
         ],
         highlight: {
@@ -308,7 +326,7 @@ const config = {
           {
             title: "Parameters",
             caption:
-              "Parameters such as time, rewards, slot allocations, tier assignments, and thresholds.",
+              "Parameters such as time, rewards, slot allocations, tier assignments and more",
             url: "https://docs.astar.network/docs/learn/dapp-staking/protocol-parameters",
           },
           {
@@ -343,22 +361,22 @@ const config = {
         content: [
           {
             title: "Astar Wallet",
-            caption: "Set up your Ethereum or Polkadot wallet for the Astar Ecosystem",
+            caption: "Set up your Ethereum or Polkadot wallet for the Astar Collective Ecosystem",
             url: "https://docs.astar.network/docs/use/manage-wallets/create-wallet",
           },
           {
             title: "Transfer assets",
-            caption: "Transfer assets within and outside the Astar Ecosystem",
+            caption: "Transfer assets within and outside the Astar Collective Ecosystem",
             url: "https://docs.astar.network/docs/use/manage-assets/transfer-tokens",
           },
           {
-            title: "Astar zkEVM",
-            caption: "Explore and utilize the Layer 2 Astar zkEVM",
-            url: "https://docs.astar.network/docs/use/zkevm-guides/",
+            title: "Soneium",
+            caption: "Explore and leverage Soneium, an Ethereum L2 solution",
+            url: "https://docs.astar.network/docs/use/soneium/",
           },
           {
             title: "dApp Staking",
-            caption: "How ASTR holders or project owners can take part in dApp Staking",
+            caption: "How ASTR holders or project owners can take part in dApp Staking program",
             url: "https://docs.astar.network/docs/use/dapp-staking/",
           },
           {
@@ -370,7 +388,7 @@ const config = {
         highlight: {
           single: {
             title: "Astar Portal",
-            caption: "Multi-chain platform hub for asset management",
+            caption: "Multi-chain platform hub for asset management on Astar Network",
             buttonText: "Try it out!",
             buttonUrl: "https://portal.astar.network/",
           },
@@ -383,7 +401,7 @@ const config = {
         content: [
           {
             title: "Introduction",
-            caption: "A Developer's Overview of the Astar Ecosystem",
+            caption: "A Developer's Overview of the Astar Collective Ecosystem",
             url: "https://docs.astar.network/docs/build/Introduction/",
           },
           {
@@ -397,9 +415,9 @@ const config = {
             url: "https://docs.astar.network/docs/build/environment/",
           },
           {
-            title: "Astar zkEVM",
-            caption: "Everything you need to build on Astar zkEVM Layer 2",
-            url: "https://docs.astar.network/docs/build/zkEVM/",
+            title: "Soneium",
+            caption: "Everything you need to build on Soneium and use its toolings",
+            url: "https://docs.astar.network/docs/build/soneium/",
           },
           {
             title: "Integrations",
@@ -416,6 +434,16 @@ const config = {
             caption: "Build and deploy a smart contract using the EVM tech stack",
             url: "https://docs.astar.network/docs/build/EVM/",
           },
+          {
+            title: "Tutorials",
+            caption: "Learn how to build on Astar Collective with our step-by-step tutorials",
+            url: "https://docs.astar.network/docs/tutorials/",  
+          },
+          {
+            title: "Astar Beta Labs",
+            caption: "experimental technologies and features that are still in development",
+            url: "https://docs.astar.network/docs/build/astar-beta-labs/",
+          }
         ],
         highlight: {
           multi: [

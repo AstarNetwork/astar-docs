@@ -1,12 +1,20 @@
 ---
-sidebar_position: 2
-title: dApp Staking V3 FAQ
+sidebar_position: 3
 sidebar_label: dApp Staking FAQ
+tags:
+    - astar
+    - dapp-staking
+    - users
+description: FAQs section about dApp Staking V3
 ---
 
 import Figure from "/src/components/figure"
 
+# dApp Staking V3 FAQ
+
 ## General Info About Migration From V2 to V3
+
+:::info[V3 Migration]
 
 These are major remarks about the migration:
 
@@ -17,10 +25,20 @@ These are major remarks about the migration:
   - **It’s important for stakers to stake again their tokens to continue earning rewards**.
 - Once V3 is deployed, V2 will be removed.
 
+:::
+
 If any of the terms above are unclear to you (e.g. _staking_ vs _locking_) you can find detailed exaplanation the following sections:
 
-- [Tokenomics 2.0](/docs/learn/tokenomics2/)
-- [dApp Staking V3 Technical Overview](/docs/learn/dapp-staking/dapp-staking-protocol/)
+:::tip[Tokenomics 2.0]
+
+Learn more about Astar Tokenomics here → [**Tokenomics 2.0**](/docs/learn/tokenomics2/)
+
+:::
+:::tip[DApp Staking V3]
+
+Learn more about technical details here → [**dApp Staking V3 Technical Overview**](/docs/learn/dapp-staking/dapp-staking-protocol/)
+
+:::
 
 ### Practical explanation with an example:
 
@@ -44,7 +62,11 @@ User's stake on a dApp must be equal or greater than the MinimumStakeAmount (**5
 
 ### Q: How do I participate in dApp Staking?
 
-You can stake on your favorite dApp(s) on [Astar Portal](https://portal.astar.network/astar/dapp-staking/discover).
+:::tip[Astar Portal]
+
+You can stake on your favorite dApp(s) on → [**Astar Portal**](https://portal.astar.network/astar/dapp-staking/discover).
+
+:::
 
 The user-friendly interface will allow you to track how many tokens you have available to stake, your stakes, accumulated rewards, current phase, and more. You can lock, unlocks, stake, unstake and move your tokens between dApps directly on the Portal.
 
@@ -62,7 +84,11 @@ In order to participate, user must have a `MinimumLockedAmount` of native curren
 
 ### Q: Does locking bring rewards?
 
-**❗ Locking doesn't bring any rewards, unless tokens are staked.**
+:::warning[Important]
+
+❗ Locking doesn't bring any rewards, unless tokens are staked.
+
+:::
 
 Your tokens remain **locked**, but **not staked** in the following cases:
 
@@ -74,7 +100,11 @@ Please remember that you have to stake during these phases to continue getting r
 
 You can unstake tokens at any time without a specific process, but **unstaking during an era excludes those tokens from that era's reward calculation**.
 
+:::info[Unstaking]
+
 Unstaking reduces the staked amount immediately for both the current and next eras. Similar to staking, you must claim all unclaimed rewards before you can unstake.
+
+:::
 
 ### Q: How do I unlock my tokens?
 
@@ -82,7 +112,11 @@ You can unlock your tokens whenever you choose. Unlocking your tokens also autom
 
 The tokens will have to go through the unlocking process that will be initiated *automatically*. This is a common mechanism to mitigate selling pressure.
 
-**There's no need for any separate actions to initiate the unlocking of your tokens.**
+:::warning[Important]
+
+There's no need for any separate actions to initiate the unlocking of your tokens.
+
+:::
 
 Once unlocking is complete, you can then withdraw these tokens to your free balance.
 
@@ -90,7 +124,11 @@ Once unlocking is complete, you can then withdraw these tokens to your free bala
 
 If you stake during the dedicated **Voting Subperiod**, you qualify for bonus rewards as long as you maintain or increase your staked amount during the following Build&Earn Subperiod. Bonus rewards can be claimed after the period ends.
 
+:::info[Bonus reward]
+
 If you stake during any era of **Build&Earn Subperiod**, the staked amount is only eligible for rewards from the next era onward.
+
+:::
 
 ### Q: When can I claim my rewards?
 
@@ -108,7 +146,11 @@ Bonus eligibility can be safely transferred between projects, preserving it for 
 
 ### Q: Can my rewards expire?
 
+:::warning[Important]
+
 Unclaimed rewards will eventually expire, so it's important to claim them in time or they'll miss out on earnings.
+
+:::
 
 We encourage stakers’ engagement. This way, failing to actively revisit dApp staking at the start of each new period to select dApps for staking means missing out on bonus rewards and earnings.
 
@@ -124,24 +166,29 @@ Once V3 is launched, all of the unclaimed V2 rewards will become inaccessible. P
 
 However, to prevent users from loosing long accumulated rewards, a special state will be introduced into V2: **Decommission Mode** during which it will be possible that someone else can claim other stakers' rewards (and pay fees).
 
-:::note
+:::note[Example]
 
-**Example:**  
 Using the special calls, anyone will be able to claim rewards for anyone else. E.g. `Alice` can claim rewards for `Bob` - this essentially means that `Alice` pays for the transaction fee to claim `Bob's`. Of course, `Bob's` rewards are deposited into his account, not `Alice's`.
 
 :::
 
 Astar team will ensure that all pending rewards are claimed during the decommissioning. We won’t launch V3 until all unclaimed rewards have been claimed.
 
-:::info
-Please refer to [this Astar Forum discussion](https://forum.astar.network/t/dapp-staking-migration-from-v2-to-v3/5807) for all the details regarding unclaimed rewards.
+:::info[Unclaimed Rewards]
+
+Please refer to this → [**Astar Forum discussion**](https://forum.astar.network/t/dapp-staking-migration-from-v2-to-v3/5807) for all the details regarding unclaimed rewards.
+
 :::
 
 ### Q: What should you do to prepare for dApp Staking V3 migration?
 
 *All you should do to prepare for dApp Staking V3 launch is to claim your rewards.* Nothing else is required from your side.
 
-**❗ Staker’s locked tokens will be migrated, but stakes WILL NOT.**
+:::warning[Important]
+
+❗ Staker’s locked tokens will be migrated, but stakes WILL NOT.
+
+:::
 
 As a staker, you will need to pick which dApp(s) to stake on again. **It’s important to do so to continue earning rewards.**
 
@@ -161,14 +208,27 @@ The process of application and registration for dApps will not change.
 
 Please, find more information here:
 
-- Requirements: https://docs.astar.network/docs/use/dapp-staking/for-devs/requirements;
-- Registration: https://docs.astar.network/docs/use/dapp-staking/for-devs/register-dapp.
+:::tip[Requirements]
 
-***❗ Once the dApp has been registered, stakers can stake on it immediately, and the dApp can earn rewards from the era in which it was registered.***
+Astar dApp Staking application requirements → [**Refer here**](https://docs.astar.network/docs/use/dapp-staking/for-devs/requirements)
+
+:::
+
+:::tip[Registration]
+
+Astar dApp Staking registration process → [**Refer here**](https://docs.astar.network/docs/use/dapp-staking/for-devs/register-dapp)
+
+:::
+
+:::warning[Important]
+
+❗ Once the dApp has been registered, stakers can stake on it immediately, and the dApp can earn rewards from the era in which it was registered.
+
+:::
 
 ### Q: How do I manage my dApp & claim rewards?
 
-When you participate in dApp Staking, you have all the information about your dApp available on [Astar Portal](https://portal.astar.network/astar/dapp-staking/discover), in *“Your Project”* tab.
+When you participate in dApp Staking, you have all the information about your dApp available on [**Astar Portal**](https://portal.astar.network/astar/dapp-staking/discover), in *“Your Project”* tab.
 
 There you can find your current tier, number of stakers, total earned (total stakes) and your rewards.
 
@@ -196,8 +256,10 @@ Inform your community and stakers that they should be active once dApp Staking V
 
 ### Q: I am a Ledger Astar Native App User, what do I need to do?
 
-:::danger
-For Ledger users who use the native account ([Astar Native App](https://support.ledger.com/hc/en-us/articles/10971402968733-Astar-ASTR)), dApp staking V3 will be temporarily unavailable.
+:::danger[Critical]
+
+For Ledger users who use the native account [**Astar Native App**](https://support.ledger.com/hc/en-us/articles/10971402968733-Astar-ASTR), dApp staking V3 will be temporarily unavailable.
+
 :::
 
 This is due to how Ledger app works & what is currently being developed.
@@ -208,18 +270,20 @@ Ledger users will still be able to withdraw funds from dApp staking, they only w
 Ledger is currently developing a new generic app for all Polkadot/Kusama parachains, and that should be available soon (within months). Once that’s available, Ledger native users will be able to participate in dApp staking V3.
 
 **What can I do right now?**
-If you wish to actively participate in dApp Staking v3 from the start, you should [initiate the unbonding period immediately](https://docs.astar.network/docs/use/dapp-staking/dapp-staking-v2/unbonding) and move your funds to either an Astar EVM Account supported by Ledger (see below), or move funds to a hot wallet.
+If you wish to actively participate in dApp Staking v3 from the start, you should [**initiate the unbonding period immediately**](https://docs.astar.network/docs/use/dapp-staking/dapp-staking-v2/unbonding) and move your funds to either an Astar EVM Account supported by Ledger (see below), or move funds to a hot wallet.
 
-:::info
+:::info[Ledger generic app]
+
 It is possible that by the dApp staking v3 launch Ledger generic app will be available, completely removing this limitation.
 
 Keep an eye out on this page and official announcement channels for more info as it becomes available.
+
 :::
 
 ### Q: I am a Ledger Astar EVM App User, what do I need to do?
 
-All users using Astar EVM Ledger App ([Astar EVM](https://support.ledger.com/hc/en-us/articles/5555310160669-Astar-EVM-ASTR)) users, there are not limitations moving to dApp Staking V3. You will be able to participate in dApp staking V3 immediately.
+All users using Astar EVM Ledger App [**Astar EVM**](https://support.ledger.com/hc/en-us/articles/5555310160669-Astar-EVM-ASTR) users, there are not limitations moving to dApp Staking V3. You will be able to participate in dApp staking V3 immediately.
 
 ### Still got a question?
 
- Ask us a question via [Discord](https://discord.com/invite/astarnetwork) or [Stack Exchange](https://substrate.stackexchange.com/questions/tagged/astar) (please use tag Astar).
+ Ask us a question via [**Discord**](https://discord.com/invite/astarnetwork) or [**Stack Exchange**](https://substrate.stackexchange.com/questions/tagged/astar) (please use tag Astar).

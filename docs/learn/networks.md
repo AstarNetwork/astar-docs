@@ -1,50 +1,92 @@
 ---
 sidebar_position: 6
+sidebar_label: Astar Networks
+tags:
+    - astar
+    - users
+    - devs
+description: Page with the Astar Networks
 ---
 
 # Networks
-Prior to commencing development, it's important to understand the Astar Network family, and choose an appropriate network based on what you would like to do. Currently, there are a number of networks available, including the Local network which runs exclusively within your development environment. All networks support Substrate and EVM RPCs.
+
+## Overview
+
+Prior to commencing development, it's important to understand the **Astar Network family**, and choose an appropriate network based on what you would like to do. Currently, there are a number of networks available, including the Local network which runs exclusively within your *development environment*. All networks support **Substrate** and **EVM RPCs**.
 
 ## Local Networks
 
-### Substrate Node
-You can clone the Astar repository and run the local node provided, or download the precompiled binary and run it, instead. Both methods are described in the [Build](/docs/build) section.
+### 1. Substrate Node
 
-### Zombienet
+You can clone the Astar repository and run the local node provided, or download the precompiled binary and run it, instead. 
 
-With Zombienet users can download arbitrary Relay Chain and parachain binaries (or use images) to setup a configurable local test network. Users will have access to all privileged actions on the Relay Chain and parachains, which simplifies testing. For more information about Zombienet, check out the [Build Environment](https://docs.astar.network/docs/build/environment/zombienet-testing) chapter.
+:::tip[Local node]
+
+Both methods are described in → [**Running Local Network**](/docs/build/environment/local-network.md) page.
+
+:::
+
+### 2. Zombienet
+
+With Zombienet users can download arbitrary Relay Chain and parachain binaries (or use images) to setup a configurable local test network. Users will have access to all privileged actions on the Relay Chain and parachains, which simplifies testing. 
+
+:::tip[Zombienet]
+
+For more information about Zombienet, check out the → [**Build Environment**](https://docs.astar.network/docs/build/environment/zombienet-testing) chapter.
+
+:::
 
 ## Testnets
 
-### Shibuya (Substrate)
+### 1. Shibuya (Astar Network)
 
-Shibuya has nearly the same chain specifications as Shiden & Astar, and provides an ideal environment for developers to test and debug, prior to launching their dApp on mainnet.
-Shibuya is running as a parachain of the Tokio Relay Chain, which is managed internally by the Astar team, and supports Shibuya, only, as test parachain.
+Shibuya has nearly the same *chain specifications* as **Shiden** & **Astar**, and provides an ideal environment for developers to *test and debug*, prior to launching their dApp on mainnet. Shibuya is running as a parachain of the **Tokio Relay Chain**, which is managed internally by the Astar team, and supports Shibuya, only, as test parachain.
+
+:::info[Shibuya Token]
 
 The Shibuya native token symbol is SBY.
 
-To obtain test tokens from the faucet, please visit the Astar Portal and connect to Shibuya. If for any reason the faucet is empty, please contact the Astar team on Discord.
+:::
+:::tip[Get SBY]
 
-### zKyoto (Sepolia) (Deprecated)
+There are ways to get SBY for testing purposes. Check it out here → [**Get SBY tokens**](/docs/build/environment/faucet.md).
 
-zKyoto was connected to the Ethereum Sepolia testnet and Polygon AggLayer. Testing ground for dApps deployed on the Astar zkEVM. This testnet has now been transitioned to [Soneium Minato](https://docs.soneium.org/).
+:::
+
+### 2. Minato (Soneium)
+
+Minato is the testnet version of **Soneium**, a layer-2 solution for Ethereum developed by **Sony Block Solutions Labs**. It serves as a public blockchain development environment that's accessible to all developers and creators interested in building applications. 
+
+Through Minato you can create dApps and more that will be able to interact with the **superchain ecosystem**.
+
+:::info[Minato Token]
+
+The token used on Minato is ETH.
+
+:::
+:::tip[Get ETH]
+
+There are ways to get ETH for testing purposes. Check it out here → [**Get ETH tokens**](https://www.alchemy.com/faucets/soneium-minato).
+
+:::
 
 ## Mainnets
 
-Astar Collective, with the ASTR token, supports three mainnets:
+**Astar Collective**, with the ASTR token, supports two mainnets:
 
 1. Astar Network (Parachain) 
-2. Astar zkEVM (soon to be deprecated)
-3. Soneium
+2. Soneium (Ethereum L2)
 
-### Astar Network (Parachain)
+:::warning[Astar zkEVM]
 
-Astar parachain is connected to Polkadot Relay chain supporting WASM & EVM smart contract deployments.
-The Astar native token symbol is ASTR.
+Astar zkEVM is still considered an Astar ecosystem network but will soon be deprecated. It is planned to be discontinued as of April 1st.
 
-### Astar zkEVM
+:::
 
-Astar zkEVM is an Ethereum Layer 2 network, powered by Polygon CDK. Technically referred to as Validium, it combines zk rollup technology with modular data availability. Next phase for Astar zkEVM is the transition to Soneium.
+### 1. Astar Network (Parachain)
 
-### Soneium
-Soneium is a next-generation blockchain ecosystem designed to invoke emotion and empower creativity. It was founded by Sony Group Corporation, a global technology leader, and Startale, a Web3 innovator. Soneium stands as a versatile, general-purpose blockchain ready to serve diverse needs across all verticals and support users globally. Astar and it's token ASTR will play a crucial role in the ecosystem as driven asset.
+Astar parachain is connected to **Polkadot Relay chain** supporting WASM & EVM smart contract deployments. The Astar native token symbol is **ASTR**.
+
+### 2. Soneium (Ethereum L2)
+
+Ethereum Rollup created with the **OP Stack** and connected to the **Superchain**. It is also directly connected to Astar Network through the **ASTR** token via **CCIP**.
