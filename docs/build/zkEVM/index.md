@@ -1,23 +1,30 @@
 # Build on Astar zkEVM
 
-## What is Astar zkEVM?
+:::danger
 
-Astar zkEVM is an Ethereum Layer-2 scaling solution leveraging Polygon's Chain Development Kit and cutting edge zero-knowledge cryptography to enable off-chain transaction execution, with finality and security guarantees provided by Ethereum. In coordination with our key partners, Astar zkEVM is well-positioned to take advantage of the extensive developer base and well-established toolset existing in the Ethereum ecosystem, and boasts the following key features:
+As of [March 31, 2025](https://x.com/AstarNetwork/status/1906658995538194650), the Astar zkEVM has been officially deprecated and is no longer accessible to users or developers.
 
-- **Lower Transaction Fees compared to Ethereum** - Due to the transaction batching, as explained above.
-- **Full EVM-equivalence** - Not only EVM compatibility; Equivalence. Smart contracts that work on Ethereum also work on Astar zkEVM.
-- **Native Account Abstraction** - The Astar zkEVM provides native features designed to revolutionize the end-user experience, and make it seamless. See the [Account Abstraction section](/docs/build/zkEVM/integrations/account-abstraction/) to learn more about how to refine the end-user experience.
-- **Recognized Partners** - Established names and brands that developers trust power the Astar zkEVM. See the [integrations section](/docs/build/zkEVM/integrations/) for more information about 3rd party service providers.
-- **Interoperability and Exposure** - With Astar zkEVM, we are supporting interoperability between the Ethereum and Polkadot ecosystems, uniting communities, and empowering web3 accessibility through a common Multichain vision.
-- **Established Tools and Libraries** - Compatible with the tools web3 developers already know how to use, such as Remix, Hardhat, and Open Zeppelin.
+- All bridges to and from Astar zkEVM have been disabled, and asset transfers are no longer supported.
 
-## Section Overview
+- Both public and private RPC endpoints have been shut down, preventing any further transaction submissions.
 
-The following sections walk through the process of setting up a development environment and introduce common tools and partner services useful for powering highly scalable dApps and seamless user onboarding experiences on the Astar zkEVM.
+If you have any outstanding concerns or require assistance, please reach out through ou [Discord](https://discord.com/invite/astarnetwork).
 
-<br/>
+For more details, see the official announcement on the [Astar Forum](https://forum.astar.network/t/astar-zkevm-sunsetting-migration-plan/7780). 
 
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
+ :::
 
-<DocCardList items={useCurrentSidebarCategory().items}/>
+## What is Astar zkEVM? 
+
+Astar zkEVM is a Layer-2 scaling solution leveraging Polygon's zero-knowledge technology and Aggregation Layer (AggLayer) to facilitate off-chain execution and data availability, otherwise known as a **Validium**, with finality guaranteed by Ethereum. This approach synthesizes the benefits of both fully integrated (monolithic) as well modular architectures, combining the best features of each. 
+
+Astar zkEVM serves as a versatile solution for global enterprises, accelerating the adoption of blockchain technology not only in Japan, but on a global scale. 
+
+In coordination with our key partners, Astar zkEVM is well-positioned to take advantage of the extensive developer base and well-established toolset existing in the Ethereum ecosystem, and boasts the following key features:
+
+- **Some of the lowest transaction fees in the Ethereum ecosystem** - Off-chain transaction batching and data availability provides some of the lowest costs for transacting in the Ethereum ecosystem.
+- **Full EVM-equivalence** - Smart contracts that work on Ethereum also work on Astar zkEVM.
+- **Native Account Abstraction** - The Astar zkEVM provides native features designed to revolutionize the end-user experience and make it seamless.
+- **Top-Tier Infrastructure Integrations** - Established names and brands that developers trust power the Astar zkEVM. 
+- **Interoperability and Exposure** - With Astar zkEVM, we are supporting interoperability between the Ethereum, Polkadot, and Polygon ecosystems, uniting communities through a common vision.
+- **Established Tools and Libraries** - The zkEVM is compatible with tools and libraries developers already know how to use, such as Remix, Hardhat, and Open Zeppelin. 
