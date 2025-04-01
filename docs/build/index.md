@@ -23,7 +23,7 @@ Astar network's innovative Build2Earn program allows developers to earn a basic 
 See the [Wasm chapter](/docs/build/wasm) for more information.
 
 ## EVM smart contracts
-Solidity developers feel right at home building on Astar in both the Polkadot and Ethereum ecosystems. See the [EVM](/docs/build/EVM) or [zkEVM](/docs/build/zkEVM) sections for more information.
+Solidity developers feel right at home building on Astar in both the Polkadot and Ethereum ecosystems. See the [EVM](/docs/build/EVM) section for more information.
 
 ## Secured by Polkadot and Ethereum
 Polkadot and Ethereum networks provide some of the best security guarantees in the web3 industry.
