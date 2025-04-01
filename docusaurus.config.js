@@ -275,11 +275,6 @@ const config = {
             caption: "Astar Tokenomics: Inflation and Fees Model",
             url: "https://docs.astar.network/docs/learn/tokenomics2/",
           },
-          {
-            title: "Astar zkEVM",
-            caption: "Layer 2 scaling solution connected to AggLayer",
-            url: "https://docs.astar.network/docs/learn/zkEVM/",
-          },
         ],
         highlight: {
           single: {
@@ -352,11 +347,6 @@ const config = {
             url: "https://docs.astar.network/docs/use/manage-assets/transfer-tokens",
           },
           {
-            title: "Astar zkEVM",
-            caption: "Explore and utilize the Layer 2 Astar zkEVM",
-            url: "https://docs.astar.network/docs/use/zkevm-guides/",
-          },
-          {
             title: "dApp Staking",
             caption: "How ASTR holders or project owners can take part in dApp Staking",
             url: "https://docs.astar.network/docs/use/dapp-staking/",
@@ -395,11 +385,6 @@ const config = {
             title: "Build Environment",
             caption: "Set up a local environment tailored to your development requirements",
             url: "https://docs.astar.network/docs/build/environment/",
-          },
-          {
-            title: "Astar zkEVM",
-            caption: "Everything you need to build on Astar zkEVM Layer 2",
-            url: "https://docs.astar.network/docs/build/zkEVM/",
           },
           {
             title: "Integrations",
