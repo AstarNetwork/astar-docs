@@ -10,7 +10,7 @@ As of [March 31, 2025](https://x.com/AstarNetwork/status/1906658995538194650), t
 
 - Both public and private RPC endpoints have been shut down, preventing any further transaction submissions.
 
-If you have any outstanding concerns or require assistance, please reach out through ou [Discord](https://discord.com/invite/astarnetwork).
+If you have any outstanding concerns or require assistance, please reach out through our [Discord](https://discord.com/invite/astarnetwork).
 
 For more details, see the official announcement on the [Astar Forum](https://forum.astar.network/t/astar-zkevm-sunsetting-migration-plan/7780). 
 

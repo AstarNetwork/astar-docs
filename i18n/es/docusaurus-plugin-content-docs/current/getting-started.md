@@ -11,7 +11,6 @@ Astar es una plataforma blockchain interoperable para los ecosistemas de Polkado
 - [**Construir**](/docs/build) - Proporciona los recursos que necesitas para empezar a construir, probar, desplegar e interactuar con contratos inteligentes en la red Astar.
 - [**EVM**](/docs/build/EVM) - Profundiza en la EVM en Astar y explica cómo los contratos inteligentes EVM pueden interactuar con módulos no EVM y la máquina virtual Wasm a través de [precompilados](https://docs.astar.network/docs/build/EVM/precompiles/).
 - [**Wasm**](/docs/build/wasm) - Provee una visión general del [stack de Wasm](https://docs.astar.network/docs/build/wasm/smart-contract-wasm) en Astar, [Marcos de trabajo para contratos Wasm](/docs/build/wasm/dsls), y [Swanky Suite](/docs/build/wasm/swanky-suite/).
-- [**zkEVM**](/docs/build/zkEVM) - Contiene todo lo que los desarrolladores necesitan saber para empezar a construir sobre la solución de escalado Layer 2 de Astar para Ethereum.
 - [**Nodos**](/docs/build/nodes) - Explica cómo gestionar nodos completos, recopiladores, indexadores y todo lo relacionado con la infraestructura.
 - [**XCM**](/docs/learn/interoperability/xcm) - Explica cómo se utiliza XCM en Astar y también cómo los desarrolladores pueden utilizarlo para interactuar con el resto de la red Polkadot.
 - [**Integraciones**](/docs/build/integrations/) - Proporciona información relevante sobre las billeteras, indexadores y oráculos integrados en la red.

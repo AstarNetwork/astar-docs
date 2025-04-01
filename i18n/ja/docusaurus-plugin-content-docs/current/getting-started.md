@@ -14,8 +14,6 @@ Astar は、Polkadot および Ethereum エコシステム向けの相互運用�
 
 - [**Wasm**](/docs/build/wasm) - Astar 上の[Wasm stack](https://docs.astar.network/docs/build/wasm/smart-contract-wasm)、[Wasm contract frameworks](/docs/build/wasm/dsls)、および[Swanky Suite](/docs/build/wasm/swanky-suite/)の概要をご提供します。
 
-- [**zkEVM**](/docs/build/zkEVM) - Astar の Ethereum 向け Layer 2 スケーリングソリューションで構築を始めるために開発者が知っておくべき内容を全てまとめています。
-
 - [**Nodes**](/docs/build/nodes) - インフラストラクチャに関連するフルノード、コレーター、インデクサなどの実行方法について説明します。
 
 - [**XCM**](/docs/learn/interoperability/xcm) - XCM が Astar でどのように使用され、開発者がそれを利用して Polkadot ネットワーク上のその他のエコシステムとどのようにやりとりできるかについて説明します。
