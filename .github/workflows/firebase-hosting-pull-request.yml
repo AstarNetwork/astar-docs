@@ -28,3 +28,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ASTAR_DOCS }}'
           projectId: astar-docs
+          firebaseToolsVersion: 13.35.1
