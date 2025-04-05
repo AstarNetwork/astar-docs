@@ -40,6 +40,7 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 |         | OnFinality: https://astar.api.onfinality.io/public |
 |         | RadiumBlock: https://astar.public.curie.radiumblock.co/http, get started [here](https://www.radiumblock.com) |
 |         | Automata 1RPC: https://1rpc.io/astr, get started [here](https://www.1rpc.io) |
+|         | All That Node: Get started [here](https://www.allthatnode.com/protocol/astar.dsrv) |
 | Websocket | Astar Team: wss://rpc.astar.network |
 |           | Alchemy: Get started [here](https://www.alchemy.com/astar) |
 |           | BlastAPI: wss://astar.public.blastapi.io |
@@ -47,6 +48,7 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 |           | OnFinality: wss://astar.api.onfinality.io/public-ws |
 |           | RadiumBlock: wss://astar.public.curie.radiumblock.co/ws, get started [here](https://www.radiumblock.com) |
 |           | Automata 1RPC: wss://1rpc.io/astr, get started [here](https://www.1rpc.io) |
+|           | All That Node: Get started [here](https://www.allthatnode.com/protocol/astar.dsrv) |
 | chainID | 592 |
 | Symbol | ASTR |
 
