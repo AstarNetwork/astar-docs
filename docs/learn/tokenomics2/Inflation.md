@@ -161,7 +161,7 @@ a single cycle.
 | Treasury Part                | 5%    | 5%     | 5%      |
 | Collators Part               | 3.2%  | 3.2%   | 3%      |
 | dApps Part                   | 13%   | 13%    | 20%     |
-| Base Staker Part             | 25%   | 10%    | 25%     |
-| Adjustable Staker Part       | 40%   | 58.8%  | 35%     |
+| Base Staker Part             | 10%   | 10%    | 25%     |
+| Adjustable Staker Part       | 55%   | 58.8%  | 35%     |
 | Bonus Part                   | 13.8% | 10%    | 12%     |
 | Ideal Staking Rate           | 50%   | 50%    | 20%     |
