@@ -381,6 +381,39 @@ Enable EVM tracing log:
 --wasm-runtime-overrides /var/lib/astar/wasm
 ```
 
+### Use SQL db for Frontier Back-end
+
+It is possible to choose between using RocksDB or SQL for the Frontier Back-end.     
+SQL offers better performance over RocksDb for indexing and querying Ethereum logs.
+
+The default is RocksDB, but you can choose SQL by adding the following command line argument:
+
+```
+--frontier-backend-type sql
+```
+
+This will run default values for SQL configuration.
+
+To override the default configs values, we provide those flags:
+```
+# sets the Frontier SQL backend's maximum number of database connections that a connection pool can simultaneously handle.
+# The default is 100
+--frontier-sql-backend-pool-size 100
+
+# sets the Frontier SQL backend's query timeout in number of VM operations.
+# The default is 10000000
+--frontier-sql-backend-num-ops-timeout 10000000
+
+# sets the Frontier SQL backend's auxiliary thread limit.
+# The default is 4
+--frontier-sql-backend-thread-count 4
+
+# sets the Frontier SQL backend's cache size in bytes.
+# The default value is 200MB, which is 209715200 bytes
+--frontier-sql-backend-cache-size 209715200
+```
+
+
 ### External monitoring
 
 ```
