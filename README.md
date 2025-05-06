@@ -23,6 +23,7 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 
 ### Setup: First time only
 
+  - Fork the repo 
   - Clone repo `git clone https://github.com/astarnetwork/astar-docs`
   - Install dependencies by running `yarn` (`cd astar-docs` , `yarn` )
   - `yarn start` - spin up a realtime website that updates dynamically based on your changes to the code.
