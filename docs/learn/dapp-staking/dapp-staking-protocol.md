@@ -310,16 +310,23 @@ The comparison is always done between the _baseline_ number of slots (determined
 
 $new\_threshold = base\_threshold * (1 + \Delta\%_{threshold})$
 
-There are now two types of tier entry thresholds:
+There are two types of tier entry thresholds:
 
-* `Dynamic` - A percentage of the total issuance as staked funds that can change between periods. It includes a minimum percentage that the threshold cannot fall below. This type is used for _higher_ tiers.
+* `Dynamic` - A percentage of the total issuance as staked funds that can change between periods. It includes:
+    - A **minimum** percentage that the threshold cannot fall below
+    - A **maximum** percentage cap that limits how high the threshold can grow
+
+This type is used for _higher_ tiers.
+
 * `Fixed` - A constant percentage of the total issuance as staked funds, which does not change between periods. Used for the _lowest_ tier, and defines a static value.
 
 These percentages are calculated based on a total issuance of **8.4 billion ASTR** tokens when dApp Staking V3 was launched. As the total issuance changes (e.g. burn events), the dynamic thresholds will adjust accordingly, ensuring a fair and adaptive staking environment.
 
-For example, suppose the total issuance is **8.4 billion** ASTR tokens. For **Tier 1**, the dynamic threshold percentage is set at **3.57%** (*approximately 299,880,000 ASTR*), with a minimum required percentage of **2.38%** (*approximately 199,920,000 ASTR*). If the total issuance decreases due to a burn event, the threshold adjusts accordingly. For example, if the total issuance drops to **8.0 billion** ASTR, the **Tier 1** threshold adjusts to:
+For example, suppose the total issuance is **8.4 billion** ASTR tokens. For **Tier 1**, the dynamic threshold percentage is set at **3.57%** (*approximately 299,880,000 ASTR*), with a minimum required percentage of **2.38%** (*approximately 199,920,000 ASTR*) and a maximum possible percentage set according to network parameters. If the total issuance decreases due to a burn event, the threshold adjusts accordingly. For example, if the total issuance drops to **8.0 billion** ASTR, the **Tier 1** threshold adjusts to:
 
 $new\_threshold = 3.57\% * 8.0 billion = 285,600,000\ ASTR$
+
+The maximum cap ensures that during periods of high competition or changing token price conditions, tier thresholds don't grow beyond reasonable limits, maintaining accessibility for dApps.
 
 If the number of slots changes, the threshold is further adjusted based on the delta percentage formula.
 
