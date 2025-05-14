@@ -37,7 +37,7 @@ This market dynamic enables dApp stakers to get more long-term value from their 
 
 :::tip
 
-Please refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a **Staker**.
+Please refer to [this section](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/) to learn more about participating as a **Staker**.
 
 :::
 
@@ -53,7 +53,7 @@ That is why Astar considers it essential to provide developers with financial mo
 
 :::tip
 
-Please refer to [this section](/docs/use/dapp-staking/for-devs/) to learn more about participating as a **dApp builder**.
+Please refer to [this section](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/) to learn more about participating as a **dApp builder**.
 
 :::
 
@@ -131,7 +131,7 @@ You can always view in what tier the dApp is in the Projects Leaderboard on the 
 
 :::tip
 
-Find out more about the Tier system for dApps [here](/docs/use/dapp-staking/for-devs/#tier-system-and-rewards).
+Find out more about the Tier system for dApps [here](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/#tier-system-and-rewards).
 
 :::
 
@@ -145,9 +145,9 @@ As a result, stakers are rewarded for their commitment and staking efforts.
 
 :::tip
 
-- If you are **ASTR or SDN token holder** interested in **staking**, refer to [this section](/docs/use/dapp-staking/for-stakers/) to learn more about participating as a staker.
+- If you are **ASTR or SDN token holder** interested in **staking**, refer to [this section](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/) to learn more about participating as a staker.
 
-- If you are a **dApp developer** building on Astar, refer to [this section](/docs/use/dapp-staking/for-devs/) to learn more about participating as a dApp builder.
+- If you are a **dApp developer** building on Astar, refer to [this section](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/) to learn more about participating as a dApp builder.
 
 - For detailed **technical overview** of dAppStaking protocol, visit this [page](/docs/learn/dapp-staking/dapp-staking-protocol/).
 
