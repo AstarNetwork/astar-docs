@@ -1,65 +1,131 @@
 ---
 sidebar_position: 1
+sidebar_label: Requirements to Join
+title: Requirements to Join dApp Staking
 ---
 
 import Figure from "/src/components/figure"
 
-# Requirements
+# Requirements to Join dApp Staking
 
-**Are you a project owner and want to list your dApp in our staking mechanism to earn rewards?**  
+## Astar dApp Staking Program Qualification Criteria
 
-Please read these guidelines carefully. If you meet all the requirements, please reach out to us on [Discord](https://discord.com/invite/astarnetwork) or on post your proposal on the [Astar Forum](https://forum.astar.network/).
+To qualify for the Astar dApp Staking program, your project must meet one or more of the following criteria:
 
-:::info
+---
 
-Astar is aiming to become a DAO in a couple of years. While moving towards becoming a DAO our dApp staking onboarding also includes passing our council. The dApp staking application process is as stated below: 
-:::
+### 1. Astar Native/EVM Projects
 
-### Astar Network
+Your project must be:
 
-- Your dApp is **launched and live on Astar Network**
-- Does your project contribute to Astar TVL? Make sure you are listed on [DefilLama] (/docs/build/integrations/dapp-listing/defillama.md).
-- List your project on [DappRadar](/docs/build/integrations/dapp-listing/dappradar.md).
-- Your dApp has #astar-network, #dAppStaking tags in your GitHub repo.
-- You need to create a PR to the Ecosystem Page. As our website is open-source, you can contribute directly to it - just create a PR on your own! [Here](https://github.com/AstarNetwork/astarwebsite_v2/blob/349db39d724b57f58fbee84b3fa500bf0d29bee6/components/Header.vue)
-- If you wish to have your project listed on Astar website [ecosystem page](https://astar.network/community/ecosystem), fill in this [FORM](https://forms.gle/xsGUnCt3fm4isWWF7).
-- Create your proposal to join dApp staking on our [forum](https://forum.astar.network/c/initiatives/dapp-staking-applications/21). For creating your proposal, you can take inspiration from the following [template](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/requirements.md#template-for-dapp-staking-application). 
-- After the proposal is created, we will get the community to discuss. You are expected to answer all the questions. This will take around 4-5 days.
-- The voting will be opened after the discussion period.
-- For now, only the forum members with `Trust Level 2` and above are allowed to vote.
-- After the voting is passed, you are should follow the registration instructions in the [Register dApp](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/register-dapp) page. 
+- Live and deployed on **Astar Network** — either **Astar Native (WASM)** or **Astar EVM**.
+- Functioning with an accessible product.
+- Providing clear value to the Astar ecosystem, such as:
+  - Integration of the **ASTR token** (utility, payments, staking, etc.)
+  - Driving adoption through tools, use cases, community building, or innovative applications.
 
-#### What about infrastructure partners?
+### 2. Infrastructure or Tooling Providers
 
-You don’t have any dApp but you are providing infrastructure services to the Astar ecosystem. You also can be added to dApp staking.
+Projects offering **essential infrastructure**, tooling, wallets, or middleware — even without a public-facing dApp — are welcome.
 
-- You already have a long-term partnership with Astar and a close relationship with some projects.
-- You have a proven record in our ecosystem.
-- You have docs about how to use your tools in our documentation and in yours. You can add instructions to our documentation by creating a PR on our Github.
-- Create a proposal to join dApp staking on our [forum](https://forum.astar.network/c/initiatives/dapp-staking-applications/21). For creating your proposal, you can take inspiration from the following [template](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/requirements.md#template-for-dapp-staking-application).
-- After the proposal is created, we will get the community to discuss. You are expected to answer all the questions. This will take around 4-5 days.
-- The voting will be opened after the discussion period.
-- For now, only the forum members with Trust Level 2 and above are allowed to vote.
-- After the voting is passed, you are should follow the registration instructions in the [Register dApp](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/register-dapp) page. 
+**Requirements:**
+- Proven track record.
+- Active engagement with the Astar ecosystem.
 
-#### What about other projects who can't meet the above requirements?
+### 3. External Blockchain Projects
 
-You can't add your project to DefilLama because it's not generating any TVL, also DappRadar is not an option because there is no use of smart contracts? These are the current steps to follow:
+*(e.g., Soneium, Ethereum, Polkadot, Other Parachains)*
 
-- Be active in our community Discord channel and post your project updates in our dedicated `#project discussion` channel.
-- Create a proposal to join dApp staking on our [forum](https://forum.astar.network/c/initiatives/dapp-staking-applications/21). For creating your proposal, you can take inspiration from the following [template](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/requirements.md#template-for-dapp-staking-application).
-- After the proposal is created, we will get the community to discuss. You are expected to answer all the questions. This will take around 4-5 days.
-- The voting will be opened after the discussion period.
-- For now, only the forum members with Trust Level 2 and above are allowed to vote.
-- After the voting is passed, you are should follow the registration instructions in the [Register dApp](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/register-dapp.md) page. 
+Projects not deployed directly on Astar but part of its broader ecosystem must:
 
-### Shiden Network
+- Integrate the **ASTR token** in a meaningful way (payment method, in-app utility, or incentive mechanism).
+- Offer clear and measurable value to ASTR or Astar Collective.
+- Demonstrate efforts to promote visibility, usage, and adoption of ASTR through marketing, documentation, or user incentives.
 
-- Your dApp is **launched and live on Shiden Network**.
-- Does your project contribute to the growth of Shiden it would be great to list your project on DappRadar and or DefilLama. This is not a requirement but it would help grow the trust for your project with our community.
-- Infrastructure partners who are contributing to our ecosystem and need to cover their costs can apply to our dApp staking mechanism on Shiden.
+### 4. Other Projects (Non-dApp / Non-Smart Contract Based)
 
-### Template for dApp Staking application
+Projects that don’t use smart contracts or don’t fall into the above categories may still qualify if:
+
+- They bring **measurable value** to Astar and the ASTR token.
+- Actively engage with the Astar community (Forum, Discord, Telegram, X).
+- Introduce the project on the **[Astar Forum](https://forum.astar.network/)** and participate in discussions.
+
+> **Note**: Community feedback plays a key role in evaluating eligibility.
+
+### Additional Expectations for External Projects
+
+Projects deployed outside the Astar Network must demonstrate:
+
+- A clear commitment to the ecosystem with regular updates (monthly/quarterly) on platform progress, ASTR utility, and contributions.
+- A **published roadmap** aligning with Astar’s long-term mission.
+- Measurable **impact metrics or milestones**.
+- Participation in ecosystem growth (content, marketing, onboarding, liquidity programs, cross-chain collaboration).
+
+#### Examples of Meaningful ASTR Contributions
+
+- Displaying **ASTR** on your dApp interface or documentation.
+- Using ASTR as a **payment method**, gas token, or in-app currency.
+- Incentive mechanisms using ASTR (discounts, staking bonuses, exclusive access).
+- Marketing/communications that promote ASTR or Astar Collective.
+- Liquidity pools or TVL involving ASTR (on Astar or bridged networks).
+- Direct/bridged integration with Astar or connected parachains (e.g., Polkadot, Soneium).
+- Community campaigns or content spotlighting ASTR or Astar Collective.
+
+---
+
+## Technical & Ecosystem Checklist
+
+To strengthen your application, ensure you:
+
+- Are listed on **[DefiLlama](https://defillama.com/)** (if contributing to TVL).
+- Are listed on **[DappRadar](https://dappradar.com/)** (if you have daily active users).
+- Have **verified smart contracts** on Astar Native, EVM, Soneium, Ethereum or Polkadot.
+- Tag your GitHub repo with `#astar-network` and `#dAppStaking`.
+- (For infrastructure/tools) Submit a PR to [Astar Documentation](https://github.com/AstarNetwork/astar-docs) to be listed.
+
+---
+
+## Application Process
+
+### 1. Community Introduction
+
+- Create a topic on the **[Astar Forum](https://forum.astar.network/)** introducing your project and interest in joining dApp Staking.
+- Use existing proposals or templates for inspiration.
+- Engage with community questions and feedback.
+
+> **Minimum discussion period**: 5–7 days before proceeding to an onchain vote.
+
+### 2. Pre-Vote Requirements
+
+Include in your forum post:
+
+- An **Astar Native developer wallet** (non-EVM, no Ledger) with enough ASTR for gas fees.
+- A **verified smart contract** on [Astar Native (WASM)](https://astar.subscan.io/) or [Astar EVM](https://astar.blockscout.com/).
+
+### 3. Voting Options
+
+You can choose **one of two paths** to approval:
+
+#### Option A: Community Council Review
+
+- Submit your application on the **[Astar Forum](https://forum.astar.network/)**, tagging `@CommunityCouncil`.
+- Council review occurs within **2 weeks**.
+- If approved, your project is **whitelisted for dApp Staking**.
+
+#### Option B: Public Referendum
+
+- Submit a **public proposal** on [Subsquare](https://app.subsquare.io).
+- If passed, your project will be **whitelisted**.
+
+### 4. Whitelisting & Registration
+
+Once approved:
+
+- Your project is **whitelisted onchain**.
+- You can **register** for dApp Staking.
+- Follow the official [registration guide](https://docs.astar.network) for instructions.
+
+## Template for dApp Staking application
 
 :::info
 
@@ -75,6 +141,6 @@ You can't add your project to DefilLama because it's not generating any TVL, als
 **dApp Staking Reward Usage Breakdown:**  Describe how you will use the rewards you earn with dApp Staking;  
 **Appendix:** Links to your projects, products and communities
 
-Being as specific and detailed as possible in your proposal will help council members to make their decisions, and be sure to answer any questions they may have when discussing your application.
-
 :::
+
+Being as specific and detailed as possible in your proposal will help comnmunity members to make their decisions, and be sure to answer any questions they may have when discussing your application.
