@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 sidebar_label: Arthswap
 title: Buying ASTR on a DEX using Arthswap
 ---
