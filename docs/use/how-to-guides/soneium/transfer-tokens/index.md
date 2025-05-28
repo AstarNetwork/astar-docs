@@ -4,7 +4,7 @@ title: How to make transfers on Soneium
 
 ## 1. Overview
 
-This section provides a practical guide for transferring tokens between **Soneium** and other blockchain networks, including **Astar Network**, **Ethereum**, compatible Layer-2 protocols and the **Superchain**.
+This section provides practical guides for transferring tokens between **Soneium** and other blockchain networks, including **Astar Network**, **Ethereum**, compatible Layer-2 protocols and the **Superchain**.
 
 ## 2. What you'll learn
 
