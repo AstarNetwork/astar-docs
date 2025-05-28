@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 
 ## 1. Overview
 
-In this guide, you’ll learn how to transfer **ASTR** tokens from **Astar Network (L1)** to **Soneium (L2)** using the bridge on the **Astar Portal** and the [**Subwallet**](https://www.subwallet.app/) and [**Zerion**](https://zerion.io/) wallets. To complete this tutorial, you’ll need:
+In this guide, you’ll learn how to transfer **ASTR** tokens from **Astar Network** to **Soneium (L2)** using the bridge on the **Astar Portal** and the [**Subwallet**](https://www.subwallet.app/) and [**Zerion**](https://zerion.io/) wallets. To complete this tutorial, you’ll need:
 
 - A wallet that supports the **Substrate** format (we’ll use Subwallet)
 - A wallet that supports the **EVM** format (we’ll use Zerion)
@@ -22,7 +22,7 @@ To create and set up your wallets properly, use → [**this guide**](/docs/use/g
 :::
 :::tip Get ASTR tokens
 
-To acquire ASTR tokens through a DEX or CEX, follow [**this guide**](/docs/use/how-to-guides/layer-1/get-astr-token/index.md) in our documentation.
+To acquire ASTR tokens through a DEX or CEX, follow [**this guides**](/docs/use/how-to-guides/layer-1/get-astr-token/index.md) in our documentation.
 
 :::
 
@@ -33,25 +33,23 @@ This guide assumes you already:
 
 We’ll now walk through the full transfer process step by step.
 
----
-
 ## 2. Guide to Transfer ASTR from Astar to Soneium
 
 ### Step 1: Access the Astar Portal
 
 Go to our [**Astar Portal**](https://portal.astar.network/astar/assets), the site where you can manage your funds and accounts within **Astar Network**.
 
-<Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/astar-to-soneium-1.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/astar-to-soneium/astar-to-soneium-1.png').default} width="100%" />
 
 Select the network, in this case, **Astar (L1)**.
 
-<Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/astar-to-soneium-2.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/astar-to-soneium/astar-to-soneium-2.png').default} width="100%" />
 
 ### Step 2: Send ASTR from Substrate to EVM
 
 Click the **"Send"** button to initiate a transfer from your Substrate account.
 
-<Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/astar-to-soneium-3.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/astar-to-soneium/astar-to-soneium-3.png').default} width="100%" />
 
 You’ll be redirected to the **Transfer Assets** section.
 
