@@ -134,7 +134,7 @@ Once you sign, if everything is correct, you’ll see a message confirming the s
 
 Now that we’ve sent the funds to Astar L1, let’s connect our Substrate wallet to complete the final steps before your funds become available.
 
-### Step 8: Connect Substrate
+### Step 8: Connect to Substrate
 
 Click on the Wallet button.
 
