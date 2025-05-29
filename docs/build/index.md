@@ -17,7 +17,7 @@ Astar is a interoperable smart contract platform providing native access to both
 ✅ Global Standard NFT Marketplace & DEX (Dew, Rarible, Quickswap) <br/>
 
 ## Build2Earn
-Astar network's innovative Build2Earn program allows developers to earn a basic income while they build out their products and communities. Users are able to support projects by staking on them, which adds to the passive income developers earn and forms the basis of an *unstoppable grant*. Build2Earn encourages projects to stand out and provide value directly to end-users. See the [dApp staking section](/docs/use/dapp-staking/) for more information.
+Astar network's innovative Build2Earn program allows developers to earn a basic income while they build out their products and communities. Users are able to support projects by staking on them, which adds to the passive income developers earn and forms the basis of an *unstoppable grant*. Build2Earn encourages projects to stand out and provide value directly to end-users. See the [dApp staking section](/docs/use/how-to-guides/layer-1/dapp-staking/) for more information.
 
 ## Wasm smart contracts
 See the [Wasm chapter](/docs/build/wasm) for more information.
