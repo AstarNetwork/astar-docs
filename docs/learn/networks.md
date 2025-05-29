@@ -30,7 +30,7 @@ To obtain test tokens from the faucet, please visit the Astar Portal and connect
 Astar Collective, with the ASTR token, supports three mainnets:
 
 1. Astar Network (Parachain) 
-2. Astar zkEVM (soon to be deprecated)
+2. Astar zkEVM (deprecated)
 3. Soneium
 
 ### Astar Network (Parachain)

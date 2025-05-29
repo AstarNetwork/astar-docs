@@ -4,19 +4,26 @@ sidebar_label: Get Started
 title: Get Started on Astar network
 ---
 
-Welcome to the **Get Started** section.
+Explore the different wallet providers available on Astar Network, both Native and EVM, including MetaMask, Ledger, Polkadot\{.js\}, and SubWallet.
 
-Explore various wallet providers available on Astar Network Native and EVM, including Metamask, Ledger, Polkadot\{.js\}, Talisman, or Subwallet.
-
-Follow our easy guides to set them up according to your needs (browser, multisig. mobile. etc). 
+Follow our simple guides to set them up based on your needs—whether you're using a browser extension, mobile app, or multisig setup.
 
 ### Get Started:
 - [Astar EVM - Choose your wallet](/docs/use/get-started/astar-evm-wallet/index.md):
-    - *Wallet*
+    - [Metamask](/docs/use/get-started/astar-evm-wallet/wallet/metamask/install-metamask.md)
+    - [Ledger](/docs/use/get-started/astar-evm-wallet/wallet/ledger/index.md)
 - [Astar Substrate - Choose your wallet](/docs/use/get-started/astar-substrate-wallet/index.md):
-    - *Wallet*
-    - *Mobile wallet*
-    - *Multisig wallet*
+    - Browser extension wallets:
+        - [Polkadot\{.js\}](/docs/use/get-started/astar-substrate-wallet/wallet/polkadot.js/install-polkadot-js.md)
+        - [Ledger](/docs/use/get-started/astar-substrate-wallet/wallet/ledger/index.md)
+        - [Metamask Snap](/docs/use/get-started/astar-substrate-wallet/wallet/metamask-snap/index.md)
+        - [Subwallet](/docs/use/get-started/astar-substrate-wallet/wallet/subwallet/index.md)
+        - [Enkrypt](/docs/use/get-started/astar-substrate-wallet/wallet/enkrypt/index.md)
+    - Mobile wallet:
+        - [Math Wallet](/docs/use/get-started/astar-substrate-wallet/mobile-wallet/math-wallet/index.md)
+    - Multisig wallet:
+        - [Polkadot\{.js\}](/docs/use/get-started/astar-substrate-wallet/multisig-wallet/polkadot.js/index.md)
+        - [PolkaSafe](/docs/use/get-started/astar-substrate-wallet/multisig-wallet/polkaSafe/index.md)
 
 Start quickly and securely on Astar Network.
 
