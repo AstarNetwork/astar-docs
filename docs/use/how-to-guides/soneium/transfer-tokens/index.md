@@ -1,5 +1,5 @@
 ---
-title: How to make transfers on Soneium
+title: How to transfer on Soneium
 ---
 
 ## 1. Overview

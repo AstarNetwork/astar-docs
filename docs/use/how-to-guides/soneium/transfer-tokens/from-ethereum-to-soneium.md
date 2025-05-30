@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 sidebar_label: From Ethereum to Soneium
 title: Transfer from Ethereum and L2s to Soneium
 description: Transfer tokens from Ethereum to Soneium.
@@ -19,9 +19,9 @@ We’ll explore three recommended bridge platforms for this purpose:
 
 Before you begin, ensure you have:
 
-- A wallet that supports EVM networks (e.g., [**Metamask**](https://metamask.io/), [**Zerion**](https://zerion.io/), etc.)
-- ETH for gas fees on the source chain
-- Tokens in your wallet on Ethereum or another supported L2 (Arbitrum, Base, OP Mainnet, etc.)
+- A wallet that supports **EVM** networks (e.g., [**Metamask**](https://metamask.io/), [**Zerion**](https://zerion.io/), etc.).
+- **ETH** for gas fees on the source chain.
+- Tokens in your wallet on **Ethereum** or another supported **L2** (Arbitrum, Base, OP Mainnet, etc.).
 
 :::info Wallet Setup
 

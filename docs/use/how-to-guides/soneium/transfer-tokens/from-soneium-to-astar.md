@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 sidebar_label: From Soneium to Astar
 title: Transfer from Soneium to Astar
 description: Transfer tokens from Soneium to Astar Network.
@@ -22,15 +22,15 @@ To set up your wallet on Soneium, follow → [**this guide**](https://docs.sonei
 :::
 :::tip Get ASTR tokens
 
-If you want to acquire ASTR tokens on the Soneium using your local currency, follow [**this guide**](https://ramp.alchemypay.org/#/index).
+If you want to acquire ASTR tokens on the Soneium using your local currency, use [**Alchemy Pay**](https://ramp.alchemypay.org/#/index).
 
 :::
 
 This guide assumes you already:
 
-- Have both **wallets** set up
-- Hold ASTR tokens in your **Soneium wallet**
-- Have some **ETH** to cover  gas fees
+- Have both **wallets** set up.
+- Hold ASTR tokens in your **Soneium wallet**.
+- Have some **ETH** to cover  gas fees.
 
 We’ll now walk through the full transfer process step by step.
 

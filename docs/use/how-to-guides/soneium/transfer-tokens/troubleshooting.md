@@ -1,7 +1,7 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 sidebar_label: Troubleshooting
-title: Soneium Troubleshooting Guide
+title: Transfer Troubleshooting Guide
 description: Solve common Soneium transfer issues.
 ---
 

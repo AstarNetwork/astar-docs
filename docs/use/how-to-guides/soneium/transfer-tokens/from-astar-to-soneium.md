@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 sidebar_label: From Astar to Soneium
 title: Transfer from Astar to Soneium
 description: Transfer tokens from Astar Network to Soneium.
@@ -28,8 +28,8 @@ To acquire ASTR tokens through a DEX or CEX, follow [**this guides**](/docs/use/
 
 This guide assumes you already:
 
-- Have both **wallets** set up
-- Hold ASTR tokens in your **Substrate wallet** on Astar
+- Have both **wallets** set up.
+- Hold ASTR tokens in your **Substrate wallet** on Astar.
 - You have a bit of extra ASTR tokens for the fees.
 
 We’ll now walk through the full transfer process step by step.
