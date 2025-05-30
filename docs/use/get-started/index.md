@@ -4,9 +4,11 @@ sidebar_label: Get Started
 title: Get Started on Astar network
 ---
 
+Welcome to the **Get Started** section.
+
 Explore the different wallet providers available on Astar Network, both Native and EVM, including MetaMask, Ledger, Polkadot\{.js\}, and SubWallet.
 
-Follow our simple guides to set them up based on your needs—whether you're using a browser extension, mobile app, or multisig setup.
+Follow our simple guides to set them up based on your needs, whether you're using a browser extension, mobile app, or multisig setup.
 
 ### Get Started:
 - [Astar EVM - Choose your wallet](/docs/use/get-started/astar-evm-wallet/index.md):

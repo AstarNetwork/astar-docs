@@ -52,18 +52,6 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 
 </TabItem>
 
-<TabItem value="astarzk" label="Astar zkEVM" default>
-
-|   | Public endpoint Astar zkEVM |
-| --- | --- |
-| Network | Astar zkEVM (Astar L2 mainnet) |
-| Parent chain | Ethereum |
-| ChainID | 3776 |
-| HTTPS | Startale Labs: https://rpc.startale.com/astar-zkevm |
-| Symbol | ETH |
-
-</TabItem>
-
 <TabItem value="shiden" label="Shiden Network" default>
 
 |   | Public endpoint Shiden |
