@@ -168,12 +168,12 @@ After a few seconds, you’ll see your amount reflected in the **available** sec
 
 To wrap up, here’s a video tutorial that will guide you through the step-by-step process in case anything wasn’t clear. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
 
-<!-- <iframe 
+<iframe 
   width="100%" 
   height="400" 
-  src="https://www.youtube.com/link-here" 
+  src="https://www.youtube.com/embed/fMnoiigHzy8"
   title="Transfer ASTR from Soneium to Astar L1" 
   frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowFullScreen
-/> -->
+/>

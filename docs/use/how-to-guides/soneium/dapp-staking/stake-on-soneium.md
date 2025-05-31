@@ -40,6 +40,8 @@ We’ll now walk through the full transfer process step by step.
 
 ## 2. Neemo Finance
 
+<Figure caption="" src={require('/docs/use/how-to-guides/soneium/dapp-staking/images/neemo-soneium.jpeg').default} width="100%" />
+
 ### 1. What is Neemo Finance
 
 [**Neemo Finance**](https://neemo.finance/) is a liquid staking and restaking protocol built on the **Soneium** network. It enables users to stake their **ASTR** tokens through the **Astar dApp Staking** mechanism, earning rewards while maintaining liquidity. By staking ASTR, users receive **nsASTR**, a liquid staking token that appreciates over time as it accrues staking rewards. This integration allows users to participate in **DeFi applications** on Soneium without sacrificing staking benefits.
@@ -62,22 +64,23 @@ If you want to learn more about Neemo Finance, explore their official documentat
 
 To wrap up, here’s a video tutorial that will guide you through the step-by-step process of staking on Soneium using **Neemo Finance**. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
 
-<!-- <iframe 
+<iframe 
   width="100%" 
   height="400" 
-  src="https://www.youtube.com/link-here" 
+  src="https://www.youtube.com/embed/JO3Cj_pfl8U"
   title="Transfer ASTR from Soneium to Astar L1" 
   frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowFullScreen
-/> -->
+/>
 
 ## 3. Astake
+
+<Figure caption="" src={require('/docs/use/how-to-guides/soneium/dapp-staking/images/astake-soneium.jpeg').default} width="100%" />
 
 ### 1. What is Astake
 
 [**Astake**](https://www.astake.dev/) is built on a secure, reliable framework, making it simple for users to take part in **Astar dApp Staking**. Their protocol is designed enhance the overall liquidity and stability of the ecosystem. By leveraging advanced security measures and a user-friendly interface, Astake aims to become an integral part of **Astar**'s and **Soneium**’s financial landscape. It's a liquid staking protocol that uses **ASTR**.
-
 
 ### 2. Key features
 
@@ -97,12 +100,12 @@ If you want to learn more about Astake, explore their official documentation [**
 
 To wrap up, here’s a video tutorial that will guide you through the step-by-step process of staking on Soneium using **Astake**. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
 
-<!-- <iframe 
+<iframe 
   width="100%" 
   height="400" 
-  src="https://www.youtube.com/link-here" 
+  src="https://www.youtube.com/embed/141xc3R2kbk"
   title="Transfer ASTR from Soneium to Astar L1" 
   frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowFullScreen
-/> -->
+/>
