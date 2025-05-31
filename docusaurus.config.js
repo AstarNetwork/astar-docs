@@ -257,7 +257,7 @@ const config = {
           },
           {
             title: "Architecture",
-            caption: "Ecosystem Architecture: Ethereum zkEVM Layer 2 & Polkadot Parachain",
+            caption: "Ecosystem Architecture: Ethereum Layer 2 & Polkadot Parachain",
             url: "https://docs.astar.network/docs/learn/architecture/",
           },
           {

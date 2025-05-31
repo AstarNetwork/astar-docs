@@ -43,9 +43,9 @@ Astar Collective, with the ASTR token, supports three mainnets:
 Astar parachain is connected to Polkadot Relay chain supporting WASM & EVM smart contract deployments.
 The Astar native token symbol is ASTR.
 
-### Astar zkEVM
+### Astar zkEVM (Deprecated)
 
-Astar zkEVM is an Ethereum Layer 2 network, powered by Polygon CDK. Technically referred to as Validium, it combines zk rollup technology with modular data availability. Next phase for Astar zkEVM is the transition to Soneium.
+Astar zkEVM was an Ethereum Layer 2 network, powered by Polygon CDK. Technically referred to as Validium, combining zk rollup technology with modular data availability. Next phase for Astar zkEVM is the transition to [Soneium](https://docs.soneium.org/).
 
 ### Soneium
 Soneium is a next-generation blockchain ecosystem designed to invoke emotion and empower creativity. It was founded by Sony Group Corporation, a global technology leader, and Startale, a Web3 innovator. Soneium stands as a versatile, general-purpose blockchain ready to serve diverse needs across all verticals and support users globally. Astar and it's token ASTR will play a crucial role in the ecosystem as driven asset.
