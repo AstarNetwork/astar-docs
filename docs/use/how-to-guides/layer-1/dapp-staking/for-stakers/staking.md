@@ -53,6 +53,12 @@ An address can only stake on a maximum of 16 contracts (dApps).
 
 <Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/Vote_Page.png').default } width="100%" /> 
 
+:::important
+
+**Your available balance** represents the balance available for staking and includes tokens locked in governance.
+
+:::
+
 2) You can choose up to 16 projects that you would like to support;  
 After making your selection, click `Done` to proceed to the next step;
 
