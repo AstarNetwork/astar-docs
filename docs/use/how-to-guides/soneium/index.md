@@ -18,19 +18,19 @@ For a more detailed explanation of [**Soneium**](https://soneium.org/), refer to
 
 With the launch of the Soneium mainnet, Astar Network extends its reach into the Ethereum Layer-2 space. This integration empowers **ASTR holders** to actively engage with a growing ecosystem of decentralized applications (**dApps**).
 
-- **Astar Network**: A Polkadot-native chain now bridging to Ethereum via Soneium.
-- **Soneium**: A Layer-2 blockchain by Sony’s Web3 division, focused on user-friendly Web3 apps.
+- **Astar Network**: A Polkadot-native chain now entering Ethereum via Soneium.
+- **Soneium**: A Layer-2 blockchain by Sony Block Solutions Labs, focused on user-friendly Web3 apps.
 - **ASTR Token**: Astar’s native token now powers key utilities across Soneium, from DeFi to gaming.
 
 ## 3. ASTR utility on Soneium
 
 ### 1. DeFi & Financial use cases
 - **Stake & borrow**: ASTR can be used as collateral (e.g. in Untitled Bank, Sake Finance).
-- **Swap & earn**: Platforms like Quickswap, SoneX, and Velodrome support ASTR for LPs and trading.
+- **Swap & earn**: Platforms like Uniswap, Quickswap, SoneX, and Velodrome support ASTR for LPs and trading.
 - **Options & liquidity**: SuperVol and Avalon Labs provide more advanced trading use.
 
 ### 2. Gaming & Consumer Apps
-- **Purchase assets**: ASTR unlocks NFTs, skins, power-ups (e.g. Derby Race, Elfin, Modd.io).
+- **Purchase assets**: ASTR unlocks NFTs, skins, power-ups (e.g. Elfin, Modd.io).
 - **Play-to-earn**: Compete and earn ASTR in games like Overtrip, Legends of Venari, and ARCAS.
 - **Reward systems**: Apps like Metadomo, Yay!, and Tiltplay.
 

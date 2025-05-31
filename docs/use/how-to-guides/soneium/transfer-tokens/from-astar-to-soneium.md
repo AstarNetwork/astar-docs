@@ -118,7 +118,7 @@ Pay close attention to the bridge fee and the time the transaction usually takes
 
 <Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/astar-to-soneium/astar-to-soneium-11.png').default} width="100%" />
 
-If everything is correct, you’ll see a message confirming that the transaction was successfully executed, and you’ll be able to view your transaction in the **block explorer**.
+If everything is correct, you’ll see a message confirming that the transaction was successfully executed, and you’ll be able to view your transaction in the [**block explorer**](https://astar.blockscout.com/).
 
 <Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/astar-to-soneium/astar-to-soneium-12.png').default} width="100%" />
 
