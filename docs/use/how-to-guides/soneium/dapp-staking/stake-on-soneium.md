@@ -38,6 +38,12 @@ This guide assumes you already:
 
 We’ll now walk through the full transfer process step by step.
 
+:::caution Disclaimer
+
+Neemo Finance is an independent project and is **not affiliated with or operated by Astar Foundation**. Users are strongly advised to **conduct their own research** and contact the respective project teams for more information **before interacting with these dApps**. Astar Foundation **disclaims any responsibility** for issues, losses, or risks resulting from the use of these third-party projects.
+
+:::
+
 ## 2. Neemo Finance
 
 <Figure caption="" src={require('/docs/use/how-to-guides/soneium/dapp-staking/images/neemo-soneium.jpeg').default} width="100%" />
@@ -73,6 +79,12 @@ To wrap up, here’s a video tutorial that will guide you through the step-by-st
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowFullScreen
 />
+
+:::caution Disclaimer
+
+Astake is an independent project and is **not affiliated with or operated by Astar Foundation**. Users are strongly advised to **conduct their own research** and contact the respective project teams for more information **before interacting with these dApps**. Astar Foundation **disclaims any responsibility** for issues, losses, or risks resulting from the use of these third-party projects.
+
+:::
 
 ## 3. Astake
 
