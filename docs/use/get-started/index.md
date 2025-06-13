@@ -20,6 +20,8 @@ Follow our simple guides to set them up based on your needs, whether you're usin
         - [Ledger](/docs/use/get-started/astar-substrate-wallet/wallet/ledger/index.md)
         - [Metamask Snap](/docs/use/get-started/astar-substrate-wallet/wallet/metamask-snap/index.md)
         - [Subwallet](/docs/use/get-started/astar-substrate-wallet/wallet/subwallet/index.md)
+        - [Talisman](/docs/use/get-started/astar-substrate-wallet/wallet/talisman/index.md)
+        - [Fearless](/docs/use/get-started/astar-substrate-wallet/wallet/fearless/index.md)
         - [Enkrypt](/docs/use/get-started/astar-substrate-wallet/wallet/enkrypt/index.md)
     - Mobile wallet:
         - [Math Wallet](/docs/use/get-started/astar-substrate-wallet/mobile-wallet/math-wallet/index.md)

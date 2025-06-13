@@ -89,36 +89,36 @@ Select “Enter Talisman”. You've now successfully imported your wallet.
 ## 5. Receive Astar
 
 From popup, select receive.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-18.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-18.png').default} width="50%" />
 
 You will be presented with a drop-down list, select the ASTR token on the network you will be receiving the tokens on ( such as Ethereum or Substrate). Make sure to select the correct network, indicated under the token name.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-19.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-19.png').default} width="50%" />
 
 Select the account you will be receiving the tokens in.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-20.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-20.png').default} width="50%" />
 
 Finally, copy your address.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-21.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-21.png').default} width="50%" />
 
 ## 6. Send ASTR
 
 Open the popup, select send.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-22.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-22.png').default} width="50%" />
 
 Select the correct token from the list (you can search the token or network name). Check that the token is on the correct network (located under the token name).
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-23.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-23.png').default} width="50%" />
 
 Select the account you would like to send the tokens from.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-24.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-24.png').default} width="50%" />
 
 Enter the destination address.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-25.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-25.png').default} width="50%" />
 
 Enter the amount you would like to send and click review.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-26.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-26.png').default} width="50%" />
 
 Review your transaction to ensure all details are correct. Once you have completed a review, click confirm.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-27.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-27.png').default} width="50%" />
 
 ## 7. Connect to dApp
 
@@ -126,24 +126,24 @@ Head to [Astar Portal](https://portal.astar.network/), you will be prompted to c
 <Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-28.png').default} width="100%" />
 
 To connect an Ethereum account, select Talisman under EVM accounts.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-29.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-29.png').default} width="50%" />
 
 To connect a Substrate account, select Talisman under Native accounts.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-30.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-30.png').default} width="50%" />
 
 A window will open in your pop-up for you to approve the connection. Select the account(s) you would like to connect and select connect in the popup.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-31.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-31.png').default} width="50%" />
 
 The Talisman connector will allow you to see which accounts are connected from here.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-32.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-32.png').default} width="50%" />
 
 ## 8. dApp Staking
 
 From the popup, select “More Options” indicated by the three dots.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-33.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-33.png').default} width="50%" />
 
 Select staking.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-34.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-34.png').default} width="50%" />
 
 You will be taken to [app.talisman.xyz/staking](http://app.talisman.xyz/staking) (you can also access this portal directly). Scroll to Astr, and select stake from the staking dashboard.
 <Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-35.png').default} width="100%" />

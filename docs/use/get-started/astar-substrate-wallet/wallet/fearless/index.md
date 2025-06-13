@@ -33,7 +33,7 @@ You can also import an account using a [**passphrase (mnenomic)**](https://wiki.
 ### 1. Create a new wallet
 
 If you don't have a wallet on the Polkadot network yet, tap "*Create a new wallet*" on the initial screen. If you already have a wallet you'd like to use with Fearless, tap "*I already have a wallet*":
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-1.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-1.png').default} width="40%" />
 
 If you're creating a new wallet, you'll be prompted to choose a name for your wallet, you can enter any you like, this name will be used to distinguish your wallet from others on your device. Once you've entered the name you want, the app will generate a 12-word recovery phrase.
 
@@ -52,7 +52,7 @@ If you’re an advanced user and would like to have a custom derivation path for
 
 If you're importing an existing wallet, you'll be prompted to enter your mnemonic phrase, Raw seed or JSON file. Make sure to enter this information accurately to ensure that your wallet is imported
 correctly:
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-3.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-3.png').default} width="40%" />
 
 If you have a custom derivation path for your wallet, click on “**Advanced**” and paste it there.
 
@@ -73,30 +73,30 @@ Click on the Fearless Wallet icon in the upper right corner. Decide whether you 
 ### 2. Creating a Wallet
 
 If you're creating a new wallet, start by giving it a unique **nickname.**
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-6.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-6.png').default} width="50%" />
 
 Then, backup the mnemonic passphrase for your new wallet (**make sure to save it in a safe place and never share it with anyone**).
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-7.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-7.png').default} width="50%" />
 
 Select and enter a password for your newly-created account.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-8.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-8.png').default} width="50%" />
 
 ### 3. Importing a Wallet
 
 In case you already have a wallet, you can import it by clicking on the corresponding button.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-9.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-9.png').default} width="50%" />
 
 Select the Source type for your private key and then paste it into the field below. In our case it's going to be mnemonic passphrase.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-10.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-10.png').default} width="50%" />
 
 Give your wallet a nickname.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-11.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-11.png').default} width="50%" />
 
 And finally, assign it a password.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-12.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-12.png').default} width="50%" />
 
 Then enter it again and click Continue to confirm.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-13.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-13.png').default} width="50%" />
 
 That's it, you can use Fearless Wallet to manage your Astar Assets.
 
@@ -105,12 +105,12 @@ That's it, you can use Fearless Wallet to manage your Astar Assets.
 ### 1. Managing your Astar Tokens
 
 You can use Fearless Wallet to manage your ASTR on Acala, Astar, Pendulum and SORA. From the main wallet interface, navigate to the Manage Assets button.
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-14.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-14.png').default} width="40%" />
 
 Locate the ASTR token from the list and activate the networks you have assets on. 
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-15.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-15.png').default} width="70%" />
 
 This will show the ASTR asset in your main wallet view. From there tap on ASTR to manage your asset. Here you can send and receive (display your wallet QR) tokens, or perform cross-chain transfers. 
-<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-16.png').default} width="100%" />
+<Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-16.png').default} width="40%" />
 
 **Visit the [Fearless Wallet Wiki](https://wiki.fearlesswallet.io/) for more information on the features available.**
