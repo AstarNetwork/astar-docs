@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 sidebar_label: Subwallet
 title: Connecting SubWallet to Astar
 ---
