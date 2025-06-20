@@ -84,7 +84,7 @@ Next to the stake you want to shift.
 
 <Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/move-staked-tokens/images/move-3.png').default} width="100%" />
 
-3. **enter the amount** you want to shift.
+3. **Enter the amount** you want to shift.
 4. Click on next button. 
 5. Confirm and sign the transaction.
 
@@ -123,12 +123,7 @@ After confirmation:
     * App B shows 500 ASTR and updated safe move count
     *  ⚠️ You won’t earn staking rewards for that era due to the **unstake/stake** process. 
     
-5. **Unstake reduces bonus + safe moves**: You stake 100 ASTR during Voting, then unstake 50 ASTR during Build & Earn
-    
-    * You still have bonus eligibility for the remaining 50 ASTR
-    * You have 1 safe move left to reallocate that 50 to another dApp
-    
-6. **A combining bonus moves across stakes**:
+5. **A combining bonus moves across stakes**:
 
     * You staked on dApps A and B during Voting
     * You unstake part of your tokens from A during Build & Earn, leaving 1 safe move
