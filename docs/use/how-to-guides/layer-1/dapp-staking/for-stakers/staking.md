@@ -74,9 +74,15 @@ Zerion uses a mode called Metamask mode, where every request made to Metamask is
 
 Then go to the **staking section** on the left sidebar.
 
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-5.png').default} width="100%" />
+
 There, you’ll see a panel with all the staking information: current period, APY, remaining days, etc.
 
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-6.png').default} width="100%" />
+
 You can start staking either by clicking the blue **“Choose dApps”** button or by scrolling down to view all the listed dApps.
+
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-7.png').default} width="100%" />
 
 :::tip Project cards
 
@@ -94,7 +100,11 @@ You can choose up to 16 projects that you would like to support.
 
 Go back to the previous screen and click on **“Choose dApp”.**
 
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-8.png').default} width="100%" />
+
 Select the category and the dApp you want.
+
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-9.png').default} width="100%" />
 
 :::important Available balance
 
@@ -102,7 +112,13 @@ Select the category and the dApp you want.
 
 :::
 
-Then, enter the amount you want to stake, confirm, and sign the transaction.
+Then, enter the amount you want to stake.
+
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-10.png').default} width="100%" />
+
+Confirm, and sign the transaction.
+
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-11.png').default} width="100%" />
 
 :::tip Free tokens for gas
 
@@ -112,11 +128,17 @@ Make sure to always keep some tokens free for gas manage to claim your rewards.
 
 **If everything is correct**, you’ll see a message confirming that the transaction was successfully executed, and you’ll be able to view your transaction in the block explorer.
 
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-12.png').default} width="100%" />
+
 ### Step 5: Check your staking
 
-Finally, you’ll be able to see your balance. Go back to the **Assets** screen.
+Finally, you’ll be able to see your balance. Go back to the **Assets** screen. In the **Staking** section, you’ll be able to view your staked balance and more.
 
-In the **Staking** section, you’ll be able to view your staked balance and more.
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-14.png').default} width="100%" />
+
+If you go to the **My dApps** section, you’ll be able to see the different dApps you staked on and their respective amounts.
+
+<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-13.png').default} width="100%" />
 
 :::info Unstaked tokens
 
