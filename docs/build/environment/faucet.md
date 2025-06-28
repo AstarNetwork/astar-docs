@@ -1,63 +1,76 @@
 ---
 sidebar_position: 3
+sidebar_label: Get Test Tokens
+title: Get Test Tokens on Astar Portal
+description: Learn how to get test tokens on Astar Portal
 ---
 
-# Test Tokens
+import Figure from '/src/components/figure'
 
-A faucet is the site/place where you can get test tokens. Faucets are available for all Shibuya accounts and empty Astar and Shiden accounts. Use them to make sure your wallet has enough assets to cover the cost of deployment and pay transaction gas.
+## 1. Overview
 
-Let's look at three ways to get SBY for your Shibuya account.
+The **Astar Portal** also serves as the **main faucet** for the entire **Astar Network ecosystem** and its networks (Testnet → **Shibuya**, Canary Network → **Shiden**). Through it, you can obtain test tokens for the Shibuya network, or a small amount on Shiden and Astar Network to cover the gas fees for your first transactions. This ensures that your initial funds never get stuck due to a lack of ASTR for gas.
 
-:::info
+In this guide, you’ll learn how to get some **SBY** tokens from the **Astar Portal** using the [**Zerion**](https://zerion.io/) wallet. To complete this tutorial, you’ll need:
+
+- A wallet that supports the **EVM** format (we’ll use Zerion)
+- An existing Astar EVM account
+
+:::tip Wallet Setup
+
+To set up your wallet on Astar Network, follow → [**this guide**](/docs/use/get-started/index.md).
+
+:::
+:::info Astar & Shiden
+
 This guide will also work for ASTR and SDN assets on Astar and Shiden networks.
+
 :::
 
-## Astar Portal
+We’ll now walk through the full get test tokens process step by step.
 
-To access the faucet visit [the portal](https://portal.astar.network/assets), and click on the `Faucet` button.
+## 2. Guide to Get Test Tokens
 
-![1](img/1.png)
+### Step 1: Connect to Shibuya Network
 
-Then, click the `I'm not a robot` checkbox, and click **Confirm**.
+Go to our [**Astar Portal**](https://portal.astar.network/astar/assets), the site where you can manage your funds and accounts within **Astar Network**.
 
-![2](img/2.png)
+<Figure caption="" src={require('/docs/build/environment/img/get-test-tokens/get-test-tokens-1.png').default} width="100%" />
 
-## Astar Discord Server
+Switch from the **Astar Network** to the **Astar Testnet**.
 
-Once you join the [Discord Server](https://discord.gg/AstarNetwork), you will be able to see the **#shibuya-faucet** channel.
+<Figure caption="" src={require('/docs/build/environment/img/get-test-tokens/get-test-tokens-2.png').default} width="100%" />
 
-![3](img/3.png)
+### Step 2: Connect EVM wallet
 
-In the **#shibuya-faucet** channel, please type `/drip`, and click on **network**.
+Click on **Select wallet**.
 
-![4](img/4.png)
+<Figure caption="" src={require('/docs/build/environment/img/get-test-tokens/get-test-tokens-3.png').default} width="100%" />
 
-Select the network.
+Choose the wallet you use, in this case, it will be **Zerion**, so we’ll click on **Metamask** to open the modal and connect it.
 
-![5](img/5.png)
+:::info Metamask Mode
 
-Click on **address** and paste your address.
+Zerion uses a mode called Metamask mode, where every request made to Metamask is handled by Zerion first. That’s why we click on Metamask, as the Zerion logo doesn’t appear directly.
 
-![6](img/6.png)
-![7](img/7.png)
-![8](img/8.png)
+:::
 
-If your inputs are valid, you will receive SBY tokens from the faucet.
+<Figure caption="" src={require('/docs/build/environment/img/get-test-tokens/get-test-tokens-4.png').default} width="100%" />
 
-![9](img/9.png)
+### Step 3: Get SBY tokens
 
+Once connected, in your dashboard, click the **Faucet** button.
 
-## Chaindrop Portal
+<Figure caption="" src={require('/docs/build/environment/img/get-test-tokens/get-test-tokens-5.png').default} width="100%" />
 
-Faucet is currently only available for Shibuya. <br />
-To access the faucet visit the [chaindrop portal](https://chaindrop.org/?chainid=81&token=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee), and select Shibuya from the token list.
+Click the checkbox to verify you're human and confirm.
 
-![1](img/chaindrop_1.png)
+<Figure caption="" src={require('/docs/build/environment/img/get-test-tokens/get-test-tokens-6.png').default} width="100%" />
 
-Paste your wallet address in the `beneficiary` field. <br />
-Click the `I'm not a robot` checkbox, to validate the Captcha.
+If everything is correct, you’ll see a message confirming that the transaction was successfully executed, and you’ll be able to view your transaction in the block explorer.
 
-![2](img/chaindrop_2.png)
+<Figure caption="" src={require('/docs/build/environment/img/get-test-tokens/get-test-tokens-7.png').default} width="100%" />
 
-Click `Send Me` to recieve SBY in your wallet; the amount recieved will be displayed. <br />
-Click on the `success` link to view your transaction on explorer.
+Verify that you've received the amount successfully.
+
+<Figure caption="" src={require('/docs/build/environment/img/get-test-tokens/get-test-tokens-8.png').default} width="100%" />
