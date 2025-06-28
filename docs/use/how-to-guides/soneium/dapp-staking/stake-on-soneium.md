@@ -73,8 +73,8 @@ To wrap up, here’s a video tutorial that will guide you through the step-by-st
 <iframe 
   width="100%" 
   height="400" 
-  src="https://www.youtube.com/embed/JO3Cj_pfl8U"
-  title="Transfer ASTR from Soneium to Astar L1" 
+  src="https://www.youtube.com/QKBbJI2jr_8"
+  title="How to Stake on Sonium using Neemo Finance" 
   frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowFullScreen
@@ -109,8 +109,8 @@ To wrap up, here’s a video tutorial that will guide you through the step-by-st
 <iframe 
   width="100%" 
   height="400" 
-  src="https://www.youtube.com/embed/141xc3R2kbk"
-  title="Transfer ASTR from Soneium to Astar L1" 
+  src="https://www.youtube.com/embed/Es1GGOSmGZw"
+  title="How to Stake on Soneium using Astake" 
   frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowFullScreen

@@ -137,8 +137,8 @@ To wrap up, here’s a video tutorial that will guide you through the step-by-st
 <iframe 
   width="100%" 
   height="400" 
-  src="https://www.youtube.com/embed/gC8xcQa5L90"
-  title="Transfer ASTR from Soneium to Astar L1" 
+  src="https://www.youtube.com/embed/7caWRXER8pU"
+  title="Transfer ASTR from Astar L1 to Soneium" 
   frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowFullScreen
