@@ -143,7 +143,7 @@ To wrap up, here’s a video tutorial that will guide you through the step-by-st
 <iframe 
   width="100%" 
   height="400" 
-  src="https://www.youtube.com/embed/SRWk_0DVm3k"
+  src="https://www.youtube.com/embed/V4xDk1qvAWo"
   title="How to use move in Astar dApp Staking" 
   frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

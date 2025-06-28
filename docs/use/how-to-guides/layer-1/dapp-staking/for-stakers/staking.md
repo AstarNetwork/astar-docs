@@ -153,7 +153,7 @@ To wrap up, here’s a video tutorial that will guide you through the step-by-st
 <iframe 
   width="100%" 
   height="400" 
-  src="https://www.youtube.com/embed/SfXCd98I9b4"
+  src="https://www.youtube.com/embed/zEioVpgFXQ8"
   title="How to stake on Astar L1" 
   frameBorder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
