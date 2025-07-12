@@ -54,26 +54,26 @@ After this step, you should have the **Polkadot Migration** app installed.
 
 ### Connect your Ledger device to Astar Network using Polkadot.js
 
-1. Install **[Polkadot.js extension](https://polkadot.js.org/extension/)**;
+1. Install **[Polkadot.js extension](https://polkadot.js.org/extension/)**;
 2. Open the extenstion;
 3. In Polkadot.js settings, select `Use the Ledger Migration App` in Ledger App setting;
-4. Click on **Attach Ledger account** as shown below;
+4. Click on **Attach Ledger account** as shown below;
 
 <Figure src={require('/docs/use/get-started/astar-substrate-wallet/wallet/ledger/img/polkadot_migration_ledger_2.png').default} width="80%" />
 
 5. Make sure your Ledger device is connected to your PC and the **Polkadot Migration** app is open;
-6. Select **Astar Network** and enter a descriptive name;
+6. Select **Astar Network** and enter a descriptive name;
 
 <Figure src={require('/docs/use/get-started/astar-substrate-wallet/wallet/ledger/img/polkadot_migration_ledger_3.png').default} width="70%" />
 
-7. Click **Import Account**.
+7. Click **Import Account**.
 
 You successfully connected to Ledger Astar account.
 
 **Configure the Ledger device connection method**
 
-1. Go to the **[Astar settings page on the Polkadot.js portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/settings)**;
-2. Ensure **Attach Ledger via WebHID** is the preferred connection method listed under *account options* > *manage hardware connections*, as shown in the image below:
+1. Go to the **[Astar settings page on the Polkadot.js portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/settings)**;
+2. Ensure **Attach Ledger via WebHID** is the preferred connection method listed under *account options* > *manage hardware connections*, as shown in the image below:
 
 <Figure src={require('/docs/use/get-started/astar-substrate-wallet/wallet/ledger/img/ledger-astar-app-4.png').default} width="80%" />
 
@@ -142,26 +142,26 @@ After this step, you should have the Polkadot (DOT) app installed.
 
 ### Connect your Ledger device to Astar Network using Polkadot.js
 
-1. Install **[Polkadot.js extension](https://polkadot.js.org/extension/)**;
+1. Install **[Polkadot.js extension](https://polkadot.js.org/extension/)**;
 2. Open the extenstion;
 3. In Polkadot.js settings, select `Use the Ledger Polkadot Generic App` in Ledger App setting;
-4. Click on **Attach Ledger account** as shown below;
+4. Click on **Attach Ledger account** as shown below;
 
 <Figure src={require('/docs/use/get-started/astar-substrate-wallet/wallet/ledger/img/polkadot_ledger_2.png').default} width="80%" />
 
 5. Make sure your Ledger device is connected to your PC and the Polkadot (DOT) is open;
-6. Select **Astar Network** and enter a descriptive name;
+6. Select **Astar Network** and enter a descriptive name;
 
 <Figure src={require('/docs/use/get-started/astar-substrate-wallet/wallet/ledger/img/polkadot_ledger_3.png').default} width="70%" />
 
-7. Click **Import Account**.
+7. Click **Import Account**.
 
 You successfully connected to Ledger Astar account.
 
 **Configure the Ledger device connection method**
 
-1. Go to the **[Astar settings page on the Polkadot.js portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/settings)**;
-2. Ensure **Attach Ledger via WebHID** is the preferred connection method listed under *account options* > *manage hardware connections*, as shown in the image below:
+1. Go to the **[Astar settings page on the Polkadot.js portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/settings)**;
+2. Ensure **Attach Ledger via WebHID** is the preferred connection method listed under *account options* > *manage hardware connections*, as shown in the image below:
 
 <Figure src={require('/docs/use/get-started/astar-substrate-wallet/wallet/ledger/img/ledger-astar-app-4.png').default} width="80%" />
 

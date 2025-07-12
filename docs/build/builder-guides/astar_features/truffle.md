@@ -112,7 +112,7 @@ module.exports = {
     
 ```
 
-Be aware that we need to declare mnemonic which is used by **HDWalletProvider** in the **truffle-config.js** file to verify the account supplying funds during contract deployment. To set mnemonic variable, you would set it as an environment variable in **.env** file in the root directory.
+Be aware that we need to declare mnemonic which is used by **HDWalletProvider** in the **truffle-config.js** file to verify the account supplying funds during contract deployment. To set mnemonic variable, you would set it as an environment variable in **.env** file in the root directory.
 
 ```bash
 npm i dotenv

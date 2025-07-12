@@ -21,7 +21,7 @@ After you obtain the binary, you can rename the file to `astar`, and add executi
 chmod +x ./astar
 ```
 
-You should then be able to execute the binary. To see whether you can run the node, let's check the binary version.
+You should then be able to execute the binary. To see whether you can run the node, let's check the binary version.
 
 ```sh
 ./astar --version

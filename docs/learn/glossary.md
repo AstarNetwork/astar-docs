@@ -90,7 +90,7 @@ A concept of layer 2 scaling. Modular blockchain systems move two or more of the
  Partition of a blockchain network that allows for parallel processing of transactions to increase scalability and network capacity.
 
  ### Shiden
- The "canary network" for Astar connected to Kusama, a canary network for Polkadot. It consists of an early-release, unaudited version of the Astar codebase. It is not a testnet. For more info refer to the [Networks](/docs/learn/networks.md) section.
+ The "canary network" for Astar connected to Kusama, a canary network for Polkadot. It consists of an early-release, unaudited version of the Astar codebase. It is not a testnet. For more info refer to the [Networks](/docs/learn/networks.md) section.
 
  ### Shibuya
  A testnet for Shiden and Astar. For more info refer to the [Networks](/docs/learn/networks.md) section.
@@ -111,7 +111,7 @@ A concept of layer 2 scaling. Modular blockchain systems move two or more of the
  A suite of tools for building Wasm smart contracts on Astar that simplify compilation, deployment and testing.
 
  ### Testnet 
- Short for "test network": an experimental network where testing and development takes place. Networks are often executed on a testnet before they are deployed to a mainnet.
+ Short for "test network": an experimental network where testing and development takes place. Networks are often executed on a testnet before they are deployed to a mainnet.
 
  ### Validium
  A concept related to layer 2 scaling. Validiums combine an off-chain execution environment based on zero-knowledge validity proofs with a Data Availability layer, effectively moving three of the four key blockchain functions over to highly specialized workers, freeing up the need for expensive resources on layer 1, leaving it to perform final settlement, only.
@@ -130,7 +130,7 @@ A concept of layer 2 scaling. Modular blockchain systems move two or more of the
  A standard for cross-chain assets in Polkadot ecosystem with ERC-20 interface.
 
  ### XCM 
- Short for Cross-Consensus Messaging, a **messaging format**  and language used to communicate between consensus systems.
+ Short for Cross-Consensus Messaging, a **messaging format**  and language used to communicate between consensus systems.
 
  ### Zero-knowledge proof
  A cryptographic protocol that allows one party to prove knowledge of a secret without revealing the secret itself.

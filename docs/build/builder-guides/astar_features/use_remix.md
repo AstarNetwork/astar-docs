@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-Remix is a powerful open-source toolset for developing, deploying, debugging, and testing EVM-compatible smart contracts. Remix IDE is part of the Remix Project, which includes the Remix Plugin Engine and Remix Libraries: low-level tools for wider use.
+Remix is a powerful open-source toolset for developing, deploying, debugging, and testing EVM-compatible smart contracts. Remix IDE is part of the Remix Project, which includes the Remix Plugin Engine and Remix Libraries: low-level tools for wider use.
 
 Since Astar Network is a multi-VM smart contract hub, we support both WASM and EVM, which means you can use Ethereum dev tools, including Remix, to interact with Astar EVM’s API directly and deploy Solidity-based smart contracts on Astar EVM.
 
@@ -18,7 +18,7 @@ And Solidity developers can directly use Ethereum dev tools, including Hardhat, 
 
 ## What is Remix?
 
-Remix is a powerful open-source toolset for developing, deploying, debugging, and testing EVM-compatible smart contracts. Remix IDE is part of the Remix Project, which includes the Remix Plugin Engine and Remix Libraries: low-level tools for wider use.
+Remix is a powerful open-source toolset for developing, deploying, debugging, and testing EVM-compatible smart contracts. Remix IDE is part of the Remix Project, which includes the Remix Plugin Engine and Remix Libraries: low-level tools for wider use.
 
 ---
 

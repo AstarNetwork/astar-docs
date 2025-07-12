@@ -1,14 +1,25 @@
-#CODEOWNERS file to manage who can approve PRs depending on content (main Docs and site config vs i18n
+# CODEOWNERS
 
-#Docusaurus file layout related to internationalization is following:
-# - to add language (one time action, part of first PR when additional language enabled) you need to edit config here /docusaurus.config.js
-# - to add/change translations for enabled language only ownership of this folder is required: /i18n/*
+This is a file that helps manage who can approve Pull Requests (PRs) depending on the content (main documentation and site configuration vs. i18n translations).
 
+## i18n in the Docusaurus file structure
 
-#For Any PR related to anything outside of /i18n folder requires an approval by someone from @AstarNetwork/documentation. 
-#Source https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging
-*       @AstarNetwork/documentation-maintainers @AstarNetwork/astar-core-dev
+The file structure related to internationalization in Docusaurus follows the logic below:
 
-#Any PR related to /i18n/ folder can be approved by @AstarNetwork/ambassadors members (Linguistars)
-/i18n/* @AstarNetwork/ambassadors
+* To add a new language (a one-time action, part of the first PR when enabling an additional language), you must edit the configuration in: `/docusaurus.config.ts`
 
+* To add or modify translations for an already enabled language, ownership of the `/i18n/*` folder is sufficient.
+
+## PR no related to i18n folder
+
+For Any PR related to anything outside of `/i18n` folder requires an approval by someone from **@AstarNetwork/documentation** → [**Source**](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging).
+
+> @AstarNetwork/documentation-maintainers
+
+> @AstarNetwork/astar-core-dev
+
+## PR related to i18n folder
+
+Any PR related to `/i18n/` folder can be approved by **@AstarNetwork/ambassadors members** *(Linguistars)*.
+
+> @AstarNetwork/ambassadors

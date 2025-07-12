@@ -27,7 +27,7 @@ Before the asset's Metadata can be set, we will need to create an asset on the n
 7. Set your **roles** and create the asset by signing with the creator account.
 
 :::note
-Please make sure the account creating the asset has sufficient balance to pay the [rent fee](/docs/learn/tokenomics2/tokenomics2-network-fees.md#Rent_Fee).
+Please make sure the account creating the asset has sufficient balance to pay the [rent fee](/docs/learn/tokenomics2/tokenomics2-network-fees.md).
 :::
 
 ![Create your asset](img/5.png)

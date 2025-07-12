@@ -47,7 +47,7 @@ For interface function reference, please read [https://polkascan.github.io/py-su
 
 ### 2. Construct an API provider Instance
 
-In order to query and interact with an Astar node, you need to first construct a `WsProvider` API provider using the WebSocket endpoint of Astar Network that you wish to interact with.
+In order to query and interact with an Astar node, you need to first construct a `WsProvider` API provider using the WebSocket endpoint of Astar Network that you wish to interact with.
 
 You can find the list of supported endpoints from our [network RPC endpoint list](/docs/build/environment/endpoints.md).
 

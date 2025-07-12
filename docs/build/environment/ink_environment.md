@@ -23,7 +23,7 @@ A frequently asked question when discussing Wasm is: Why use WebAssembly for sma
 
 ### Rust and Cargo
 
-Rust and Cargo are prerequisites for compiling Wasm smart contracts. The easiest way to obtain Cargo is by installing the current stable release of [Rust](https://www.rust-lang.org/) using [rustup](https://rustup.rs/). Installing Rust using `rustup` will also install `cargo`. On Linux and macOS systems, you can do that with the following:
+Rust and Cargo are prerequisites for compiling Wasm smart contracts. The easiest way to obtain Cargo is by installing the current stable release of [Rust](https://www.rust-lang.org/) using [rustup](https://rustup.rs/). Installing Rust using `rustup` will also install `cargo`. On Linux and macOS systems, you can do that with the following:
 
 ```rust
 curl https://sh.rustup.rs -sSf | sh
@@ -61,11 +61,11 @@ See more [here](https://github.com/paritytech/cargo-contract/issues/1058)
 
 ### Ink! [CLI](https://use.ink/getting-started/setup#ink-cli)
 
-The first and most important tool we will be installing is [cargo-contract](https://github.com/paritytech/cargo-contract), a CLI tool for setting up and managing WebAssembly smart contracts written with ink!
+The first and most important tool we will be installing is [cargo-contract](https://github.com/paritytech/cargo-contract), a CLI tool for setting up and managing WebAssembly smart contracts written with ink!
 
-As a prerequisite using older versions of ink! you may need to install the [binaryen](https://github.com/WebAssembly/binaryen) package, used to optimize WebAssembly contract bytecode.
+As a prerequisite using older versions of ink! you may need to install the [binaryen](https://github.com/WebAssembly/binaryen) package, used to optimize WebAssembly contract bytecode.
 
-Many package managers have it preinstalled, for example [Debian/Ubuntu](https://tracker.debian.org/pkg/binaryen), [Homebrew](https://formulae.brew.sh/formula/binaryen), and [Arch Linux](https://archlinux.org/packages/community/x86_64/binaryen/).
+Many package managers have it preinstalled, for example [Debian/Ubuntu](https://tracker.debian.org/pkg/binaryen), [Homebrew](https://formulae.brew.sh/formula/binaryen), and [Arch Linux](https://archlinux.org/packages/community/x86_64/binaryen/).
 
 <Tabs>
 <TabItem value="Debian/Ubuntu" label="Debian/Ubuntu" default>
@@ -124,7 +124,7 @@ After you've installed the package, execute the following:
 cargo install cargo-contract --force --locked
 ```
 
-Use `--force` to ensure you are updated to the most recent `cargo-contract` version.
+Use `--force` to ensure you are updated to the most recent `cargo-contract` version.
 
 If you need to install an older version of `cargo-contract` use the following command by adding your desired version:
 
@@ -132,7 +132,7 @@ If you need to install an older version of `cargo-contract` use the following co
 cargo install cargo-contract --force --version 1.5.1
 ```
 
-You can then use `cargo contract --help` to start exploring all available commands.
+You can then use `cargo contract --help` to start exploring all available commands.
 
 ---
 

@@ -8,7 +8,7 @@ import Figure from '/src/components/figure'
 
 ## The Graph Quick Start
 
-Getting historical data on a smart contract can be frustrating when you’re building a dapp. The Graph provides a decentralized option to query smart contract data through APIs known as subgraphs, which utilize GraphQL.  The Graph’s infrastructure relies on a decentralized network of indexers, enabling your dapp to become truly decentralized.
+Getting historical data on a smart contract can be frustrating when you’re building a dapp. The Graph provides a decentralized option to query smart contract data through APIs known as subgraphs, which utilize GraphQL.  The Graph’s infrastructure relies on a decentralized network of indexers, enabling your dapp to become truly decentralized.
 
 These subgraphs only take a few minutes to set up and get running. To get started, follow these three steps:
 
@@ -108,7 +108,7 @@ The query URL for this subgraph is:
 
 https://gateway-arbitrum.network.thegraph.com/api/**[api-key]**/subgraphs/id/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK
 
-Now, you simply need to  fill in your own API Key to start sending GraphQL queries to this endpoint.
+Now, you simply need to  fill in your own API Key to start sending GraphQL queries to this endpoint.
 
 ### Getting your own API Key
 
