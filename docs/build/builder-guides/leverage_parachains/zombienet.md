@@ -24,7 +24,7 @@ In this guide, we are setting up a local testnet environment with Polkadot relay
 
 ## Set up Zombienet CLI
 
-In this section, we will set up Zombienet CLI using a binary. You can also set up Zombienet with docker, kubernetes, and more using the guide [here](https://github.com/paritytech/zombienet#requirements-by-provider).
+In this section, we will set up Zombienet CLI using a binary. You can also set up Zombienet with docker, kubernetes, and more using the guide [here](https://github.com/paritytech/zombienet#requirements-by-provider).
 
 - Let’s create a folder in the root directory to hold the binaries
     
@@ -44,7 +44,7 @@ In this section, we will set up Zombienet CLI using a binary. You can also set u
     
 - Add execution permission to the Zombienet CLI binary file. <br />
     **Note**: if you are using a Mac, you may need an extra step to configure the security settings:
-    - Go to Apple menu > System Settings > Privacy & Security.
+    - Go to Apple menu > System Settings > Privacy & Security.
     - Under security, add the `astar` binary file that you just downloaded to the whitelist.
     - Continue with the following command.
     
@@ -125,7 +125,7 @@ Please make sure you are running a macOS or Ubuntu with the appropriate version.
     
 - Add execution permission to the binary file <br />
     **Note**: if you are using a Mac, you may need an extra step to configure the security settings:
-    - Go to Apple menu > System Settings > Privacy & Security.
+    - Go to Apple menu > System Settings > Privacy & Security.
     - Under security, add the `astar` binary file that you just downloaded to the whitelist.
     - Continue with the following command.
     

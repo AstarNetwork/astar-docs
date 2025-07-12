@@ -26,7 +26,7 @@ Before we do any data transformation and analytics, we need a list of historical
 GET /v1/{chain_id}/address/{address}/portfolio_v2/
 ```
 
-In this request, parameter chain_id is the chain ID of the Blockchain being queried. In this cookbook, we will use chain_id = 593 (Astar Network) and contract address of ceUSDC/ceUSDT pool = 0xD72A602C714ae36D990dc835eA5F96Ef87657D5e as example. The following code uses Python to extract the data.
+In this request, parameter chain_id is the chain ID of the Blockchain being queried. In this cookbook, we will use chain_id = 593 (Astar Network) and contract address of ceUSDC/ceUSDT pool = 0xD72A602C714ae36D990dc835eA5F96Ef87657D5e as example. The following code uses Python to extract the data.
 
 ```python
 import requests

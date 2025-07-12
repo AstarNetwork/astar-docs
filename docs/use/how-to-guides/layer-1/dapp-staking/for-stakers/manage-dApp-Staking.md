@@ -56,9 +56,9 @@ My dApps Panel is where you can see all dApps you have staked with and manage yo
 ### Unlocking Panel:
 
 The unlocking panel is where you can see the progress of unlocking and withdrawing.
-For the runtime logic, when unlocking, you don’t unlock from a specific dApp but unlock as `Chunks`. First pending unlocking gives Chunk 1, second pending unlocking gives Chunk 2 etc.
+For the runtime logic, when unlocking, you don’t unlock from a specific dApp but unlock as `Chunks`. First pending unlocking gives Chunk 1, second pending unlocking gives Chunk 2 etc.
 
-After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unlocking](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/unstaking/).  
+After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unlocking](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/unstaking/).  
 The unlocking period lenghts can be consulted [here](/docs/learn/dapp-staking/#parameters).
 
 - **Remaining days:** The number of days or `Eras` you have to wait before you can withdraw your tokens;

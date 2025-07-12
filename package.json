@@ -16,34 +16,40 @@
   },
   "dependencies": {
     "@algolia/client-search": "4.24.0",
-    "@docusaurus/core": "3.6.3",
-    "@docusaurus/faster": "^3.6.3",
-    "@docusaurus/mdx-loader": "^3.6.3",
-    "@docusaurus/plugin-content-docs": "^3.6.3",
-    "@docusaurus/preset-classic": "3.6.3",
-    "@docusaurus/theme-mermaid": "3.6.3",
-    "@docusaurus/types": "3.6.3",
-    "@mdx-js/react": "3.1.0",
+    "@docsearch/react": "^3.9.0",
+    "@docusaurus/core": "3.8.1",
+    "@docusaurus/faster": "^3.8.1",
+    "@docusaurus/mdx-loader": "^3.8.1",
+    "@docusaurus/plugin-content-docs": "^3.8.1",
+    "@docusaurus/preset-classic": "3.8.1",
+    "@docusaurus/theme-common": "^3.8.1",
+    "@docusaurus/theme-mermaid": "3.8.1",
+    "@docusaurus/theme-search-algolia": "^3.8.1",
+    "@docusaurus/types": "3.8.1",
+    "@mdx-js/react": "3.0.0",
     "@react-hooks-library/core": "0.6.2",
     "cjs-loader": "^0.1.0",
-    "clsx": "2.1.1",
-    "prism-react-renderer": "2.3.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "clsx": "^2.1.1",
+    "prism-react-renderer": "^2.4.1",
+    "prismjs": "^1.30.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-iframe": "1.8.5",
     "react-loadable": "5.5.0",
-    "rehype-katex": "7.0.0",
+    "rehype-katex": "7.0.1",
     "remark-math": "6.0.0",
-    "search-insights": "2.15.0"
+    "search-insights": "2.17.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@docusaurus/module-type-aliases": "3.6.3",
-    "@docusaurus/tsconfig": "3.6.3",
-    "@types/react": "18.3.3",
+    "@biomejs/biome": "2.0.6",
+    "@docusaurus/module-type-aliases": "3.8.1",
+    "@docusaurus/tsconfig": "3.8.1",
+    "@docusaurus/types": "3.8.1",
+    "@types/prismjs": "^1",
+    "@types/react": "19.1.8",
     "mdx-loader": "^1.1.1",
     "mdxc": "1.1.1",
-    "typescript": "5.5.4"
+    "typescript": "~5.6.2"
   },
   "browserslist": {
     "production": [
@@ -52,12 +58,13 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
     ]
   },
   "engines": {
-    "node": ">= 18.0"
-  }
+    "node": ">=22.17"
+  },
+  "packageManager": "yarn@4.9.2"
 }

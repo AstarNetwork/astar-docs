@@ -86,7 +86,7 @@ You can start staking either by clicking the blue **“Choose dApps”** button 
 
 :::tip Project cards
 
-Click on the project cards for more information, access to their communities or to view team profiles. You can also find useful resources on our [**forum**](https://forum.astar.network/) or check [**DefilLama**](https://defillama.com/) or [**DappRadar**](https://dappradar.com/).
+Click on the project cards for more information, access to their communities or to view team profiles. You can also find useful resources on our [**forum**](https://forum.astar.network/) or check [**DefilLama**](https://defillama.com/) or [**DappRadar**](https://dappradar.com/).
 
 :::
 

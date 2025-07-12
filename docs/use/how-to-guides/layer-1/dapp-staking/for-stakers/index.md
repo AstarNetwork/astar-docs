@@ -49,7 +49,7 @@ If an user stake on dApp(s) during the **Voting Subperiod** and keep the same st
 
 **Example**
 
-- User stake 1500 ASTR on **dApp A** and 1000 ASTR on **dApp B** during the `Voting`subperiod.
+- User stake 1500 ASTR on **dApp A** and 1000 ASTR on **dApp B** during the `Voting`subperiod.
 - During the `Build&Earn` subperiod, user move 500 ASTR from **dApp B** to **dApp A**;
 - He now has 2000 ASTR on **dApp A** and 500 ASTR on **dApp B**, so he's still eligible for the `Bonus reward` for **dApp A** but no longer for **dApp B** because the tokens staked on **dApp** B are less than those staked at the end of the `Voting` subperiod (500 < 1000 ASTR).
 - To be eligible for the `Bonus reward` for **dApp B**, the user must stake an additional 500 ASTR on **dApp B** to reach 1000 ASTR.

@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-XC20 is an asset standard that enables users and developers to interact with them through a familiar [ERC20 interface](https://github.com/PureStake/moonbeam/blob/master/precompiles/assets-erc20/ERC20.sol) via a precompile contract (Ethereum API) while having XCM cross-chain compatibility as native Substrate assets. Since ERC20 assets can not be transferred via XCM in the Polkadot/Kusama ecosystem, you will need XC20 if you want to build cross-chain compatible assets usable in EVM.
+XC20 is an asset standard that enables users and developers to interact with them through a familiar [ERC20 interface](https://github.com/PureStake/moonbeam/blob/master/precompiles/assets-erc20/ERC20.sol) via a precompile contract (Ethereum API) while having XCM cross-chain compatibility as native Substrate assets. Since ERC20 assets can not be transferred via XCM in the Polkadot/Kusama ecosystem, you will need XC20 if you want to build cross-chain compatible assets usable in EVM.
 
 There are two types of XC20 assets, **mintable XC20**, and **external XC20** assets. Mintable XC20 assets can be issued on Astar Network based on the owner’s implementation logic. External XC20 assets are XC20 assets originally from other parachain/relaychain and transferred to Astar Network via XCM and issued by the sovereign account. 
 
@@ -16,7 +16,7 @@ In this guide, we will support you on:
 ## Overview
 ### What is an XC20
 
-XC20 is an asset standard introduced by PureStake Technologies, which combines the power of Substrate assets (native cross-chain interoperability) but allows users and developers to interact with them through a familiar [ERC20 interface](https://github.com/PureStake/moonbeam/blob/master/precompiles/assets-erc20/ERC20.sol) via a precompile contract (Ethereum API). With XC20, developers will be able to create assets that are both EVM-usable and cross-chain compatible via XCM.
+XC20 is an asset standard introduced by PureStake Technologies, which combines the power of Substrate assets (native cross-chain interoperability) but allows users and developers to interact with them through a familiar [ERC20 interface](https://github.com/PureStake/moonbeam/blob/master/precompiles/assets-erc20/ERC20.sol) via a precompile contract (Ethereum API). With XC20, developers will be able to create assets that are both EVM-usable and cross-chain compatible via XCM.
 
 ### What are mintable XC20 and external XC20
 
@@ -47,7 +47,7 @@ Currently, the best way to create XC20 asset is via [Polkadot.js](https://polkad
     - `asset id`: the selected id for the asset. This should not match an already-existing asset id.
 
 :::note
-Please make sure the account creating the asset has sufficient balance to pay the [rent fee](/docs/learn/tokenomics2/tokenomics2-network-fees/#Rent_Fee).
+Please make sure the account creating the asset has sufficient balance to pay the [rent fee](/docs/learn/tokenomics2/tokenomics2-network-fees.md).
 :::
 
 ![Untitled](mintable-xc20-cookbook/Untitled.png)

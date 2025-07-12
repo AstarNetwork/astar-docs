@@ -30,7 +30,7 @@ In this guide, we will use [OpenBrush](https://openbrush.io/) and their contract
 - **Pausable**: allows you to pause all token operations.
 - **Capped**: allows you to implement with a supply cap, analog to ERC20Capped.
 
-Not available in the contract studio, but another utility is the [TokenTimelock](https://docs.openbrush.io/smart-contracts/psp22/utils/token-timelock): a utility for locking PSP22 tokens for a specified time. [This contract](https://docs.openbrush.io/smart-contracts/psp22/utils/token-timelock) will lock user's `PSP22` tokens until the time specified when they can withdraw them.
+Not available in the contract studio, but another utility is the [TokenTimelock](https://docs.openbrush.io/smart-contracts/psp22/utils/token-timelock): a utility for locking PSP22 tokens for a specified time. [This contract](https://docs.openbrush.io/smart-contracts/psp22/utils/token-timelock) will lock user's `PSP22` tokens until the time specified when they can withdraw them.
 
 ---
 

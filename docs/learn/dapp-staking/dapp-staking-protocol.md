@@ -324,7 +324,7 @@ These percentages are calculated based on a total issuance of **8.4 billion ASTR
 
 For example, suppose the total issuance is **8.4 billion** ASTR tokens. For **Tier 1**, the dynamic threshold percentage is set at **3.57%** (*approximately 299,880,000 ASTR*), with a minimum required percentage of **2.38%** (*approximately 199,920,000 ASTR*) and a maximum possible percentage set according to network parameters. If the total issuance decreases due to a burn event, the threshold adjusts accordingly. For example, if the total issuance drops to **8.0 billion** ASTR, the **Tier 1** threshold adjusts to:
 
-$new\_threshold = 3.57\% * 8.0 billion = 285,600,000\ ASTR$
+$new\_threshold = 3.57\% * 8.0 billion = 285,600,000\ ASTR$
 
 The maximum cap ensures that during periods of high competition or changing token price conditions, tier thresholds don't grow beyond reasonable limits, maintaining accessibility for dApps.
 
