@@ -1,0 +1,35 @@
+name: Setup Workspace
+description: Setup Node.js, Yarn v4 with Corepack, and install dependencies
+inputs:
+  build:
+    description: 'Whether to run `yarn build` after install'
+    required: false
+    default: 'false'
+runs:
+  using: composite
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 22.x
+        cache: yarn
+
+    - name: Enable Corepack
+      run: corepack enable
+      shell: bash
+
+    - name: Prepare Yarn
+      run: corepack prepare yarn@4.9.2 --activate
+      shell: bash
+
+    - name: Install dependencies with Yarn
+      run: yarn install --frozen-lockfile
+      shell: bash
+
+    - name: Build project (optional)
+      if: inputs.build == 'true'
+      run: yarn build
+      shell: bash
