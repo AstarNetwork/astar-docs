@@ -15,6 +15,10 @@ jobs:
         with:
           node-version: 22.x
           cache: yarn
+      - name: Enable Corepack
+        run: corepack enable
+      - name: Prepare Yarn
+        run: corepack prepare yarn@4.9.2 --activate
 
       - name: Install and build
         run: | 
