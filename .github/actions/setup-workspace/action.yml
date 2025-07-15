@@ -5,22 +5,29 @@ inputs:
     description: 'Whether to run `yarn build` after install'
     required: false
     default: 'false'
+
 runs:
   using: composite
   steps:
-    - name: Setup Node.js
+    - name: Setup Node.js (no cache)
       uses: actions/setup-node@v3
       with:
         node-version: 22.x
-        cache: yarn
+        cache: false
 
     - name: Enable Corepack
       run: corepack enable
       shell: bash
 
-    - name: Prepare Yarn
+    - name: Prepare Yarn 4.9.2
       run: corepack prepare yarn@4.9.2 --activate
       shell: bash
+
+    - name: Setup Node.js (with Yarn cache)
+      uses: actions/setup-node@v3
+      with:
+        node-version: 22.x
+        cache: yarn
 
     - name: Install dependencies with Yarn
       run: yarn install --frozen-lockfile
