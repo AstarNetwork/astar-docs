@@ -18,10 +18,6 @@ runs:
       run: corepack enable
       shell: bash
 
-    - name: Prepare Yarn 4.9.2
-      run: corepack prepare yarn@4.9.2 --activate
-      shell: bash
-
     - name: Setup Node.js (with Yarn cache)
       uses: actions/setup-node@v3
       with:
