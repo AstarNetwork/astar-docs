@@ -7,20 +7,19 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup workspace and build
+        uses: ./.github/actions/setup-workspace
         with:
-          node-version: 18.x
-          cache: yarn
+          build: 'true'
 
-      - name: Install and build
-        run: | 
-          yarn install --frozen-lockfile
-          yarn build
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
+
       - name: Deploy app build to S3 bucket
         run: aws s3 sync ./build  s3://astar-docs --delete

@@ -12,17 +12,14 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup workspace and build
+        uses: ./.github/actions/setup-workspace
         with:
-          node-version: 18.x
-          cache: yarn
+          build: 'true'
 
-      - name: Install and build
-        run: |
-          yarn install --frozen-lockfile
-          yarn build
-          
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

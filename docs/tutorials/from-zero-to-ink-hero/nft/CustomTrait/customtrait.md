@@ -9,16 +9,16 @@ Before starting to add code we need to prepare the scene for the external trait.
 .
 ├── Cargo.toml
 ├── contracts
-│   └── shiden34
-│       ├── Cargo.toml
-│       └── lib.rs
+│   └── shiden34
+│       ├── Cargo.toml
+│       └── lib.rs
 └── logics
     ├── Cargo.toml
     ├── impls
-    │   ├── mod.rs
-    │   └── payable_mint
-    │       ├── mod.rs
-    │       └── payable_mint.rs
+    │   ├── mod.rs
+    │   └── payable_mint
+    │       ├── mod.rs
+    │       └── payable_mint.rs
     ├── lib.rs
     └── traits
         ├── mod.rs

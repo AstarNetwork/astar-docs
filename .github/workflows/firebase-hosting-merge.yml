@@ -10,16 +10,13 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-          cache: yarn
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Install and build
-        run: | 
-          yarn install --frozen-lockfile
-          yarn build
+      - name: Setup workspace and build
+        uses: ./.github/actions/setup-workspace
+        with:
+          build: 'true'
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

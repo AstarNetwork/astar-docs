@@ -80,7 +80,7 @@ The account name will be visible on-chain. We are working on adding NFT pfp supp
 
 ### 5, Send xcTokens.
 
-xcTokens do not live in the EVM account balance. Before unifying the balance, the portal will send xcTokens to a Unified account. When testing the environment, most of you may not have xcTokens. Please find a team member and ask for them for this purpose. You will be asked to sign an EVM transaction.
+xcTokens do not live in the EVM account balance. Before unifying the balance, the portal will send xcTokens to a Unified account. When testing the environment, most of you may not have xcTokens. Please find a team member and ask for them for this purpose. You will be asked to sign an EVM transaction.
 
 <div style={{textAlign: 'center'}}>
   <img src={guide06} style={{width: 450}} />

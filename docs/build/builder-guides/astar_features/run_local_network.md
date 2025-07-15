@@ -59,7 +59,7 @@ Please rename the binary file to `astar`, for illustration purposes the consiste
     
 - Add execution permission to the binary file. <br />
     **Note**: if you are using a Mac, you may need an extra step to configure the security settings:
-    - Go to Apple menu > System Settings > Privacy & Security.
+    - Go to Apple menu > System Settings > Privacy & Security.
     - Under security, add the `astar` binary file that you just downloaded to the whitelist.
     - Continue with the following command.
     

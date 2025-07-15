@@ -22,7 +22,7 @@ We will setup the local environment for developing ask! smart contract and deplo
 
 ## What is Ask!?
 
-Ask! is a framework for AssemblyScript developers to write Wasm smart contracts for `pallet-contracts`, otherwise known as the Wasm Virtual Machine. Its syntax is similar to TypeScript. The [current project](https://polkadot.polkassembly.io/post/949) is funded by Polkadot treasury, and still under active development. 
+Ask! is a framework for AssemblyScript developers to write Wasm smart contracts for `pallet-contracts`, otherwise known as the Wasm Virtual Machine. Its syntax is similar to TypeScript. The [current project](https://polkadot.polkassembly.io/post/949) is funded by Polkadot treasury, and still under active development. 
 
 ---
 

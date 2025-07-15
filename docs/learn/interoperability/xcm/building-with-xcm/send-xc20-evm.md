@@ -31,7 +31,7 @@ However, the `Beneficiary` address `AccountId` will be a mapped ss58 address of 
 - **ss58**: `YPRZVFHaRvXdnbAQsXcgqiJokpoHNkUXzR6XTBBJQKHtorT` (with prefix 5 for Shiden/Astar)
 - **Public key**: `0x6c65500b73e2cec702f06dcd5299b31e4d0b6cf7728937b7d5edac79611292f2`
 
-To obtain the asset address on the EVM, we will need to retrieve its asset `Id`. In our case, we will be using KSM, which has the asset `Id` `340282366920938463463374607431768211455`. Now we will need to convert the `Id` to hex, and append it to `0xffffffff`. In this example, the resulting address is `0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF`, which we can now use directly within Solidity smart contracts, or MetaMask. More info in previous [section](/docs/learn/interoperability/xcm/building-with-xcm/send-xc20-evm.md#calculate-xc20-precompile-address)
+To obtain the asset address on the EVM, we will need to retrieve its asset `Id`. In our case, we will be using KSM, which has the asset `Id` `340282366920938463463374607431768211455`. Now we will need to convert the `Id` to hex, and append it to `0xffffffff`. In this example, the resulting address is `0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF`, which we can now use directly within Solidity smart contracts, or MetaMask. More info in previous [section](/docs/learn/interoperability/xcm/building-with-xcm/send-xc20-evm.md)
 
 ## Import Assets on MetaMask
 
