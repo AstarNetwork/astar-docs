@@ -6,6 +6,40 @@ title: Install MetaMask Astar Wallet Snap
 
 import Figure from '/src/components/figure'
 
+:::danger Astar Snap Deprecation
+
+**Astar Snap** will soon be deprecated and permanently disabled. This means any assets stored within the Snap will no longer be accessible through it.
+
+To **avoid losing access to your funds**, we strongly recommend that you **migrate your assets as soon as possible** to a supported external wallet, either on **Astar EVM** or **Astar Substrate**.
+
+**What should you do?**
+
+1. Choose a supported wallet from our list (e.g., Polkadot.js, Talisman, MetaMask).
+2. Follow the migration steps for the wallet of your choice.
+3. Ensure your assets are safely transferred out of Astar Snap.
+
+📘 You can find detailed wallet guides and setup instructions in our [**Getting Started section**](https://docs.astar.network/docs/use/get-started/).
+
+👾 If you need help, feel free to reach out via our [**Discord community**](https://discord.gg/astarnetwork).
+
+:::
+:::tip Migrate your funds
+
+To ensure your assets remain safe and accessible, please follow these simple steps to transfer your funds out of Astar Snap:
+
+1. Go to the [**Astar Portal**](https://portal.astar.network/) and connect using your **Astar Snap**. Then go to the [**Transfer section**](https://portal.astar.network/astar/assets/transfer?token=astr&mode=local).
+2. Enter the address of the destination. This can be any supported **Astar EVM** or **Substrate** wallet.
+3. We recommend sending **your full balance**. Any remaining funds in Astar Snap may become **inaccessible once the feature is deprecated**. Confirm and sign the transaction. That’s it!
+
+✅ Your funds will now be safe in your new wallet.
+
+:::
+:::info Update your Astar Snap
+
+If you're not using Astar Snap version `0.9.1`, please [**update it here**](https://snaps.metamask.io/snap/npm/astar-network/snap/) before transferring your assets.
+
+:::
+
 ## Introduction
     
 The Astar Wallet Snap extends MetaMask's functionality, specifically for blockchains built with Substrate technology. The Astar Wallet Snap enables you to quickly generate a Substrate wallet with MetaMask for signing transactions and interacting with decentralized applications (dApps) that utilize the `@polkadot/extension-dapp package`. You can seamlessly interact with all dApps in the Astar ecosystem through MetaMask, thereby expanding MetaMask's utility beyond Ethereum and EVM-compatible networks.
