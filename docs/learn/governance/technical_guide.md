@@ -88,6 +88,55 @@ The _pallet-collective-proxy_ is a special pallet that allows calls to be made o
 * `Treasury->proposeSpend` - proposes the spending of the main on-chain treasury funds (requires a deposit)
 * `CommunityTreasury->proposeSpend` - proposes the spending of the community treasury funds (requires a deposit)
 
+### Emergency Situations
+
+The following functions aren't tied to any specific actor, but at the moment of writing this guide, they are only callable by the `Technical Committee` or the `Main Council`.
+
+#### Safe Mode
+
+Intended to put the entire chain into _safe mode_, prohibiting any non-critical user transactions. This should only be used in case of a critical bug or vulnerability that needs to be fixed immediately.
+
+* `SafeMode->forceEnter` - puts the chain into _safe mode_, preventing any non-critical transactions.
+* `SafeMode->forceExtend` - extends the _safe mode_ duration, allowing more time for the fix to be implemented. Can be used repeatedly to extend the _safe mode_ duration by a fixed amount.
+* `SafeMode->forceExit` - exits the _safe mode_.
+
+#### Tx Pause
+
+Intended to prohibit specific extrinsic calls. Similar to _safe mode_ but more precise & flexible. Caller is required to precisely specify pallet name (as integrated in the runtime) and the extrinsic call.
+
+Integrated pallet names are defined in the runtime code, but can also be checked in `polkadot-js app` when selecting an extrinsic or state query. However, when checking the app, user needs to be aware that the first letter should be capitalized. For example, using the following image:
+
+<Figure caption="Emergency - 1" src={require('/docs/learn/governance/img/19_Emergency/01_emergency.png').default } width="100%" />
+
+we can observe pallets **assets** & **balances** but their actual names are **Assets** & **Balances**. This is important to note because if incorrect pallet name is specified, the call won't be properly filtered nor will the runtime inform the user that the call doesn't exist.
+
+For the 2nd part, the extrinsic call name, it must be specified in _snake_case_. 
+
+This is exactly how it's defined in the pallet code, but the name can also be found using the `polkadot-js app`. When a pallet is selected under extrinsic selection, all extrinsic calls are listed but in _camelCase_. For example, using the following image:
+
+<Figure caption="Emergency - 2" src={require('/docs/learn/governance/img/19_Emergency/02_emergency.png').default } width="100%" />
+
+we can observe that pallet `Balances` has calls like `burn`, `forceTransfer` or `transferAll`. Transforming these into _snake_case_ we get `burn` (unchanged), `force_transfer` and `transfer_all`.
+
+The pallet has only two calls.
+
+* `TxPause->pause`
+* `TxPause->unpause`
+
+Using all of the information presented so far, a few examples how these calls can be used:
+
+* **TxPause->pause("Balances", "transfer_all")**
+* **TxPause->pause("DappStaking", "claim_unlocked")**
+* **TxPause->pause("Assets", "transfer_keep_alive")**
+
+### dApp Staking
+
+dApp staking has a `maintenance mode` which essentially disables all possible interactions with the pallet, and prevents eras from advancing (to prevent any further storage modifications). It can be enabled either by the `Tech Committee` or by the `Main Council`.
+
+It's intended to be used when the dApp staking protocol has become compromised due to a bug or an attack.
+
+* `DappStaking->maintenanceMode`
+
 ## User Guide
 
 :::note

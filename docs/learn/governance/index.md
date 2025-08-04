@@ -153,10 +153,10 @@ In case the token holder votes correspond to the _winning_ side, their tokens wi
 | Minimum Public Referendum Deposit        | 10 SBY                    | 1000 ASTR               |
 | Simple Majority Proposal Origin          | 1/2 Main Council          | 2/3 Main Council        |
 | Super Majority Against Proposal Origin   | Unanimous Main Council    | Unanimous Main Council  |
-| Fast Track Origin                        | 1/2 Technical Committee   | 2/3 Technical Committee |
-| Instant Track Origin                     | Unanimous Technical Committee | Unanimous Technical Committee |
+| Fast Track Origin                        | 1/2 Tech Committee   | 2/3 Tech Committee |
+| Instant Track Origin                     | Unanimous Tech Committee | Unanimous Tech Committee |
 | Referendum Cancellation Origin           | 1/2 Main Council          | 2/3 Main Council        |
-| Public Proposal Cancellation Origin      | 1/2 Technical Committee   | 2/3 Technical Committee |
+| Public Proposal Cancellation Origin      | 1/2 Tech Committee   | 2/3 Tech Committee |
 
 #### Conviction Voting
 
@@ -239,34 +239,37 @@ To check the current number of members, it is best to refer to the on-chain data
 
 These parameters are related to the _dApp staking_ logic.
 
-| Parameter Name                          | Shibuya                  | Astar                    |
-| --------------------------------------- | ------------------------ | ------------------------ |
-| dApp Register Origin                    | 1/2 Community Council    | 2/3 Community Council    |
-| dApp Unregister Origin                  | 4/5 Community Council    | 4/5 Community Council    |
-| Community Council Staking Operations    | 1/2 Community Council    | 2/3 Community Council    |
+| Parameter Name                          | Shibuya                  | Astar                                       |
+| --------------------------------------- | ------------------------ | ------------------------------------------- |
+| dApp Register Origin                    | 1/2 Community Council    | 2/3 Community Council                       |
+| dApp Unregister Origin                  | 4/5 Community Council    | 4/5 Community Council                       |
+| Community Council Staking Operations    | 1/2 Community Council    | 2/3 Community Council                       |
+| dApp Staking Maintenance Mode Origin    | 1/2 Tech Committee  | 1/2 Tech Committee or 2/3 Main Council      |
 
 ### Emergency Maintenance Pallets
 
 #### Safe Mode
 
-The **SafeMode** pallet introduces an emergency STOP mechanism for the chain, restricting operations to a predefined set of permitted calls (only system calls). This mechanism is especially useful during chain anomalies or attacks. The `Technical Committee` can force-enter or exit _Safe Mode_. The _dApp staking_ maintenance mode is triggered when entering/exiting **Safe Mode**.
+The **SafeMode** pallet introduces an emergency STOP mechanism for the chain, restricting operations to a predefined set of permitted calls Operations like balance & asset transfer, smart contract calls, dApp staking operations aren't allowed. This mechanism is intended for severe situations like critical bugs or attacks. Both the `Tech Committee` and the `MainCouncil` can force-enter or exit _Safe Mode_. The _dApp staking_ maintenance mode is enabled/disabled when entering/exiting **Safe Mode**.
+
+The _safe mode_ has a limited duration, but can be extended as many time as needed. However, it's not possible to put the entire chain into _safe mode_ indefinitely.
 
 These parameters are related to the _Safe Mode_ logic.
 
-| Parameter Name                          | Shibuya                  | Astar                    |
-| --------------------------------------- | ------------------------ | ------------------------ |
-| Enter Duration                          | 4 hours                  | TBD                      |
-| Extend Duration                         | 2 hours                  | TBD                      |
-| Force Enter Origin                      | 1/2 Technical Committee  | TBD                      |
-| Force Exit Origin                       | 2/3 Technical Committee  | TBD                      |
+| Parameter Name     | Shibuya                                      | Astar                                        |
+| ------------------ | -------------------------------------------- | -------------------------------------------- |
+| Enter Duration     | 4 hours                                      | 12 hours                                     |
+| Extend Duration    | 2 hours                                      | 4 hours                                      |
+| Force Enter Origin | 1/2 Tech Committee or 2/3 Main Council  | 1/2 Tech Committee or 2/3 Main Council  |
+| Force Exit Origin  | 1/2 Tech Committee or 2/3 Main Council  | 1/2 Tech Committee or 2/3 Main Council  |
 
 #### Tx Pause
 
-The **TxPause** pallet provides the ability to pause specific transaction calls dynamically. This feature is useful for mitigating issues with specific modules or calls without halting the entire chain. The `Technical Committee` can pause and resume individual calls dynamically as needed.
+The **TxPause** pallet provides the ability to pause specific transaction calls dynamically. This feature is useful for mitigating issues with specific modules or calls without halting the entire chain. This should be preferred to **SafeMode** in most cases as it is more precise & flexible. Both the `Tech Committee` and the `MainCouncil` can pause and resume individual calls dynamically as needed.
 
 These parameters are related to the _Tx Pause_ logic.
 
-| Parameter Name                          | Shibuya                  | Astar                    |
-| --------------------------------------- | ------------------------ | ------------------------ |
-| Pause Origin                            | 1/2 Technical Committee  | TBD                      |
-| Unpause Origin                          | 1/2 Technical Committee  | TBD                      |
+| Parameter Name | Shibuya                                     | Astar                                       |
+|----------------|---------------------------------------------|---------------------------------------------|
+| Pause Origin   | 1/2 Tech Committee or 2/3 Main Council | 1/2 Tech Committee or 2/3 Main Council |
+| Unpause Origin | 1/2 Tech Committee or 2/3 Main Council | 1/2 Tech Committee or 2/3 Main Council |
