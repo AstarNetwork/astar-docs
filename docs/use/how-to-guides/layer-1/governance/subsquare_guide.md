@@ -294,6 +294,44 @@ The total votes toward `aye` is 600 SBY in total, 100 SBY from the first `aye` v
 
 ## 3.2. Community Council
 
+The Astar Community Council is a governance body composed of six members representing different stakeholder groups within the ecosystem:
+
+* **2 Core Team** Members selected by the Astar Foundation
+* **2 Ecosystem Agents** elected internally by the Agent group
+* **2 Community Representatives** chosen through a public nomination and voting process
+
+This 2-2-2 composition ensures balanced representation, bringing together diverse perspectives, expertise, and community interests. While this structure provides a strong foundation for early governance, it is subject to change through community-driven decisions as the ecosystem evolves.
+
+**Responsibilities**
+
+The Community Council is entrusted with managing key ecosystem functions, including:
+
+* **Community Treasury Management:** Overseeing the allocation of funds to support ecosystem growth.
+* **dApp Staking Oversight:** Evaluating applications, listing and delisting dApps, and setting operational guidelines.
+* **Unstoppable Community Grant (UCG) Program:** Reviewing and approving grant proposals aligned with Astar’s vision.
+* **Ecosystem Agent Tips:** Assessing and authorizing agent compensation requests.
+* **Governance Participation:** Acting as stewards of decentralized governance processes.
+
+:::tip Community Council Actions
+
+The Council also holds specific onchain permissions to perform actions such as:
+
+* Registering/Unregistering dApps in the dApp Staking Protocol
+    * Registration requires a 2/3 majority
+    * Unregistration requires a 4/5 majority
+* Managing dApp Staking on behalf of the Community Treasury (UCG)
+    * Requires a 2/3 majority
+* Approving or Rejecting Treasury Spending Proposals
+    * Requires a 2/3 majority
+:::
+
+Through these responsibilities, the Community Council plays a critical role in maintaining the integrity, transparency, and sustainability of the Astar ecosystem.
+
+:::info Community Council Information
+
+If you'd like to get more involved with the Community Council, check out our [**Forum post**](https://forum.astar.network/t/introducing-the-community-council/7588).
+
+:::
 ### Treasury Spending Approval
 
 Clicking on the `Motions` tab under the `Community Council` sidebar tab will open a view of the `Community Council` motions.
