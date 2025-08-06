@@ -508,34 +508,31 @@ Select the `dappStaking` pallet from the extrinsic dropdown menu on [**Polkadot.
 
 <Figure caption="Maintenance Mode - Polkadot.js" src={require('/docs/use/img/24_emergency_mechanisms/maintenance_mode.png').default } width="100%" />
 
-### 3.4.2 Implementing TxPause Functionality
+### 3.5.2. Implementing TxPause Functionality
 
 TxPause provides surgical intervention capability by selectively disabling specific transaction types while maintaining overall network operation. This granular approach enables targeted responses to identified vulnerabilities without comprehensive network disruption.
 
 The mechanism operates by specifying exact pallet names and function combinations for suspension. Understanding proper formatting requirements is essential for successful implementation.
 
-**Step 1: Identify the Target Function**
-
-Before creating a pause motion, precisely identify the compromised pallet and specific function requiring suspension. Use the Polkadot-js App to examine available pallets and their functions, noting that pallet names must use proper capitalization (such as "Assets" rather than "assets") while function names require snake_case formatting (such as "transfer_all" rather than "transferAll").
-
-**Step 2: Create the Pause Motion**
-
-Navigate to the appropriate council interface and create a new motion. Set the threshold to 4 for Main Council activation (two-thirds majority) or 2 for Technical Committee activation (simple majority). The motion description should clearly explain which specific function is being paused and the security rationale.
-
-**Step 3: Configure the TxPause Extrinsic**
+**Configure the TxPause Extrinsic**
 
 Select the `txPause` pallet and choose the `pause` function. Enter the exact pallet name as the first parameter, ensuring proper capitalization. Enter the specific function name as the second parameter using correct snake_case formatting.
 
-For example, to pause balance transfers entirely, use "Balances" as the pallet name and "transfer_all" as the function name. To pause specific dApp staking claims, use "DappStaking" and "claim_unlocked" respectively.
+:::warning Restricted access
 
-**Step 4: Execute and Monitor**
+This is a functionality strictly reserved for members of the Main Council or Technical Committee. Access is only available through the Polkadot.js graphical interface.
 
-Submit the motion and await the required council votes for activation. Once approved, the specified function will be immediately disabled while all other network operations continue normally. Monitor the network for confirmation that the targeted function is properly suspended.
+:::
+:::tip Example Case
 
-**Step 5: Unpause When Resolved**
+To pause balance transfers entirely, use `Balances` as the pallet name and `transfer_all` as the function name. To pause specific dApp staking claims, use `DappStaking` and `claim_unlocked` respectively.
+
+:::
+:::info Disable txPause
 
 After the security threat is resolved and appropriate patches are implemented, create a new motion using the `txPause` pallet and `unpause` function with identical pallet and function name parameters to restore normal functionality.
 
+:::
 ### 3.4.3 Activating Safe Mode
 
 Safe Mode represents Astar Network's most comprehensive emergency response mechanism, designed for existential threats requiring complete transaction restriction except for essential system operations. This mechanism blocks nearly all user-submitted transactions while maintaining critical network functions including governance actions, parachain lifecycle functions, and timestamping operations.
