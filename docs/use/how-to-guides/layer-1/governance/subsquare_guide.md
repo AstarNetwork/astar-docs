@@ -157,139 +157,123 @@ Clicking the `Second` button to support the proposal, increase its chances of be
 
 <Figure caption="Public Proposal - Part 8" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-8.png').default } width="100%" />
 
-**Track #2: Treasury Proposal**
+**Track #2: Main Treasury**
 
-Clicking on the `Treasury` tab on the sidebar will display the current state of the treasury & spending requests.
+Another way to execute onchain actions without going through public referenda is through the approval of the **Main Council** or the **Technical Committee**. Clicking on the `Treasury` tab on the sidebar will display the current state of the treasury & spending requests.
 
-<Figure caption="Treasury - 1" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_1.png').default } width="100%" />
+<Figure caption="Treasury - Part 1" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_1.png').default } width="100%" />
 
----
+Clicking on the `New Proposal` button will allow the creation of a new spending proposal. 
 
-Clicking on the `New Proposal` button will allow the creation of a new spending proposal.
-User needs to pick the payout amount & the beneficiary.
-The _Proposal bond_ refers to the amount that needs to be deposited in order to create the proposal.
-If the proposal is rejected, the bond will be slashed.
-Otherwise, the bond will be refunded.
+User needs to pick the `payout amount` & the `beneficiary`. The `Proposal bond` refers to the amount that needs to be deposited in order to create the proposal. 
 
-<Figure caption="Treasury - 2" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_2.png').default } width="100%" />
+If the proposal is rejected, the bond will be `slashed`. Otherwise, the bond will be `refunded`.
 
----
+<Figure caption="Treasury - Part 2" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_2.png').default } width="100%" />
 
 After submitting the proposal, it will be displayed on the treasury page.
 The proposal name & description can be edited.
 
-<Figure caption="Treasury - 3" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_3.png').default } width="100%" />
+<Figure caption="Treasury - Part 3" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_3.png').default } width="100%" />
 
-:::note
-You can reuse the exact same steps for community treasury proposals.
+**Track #3: Community Treasury**
+
+:::info Community Treasury
+
+The third track for creating onchain proposals is using the Community Treasury, which allows you to request spending, include/exclude dApps from dApp Staking, and execute other actions. To do this, you can reuse the same steps mentioned above.
+
 :::
-
 ### 3.1.2 Vote Delegation
 
-Click on the `Delegation` tab on the sidebar to access the vote delegation page.
-This is an overview of _delegation_ related actions and statistics.
+Any ASTR token holder can delegate their tokens so that their voting power can be used in governance proposals. It’s important to highlight that when you delegate your tokens, they never leave your wallet. Once delegated, you can revoke the delegation at any time.
+
+Now, let's understand how to delegate your tokens using the **Subsquare** interface.
+
+**Steps to delegate**
+
+Click on the `Delegation` tab on the sidebar to access the vote delegation page. This is an overview of _delegation_ related actions and statistics.
 
 Clicking on the `+ Delegate` button allows you to delegate votes to another account
 
-<Figure caption="Vote Delegation - 1" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_1.png').default } width="100%" />
+<Figure caption="Vote Delegation - Part 1" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_1.png').default } width="100%" />
 
----
+The `Target` is the account to which the votes are being delegated to. The `Balance` is the amount of native currency we're delegating. This is the amount that will be _locked_.
 
-The `Target` is the account to which the votes are being delegated to.
-The `Balance` is the amount of native currency we're delegating. This is the amount that will be _locked_.
-:::important
+:::info Important
+
 The action of delegating voting power **DOES NOT** transfer the ownership of the tokens. They are merely _locked_ for normal use, but remain in the ownership of the delegator.
-:::
 
+:::
 The `Conviction` setting determines how much your voting power is amplified in exchange for a longer token lock period.
 
-<Figure caption="Vote Delegation - 2" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_2.png').default } width="100%" />
+<Figure caption="Vote Delegation - Part 2" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_2.png').default } width="100%" />
 
----
+Once the delegation has been submitted, it will be displayed on the delegation page. Clicking on the `Details` label will display more information about the delegation.
 
-Once the delegation has been submitted, it will be displayed on the delegation page.
-Clicking on the `Details` label will display more information about the delegation.
+<Figure caption="Vote Delegation - Part 3" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_3.png').default } width="100%" />
 
-<Figure caption="Vote Delegation - 3" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_3.png').default } width="100%" />
+The amount and conviction are displayed. Clicking on the `X` button allows to _undelegate_ the votes, which will begin the unlocking period for the tokens.
 
----
+<Figure caption="Vote Delegation - Part 4" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_4.png').default } width="100%" />
 
-The amount and conviction are displayed.
-Clicking on the `X` button allows to _undelegate_ the votes, which will begin the unlocking period for the tokens.
+Clicking on the `Account` tab on the sidebar will display the account details. The 100 SBY locked in previous steps with conviction set to **3** is displayed, equaling a total of 8 days of unlocking period.
 
-<Figure caption="Vote Delegation - 4" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_4.png').default } width="100%" />
-
----
-
-Clicking on the `Account` tab on the sidebar will display the account details.
-The 100 SBY locked in previous steps with conviction set to **3** is displayed - equaling a total of 8 days of unlocking period.
-
-<Figure caption="Vote Delegation - 5" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
+<Figure caption="Vote Delegation - Part 5" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
 
 ### 3.1.3 Voting
+
+Any ASTR token holder can vote on active proposals within Astar’s governance. Tokens in both the `Transferable` and `Locked` sections can be used to participate in governance processes, meaning that tokens staked in Astar dApp Staking can also be used for voting.
+
+With that said, let’s understand how the voting process works on **Astar Subsquare**.
+
+**Steps to vote**
 
 Clicking on the `Referenda` tab on the sidebar, under the `Democracy` tab, will display all of the referenda, including the ongoing ones, failed ones & executed ones.
 
 For the sake of this example, the referendum named **"Proposal for docs"** will be used.
 
-<Figure caption="Voting - 1" src={require('/docs/use/img/21_Subsquare_voting/voting_1.png').default } width="100%" />
-
----
+<Figure caption="Voting - Part 1" src={require('/docs/use/img/21_Subsquare_voting/voting_1.png').default } width="100%" />
 
 Clicking on it will display more details about the referendum as can be seen below.
 
 The user can decide to vote by clicking on the `Vote` button.
 
-<Figure caption="Voting - 2" src={require('/docs/use/img/21_Subsquare_voting/voting_2.png').default } width="100%" />
-
----
+<Figure caption="Voting - Part 2" src={require('/docs/use/img/21_Subsquare_voting/voting_2.png').default } width="100%" />
 
 Vote can be `aye` or `nay`, or can even be split between the two options if the user desires.
 
-The token amount to be used for voting needs to be specified - this is the amount that will be _locked_ for the duration of the referendum and more if the referendum passes in the favor of the users vote. E.g. voting `aye` for a referendum, and having it _fail_ will result in the tokens being immediately unlockable, without any waiting period.
+The token amount to be used for voting needs to be specified, this is the amount that will be _locked_ for the duration of the referendum and more if the referendum passes in the favor of the users vote. E.g. voting `aye` for a referendum, and having it _fail_ will result in the tokens being immediately unlockable, without any waiting period.
 
 Conviction can be set to amplify (or diminish) the voting power, at the expense of a longer (or shorter) unlocking period.
 
-<Figure caption="Voting - 3" src={require('/docs/use/img/21_Subsquare_voting/voting_3.png').default } width="100%" />
+<Figure caption="Voting - Part 3" src={require('/docs/use/img/21_Subsquare_voting/voting_3.png').default } width="100%" />
 
----
+After the transaction is confirmed and finalized, the vote will be displayed on the referendum page. Since only one user has voted (us), the total sum of the _aye_ votes is equal to the amount we've voted with.
 
-After the transaction is confirmed and finalized, the vote will be displayed on the referendum page.
-Since only one user has voted (us), the total sum of the _aye_ votes is equal to the amount we've voted with.
+<Figure caption="Voting - Part 4" src={require('/docs/use/img/21_Subsquare_voting/voting_4.png').default } width="100%" />
 
-<Figure caption="Voting - 4" src={require('/docs/use/img/21_Subsquare_voting/voting_4.png').default } width="100%" />
+In case a user changes their mind, the vote can be removed by clicking on the `Remove Vote` button. This won't trigger any _unlocking period_ and the user is free to cast their vote again.
 
----
+<Figure caption="Voting - Part 5" src={require('/docs/use/img/21_Subsquare_voting/voting_5.png').default } width="100%" />
 
-In case a user changes their mind, the vote can be removed by clicking on the `Remove Vote` button.
-This won't trigger any _unlocking period_ and the user is free to cast their vote again.
-
-<Figure caption="Voting - 5" src={require('/docs/use/img/21_Subsquare_voting/voting_5.png').default } width="100%" />
-
----
-
-This is an example of an account that is voting but has some votes delegated to it.
-In this particular situation, the account has:
+This is an example of an account that is voting but has some votes delegated to it. In this particular situation, the account has:
 
 * 100 SBY free balance
 * 300 SBY worth of voting power delegated to it.
 
 Although not visible on this image, the account who delegated the votes did it with 100 SBY and conviction set to **3**.
 
-The account votes with 50 SBY, conviction set to **4**.
-This means that the total amount of votes for this account will be: **50 SBY x 4 + 300 SBY = 500 SBY**.
+The account votes with 50 SBY, conviction set to **4**. This means that the total amount of votes for this account will be: **50 SBY x 4 + 300 SBY = 500 SBY**.
 
-<Figure caption="Voting - 6" src={require('/docs/use/img/21_Subsquare_voting/voting_6.png').default } width="100%" />
-
----
+<Figure caption="Voting - Part 6" src={require('/docs/use/img/21_Subsquare_voting/voting_6.png').default } width="100%" />
 
 The new total turnout is 200 SBY - 50 SBY from the first `aye` vote, another 50 SBY from the second `aye` vote, and 100 SBY from the delegated vote.
 
 The total votes toward `aye` is 600 SBY in total - 100 SBY from the first `aye` vote, and another 500 SBY from the second `aye` vote.
 
-<Figure caption="Voting - 7" src={require('/docs/use/img/21_Subsquare_voting/voting_7.png').default } width="100%" />
+<Figure caption="Voting - Part 7" src={require('/docs/use/img/21_Subsquare_voting/voting_7.png').default } width="100%" />
 
-## Community Council
+## 3.2. Community Council
 
 ### Treasury Spending Approval
 
