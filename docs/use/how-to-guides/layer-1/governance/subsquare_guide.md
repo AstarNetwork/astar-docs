@@ -332,47 +332,64 @@ Through these responsibilities, the Community Council plays a critical role in m
 If you'd like to get more involved with the Community Council, check out our [**Forum post**](https://forum.astar.network/t/introducing-the-community-council/7588).
 
 :::
-### Treasury Spending Approval
+
+Now let’s take a closer look at how the Community Council operates.
+
+### 3.2.1 Treasury Spending Request
+
+
+The Community Council is responsible for reviewing and voting on proposals that request funding from the **Community Treasury**. These proposals are submitted as `motions`, which can be viewed under the Motions tab in the Community Council section of the sidebar.
+
+With that in mind, let’s go through the steps the Council must follow to approve or reject a proposal.
+
+**Steps to Approve or Reject a Treasury Spending Proposal**
+
+**Step 1: Create a Motion**
 
 Clicking on the `Motions` tab under the `Community Council` sidebar tab will open a view of the `Community Council` motions.
 
-Clicking on the `New Proposal` button will prompt the user to create a new motion.
+Clicking on the `+ New Proposal` button will prompt the Council to create a new motion.
 
-<Figure caption="Community Treasury Voting - 1" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_1.png').default } width="100%" />
+<Figure caption="Create a Motion - Part 1" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_1.png').default } width="100%" />
 
----
+For this example, we will select the first option from the Quickstart: `Approve a treasury proposal`.
 
-The focus of this example is community treasury spending approval.
+<Figure caption="Create a Motion - Part 2" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_2.png').default } width="100%" />
 
-<Figure caption="Community Treasury Voting - 2" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_2.png').default } width="100%" />
+The proposal Id (can be checked under the Community Treasury tab) is required to create a new motion. Selecting an Id will display the proposal name, which also links to the proposal details.
 
----
+:::warning Important
 
-The proposal Id (can be checked under the Community Treasury tab) is required to create a new motion.
-Selecting an Id will display the proposal name, which also links to the proposal details.
 Community council members should ensure they're proposing and voting on the correct proposal.
 
-<Figure caption="Community Treasury Voting - 3" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_3.png').default } width="100%" />
+:::
+<Figure caption="Create a Motion - Part 3" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_3.png').default } width="100%" />
 
----
+**Step 2: Voting Process**
 
 Once the proposal creation is submitted, it will be displayed on the `Motions` page.
 
-<Figure caption="Community Treasury Voting - 4" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_4.png').default } width="100%" />
-
----
+<Figure caption="Community Treasury Voting - Part 1" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_4.png').default } width="100%" />
 
 Clicking on it will display more details, and allow for a vote to be cast.
 
-<Figure caption="Community Treasury Voting - 5" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_5.png').default } width="100%" />
+<Figure caption="Community Treasury Voting - Part 2" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_5.png').default } width="100%" />
 
----
+In this case, one of the council members votes `Aye`.
 
-In this case, one of the council members votes _aye_.
+<Figure caption="Community Treasury Voting - Part 3" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_6.png').default } width="100%" />
 
-<Figure caption="Community Treasury Voting - 6" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_6.png').default } width="100%" />
+:::tip Remove Vote
 
-### dApp Staking With Community Treasury
+If a Council member wishes to remove their vote, they may do so as long as the proposal has not yet been `Executed`. The vote can be changed as many times as desired.
+
+:::
+:::info Reject a Proposal
+
+The process to `Reject` a proposal is exactly the same, simply selecting `Reject a treasury proposal` when creating the `motion` during the step 1.
+
+:::
+### 3.2.2 dApp Staking With Community Treasury
 
 This is more complex since it requires the user to understand the basics of dApp staking backend.
 The proposal call needs to be manually crafted and submitted to the blockchain.
