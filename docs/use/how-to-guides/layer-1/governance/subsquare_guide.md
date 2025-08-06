@@ -133,8 +133,11 @@ Click on the `New Proposal` button to create a new `Public Proposal`. Since a pr
 
 The hash of the preimage is required to create a new proposal. In this case, hash of the preimage created earlier is simply copied and pasted into the `Preimage` field and the lengh will be automatically filled out.
 
+:::info Locked Balance
+
 The `Locked Balance` refers to the amount being _deposited_ **(not locked)** for the proposal. In case the proposal is canceled, the deposit will be slashed. In case the proposal is tabled, the deposit will be refunded.
 
+:::
 <Figure caption="Public Proposal - Part 3" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-3.png').default } width="100%" />
 
 After submitting the proposal, some time needs to pass before the transaction is confirmed and finalized.
@@ -155,6 +158,11 @@ Proposals can be edited by clicking on the `Edit` button. Title and description 
 
 Clicking the `Second` button to support the proposal, increase its chances of being tabled and upgraded to a referendum. The user has to _match_ the deposit of the proposal, which is displayed on the page. It is possible to second a proposal multiple times.
 
+:::info Seconds
+
+Any user, including the proposer, may support their proposal as many times as they wish. These **seconds** will be released once the proposal is **tabled** (upgraded to a referendum).
+
+:::
 <Figure caption="Public Proposal - Part 8" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-8.png').default } width="100%" />
 
 **Track #2: Main Treasury**
@@ -167,8 +175,11 @@ Clicking on the `New Proposal` button will allow the creation of a new spending 
 
 User needs to pick the `payout amount` & the `beneficiary`. The `Proposal bond` refers to the amount that needs to be deposited in order to create the proposal. 
 
+:::info Approve or Rejected
+
 If the proposal is rejected, the bond will be `slashed`. Otherwise, the bond will be `refunded`.
 
+:::
 <Figure caption="Treasury - Part 2" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_2.png').default } width="100%" />
 
 After submitting the proposal, it will be displayed on the treasury page.
@@ -181,6 +192,11 @@ The proposal name & description can be edited.
 :::info Community Treasury
 
 The third track for creating onchain proposals is using the Community Treasury, which allows you to request spending, include/exclude dApps from dApp Staking, and execute other actions. To do this, you can reuse the same steps mentioned above.
+
+:::
+:::tip Community Council
+
+All proposals requesting actions or expenditures from the Community Treasury will be reviewed, approved, or rejected by the Community Council. More details on this below.
 
 :::
 ### 3.1.2 Vote Delegation
@@ -199,7 +215,7 @@ Clicking on the `+ Delegate` button allows you to delegate votes to another acco
 
 The `Target` is the account to which the votes are being delegated to. The `Balance` is the amount of native currency we're delegating. This is the amount that will be _locked_.
 
-:::info Important
+:::info Delegating Votes
 
 The action of delegating voting power **DOES NOT** transfer the ownership of the tokens. They are merely _locked_ for normal use, but remain in the ownership of the delegator.
 
@@ -240,7 +256,7 @@ The user can decide to vote by clicking on the `Vote` button.
 
 <Figure caption="Voting - Part 2" src={require('/docs/use/img/21_Subsquare_voting/voting_2.png').default } width="100%" />
 
-Vote can be `aye` or `nay`, or can even be split between the two options if the user desires.
+Vote can be `Aye` or `Nay`, or can even be split between the two options if the user desires.
 
 The token amount to be used for voting needs to be specified, this is the amount that will be _locked_ for the duration of the referendum and more if the referendum passes in the favor of the users vote. E.g. voting `aye` for a referendum, and having it _fail_ will result in the tokens being immediately unlockable, without any waiting period.
 
@@ -256,6 +272,8 @@ In case a user changes their mind, the vote can be removed by clicking on the `R
 
 <Figure caption="Voting - Part 5" src={require('/docs/use/img/21_Subsquare_voting/voting_5.png').default } width="100%" />
 
+:::tip Example Case
+
 This is an example of an account that is voting but has some votes delegated to it. In this particular situation, the account has:
 
 * 100 SBY free balance
@@ -265,11 +283,12 @@ Although not visible on this image, the account who delegated the votes did it w
 
 The account votes with 50 SBY, conviction set to **4**. This means that the total amount of votes for this account will be: **50 SBY x 4 + 300 SBY = 500 SBY**.
 
+:::
 <Figure caption="Voting - Part 6" src={require('/docs/use/img/21_Subsquare_voting/voting_6.png').default } width="100%" />
 
-The new total turnout is 200 SBY - 50 SBY from the first `aye` vote, another 50 SBY from the second `aye` vote, and 100 SBY from the delegated vote.
+The new total turnout is 200 SBY, 50 SBY from the first `aye` vote, another 50 SBY from the second `aye` vote, and 100 SBY from the delegated vote.
 
-The total votes toward `aye` is 600 SBY in total - 100 SBY from the first `aye` vote, and another 500 SBY from the second `aye` vote.
+The total votes toward `aye` is 600 SBY in total, 100 SBY from the first `aye` vote, and another 500 SBY from the second `aye` vote.
 
 <Figure caption="Voting - Part 7" src={require('/docs/use/img/21_Subsquare_voting/voting_7.png').default } width="100%" />
 
