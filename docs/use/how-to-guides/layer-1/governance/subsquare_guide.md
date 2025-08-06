@@ -389,22 +389,35 @@ If a Council member wishes to remove their vote, they may do so as long as the p
 The process to `Reject` a proposal is exactly the same, simply selecting `Reject a treasury proposal` when creating the `motion` during the step 1.
 
 :::
-### 3.2.2 dApp Staking With Community Treasury
+### 3.2.2 Staking from the Community Treasury (UCG)
 
-This is more complex since it requires the user to understand the basics of dApp staking backend.
-The proposal call needs to be manually crafted and submitted to the blockchain.
+One of the main responsibilities of the Community Council is to stake in dApps that are part of the **Unstoppable Community Grant** (UCG) program. Conversely, the Council is also responsible for unstaking from dApps that have completed their cycle or failed to deliver the expected performance.
 
-The first thing to select is the threshold.
-This can be calculated by taking the expected vote threshold (e.g. 50% or 2/3 of the quorum) and comparing it to the total number of members in the council.
+With that in mind, let’s walk through the **Staking/Unstaking** process the Community Council must follow.
+
+**Stake in a dApp from the dApp Staking program**
+
+This is more complex since it requires the Council to understand the basics of dApp staking backend. The proposal call needs to be manually crafted and submitted to the blockchain.
+
+**Step 1: Set the Threshold**
+
+The first thing to select is the threshold. This can be calculated by taking the expected vote threshold (e.g. 50% or 2/3 of the quorum) and comparing it to the total number of members in the council. 
+
 For this particular case, the threshold is set to 2/3 of the council members and we have 3 council members so we set it to 2.
 
-The next is the call builder.
-When utilizing the community treasury, the call needs to start with `collectiveProxy -> executeCall`.
-After that, the dApp staking call needs to be built. It's possible, and encouraged, to use the _batch_ calls to simplify the voting process.
+**Step 2: Call Builder**
 
-<Figure caption="dApp Staking - 1" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_1.png').default } width="100%" />
+The next is the call builder. When utilizing the community treasury, the call needs to start with `collectiveProxy → executeCall`.
+After that, the dApp staking call needs to be built.
 
-### Registering a New dApp
+:::tip Batch Calls
+
+It's possible, and encouraged, to use the _batch_ calls to simplify the voting process.
+
+:::
+<Figure caption="dApp Staking Process - Part 1" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_1.png').default } width="100%" />
+
+### 3.2.3 Registering a New dApp
 
 Unlike the actual staking with the community treasury, registering a new dApp **does not** require the `collectiveProxy`.
 Instead, the call should directly propose `dappStaking -> register`.
