@@ -66,7 +66,7 @@ Token holders are the core of Astar Network’s governance system, holding prima
 
 Now let’s understand what **Token Holders** can **do** and **how**, using the Subsquare platform.
 
-### 3.1.1 Submitting an Onchain Proposal
+### 3.1.1. Submitting an Onchain Proposal
 
 All ASTR holders can create an onchain proposal through three different tracks: **Public Proposal**, **Main Treasury**, or **Community Treasury**. In this guide, we’ll walk through the step-by-step process for creating a proposal in each of these tracks.
 
@@ -199,7 +199,7 @@ The third track for creating onchain proposals is using the Community Treasury, 
 All proposals requesting actions or expenditures from the Community Treasury will be reviewed, approved, or rejected by the Community Council. More details on this below.
 
 :::
-### 3.1.2 Vote Delegation
+### 3.1.2. Vote Delegation
 
 Any ASTR token holder can delegate their tokens so that their voting power can be used in governance proposals. It’s important to highlight that when you delegate your tokens, they never leave your wallet. Once delegated, you can revoke the delegation at any time.
 
@@ -236,7 +236,7 @@ Clicking on the `Account` tab on the sidebar will display the account details. T
 
 <Figure caption="Vote Delegation - Part 5" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
 
-### 3.1.3 Voting
+### 3.1.3. Voting
 
 Any ASTR token holder can vote on active proposals within Astar’s governance. Tokens in both the `Transferable` and `Locked` sections can be used to participate in governance processes, meaning that tokens staked in Astar dApp Staking can also be used for voting.
 
@@ -335,7 +335,7 @@ If you'd like to get more involved with the Community Council, check out our [**
 
 Now let’s take a closer look at how the Community Council operates.
 
-### 3.2.1 Treasury Spending Request
+### 3.2.1. Treasury Spending Proposal
 
 
 The Community Council is responsible for reviewing and voting on proposals that request funding from the **Community Treasury**. These proposals are submitted as `motions`, which can be viewed under the Motions tab in the Community Council section of the sidebar.
@@ -391,7 +391,7 @@ The process to `Reject` a proposal is exactly the same, simply selecting `Reject
 :::
 <Figure caption="Create a Motion - Reject Proposal" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_7.png').default } width="100%" />
 
-### 3.2.2 Staking from the Community Treasury (UCG)
+### 3.2.2. Staking from the Community Treasury (UCG)
 
 One of the main responsibilities of the Community Council is to stake in dApps that are part of the **Unstoppable Community Grant** (UCG) program. Conversely, the Council is also responsible for unstaking from dApps that have completed their cycle or failed to deliver the expected performance.
 
@@ -433,7 +433,7 @@ Finally, enter the EVM address of the dApp’s smart contract + the amount and t
 
 <Figure caption="dApp Staking Process - Part 3" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_1.png').default } width="100%" />
 
-### 3.2.3 Registering a New dApp
+### 3.2.3. Registering a New dApp
 
 When a dApp wishes to be listed in the **Astar dApp Staking program**, it can submit a listing request through the Community Council. Council members can review the proposal in detail and either approve or reject the request.
 
@@ -468,25 +468,110 @@ Finally, enter the EVM address of the dApp’s smart contract and that’s it! C
 
 ## 3.3. Main Council
 
-The `Main Council` UI support is rudimentary at the moment.
-They can approve & reject _main treasury_ spending proposals, same as the `Community Council`.
-However, other actions require building the call manually.
+The Main Council serves as Astar Network's primary governance body, designed to manage high-level policy decisions and treasury oversight while maintaining the ability to respond rapidly to network emergencies. The council operates with 6 initial members, with the capacity to expand to 16 members as the network grows and governance needs evolve.
 
-Please refer to [the technical guide](/docs/learn/governance/technical_guide) for more information on how to construct these calls using the Polkadot-js App interface.
+### 3.3.1. Core Responsibilities and Powers
 
-Calls can also be constructed using the `Subsquare` interface, but users should refer to the linked technical guide for more information.
+The Main Council holds comprehensive authority over critical network decisions through super-majority voting mechanisms. Council members manage main treasury spending proposals, requiring the same approval processes as the Community Council to ensure balanced resource allocation. 
 
-<Figure caption="Main Council - 1" src={require('/docs/use/img/24_Subsquare_main_council/main_council_1.png').default } width="100%" />
+Beyond treasury management, the Main Council creates and manages external proposals with differentiated voting schemes tailored to proposal complexity and impact. The council's emergency response capabilities represent its most critical function. With a two-thirds majority vote, the Main Council can immediately force-enter or exit Safe Mode, providing rapid network protection during security incidents.
 
-Clicking on `New Common` will allow the council member to create a new motion.
-It's important to keep the threshold number in mind, since requirement may differ between different calls.
+### 3.3.2. Voting Mechanisms and Thresholds
 
-For external proposals, it is recommended to use the Polkadot-js App interface.
+Main Council operations require careful attention to threshold requirements, as different actions mandate varying consensus levels. Standard treasury proposals typically require simple majority approval, while emergency interventions demand two-thirds majority consensus to ensure adequate deliberation before activating network-wide protective measures.
 
-## Technical Committee
+The council's external proposal creation capability enables fast-tracking of critical governance decisions when time-sensitive situations arise. However, these proposals remain subject to Technical Committee oversight, creating balanced checks and balances within the governance system.
 
-The `Technical Committee` UI support is rudimentary and requires manual call construction.
+## 3.4. Technical Committee
 
-Please refer to [the technical guide](/docs/learn/governance/technical_guide) for more information on how to construct this calls using the Polkadot-js App interface.
+The Technical Committee operates as Astar Network's specialized **emergency response** unit, comprising three highly skilled members with deep expertise in **Astar runtime** development and **blockchain security**. The committee can expand to eight members as technical governance needs evolve, ensuring adequate coverage for complex emergency scenarios.
 
-The assumption is that technical committee members are technically proficient and will refer to the linked technical guide for more information.
+### 3.4.1. Specialized Emergency Powers
+
+Technical Committee members wield significant emergency intervention capabilities designed for rapid response to security threats. The committee can instantly fast-track critical proposals through unanimous agreement, compressing normal governance timelines from days to minutes when network security demands immediate action.
+
+Individual committee members possess extraordinary veto power over Main Council external proposals, providing technical oversight for governance decisions that might impact network security or stability. This veto authority ensures that governance enthusiasm cannot override technical safety considerations during crisis situations.
+
+The committee controls multiple emergency mechanisms including Safe Mode activation, TxPause implementation for compromised transaction types, and dApp Staking maintenance mode. These granular intervention capabilities enable surgical responses to specific threats without requiring comprehensive network shutdown.
+
+## 3.5. Emergency Response Mechanisms
+
+Both the Main Council and Technical Committee share authority over Astar Network's comprehensive emergency response system, which provides graduated intervention capabilities for different threat scenarios. These mechanisms balance rapid response requirements with governance legitimacy, ensuring network protection while maintaining democratic oversight.
+
+### 3.5.1. Activating dApp Staking Maintenance Mode
+
+Maintenance Mode provides protocol-specific intervention capability, particularly valuable for protecting staking-related assets during security incidents. The mechanism preserves existing stake positions and reward calculations while preventing new staking actions and fund withdrawals, creating a protective barrier around compromised protocols.
+
+**Configure the DappStaking Extrinsic on Polkadot.js**
+
+Select the `dappStaking` pallet from the extrinsic dropdown menu on [**Polkadot.js**](https://dotapps-io.ipns.dweb.link/#/explorer) and choose the `maintenanceMode` function. This call does not require additional parameters, as it toggles the maintenance state for the entire dApp staking system.
+
+<Figure caption="Maintenance Mode - Polkadot.js" src={require('/docs/use/img/24_emergency_mechanisms/maintenance_mode.png').default } width="100%" />
+
+### 3.4.2 Implementing TxPause Functionality
+
+TxPause provides surgical intervention capability by selectively disabling specific transaction types while maintaining overall network operation. This granular approach enables targeted responses to identified vulnerabilities without comprehensive network disruption.
+
+The mechanism operates by specifying exact pallet names and function combinations for suspension. Understanding proper formatting requirements is essential for successful implementation.
+
+**Step 1: Identify the Target Function**
+
+Before creating a pause motion, precisely identify the compromised pallet and specific function requiring suspension. Use the Polkadot-js App to examine available pallets and their functions, noting that pallet names must use proper capitalization (such as "Assets" rather than "assets") while function names require snake_case formatting (such as "transfer_all" rather than "transferAll").
+
+**Step 2: Create the Pause Motion**
+
+Navigate to the appropriate council interface and create a new motion. Set the threshold to 4 for Main Council activation (two-thirds majority) or 2 for Technical Committee activation (simple majority). The motion description should clearly explain which specific function is being paused and the security rationale.
+
+**Step 3: Configure the TxPause Extrinsic**
+
+Select the `txPause` pallet and choose the `pause` function. Enter the exact pallet name as the first parameter, ensuring proper capitalization. Enter the specific function name as the second parameter using correct snake_case formatting.
+
+For example, to pause balance transfers entirely, use "Balances" as the pallet name and "transfer_all" as the function name. To pause specific dApp staking claims, use "DappStaking" and "claim_unlocked" respectively.
+
+**Step 4: Execute and Monitor**
+
+Submit the motion and await the required council votes for activation. Once approved, the specified function will be immediately disabled while all other network operations continue normally. Monitor the network for confirmation that the targeted function is properly suspended.
+
+**Step 5: Unpause When Resolved**
+
+After the security threat is resolved and appropriate patches are implemented, create a new motion using the `txPause` pallet and `unpause` function with identical pallet and function name parameters to restore normal functionality.
+
+### 3.4.3 Activating Safe Mode
+
+Safe Mode represents Astar Network's most comprehensive emergency response mechanism, designed for existential threats requiring complete transaction restriction except for essential system operations. This mechanism blocks nearly all user-submitted transactions while maintaining critical network functions including governance actions, parachain lifecycle functions, and timestamping operations.
+
+Safe Mode initializes with a 12-hour active period and supports extension in 2-hour increments through additional governance actions, providing flexible response duration based on threat complexity and resolution requirements.
+
+**Step 1: Confirm Critical Threat Status**
+
+Safe Mode activation requires confirmation of critical network threats that pose existential risk to the entire Astar ecosystem. Appropriate scenarios include active exploit windows targeting core protocol functions, confirmed critical vulnerabilities requiring immediate network-wide protection, and coordinated attacks affecting multiple system components simultaneously.
+
+**Step 2: Create Emergency Motion**
+
+Access the council interface and create a new motion with maximum urgency indicators. Set the threshold to 4 for Main Council activation or 2 for Technical Committee activation. The motion description must provide comprehensive threat details, immediate risk assessment, and estimated resolution timeline.
+
+**Step 3: Configure SafeMode Entry**
+
+Select the `safeMode` pallet and choose the `forceEnter` function. This extrinsic does not require additional parameters and will immediately activate comprehensive network protection upon successful vote completion.
+
+Include clear community communication plans in the motion description, outlining how users and ecosystem partners will be notified of the emergency state and expected duration.
+
+**Step 4: Execute Network-Wide Protection**
+
+Submit the motion for council voting. Upon reaching the required threshold, Safe Mode will activate immediately, restricting all user-submitted transactions except essential governance and system operations. The initial 12-hour period begins immediately upon activation.
+
+**Step 5: Manage Duration and Extensions**
+
+Monitor threat resolution progress during the initial 12-hour period. If additional time is required, create extension motions using the `safeMode` pallet and `forceExtend` function, specifying 2-hour increment extensions as needed.
+
+Multiple extensions are permitted for complex security incidents requiring extended resolution periods, though each extension requires separate council approval.
+
+**Step 6: Exit Safe Mode**
+
+Once security threats are fully resolved and network safety is confirmed, create a final motion using the `safeMode` pallet and `forceExit` function. This motion should include confirmation that security patches are implemented, threat vectors are eliminated, and normal network operations can safely resume.
+
+The exit motion requires the same threshold as activation, ensuring adequate council consensus before removing network-wide protections.
+
+---
+
+Please refer to [the technical guide](/docs/learn/governance/technical_guide) for detailed information about constructing these calls using the Polkadot-js App interface, including specific parameter requirements and execution procedures for each emergency mechanism.
