@@ -1,154 +1,163 @@
 ---
 sidebar_position: 1
 sidebar_label: Onchain Governance
-title: Astar Subsquare - Onchain Governance
+title: Astar Onchain Governance
+description: Practical Guide to the Different Modules of On-Chain Governance.
 ---
 
 import Figure from "/src/components/figure"
 
-## Intro
+## 1. Introduction
 
-Astar Network is transitioning its governance system from offchain voting through Townhall to onchain voting. This change empowers Astar stakeholders to directly vote on key network proposals and decisions onchain. Astar governance allows ASTR token holders to influence and participate in decisions that affect the network, such as protocol improvements, runtime updates, and dApp Staking applications.
+Astar Onchain Governance is a decentralized mechanism where ASTR token holders can propose, discuss, and vote on important changes and initiatives within the **Astar Collective**. This onchain governance system empowers stakeholders to directly influence key network decisions, including protocol improvements, runtime updates, treasury funding requests, and the management of dApp Staking applications.
 
-To interact with the onchain governance, users have two primary interfaces to choose from: [Subsquare](https://www.subsquare.io/) or the traditional [Polkadot.js](https://polkadot.js.org/apps/) interface. Subsquare provides a user-friendly interface for governance participation, while Polkadot.js offers a more technical approach.
+The governance system ensures that decisions are made collectively and transparently by the community, reflecting the interests of the network's stakeholders. Proposals may cover a wide range of topics that affect the network's development, security, and long-term sustainability. To participate in Astar onchain governance, users have two primary interfaces available: [**Subsquare**](https://astar.subsquare.io/) and the traditional [**Polkadot.js**](https://dotapps-io.ipns.dweb.link/?rpc=wss://astar.public.blastapi.io#/explorer) interface. Subsquare provides a user-friendly interface designed for broader community participation, while Polkadot.js offers a more technical approach for advanced users.
 
-This guide will walk you through the process of participating in Astar onchain governance using the Subsquare platform. For those who prefer to use Polkadot.js, you can refer to the [Astar Governance Technical Guide](/docs/learn/governance/technical_guide.md).
+This guide will walk you through the process of participating in Astar onchain governance using the **Subsquare** platform. For those who prefer the technical approach, you can refer to the [**Astar Governance Technical Guide**](/docs/learn/governance/technical_guide.md). For a comprehensive understanding of Astar governance structure and processes, we encourage you to read the [**Astar Governance Overview**](/docs/learn/governance/index.md) in our documentation.
 
-## What is Astar Governance?
+:::info Polkadot.js
 
-Astar governance is a decentralized mechanism where ASTR token holders can propose, discuss, and vote on important changes and initiatives within the Astar ecosystem. Proposals may cover a wide range of topics, such as protocol upgrades, treasury funding requests, and the management of dApp Staking. This governance system ensures that decisions are made collectively and transparently by the community, reflecting the interests of the network’s stakeholders.
+If you want to learn more about Polkadot.js, check out this [**Polkadot Official guide**](https://wiki.polkadot.com/general/polkadotjs-ui/).
 
-For a deeper understanding of Astar governance, including its structure and processes, we encourage you to read the [Astar Governance Overview](/docs/learn/governance/index.md) in our documentation.
+:::
+## 2. Subsquare for Onchain Governance
 
-## Using Subsquare for Onchain Governance
+[**Subsquare**](https://astar.subsquare.io/) serves as the primary governance platform for Astar Network, providing a comprehensive and user-friendly interface that makes onchain governance participation accessible to all community members regardless of their technical expertise. The platform represents the cornerstone of Astar's democratic decision-making process, offering a sophisticated yet intuitive environment where ASTR token holders can actively shape the network's future.
 
-[Subsquare](https://astar.subsquare.io/) is designed to make onchain governance participation easy for all users. Through Subsquare, you can:
+Through **Subsquare**, you can:
 
 - View active proposals.
+- Create your own proposals.
 - Participate in discussions.
 - Cast your votes on governance decisions.
 - Track the progress of proposals from submission to execution.
 
-The purpose of this guide is to demonstrate how to utilize the **Subsquare** platform for governance actions on Astar & Shibuya.
-Working assumption is that the reader has familiarized themselves with the governance model, and will refer back to the docs if needed.
+The purpose of this guide is to demonstrate how to utilize the **Subsquare** platform for governance actions on **Astar Network**.
+Working assumption is that the reader has familiarized themselves with the governance model, and will refer back to the docs if needed. This will be a **practical guide** for users.
 
-- [Shibuya Subsquare](https://shibuya.subsquare.io/)
-- [Astar Subsquare](https://astar.subsquare.io/)
+:::info Astar Subsquare
 
-## Account Selection
+Check out the Subsquare version for [**Astar here**](https://astar.subsquare.io/) and get familiar with the existing proposals.
 
-Both Substrate & EVM style accounts can participate in governance actions.
+:::
+### 1. Account Selection
 
-When connecting an account to the Subsquare platform, the user can choose between different wallets and account types.
+Both **Substrate** and **EVM** style accounts can participate in governance actions on **Astar Network** through the Subsquare platform, providing flexibility for users across different blockchain ecosystems.
+
+When the user visits [**Astar Subsquare**](https://astar.subsquare.io/) and clicks the **connect** button, they will be able to choose from multiple wallet options displayed on the screen.
 
 <Figure caption="Substrate Account Selection" src={require('/docs/use/img/25_Subsquare_wallet_account_selection/wallet_account_1.png').default } width="100%" />
 
-Different _Substrate_ account compatible wallets are available. If the user wants to use their EVM account, they should select `EVM` under the option.
+By default, the available compatible Substrate wallet options will be displayed.
 
 <Figure caption="EVM Account Selection" src={require('/docs/use/img/25_Subsquare_wallet_account_selection/wallet_account_2.png').default } width="100%" />
 
-Here, the user can select the desired EVM wallet.
+If the users wants to use their EVM accounts, they should select `EVM` under the option. Here, the users can select the desired EVM wallets.
 
-## Token Holder
+## 3. Governance Roles
 
-### Preimages
+The **Astar Network governance** system is composed of multiple roles, each with distinct responsibilities and powers within the onchain decision-making process.
 
-Select the `Preimage` tab on the sidebar.
+This section outlines the main governance roles, such as **Token Holders**, **Community Council**, **Main Council**, and **Technical Committee**. Finally, explains the specific actions each can perform within the network. Understanding these roles is key to participating meaningfully in proposals, voting, treasury management, and overall protocol evolution.
 
-<Figure caption="Preimage - 1" src={require('/docs/use/img/17_Subsquare_preimage/preimage_1.png').default } width="100%" />
+## 3.1. Token Holder
 
-The existing preimages are displayed on the page.
-They can be reused by anyone to propose a governance action, any number of times.
+Token holders are the core of Astar Network’s governance system, holding primary decision-making power through their ASTR tokens. They play a central role in shaping the network’s evolution by proposing and voting on runtime upgrades, treasury funding, and referenda that influence key parameters. The stake-weighted and conviction voting systems allow them to increase their influence by locking tokens for longer periods, encouraging long-term alignment with the network’s success.
 
----
+Now let’s understand what **Token Holders** can **do** and **how**, using the Subsquare platform.
 
-In order to create a new preimage, click on the `New Preimage` button.
+### 3.1.1 Submitting an Onchain Proposal
 
-<Figure caption="Preimage - 2" src={require('/docs/use/img/17_Subsquare_preimage/preimage_2.png').default } width="100%" />
+All ASTR holders can create an onchain proposal through three different tracks: **Public Proposal**, **Main Treasury**, or **Community Treasury**. In this guide, we’ll walk through the step-by-step process for creating a proposal in each of these tracks.
 
----
+**Track #1: Public Proposal**
 
-Again, click on the `New preimage` button.
-This allows you to create an arbitrary new preimage.
+**Step 1: Create the Preimage**
+
+The first thing you need to do is create a `preimage`, which will contain the actions you want to execute onchain. To do this, go to the `Advanced/Preimages` section in the Subsquare left sidebar.
+
+<Figure caption="Create a preimage - Part 1" src={require('/docs/use/img/17_Subsquare_preimage/preimage-1.png').default } width="100%" />
+
+The existing preimages are displayed on the page. They can be reused by anyone to propose a governance action, any number of times. Review the selected params and copy the preimage hash.
+
+In order to create a new preimage, click on the `+ New Preimage` button.
+
+<Figure caption="Create a preimage - Part 2" src={require('/docs/use/img/17_Subsquare_preimage/preimage_2.png').default } width="100%" />
+
+As you can see on the screen, you can either create the preimage, which is the first option, or create a remark proposal using the second option. This time, we’ll go with the **first option** (New Preimage).
 
 For the sake of this example, we will create a preimage of a `remarkWithEvent` extrinsic call, containing **LGM!** as the _message_.
 
-Note the _hash_ and _length_; these are important for later use.
+:::info Hash and Lenght
 
+Please take note of the *hash* and *length*; these will be important for later use.
+
+:::
 Submit the message and wait for the transaction to be confirmed and finalized.
 
-<Figure caption="Preimage - 3" src={require('/docs/use/img/17_Subsquare_preimage/preimage_3.png').default } width="100%" />
+<Figure caption="Create a preimage - Part 3" src={require('/docs/use/img/17_Subsquare_preimage/preimage_3.png').default } width="100%" />
 
----
+:::info Treasury Spending
 
+If your intention is to request treasury funds through a Public Proposal, there are a few steps you must take before creating the preimage:
+
+* First, go to `Treasury` or `Community Treasury` and create your proposal. Once it’s created, you’ll be able to edit the description and other visual elements of your proposal.
+* As soon as the proposal is created, it will provide you with a numeric ID (e.g., 4). You’ll need this ID to create your preimage.
+* Finally, in your preimage, you should select the extrinsic `treasury.approveProposal` (or `communitytreasury.approveProposal`, depending on where you created the proposal) and paste the ID you obtained.
+
+That’s it! With this preimage, you’ll be able to create a Public Proposal and allow any ASTR holder to vote on the treasury spending proposal you have selected. You can follow the steps below.
+
+:::
 Once the preimage has been created, it will be displayed on the main `Preimage` page.
 
-<Figure caption="Preimage - 4" src={require('/docs/use/img/17_Subsquare_preimage/preimage_4.png').default } width="100%" />
+<Figure caption="Create a preimage - Part 4" src={require('/docs/use/img/17_Subsquare_preimage/preimage_4.png').default } width="100%" />
+
+:::info Unnote button
 
 Note that the newly created image has an `Unnote` button. This is because the current user is the creator of the preimage.
+
 Since at this point the preimage is not yet used in any proposal, it can be unnoted, which will remove it from the list of preimages, refunding the deposit.
 
-### Public Proposal
+:::
+**Step 2: Create a Public Proposal**
 
-Select the `Public Proposal` tab on the sidebar, under the `Democracy` section.
-
-<Figure caption="Public Proposal - 1" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_1.png').default } width="100%" />
+Once the `preimage` has been created, we can proceed to create the Public Proposal. To do this, go to the `Democracy/Public Proposals` section in the sidebar.
 
 Here the existing public proposals are displayed. Some have been tabled (upgraded to a referendum), some have been proposed, and others might be canceled.
 
----
+<Figure caption="Public Proposal - Part 1" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-1.png').default } width="100%" />
 
-Click on the `New Proposal` button to create a new public proposal.
-Since a preimage was created in the previous step, it can be used to create a new proposal.
+Click on the `New Proposal` button to create a new `Public Proposal`. Since a preimage was created in the previous step, it can be used to create a new proposal.
 
-<Figure caption="Public Proposal - 2" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_2.png').default } width="100%" />
+<Figure caption="Public Proposal - Part 2" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-2.png').default } width="100%" />
 
----
+The hash of the preimage is required to create a new proposal. In this case, hash of the preimage created earlier is simply copied and pasted into the `Preimage` field and the lengh will be automatically filled out.
 
-The hash of the preimage is required to create a new proposal.
-In this case, hash of the preimage created earlier is simply copied and pasted into the `Preimage` field.
+The `Locked Balance` refers to the amount being _deposited_ **(not locked)** for the proposal. In case the proposal is canceled, the deposit will be slashed. In case the proposal is tabled, the deposit will be refunded.
 
-The `Locked Balance` refers to the amount being _deposited_ (not locked) for the proposal.  
-In case the proposal is canceled, the deposit will be slashed.  
-In case the proposal is tabled, the deposit will be refunded.  
-
-<Figure caption="Public Proposal - 3" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_8.png').default } width="100%" />
-
----
+<Figure caption="Public Proposal - Part 3" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-3.png').default } width="100%" />
 
 After submitting the proposal, some time needs to pass before the transaction is confirmed and finalized.
 
-<Figure caption="Public Proposal - 4" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_3.png').default } width="100%" />
+<Figure caption="Public Proposal - Part 4" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-4.png').default } width="100%" />
 
----
+Afterwards, it can be observed under the list of public proposals. The status will be marked as `Proposed`, since it hasn't been _tabled_ (or _canceled_) yet.
 
-Afterwards, it can be observed under the list of public proposals.
-The status will be marked as `Proposed`, since it hasn't been _tabled_ (or _canceled_) yet.
-
-<Figure caption="Public Proposal - 5" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_4.png').default } width="100%" />
-
----
+<Figure caption="Public Proposal - Part 5" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-5.png').default } width="100%" />
 
 Clicking on the proposal will display more details, and allow to take further actions.
 
-<Figure caption="Public Proposal - 6" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_5.png').default } width="100%" />
+<Figure caption="Public Proposal - Part 6" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-6.png').default } width="100%" />
 
----
+Proposals can be edited by clicking on the `Edit` button. Title and description can be changed, even a graphic image can be uploaded. Users can discuss the proposal in the comments section.
 
-Proposals can be edited by clicking on the `Edit` button. Title and description can be changed, even a graphic image can be uploaded.
-Users can discuss the proposal in the comments section.
+<Figure caption="Public Proposal - Part 7" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-7.png').default } width="100%" />
 
-<Figure caption="Public Proposal - 7" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_6.png').default } width="100%" />
+Clicking the `Second` button to support the proposal, increase its chances of being tabled and upgraded to a referendum. The user has to _match_ the deposit of the proposal, which is displayed on the page. It is possible to second a proposal multiple times.
 
----
+<Figure caption="Public Proposal - Part 8" src={require('/docs/use/img/18_Subsquare_public_proposal/public-proposal-8.png').default } width="100%" />
 
-Clicking the `Second` button to support the proposal, increase its chances of being tabled and upgraded to a referendum.
-The user has to _match_ the deposit of the proposal, which is displayed on the page.
-It is possible to second a proposal multiple times.
-
-<Figure caption="Public Proposal - 8" src={require('/docs/use/img/18_Subsquare_public_proposal/public_proposal_7.png').default } width="100%" />
-
-### Treasury
+**Track #2: Treasury Proposal**
 
 Clicking on the `Treasury` tab on the sidebar will display the current state of the treasury & spending requests.
 
@@ -175,7 +184,7 @@ The proposal name & description can be edited.
 You can reuse the exact same steps for community treasury proposals.
 :::
 
-### Vote Delegation
+### 3.1.2 Vote Delegation
 
 Click on the `Delegation` tab on the sidebar to access the vote delegation page.
 This is an overview of _delegation_ related actions and statistics.
@@ -217,7 +226,7 @@ The 100 SBY locked in previous steps with conviction set to **3** is displayed -
 
 <Figure caption="Vote Delegation - 5" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
 
-### Voting
+### 3.1.3 Voting
 
 Clicking on the `Referenda` tab on the sidebar, under the `Democracy` tab, will display all of the referenda, including the ongoing ones, failed ones & executed ones.
 
