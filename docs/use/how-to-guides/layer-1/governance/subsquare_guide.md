@@ -533,42 +533,35 @@ To pause balance transfers entirely, use `Balances` as the pallet name and `tran
 After the security threat is resolved and appropriate patches are implemented, create a new motion using the `txPause` pallet and `unpause` function with identical pallet and function name parameters to restore normal functionality.
 
 :::
-### 3.4.3 Activating Safe Mode
+### 3.5.3. Activating Safe Mode
 
 Safe Mode represents Astar Network's most comprehensive emergency response mechanism, designed for existential threats requiring complete transaction restriction except for essential system operations. This mechanism blocks nearly all user-submitted transactions while maintaining critical network functions including governance actions, parachain lifecycle functions, and timestamping operations.
 
 Safe Mode initializes with a 12-hour active period and supports extension in 2-hour increments through additional governance actions, providing flexible response duration based on threat complexity and resolution requirements.
 
-**Step 1: Confirm Critical Threat Status**
-
-Safe Mode activation requires confirmation of critical network threats that pose existential risk to the entire Astar ecosystem. Appropriate scenarios include active exploit windows targeting core protocol functions, confirmed critical vulnerabilities requiring immediate network-wide protection, and coordinated attacks affecting multiple system components simultaneously.
-
-**Step 2: Create Emergency Motion**
-
-Access the council interface and create a new motion with maximum urgency indicators. Set the threshold to 4 for Main Council activation or 2 for Technical Committee activation. The motion description must provide comprehensive threat details, immediate risk assessment, and estimated resolution timeline.
-
-**Step 3: Configure SafeMode Entry**
+**Configure SafeMode Entry**
 
 Select the `safeMode` pallet and choose the `forceEnter` function. This extrinsic does not require additional parameters and will immediately activate comprehensive network protection upon successful vote completion.
 
-Include clear community communication plans in the motion description, outlining how users and ecosystem partners will be notified of the emergency state and expected duration.
+:::warning Restricted access
 
-**Step 4: Execute Network-Wide Protection**
+This is a functionality strictly reserved for members of the Main Council or Technical Committee. Access is only available through the Polkadot.js graphical interface.
 
-Submit the motion for council voting. Upon reaching the required threshold, Safe Mode will activate immediately, restricting all user-submitted transactions except essential governance and system operations. The initial 12-hour period begins immediately upon activation.
+:::
+:::tip Manage Duration Extensions
 
-**Step 5: Manage Duration and Extensions**
-
-Monitor threat resolution progress during the initial 12-hour period. If additional time is required, create extension motions using the `safeMode` pallet and `forceExtend` function, specifying 2-hour increment extensions as needed.
+If additional time is required, create extension motions using the `safeMode` pallet and `forceExtend` function, specifying 2-hour increment extensions as needed.
 
 Multiple extensions are permitted for complex security incidents requiring extended resolution periods, though each extension requires separate council approval.
 
-**Step 6: Exit Safe Mode**
+:::
+:::info Exit Safe Mode
 
-Once security threats are fully resolved and network safety is confirmed, create a final motion using the `safeMode` pallet and `forceExit` function. This motion should include confirmation that security patches are implemented, threat vectors are eliminated, and normal network operations can safely resume.
+Once security threats are fully resolved and network safety is confirmed, create a final motion using the `safeMode` pallet and `forceExit` function.
 
 The exit motion requires the same threshold as activation, ensuring adequate council consensus before removing network-wide protections.
+:::
 
----
+**Technical Documentation**
 
-Please refer to [the technical guide](/docs/learn/governance/technical_guide) for detailed information about constructing these calls using the Polkadot-js App interface, including specific parameter requirements and execution procedures for each emergency mechanism.
+Please refer to [**the technical guide**](/docs/learn/governance/technical_guide) for detailed information about constructing these calls using the [**Polkadot-js**](https://dotapps-io.ipns.dweb.link/#/explorer) App interface, including specific parameter requirements and execution procedures for each emergency mechanism.
