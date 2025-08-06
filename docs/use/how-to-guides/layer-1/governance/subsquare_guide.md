@@ -352,7 +352,7 @@ Clicking on the `+ New Proposal` button will prompt the Council to create a new 
 
 <Figure caption="Create a Motion - Part 1" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_1.png').default } width="100%" />
 
-For this example, we will select the first option from the Quickstart: `Approve a treasury proposal`.
+For this example, we will select the first option from the Quick Start: `Approve a treasury proposal`.
 
 <Figure caption="Create a Motion - Part 2" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_2.png').default } width="100%" />
 
@@ -389,23 +389,37 @@ If a Council member wishes to remove their vote, they may do so as long as the p
 The process to `Reject` a proposal is exactly the same, simply selecting `Reject a treasury proposal` when creating the `motion` during the step 1.
 
 :::
+<Figure caption="Create a Motion - Reject Proposal" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_7.png').default } width="100%" />
+
 ### 3.2.2 Staking from the Community Treasury (UCG)
 
 One of the main responsibilities of the Community Council is to stake in dApps that are part of the **Unstoppable Community Grant** (UCG) program. Conversely, the Council is also responsible for unstaking from dApps that have completed their cycle or failed to deliver the expected performance.
 
 With that in mind, let’s walk through the **Staking/Unstaking** process the Community Council must follow.
 
+**Step 1: Create a Motion**
+
+Clicking on the `Motions` tab under the `Community Council` sidebar tab will open a view of the `Community Council` motions.
+
+Clicking on the `+ New Proposal` button will prompt the Council to create a new motion.
+
+<Figure caption="dApp Staking Process - Part 1" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_1.png').default } width="100%" />
+
+For this example, we will select the last option from the Quick Start: `Community proxy call`.
+
+<Figure caption="dApp Staking Process - Part 2" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_8.png').default } width="100%" />
+
 **Stake in a dApp from the dApp Staking program**
 
 This is more complex since it requires the Council to understand the basics of dApp staking backend. The proposal call needs to be manually crafted and submitted to the blockchain.
 
-**Step 1: Set the Threshold**
+**Step 2: Set the Threshold**
 
 The first thing to select is the threshold. This can be calculated by taking the expected vote threshold (e.g. 50% or 2/3 of the quorum) and comparing it to the total number of members in the council. 
 
 For this particular case, the threshold is set to 2/3 of the council members and we have 3 council members so we set it to 2.
 
-**Step 2: Call Builder**
+**Step 3: Call Builder**
 
 The next is the call builder. When utilizing the community treasury, the call needs to start with `collectiveProxy → executeCall`.
 After that, the dApp staking call needs to be built.
@@ -415,16 +429,44 @@ After that, the dApp staking call needs to be built.
 It's possible, and encouraged, to use the _batch_ calls to simplify the voting process.
 
 :::
-<Figure caption="dApp Staking Process - Part 1" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_1.png').default } width="100%" />
+Finally, enter the EVM address of the dApp’s smart contract + the amount and that’s it! Click on **Submit**.
+
+<Figure caption="dApp Staking Process - Part 3" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_1.png').default } width="100%" />
 
 ### 3.2.3 Registering a New dApp
 
+When a dApp wishes to be listed in the **Astar dApp Staking program**, it can submit a listing request through the Community Council. Council members can review the proposal in detail and either approve or reject the request.
+
+Given that the Community Council has the authority to do so, let’s walk through the step-by-step process to complete it.
+
+**Step 1: Create a Motion**
+
+Clicking on the `Motions` tab under the `Community Council` sidebar tab will open a view of the `Community Council` motions.
+
+Clicking on the `+ New Proposal` button will prompt the Council to create a new motion.
+
+<Figure caption="Registering a dApp - Part 1" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_1.png').default } width="100%" />
+
+For this example, we will select the third option from the Quick Start: `Register for dapp staking`.
+
+<Figure caption="Registering a dApp - Part 2" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_9.png').default } width="100%" />
+
+**Step 2: Set the Threshold**
+
+The first thing to select is the threshold. This can be calculated by taking the expected vote threshold (e.g. 50% or 2/3 of the quorum) and comparing it to the total number of members in the council. 
+
+For this particular case, the threshold is set to 2/3 of the council members and we have 3 council members so we set it to 2.
+
+**Step 3: Use the dappStaking extrinsic**
+
 Unlike the actual staking with the community treasury, registering a new dApp **does not** require the `collectiveProxy`.
-Instead, the call should directly propose `dappStaking -> register`.
+Instead, the call should directly propose `dappStaking → register`.
 
-<Figure caption="dApp Staking - 2" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_2.png').default } width="100%" />
+Finally, enter the EVM address of the dApp’s smart contract and that’s it! Click on **Submit**.
 
-## Main Council
+<Figure caption="Registering a dApp - Part 3" src={require('/docs/use/img/23_Subsquare_dapp_staking/comm_council_ds_2.png').default } width="100%" />
+
+## 3.3. Main Council
 
 The `Main Council` UI support is rudimentary at the moment.
 They can approve & reject _main treasury_ spending proposals, same as the `Community Council`.
