@@ -2,16 +2,16 @@
 sidebar_position: 1
 sidebar_label: Onchain Governance
 title: Astar Onchain Governance
-description: Practical Guide to the Different Modules of On-Chain Governance.
+description: Practical Guide to the Different Modules of Onchain Governance.
 ---
 
 import Figure from "/src/components/figure"
 
 ## 1. Introduction
 
-Astar Onchain Governance is a decentralized mechanism where ASTR token holders can propose, discuss, and vote on important changes and initiatives within the **Astar Collective**. This onchain governance system empowers stakeholders to directly influence key network decisions, including protocol improvements, runtime updates, treasury funding requests, and the management of dApp Staking applications.
+Astar onchain Governance is a decentralized mechanism where ASTR token holders can propose, discuss, and vote on important changes and initiatives within the **Astar Collective**. This onchain governance system empowers stakeholders to directly influence key network decisions, including protocol improvements, runtime updates, treasury funding requests, and the management of dApp Staking applications.
 
-The governance system ensures that decisions are made collectively and transparently by the community, reflecting the interests of the network's stakeholders. Proposals may cover a wide range of topics that affect the network's development, security, and long-term sustainability. To participate in Astar onchain governance, users have two primary interfaces available: [**Subsquare**](https://astar.subsquare.io/) and the traditional [**Polkadot.js**](https://dotapps-io.ipns.dweb.link/?rpc=wss://astar.public.blastapi.io#/explorer) interface. Subsquare provides a user-friendly interface designed for broader community participation, while Polkadot.js offers a more technical approach for advanced users.
+The governance system ensures that decisions are made collectively and transparently by the community, reflecting the interests of the network's stakeholders. Proposals may cover a wide range of topics that affect the network's development, security, and long-term sustainability. To participate in Astar onchain governance, users have two primary interfaces available: [**Subsquare**](https://astar.subsquare.io/) and the traditional [**Polkadot.js**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/) interface. Subsquare provides a user-friendly interface designed for broader community participation, while Polkadot.js offers a more technical approach for advanced users.
 
 This guide will walk you through the process of participating in Astar onchain governance using the **Subsquare** platform. For those who prefer the technical approach, you can refer to the [**Astar Governance Technical Guide**](/docs/learn/governance/technical_guide.md). For a comprehensive understanding of Astar governance structure and processes, we encourage you to read the [**Astar Governance Overview**](/docs/learn/governance/index.md) in our documentation.
 
@@ -27,9 +27,9 @@ If you want to learn more about Polkadot.js, check out this [**Polkadot Official
 Through **Subsquare**, you can:
 
 - View active proposals.
-- Create your own proposals.
 - Participate in discussions.
 - Cast your votes on governance decisions.
+- Create your own public or treasury proposals.
 - Track the progress of proposals from submission to execution.
 
 The purpose of this guide is to demonstrate how to utilize the **Subsquare** platform for governance actions on **Astar Network**.
@@ -56,13 +56,13 @@ If the users wants to use their EVM accounts, they should select `EVM` under the
 
 ## 3. Governance Roles
 
-The **Astar Network governance** system is composed of multiple roles, each with distinct responsibilities and powers within the onchain decision-making process.
+The **Astar onchain governance** system is composed of multiple roles, each with distinct responsibilities and powers within the onchain decision-making process.
 
 This section outlines the main governance roles, such as **Token Holders**, **Community Council**, **Main Council**, and **Technical Committee**. Finally, explains the specific actions each can perform within the network. Understanding these roles is key to participating meaningfully in proposals, voting, treasury management, and overall protocol evolution.
 
 ## 3.1. Token Holder
 
-Token holders are the core of Astar Network’s governance system, holding primary decision-making power through their ASTR tokens. They play a central role in shaping the network’s evolution by proposing and voting on runtime upgrades, treasury funding, and referenda that influence key parameters. The stake-weighted and conviction voting systems allow them to increase their influence by locking tokens for longer periods, encouraging long-term alignment with the network’s success.
+Token holders are the core of the Astar onchain governance, holding primary decision-making power through their ASTR tokens. They play a central role in shaping the network’s evolution by proposing and voting on runtime upgrades, treasury funding, and referenda that influence key parameters. The stake-weighted and conviction voting systems allow them to increase their influence by locking tokens for longer periods, encouraging long-term alignment with the network’s success.
 
 Now let’s understand what **Token Holders** can **do** and **how**, using the Subsquare platform.
 
@@ -110,6 +110,15 @@ That’s it! With this preimage, you’ll be able to create a Public Proposal an
 :::
 Once the preimage has been created, it will be displayed on the main `Preimage` page.
 
+:::tip Understanding preimage deposits
+
+In the Astar onchain governance, preimage deposits are token amounts reserved when submitting a proposal’s preimage (**the encoded call data**) to the chain. They help prevent spam and cover onchain storage costs, ensuring the proposal’s details remain accessible throughout the governance process. 
+
+The deposit is proportional to the data size, calculated as: Total Deposit = Base Fee + (Bytes × Fee per Byte).
+
+These deposits are not spent but temporarily locked. They are refunded once the governance process concludes successfully. However, if the preimage is withdrawn early or the proposal is cancelled in bad faith, the deposit may be slashed. This mechanism encourages responsible participation while maintaining a balance between accessibility and network security.
+
+:::
 <Figure caption="Create a preimage - Part 4" src={require('/docs/use/img/17_Subsquare_preimage/preimage_4.png').default } width="100%" />
 
 :::info Unnote button
@@ -167,7 +176,7 @@ Any user, including the proposer, may support their proposal as many times as th
 
 **Track #2: Main Treasury**
 
-Another way to execute onchain actions without going through public referenda is through the approval of the **Main Council** or the **Technical Committee**. Clicking on the `Treasury` tab on the sidebar will display the current state of the treasury & spending requests.
+Another way to execute onchain actions without going through public referenda is through the approval of the **Main Council**. Clicking on the `Treasury` tab on the sidebar will display the current state of the treasury & spending requests.
 
 <Figure caption="Treasury - Part 1" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_1.png').default } width="100%" />
 
@@ -182,8 +191,7 @@ If the proposal is rejected, the bond will be `slashed`. Otherwise, the bond wil
 :::
 <Figure caption="Treasury - Part 2" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_2.png').default } width="100%" />
 
-After submitting the proposal, it will be displayed on the treasury page.
-The proposal name & description can be edited.
+After submitting the proposal, it will be displayed on the treasury page. The proposal name & description can be edited.
 
 <Figure caption="Treasury - Part 3" src={require('/docs/use/img/19_Subsquare_Treasury/treasury_3.png').default } width="100%" />
 
@@ -199,7 +207,24 @@ The third track for creating onchain proposals is using the Community Treasury, 
 All proposals requesting actions or expenditures from the Community Treasury will be reviewed, approved, or rejected by the Community Council. More details on this below.
 
 :::
-### 3.1.2. Vote Delegation
+
+### 3.1.2. Endorsing and Seconding Proposals
+
+The endorsement system in Astar onchain governance allows community members to support proposals through a process called **seconding**, which serves as both a quality filter and a mechanism for demonstrating community interest before proposals advance to referendum status.
+
+Seconding is a formal endorsement in which supporters match the original proposer’s deposit, creating an economic commitment that ensures genuine backing and prevents irrelevant proposals. The process is cumulative, allowing multiple members to second the same proposal, with deposits held until it reaches a referendum or is canceled.
+
+**Economic Implications of Proposal Support**
+
+When users choose to second a proposal, they commit the same deposit amount as the original proposer, creating shared economic risk among supporters. This deposit structure aligns incentives between proposers and supporters, ensuring all participants have meaningful stake in the proposal's quality and potential success.
+
+The deposit matching requirement serves multiple functions within the governance ecosystem. It prevents coordinated attacks where malicious actors could inflate support metrics without economic consequence, while simultaneously creating a natural threshold where proposals must demonstrate sufficient community conviction to advance through the governance pipeline.
+
+**Deposit Recovery and Risk Management**
+
+Seconding deposits follow the same recovery schedule as the original proposal’s deposit and are automatically refunded if the proposal advances to a referendum. This makes seconding a low-risk way to back legitimate initiatives while preserving an economic deterrent against poor quality proposals. However, if a proposal is canceled for malicious content or technical faults, all deposits, including those from seconders, may be slashed, incentivizing thorough due diligence before offering support.
+
+### 3.1.3. Vote Delegation
 
 Any ASTR token holder can delegate their tokens so that their voting power can be used in governance proposals. It’s important to highlight that when you delegate your tokens, they never leave your wallet. Once delegated, you can revoke the delegation at any time.
 
@@ -236,9 +261,9 @@ Clicking on the `Account` tab on the sidebar will display the account details. T
 
 <Figure caption="Vote Delegation - Part 5" src={require('/docs/use/img/20_Subsquare_Delegation/delegation_5.png').default } width="100%" />
 
-### 3.1.3. Voting
+### 3.1.4. Voting
 
-Any ASTR token holder can vote on active proposals within Astar’s governance. Tokens in both the `Transferable` and `Locked` sections can be used to participate in governance processes, meaning that tokens staked in Astar dApp Staking can also be used for voting.
+Any ASTR token holder can vote on active proposals within the Astar onchain governance. Tokens in both the `Transferable` and `Locked` states can be used to participate in governance processes, meaning that tokens staked in Astar dApp Staking can also be used for voting.
 
 With that said, let’s understand how the voting process works on **Astar Subsquare**.
 
@@ -335,10 +360,9 @@ If you'd like to get more involved with the Community Council, check out our [**
 
 Now let’s take a closer look at how the Community Council operates.
 
-### 3.2.1. Treasury Spending Proposal
+### 3.2.1. Community Treasury Spending Proposal
 
-
-The Community Council is responsible for reviewing and voting on proposals that request funding from the **Community Treasury**. These proposals are submitted as `motions`, which can be viewed under the Motions tab in the Community Council section of the sidebar.
+The Community Council is responsible for reviewing and voting on proposals that request funding from the **Community Treasury**. These proposals are **approved** or **refused** via motions created by the **Community Council**, and which can be viewed under the `Motions` tab in the Community Council section of the sidebar.
 
 With that in mind, let’s go through the steps the Council must follow to approve or reject a proposal.
 
@@ -518,9 +542,9 @@ The mechanism operates by specifying exact pallet names and function combination
 
 Select the `txPause` pallet and choose the `pause` function. Enter the exact pallet name as the first parameter, ensuring proper capitalization. Enter the specific function name as the second parameter using correct snake_case formatting.
 
-:::warning Restricted access
+:::warning Good to know
 
-This is a functionality strictly reserved for members of the Main Council or Technical Committee. Access is only available through the Polkadot.js graphical interface.
+This action can be executed directly by the **Main Council** or **Technical Committee** through the [**Polkadot.js interface**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/). However, it is not restricted to these bodies, an approved **governance referendum** can also authorize its execution.
 
 :::
 :::tip Example Case
@@ -543,9 +567,9 @@ Safe Mode initializes with a 12-hour active period and supports extension in 2-h
 
 Select the `safeMode` pallet and choose the `forceEnter` function. This extrinsic does not require additional parameters and will immediately activate comprehensive network protection upon successful vote completion.
 
-:::warning Restricted access
+:::warning Good to know
 
-This is a functionality strictly reserved for members of the Main Council or Technical Committee. Access is only available through the Polkadot.js graphical interface.
+This action can be executed directly by the **Main Council** or **Technical Committee** through the [**Polkadot.js interface**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/). However, it is not restricted to these bodies, an approved **governance referendum** can also authorize its execution.
 
 :::
 :::tip Manage Duration Extensions
