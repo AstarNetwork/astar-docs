@@ -9,23 +9,18 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Setup Node.js (no cache)
-      uses: actions/setup-node@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
         node-version: 22.x
+        cache: yarn
 
     - name: Enable Corepack
       run: corepack enable
       shell: bash
 
-    - name: Setup Node.js (with Yarn cache)
-      uses: actions/setup-node@v3
-      with:
-        node-version: 22.x
-        cache: yarn
-
     - name: Install dependencies with Yarn
-      run: yarn install --frozen-lockfile
+      run: yarn install --immutable
       shell: bash
 
     - name: Build project (optional)
