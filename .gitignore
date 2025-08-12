@@ -18,7 +18,6 @@ build/
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
-.yarnrc.yml
 
 # ------------------------
 # 📝 Config / Env files
