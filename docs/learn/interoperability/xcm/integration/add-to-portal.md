@@ -34,7 +34,7 @@ Once a channel is opened between parachains and assets have been registered, dev
     relayChain: Chain.POLKADOT,
     img: 'https://polkadot.js.org/apps/static/statemine.65437936..svg',
     parachainId: parachainIds.STATEMINT,
-    endpoint: 'wss://statemint-rpc.dwellir.com',
+    endpoint: 'wss://asset-hub-polkadot-rpc.n.dwellir.com',
     subscan: 'https://statemint.subscan.io',
     isAstarNativeToken: false,
   }
