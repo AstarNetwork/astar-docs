@@ -46,8 +46,6 @@ const config: Config = {
       type: 'text/css',
     },
   ],
-  
-  clientModules: ['./static/astarAi.js'],
 
   presets: [
     [
