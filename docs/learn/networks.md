@@ -19,7 +19,7 @@ With Zombienet users can download arbitrary Relay Chain and parachain binaries (
 ### Shibuya (Substrate)
 
 Shibuya has nearly the same chain specifications as Shiden & Astar, and provides an ideal environment for developers to test and debug, prior to launching their dApp on mainnet.
-Shibuya is running as a parachain of the Tokio Relay Chain, which is managed internally by the Astar team, and supports Shibuya, only, as test parachain.
+Shibuya is running as a parachain of the [Paseo Relay Chain](https://github.com/paseo-network), a community-run testnet network which [funded by the Polkadot Treasury](https://polkadot.polkassembly.io/referenda/464#e5af1f3c-8e7d-4f1f-b6a0-d1dab9f05c23) to support its maintenance and operation since 2024.
 
 The Shibuya native token symbol is SBY.
 

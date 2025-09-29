@@ -79,8 +79,8 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 |   | Public endpoint Shibuya |
 | --- | --- |
 | Network | Shibuya (parachain testnet) |
-| Parent chain | Tokyo relay chain (hosted by Astar Team) |
-| ParachainID | 1000 |
+| Parent chain | Paseo |
+| ParachainID | 2000 |
 | HTTPS | Astar Team: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
 |         | BlastAPI: https://shibuya.public.blastapi.io |
 |         | Dwellir: https://shibuya-rpc.n.dwellir.com |
