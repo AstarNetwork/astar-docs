@@ -132,19 +132,23 @@ Select your **collator account** and extrinsic type: _**identity / requestJudgme
 
 Send the transaction.
 
-### Bond funds
+### Bond funds and apply for candidacy
 
-To start collating, you need to have **32 000 SDN** tokens for Shiden or **3 200 000 ASTR** tokens for Astar.
+To apply collator candidacy, you need to have **32 000 SDN** tokens for Shiden or **3 200 000 ASTR** tokens for Astar.
 
 On the Polkadot.js portal select _**Developer > Extrinsic**_.
 
-Select your **collator account** and extrinsic type: _**CollatorSelection / registerAsCandidate**_:
+Select your **collator account** and extrinsic type: _**CollatorSelection / applyForCandidacy()**_:
 
 <center>
-<img src="https://i.imgur.com/3YvdJbt.png" border="1"></img>
+<img src="/img/tutorial/apply_for_collator.png" border="1"></img>
 </center>
 
 Submit the transaction.
+
+### Request for approval from governance
+
+Create a forum post and initiate a gov proposal - TODO (TBD)
 
 ### Production blocks
 
@@ -165,6 +169,7 @@ Once you become a collator and enter a session, you are required to produce bloc
 On the Polkadot.js portal select _**Developer > Extrinsic**_.
 
 Select your **collator account** and extrinsic type: _**CollatorSelection / leaveIntent**_:
+
 <center>
 <img src="/img/tutorial/collator-selection-leave-intent.png" border="1"></img>
 </center>
