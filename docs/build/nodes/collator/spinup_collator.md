@@ -110,7 +110,7 @@ Submit the transaction.
 
 On the Polkadot.js portal select _**Accounts**_.
 
-Open the 3 dots next to your collators address: **Set on-chain Identity**:
+Open the 3 dots next to your collators address: **Set onchain Identity**:
 
 <center>
 <img src="https://i.imgur.com/YIIWINt.png" border="1"></img>
@@ -148,7 +148,49 @@ Submit the transaction.
 
 ### Request for approval from governance
 
-Create a forum post and initiate a gov proposal - TODO (TBD)
+Once your node is synchronized, session keys are set, identity is verified, and your **collator candidacy** has been submitted onchain using the `apply_for_candidacy` extrinsic, you must request approval from **Astar Governance** to officially join the active collator pool.
+
+#### Step 1 – Create your governance application
+
+All collator applications must now be reviewed and approved by governance before activation.
+
+1. Go to the [**Astar Forum**](https://forum.astar.network/).  
+2. Create a new topic under **Governance → [Collator & Node Operators](https://forum.astar.network/c/astar-governance/collator-node-operators/39)**.  
+3. Title your post following this format:  `[Collator Application] {Your Collator Name}`
+4. In your post, include the following information:
+- **Collator name**  
+- **Collator address** (account used for locking)  
+- **Node details** (hardware specs, hosting provider, uptime/monitoring setup)  
+- **Technical experience / background**  
+- **Motivation to join the Astar collator set**  
+- **Session key hash** (from `author_rotateKeys`)  
+- **Proof of bond** (3,200,000 ASTR reserved onchain)  
+- Any **additional details** that demonstrate reliability and contribution to the network  
+
+#### Step 2 – Choose your governance approval path
+
+After posting your forum application, you have **two possible approval paths**:
+
+##### Option 1: Main Council review  
+Within your forum post, you can directly **request a review and evaluation by the Astar Main Council**.  
+If approved by a two-thirds majority vote, the Council will execute the onchain `approve_application` call to officially add your node to the collator candidates pool.  
+Council discussions typically take place within the official [Astar Governance](https://forum.astar.network/c/astar-governance/29) forum threads or during Council meetings.
+
+##### Option 2: Community Referendum  
+Alternatively, you can submit your application directly to the **Astar community** via referendum.  
+To do this:
+- Create an **external proposal** that calls the `approve_application` extrinsic.  
+- Once submitted, it will progress to a **referendum** where token holders can vote to approve or reject your candidacy.  
+- Refer to the [Submitting an Onchain Proposal](/docs/use/how-to-guides/layer-1/governance/subsquare_guide.md#311-submitting-an-onchain-proposal) for detailed steps on how to submit an onchain proposal through Subsquare.
+
+> ⏳ The approval timeline depends on the chosen path — Council votes are typically faster, while referendums follow standard onchain voting durations.
+
+#### Step 3 – Onboarding confirmation
+
+After approval:
+- Your collator will appear in the **Network → Collators** tab on the [Polkadot\{.js\} portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fastar.public.blastapi.io#/collators).  
+- Block production will start automatically at the next session (`n + 1`).  
+- You can monitor your block authorship and performance directly from the **Network** dashboard or telemetry.
 
 ### Production blocks
 
