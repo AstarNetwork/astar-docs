@@ -9,9 +9,12 @@ import TabItem from '@theme/TabItem';
 
 ## How to become a collator
 
-### Permissionless collator
+### Semi-Permissionless collator
 
-To become a permissionless collator on our networks, you need to meet the requirements below.
+To become a collator on our networks, you need to be approved by governance (2/3 MainCouncil or referendum).
+1. Apply for candidacy by reserving the bond (**Extrinsics - CollatorSelection - Apply for candidacy**)
+2. Request for approval from governance.
+3. Once governance proposal is executed (**Extrinsics - CollatorSelection - Approve application**). The onboading takes **n+1** session.
 
 **Collator staking requirements**
 
@@ -39,9 +42,8 @@ To become a permissionless collator on our networks, you need to meet the requir
 </Tabs>
 
 :::tip
-Set your collator with:
-**Extrinsics - CollatorSelection - Register as candidate** |
-Onboarding takes **n+1** session.
+If you want to withdraw the application and unlock the bond
+**Extrinsics - CollatorSelection - Close Application** 
 :::
 
 ---
