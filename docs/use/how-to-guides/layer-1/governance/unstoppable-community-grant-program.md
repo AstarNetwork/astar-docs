@@ -76,7 +76,7 @@ Projects that are or have been part of the UCG program can be tracked in the fol
 
 The Astar Community Council (ACC) allocates the necessary amount of ASTR from the [Community Treasury](https://astar.subscan.io/account/YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix) for each approved UCG proposal. The exact amount depends on the staking threshold required to reach Tier 3 in the active dApp Staking cycle (Voting + Build & Earn), ensuring that each supported dApp receives the optimal level of staking to operate sustainably during the grant period.
 
-Before submitting an official proposal on the Astar Forum, project teams can share their idea and gather early feedback through Astar’s community channels such as [Discord]((https://discord.gg/astarnetwork), Telegram, or the Forum itself. This step is completely optional and depends on each team’s preference and readiness to collect feedback before the official submission.
+Before submitting an official proposal on the Astar Forum, project teams can share their idea and gather early feedback through Astar’s community channels such as [Discord](https://discord.gg/astarnetwork), Telegram, or the Forum itself. This step is completely optional and depends on each team’s preference and readiness to collect feedback before the official submission.
 
 The standard UCG duration is 4 months, with the possibility of renewal for an additional four months upon Council approval.
 
