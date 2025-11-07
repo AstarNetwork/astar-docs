@@ -35,7 +35,7 @@ The main goal of the UCG program is to bring approved projects to Tier 3, ensuri
 
 At the end of the UCG term, the staked ASTR are unstaked and returned to the Community Treasury, maintaining full onchain transparency and capital integrity. The project team will be notified approximately one week in advance, giving them the opportunity to submit a renewal request if they wish to continue in the program for an additional period.
 
-To learn more about the dApp staking mechanism, see the official Astar documentation:[ dApp Staking Overview | Welcome to Astara](https://docs.astar.network/docs/learn/dapp-staking/)
+To learn more about the dApp staking mechanism, see the official Astar documentation:[ dApp Staking Overview | Welcome to Astar](https://docs.astar.network/docs/learn/dapp-staking/)
 
 ### UCG - Overview
 
