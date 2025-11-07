@@ -86,8 +86,8 @@ The standard UCG duration is 4 months, with the possibility of renewal for an ad
 
 * **Public Discussion**: Once published, the proposal enters a 7-day discussion period on the Forum. During this time, community members and Council representatives can share feedback, ask questions, and express their opinions.
 * **Internal Council Evaluation**: After the discussion period ends, the Astar Community Council (ACC) reviews the proposal internally, taking into account:
- ** the contents of the proposal itself, and
- ** the feedback and questions received from the community during the public discussion.
+  * the contents of the proposal itself, and
+  * the feedback and questions received from the community during the public discussion.
 The Council then publishes a public evaluation post on the Forum to communicate the outcome.
 * **If not approved**: the project can revise the proposal and reapply later.
 * **If approved**: the project may proceed to the next step whitelisting in the dApp Staking program.
@@ -152,9 +152,9 @@ Once the final report is reviewed, the project can follow one of the two possibl
 If the team decides not to continue, the program is officially concluded. The ASTR staked from the Community Treasury are unstaked and returned, and the project completes its participation in the UCG program. The final evaluation from the Astar Community Council (ACC) will take into account the entire journey from proposal submission to delivery and may influence future eligibility for other grants or ecosystem programs.
 2. **Renewing the grant**
 If the project wishes to continue, it can apply for an extension of up to 4 additional months (for a total of 8 months maximum). To do so, the team must submit a renewal proposal at least 2 weeks before the end of the current term. This proposal should include:
- ** a summary of results and milestones achieved so far,
- ** updated objectives and deliverables for the next period,
- ** a clear justification for continued support.
+   - a summary of results and milestones achieved so far,
+   - updated objectives and deliverables for the next period,
+   - a clear justification for continued support.
 If the renewal is approved by the Astar Community Council, the existing staking allocation remains active for another 4 months and no new onchain motion is required.
 
 The UCG program is a temporary bootstrap mechanism, not a continuous funding source. Its goal is to help promising projects establish a strong foundation, attract community support, and eventually sustain themselves independently through the Astar dApp Staking program.
