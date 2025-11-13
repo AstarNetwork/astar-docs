@@ -6,7 +6,7 @@ title: Astar Unstoppable Community Grant Program
 
 ## Introduction
 
-The Unstoppable Community Grants program is designed to strengthen and enhance the grants option on Astar network. It aims to build deeper relationships between the project and the Astar community while boosting a project in dApp Staking with early access and initial staking support over the duration of the grant.
+The Unstoppable Community Grants program is designed to strengthen and enhance the grant options on Astar network. It aims to build deeper relationships between projects and the Astar community while boosting a project in dApp Staking with early access and initial staking support over the duration of the grant.
 
 ## Motivation
 
@@ -20,12 +20,12 @@ The program encourages teams to establish direct communication with community me
 
 The Unstoppable Community Grant (UCG) is based on a staking grant mechanism, which in turn is based on Astar dApp Staking. In this mechanism, support for dApps arises from staking tokens on the dApp that is within the program and not through direct token transfers.
 
-This means that the Astar Community Council (ACC) temporarily manage part of the [Community Treasury](https://astar.subscan.io/account/YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix)’s ASTR holdings to stake on the approved dApp, rather than spending or distributing tokens.
+This means that the Astar Community Council (ACC) temporarily manages part of the [Community Treasury](https://astar.subscan.io/account/YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix)’s ASTR holdings to stake on the approved dApp, rather than spending or distributing tokens.
 
 During the grant period, this staking position creates a mutual benefit:
 
  * The dApp receives an immediate boost in visibility and reward generation, as the UCG allocation promotes it directly to Tier 3 in dApp Staking, enabling higher daily rewards and helping the team build and grow their project faster.
- * The Community Treasury continues to earn staking yields (APR) on the allocated tokens, ensuring that Treasury funds remain productive and generate value for the ecosystem even while being used for grants.
+ * The Community Treasury continues to earn staking yield (APR) on the allocated tokens, ensuring that Treasury funds remain productive and generate value for the ecosystem even while being used for grants.
 
 Every project that joins the Unstoppable Community Grant (UCG) program receives the necessary staking allocation from the [Community Treasury](https://astar.subscan.io/account/YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix) to be promoted to Tier 3 in the current dApp Staking cycle.
 
@@ -51,7 +51,7 @@ Each proposal passes through several structured steps, from submission to final 
 4. **Grant Activation (Initial Staking Allocation)**: Once approved, an onchain motion executed by the Astar Community Council (ACC) performs the action of staking the defined amount of ASTR from the Community Treasury on the project’s dApp. This allocation officially starts the UCG grant period, which lasts 4 months, with the possibility of renewal for an additional four months depending on the project’s deliverables and the final evaluation of its performance.
 5. **Monitoring & Reports**: During the grant period, the project must publish 4 monthly reports on the Astar Forum. Reports must be submitted every 30 days from the date the project started receiving dApp Staking rewards, meaning on the same day each month throughout the 4-month UCG term. These updates allow the Astar Community Council (ACC) and the community to track technical progress, transparency, and milestone delivery.
 6. **Re-evaluation (upon renewal request)**: Near the end of the 4-month period, if the team wishes to continue in the program, it must submit a renewal proposal about 1 week before the term expires, or during the same week of expiration. The Council will then review the project’s progress and may open a new motion to extend, adjust, or finalize the grant (up to a total duration of 8 months).
-7. **Finalize & Remove Grant**: If no renewal is requested or approved, the Astar Community Council (ACC) unstaked the allocated ASTR and the grant concludes. All tokens return to the Community Treasury, maintaining full onchain transparency.
+7. **Finalize & Remove Grant**: If no renewal is requested or approved, the Astar Community Council (ACC) unstakes the allocated ASTR and the grant concludes. All tokens return to the Community Treasury, maintaining full onchain transparency.
 
 ## Grant Guidelines and Process
 
@@ -78,7 +78,7 @@ The Astar Community Council (ACC) allocates the necessary amount of ASTR from th
 
 Before submitting an official proposal on the Astar Forum, project teams can share their idea and gather early feedback through Astar’s community channels such as [Discord](https://discord.gg/astarnetwork), Telegram, or the Forum itself. This step is completely optional and depends on each team’s preference and readiness to collect feedback before the official submission.
 
-The standard UCG duration is 4 months, with the possibility of renewal for an additional four months upon Council approval.
+The standard UCG duration is four months, with the possibility of renewal for an additional four months upon Council approval.
 
 **Phase 1: Proposal, Review and Council Evaluation**
 
@@ -90,7 +90,7 @@ The standard UCG duration is 4 months, with the possibility of renewal for an ad
   * the feedback and questions received from the community during the public discussion.
 The Council then publishes a public evaluation post on the Forum to communicate the outcome.
 * **If not approved**: the project can revise the proposal and reapply later.
-* **If approved**: the project may proceed to the next step whitelisting in the dApp Staking program.
+* **If approved**: the project may proceed to the next step, whitelisting in the dApp Staking program.
 
 **Whitelisting in dApp Staking**: Approved projects must ensure they are correctly listed in the dApp Staking program before any onchain motion can take place. For detailed instructions on how to register a dApp, see the official guide: [Register your Dapp in Dapp staking](https://docs.astar.network/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/register-dapp/#step-4-register-your-dapp-on-the-astar-portal)
 
@@ -103,7 +103,7 @@ The Council then publishes a public evaluation post on the Forum to communicate 
 
 ### Successful project
 
-If a project independently attracts enough ASTR from community stakers to reach or maintain Tier 2 in dApp Staking without relying on the UCG allocation the grant is automatically terminated. 
+If a project independently attracts enough ASTR from community stakers to reach or maintain Tier 2 in dApp Staking without relying on the UCG allocation, the grant is automatically terminated. 
 
 The dApp is considered self-sustaining, and the UCG stake is unstaked and returned to the Community Treasury, allowing new projects to benefit from the program.
 
@@ -116,7 +116,7 @@ All projects participating in the UCG program must submit progress reports at th
 * 90 days (3rd month)
 * 120 days (4th month) → final report marking the end of the grant period
 
-Each report must be posted on the Astar Forum by the specified dates. Timely submission is strongly required, missing or delayed reports may negatively affect the Council’s evaluation and the project’s eligibility for future grants or programs.
+Each report must be posted on the Astar Forum by the specified dates. Timely submission is strongly required. Missing or delayed reports may negatively affect the Council’s evaluation and the project’s eligibility for future grants or programs.
 
 Each report should include the following details:
 
@@ -140,7 +140,7 @@ The Council’s evaluation takes into account several key factors:
 * The quality, completeness, and punctuality of the monthly reports.
 * The achievement of milestones and objectives stated in the original proposal.
 * The responsible and transparent use of dApp Staking rewards.
-* The project’s contribution to the Astar ecosystem, including community participation and long-term value creation.
+* The project’s contribution to the Astar ecosystem, including community participation and long term value creation, is also evaluated.
 
 ## Completion of the Grant
 
@@ -151,14 +151,14 @@ Once the final report is reviewed, the project can follow one of the two possibl
 1. **Finalizing the grant**
 If the team decides not to continue, the program is officially concluded. The ASTR staked from the Community Treasury are unstaked and returned, and the project completes its participation in the UCG program. The final evaluation from the Astar Community Council (ACC) will take into account the entire journey from proposal submission to delivery and may influence future eligibility for other grants or ecosystem programs.
 2. **Renewing the grant**
-If the project wishes to continue, it can apply for an extension of up to 4 additional months (for a total of 8 months maximum). To do so, the team must submit a renewal proposal at least 2 weeks before the end of the current term. This proposal should include:
-   - a summary of results and milestones achieved so far,
+If the project wishes to continue, it can apply for an extension of up to four additional months (for a total of 8 months maximum). To do so, the team must submit a renewal proposal at least 2 weeks before the end of the current term. This proposal should include:
+   - a summary of the results and milestones achieved so far,
    - updated objectives and deliverables for the next period,
    - a clear justification for continued support.
-If the renewal is approved by the Astar Community Council, the existing staking allocation remains active for another 4 months and no new onchain motion is required.
+If the renewal is approved by the Astar Community Council, the existing staking allocation remains active for another four months and no new onchain motion is required.
 
 The UCG program is a temporary bootstrap mechanism, not a continuous funding source. Its goal is to help promising projects establish a strong foundation, attract community support, and eventually sustain themselves independently through the Astar dApp Staking program.
 
 Teams that wish to continue developing their projects or request additional support can also use Astar Governance, where they can submit new proposals or funding requests directly through the onchain governance system: [Astar Governance Guide](https://docs.astar.network/docs/use/how-to-guides/layer-1/governance/subsquare_guide).
 
-If you need further support or have any questions, please don't hesitate to contact the official team on the [Astar Discord server](https://discord.com/invite/astarnetwork).
+If you need further support or have any questions, please do not hesitate to contact the official team on the [Astar Discord server](https://discord.com/invite/astarnetwork).
