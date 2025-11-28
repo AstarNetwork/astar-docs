@@ -2,6 +2,10 @@
   "name": "astar-docs",
   "version": "2.0.0",
   "private": true,
+  "resolutions": {
+    "node-forge": "^1.3.2",
+    "glob": "^10.5.0"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
