@@ -118,7 +118,7 @@ curl -H "Content-Type: application/json" --data '{ "jsonrpc":"2.0", "method":"sy
 
 In any case, wait for the chain to be fully synchronized by checking the [node log](/docs/build/nodes/archive-node/binary#get-node-logs).
 
-How the archive node will be used will largely determine what steps to follow next: 
+How the archive node will be used will largely determine what steps to follow next:
 - If accessing the node publicly, running an [nginx server](/docs/build/nodes/archive-node/nginx) is the recommended option.
 - If the dApp is running on the same server as the node, then it can be accessed directly with the `localhost` address. This setup is recommended for testing purposes only.
 - If running the node locally for testing purposes, switch networks in [Polkadot.js portal](https://polkadot.js.org/apps) to explore the chain:
@@ -145,7 +145,7 @@ docker logs -f -n 100 $(docker ps -aq --filter name="astar-container")
 
 ### Indexers and Oracles
 
-To access data from indexers (like The Graph) or Oracles (like Chainlink), add the follwing debug flags to the node launch command, after the `astar-collator` line:
+To access data from indexers (like Subsquid) or Oracles (like Chainlink), add the follwing debug flags to the node launch command, after the `astar-collator` line:
 
 `--ethapi=debug`
 

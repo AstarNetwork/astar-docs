@@ -1,6 +1,6 @@
 # How to Install and Run
 
-## Indexder Installation
+## Indexer Installation
 
 ### 1. Prerequisites
 
