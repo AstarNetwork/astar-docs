@@ -86,7 +86,7 @@ You can start staking either by clicking the blue **“Choose dApps”** button 
 
 :::tip Project cards
 
-Click on the project cards for more information, access to their communities or to view team profiles. You can also find useful resources on our [**forum**](https://forum.astar.network/) or check [**DefilLama**](https://defillama.com/) or [**DappRadar**](https://dappradar.com/).
+Click on the project cards for more information, access to their communities or to view team profiles. You can also find useful resources on our [**forum**](https://forum.astar.network/) or check [**DefilLama**](https://defillama.com/).
 
 :::
 
@@ -146,16 +146,16 @@ At the end of a Period, tokens are unstaked from all dApps, remain locked on the
 
 :::
 
-## 3. Video tutorial 
+## 3. Video tutorial
 
 To wrap up, here’s a video tutorial that will guide you through the step-by-step process in case anything wasn’t clear. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
 
-<iframe 
-  width="100%" 
-  height="400" 
+<iframe
+  width="100%"
+  height="400"
   src="https://www.youtube.com/embed/zEioVpgFXQ8"
-  title="How to stake on Astar L1" 
-  frameBorder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  title="How to stake on Astar L1"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 />
