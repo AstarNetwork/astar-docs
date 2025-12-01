@@ -71,7 +71,7 @@ Description=Astar Archive node
 [Service]
 User=astar
 Group=astar
-  
+
 ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --rpc-cors all \
@@ -101,7 +101,7 @@ Description=Shiden Archive node
 [Service]
 User=astar
 Group=astar
-  
+
 ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --rpc-cors all \
@@ -131,7 +131,7 @@ Description=Shibuya Archive node
 [Service]
 User=astar
 Group=astar
-  
+
 ExecStart=/usr/local/bin/astar-collator \
   --pruning archive \
   --rpc-cors all \
@@ -208,7 +208,7 @@ journalctl -fu astar-collator -n100
 
 ### Indexers and oracles
 
-To access data from indexers (e.g. The Graph) or Oracles (e.g. Chainlink), you need to add the debug flags below to the node launch command, after the `astar-collator` line:
+To access data from indexers (e.g. Subsquid) or Oracles (e.g. Chainlink), you need to add the debug flags below to the node launch command, after the `astar-collator` line:
 
 `--ethapi=debug`
 
