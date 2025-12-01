@@ -78,7 +78,6 @@ Projects deployed outside the Astar Network must demonstrate:
 To strengthen your application, ensure you:
 
 - Are listed on **[DefiLlama](https://defillama.com/)** (if contributing to TVL).
-- Are listed on **[DappRadar](https://dappradar.com/)** (if you have daily active users).
 - Have **verified smart contracts** on Astar Native, EVM, Soneium, Ethereum or Polkadot.
 - Tag your GitHub repo with `#astar-network` and `#dAppStaking`.
 - (For infrastructure/tools) Submit a PR to [Astar Documentation](https://github.com/AstarNetwork/astar-docs) to be listed.
@@ -131,14 +130,14 @@ Once approved:
 
 ### Title: Project Name - dApp Staking Application
 
-**Introduction:**  Brief introduction of your proposal;  
-**Project Overview:**  Presentation of your project;  
-**Mission:**  What is your mission and what do you want to achieve with your project? You can also share your vision;  
-**Team:**  Introducing the team behind the project and the main contributors. You can share links to personal profiles;  
-**Security:** Share how you manage the security of your projects and users. You can share audit reports if you have them;  
-**Past Performance & Milestones:** Describe your latest achievements and the milestones you have reached in your project;  
-**Roadmap:**  Present your plans and the next steps in your project;  
-**dApp Staking Reward Usage Breakdown:**  Describe how you will use the rewards you earn with dApp Staking;  
+**Introduction:**  Brief introduction of your proposal;
+**Project Overview:**  Presentation of your project;
+**Mission:**  What is your mission and what do you want to achieve with your project? You can also share your vision;
+**Team:**  Introducing the team behind the project and the main contributors. You can share links to personal profiles;
+**Security:** Share how you manage the security of your projects and users. You can share audit reports if you have them;
+**Past Performance & Milestones:** Describe your latest achievements and the milestones you have reached in your project;
+**Roadmap:**  Present your plans and the next steps in your project;
+**dApp Staking Reward Usage Breakdown:**  Describe how you will use the rewards you earn with dApp Staking;
 **Appendix:** Links to your projects, products and communities
 
 :::
