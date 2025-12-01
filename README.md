@@ -21,10 +21,10 @@ yarn --version
 
 ## How to Contribute
 
-Choose your contribution path based on whether you are an internal team member or an external contributor:
+Choose your contribution path based on whether you are a member of the Astar Collective Github Organization or an external contributor:
 
 <details>
-<summary><b>Internal Contributors (Astar Team Members)</b></summary>
+<summary><b>Organization Contributors (Astar Collective)</b></summary>
 
 If you are part of the Astar organization on GitHub and have write access to the repository, follow these steps:
 
@@ -231,7 +231,7 @@ Likely, a broken build got pushed to `main` somehow. Remove the commit from `mai
 
 ## Deploy to Production
 
-**For Internal Contributors Only:**
+**For Organization Contributors Only:**
 
 When a PR is ready for merge, click the button at the bottom saying **Merge and Close** and then **Confirm**.
 
