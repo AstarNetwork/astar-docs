@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 
 ## 1. Overview
 
-In this guide, you’ll learn how to participate in **Astar dApp Staking** on **Soneium** using [**Neemo Finance**](https://neemo.finance/) or [**Astake**](https://www.astake.dev/). This practical guide will explain how you can take part in this mechanism using your **ASTR**.
+In this guide, you’ll learn how to participate in **Astar dApp Staking** on **Soneium** using [**Astake**](https://www.astake.dev/). This practical guide will explain how you can take part in this mechanism using your **ASTR**.
 
 To complete this tutorial, you’ll need:
 
@@ -40,47 +40,11 @@ We’ll now walk through the full transfer process step by step.
 
 :::caution Disclaimer
 
-Neemo Finance and Astake are independent projects and are **not affiliated with or operated by Astar Foundation**. Users are strongly advised to **conduct their own research** and contact the respective project teams for more information **before interacting with these dApps**. The Astar Foundation **disclaims all responsibility** for any issues, losses, or risks that may arise from the use of third-party projects.
+Astake is independent projects and is **not affiliated with or operated by Astar Foundation**. Users are strongly advised to **conduct their own research** and contact the respective project teams for more information **before interacting with these dApps**. The Astar Foundation **disclaims all responsibility** for any issues, losses, or risks that may arise from the use of third-party projects.
 
 :::
 
-## 2. Neemo Finance
-
-<Figure caption="" src={require('/docs/use/how-to-guides/soneium/dapp-staking/images/neemo-soneium.jpeg').default} width="100%" />
-
-### 1. What is Neemo Finance
-
-[**Neemo Finance**](https://neemo.finance/) is a liquid staking and restaking protocol built on the **Soneium** network. It enables users to stake their **ASTR** tokens through the **Astar dApp Staking** mechanism, earning rewards while maintaining liquidity. By staking ASTR, users receive **nsASTR**, a liquid staking token that appreciates over time as it accrues staking rewards. This integration allows users to participate in **DeFi applications** on Soneium without sacrificing staking benefits.
-
-### 2. Key features
-
-- **Integration with Astar dApp Staking:** Neemo Finance is built on Soneium but maintains a direct connection with Astar Network, enabling access to the Astar dApp Staking mechanism.
-
-- **Liquid Staking with nsASTR:** Stake ASTR and receive nsASTR, which can be used across various DeFi protocols on Soneium.
-
-- **DeFi Integration:** Neemo collaborates with protocols like QuickSwap, Sake Finance, and Kyo Finance, allowing users to maximize their yields by utilizing nsASTR in various DeFi strategies.
-
-:::tip Neemo docs
-
-If you want to learn more about Neemo Finance, explore their official documentation [**here**](https://docs.neemo.finance/).
-
-:::
-
-### 3. Video tutorial 
-
-To wrap up, here’s a video tutorial that will guide you through the step-by-step process of staking on Soneium using **Neemo Finance**. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
-
-<iframe 
-  width="100%" 
-  height="400" 
-  src="https://www.youtube.com/QKBbJI2jr_8"
-  title="How to Stake on Sonium using Neemo Finance" 
-  frameBorder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowFullScreen
-/>
-
-## 3. Astake
+## 2. Astake
 
 <Figure caption="" src={require('/docs/use/how-to-guides/soneium/dapp-staking/images/astake-soneium.jpeg').default} width="100%" />
 
@@ -102,16 +66,16 @@ If you want to learn more about Astake, explore their official documentation [**
 
 :::
 
-### 3. Video tutorial 
+### 3. Video tutorial
 
 To wrap up, here’s a video tutorial that will guide you through the step-by-step process of staking on Soneium using **Astake**. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
 
-<iframe 
-  width="100%" 
-  height="400" 
+<iframe
+  width="100%"
+  height="400"
   src="https://www.youtube.com/embed/Es1GGOSmGZw"
-  title="How to Stake on Soneium using Astake" 
-  frameBorder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  title="How to Stake on Soneium using Astake"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 />
