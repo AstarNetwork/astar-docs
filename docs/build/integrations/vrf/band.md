@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Band Protocol VRF
 
-[Band VRF]: https://bandprotocol.com/vrf
+[Band VRF]: https://docs.bandchain.org/verifiable-random-function/introduction
 
 ## Overview
 
@@ -29,11 +29,11 @@ There are currently 3 methods for relaying and resolving the VRF request:
 
 ### Step 3: Request a Random Value
 
-You are now ready to request a random value from the Band VRF. 
+You are now ready to request a random value from the Band VRF.
 
 A summary of the Band VRF process is outlined below:
 1. Simply call the request function on your VRF consumer contract that implements the `requestRandomData` function in Step 1, providing a `seed` and an optional `msg.value`.
-2. Depending on the resolving method chosen in Step 2, the request is sent to the BandChain. 
+2. Depending on the resolving method chosen in Step 2, the request is sent to the BandChain.
 3. The VRF oracle script on the BandChain forwards the request to a randomly chosen data source, and then retrieves the returned result and the corresponding proof of authenticity.
 4. Depending on the resolving method chosen in Step 2, the proof is relayed to the `Bridge` contract for verification on the client chain via the `VRFProvider` contract.
 5. If the verification succeeds, the result (random value) is returned to the VRF consumer contract via the callback function mentioned in Step 1.
@@ -60,10 +60,10 @@ contract MockVRFConsumer {
     function requestRandomDataFromProvider(string calldata seed) external payable {
         provider.requestRandomData{value: msg.value}(seed);
     }
-    
+
     function consume(string calldata seed, uint64 time, bytes32 result) external override {
         require(msg.sender == address(provider), "Caller is not the provider");
-        
+
         latestSeed = seed;
         latestTime = time;
         latestResult = result;
