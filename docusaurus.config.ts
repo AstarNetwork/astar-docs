@@ -143,10 +143,6 @@ const config: Config = {
           title: 'Developer',
           items: [
             {
-              label: 'Tutorials',
-              to: '/docs/tutorials/',
-            },
-            {
               label: 'Integrations',
               to: '/docs/build/integrations/',
             },
