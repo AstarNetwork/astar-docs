@@ -85,7 +85,7 @@ Next to the stake you want to shift.
 <Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/move-staked-tokens/images/move-3.png').default} width="100%" />
 
 3. **Enter the amount** you want to shift.
-4. Click on next button. 
+4. Click on next button.
 5. Confirm and sign the transaction.
 
 <Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/move-staked-tokens/images/move-4.png').default} width="100%" />
@@ -109,20 +109,20 @@ After confirmation:
 ## 4. Real-use examples for clarity
 
 1. **One safe move left**: You move 100 ASTR from App A to B during Build & Earn
-    
+
     * App B shows your 100 ASTR and **SafeMovesRemaining = 0**
     * Bonus remains intact.
-    
+
 2. **Second move = bonus lost**: You move again to App C
-    
+
     * App C shows your 100 ASTR but **bonus forfeited**.
-    
+
 3. **Voting period, unlimited moves**: Move anytime freely; safe-move count doesn't change.
 4. **Reward gap after move**: You Move 500 ASTR from App A to App B during Build & Earn
-    
+
     * App B shows 500 ASTR and updated safe move count
-    *  ⚠️ You won’t earn staking rewards for that era due to the **unstake/stake** process. 
-    
+    *  ⚠️ You won’t earn staking rewards for that era due to the **unstake/stake** process.
+
 5. **A combining bonus moves across stakes**:
 
     * You staked on dApps A and B during Voting
@@ -140,12 +140,14 @@ After confirmation:
 
 To wrap up, here’s a video tutorial that will guide you through the step-by-step process of use move on **Astar dApp Staking**. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
 
-<iframe 
-  width="100%" 
-  height="400" 
-  src="https://www.youtube.com/embed/V4xDk1qvAWo"
-  title="How to use move in Astar dApp Staking" 
-  frameBorder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube-nocookie.com/embed/V4xDk1qvAWo"
+  title="Move your ASTR staking"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowFullScreen
+  referrerPolicy="strict-origin-when-cross-origin"
+  loading="lazy"
 />
