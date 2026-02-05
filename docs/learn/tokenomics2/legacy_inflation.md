@@ -60,7 +60,7 @@ For **Astar**, **20%** of the fees & tips are burned, and the rest is paid to th
 
 #### On-chain Treasury
 
-Treasury receives a variable portion of block reward. It is then allocated to a range of initiatives across the Astar ecosystem. This includes building reserves for parachain auctions, as well as supporting various projects and activities that help grow and strengthen our network. 
+Treasury receives a variable portion of block reward. It is then allocated to a range of initiatives across the Astar ecosystem. This includes building reserves for parachain auctions, as well as supporting various projects and activities that help grow and strengthen our network.
 
 #### dApp Staking
 
@@ -80,7 +80,7 @@ There are two main things to understand before diving deeper into the model - **
 
 #### TVL
 
-The main variable in the system that fluctuates from block to block, based on user actions, is **TVL** from dApp staking. 
+The main variable in the system that fluctuates from block to block, based on user actions, is **TVL** from dApp staking.
 :::note
 TVL in this context does not consider non-ASTR tokens locked by other protocols built on top of Astar (e.g. DeFi protocols) and as such has no effect on the reward distribution schema.
 :::
@@ -96,14 +96,14 @@ In case **total_issuance** equals 1000 and **TVL** is 242, **TVL percentage** wi
 
 The following parameters influence how each block reward is distributed.
 
-| Name                    |          Description                        | Example Value |
-| ----------------------- | ----------- ------------------------------- | ------------- |
-| Collators Percent       | Fixed percentage that goes to collators | 10% |
-| Base Treasury Percent   | Minimum percentage that always goes to treasury | 10 % |
-| Base Staker Percent     | Minimum percentage that always goes to dApps-staking staker rewards pool | 20 % |
-| dApps Percent           | Fixed percentage that goes to dApps-staking dApp reward pool | 15 % |
-| Adjustable Percent      | Percentage that is split between treasury and stakers, depending on the TVL | 45 % |
-| Ideal dApps-staking TVL | TVL percentage which is considered to be ideal | 60% |
+| Name                    | Description                                                                 | Example Value |
+| ----------------------- | --------------------------------------------------------------------------- | ------------- |
+| Collators Percent       | Fixed percentage that goes to collators                                     | 10%           |
+| Base Treasury Percent   | Minimum percentage that always goes to treasury                             | 10%           |
+| Base Staker Percent     | Minimum percentage that always goes to dApps-staking staker rewards pool    | 20%           |
+| dApps Percent           | Fixed percentage that goes to dApps-staking dApp reward pool                | 15%           |
+| Adjustable Percent      | Percentage that is split between treasury and stakers, depending on the TVL | 45%           |
+| Ideal dApps-staking TVL | TVL percentage which is considered to be ideal                              | 60%           |
 
 The amount received by stakers and the treasury is dynamic and depends on TVL. However, there is a lower bound on how much goes towards them. These are the *base* parameters. Collators and dApps always receive a fixed percentage of the reward.
 
