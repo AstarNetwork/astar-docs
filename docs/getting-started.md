@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Getting Started
 
-Astar is an interoperable blockchain platform for Polkadot and Ethereum ecosystems supporting both Wasm and EVM smart contracts. Astar provides native access to Polkadot and Ethereum through its parachain slot and Layer 2 scaling solution, while also offering bridges into other major blockchain ecosystems. Through the #Build2Earn program, Astar offers a basic income to dApp developers, and direct funding to projects through an *unstoppable grants* program.
+Astar is a web3 collective building products that bring users onchain and generate long-term value for ASTR. Operating as a multi-chain ecosystem, Astar is anchored by Astar Network, which provides governance, security, and economic alignment. Product development is guided by the Astar Stack, while ASTR serves as the ecosystem’s economic and governance token aligning product growth and onchain activity. Through this integrated approach, Astar aims to accelerate real-world adoption.
 
 ## Overview of Docs
 
