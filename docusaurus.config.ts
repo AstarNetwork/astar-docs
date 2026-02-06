@@ -143,10 +143,6 @@ const config: Config = {
           title: 'Developer',
           items: [
             {
-              label: 'Tutorials',
-              to: '/docs/tutorials/',
-            },
-            {
               label: 'Integrations',
               to: '/docs/build/integrations/',
             },
@@ -266,11 +262,6 @@ const config: Config = {
             title: 'Tokenomics 2.0',
             caption: 'An updated model that defines inflation rates, fee structures, and more.',
             url: 'https://docs.astar.network/docs/learn/tokenomics2/',
-          },
-          {
-            title: 'Soneium',
-            caption: 'Layer 2 built with the OP Stack and connected to the Superchain.',
-            url: ''
           }
         ],
         highlight: {
