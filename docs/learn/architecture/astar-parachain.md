@@ -17,11 +17,31 @@ Astar is a parachain connected to the Polkadot Relay chain, specialized for:
 ## What is Polkadot
 To get started, let's kick it off with two short videos that do a very good job at explaining some core concepts around Polkadot. First, watch Bill Laboon, Director of Education and Support at the Web3 Foundation, explain the basics of Polkadot.
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/29Ty-VTDnh4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube-nocookie.com/embed/29Ty-VTDnh4"
+  title="What is Polkadot"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+  referrerPolicy="strict-origin-when-cross-origin"
+  loading="lazy"
+/>
 
 Ok, you can’t learn it all in one minute. But how about in 5 minutes? Have a look at this excellent video from DeFi Teller, explaining how Polkadot works.
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/BQ60bTU1bPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube-nocookie.com/embed/BQ60bTU1bPg"
+  title="What is Polkadot"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+  referrerPolicy="strict-origin-when-cross-origin"
+  loading="lazy"
+/>
 
 ## How the Relay Chain works
 The Polkadot network uses a sharded model where shards - called "parachains", allow transactions to be processed in parallel instead of sequentially. Each parachain in the network has a unique state transition function. Polkadot is a Relay Chain acting as the main chain of the system.

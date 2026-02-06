@@ -164,16 +164,18 @@ After a few seconds, you’ll see your amount reflected in the **available** sec
 
 <Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/soneium-to-astar/soneium-to-astar-20.png').default} width="100%" />
 
-## 3. Video tutorial 
+## 3. Video tutorial
 
 To wrap up, here’s a video tutorial that will guide you through the step-by-step process in case anything wasn’t clear. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
 
-<iframe 
-  width="100%" 
-  height="400" 
-  src="https://www.youtube.com/embed/t31F7EC6PAg"
-  title="Transfer ASTR from Soneium to Astar L1" 
-  frameBorder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube-nocookie.com/embed/t31F7EC6PAg"
+  title="Transfer ASTR from Soneium to Astar L1"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowFullScreen
+  referrerPolicy="strict-origin-when-cross-origin"
+  loading="lazy"
 />

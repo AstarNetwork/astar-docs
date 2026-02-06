@@ -130,16 +130,18 @@ Congratulations! You’ve successfully sent tokens from Astar Substrate (L1) to 
 
 <Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/astar-to-soneium/astar-to-soneium-13.png').default} width="100%" />
 
-## 3. Video tutorial 
+## 3. Video tutorial
 
 To wrap up, here’s a video tutorial that will guide you through the step-by-step process in case anything wasn’t clear. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
 
-<iframe 
-  width="100%" 
-  height="400" 
-  src="https://www.youtube.com/embed/7caWRXER8pU"
-  title="Transfer ASTR from Astar L1 to Soneium" 
-  frameBorder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube-nocookie.com/embed/7caWRXER8pU"
+  title="Transfer ASTR from Astar L1 to Soneium"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowFullScreen
+  referrerPolicy="strict-origin-when-cross-origin"
+  loading="lazy"
 />

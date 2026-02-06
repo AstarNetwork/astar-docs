@@ -10,7 +10,17 @@ import Figure from "/src/components/figure"
 
 MetaMask is a web browser extension and mobile app that allows you to manage your Ethereum private keys. By doing so, it serves as a wallet for Ether and other tokens such as ASTR on Astar Network EVM, and allows you to interact with decentralized applications, or dapps. Unlike some wallets, MetaMask keeps no information on you: not your email address, not your password, and not your Secret Recovery Phrase or other private keys. You retain all power over your crypto-identity.
 
-<p align="center"><iframe width="600" height="350" src="https://www.youtube.com/embed/YVgfHZMFFFQ?si=b8ijkB7wGCdzeuBK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube-nocookie.com/embed/YVgfHZMFFFQ?si=b8ijkB7wGCdzeuBK"
+  title="What is Metamask"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+  referrerPolicy="strict-origin-when-cross-origin"
+  loading="lazy"
+/>
 
 ## How to install MetaMask:
 
@@ -22,11 +32,11 @@ MetaMask is a web browser extension and mobile app that allows you to manage you
 
 4. Click `Add to Chrome`;
 
-<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_1.png').default} width="100%" /> 
+<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_1.png').default} width="100%" />
 
 5. On the pop up, click `Add extension`;
 
-<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_2.png').default} width="50%" /> 
+<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_2.png').default} width="50%" />
 
 After adding MetaMask Extension, MetaMask will automatically open. You can also make sure it's easily accessible in your toolbar by clicking the jigsaw icon in the top-right of the screen, and hitting the pin icon.
 
@@ -51,14 +61,14 @@ Don't worry if you're unsure during setup: once your wallet is up and running, y
 Once the browser extension download is completed, you will be taken to a MetaMask wallet setup page.
 
 1. You must agree to the terms and conditions and click `Create a new wallet`;
-<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_3.png').default} width="80%" /> 
+<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_3.png').default} width="80%" />
 2. Next, you will have to agree to MetaMask’s data usage policy to continue;
 3. You will have to create a password for your MetaMask wallet;
-<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_4.png').default} width="80%" /> 
+<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_4.png').default} width="80%" />
 4. On the next page, you will find information and a video tutorial about crypto wallet recovery phrases;
 5. Click on `Secure my wallet`;
 6. On the next page, you will find the 12-word secret recovery phrase. Click `Reveal secret recovery phrase`;
-<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_5.png').default} width="80%" /> 
+<Figure src={require('/docs/use/get-started/astar-evm-wallet/wallet/metamask/img/metamask_5.png').default} width="80%" />
 7. Keep the 12-word secret recovery phrase in a safe place where only you can access it;
 8. In the next step, you will have to confirm the 12-word secret recovery phrase.
 9. Click `Done`. Your MetaMask wallet is now ready to use.
