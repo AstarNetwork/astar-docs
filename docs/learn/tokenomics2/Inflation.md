@@ -29,7 +29,7 @@ Each **cycle** consists of one or more **periods**.
 **Periods** are a core time unit in the dApp Staking protocol. Each period consists of a `Voting` and `Build&Earn` subperiods.
 
 During the `Voting` subperiod, neither stakers nor dApp owners can earn any rewards, only _collators_ and _treasury_ continue earning.
-During the the `Build&Earn` subperiod, stakers earn staking rewards per **era** and have the opportunity to earn bonus reward at the end of a period.
+During the the `Build&Earn` subperiod, stakers earn staking rewards per **era**.
 dApp owners also earn rewards, based on how well their dApp is performing in dApp staking, at the end of each **era**.
 
 ### Eras
@@ -86,9 +86,12 @@ $dapp\_reward\_pool\_per\_era = \frac{total\_dapp\_cycle\_reward}{periods\_per\_
 
 The dApp staking protocol will calculate how much each staked dApp should get.
 
+Tokenomics 3.0 note: per-era dApp rewards are distributed via **tier allocation** plus a deterministic **tier+rank** model (parameterized by `tier_rank_multipliers`), not by "empty slot remainder" rank distribution. Under-filled tiers can leave part of the tier allocation **unminted**.
+
 ### Stakers
 
-There are two components to the staker rewards - regular _staking_ rewards & the _bonus_ reward for loyal stakers.
+Staker rewards are awarded for staking native currency, **ASTR**, on a dApp.
+Tokenomics 3.0 provides **no user-facing bonus rewards**. `Voting` and `Build&Earn` remain protocol phases, but UIs should not promote a separate "bonus pool" as a user benefit (any remaining bonus-related internals are legacy/internal compatibility only).
 
 #### Regular Staker Rewards
 
@@ -119,18 +122,7 @@ With the above formulas, we can finally express how much staker _Alice_ earns in
 
 $staker\_reward\_per\_era_{Alice} = \frac{staked\_value_{Alice,n}}{total\_staked\_value_n} * (base\_staker\_reward\_pool\_per\_era_n + adjustable\_staker\_reward\_pool_n)$
 
-#### Bonus Rewards
 
-In case a staker stakes during the `Voting` subperiod, and doesn't reduce their stake during the `Build&Earn` subperiod below what
-was staked at the end of the `Voting` subperiod, it will make them eligible for the bonus reward.
-
-Bonus reward pool is assigned per period, and can be expressed as:
-
-$bonus\_reward\_pool\_per\_period = \frac{total\_bonus\_cycle\_reward}{periods\_per\_cycle}$
-
-The bonus reward for a staker _Alice_ can then be expressed as:
-
-$bonus\_staker\_reward_{Alice} = \frac{voting\_subperiod\_staked\_value_{Alice}}{total\_voting\_subperiod\_staked\_value} * (bonus\_reward\_pool\_per\_period)$
 
 ## Lazy Minting
 
@@ -163,5 +155,5 @@ a single cycle.
 | dApps Part                   | 13%   | 13%    | 20%     |
 | Base Staker Part             | 10%   | 10%    | 25%     |
 | Adjustable Staker Part       | 55%   | 58.8%  | 35%     |
-| Bonus Part                   | 13.8% | 10%    | 12%     |
+| Bonus Part (legacy/internal; not user-facing) | 13.8% | 10%    | 12%     |
 | Ideal Staking Rate           | 50%   | 50%    | 20%     |
