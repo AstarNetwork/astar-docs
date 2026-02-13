@@ -16,9 +16,8 @@ My Staking Panel is where you track your staking and locked tokens, see your pen
   - **Unlock (↑):** Unlock your locked tokens _(subject to [unlocking parameters](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/unstaking.md#overview)_);
   - **Stake (↓):** Stake your locked tokens in dApp Staking;
 - **Staked amount**: Total amount of tokens you have staked;
-- **Rewards**: Total of the estimated Basic and Bonus rewards;
-  - **Available**: Basic estimated rewards earned during the **Build&Earn subperiod**;
-  - **Bonus:** Bonus estimated rewards earned during the **Vote subperiod** if eligible;
+- **Rewards**: Total of your estimated staking rewards;
+  - **Available**: Estimated rewards earned during the **Build&Earn subperiod**;
 
 <Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="100%" />
 
@@ -46,7 +45,6 @@ You can manage your rewards from the dApp Staking page and collect them by click
 
 My dApps Panel is where you can see all dApps you have staked with and manage your stake.
 
-- **Bonus:** if you are eligible for the [Bonus](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/index.md#bonus-staking-rewards) on this dApps;
 - **Move (→) :** you can move staked tokens between different dApps;
 - **Add (↓) :** you can add more tokens in dApp staking on the desired dApp;
 - **Unlock (↑) :** you can select how many tokens you want to unlock from your staked amount.
@@ -58,8 +56,8 @@ My dApps Panel is where you can see all dApps you have staked with and manage yo
 The unlocking panel is where you can see the progress of unlocking and withdrawing.
 For the runtime logic, when unlocking, you don’t unlock from a specific dApp but unlock as `Chunks`. First pending unlocking gives Chunk 1, second pending unlocking gives Chunk 2 etc.
 
-After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unlocking](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/unstaking/).  
-The unlocking period lenghts can be consulted [here](/docs/learn/dapp-staking/#parameters).
+After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unlocking](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/unstaking.md#overview).
+The unlocking period lengths can be consulted [here](/docs/learn/dapp-staking/#parameters).
 
 - **Remaining days:** The number of days or `Eras` you have to wait before you can withdraw your tokens;
 - **Available to withdraw:** Unlock your tokens and make them `transferable`;

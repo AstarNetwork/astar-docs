@@ -41,29 +41,18 @@ There is no rewards during the Unlocking period when unstaking from dApp Staking
 
 :::
 
-### Bonus Staking Rewards:
+### Voting and rewards:
 
-If an user stake on dApp(s) during the **Voting Subperiod** and keep the same staked amount or higher on a dApp through the whole **Build&Earn Subperiod**, they will be eligible for the **Bonus Reward** for this dApp.
+The **Voting** subperiod is used to (re)establish stakes for the upcoming **Build&Earn** subperiod, but it does not generate staking rewards.
 
-:::info
-
-**Example**
-
-- User stake 1500 ASTR on **dApp A** and 1000 ASTR on **dApp B** during the `Voting`subperiod.
-- During the `Build&Earn` subperiod, user move 500 ASTR from **dApp B** to **dApp A**;
-- He now has 2000 ASTR on **dApp A** and 500 ASTR on **dApp B**, so he's still eligible for the `Bonus reward` for **dApp A** but no longer for **dApp B** because the tokens staked on **dApp** B are less than those staked at the end of the `Voting` subperiod (500 < 1000 ASTR).
-- To be eligible for the `Bonus reward` for **dApp B**, the user must stake an additional 500 ASTR on **dApp B** to reach 1000 ASTR.
-
-:::
-
-Bonus rewards for a period can only be claimed after the period finishes.
+Tokenomics 3.0 note: there are **no user-facing bonus rewards**. Staker rewards are earned only during **Build&Earn**.
 
 
 ### Other:
 
 - You need to keep a minimum of 10 ASTR or 5 SDN tokens as transferable after staking.
 - **You need to claim to receive your rewards, we recommend claiming your staking rewards once a week.**
-- When unlocking tokens, there is a unlocking period on Astar and on Shiden. The unlocking period lenghts can be consulted [here] (/docs/about/products/dapp-staking/#parameters).  **LINK TO UPDATE**
+- When unlocking tokens, there is a unlocking period on Astar and on Shiden. The unlocking period lengths can be consulted [here](/docs/learn/dapp-staking/#parameters).
 Please note that this is based on a perfect block production of 12s. In case of any delay, your unlocking period can be a little longer.
 
 In case you have any questions, please check the [FAQ page](/docs/learn/dapp-staking/dapp-staking-faq.md) in the Learn section or join our [Discord channel](https://discord.com/invite/astarnetwork).
@@ -76,4 +65,3 @@ import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
-

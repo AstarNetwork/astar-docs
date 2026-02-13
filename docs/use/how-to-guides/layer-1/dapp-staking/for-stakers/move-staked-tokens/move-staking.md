@@ -11,57 +11,41 @@ import Figure from '/src/components/figure'
 
 <Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/move-staked-tokens/images/move-banner.png').default} width="100%" />
 
-The **Move** function in Astar dApp Staking lets **you transfer your already staked ASTR tokens from one dApp to another, without losing your bonus**, as long as you stay within your allowed move limits.
+The **Move** function in Astar dApp Staking lets you transfer your already staked ASTR tokens from one dApp to another.
 
-- You start each staking **cycle** (about 122 days) with a set number of **safe moves** you can perform during the **Build & Earn** subperiod:
-    - **Current cycle**: up to 2 safe moves
-    - **Next cycles**: up to 2 safe moves
-- During the **Voting** subperiod, you can move your stake **freely and unlimitedly**, with **no effect on your bonus**.
-- If you move to a **registered dApp** during Build & Earn and use up all your safe moves, any extra moves will **forfeit your bonus** on that stake.
+In practice, a `move` is an **unstake → stake** sequence, so it can affect when your updated stake becomes reward-eligible.
+
+- You can use **Move** during both the **Voting** and **Build & Earn** subperiods.
+- If you Move during **Build & Earn**, your tokens are considered **unstaked** for that era (see below), so you won't earn staking rewards for that specific era.
+- The moved stake becomes effective from the **next era** (same as a normal stake update).
+- Moving stake away from **unregistered** dApps is allowed.
 
 :::info Staking rewards during Move
 
-When you perform a `move`, it involves an **unstake** followed by a **stake** call. That means your tokens are considered **unstaked** during that era. As a result, **you won’t earn staking rewards for that specific era**.
-
-:::
-:::info Moving from unregistered dApps
-
-When moving stake from **unregistered contracts**, the **bonus status is always preserved**, and it **does not count** toward your Safe Moves Remaining.
+When you perform a `move`, it involves an **unstake** followed by a **stake** call. That means your tokens are considered **unstaked** during that era. As a result, **you won't earn staking rewards for that specific era**.
 
 :::
 
 ## 2. Why Move matters for you
 
-**Move** empowers you to switch your staking support from one dApp to another without penalty, whether you're reallocating support, pursuing top-performing projects, or executing real-time arbitrage, just be mindful of your safe-move limit to protect your bonus rewards, as all staking rules still apply.
+**Move** empowers you to switch your staking support from one dApp to another without waiting for an unlocking period. It's useful for reallocating support as the ecosystem changes.
 
-In simple terms, the advantages of `move` are:
+### 2.1. When can you use Move?
 
-- **You’re not locked in:** If Project A is underperforming and Project B looks promising, **you can redirect your tokens** seamlessly.
-- **Your bonus stays safe:** As long as you stay within your *safe-move* allowance.
-- **Freedom to react:** Dynamics in the dApp ecosystem change fast. Move gives you flexibility without downside.
-
-### 2.1. When is Move yours to use?
-
-| Timeframe | Moves allowed | Bonus effect |
+| Timeframe | Moves allowed | Reward note |
 | --- | --- | --- |
-| **Voting period** | Unlimited free moves | No effect on bonus |
-| **Build & Earn** | Up to 2 safe moves in each period. | First 2 moves: safe, Third: you lose the bonus. |
+| **Voting subperiod** | Available | No staking rewards are generated during Voting |
+| **Build & Earn** | Available | A move causes a 1-era reward gap for the moved amount |
 
-### 2.2. Before Move: What to know
+### 2.2. Before you Move: What to know
 
-- Each stake tracks **Safe Moves Remaining,** start with 2 safe moves each cycle.
-- **Moving to a registered dApp** during Build & Earn uses up 1 safe move.
-- If safe moves hit zero and you move again → ⚠️ **bonus is lost**.
-
-:::info Reward gap
-
-Since `move` triggers an **unstake → stake** sequence, your tokens are not **staked** for that era. **This means you won’t receive staking rewards during the era in which the Move was made**.
-
-:::
+- You may need to **claim pending rewards** before making staking changes (depending on the interface and runtime rules).
+- Keep some ASTR available for **gas**.
+- Plan around the **reward gap**: a Move during **Build & Earn** means no staking rewards for that era for the moved amount.
 
 ### 2.3 Conclusion
 
-The **Move operation** gives you flexibility to adjust your strategy during the Build & Earn period **without losing bonus rewards**. It helps you maximize rewards and diversify your staking across multiple dApps.
+Move gives you flexibility to adjust your staking allocations without unlocking funds, but it's best used intentionally due to the 1-era reward gap during **Build & Earn**.
 
 ## 3. Step-by-step: How to use Move
 
@@ -102,39 +86,29 @@ After confirmation:
 
 - Original stake is unstaked
 - New stake shows up under target dApp
-- Bonus eligibility updated accordingly
+- Your staking positions update accordingly
 
 <Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/move-staked-tokens/images/move-6.png').default} width="100%" />
 
 ## 4. Real-use examples for clarity
 
-1. **One safe move left**: You move 100 ASTR from App A to B during Build & Earn
+1. **Move during Build & Earn (reward gap)**: You Move 500 ASTR from App A to App B during Build & Earn
+    * Your stake appears under App B
+    * ⚠️ You won't earn staking rewards for that moved amount in the era where the Move was made
 
-    * App B shows your 100 ASTR and **SafeMovesRemaining = 0**
-    * Bonus remains intact.
+2. **Move during Voting**: You rearrange stakes during Voting
+    * Voting does not generate staking rewards
+    * Your new allocations are set up for the upcoming Build & Earn
 
-2. **Second move = bonus lost**: You move again to App C
-
-    * App C shows your 100 ASTR but **bonus forfeited**.
-
-3. **Voting period, unlimited moves**: Move anytime freely; safe-move count doesn't change.
-4. **Reward gap after move**: You Move 500 ASTR from App A to App B during Build & Earn
-
-    * App B shows 500 ASTR and updated safe move count
-    *  ⚠️ You won’t earn staking rewards for that era due to the **unstake/stake** process.
-
-5. **A combining bonus moves across stakes**:
-
-    * You staked on dApps A and B during Voting
-    * You unstake part of your tokens from A during Build & Earn, leaving 1 safe move
-    * You move the remaining stake from A to B
-    * The new number of safe moves at B becomes: ((A's remaining moves - 1) + B's remaining moves) / 2
+3. **Move away from an unregistered dApp**:
+    * Moving stake away from an unregistered dApp is allowed
+    * You can reallocate to an active registered dApp
 
 ### 4.1 Pro tips
 
-1. **Always stake during Voting** to secure bonus eligibility early. You can move it later if new dApps join.
-2. **Use "Move" instead of "Unstake"** when shifting tokens between dApps, this helps preserve your bonus status. Particularly for unregistered dApps!
-3. **Spread your stake across multiple dApps** during Voting. This gives you flexibility to move between them and keep your bonuses.
+1. **Avoid frequent moves mid-epoch**: each Move during Build & Earn creates a reward gap for that era.
+2. **Claim regularly** to reduce the chance of being blocked by pending rewards.
+3. **Keep extra ASTR for gas** so you can claim and manage stakes when needed.
 
 ## 5. Video tutorial
 

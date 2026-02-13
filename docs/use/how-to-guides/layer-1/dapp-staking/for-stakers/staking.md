@@ -40,6 +40,8 @@ We’ll now walk through the full transfer process step by step.
 
 Before using dApp Staking, make sure you understand all the parameters described [**here**](/docs/learn/dapp-staking/#parameters).
 
+At the protocol level, at most **16 dApps are reward-eligible per era** (across tiers).
+
 An address can only stake on a maximum of 16 contracts (dApps).
 
 :::
@@ -80,7 +82,7 @@ There, you’ll see a panel with all the staking information: current period, AP
 
 <Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-6.png').default} width="100%" />
 
-You can start staking either by clicking the blue **“Choose dApps”** button or by scrolling down to view all the listed dApps.
+You can start staking either by clicking the blue **"Choose dApps"** button or by scrolling down to view all the listed dApps.
 
 <Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-7.png').default} width="100%" />
 
@@ -98,7 +100,7 @@ You can choose up to 16 projects that you would like to support.
 
 :::
 
-Go back to the previous screen and click on **“Choose dApp”.**
+Go back to the previous screen and click on **"Choose dApp".**
 
 <Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-8.png').default} width="100%" />
 
