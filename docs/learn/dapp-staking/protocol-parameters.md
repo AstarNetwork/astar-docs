@@ -6,7 +6,7 @@ title: dApp Staking Parameters
 ## Overview
 
 The following parameters are tightly tied to dApp staking, however, some parameters are shared with the _Tokenomics 2.0_ model.
-To find out more, please check the documentation [here](/docs/learn/tokenomics2/Inflation/).
+To find out more, please check the documentation [here](/docs/learn/tokenomics2/Inflation).
 
 ### Era Reward Span Length
 
@@ -21,8 +21,12 @@ The larger this parameter is, the higher the deviation from the max inflation ra
 
 ### Max Number Of Contracts
 
-There is a technical limitation on how many dApps the protocol can support at this time.
-However, this limit won't have a _real_ impact on the protocol since at the moment of writing this document, neither Astar or Shiden are close to that limit.
+Tokenomics 3.0 introduces a tighter active bound for reward processing:
+
+- **Active rewarded dApps (per era): 16** — at most 16 dApps are reward-eligible per era across tiers.
+- **Legacy compatibility bound: 500** — historical reward-era structures and claim paths may reference up to 500 dApps for backward compatibility.
+
+This separation exists so the protocol can keep compatibility with older stored reward structures while enforcing a much smaller active set going forward.
 
 ### Max Unlocking Chunks
 
@@ -51,11 +55,9 @@ It's suggested to keep this value same as the _minimum locked amount_.
 
 ### Max Bonus Safe Moves Per Period
 
-The number of authorized safe move actions of the amount staked during the Voting subperiod to remain eligible for the bonus reward.
-Only a limited number of _safe move actions_ are allowed during the `build&earn` subperiod to preserve bonus reward eligibility. Move actions refer to either:
+Legacy/internal compatibility parameter.
 
--   A 'partial unstake that decreases the voting stake',
--   A 'stake transfer between two contracts'. (check previous "Moving Stake Between Contracts" section)
+Historically used to bound "safe move" actions related to bonus-eligibility bookkeeping. Tokenomics 3.0 has **no user-facing bonus rewards**, so integrators should not promote bonus mechanics. This constant may still exist for legacy/internal state transitions and backward compatibility.
 
 ### Number Of Tiers
 
@@ -70,6 +72,12 @@ E.g. `[10%, 20%, 30%, 40%]` means that `10%` of the reward pool goes for **tier 
 
 Describes the portion/percentage of the total number of slots that goes towards each tier.
 E.g. `[5%, 15%, 20%, 60%]` means that `5%` of the total slots are assigned for **tier 1** dApps, `15%` for **tier 2** dApps, and so on.
+
+### Tier Rank Multipliers (`tier_rank_multipliers`)
+
+Per-tier vector of **bips** (basis points) where `10_000 = 100%`.
+
+For each tier, this value defines how much **rank 10** earns relative to **rank 0** (i.e., it parameterizes the deterministic rank reward slope). A value of `10_000` disables rank-based increase for that tier. The exact weight/normalization formulas are documented in the technical overview.
 
 ### Tier Thresholds
 
@@ -93,20 +101,21 @@ Length of the circular buffer used to implement the _moving-average_ solution.
 | -------------------------------------------------- | ----------------------------- | --------------------------- | ---------------------------------- |
 | Era Reward Span Length                             | 16                            | 16                          | 16                                 |
 | Reward Retention In Periods                        | 4                             | 3                           | 2                                  |
-| Max Number Of Contracts                            | 500                           | 500                         | 500                                |
+| Max Number Of Contracts                            | 16                            | 16                          | 16                                 |
 | Max Unlocking Chunks                               | 8                             | 8                           | 8                                  |
 | Minimum Locked Amount                              | 500 ASTR                      | 50 SDN                      | 5 SBY                              |
 | Unlocking Period                                   | 9                             | 4                           | 4                                  |
 | Max Number Of Staked Contracts                     | 16                            | 16                          | 8                                  | 
 | Minimum Stake Amount                               | 500 ASTR                      | 50 SDN                      | 5 SBY                              |
-| Max Bonus Safe Moves Per Period                    | 2                             | 2                           | 2                                  |
+| Max Bonus Safe Moves Per Period (legacy/internal)  | 2                             | 2                           | 2                                  |
 | Baseline Native Currency Price                     | 0.05 USD                      | 0.05 USD                    | 0.05 USD (mock)                    |
 | Number Of Tiers                                    | 4                             | 4                           | 4                                  |
-| Reward Distribution                                | [25%, 47%, 25%, 3%]           | [25%, 47%, 25%, 3%]         | [40%, 30%, 20%, 10%]               |
-| Slot Portions                                      | [5%, 20%, 30%, 45%]           | [5%, 20%, 30%, 45%]         | [10%, 20%, 30%, 40%]               |
-| Tier 1 Threshold (total issuance % - base/min/max) | Dynamic(3.57%/2.38%/3.57%)    | Dynamic(3.57%/2.38%/100%)   | Dynamic(0.0020%/0.0017%/0.0030%)   |
-| Tier 2 Threshold (total issuance % - base/min/max) | Dynamic(0.89%/0.6%/0.89%)     | Dynamic(0.89%/0.6%/100%)    | Dynamic(0.0013%/0.0010%/0.0020%)   |
-| Tier 3 Threshold (total issuance % - base/min/max) | Dynamic(0.238%/0.179%/0.238%) | Dynamic(0.238%/0.179%/100%) | Dynamic(0.00054%/0.00034%/0.0010%) |
-| Tier 4 Threshold (total issuance % - base/min/max) | Fixed(0.02%)                  | Fixed(0.06%)                | Fixed(0.00014%)                    |
+| Reward Distribution                                | [0%, 70%, 30%, 0%]            | [25%, 47%, 25%, 3%]         | [40%, 30%, 20%, 10%]               |
+| Slot Portions                                      | [0%, 37.5%, 62.5%, 0%]        | [5%, 20%, 30%, 45%]         | [10%, 20%, 30%, 40%]               |
+| Tier Rank Multipliers (bips; rank10 vs rank0)      | [0, 24_000, 46_700, 0]         | Runtime configured          | Runtime configured                 |
+| Tier 1 Threshold (total issuance % - base/min/max) | Fixed(2.32%)                  | Dynamic(3.57%/2.38%/100%)   | Dynamic(0.0020%/0.0017%/0.0030%)   |
+| Tier 2 Threshold (total issuance % - base/min/max) | Fixed(0.93%)                  | Dynamic(0.89%/0.6%/100%)    | Dynamic(0.0013%/0.0010%/0.0020%)   |
+| Tier 3 Threshold (total issuance % - base/min/max) | Fixed(0.35%)                  | Dynamic(0.238%/0.179%/100%) | Dynamic(0.00054%/0.00034%/0.0010%) |
+| Tier 4 Threshold (total issuance % - base/min/max) | Fixed(0%)                     | Fixed(0.06%)                | Fixed(0.00014%)                    |
 | Price Aggregation Duration                         | 7200 blocks                   | 7200 blocks                 | 7200 blocks                        |
 | Circular Buffer Length                             | 7                             | 7                           | 7                                  |

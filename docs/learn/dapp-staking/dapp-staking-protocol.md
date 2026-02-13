@@ -43,7 +43,9 @@ When `Voting` subperiod starts, all _stakes_ are reset to **zero**.
 Projects participating in dApp staking are expected to market themselves to (re)attract stakers.
 
 Stakers must assess whether the project they want to stake on brings value to the ecosystem, and then `vote` for it (or _stake_ on it).
-Casting a vote, or staking, during the `Voting` subperiod makes the staker eligible for bonus rewards. so they are encouraged to participate during this time.
+Staking during the `Voting` subperiod is the normal way to (re)establish stake for the upcoming `Build&Earn` subperiod.
+
+Tokenomics 3.0 note: there are **no user-facing bonus rewards** associated with staking during `Voting`. `Voting` remains a coordination/selection phase, and rewards are only generated for eras in `Build&Earn`.
 
 `Voting` subperiod length is expressed in _standard_ era lengths, even though the entire voting subperiod is treated as a single _voting era_.
 E.g. if `Voting` subperiod lasts for **5 eras**, and each era lasts for **100 blocks**, total length of the `Voting` subperiod will be **500** blocks **BUT** it will consume only a single numeric era:
@@ -169,7 +171,7 @@ User's stake on a contract must be equal or greater than the `MinimumStakeAmount
 Although user can stake on multiple smart contracts, the amount is limited. To be more precise, amount of database entries that can exist per user is limited.
 This should not be a problem in practice though.
 
-The protocol keeps track of how much was staked by the user in the `Voting` and `Build&Earn` subperiods. This is important for the bonus reward calculation.
+The protocol keeps track of stake amounts across subperiods. Some bonus-related bookkeeping may still exist in protocol storage for legacy/internal compatibility, but Tokenomics 3.0 provides **no separate user-facing bonus pool**.
 
 It is not possible to stake on a dApp that has been unregistered.
 However, if dApp is unregistered after user has staked on it, user will keep earning
@@ -193,23 +195,20 @@ Once period finishes, all stakes are reset back to zero. This means that no unst
 
 #### Moving Stake Between Contracts
 
-The moving stake feature allows users to transfer their staked amount between two smart contracts without undergoing the unstake and stake process separately. This feature ensures that the transferred stake remains aligned with the current staking period, but the moved stake is effective in the next era and any bonus eligibility is preserved as long as the conditions for the bonus reward are not violated. Move actions are limited by `MaxBonusSafeMovesPerPeriod` from the protocol configuration.
+The moving stake feature allows users to transfer their staked amount between two smart contracts without undergoing the unstake and stake process separately. This feature ensures that the transferred stake remains aligned with the current staking period, but the moved stake is effective in the next era.
 
 Key details about moving stake:
 
 - The destination contract must be different from the source contract.
 - The user must ensure that unclaimed rewards are claimed before initiating a stake move.
-- Only a limited number of move actions (defined by `MaxBonusSafeMovesPerPeriod`) are considered _safe_ during a single period to preserve bonus reward eligibility. Additional moves actions are feasable but forfeit the bonus reward.
 - If the destination contract is newly staked, the user's total staked contracts must not exceed the maximum allowed number of staked contracts (same as the staking operation).
-- The destination contract must not be unregistered, but moving stake away from an unregistered contract is allowed **without affecting bonus eligibility**.
+- The destination contract must not be unregistered, but moving stake away from an unregistered contract is allowed.
 
-This feature is particularly useful for stakers who wish to rebalance their stake across multiple contracts (including new registrations) or move their stake to better-performing dApps while retaining the potential for rewards and maintaining bonus eligibility.
+:::note Legacy/internal compatibility
 
-#### Bonus Status Handling in Moves
+Older pallet versions may still contain bonus-eligibility and "safe move" bookkeeping for backward compatibility. Tokenomics 3.0 has **no user-facing bonus rewards**, and UIs should not promote or surface bonus mechanics as a user benefit.
 
-When moving stake, if the destination contract has no existing bonus eligibility, it inherits the incoming bonus status from the source contract. If both the source and destination have nonzero bonus statuses, they are merged by averaging their values. This prevents unintended bonus gains or losses while ensuring fairness in bonus distribution.
-
-For example, if the configuration allows **2** _safe moves_, if the source conctract as already be moved once and if the destination contract as not consumed move actions, the resulting merged for the remaining _safe moves_ of teh destination stake will be **1** ((2+0) / 2 = 1).
+:::
 
 #### Claiming Staker Rewards
 
@@ -226,25 +225,7 @@ $staker\_reward = \frac{staker\_reward\_pool * staker\_staked\_amount}{total\_st
 
 #### Claiming Bonus Reward
 
-If a staker has staked on a dApp during the voting subperiod, and the bonus status for the associated staked amount has not been forfeited due to excessive move actions, they remain eligible for the bonus reward.
-
-Only a limited number of _safe move actions_ are allowed during the `build&earn` subperiod to preserve bonus reward eligibility. Move actions refer to either:
--   A 'partial unstake that decreases the voting stake',
--   A 'stake transfer between two contracts'. (check previous "Moving Stake Between Contracts" section)
-
-The number of authorized safe move actions is defined by `MaxBonusSafeMovesPerPeriod`. For example:
-If 2 safe bonus move actions are allowed for one period, and a user has staked **100** on contract A during the `voting` subperiod and **50** during the `build&earn` subperiod, they can safely:
-
-1. Unstake **70**, reducing the `voting` stake to **80**.
-2. Transfer **50** to contract B.
-
-After these actions, the user will still be eligible for bonus rewards (**20** on contract A and **50** on contract B). However, if an additional move action is performed on contract A, the bonus eligibility will be forfeited.
-
-Bonus rewards need to be claimed per contract, unlike staker rewards.
-
-Bonus reward is calculated using a simple formula:
-
-$bonus\_reward = \frac{bonus\_reward\_pool * staker\_voting\_subperiod\_stake}{total\_voting\_subperiod\_stake}$
+Tokenomics 3.0 note: there are **no user-facing bonus rewards**. Any bonus-related storage/extrinsics that still exist are for legacy/internal compatibility and should be treated as such by integrators (do not present a "bonus pool" or "bonus APR" to end users).
 
 ### Developers
 
@@ -253,9 +234,9 @@ Main thing for developers to do is develop a good product & attract stakers to s
 #### Claiming dApp Reward
 
 If at the end of a `Build&Earn` subperiod era dApp has high enough score (support) to enter a reward tier, it will get rewards assigned to it.
-Rewards aren't paid out automatically but must be claimed instead, similar to staker & bonus rewards.
+Rewards aren't paid out automatically but must be claimed instead, similar to staker rewards.
 
-dApp reward is calculated based on the tier in which ended. All dApps that end up in one tier will get the exact same reward.
+dApp reward is calculated based on the tier and (where enabled) the dApp rank within that tier. The protocol computes, per tier and era, a **rank-0 base reward** and a **per-rank-step reward**, and the final dApp reward is derived from those components.
 
 ### Tier System
 
@@ -335,15 +316,9 @@ If the number of slots changes, the threshold is further adjusted based on the d
 #### Tier Rewards
 
 Better tiers bring bigger rewards, so dApps are encouraged to compete for higher tiers and attract staker's support.
-dApp reward pool is divided between tiers, e.g. _tier 1_ gets **40%** of the total reward pool, and the assigned tier reward pool
-is further divided between the dApps in the pool.
+dApp reward pool is divided between tiers, e.g. _tier 1_ gets **40%** of the total reward pool.
 
-This means that each dApp within a tier always gets the same amount of reward.
-Even if tier capacity hasn't been fully taken, rewards are paid out as if they were.
-
-For example, if _tier 1_ has capacity for 10 dApps, and reward pool is **500 ASTR**, it means that each dApp that ends up
-in this tier will earn **50 ASTR**. Even if only 3 dApps manage to enter this tier, they will still earn each **50 ASTR**.
-The rest, **350 ASTR** in this case, won't be minted.
+Within a tier, rewards are **deterministic** and can depend on the dApp's **rank** (0..10) via the `tier_rank_multipliers` weight model described below. In addition, when a tier is under-filled (fewer dApps than the tier capacity), part of that tier's allocation can remain **unminted** (lazy minting), reducing effective inflation.
 
 #### More On Tiers
 
@@ -361,7 +336,7 @@ the larger Id but this can change in the future.
 
 ### Tier ranking system
 
-Because dApps at the same tier receive equal rewards regardless of their staked amount, ranking system has been introduced for dApps within the tier itself. This will improve reward distribution for dApps that perform better within a tier if there are available rewards to be distributed.
+A **rank (0..10)** is assigned to dApps inside a tier to express how close they are to the next tier threshold. Rank affects dApp rewards **deterministically** via `tier_rank_multipliers` (see **Rank reward** below).
 
 dApps are not only grouped into tiers but they're also ranked inside each tier (except highest tier which doesn't have ranking).
 When a dApp has the minimum stake amount to just enter the tier, its rank will be **0** (zero). As they progress towards the upper tier, their rank will increase.
@@ -382,28 +357,49 @@ The `set_static_tier_params` call allows dynamic modification of tier-related dA
 
 #### Rank reward
 
-Each rank provides up to a **10%** extra reward on top of the tier reward. To respect inflation, each rank reward comes from empty slots within the same tier. Each tier has its own portion of rewards to distribute. If all tier slots are occupied, the tier reward is distributed equally to each dApp in that tier, leaving no remaining reward for ranks. If there is a remaining reward, it goes towards rewarding the ranks. Depending on the availability, the rank reward can go up to **10%** of the tier reward. For example, if you are in tier **2** with a rank of **5** and the tier reward is **1000 ASTR**, then rank reward will be **rank_reward = 0.1 * 1000 ASTR = 100 ASTR**. Therefore given formula
+Tokenomics 3.0 uses a **deterministic multiplier/weight model**. Rank rewards do **not** come from "empty slots" or "remainder distribution"; empty slots only affect the normalization/cap.
 
-${total\_reward} = {tier\_reward} + {rank} * {rank\_reward}$
+Each tier has a `tier_rank_multipliers[tier]` parameter (in **bips**, where `10_000 = 100%`) which defines how much **rank 10** earns **relative to rank 0** in that tier.
 
-Total reward for dApp will be **1000 ASTR + 5 * 100 ASTR = 1500 ASTR**.
+Definitions (per tier, per era):
 
-:::note
-If **10%** of tier reward cannot be satisfied then the following formula is used
+```text
+MAX_RANK = 10
+rank ∈ [0..10]
+multiplier_bips = tier_rank_multipliers[tier]          // rank10 vs rank0, in bips
+step_bips       = max(0, multiplier_bips - 10_000) / MAX_RANK
 
-${rank\_reward} = \frac{remaining\_reward}{\sum \forall dApp\_rank}$
+weight(rank) = 10_000 + rank * step_bips
 
-where $\sum \forall dApp\_rank$ is the sum of all dApp ranks in a tier.
+filled_slots = number of dApps assigned to this tier
+max_slots    = configured capacity (slots) for this tier
+ranks_sum    = Σ rank(dApp) over dApps in this tier
 
-**e.g.** Given a tier **2** with a slot capacity of **3**, where **2** slots are occupied by dApp _Alice_ with rank **9** and dApp _Bob_ with rank **7**. The rank reward comes from the empty slots, which in this case is only **1**. Therefore, a **10%** rank reward cannot be achieved. In this scenario, the remaining reward will be divided by ranks sum.
+observed_total_weight = filled_slots * 10_000 + ranks_sum * step_bips
 
-${rank\_reward} = \frac {1000 ASTR} {7 + 9} = 62.5 ASTR$
+// "normally filled tier" cap calibrated at average rank = 5:
+expected_full_weight  = max_slots * (10_000 + 5 * step_bips)
 
-Total reward for _Alice_ will be: **1000 ASTR + 9 * 62.5 ASTR = 1562.5 ASTR**
+// normalization prevents over-distribution and makes under-filled tiers leave part unminted:
+normalization_weight  = max(observed_total_weight, expected_full_weight)
+```
 
-Total reward for _Bob_ will be: **1000 ASTR + 7 * 62.5 ASTR = 1437.5 ASTR**
+Let `tier_allocation` be the amount of the per-era dApp reward pool allocated to this tier. The protocol computes two claim components:
 
-:::
+```text
+tier_base_reward0    = tier_allocation * 10_000 / normalization_weight
+reward_per_rank_step = tier_allocation * step_bips / normalization_weight
+```
+
+And the dApp's final reward is:
+
+```text
+dapp_reward(rank) = tier_base_reward0 + rank * reward_per_rank_step
+```
+
+Notes:
+- If `tier_rank_multipliers[tier] <= 10_000`, then `step_bips = 0` and rank does not increase rewards in that tier.
+- Under-filled tiers can result in `expected_full_weight` dominating the normalization, meaning part of the tier allocation is never minted.
 
 ### Reward Expiry
 
@@ -415,7 +411,7 @@ In case they don't, they will simply miss on the earnings.
 However, this should not be a problem given how the system is designed.
 There is no longer _stake&forget_ - users are expected to revisit dApp staking at least at the
 beginning of each new period to pick out old or new dApps on which to stake on.
-If they don't do that, they miss out on the bonus reward & won't earn any staker rewards.
+If they don't do that, they miss out on earning staker rewards.
 
 ### Oracle Price Feed
 

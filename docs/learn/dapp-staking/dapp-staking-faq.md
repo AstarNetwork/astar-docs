@@ -88,9 +88,11 @@ Once unlocking is complete, you can then withdraw these tokens to your free bala
 
 ### Q: When will I start getting rewards after I stake?
 
-If you stake during the dedicated **Voting Subperiod**, you qualify for bonus rewards as long as you maintain or increase your staked amount during the following Build&Earn Subperiod. Bonus rewards can be claimed after the period ends.
+No rewards are generated during the **Voting** subperiod.
 
-If you stake during any era of **Build&Earn Subperiod**, the staked amount is only eligible for rewards from the next era onward.
+If you stake during the **Voting** subperiod, your stake is set up for the upcoming **Build&Earn** subperiod. Staker rewards are earned only for **Build&Earn** eras in which your stake was active for the entire era.
+
+If you stake (or change your stake) during any era of **Build&Earn** subperiod, the updated amount is eligible for rewards from the **next era** onward.
 
 ### Q: When can I claim my rewards?
 
@@ -102,15 +104,15 @@ Generally, it’s recommended to claim your rewards once a week.
 
 ### Q: What are bonus rewards?
 
-If a staker staked on a dApp during the `Voting` Subperiod and **keeps the same staked amount or higher** on a dApp through the whole `Build&Earn` Subperiod, they are eligible for the bonus rewards.
+Tokenomics 3.0 has **no user-facing bonus rewards**. `Voting` and `Build&Earn` remain protocol phases, but integrators should not promote a separate "bonus pool" or "bonus APR" as a user benefit.
 
-Bonus eligibility can be safely transferred between projects, preserving it for a limited number of moves, as defined by `MaxBonusSafeMovesPerPeriod`. Exceeding this limit results in bonus forfeiture for the affected stake.
+If you see bonus-related fields in older tooling or runtimes, treat them as **legacy/internal compatibility** only.
 
 ### Q: Can my rewards expire?
 
 Unclaimed rewards will eventually expire, so it's important to claim them in time or they'll miss out on earnings.
 
-We encourage stakers’ engagement. This way, failing to actively revisit dApp staking at the start of each new period to select dApps for staking means missing out on bonus rewards and earnings.
+We encourage stakers' engagement. If you don't revisit dApp staking at the start of each new period to select dApps for staking, you won't be earning rewards for expired **Build&Earn** eras.
 
 ### Q: What happens to my rewards if the project I'm staking on is unregistered from dApp Staking?
 
@@ -182,7 +184,7 @@ The threshold for tier 4 is fixed, while it is dynamic for the other tiers.
 
 Rewards for dApps are **dynamic** (tier-dependent), meaning they change from one tier to another.
 
-The rewards of a tier are split evenly among all its slots, ensuring equal rewards for each dApp within a tier, regardless of whether all slots are filled.
+Within a tier, dApp rewards are **deterministic** and can also depend on the dApp's **rank (0..10)** (see the technical overview for the `tier_rank_multipliers` model). If a tier is under-filled, part of that tier allocation can remain **unminted** (lazy minting).
 
 ### Q: What happens to my rewards if my project is unregistered from dApp Staking?
 

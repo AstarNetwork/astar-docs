@@ -35,7 +35,6 @@ If you have staked on one of the dApp(s), you can now click on `Unlock` from **M
 :::tip
 
 If you `unstake` some of your tokens from a dApp and your remaining tokens are below the minimum staking amount for a dApp, all your tokens will be unstaked from that dApp;  
-If you `unstake` your tokens from one dApp during the Build&Earn subperiod and your staked tokens on this dApp are less than your staked tokens at the end of the Voting subperiod for the same dApp, you will no longer be eligible for the Bonus Rewards for that dApp;
 
 :::
 
