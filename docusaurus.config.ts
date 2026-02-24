@@ -6,7 +6,7 @@ import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: 'Welcome to Astar',
-  tagline: 'Here you will find documentation on how to develop dApps on Astar.',
+  tagline: 'Here you can find documentation about the Astar Collective and its ecosystem.',
   favicon: 'img/fav.png',
 
   future: {
@@ -40,6 +40,13 @@ const config: Config = {
       attributes: {
         name: 'referrer',
         content: 'strict-origin-when-cross-origin',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:card',
+        content: 'summary_large_image',
       },
     },
   ],
@@ -81,7 +88,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/astar-logo-text.svg',
+    image: 'img/astar-preview.png',
     navbar: {
       logo: {
         alt: 'Astar',
