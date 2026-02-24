@@ -22,7 +22,7 @@ Before reading the dApp Staking section for dApp owner, make sure you understand
 
 dApp Staking introduces the concept of a tier system for dApps. It's important to fully understand the [tier mechanism](/docs/learn/dapp-staking/dapp-staking-protocol.md#tier-system) before proceeding with dApp Staking application and registration as a dApp owner.
 
-dApp Staking uses reward tiers (each with a limited number of slots), and where applicable assigns ranks within tiers so dApp rewards are determined deterministically by **tier + rank**. Tier capacity for dApp staking is calculated at the start of each period based on the ASTR price as described [here](/docs/learn/dapp-staking/dapp-staking-protocol.md#tier-system).
+dApp Staking uses reward tiers (each with a limited number of slots), and where applicable assigns ranks within tiers so dApp rewards are determined deterministically by **tier + rank**. The protocol uses a **fixed maximum of 16 slots** distributed across all tiers, providing predictability and stability to the tier system.
 
 The slots allocated to each tier can be viewed on the [dApp Staking Page](https://portal.astar.network/astar/dapp-staking/discover) of the Astar Portal.
 
@@ -30,7 +30,7 @@ At the end of each **Build&Earn** subperiod, dApps are assigned to a tier based 
 
 At the protocol level, at most **16 dApps are reward-eligible per era** (across tiers).
 
-The threshold for tier 4 is fixed, but for the other tiers, the threshold is **dynamic** and calculated at the start of each new period based on the total number of slots for the period. To find out more, [click here](/docs/learn/dapp-staking/dapp-staking-protocol.md#tier-threshold-entry).
+Tier thresholds are defined as **fixed percentages** of total issuance. These percentages remain constant across periods, though the absolute threshold amounts adjust proportionally with changes in total issuance. To find out more, [click here](/docs/learn/dapp-staking/dapp-staking-protocol.md#tier-threshold-entry).
 
 **Rewards** for dApps are also **dynamic**, fluctuating from tier to tier. The higher the tier, the greater the number of ASTR tokens allocated from inflation as rewards for that tier.
 

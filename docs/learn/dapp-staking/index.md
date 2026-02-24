@@ -129,7 +129,7 @@ Tier System is a method to rank dApps based on the total value staked on them. T
 
 There are a limited number of tiers, each with a set number of slots and a minimum threshold for dApps to qualify. 
 
-A dApp must gain enough support to enter a tier, with dynamic thresholds for fair competition. Higher tiers offer larger rewards.
+A dApp must gain enough support to enter a tier, with thresholds defined as fixed percentages of total issuance. Higher tiers offer larger rewards.
 
 Within a tier, dApps can also have a **rank (0..10)**. Tokenomics 3.0 uses a deterministic `tier_rank_multipliers` weight model so a dApp's rewards can depend on **tier + rank** (not on empty slots). For the technical details and formulas, see the [technical overview](/docs/learn/dapp-staking/dapp-staking-protocol.md).
 

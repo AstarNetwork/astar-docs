@@ -82,18 +82,8 @@ For each tier, this value defines how much **rank 10** earns relative to **rank 
 ### Tier Thresholds
 
 The threshold a dApp must meet, based on a percentage of the total issuance staked, to enter a tier.
-There are two types of threshold percentages:
 
-* `Fixed` - A percentage of the total issuance as staked funds.
-* `Dynamic` - A percentage of the total issuance as staked funds. This variant includes an additional adjustment in later calculations with a delta based on changes in the number of slots for each era. The threshold amount derived cannot drop below a defined minimum percentage, *minimum_required_percentage*. Similarly, the derived threshold amount cannot exceed a defined maximum percentage, *maximum_possible_percentage*.
-
-### Price Aggregation Duration
-
-Time period, expressed in blocks, during which native currency price is aggregated. When expired, average value is calculated and stored into the _moving-average_ circular buffer.
-
-## Circular Buffer Length
-
-Length of the circular buffer used to implement the _moving-average_ solution.
+Tier thresholds are defined as **fixed percentages** of the total issuance. As the total issuance changes (e.g., through burn events), the absolute threshold amounts adjust proportionally, but the percentage remains constant.
 
 ## Network Values
 
@@ -102,20 +92,18 @@ Length of the circular buffer used to implement the _moving-average_ solution.
 | Era Reward Span Length                             | 16                            | 16                          | 16                                 |
 | Reward Retention In Periods                        | 4                             | 3                           | 2                                  |
 | Max Number Of Contracts                            | 16                            | 16                          | 16                                 |
+| Max Number Of Tier Slots (Fixed)                   | 16                            | 16                          | 16                                 |
 | Max Unlocking Chunks                               | 8                             | 8                           | 8                                  |
 | Minimum Locked Amount                              | 500 ASTR                      | 50 SDN                      | 5 SBY                              |
 | Unlocking Period                                   | 9                             | 4                           | 4                                  |
 | Max Number Of Staked Contracts                     | 16                            | 16                          | 8                                  | 
 | Minimum Stake Amount                               | 500 ASTR                      | 50 SDN                      | 5 SBY                              |
 | Max Bonus Safe Moves Per Period (legacy/internal)  | 2                             | 2                           | 2                                  |
-| Baseline Native Currency Price                     | 0.05 USD                      | 0.05 USD                    | 0.05 USD (mock)                    |
 | Number Of Tiers                                    | 4                             | 4                           | 4                                  |
 | Reward Distribution                                | [0%, 70%, 30%, 0%]            | [25%, 47%, 25%, 3%]         | [40%, 30%, 20%, 10%]               |
 | Slot Portions                                      | [0%, 37.5%, 62.5%, 0%]        | [5%, 20%, 30%, 45%]         | [10%, 20%, 30%, 40%]               |
 | Tier Rank Multipliers (bips; rank10 vs rank0)      | [0, 24_000, 46_700, 0]         | Runtime configured          | Runtime configured                 |
-| Tier 1 Threshold (total issuance % - base/min/max) | Fixed(2.32%)                  | Dynamic(3.57%/2.38%/100%)   | Dynamic(0.0020%/0.0017%/0.0030%)   |
-| Tier 2 Threshold (total issuance % - base/min/max) | Fixed(0.93%)                  | Dynamic(0.89%/0.6%/100%)    | Dynamic(0.0013%/0.0010%/0.0020%)   |
-| Tier 3 Threshold (total issuance % - base/min/max) | Fixed(0.35%)                  | Dynamic(0.238%/0.179%/100%) | Dynamic(0.00054%/0.00034%/0.0010%) |
-| Tier 4 Threshold (total issuance % - base/min/max) | Fixed(0%)                     | Fixed(0.06%)                | Fixed(0.00014%)                    |
-| Price Aggregation Duration                         | 7200 blocks                   | 7200 blocks                 | 7200 blocks                        |
-| Circular Buffer Length                             | 7                             | 7                           | 7                                  |
+| Tier 1 Threshold (% of total issuance)             | 2.32%                         | 2.32%                       | 2.32%                              |
+| Tier 2 Threshold (% of total issuance)             | 0.93%                         | 0.93%                       | 0.93%                              |
+| Tier 3 Threshold (% of total issuance)             | 0.35%                         | 0.35%                       | 0.35%                              |
+| Tier 4 Threshold (% of total issuance)             | 0% (unreachable)              | 0% (unreachable)            | 0% (unreachable)                   |
