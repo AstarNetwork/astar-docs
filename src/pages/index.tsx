@@ -11,7 +11,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Astar Network Official Documentation Portal - User Guides, Tutorials, and Tools for Developers."
+      description="Astar Collective Official Documentation with user guides, tutorials, technical information, and tools for developers."
     >
       <div className={styles.contentWrapper}>
         <Hero />
