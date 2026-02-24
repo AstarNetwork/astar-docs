@@ -1,12 +1,18 @@
 ---
 sidebar_position: 1
+description: Learn what is the Astar Collective.
+image: /img/astar-preview.png
 ---
+
+import Figure from '/src/components/figure'
 
 # About Astar Network
 
 [Astar Network]: https://astar.network/
 
 ## I. A Web3 Collective
+
+<Figure caption="Astar Collective Social Card" src={require('/img/astar-preview.png').default} width="100%" />
 
 Astar is a web3 collective focused on building products that bring users onchain while creating sustainable value for ASTR holders. Rather than operating as a traditional single-chain ecosystem, Astar coordinates multiple products and contributors across different blockchain networks through a unified economic and governance structure.
 
