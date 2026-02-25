@@ -92,7 +92,6 @@ Tier thresholds are defined as **fixed percentages** of the total issuance. As t
 | Era Reward Span Length                             | 16                            | 16                          | 16                                 |
 | Reward Retention In Periods                        | 4                             | 3                           | 2                                  |
 | Max Number Of Contracts                            | 16                            | 16                          | 16                                 |
-| Max Number Of Tier Slots (Fixed)                   | 16                            | 16                          | 16                                 |
 | Max Unlocking Chunks                               | 8                             | 8                           | 8                                  |
 | Minimum Locked Amount                              | 500 ASTR                      | 50 SDN                      | 5 SBY                              |
 | Unlocking Period                                   | 9                             | 4                           | 4                                  |
