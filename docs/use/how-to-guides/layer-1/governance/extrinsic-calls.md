@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 
 ## I. Introduction
 
-This document is the operational reference for **Community Council members** executing governance and treasury extrinsic calls on Astar Network. It covers five core areas: claiming Community Treasury rewards, executing UCG Program staking operations, managing dApp Staking listings, and approving treasury spending proposals. Each section is structured around the two primary interfaces available for these operations: [**Polkadot.js Apps**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/) and [**SubSquare**](https://astar.subsquare.io/community-council/motions).
+This document is the operational reference for **Community Council members** executing governance and treasury extrinsic calls on Astar Network. It covers five core areas: claiming Community Treasury rewards, executing Community Treasury staking operations, managing dApp Staking listings, and approving treasury spending proposals. Each section is structured around the two primary interfaces available for these operations: [**Polkadot.js Apps**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/) and [**SubSquare**](https://astar.subsquare.io/community-council/motions).
 
 :::info Who is this guide for?
 
@@ -23,14 +23,14 @@ Understanding the distinction between the **Astar Community Council (ACC)** and 
 
 | Entity | Description |
 |--------|-------------|
-| **Astar Community Council (ACC)** | A 6-member governance body (2 Core Team + 2 Astar Ambassadors + 2 Community Representatives) responsible for managing the Community Treasury, approving and rejecting dApps for dApp Staking, and overseeing the UCG Program. |
-| **Community Treasury** | An onchain fund managed by the ACC, dedicated to community-related expenditures such as ambassador compensation, community events, and UCG staking operations. Address: `YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix` |
+| **Astar Community Council (ACC)** | A 6-member governance body (2 Core Team + 2 Astar Ambassadors + 2 Community Representatives) responsible for managing the Community Treasury and approving and rejecting dApps for dApp Staking. |
+| **Community Treasury** | An onchain fund managed by the ACC, dedicated to community-related expenditures such as ambassador compensation, community events, and staking operations. Address: `YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix` |
 
 ### II. Pre-Operation Checklist: When to Claim Rewards First
 
 :::warning Critical Requirement
 
-Before executing **any operation that involves moving or repositioning stake held by the Community Treasury**, including staking, unstaking, and moving stake on UCG dApps, **all pending Staker Rewards must be claimed first**. Failure to do so will result in failed transactions.
+Before executing **any operation that involves moving or repositioning stake held by the Community Treasury**, including staking, unstaking, and moving stake, **all pending Staker Rewards must be claimed first**. Failure to do so will result in failed transactions.
 
 During the **annual voting period re-staking**, both **Staker Rewards** and **dApp Owner Rewards** must be fully claimed before any staking operation is executed.
 
@@ -38,9 +38,9 @@ During the **annual voting period re-staking**, both **Staker Rewards** and **dA
 
 | Operation | Staker Rewards | dApp Owner Rewards |
 |-----------|:--------------:|:------------------:|
-| Stake from Community Treasury (UCG) | ✅ Required | Recommended |
-| Unstake from Community Treasury (UCG) | ✅ Required | Recommended |
-| Move stake on UCG dApps | ✅ Required | Recommended |
+| Stake from Community Treasury | ✅ Required | Recommended |
+| Unstake from Community Treasury | ✅ Required | Recommended |
+| Move stake between dApps | ✅ Required | Recommended |
 | Annual voting period re-staking | ✅ Required | ✅ Required |
 | Register (list) a dApp in dApp Staking | ❌ Not required | ❌ Not required |
 | Unregister (delist) a dApp from dApp Staking | ❌ Not required | ❌ Not required |
@@ -55,7 +55,8 @@ The Community Treasury participates in dApp Staking both as a staker and as a re
 
 Each category follows a different claiming process, described in the sections below.
 
-### I. Via Polkadot.js
+<details>
+<summary>Via Polkadot.js</summary>
 
 The Polkadot.js path allows any funded account to claim rewards on behalf of the Community Treasury without requiring a council motion.
 
@@ -300,11 +301,14 @@ The script outputs:
 
 :::tip Adjusting the Era Scan Range
 
-By default, the script scans the last **50 eras** (~50 days). Increase the `PAST_ERAS` constant if claiming over a longer historical period.
+By default, the script scans the last **50 eras** (~50 days). You can increase `PAST_ERAS` to cover a longer period — for example, setting it to **100** will scan the last 100 eras (~100 days).
 
 :::
 
-### II. Via SubSquare
+</details>
+
+<details>
+<summary>Via SubSquare</summary>
 
 The SubSquare path executes reward claims as a Community Council motion, providing formal onchain accountability and collective approval. Use this method when the ACC wants the claim to be recorded as a council action.
 
@@ -359,29 +363,30 @@ When executing operations that involve Community Treasury funds through a counci
 
 :::
 
-## III. UCG Program Operations
+</details>
 
-The **Unstoppable Community Grant (UCG) Program** is a staking-based grant mechanism in which the ACC temporarily manages part of the Community Treasury's ASTR holdings to stake on approved dApps. This staking position benefits both the recipient dApp, promoted to Tier 3 in dApp Staking, receiving higher daily rewards, and the Community Treasury, which continues to earn staking yield on the allocated tokens throughout the grant period.
+## III. Community Treasury Staking Operations
 
-UCG operations include staking on newly approved dApps, unstaking from dApps that have exited the program, and moving stake between dApps when program conditions change. During the **annual voting period**, the ACC must re-stake on all active UCG dApps to renew the staking positions for the new cycle.
+The ACC manages part of the Community Treasury's ASTR holdings through dApp Staking, staking on approved dApps to support the ecosystem while generating staking yield for the treasury. These are governance operations that the ACC can execute on behalf of the Community Treasury, and they include staking on newly approved dApps, unstaking when necessary, and moving stake between dApps when conditions change. During the **annual voting period**, the ACC must re-stake on all active positions to renew them for the new cycle.
 
-:::warning Reward Claiming Requirement for UCG Operations
+:::warning Reward Claiming Requirement for Treasury Staking Operations
 
-Before executing any UCG staking, unstaking, or stake-moving operation, **all pending Staker Rewards must be claimed**. During the annual voting period re-staking, **both Staker Rewards and dApp Owner Rewards must be fully claimed** before any staking transaction is submitted.
+Before executing any staking, unstaking, or stake-moving operation, **all pending Staker Rewards must be claimed**. During the annual voting period re-staking, **both Staker Rewards and dApp Owner Rewards must be fully claimed** before any staking transaction is submitted.
 
 Follow the full claiming procedure in [Section II](#ii-claiming-community-treasury-rewards) before proceeding with any operation in this section.
 
 :::
 
-### I. Via Polkadot.js
+<details>
+<summary>Via Polkadot.js</summary>
 
-The Polkadot.js path allows an authorized individual to construct and submit a council motion directly without using the SubSquare interface. All UCG staking operations must be routed through `collectiveProxy → executeCall` to act on behalf of the Community Treasury, wrapped inside a council proposal.
+The Polkadot.js path allows an authorized individual to construct and submit a council motion directly without using the SubSquare interface. All treasury staking operations must be routed through `collectiveProxy → executeCall` to act on behalf of the Community Treasury, wrapped inside a council proposal.
 
 **Prerequisites:**
 - Active ACC member account with council membership
 - Access to [Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/)
 
-**Base call structure for all UCG operations:**
+**Base call structure for all treasury staking operations:**
 ```
 communityCouncil.propose(
   threshold,
@@ -392,7 +397,7 @@ communityCouncil.propose(
 )
 ```
 
-#### 1.1. Stake on a UCG dApp
+#### 1.1. Stake on a dApp
 
 1. Navigate to **Developer → Extrinsics**.
 2. Select `communityCouncil` → `propose`.
@@ -412,7 +417,7 @@ communityCouncil.propose(
 )
 ```
 
-#### 1.2. Unstake from a UCG dApp
+#### 1.2. Unstake from a dApp
 
 1. Navigate to **Developer → Extrinsics**.
 2. Select `communityCouncil` → `propose`.
@@ -434,7 +439,7 @@ communityCouncil.propose(
 
 #### 1.3. Move Stake Between dApps
 
-Use `moveStake` when repositioning stake from one UCG dApp to another, for example, when a dApp exits the program and a new one joins. Reward claiming calls can be batched alongside `moveStake` for efficiency.
+Use `moveStake` when repositioning stake from one dApp to another. Reward claiming calls can be batched alongside `moveStake` for efficiency.
 
 :::warning Claim Before Moving Stake
 
@@ -479,13 +484,13 @@ communityCouncil.propose(
 
 #### 1.4. Annual Voting Period Re-Staking
 
-During the annual council voting period, all existing staking positions held by the Community Treasury on active UCG dApps must be renewed. This operation has stricter prerequisites than regular UCG staking: **both Staker Rewards and dApp Owner Rewards must be fully claimed before submitting any re-staking motion**.
+During the annual council voting period, all existing staking positions held by the Community Treasury must be renewed. This operation has stricter prerequisites than regular staking: **both Staker Rewards and dApp Owner Rewards must be fully claimed before submitting any re-staking motion**.
 
 **Required sequence:**
 
 1. Claim all Staker Rewards: follow [Section II.I.1.1](#11-staker-rewards).
 2. Claim all dApp Owner Rewards: follow [Section II.I.1.3](#13-dapp-owner-rewards).
-3. Submit the re-staking council proposal, batching all UCG dApps into a single motion:
+3. Submit the re-staking council proposal, batching all active positions into a single motion:
 
 ```
 communityCouncil.propose(
@@ -509,15 +514,18 @@ Submitting all re-staking operations in one batched council motion minimizes the
 
 :::
 
-### II. Via SubSquare
+</details>
 
-The SubSquare path provides a guided interface for submitting UCG council motions without manual call construction. The **"Community Proxy call"** Quick Start option automatically wraps the inner call in `collectiveProxy → executeCall`.
+<details>
+<summary>Via SubSquare</summary>
+
+The SubSquare path provides a guided interface for submitting treasury staking council motions without manual call construction. The **"Community Proxy call"** Quick Start option automatically wraps the inner call in `collectiveProxy → executeCall`.
 
 **Prerequisites:**
 - Active ACC member account
 - Access to [SubSquare Community Council Motions](https://astar.subsquare.io/community-council/motions)
 
-#### 2.1. Stake on a UCG dApp
+#### 2.1. Stake on a dApp
 
 1. Navigate to [SubSquare Community Council → Motions](https://astar.subsquare.io/community-council/motions) and click **+ New Proposal**.
 2. Select **"Community Proxy call"** from the Quick Start options.
@@ -528,7 +536,7 @@ The SubSquare path provides a guided interface for submitting UCG council motion
 6. Click **Submit**.
 7. **Save and share the transaction hash in the ACC Telegram group.**
 
-#### 2.2. Unstake from a UCG dApp
+#### 2.2. Unstake from a dApp
 
 1. Navigate to [SubSquare Community Council → Motions](https://astar.subsquare.io/community-council/motions) and click **+ New Proposal**.
 2. Select **"Community Proxy call"** from the Quick Start options.
@@ -557,7 +565,7 @@ The SubSquare path provides a guided interface for submitting UCG council motion
 4. Select **"Community Proxy call"** from the Quick Start options.
 5. Set the **threshold** to 2/3 of the current council size.
 6. In the call builder, select `utility` → `batch`.
-7. Add a `dappStaking → stake` call for **each active UCG dApp**, entering the appropriate contract address and allocation amount.
+7. Add a `dappStaking → stake` call for **each active position**, entering the appropriate contract address and allocation amount.
 8. Click **Submit**.
 9. **Save and share the transaction hash in the ACC Telegram group.**
 
@@ -571,6 +579,8 @@ This section assumes that the Community Treasury has its tokens locked in dApp S
 Once a motion is submitted, all ACC members must vote **Aye** within the designated voting period for it to execute automatically onchain. Coordinate the timing of the re-staking motion to align with the council's availability during the voting window.
 
 :::
+
+</details>
 
 ## IV. dApp Staking Operations
 
@@ -586,13 +596,14 @@ dApp Staking management operations, registering and unregistering dApps, do **no
 - **Registration:** 2/3 majority (e.g., 4 out of 6 council members)
 - **Unregistration:** 4/5 majority (e.g., 5 out of 6 council members)
 
-### I. Via Polkadot.js
+<details>
+<summary>Via Polkadot.js</summary>
 
 #### 1.1. Register a dApp
 
 :::info No collectiveProxy Needed
 
-Unlike UCG staking operations, registering a dApp does **not** require routing through `collectiveProxy → executeCall`. The call directly proposes `dappStaking → register` on behalf of the council.
+Unlike treasury staking operations, registering a dApp does **not** require routing through `collectiveProxy → executeCall`. The call directly proposes `dappStaking → register` on behalf of the council.
 
 :::
 
@@ -643,7 +654,10 @@ communityCouncil.propose(
 )
 ```
 
-### II. Via SubSquare
+</details>
+
+<details>
+<summary>Via SubSquare</summary>
 
 #### 2.1. Register a dApp
 
@@ -684,6 +698,8 @@ There is no dedicated Quick Start option for dApp unregistration. Use **"Communi
 6. Click **Submit**.
 7. **Save and share the transaction hash in the ACC Telegram group.**
 
+</details>
+
 ## V. Treasury Spending Proposals
 
 The ACC reviews and votes on spending proposals submitted to the Community Treasury. Each proposal is processed through a council motion to either approve or reject the requested expenditure. Once the required threshold of AYE votes is reached, the outcome executes automatically onchain.
@@ -694,7 +710,8 @@ Approving or rejecting treasury spending proposals is an administrative council 
 
 :::
 
-### I. Via Polkadot.js
+<details>
+<summary>Via Polkadot.js</summary>
 
 The Polkadot.js path allows a council member to construct and submit the approval or rejection motion directly, without using the SubSquare interface.
 
@@ -739,7 +756,10 @@ communityCouncil.propose(
 )
 ```
 
-### II. Via SubSquare
+</details>
+
+<details>
+<summary>Via SubSquare</summary>
 
 SubSquare provides dedicated Quick Start options for treasury proposal approval and rejection, making this the most accessible path for council members.
 
@@ -789,9 +809,11 @@ When a treasury spending proposal is rejected, the proposer's bond deposit is **
 
 :::
 
+</details>
+
 ## VI. Important Notes
 
-I. **Staker Rewards must be claimed before any UCG operation.** Before staking, unstaking, or moving stake on behalf of the Community Treasury, ensure all pending Staker Rewards are claimed. Unclaimed rewards will cause the transaction to fail.
+I. **Staker Rewards must be claimed before any treasury staking operation.** Before staking, unstaking, or moving stake on behalf of the Community Treasury, ensure all pending Staker Rewards are claimed. Unclaimed rewards will cause the transaction to fail.
 
 II. **During the annual voting period re-staking, both reward types must be claimed.** Staker Rewards and dApp Owner Rewards must both be fully claimed before any re-staking motion is submitted for the new cycle.
 
@@ -807,7 +829,7 @@ VII. **Threshold accuracy is critical.** Always verify the current council compo
 
 VIII. **Contract address verification.** Always double-check the Community Treasury contract address (`0x101b453a02f961b4e3f0526ecd4c533c3a80d795`) before submitting any dApp Owner Reward claim.
 
-IX. **dApp Staking registration does not require `collectiveProxy`.** Unlike UCG staking operations, registering or unregistering a dApp does not interact with the Community Treasury balance and does not require the `collectiveProxy → executeCall` routing.
+IX. **dApp Staking registration does not require `collectiveProxy`.** Unlike treasury staking operations, registering or unregistering a dApp does not interact with the Community Treasury balance and does not require the `collectiveProxy → executeCall` routing.
 
 X. **Treasury spending proposals do not require reward claiming.** Approving or rejecting spending proposals is a purely administrative council action that does not affect staking positions.
 
