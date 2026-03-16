@@ -72,7 +72,7 @@ $collator\_reward\_per\_block = \frac{total\_collator\_cycle\_reward}{blocks\_pe
 
 ### Treasury
 
-Similar to the _collators_, treasury gets a fixed amount of the cycle's _soft-capped_ inflation 
+Similar to the _collators_, treasury gets a fixed amount of the cycle's _soft-capped_ inflation
 distributed in equal amounts throughout all the blocks in the cycle.
 
 $treasury\_reward\_per\_block = \frac{total\_treasury\_cycle\_reward}{blocks\_per\_cycle}$
