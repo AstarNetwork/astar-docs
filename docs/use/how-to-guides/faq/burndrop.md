@@ -33,8 +33,6 @@ A: Each wallet can only deposit once. Any additional sybil-related restrictions 
 
 ### Q: What are the key dates?
 
-A: The PoC runs across three phases:
-
 - **Pledge Period:** 17 December 2025 – 28 December 2025 (deposit)
 - **Obligation Period:** 28 December 2025 – 4 January 2026 (lock)
 - **Consolidation Period:** 4 January 2026 – 18 January 2026 (mint Passport, finalize burn)
