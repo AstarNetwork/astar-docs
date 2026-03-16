@@ -122,8 +122,16 @@ The relevant storage map is `DAppTiers` which maps `era` to information about dA
 
 After reading `DappTiers` storage map for a particular `era`, `dapp_tiers_rewards.dapps` _tree map_ must be checked whether it contains the `dapp_id` of the smart contract for which we want to claim rewards. Please note that `dapp_id` is `u16` dApp identifier which can be read from the `DAppInfo` struct in `IntegratedDAppsStorage`.
 
-In case entry for the `dapp_id` exists, it will also contain the `tier_id` value which can be used to read the earned dApp reward from `dapp_tier_info.rewards`.
-It’s enough to use `tier_id` it as index in the `rewards` vector to find the reward associated with that tier.
+In case entry for the `dapp_id` exists, it will also contain the `tier_id` value (and rank within tier) which can be used to read the earned dApp reward components from `dapp_tier_info`.
+
+With deterministic tier+rank rewards, the claim value is derived from two per-tier components:
+
+- `tier_base_reward0 = dapp_tier_info.rewards[tier_id]` (rank 0 reward)
+- `reward_per_rank_step = dapp_tier_info.rank_rewards[tier_id]` (per +1 rank)
+
+Final reward for a dApp with `rank` is:
+
+`dapp_reward = tier_base_reward0 + rank * reward_per_rank_step`
 
 Once reward has been claimed, the associated entry will be removed `dapp_tiers_rewards.dapps` _tree map_.
 
@@ -143,6 +151,12 @@ This can be used to limit the _iteration_ over `DappTiers` storage.
 Once we know the oldest period, we can use `PeriodEnd` storage map to find when did the `oldest_period - 1` period end. The era after that one (or +2 to be more precise since +1 refers to the voting subperiod era) will be the first one that has the potential to be claimable.
 
 ### Bonus Rewards
+
+:::warning Attention
+
+Tokenomics 3.0 has **no user-facing bonus rewards**, so indexers and UIs should not surface a "bonus pool", "bonus APR", or "vote-to-earn-bonus" guidance as a user benefit.
+
+:::
 
 When checking whether staker is eligible for any bonus rewards, it is necessary to check all of the `StakerInfo` double storage map entries related to that staker.
 The first key of the double map is `staker account` so it can easily be iterated via prefix iteration.
@@ -179,11 +193,22 @@ However, it is possible that in that very same block, someone calls `claim_dapp_
 
 Reward pools per era can be read from the `Inflation` pallet, by reading the `ActiveInflationConfig` storage value.
 
-Each tier gets a portion of the reward pool (denoted as `reward_portion` in the configuration). These portions are further partitioned per slots.
+Each tier gets a portion of the dApp reward pool (denoted as `reward_portion` in the configuration). Tokenomics 3.0 then computes deterministic tier reward components using `tier_rank_multipliers` (bips, `10_000 = 100%`) and a weight-based normalization cap:
 
-E.g. for tier 1 dApp reward is calculated as:
+```text
+MAX_RANK = 10
+step_bips = max(0, tier_rank_multipliers[tier] - 10_000) / MAX_RANK
 
-`tier_1_dapp_reward = dapp_reward_pool_per_era * reward_portion[0] / slots_per_tier[0]`
+observed_total_weight = filled_slots * 10_000 + ranks_sum * step_bips
+expected_full_weight  = max_slots * (10_000 + 5 * step_bips)     // avg rank = 5
+normalization_weight  = max(observed_total_weight, expected_full_weight)
+
+tier_base_reward0      = tier_allocation * 10_000 / normalization_weight
+reward_per_rank_step   = tier_allocation * step_bips / normalization_weight
+dapp_reward(rank)      = tier_base_reward0 + rank * reward_per_rank_step
+```
+
+This replaces any "empty slots fund rank rewards" interpretation: empty slots only affect `filled_slots` / normalization, and under-filled tiers can leave part of the tier allocation unminted.
 
 ### When To Call Expired Entry Cleanup
 

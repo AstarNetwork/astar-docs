@@ -89,7 +89,7 @@ Each Period consists of two Subperiods:
 **Voting (Staking) Subperiod**
 
 A subperiod when stakers can decide to vote for dApp(s) to stake their tokens and when dApps owners and team can market their products, conduct campaign and attract stakers.  
-No staking rewards are generated during the Voting subperiod but if users vote and stake on dApps during this subperiod, they will become eligible for the **Bonus Reward**;
+No staking rewards are generated during the Voting subperiod.
 
 :::important
 
@@ -99,8 +99,8 @@ It's very important for dApp owners and their teams to get organized before and 
 
 **Build&Earn Subperiod** 
 
-A subperiod when stakers and dApps start earning rewards;
-Users can still stake tokens during the Build&Earn subperiod to increase the rewards they get from staking. However, the amount staked during Build&Earn does not contribute to the Bonus Reward.
+A subperiod when stakers and dApps start earning rewards.
+Users can still stake tokens during the Build&Earn subperiod to increase the rewards they get from staking.
 
 At the end of a **Build&Earn** subperiod, the current period ends. A new period begins, and all tokens are `unstaked` from dApp(s) but remain `locked`. A new **Voting Subperiod** starts.
 
@@ -119,6 +119,10 @@ As an user or a dApp owner, you need to take the following parameters into consi
 
 For the full list of parameters, please check the [dApp staking parameters page](/docs/learn/dapp-staking/protocol-parameters.md) and [Tokenomics 2.0 page](/docs/learn/tokenomics2/Inflation/#parameters).
 
+Tokenomics 3.0 note:
+- At most **16 dApps are reward-eligible per era** (across tiers).
+- Historical reward data and claim paths may reference up to **500** dApps for backward compatibility.
+
 #### Tier System
 
 Tier System is a method to rank dApps based on the total value staked on them. The Tier System is updated at the end of each Build&Earn Subperiod era.
@@ -126,6 +130,8 @@ Tier System is a method to rank dApps based on the total value staked on them. T
 There are a limited number of tiers, each with a set number of slots and a minimum threshold for dApps to qualify. 
 
 A dApp must gain enough support to enter a tier, with dynamic thresholds for fair competition. Higher tiers offer larger rewards.
+
+Within a tier, dApps can also have a **rank (0..10)**. Tokenomics 3.0 uses a deterministic `tier_rank_multipliers` weight model so a dApp's rewards can depend on **tier + rank** (not on empty slots). For the technical details and formulas, see the [technical overview](/docs/learn/dapp-staking/dapp-staking-protocol.md).
 
 You can always view in what tier the dApp is in the Projects Leaderboard on the Astar Portal.
 
@@ -151,7 +157,7 @@ As a result, stakers are rewarded for their commitment and staking efforts.
 
 - For detailed **technical overview** of dAppStaking protocol, visit this [page](/docs/learn/dapp-staking/dapp-staking-protocol/).
 
-- Check the [**FAQ section**](/docs/learn/dapp-staking/dapp-staking-faq.md), especially covering topics around new version of dApp Staking (V3) planned to go live on Astar in Q1 2024.
+- Check the [**FAQ section**](/docs/learn/dapp-staking/dapp-staking-faq.md).
 
 :::
 
