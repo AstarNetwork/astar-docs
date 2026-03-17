@@ -2,155 +2,129 @@
 sidebar_position: 1
 sidebar_label: How to Stake
 title: How to Stake on Astar Network
-description: What is the Move function in Astar dApp Staking?
+description: Step-by-step guide to stake ASTR on Astar dApp Staking using Talisman wallet.
 ---
 
 import Figure from '/src/components/figure'
 
-## 1. Overview
+## I. Overview
 
-In this guide, you’ll learn how to stake **ASTR** on Astar Network (L1) using the [**Astar Portal**](https://portal.astar.network/astar/assets) and the [**Zerion**](https://zerion.io/) wallet on the EVM version, which works similarly to the Substrate version. To complete this tutorial, you’ll need:
+In this guide, you'll learn how to stake **ASTR** on Astar Network (L1) using the [**Astar Portal**](https://portal.astar.network/astar/assets) and the [**Talisman**](https://talisman.xyz/) wallet on the **Astar Native (Substrate)** version. To complete this tutorial, you'll need:
 
-- A wallet that supports the **EVM** format (we’ll use Zerion)
-- ASTR tokens in your EVM wallet on Astar L1
-- Minimum of 500 ASTR required to stake
-- Bit of extra ASTR for the fees
+- A wallet that supports the **Substrate** format, we'll use **Talisman**
+- ASTR tokens in your Native wallet on Astar L1
+- Minimum of **500 ASTR** required to stake
+- A small amount of extra ASTR for transaction fees
 
 :::info Wallet Setup
 
-To set up your wallet on Astar Network, follow → [**this guide**](/docs/use/get-started/index.md).
-
-:::
-:::tip Get ASTR tokens
-
-To acquire ASTR tokens through a DEX or CEX, follow [**this guides**](/docs/use/how-to-guides/layer-1/get-astr-token/index.md) in our documentation.
-
-:::
-:::warning Claim rewards
-
-To earn rewards continuously, users have to vote and stake **every [new period](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/index.md).**
+Don't have an Astar wallet yet? Follow → [**this guide**](/docs/use/get-started/index.md) to set one up on Astar Network.
 
 :::
 
-We’ll now walk through the full transfer process step by step.
+## II. Step-by-step Guide
 
-## 2. Guide to Stake on Astar Network
+:::warning dApp Staking Parameters
 
-:::important dApp Staking parameters
+Before staking, make sure you understand all the parameters described [**here**](/docs/learn/dapp-staking/#parameters).
 
-Before using dApp Staking, make sure you understand all the parameters described [**here**](/docs/learn/dapp-staking/#parameters).
-
-At the protocol level, at most **16 dApps are reward-eligible per era** (across tiers).
-
-An address can only stake on a maximum of 16 contracts (dApps).
+- At most **16 dApps are reward-eligible per era** (across tiers) at the protocol level.
+- An address can stake on a **maximum of 16 contracts** (dApps).
 
 :::
 
-### Step 1: Access the Astar Portal
+### 2.1. Step 1: Access the Astar Portal
 
-Go to our [**Astar Portal**](https://portal.astar.network/astar/assets), the site where you can manage your funds and accounts within **Astar ecosystem**.
+Go to the [**Astar Portal**](https://portal.astar.network/astar/assets). A network selection modal will appear, choose **Astar (L1)** and click **Confirm**.
 
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-1.png').default} width="100%" />
+<Figure caption="Select the Astar (L1) network" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-1.png').default} width="100%" />
 
-Select the network, in this case, **Astar (L1)**.
+You'll land on the **Welcome to the Astar Portal** page, which lets you connect both an EVM and a Substrate wallet. Since we're using Talisman (Substrate), click **Connect** under the **Substrate wallet** panel.
 
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-2.png').default} width="100%" />
+<Figure caption="Welcome to the Astar Portal, connect your Substrate wallet" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-2.png').default} width="100%" />
 
-### Step 2: Connect EVM wallet
+### 2.2. Step 2: Connect Talisman Wallet
 
-Click on **Select wallet**.
+A **Connect Native Wallet** modal will appear listing all supported Substrate wallets. You'll see **Talisman** marked as **Detected**, click on it.
 
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-3.png').default} width="100%" />
+<Figure caption="Connect Native Wallet modal, Talisman detected" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-3.png').default} width="100%" />
 
-Choose the wallet you use, in this case, it will be **Zerion**, so we’ll click on **Metamask** to open the modal and connect it.
+:::tip Other Substrate Wallets
 
-:::info Metamask Mode
-
-Zerion uses a mode called Metamask mode, where every request made to Metamask is handled by Zerion first. That’s why we click on Metamask, as the Zerion logo doesn’t appear directly.
+Polkadot.js, SubWallet, and OneKey are also supported. The steps are the same for all of them.
 
 :::
 
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-4.png').default} width="100%" />
+Your Talisman accounts will appear. Select the account you want to use and click **Connect**.
 
-### Step 3: Go to Staking Section
+<Figure caption="Select your Talisman account and connect" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-4.png').default} width="100%" />
 
-Then go to the **staking section** on the left sidebar.
+### 2.3. Step 3: Verify Your Assets
 
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-5.png').default} width="100%" />
+After connecting, you'll be taken to the **Your Assets** page. Your **Astar Native** wallet will be shown with your current ASTR balance, confirm everything looks correct before proceeding.
 
-There, you’ll see a panel with all the staking information: current period, APY, remaining days, etc.
+<Figure caption="Your Assets page, Astar Native wallet connected" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-5.png').default} width="100%" />
 
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-6.png').default} width="100%" />
+### 2.4. Step 4: Navigate to the Stake Section
 
-You can start staking either by clicking the blue **"Choose dApps"** button or by scrolling down to view all the listed dApps.
+Click on **Stake** in the left sidebar to go to the dApp Staking section.
 
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-7.png').default} width="100%" />
+<Figure caption="Click Stake in the sidebar" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-6.png').default} width="100%" />
 
-:::tip Project cards
+### 2.5. Step 5: Explore the Staking Section
 
-Click on the project cards for more information, access to their communities or to view team profiles. You can also find useful resources on our [**forum**](https://forum.astar.network/) or check [**DefilLama**](https://defillama.com/).
+The **Stake** page shows you a summary panel with your available balance, current rewards, and network stats (APR, remaining time). Below it, the **dApp Rankings** table lists all available projects to stake on.
 
-:::
+<Figure caption="Stake page, overview with dApp Rankings" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-7.png').default} width="100%" />
 
-### Step 4: Select dApp & amount
+You can start staking by clicking **Start Staking** in the top panel, or by clicking **Stake** next to any dApp in the rankings table. Use the **Search dapps** bar to quickly find a specific project.
 
-:::note Limit of support
+:::tip Project Research
 
-You can choose up to 16 projects that you would like to support.
-
-:::
-
-Go back to the previous screen and click on **"Choose dApp".**
-
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-8.png').default} width="100%" />
-
-Select the category and the dApp you want.
-
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-9.png').default} width="100%" />
-
-:::important Available balance
-
-**Your available balance** represents the balance available for staking and includes tokens locked in governance.
+Click on any project card for more details, team profiles, community links, and resources. You can also check [**DeFiLlama**](https://defillama.com/) or our [**Forum**](https://forum.astar.network/) for additional context.
 
 :::
 
-Then, enter the amount you want to stake.
+### 2.6. Step 6: Select a dApp and Enter the Amount
 
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-10.png').default} width="100%" />
+:::note Maximum Supported dApps
 
-Confirm, and sign the transaction.
-
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-11.png').default} width="100%" />
-
-:::tip Free tokens for gas
-
-Make sure to always keep some tokens free for gas manage to claim your rewards.
+You can support up to **16 projects** simultaneously from a single address.
 
 :::
 
-**If everything is correct**, you’ll see a message confirming that the transaction was successfully executed, and you’ll be able to view your transaction in the block explorer.
+Click **Stake** next to the dApp you want to support. You'll be taken to its staking page. Enter the amount of ASTR you want to stake and review the summary.
 
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-12.png').default} width="100%" />
+<Figure caption="Enter staking amount for your chosen dApp" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-8.png').default} width="100%" />
 
-### Step 5: Check your staking
+:::info Available Balance
 
-Finally, you’ll be able to see your balance. Go back to the **Assets** screen. In the **Staking** section, you’ll be able to view your staked balance and more.
-
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-14.png').default} width="100%" />
-
-If you go to the **My dApps** section, you’ll be able to see the different dApps you staked on and their respective amounts.
-
-<Figure caption="" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/stake-astar-13.png').default} width="100%" />
-
-:::info Unstaked tokens
-
-At the end of a Period, tokens are unstaked from all dApps, remain locked on the account but must be staked back on dApps for the new Period.
+**Your available balance** includes tokens locked in governance. Make sure to keep some ASTR free for transaction fees.
 
 :::
 
-## 3. Video tutorial
+Click **Stake** and sign the transaction in your Talisman wallet popup.
 
-To wrap up, here’s a video tutorial that will guide you through the step-by-step process in case anything wasn’t clear. Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
+### 2.7. Step 7: Check Your Staking Dashboard
+
+Once the transaction is confirmed, go back to **Assets** and click **My Staking**. You'll see your total staked amount, locked balance, available rewards, and the list of dApps you've staked on.
+
+<Figure caption="My Staking dashboard showing your active stake" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-9.png').default} width="100%" />
+
+:::info Token Unlock at Period End
+
+At the end of each Period, tokens are automatically unstaked from all dApps. They remain **locked** on your account but must be **re-staked** for the new Period to keep earning rewards.
+
+:::
+
+{/* Video temporarily hidden — recorded on old Portal version. Will be updated.
+## Video Tutorial
+
+:::caution Outdated Video
+
+This video was recorded using an older version of the Astar Portal. An updated version will be available soon. For now, follow the written steps above.
+
+:::
 
 <iframe
   width="100%"
@@ -163,3 +137,6 @@ To wrap up, here’s a video tutorial that will guide you through the step-by-st
   referrerPolicy="strict-origin-when-cross-origin"
   loading="lazy"
 />
+*/}
+
+Have questions? Join us in the [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
