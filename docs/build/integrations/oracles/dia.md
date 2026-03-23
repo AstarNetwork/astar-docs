@@ -40,7 +40,7 @@ contract DIAOracleSample {
     * Oracle Address: 0xd79357ebb0cd724e391f2b49a8De0E31688fEc75
     * Network: Astar Network
     */
-    address constant diaOracle = "0xd79357ebb0cd724e391f2b49a8De0E31688fEc75";
+    address constant diaOracle = 0xd79357ebb0cd724e391f2b49a8De0E31688fEc75;
     function getPrice(string memory key)
     external
     view
