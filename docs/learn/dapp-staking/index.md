@@ -133,6 +133,8 @@ A dApp must gain enough support to enter a tier, with thresholds defined as fixe
 
 Within a tier, dApps can also have a **rank (0..10)**. Tokenomics 3.0 uses a deterministic `tier_rank_multipliers` weight model so a dApp's rewards can depend on **tier + rank** (not on empty slots). For the technical details and formulas, see the [technical overview](/docs/learn/dapp-staking/dapp-staking-protocol.md).
 
+Within a tier, dApps can also have a **rank (0..10)**. Tokenomics 3.0 uses a deterministic `tier_rank_multipliers` weight model so a dApp's rewards can depend on **tier + rank** (not on empty slots). For the technical details and formulas, see the [technical overview](/docs/learn/dapp-staking/dapp-staking-protocol.md).
+
 You can always view in what tier the dApp is in the Projects Leaderboard on the Astar Portal.
 
 :::tip

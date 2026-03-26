@@ -99,9 +99,9 @@ Tier thresholds are defined as **fixed percentages** of the total issuance. As t
 | Minimum Stake Amount                               | 500 ASTR                      | 50 SDN                      | 5 SBY                              |
 | Max Bonus Safe Moves Per Period (legacy/internal)  | 2                             | 2                           | 2                                  |
 | Number Of Tiers                                    | 4                             | 4                           | 4                                  |
-| Reward Distribution                                | [0%, 70%, 30%, 0%]            | [25%, 47%, 25%, 3%]         | [40%, 30%, 20%, 10%]               |
-| Slot Portions                                      | [0%, 37.5%, 62.5%, 0%]        | [5%, 20%, 30%, 45%]         | [10%, 20%, 30%, 40%]               |
-| Tier Rank Multipliers (bips; rank10 vs rank0)      | [0, 24_000, 46_700, 0]         | Runtime configured          | Runtime configured                 |
+| Reward Distribution                                | [0%, 70%, 30%, 0%]            | [0%, 70%, 30%, 0%]          | [0%, 70%, 30%, 0%]                 |
+| Slot Portions                                      | [0%, 37.5%, 62.5%, 0%]        | [0%, 37.5%, 62.5%, 0%]      | [0%, 37.5%, 62.5%, 0%]             |
+| Tier Rank Multipliers (bips; rank10 vs rank0)      | [0, 24_000, 46_700, 0]        | [0, 24_000, 46_700, 0]      | [0, 24_000, 46_700, 0]             |
 | Tier 1 Threshold (% of total issuance)             | 2.32%                         | 2.32%                       | 2.32%                              |
 | Tier 2 Threshold (% of total issuance)             | 0.93%                         | 0.93%                       | 0.93%                              |
 | Tier 3 Threshold (% of total issuance)             | 0.35%                         | 0.35%                       | 0.35%                              |

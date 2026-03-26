@@ -72,7 +72,7 @@ $collator\_reward\_per\_block = \frac{total\_collator\_cycle\_reward}{blocks\_pe
 
 ### Treasury
 
-Similar to the _collators_, treasury gets a fixed amount of the cycle's _soft-capped_ inflation 
+Similar to the _collators_, treasury gets a fixed amount of the cycle's _soft-capped_ inflation
 distributed in equal amounts throughout all the blocks in the cycle.
 
 $treasury\_reward\_per\_block = \frac{total\_treasury\_cycle\_reward}{blocks\_per\_cycle}$
@@ -153,7 +153,7 @@ a single cycle.
 | Treasury Part                | 5%    | 5%     | 5%      |
 | Collators Part               | 3.2%  | 3.2%   | 3%      |
 | dApps Part                   | 13%   | 13%    | 20%     |
-| Base Staker Part             | 10%   | 10%    | 25%     |
-| Adjustable Staker Part       | 55%   | 58.8%  | 35%     |
-| Bonus Part (legacy/internal; not user-facing) | 13.8% | 10%    | 12%     |
+| Base Staker Part             | 15.8%   | 15%    | 30%     |
+| Adjustable Staker Part       | 63%   | 63.8%  | 42%     |
+| Bonus Part (legacy/internal; not user-facing) | 0% | 0%    | 0%     |
 | Ideal Staking Rate           | 50%   | 50%    | 20%     |

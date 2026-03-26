@@ -53,16 +53,20 @@ If you want to withdraw the application and unlock the bond
 A collator deploys its node on a remote server. You can choose your preferred provider for dedicated servers and operating system. Generally speaking, we recommand you to select a provider/server in your region, this will increase decentralization of the network.
 You can choose your preferred operating system, though we highly recommend Linux.
 
+:::note
+Under **async backing**, collators must not only build blocks quickly, but also keep up with relay-chain updates, branch churn, candidate generation, and candidate distribution. In practice, this means collator performance depends on **CPU quality, dedicated core count, RAM, storage latency, and network stability**, not only single-core frequency.
+:::
+
 **Hardware requirements**
 
-Use the charts below to find the basic configuration, which guarantees that all blocks can process in time. If the hardware doesn't meet these requirements, there is a high chance it will malfunction and you risk be automatically **kicked out and slashed** from the active set.
+The configurations below should be treated as the **minimum production baseline** for collators. Machines below these specifications may fall behind during syncing, reorg-heavy periods, or candidate propagation, which can reduce canonical authorship competitiveness and increase the risk of being removed from the active set.
 
 :::caution
 Make sure your server is a **bare metal only dedicated to the collator node**, any unnecessary other process running on it will significantly decrease the collator performance.
 **We strongly discourage using a VPS** to run a collator because of their low performances.
 
 Collators are the nodes which require the most powerful and fast machine, because they only have a very short time frame to assemble a block and collate it to the relay chain.
-To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz per core** and a **NVMe SSD disk** (SATA SSD are not suitable for collators because they are too slow).
+To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz per core** (strong single-core performance strongly recommended) and a **NVMe SSD disk** (SATA SSD are not suitable for collators because they are too slow).
 :::
 
 <Tabs>
@@ -70,10 +74,11 @@ To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz pe
 
 | Component | Requirement |
 |---|---|
-| System | Ubuntu 22.04 |
-| CPU | 12 cores - minimum 4 Ghz per core |
+| System | Ubuntu 22.04 or 24.04 LTS |
+| CPU | 12 dedicated modern x86-64 cores - minimum 4 Ghz per core |
 | Memory | 32 GB |
-| Hard Disk | 1 TB SSD NVMe |
+| Hard Disk | 1 TB SSD NVMe, low-latency SSD |
+| Network | **500 Mbit/s symmetric**, Stable broadband with good latency |
 
 </TabItem>
 
@@ -81,10 +86,11 @@ To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz pe
 
 | Component | Requirement |
 |---|---|
-| System | Ubuntu 22.04 |
-| CPU | 12 cores - minimum 4 Ghz per core |
+| System | Ubuntu 22.04 or 24.04 LTS |
+| CPU | 12 dedicated modern x86-64 cores - minimum 4 Ghz per core |
 | Memory | 32 GB |
-| Hard Disk | 1 TB SSD NVMe |
+| Hard Disk | 1 TB SSD NVMe, low-latency SSD |
+| Network | **500 Mbit/s symmetric**, Stable broadband with good latency |
 
 </TabItem>
 
@@ -92,10 +98,11 @@ To run a collator, it is absolutely necessary to use a **CPU of minimum 4 Ghz pe
 
 | Component | Requirement |
 |---|---|
-| System | Ubuntu 22.04 |
-| CPU | 4 cores - minimum 3.5 Ghz per core |
-| Memory | 16 GB |
-| Hard Disk | 500 GB SSD NVMe |
+| System | Ubuntu 22.04 or 24.04 LTS |
+| CPU | 8 dedicated modern x86-64 cores - minimum 3.5 Ghz per core |
+| Memory | 32 GB |
+| Hard Disk | 500 GB SSD NVMe, low-latency SSD |
+| Network | **500 Mbit/s symmetric**, Stable broadband with good latency |
 
 </TabItem>
 </Tabs>
