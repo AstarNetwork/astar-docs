@@ -176,9 +176,9 @@ There you can find your current tier, number of stakers, total earned (total sta
 
 ### Q: How are dApps assigned to tiers?
 
-At the end of each **Build&Earn** Subperiod, dApps are assigned to a tier based on the total value staked on them by users. There are *4 tiers*.
+At the end of each **Build&Earn** Subperiod, dApps are assigned to a tier based on the total value staked on them by users. There are *4 tiers* with a **fixed maximum of 16 slots** distributed across all tiers.
 
-The threshold for tier 4 is fixed, while it is dynamic for the other tiers.
+Each tier has entry thresholds defined as **fixed percentages** of total issuance. These percentages remain constant, though the absolute threshold amounts adjust proportionally with changes in total issuance.
 
 ### Q: Is the amount of dApp Staking rewards fixed per dApp?
 
