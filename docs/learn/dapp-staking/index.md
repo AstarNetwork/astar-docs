@@ -71,7 +71,7 @@ To understand how dApp staking v3 works, it’s essential to grasp the following
 
 #### Era
 
-`Eras` is a basic time unit in dApp Staking. The length of an Era is 7200 blocks, equivalent to roughly 1 day.
+`Eras` is a basic time unit in dApp Staking. The length of an Era is 14400 blocks, equivalent to roughly 1 day.
 
 #### Period & Subperiods
 
@@ -110,10 +110,10 @@ As an user or a dApp owner, you need to take the following parameters into consi
 
 | Parameters                     | Astar Network       | Shiden Network      | Shibuya             |
 | ------------------------------ | ------------------- | ------------------- | ------------------- |
-| Eras Per Period                | 122 (~122 days)     | 61 (~61 days)       | 28 (~7 days)        |
-| Eras Per Voting Subperiod      | 11 (~11 days)       | 6 (~6 days)         | 8 (~48 hours)       |
-| Eras Per Build&Earn Subperiod  | 111 (~111 days)     | 55 (~55 days)       | 20 (~120 hours)     |
-| Blocks Per Era                 | 7200 (~24 hours)    | 7200 (~24 hours)    | 1800 (~6 hours)     |
+| Eras Per Period                | 365 (~365 days)     | 183 (~183 days)     | 28 (~7 days)        |
+| Eras Per Voting Subperiod      | 1 (~1 day)          | 1 (~1 day)          | 1 (~6 hours)        |
+| Eras Per Build&Earn Subperiod  | 364 (~364 days)     | 182 (~182 days)     | 27 (~162 hours)     |
+| Blocks Per Era                 | 14400 (~24 hours)   | 14400 (~24 hours)   | 3600 (~6 hours)     |
 | Unlocking Period               | 9 Eras (~9 days)    | 4 Eras (~4 days)    | 4 Eras (~1 day)     |
 | Minimum Amount to Stake        | 500 ASTR            | 50 SDN              | 5 SBY               |
 
@@ -130,8 +130,6 @@ Tier System is a method to rank dApps based on the total value staked on them. T
 There are a limited number of tiers, each with a set number of slots and a minimum threshold for dApps to qualify. 
 
 A dApp must gain enough support to enter a tier, with thresholds defined as fixed percentages of total issuance. Higher tiers offer larger rewards.
-
-Within a tier, dApps can also have a **rank (0..10)**. Tokenomics 3.0 uses a deterministic `tier_rank_multipliers` weight model so a dApp's rewards can depend on **tier + rank** (not on empty slots). For the technical details and formulas, see the [technical overview](/docs/learn/dapp-staking/dapp-staking-protocol.md).
 
 Within a tier, dApps can also have a **rank (0..10)**. Tokenomics 3.0 uses a deterministic `tier_rank_multipliers` weight model so a dApp's rewards can depend on **tier + rank** (not on empty slots). For the technical details and formulas, see the [technical overview](/docs/learn/dapp-staking/dapp-staking-protocol.md).
 

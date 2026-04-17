@@ -18,7 +18,7 @@ The following chapters will provide an overview of the functionality and termino
 
 Eras are the basic _time unit_ in dApp staking and their length is measured in the number of blocks.
 
-Eras are not expected to last long, e.g. current production networks era length is roughly 1 day (7200 blocks).
+Eras are not expected to last long, e.g. current production networks era length is roughly 1 day (14400 blocks).
 After an era ends, it's usually possible to claim rewards for it, if staker or dApp are eligible.
 
 ### Periods
