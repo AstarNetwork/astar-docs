@@ -42,13 +42,13 @@ Each **period** is divided up into multiple **eras**.
 
 ### Example
 
-* Block is produced every 12 seconds
-* **Era length** is 7200 blocks which equals 24 hours (1 day) (This is _standard_ era length)
-* `Voting` subperiod length is 10 eras (This is the single _voting_ era which lasts 10 x 7700 blocks)
-* `Build&Earn` subperiod length is 81 eras
-* Cycle length is **4 periods**
+* Block is produced every 6 seconds
+* **Era length** is 14400 blocks which equals 24 hours (1 day) (This is _standard_ era length)
+* `Voting` subperiod length is 1 era (This is the single _voting_ era which lasts 1 x 14400 blocks)
+* `Build&Earn` subperiod length is 364 eras
+* Cycle length is **1 period**
 
-With such configuration, we'd end up with a cycle lasting 364 days (roughly a year), and each period taking around 3 months to complete.
+With such configuration, we'd end up with a cycle lasting 365 days (roughly a year), with a single period spanning the entire cycle.
 
 ## Recalculation
 
@@ -145,11 +145,11 @@ a single cycle.
 
 | Parameter                    | Astar | Shiden | Shibuya |
 |------------------------------|-------|--------|---------|
-| Periods Per Cycle            | 3     | 6      | 2       |
-| Eras Per Voting Subperiod    | 11    | 6      | 8       |
-| Eras Per Build&Earn Subperiod| 111    | 55     | 20      |
-| Blocks Per Era               | 7200 (~24 hours) | 7200 (~24 hours) | 1800 (~6 hours) |
-| Cycle Inflation Rate         | 7%    | 7%     | 1%      |
+| Periods Per Cycle            | 1     | 2      | 1       |
+| Eras Per Voting Subperiod    | 1     | 1      | 1       |
+| Eras Per Build&Earn Subperiod| 364   | 182    | 27      |
+| Blocks Per Era               | 14400 (~24 hours) | 14400 (~24 hours) | 3600 (~6 hours) |
+| Cycle Inflation Rate         | 5.5%  | 7%     | 1%      |
 | Treasury Part                | 5%    | 5%     | 5%      |
 | Collators Part               | 3.2%  | 3.2%   | 3%      |
 | dApps Part                   | 13%   | 13%    | 20%     |
