@@ -6,61 +6,58 @@ import Figure from "/src/components/figure"
 
 # Manage dApp Staking & claim rewards
 
-Once you have staked, a new panel named **Staking** will appear in the [Assets Page](https://portal.astar.network/astar/assets).
+Once you have staked, you can manage your positions and rewards from the [Assets Page](https://portal.astar.network/astar/assets). Click the **My Staking** button at the top of your assets panel to open your staking dashboard.
 
-### My Staking Panel:
+<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/manage-staking-1.png').default } width="100%" />
 
-My Staking Panel is where you track your staking and locked tokens, see your pending rewards and take actions with your tokens and rewards;
+### My Staking Panel
 
-- **Locked amount:** Total amount of tokens locked in the address;
-  - **Unlock (↑):** Unlock your locked tokens _(subject to [unlocking parameters](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/unstaking.md#overview)_);
-  - **Stake (↓):** Stake your locked tokens in dApp Staking;
-- **Staked amount**: Total amount of tokens you have staked;
-- **Rewards**: Total of your estimated staking rewards;
-  - **Available**: Estimated rewards earned during the **Build&Earn subperiod** (Tokenomics 3.0 has no separate bonus reward pool — all staking rewards come from the base and adjustable staker allocations);
+The **My Staking** panel gives you a complete view of your staked and locked balances, and lets you claim your rewards.
 
-<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="100%" />
+- **Staked Amount**: Total tokens you currently have staked across all dApps.
+- **Locked Amount**: Tokens that are locked but not actively staked. Two action icons appear next to this balance:
+  - **Unlock** (open padlock icon): Start the unlocking process to make these tokens transferable.
+  - **Stake** (padlock icon): Stake your locked tokens into dApp Staking.
+- **Rewards** (blue card): Shows the current period, your **Available to claim** balance, and the **Claim estimated Rewards** button.
 
-To claim your rewards, you need to click on the **Claim Button** and sign the transaction.
+<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/manage-staking-2.png').default } width="100%" />
 
-If you have active stakes, a modal will pop up offering you to re-stake your rewards.
+To claim your rewards, click **Claim estimated Rewards** and sign the transaction.
 
-<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/Re_Stake_Modal.png').default } />
-
-If you want to re-stake your rewards, just click **Yes re-stake my rewards**, sign the transactions and your rewards will re-stake proportionally to all dApps you currently staking on.
-
-If you don't want to re-stake rewards, click **No I would not wish to re-stake my rewards**, sign transaction an your rewards will be claimed.
-
-All pending rewards on a dApp must be claimed before staking again.
+If you have active stakes, a modal will appear offering you to re-stake your rewards. Select **Yes, re-stake my rewards** to proportionally re-stake them across all dApps you are currently staking on, or decline to receive them as transferable tokens.
 
 :::tip
 
-You can manage your rewards from the dApp Staking page and collect them by clicking the **Claim Button** and signing the transaction.
-
-<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/Claiming_Rewards.png').default } width="100%" />
+All pending rewards on a dApp must be claimed before staking again.
 
 :::
 
-### My dApps Panel:
+### My dApps Panel
 
-My dApps Panel is where you can see all dApps you have staked with and manage your stake.
+The **My dApps** panel lists all dApps you are currently staking on, with your staked amount and three **Manage** actions per dApp row:
 
-- **Move (→) :** you can move staked tokens between different dApps;
-- **Add (↓) :** you can add more tokens in dApp staking on the desired dApp;
-- **Unlock (↑) :** you can select how many tokens you want to unlock from your staked amount.
+- **Move** (→ icon): Move your staked tokens from this dApp to another.
 
-<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/MydApps_Panel_1.png').default } width="100%" />
+<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/manage-staking-3.png').default } width="100%" />
 
-### Unlocking Panel:
+- **Unstake** (lock icon): Begin the unstaking process. Your tokens will enter the unlocking period before becoming transferable. See [Unstaking from dApps](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/unstaking.md) for full details.
 
-The unlocking panel is where you can see the progress of unlocking and withdrawing.
-For the runtime logic, when unlocking, you don’t unlock from a specific dApp but unlock as `Chunks`. First pending unlocking gives Chunk 1, second pending unlocking gives Chunk 2 etc.
+<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/manage-staking-4.png').default } width="100%" />
 
-After you have unstaked and when those ERAs pass, you will be able to withdraw. More information about [Unlocking](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/unstaking.md#overview).
-The unlocking period lengths can be consulted [here](/docs/learn/dapp-staking/#parameters).
+- **Add** (+ icon): Add more tokens to your stake on this dApp.
 
-- **Remaining days:** The number of days or `Eras` you have to wait before you can withdraw your tokens;
-- **Available to withdraw:** Unlock your tokens and make them `transferable`;
-- **Re-lock:** Lock your tokens again to use them in dApp Staking;
+<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/manage-staking-5.png').default } width="100%" />
 
-<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/Unbonding_1.png').default } width="100%" />
+### Unlocking Panel
+
+After initiating an unstake, an **Unlocking** panel appears below **My Staking** on the Assets page. It tracks your in-progress unlocking chunks and lets you withdraw tokens once the period ends or re-lock them back into staking.
+
+For full details on the unlocking process, see [Unstaking from dApps](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/unstaking.md).
+
+:::tip
+
+You can also access your staking dashboard directly from the **Stake** page by clicking the **My Staking →** link in the banner at the top.
+
+<Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/manage-staking-6.png').default } width="100%" />
+
+:::
