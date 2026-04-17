@@ -17,7 +17,7 @@ My Staking Panel is where you track your staking and locked tokens, see your pen
   - **Stake (↓):** Stake your locked tokens in dApp Staking;
 - **Staked amount**: Total amount of tokens you have staked;
 - **Rewards**: Total of your estimated staking rewards;
-  - **Available**: Estimated rewards earned during the **Build&Earn subperiod**;
+  - **Available**: Estimated rewards earned during the **Build&Earn subperiod** (Tokenomics 3.0 has no separate bonus reward pool — all staking rewards come from the base and adjustable staker allocations);
 
 <Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/Staking_Panel_1.png').default } width="100%" />
 

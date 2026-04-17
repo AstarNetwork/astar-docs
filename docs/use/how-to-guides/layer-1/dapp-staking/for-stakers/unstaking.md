@@ -11,7 +11,7 @@ import Figure from "/src/components/figure"
 **Locking** is a process by which tokens are temporarily `locked`. Staking is one of the scenarios that require tokens to be bonded.  
 **Unlocking** is the action of telling the network that you want to unlock these tokens. After the unlocking period, you can withdraw the tokens, and they become `transferable`.  
 
-Please note that this is based on a perfect block production of 12s. In case of any delay, your unlocking period can be a little longer.  
+Please note that this is based on a perfect block production of 6s. In case of any delay, your unlocking period can be a little longer.  
 The unlocking period lenghts can be consulted [here](/docs/learn/dapp-staking/#parameters). 
 
 :::warning

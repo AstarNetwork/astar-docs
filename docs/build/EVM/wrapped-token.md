@@ -38,7 +38,7 @@ Astar EVM supports two WASTR contracts for different use cases. **Both are safe 
 - **Additional Features:** Flash loans (ERC-3156), Permit, withdrawTo
 
 **Use for:**
-- Existing positions in Arthswap and legacy DeFi protocols
+- Existing positions in CometSwap and legacy DeFi protocols
 - Applications requiring WETH10-specific features (flash loans, permit)
 
 **Block Explorer:** [View on Blockscout](https://astar.blockscout.com/token/0xAeaaf0e2c81Af264101B9129C00F4440cCF0F720)
@@ -51,7 +51,7 @@ Astar EVM supports two WASTR contracts for different use cases. **Both are safe 
 **Building a new dApp?**  
 → Use Official Astar WASTR (`0x3779...`)
 
-**Using Arthswap or legacy Astar DeFi protocols?**  
+**Using CometSwap or legacy Astar DeFi protocols?**
 → Use Community WASTR (`0xAeaa...`)
 
 **Need flash loan functionality?**  

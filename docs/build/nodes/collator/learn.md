@@ -34,7 +34,7 @@ The first phase in making PoS was by deploying the Aura pallet. Aura PoA Collato
 **Let’s break down the latest phase:**
 
 - **Collator staking**: collators can now start with securing the network. This will be with a minimum bond of a fixed amount of tokens.
-- **Network inflation**: Astar mainnet has a 10% inflation. This 10% is based on a perfect block production every 12 seconds.
+- **Network inflation**: Astar mainnet has a 5.5% max yearly inflation (Tokenomics 3.0). This is based on a perfect block production every 6 seconds.
 - **Rewards**: a fixed amount will be created at each block and divided between treasury, collators, and dApp staking.
 
 A collator (block producer) is rewarded a fixed amount for each block produced.

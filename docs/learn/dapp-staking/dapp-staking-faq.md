@@ -176,7 +176,7 @@ There you can find your current tier, number of stakers, total earned (total sta
 
 ### Q: How are dApps assigned to tiers?
 
-At the end of each **Build&Earn** Subperiod, dApps are assigned to a tier based on the total value staked on them by users. There are *4 tiers* with a **fixed maximum of 16 slots** distributed across all tiers.
+At the end of each **Build&Earn** Subperiod, dApps are assigned to a tier based on the total value staked on them by users. The protocol uses **4 tier indices**, but only **Tier 2 and Tier 3 are active** and reward-eligible, with a **fixed maximum of 16 slots** distributed between them. Tier 1 and Tier 4 have 0 slots and 0% reward share.
 
 Each tier has entry thresholds defined as **fixed percentages** of total issuance. These percentages remain constant, though the absolute threshold amounts adjust proportionally with changes in total issuance.
 
