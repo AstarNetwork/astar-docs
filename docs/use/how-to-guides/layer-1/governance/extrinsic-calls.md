@@ -559,7 +559,7 @@ The SubSquare path provides a guided interface for submitting treasury staking c
 
 #### 2.4. Annual Voting Period Re-Staking
 
-1. Claim all Staker Rewards — follow [Section II.II.2.1](#21-staker-rewards-1).
+1. Claim all Staker Rewards — follow [Section II.II.2.1](#21-staker-rewards).
 2. Claim all dApp Owner Rewards — follow [Section II.I.1.3](#13-dapp-owner-rewards) using the Polkadot.js script.
 3. Navigate to [SubSquare Community Council → Motions](https://astar.subsquare.io/community-council/motions) and click **+ New Proposal**.
 4. Select **"Community Proxy call"** from the Quick Start options.
