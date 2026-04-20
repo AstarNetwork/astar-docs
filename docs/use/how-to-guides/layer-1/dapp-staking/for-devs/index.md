@@ -47,9 +47,9 @@ You have to claim your rewards to receive them. We recommend that you claim your
 
 **Example (tier+rank rewards):**
 
-- Tier 1 has **5 slots** and **50,000 ASTR** is allocated as a reward for that tier in a given era;
-- At the end of the voting subperiod, only **3 slots** are occupied by dApps in Tier 1;
-- Assume `tier_rank_multipliers` for Tier 1 is **24,000 bips**, meaning **rank 10 earns 2.4× rank 0** in that tier;
+- Tier 2 has **6 slots** and **50,000 ASTR** is allocated as a reward for that tier in a given era;
+- At the end of the voting subperiod, only **3 slots** are occupied by dApps in Tier 2;
+- `tier_rank_multipliers` for Tier 2 is **24,000 bips**, meaning **rank 10 earns 2.4× rank 0** in that tier;
 - If the 3 dApps have ranks **0**, **5**, and **10**, their era rewards are computed deterministically from tier **base (rank 0)** and **per-rank-step** components (see the technical overview formulas);
 - Under-filled tiers can leave part of the tier allocation **unminted** due to the normalization cap (lazy minting).
 

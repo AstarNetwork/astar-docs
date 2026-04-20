@@ -53,7 +53,7 @@ Tokenomics 3.0 note: there are **no user-facing bonus rewards**. Staker rewards 
 - You need to keep a minimum of 10 ASTR or 5 SDN tokens as transferable after staking.
 - **You need to claim to receive your rewards, we recommend claiming your staking rewards once a week.**
 - When unlocking tokens, there is a unlocking period on Astar and on Shiden. The unlocking period lengths can be consulted [here](/docs/learn/dapp-staking/#parameters).
-Please note that this is based on a perfect block production of 12s. In case of any delay, your unlocking period can be a little longer.
+Please note that this is based on a perfect block production of 6s. In case of any delay, your unlocking period can be a little longer.
 
 In case you have any questions, please check the [FAQ page](/docs/learn/dapp-staking/dapp-staking-faq.md) in the Learn section or join our [Discord channel](https://discord.com/invite/astarnetwork).
 
