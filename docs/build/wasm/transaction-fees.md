@@ -18,11 +18,11 @@ Gas = Weight = (refTime, proofSize)
 
 ## Storage Rent
 
-Storage rent, also called as *Automatic Deposit Collection* is a **mechanism** that ensure security of the chain by preventing on-chain storage spamming.
-It prevents malicious actors from spamming the network with low-value transactions and to ensure that callers have a financial stake when storing data on-chain.
+Storage rent, also called as *Automatic Deposit Collection* is a **mechanism** that ensure security of the chain by preventing onchain storage spamming.
+It prevents malicious actors from spamming the network with low-value transactions and to ensure that callers have a financial stake when storing data onchain.
 
-Users will be charged for every byte stored on-chain and the call will transfer this fee from the free balance of the user to the reserved balance of the contract. Note that the contract itself is unable to spend this reserved balance (but it can expose a function that remove on-chain storage and the caller will get the funds) .
-It also incentives users to remove unused data from the chain by getting rent fees back. Any user can get back the rent fees if they remove on-chain data (not specifically the user that was first charged for). It's up to the contract developers and users to understand how and if they can get their storage deposit back.
+Users will be charged for every byte stored onchain and the call will transfer this fee from the free balance of the user to the reserved balance of the contract. Note that the contract itself is unable to spend this reserved balance (but it can expose a function that remove onchain storage and the caller will get the funds) .
+It also incentives users to remove unused data from the chain by getting rent fees back. Any user can get back the rent fees if they remove onchain data (not specifically the user that was first charged for). It's up to the contract developers and users to understand how and if they can get their storage deposit back.
 
 ### Storage Rent Calculation
 
@@ -47,12 +47,12 @@ This is because the first call will create a lot of new entries for the user (mo
 
 If the consecutive calls only modify the existing database entry, the caller is only charged for the extra bytes they add to the entry. In the case they reduce the size of the DB entry, they will get storage rent back. What this means in practice is that user can increase their free balance after interacting with a smart contract!
 
-If a user want to get it back, it should remove on-chain data. It is only possible if the smart-contract expose a function that remove data from chain (like `remove_mapping_entry` in the example below).
+If a user want to get it back, it should remove onchain data. It is only possible if the smart-contract expose a function that remove data from chain (like `remove_mapping_entry` in the example below).
 
 #### For smart-contracts developers
 
-As the only way for users to get back their reserved balance is to remove on-chain data, it is important to make sure that the smart-contract expose functions that allow users to do so.   
-If the contracts don't expose such functions, there will be no way to remove on-chain data used by the contract and the 
+As the only way for users to get back their reserved balance is to remove onchain data, it is important to make sure that the smart-contract expose functions that allow users to do so.   
+If the contracts don't expose such functions, there will be no way to remove onchain data used by the contract and the 
 users will not be able to get back their reserved balance back (as it will be reserved balance on the contract account).
 
 ### StorageDepositLimit
@@ -147,6 +147,6 @@ The caller will get balance repatriated (and not the user that was first charged
 
 #### `flip_bool` & `update_32`
 
-It will not have rent fees because it will not store new data on-chain (only updating value).
+It will not have rent fees because it will not store new data onchain (only updating value).
 
 [weight]: https://docs.substrate.io/reference/how-to-guides/weights/

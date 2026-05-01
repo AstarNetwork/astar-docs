@@ -8,16 +8,20 @@ import Figure from "/src/components/figure"
 
 ## General Info About Migration From V2 to V3
 
-These are major remarks about the migration:
+:::note Historical Reference
+dApp Staking V3 has been live since February 2024. The Tokenomics 3.0 revamp was activated in March 2026. The following is preserved for historical context only.
+:::
 
-- All registered dApps will be migrated, no actions required from the owners.
-- Staker’s _locked_ tokens will be migrated.
-- Stakes **WILL NOT** be migrated, all stakers will need to pick which dApp(s) to stake on again.
-  - This is required to keep in line with the new _periods_ and stake reset.
-  - **It’s important for stakers to stake again their tokens to continue earning rewards**.
-- Once V3 is deployed, V2 will be removed.
+These were the major remarks about the migration:
 
-If any of the terms above are unclear to you (e.g. _staking_ vs _locking_) you can find detailed exaplanation the following sections:
+- All registered dApps were migrated, no actions were required from the owners.
+- Staker’s _locked_ tokens were migrated.
+- Stakes **WERE NOT** migrated; all stakers needed to pick which dApp(s) to stake on again.
+  - This was required to keep in line with the new _periods_ and stake reset.
+  - **It was important for stakers to stake again their tokens to continue earning rewards**.
+- Once V3 was deployed, V2 was removed.
+
+If any of the terms above are unclear to you (e.g. _staking_ vs _locking_) you can find a detailed explanation in the following sections:
 
 - [Tokenomics 2.0](/docs/learn/tokenomics2/)
 - [dApp Staking V3 Technical Overview](/docs/learn/dapp-staking/dapp-staking-protocol/)
@@ -26,13 +30,13 @@ If any of the terms above are unclear to you (e.g. _staking_ vs _locking_) you c
 
 Locking tokens means they become eligible to be used for dApp staking. This is similar (or same) as before in V2. Locked tokens cannot be used to pay transaction fees, cannot be sent to other accounts, etc.
 
-In V2, both _locking_ & _staking_ were a single action (_stake_) but in V3 they are split. Once V3 is deployed, all stakes (TVL) will be migrated to locked state within dApp Staking.
+In V2, both _locking_ & _staking_ were a single action (_stake_) but in V3 they are split. When V3 launched, all stakes (TVL) were migrated to locked state within dApp Staking.
 
-This means if `Alice` was _staking_ on dApp `DAPP_1` 3000 ASTR, after the migration, `Alice` will have 3000 ASTR _locked_. But these 3000 ASTR won’t be _staked_ on anything. Instead, `Alice` will need to decide what to stake on (maybe on dApp `DAPP_1` again) and do the 2nd step - _stake_ action.
+This means if `Alice` was _staking_ on dApp `DAPP_1` 3000 ASTR, after the migration, `Alice` had 3000 ASTR _locked_. But those 3000 ASTR were not _staked_ on anything. Instead, `Alice` needed to decide what to stake on (maybe on dApp `DAPP_1` again) and perform the 2nd step — the _stake_ action.
 
-In case she doesn’t want to stake anymore, she can _unlock_, which is similar to the old _unbond&unstake_ and wait for the unlocking period to pass (roughly 10 days) before these funds can be freely used again (e.g. transfer to someone else).
+In case she didn’t want to stake anymore, she could _unlock_, which is similar to the old _unbond&unstake_, and wait for the unlocking period to pass (roughly 10 days) before those funds could be freely used again (e.g. transfer to someone else).
 
-No stakes are getting carried over, but all TVL is getting carried over.
+No stakes were carried over, but all TVL was carried over.
 
 ## For Stakers
 
@@ -66,7 +70,7 @@ In order to participate, user must have a `MinimumLockedAmount` of native curren
 
 Your tokens remain **locked**, but **not staked** in the following cases:
 
-- During the *migration to dApp Staking V3*, when all staked tokens will be unstaked, they will remain locked. In order to withdraw these tokens, you should initiate the unlocking process (that lasts 10 days).
+- During the *migration to dApp Staking V3*, when all staked tokens were unstaked, they remained locked. In order to withdraw those tokens, you needed to initiate the unlocking process (that lasts 10 days).
 - The same will happen at the *beginning of each period*. As explained in the article, at the beginning of each period all tokens will be unstaked, but they will remain locked. Same as during migration, you will be able to re-stake them, or initiate the unlocking process.
 Please remember that you have to stake during these phases to continue getting rewards.
 
@@ -122,18 +126,20 @@ However, we recommend that you claim all your rewards and stake on a new project
 
 ### Q: What About Unclaimed Rewards from dApp Staking V2?
 
-Once V3 is launched, all of the unclaimed V2 rewards will become inaccessible. Please do your best to claim the rewards yourself, and encourage others to do the same.
+:::note Historical Reference
+dApp Staking V3 has been live since February 2024. The Tokenomics 3.0 revamp was activated in March 2026. The following is preserved for historical context only.
+:::
 
-However, to prevent users from loosing long accumulated rewards, a special state will be introduced into V2: **Decommission Mode** during which it will be possible that someone else can claim other stakers' rewards (and pay fees).
+When V3 launched, all unclaimed V2 rewards became inaccessible. To prevent users from losing long accumulated rewards, a special **Decommission Mode** was introduced into V2, during which it was possible for someone else to claim other stakers’ rewards (and pay fees).
 
 :::note
 
 **Example:**  
-Using the special calls, anyone will be able to claim rewards for anyone else. E.g. `Alice` can claim rewards for `Bob` - this essentially means that `Alice` pays for the transaction fee to claim `Bob's`. Of course, `Bob's` rewards are deposited into his account, not `Alice's`.
+Using the special calls, anyone was able to claim rewards for anyone else. E.g. `Alice` could claim rewards for `Bob` — this meant that `Alice` paid the transaction fee to claim `Bob’s` rewards. `Bob’s` rewards were deposited into his account, not `Alice’s`.
 
 :::
 
-Astar team will ensure that all pending rewards are claimed during the decommissioning. We won’t launch V3 until all unclaimed rewards have been claimed.
+The Astar team ensured that all pending rewards were claimed during decommissioning before V3 launched.
 
 :::info
 Please refer to [this Astar Forum discussion](https://forum.astar.network/t/dapp-staking-migration-from-v2-to-v3/5807) for all the details regarding unclaimed rewards.
@@ -141,11 +147,15 @@ Please refer to [this Astar Forum discussion](https://forum.astar.network/t/dapp
 
 ### Q: What should you do to prepare for dApp Staking V3 migration?
 
-*All you should do to prepare for dApp Staking V3 launch is to claim your rewards.* Nothing else is required from your side.
+:::note Historical Reference
+dApp Staking V3 has been live since February 2024. The Tokenomics 3.0 revamp was activated in March 2026. The following is preserved for historical context only.
+:::
 
-**❗ Staker’s locked tokens will be migrated, but stakes WILL NOT.**
+*All that was required to prepare for dApp Staking V3 launch was to claim your rewards.* Nothing else was required.
 
-As a staker, you will need to pick which dApp(s) to stake on again. **It’s important to do so to continue earning rewards.**
+**❗ Staker’s locked tokens were migrated, but stakes WERE NOT.**
+
+As a staker, you needed to pick which dApp(s) to stake on again. **It was important to do so to continue earning rewards.**
 
 ### Q: I've staked 16 dApps and now I can't add or move tokens and I'm getting an error. What should I do?
 
@@ -192,31 +202,17 @@ In the event that a dApp is unregistered from dApp Staking, all developer unclai
 
 ### Q: We are a dApp participating in dAppStaking V2, What do we need to do?
 
+:::note Historical Reference
+dApp Staking V3 has been live since February 2024. The Tokenomics 3.0 revamp was activated in March 2026. The following is preserved for historical context only.
+:::
+
 Inform your community and stakers that they should be active once dApp Staking V3 goes live and support your project by staking.
 
 ## For Ledger Users
 
 ### Q: I am a Ledger Astar Native App User, what do I need to do?
 
-:::danger
-For Ledger users who use the native account ([Astar Native App](https://support.ledger.com/hc/en-us/articles/10971402968733-Astar-ASTR)), dApp staking V3 will be temporarily unavailable.
-:::
-
-This is due to how Ledger app works & what is currently being developed.
-
-Ledger users will still be able to withdraw funds from dApp staking, they only won’t be able to stake & claim rewards in the new protocol version.
-
-**Why this limitation?**
-Ledger is currently developing a new generic app for all Polkadot/Kusama parachains, and that should be available soon (within months). Once that’s available, Ledger native users will be able to participate in dApp staking V3.
-
-**What can I do right now?**
-If you wish to actively participate in dApp Staking v3 from the start, you should [initiate the unbonding period immediately](https://docs.astar.network/docs/use/dapp-staking/dapp-staking-v2/unbonding) and move your funds to either an Astar EVM Account supported by Ledger (see below), or move funds to a hot wallet.
-
-:::info
-It is possible that by the dApp staking v3 launch Ledger generic app will be available, completely removing this limitation.
-
-Keep an eye out on this page and official announcement channels for more info as it becomes available.
-:::
+If you are using a Ledger device, use the Ledger Polkadot generic app for dApp Staking interactions. The Ledger native Astar app is no longer required for V3.
 
 ### Q: I am a Ledger Astar EVM App User, what do I need to do?
 

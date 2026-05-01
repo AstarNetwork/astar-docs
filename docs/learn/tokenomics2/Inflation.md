@@ -19,7 +19,7 @@ When a new cycle starts, new inflation configuration is calculated according to 
 E.g. if 'yearly' inflation is set to be 7%, and total issuance is 1,000,000 ASTR, then the soft-capped max inflation for that
 cycle will be 70,000 ASTR.
 
-Cycle length is configurable, but in practice it will resemble a 'year' off-chain.
+Cycle length is configurable, but in practice it will resemble a 'year' offchain.
 
  $inflation\_soft\_cap = inflation\_rate * total\_issuance$
 

@@ -42,7 +42,7 @@ interface ChainAsset extends AssetDetails {
   // note that this function requires the chain to implement the Assets pallet
 
     // note: The asset ID will have different meanings depending on the range
-    // 1 ~ 2^32-1 = User-defined assets. Anyone can register this assets on chain.
+    // 1 ~ 2^32-1 = User-defined assets. Anyone can register these assets onchain.
     // 2^32 ~ 2^64-1 = Statemine/Statemint assets map. This is a direct map of all the assets stored in the common-goods state chain.
     // 2^64 ~ 2^128-1 = Ecosystem assets like native assets on another parachain or other valuable tokens.
     // 2^128 ~ 1 = Relaychain native token (DOT or KSM).
@@ -253,6 +253,6 @@ console.log(assetBalance);
 
 Now, you should be able to transfer the asset from the Relay Chain to the parachain, and check to see if it was successful by listing all the assets within the asset pallet that the current account holds.
 
-Please note that the gas fee will be deducted from the amount transferred, so it should be adjusted accordingly, based on the estimated gas fee. Please refer to the [Gas Price API](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/~/changes/aJQFFWQNMjlao1SSjj4a/build/api/gas-price-api) if required, for specific use cases.
+Please note that the gas fee will be deducted from the amount transferred, so it should be adjusted accordingly, based on the estimated gas fee. Please refer to the Gas Price API (<!-- TODO: replace with published link -->) if required, for specific use cases.
 
 You can find an entire project that integrates similar functionality in [this repository](https://github.com/AstarNetwork/astar-xcm-tools).
