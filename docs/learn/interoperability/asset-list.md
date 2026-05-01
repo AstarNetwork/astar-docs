@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## XC20
 
-We can differentiate between managed project's XC20 assets which have been tested by Astar and Shiden Network maintainers and other permissionless XC20 assets created on-chain.
+We can differentiate between managed project's XC20 assets which have been tested by Astar and Shiden Network maintainers and other permissionless XC20 assets created onchain.
 
 Currently, this is a list of managed XC20 assets:
 

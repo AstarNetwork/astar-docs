@@ -2,21 +2,17 @@
 title: Architecture
 ---
 
-import Figure from '/src/components/figure'
-
 # Overview
-Before you get started on your journey towards becoming an Astar network hacker, it will be beneficial to know about what Polkadot and Ethereum are, because Astar Network connects to both, and each have their own set of benefits benefits and limitations.
+Before building on Astar Network, it helps to understand both Polkadot and Ethereum, since Astar Network connects to both.
 
-<Figure src={require('/docs/learn/architecture/img/fig4.jpg').default} />
-
-Some highlights on the Polkadot parachain side are dApp Staking, ink! smart contracts, cross-chain messaging (XCM), and forkless upgradability, and on the Ethereum layer 2 side are the highest levels of EVM equivalence, shared liquidity across layer 2 networks, and access to the largest pool of developers in the blockchain industry that we can tailor our products for, on-demand.
+Some highlights on the Polkadot parachain side are dApp Staking, ink! smart contracts, cross-chain messaging (XCM), and forkless upgradability. Astar Network supports full EVM compatibility, enabling Solidity developers to deploy contracts without modification.
 
 For now, let's go over some basics that apply to all blockchains whether they are sovereign layer 1 networks, or rely on another blockchain such as the Polkadot Relay Chain for shared security and interoperability. 
 
 ## Blockchain Basics
 A blockchain is a decentralized ledger that records information in a sequence of blocks. The information contained in a block is an ordered set of instructions that may or may not result in a change in state.
 
-In a blockchain network, individual computers—called nodes—communicate with each other to form a decentralized peer-to-peer (P2P) network. There is no central authority that controls the network and, typically, each node that participates in block production stores a copy of the blocks that make up the canonical chain.
+In a blockchain network, individual computers, called nodes, communicate with each other to form a decentralized peer-to-peer (P2P) network. There is no central authority that controls the network and, typically, each node that participates in block production stores a copy of the blocks that make up the canonical chain.
 
 In most cases, users interact with a blockchain by submitting a request that might result in a change in state, for example, a request to change the owner of a file or to transfer funds from one account to another. These transactions requests are gossiped to other nodes on the network and assembled into a block by a block author. To ensure the security of the data on the chain and the ongoing progress of the chain, the nodes use some form of consensus to agree on the state of the data in each block and on the order of transactions executed. [Read more...](https://docs.substrate.io/fundamentals/blockchain-basics/)
 

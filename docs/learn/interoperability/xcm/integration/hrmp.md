@@ -70,7 +70,7 @@ Using a **root** call from your parachain, you should send an XCM message to the
    3. **WithdrawAsset**: `{Concrete {0, Here}, Fungible {1000000000000}}`:
       1. 1 DOT or 1 KSM is sufficient to execute this.
       2. You must ensure that your sovereign account on the Relay Chain is sufficiently funded.
-      3. Refer to [XCM Tools](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/~/changes/AhpKoCvdYLwztMP8vCAb/xcm/xcm-integration/xcm-tools) page for help with calculating the sovereign account.
+      3. Refer to the XCM Tools page (link unavailable, to be updated) for help with calculating the sovereign account.
    4. **BuyExecution**: `{Concrete {0, Here}, Fungible {1000000000000}, Unlimited}`
    5. **Transact**: `{Native, 1000000000, <encoded_call_data>}`:
        1. Use the encoded call data you've prepared before.
@@ -106,4 +106,4 @@ We will open channels, register assets and initiate test transfers.
 
 ### Opening an HRMP Channel
 
-After testing on Rococo, we will begin the process of opening the HRMP channel, and if necessary, will also initiate the process adding the XCM asset. Read more about adding XCM assets [here](https://app.gitbook.com/o/-LgGrgOEDyFYjYWIb1DT/s/-M8GVK5H7hOsGnYqg-7q-872737601/xcm/xcm-integration/xcm-asset-registration).
+After testing on Rococo, we will begin the process of opening the HRMP channel, and if necessary, will also initiate the process adding the XCM asset. Read more about adding XCM assets (link unavailable, to be updated).

@@ -23,7 +23,7 @@ This is of particular use for smart contracts, since it allows them to integrate
 
 It's important to understand the difference between sending an XCM instruction sequence and receiving/interpreting it.
 
-Sending an XCM transaction from `Astar` or `Shiden` to a remote chain may be successful on the sender side, but fail to execute on the destination, and the same is true for the opposite scenario. This can happen for multiple reasons - the XCM sequence might be incorrect, the remote chain doesn't know how to inrerpret the provided `call`, or the remote chain doesn't allow remote execution, at all.
+Sending an XCM transaction from `Astar` or `Shiden` to a remote chain may be successful on the sender side, but fail to execute on the destination, and the same is true for the opposite scenario. This can happen for multiple reasons - the XCM sequence might be incorrect, the remote chain doesn't know how to interpret the provided `call`, or the remote chain doesn't allow remote execution, at all.
 
 The developer or user must ensure that the destination chain supports the encoded call and remote transactions, in general, before they initiate the XCM transaction.
 
@@ -169,7 +169,7 @@ Continue reading below to gain a better understanding of how to calculate these 
 
 ### Payment Asset
 
-At the moment, users can only specify the paymet asset via a `H160` address. Even though the payment asset references an asset in the destination chain, the remote asset must have a local derivative. This will be updated and improved in the future so that users can specify asset multilocations directly.
+At the moment, users can only specify the payment asset via a `H160` address. Even though the payment asset references an asset in the destination chain, the remote asset must have a local derivative. This will be updated and improved in the future so that users can specify asset multilocations directly.
 
 In case the user wants to pay using a local currency derivative (wrapped ASTR or SDN) on the destination chain, a specialized H160 address padded with zeroes,`0x0000000000000000000000000000000000000000`, should be used.
 

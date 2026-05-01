@@ -274,7 +274,11 @@ This approach ensures that tier thresholds scale with the token supply while mai
 #### Tier Rewards
 
 Better tiers bring bigger rewards, so dApps are encouraged to compete for higher tiers and attract staker's support.
-dApp reward pool is divided between tiers, e.g. _tier 1_ gets **40%** of the total reward pool.
+dApp reward pool is divided between tiers, e.g. _tier 2_ gets **70%** and _tier 3_ gets **30%** of the total reward pool.
+
+:::note
+On all live networks (Astar, Shiden, Shibuya), the actual reward distribution is [0%, 70%, 30%, 0%]: Tier 1 has 0% reward share and is a structural placeholder.
+:::
 
 Within a tier, rewards are **deterministic** and can depend on the dApp's **rank** (0..10) via the `tier_rank_multipliers` weight model described below. In addition, when a tier is under-filled (fewer dApps than the tier capacity), part of that tier's allocation can remain **unminted** (lazy minting), reducing effective inflation.
 
@@ -296,7 +300,7 @@ the larger Id but this can change in the future.
 
 A **rank (0..10)** is assigned to dApps inside a tier to express how close they are to the next tier threshold. Rank affects dApp rewards **deterministically** via `tier_rank_multipliers` (see **Rank reward** below).
 
-dApps are not only grouped into tiers but they're also ranked inside each tier (except highest tier which doesn't have ranking).
+dApps are not only grouped into tiers but they're also ranked inside each tier. Ranking applies to tiers with active slots. On Astar, Shiden, and Shibuya, the active tiers are Tier 2 and Tier 3. Tier 1 and Tier 4 have 0 slots and are structural placeholders, and they are not part of the active reward structure.
 When a dApp has the minimum stake amount to just enter the tier, its rank will be **0** (zero). As they progress towards the upper tier, their rank will increase.
 If a dApp is halfway to the next tier, its rank is **5** (five). If they are almost at the next tier, their rank is **9** (nine).
 If a dApp reaches the threshold to enter the next tier but there is no empty slot in that tier and the dApp remains in the current tier, they will get the highest rank of **10** (ten).

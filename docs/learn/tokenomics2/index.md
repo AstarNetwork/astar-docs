@@ -3,9 +3,7 @@ sidebar_position: 12
 ---
 # Tokenomics 2.0
 
-Astar Network's tokenomics has been revised to best serve the needs of network participants, from users and builders to enterprise partners.
-
-Tokenomics 2.0 introduce a sustainable token allocation structure and network fees as well as a lower inflation rate.
+Tokenomics 2.0 is Astar Network's economic model governing token emission, reward distribution, and fee handling. It replaced the original model to align inflation more tightly with actual staking participation and network usage.
 
 :::info
 The outline of the phased approach to Tokenomics 2.0 as it progressed:

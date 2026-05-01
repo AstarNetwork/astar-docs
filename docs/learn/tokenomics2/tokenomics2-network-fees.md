@@ -51,7 +51,7 @@ $$
 - $weight\_fee$ - is the fee related to the weight of the transaction.
 - $c$ - fee multiplier; if network utilization is above ideal, `c` factor will increase, forcing users to pay more. And vice-versa, when network congestion is low, fee multiplier will decrease.
 - $length\_fee$ - this is part of the fee related to the transaction length (number of bytes).
-- $rent\_fee$ - deposit fee for storing data on chain. Detailed explanation of rent fee calculation in case of Wasm transactions can be found under the [in the Build section](/docs/build/wasm/transaction-fees#storage-rent).
+- $rent\_fee$ - deposit fee for storing data onchain. Detailed explanation of rent fee calculation in case of Wasm transactions can be found under the [in the Build section](/docs/build/wasm/transaction-fees#storage-rent).
 - $tip$ - extra payment transaction submitter pays to ensure their transaction gets included faster into a block.
 
 Native fees are inherently dynamic using the fee multiplies `c` which is calculated in each block using the following formulas:
@@ -132,8 +132,8 @@ The values for the parameters above are set so that EVM fee and the Native fee a
 
 ## Rent Fee
 
-Executing certain on-chain actions can result in additional storage being created.
-E.g. if an account decides to create an _identity_, this has to be stored on-chain, whoever is running a node needs to store this piece of information somehow.
+Executing certain onchain actions can result in additional storage being created.
+E.g. if an account decides to create an _identity_, this has to be stored onchain, whoever is running a node needs to store this piece of information somehow.
 To prevent _spamming_, such actions usually incur some _rent_ fee which needs to be _deposited_.
 Unlike regular transaction fee, once the storage entry has been removed, the _rent_ fee is also returned to the account.
 

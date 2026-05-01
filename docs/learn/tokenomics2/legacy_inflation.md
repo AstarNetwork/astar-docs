@@ -51,7 +51,7 @@ Each block reward is distributed to a set of beneficiaries.
 ​
 #### Collators
 
-The collator responsible for building the block will receive **collator's** portion of reward. This is the main financial incentive for the collators. Portion is configured as percentage of the block reward on-chain and is constant per block unless manually changed.
+The collator responsible for building the block will receive **collator's** portion of reward. This is the main financial incentive for the collators. Portion is configured as percentage of the block reward onchain and is constant per block unless manually changed.
 
 In addition, it will receive fees paid by the users for transactions that were included in the produced block.
 
@@ -74,7 +74,7 @@ Part of it is dedicated for supporting dApp developers while another part goes t
 
 ### Model Overview
 
-Previous chapters described that inflation per block is fixed - however, the way we distributed this reward for some beneficiaries is dynamic and depends on certain parameters. It's important to emphasize that all of the related parameters of the model are read on-chain - **nothing** is provided off-chain. This makes it secure and easily verifiable.
+Previous chapters described that inflation per block is fixed - however, the way we distributed this reward for some beneficiaries is dynamic and depends on certain parameters. It's important to emphasize that all of the related parameters of the model are read onchain - **nothing** is provided offchain. This makes it secure and easily verifiable.
 
 There are two main things to understand before diving deeper into the model - **TVL** and **configurable block reward parameters**.
 
