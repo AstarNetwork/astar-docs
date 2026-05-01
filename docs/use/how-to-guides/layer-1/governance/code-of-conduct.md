@@ -4,7 +4,7 @@ sidebar_label: Code of Conduct
 title: Governance Code of Conduct
 ---
 
-These is the _Code of Conduct_ for the Astar onchain governance system. It is a set of rules and guidelines that all participants in the governance process should follow. It aims to ensure that the governance process is fair, transparent, and efficient. However, nothing is written in stone, and can be changed in the future.
+This is the _Code of Conduct_ for the Astar onchain governance system. It is a set of rules and guidelines that all participants in the governance process should follow. It aims to ensure that the governance process is fair, transparent, and efficient. However, nothing is written in stone, and can be changed in the future.
 
 | #  | Guidelines                                                                                                                                                                                                 |
 |----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

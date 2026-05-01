@@ -12,7 +12,7 @@ This section provides practical guides for transferring tokens between **Soneium
 - How to bridge tokens from **Ethereum** or other L2s to **Soneium**, and vice versa.
 - Tools and concepts needed to perform secure and efficient cross-chain transfers.
 
-> Whether you're a user or a developer, this guide will help you confidently navigate the Soneium ecosystem with seamless token transfers. Inside, you’ll find clear, practical instructions to support your journey into Soneium.
+This section covers all supported transfer paths: ASTR between Astar and Soneium, assets from Ethereum and other L2s, and returns from Soneium back to the origin chain.
 
 
 ## 3. Learn more

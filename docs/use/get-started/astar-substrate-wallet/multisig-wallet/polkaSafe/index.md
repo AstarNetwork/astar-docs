@@ -32,7 +32,7 @@ Multisig accounts offer several key benefits, particularly in terms of security,
 
 ## Creating a Multisig Account on PolkaSafe
 
-PolkaSafe integrates with Polkadot's multisig solution, offering seamless user experience and robust security features for managing assets in the Polkadot ecosystem. You can use the multisig accounts created on PolkaSafe with the Astar Portal.
+PolkaSafe integrates with Polkadot's multisig solution for managing assets in the Polkadot ecosystem. You can use the multisig accounts created on PolkaSafe with the Astar Portal.
 
 1. Visit [PolkaSafe](https://app.polkasafe.xyz/);
 2. Select  Astar network and click 'Connect Wallet;
@@ -72,7 +72,7 @@ A proxy allows signatories to alter key parameters and setup account backups. Fu
 A proxy can:
 1. **Edit the Threshold:** Alter the number of required signatures for transaction authorization;
 2. **Modify Signatories:** Change the signatories of the multisig account;
-3. **Create Backups:** Establish a backup of the multisig account, facilitating seamless asset transfers. In other words, all assets will be in the proxy account. This means that when you add or remove any signatory, the multisig address will change, but the proxy address will not. Therefore, assets in the proxy account won't be lost.
+3. **Create Backups:** Establish a backup of the multisig account to preserve asset access across configuration changes. In other words, all assets will be in the proxy account. This means that when you add or remove any signatory, the multisig address will change, but the proxy address will not. Therefore, assets in the proxy account won't be lost.
 
 You can add a proxy to your multisig account either during multisig creation or from the account dashboard.
 

@@ -5,7 +5,7 @@ title: Astar Townhall - Offchain Governance
 ---
 import Figure from '/src/components/figure'
 
-[Astar Offchain Governance](https://astargov.com/astar) is powered by Townhall, a platform designed to empower Protocol or DAO communities with governance tools and features. For more information, visit the [Townhall website](https://polkadot.townhallgov.com/).
+[Astar Offchain Governance](https://astargov.com/astar) is powered by Townhall, a platform that provides governance tools and features for Protocol or DAO communities. For more information, visit the [Townhall website](https://polkadot.townhallgov.com/).
 
 Currently, Astar Governance operates offchain, meaning no governance actions occur or are executed on the blockchain directly. Voting power on Astar Townhall is determined by ASTR stakeholders' token balances. ASTR holders can vote using tokens that are either transferable or locked in dApp Staking on Astar Native (Substrate), or transferable on Astar EVM. However, ASTR tokens used in DeFi smart contracts or in dApp staking on Astar EVM do not count towards voting power.
 
@@ -44,7 +44,7 @@ You can refer to one of the proposals on the Astar forum as an example:
 
 1. Log in or register on the [Astar forum](https://forum.astar.network/);
 2. Click on the `+ New topic` to start a new topic;
-3. Enter a clear title, choose the appropriate category (`Astar Network Polkadot`, `Astar Initiatives`, `Astar zkEVM`, `Shiden`, etc.) Make sure it has the `Proposal` tag too;
+3. Enter a clear title, choose the appropriate category (`Astar Network Polkadot`, `Astar Initiatives`, `Shiden`, etc.) Make sure it has the `Proposal` tag too;
 4. Enter your message in the text box and format it according to your preferences;
 5. Review your proposal in the preview box and confirm by clicking on `+ Create topic` .
 
@@ -125,7 +125,7 @@ Voting powers include:
 
 ## Enactment phase
 
-If the proposal has been approved by the Astar community after the end of voting and requires on-chain implementations or actions, inform the Astar Foundation in the Astar channels (Forum, Discord, Telegram). 
+If the proposal has been approved by the Astar community after the end of voting and requires onchain implementations or actions, inform the Astar Foundation in the Astar channels (Forum, Discord, Telegram). 
 
 <Figure src={require('/docs/use/img/astar_townhall_7.png').default } width="60%" /> 
 
