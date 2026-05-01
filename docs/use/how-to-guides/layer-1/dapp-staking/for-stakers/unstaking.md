@@ -30,7 +30,7 @@ If you have tokens staked on a dApp, you can begin the unstaking process from th
 
 2. An **Unstake from [dApp name]** modal will appear. Enter the amount you want to unstake or click **Max** to unstake your full balance.
 3. Choose your preferred **Transaction speed** (Average, Fast, or Super Fast).
-4. Review the summary — it shows how many days your tokens will need to unlock before they become withdrawable.
+4. Review the summary, which shows how many days your tokens will need to unlock before they become withdrawable.
 5. Click **Start unstaking** and sign the transaction.
 
 <Figure src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/unstaking-2.png').default } width="100%" />
@@ -57,7 +57,7 @@ After unstaking, the **Unlocking** panel appears below **My Staking** on the Ass
 
 **What is a Chunk?**
 
-Each unlocking request is recorded as a Chunk — a specific amount of tokens paired with the block at which they become withdrawable.
+Each unlocking request is recorded as a Chunk, a specific amount of tokens paired with the block at which they become withdrawable.
 
 *Example: "1000 ASTR is undergoing the unlocking period and will be available for transfer at block 42,000,000."*
 
@@ -66,7 +66,7 @@ Each unlocking request is recorded as a Chunk — a specific amount of tokens pa
 If you have tokens that are locked but not actively staked, you can unlock them directly from the **My Staking** panel on the [Assets Page](https://portal.astar.network/astar/assets).
 
 1. In the **Locked Amount** row, click the **Unlock** icon (open padlock).
-2. Sign the transaction — all non-staked locked tokens will enter the unlocking period.
+2. Sign the transaction. All non-staked locked tokens will enter the unlocking period.
 3. When the period ends, use the **Unlocking** panel to click **Withdraw** and make them transferable.
 
 :::note

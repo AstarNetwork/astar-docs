@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 
 ## 1. Introduction
 
-Astar onchain Governance is a decentralized mechanism where ASTR token holders can propose, discuss, and vote on important changes and initiatives within the **Astar Collective**. This onchain governance system empowers stakeholders to directly influence key network decisions, including protocol improvements, runtime updates, treasury funding requests, and the management of dApp Staking applications.
+Astar onchain Governance is a decentralized mechanism where ASTR token holders can propose, discuss, and vote on important changes and initiatives within the **Astar Collective**. This onchain governance system lets stakeholders directly influence key network decisions, including protocol improvements, runtime updates, treasury funding requests, and the management of dApp Staking applications.
 
 The governance system ensures that decisions are made collectively and transparently by the community, reflecting the interests of the network's stakeholders. Proposals may cover a wide range of topics that affect the network's development, security, and long-term sustainability. To participate in Astar onchain governance, users have two primary interfaces available: [**Subsquare**](https://astar.subsquare.io/) and the traditional [**Polkadot.js**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/) interface. Subsquare provides a user-friendly interface designed for broader community participation, while Polkadot.js offers a more technical approach for advanced users.
 
@@ -22,7 +22,7 @@ If you want to learn more about Polkadot.js, check out this [**Polkadot Official
 :::
 ## 2. Subsquare for Onchain Governance
 
-[**Subsquare**](https://astar.subsquare.io/) serves as the primary governance platform for Astar Network, providing a comprehensive and user-friendly interface that makes onchain governance participation accessible to all community members regardless of their technical expertise. The platform represents the cornerstone of Astar's democratic decision-making process, offering a sophisticated yet intuitive environment where ASTR token holders can actively shape the network's future.
+[**Subsquare**](https://astar.subsquare.io/) is the primary governance platform for Astar Network. It lets ASTR token holders view proposals, participate in discussions, cast votes, and track governance decisions from submission to execution.
 
 Through **Subsquare**, you can:
 

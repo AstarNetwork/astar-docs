@@ -18,15 +18,15 @@ To qualify for the Astar dApp Staking program, your project must meet one or mor
 
 Your project must be:
 
-- Live and deployed on **Astar Network** — either **Astar Native (WASM)** or **Astar EVM**.
+- Live and deployed on **Astar Network**: **Astar Native (WASM)** or **Astar EVM**.
 - Functioning with an accessible product.
 - Providing clear value to the Astar ecosystem, such as:
   - Integration of the **ASTR token** (utility, payments, staking, etc.)
-  - Driving adoption through tools, use cases, community building, or innovative applications.
+  - Driving adoption through tools, use cases, community building, or new applications.
 
 ### 2. Infrastructure or Tooling Providers
 
-Projects offering **essential infrastructure**, tooling, wallets, or middleware — even without a public-facing dApp — are welcome.
+Projects offering **essential infrastructure**, tooling, wallets, or middleware, even without a public-facing dApp, are welcome.
 
 **Requirements:**
 - Proven track record.
@@ -142,4 +142,4 @@ Once approved:
 
 :::
 
-Being as specific and detailed as possible in your proposal will help comnmunity members to make their decisions, and be sure to answer any questions they may have when discussing your application.
+Being as specific and detailed as possible in your proposal will help community members to make their decisions, and be sure to answer any questions they may have when discussing your application.

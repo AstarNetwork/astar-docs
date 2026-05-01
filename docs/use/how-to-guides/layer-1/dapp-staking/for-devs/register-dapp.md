@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 
 # Astar dApp Staking Application Guide
 
-This guide provides a complete overview of how to apply for **dApp Staking on Astar** — whether your project is deployed **natively on Astar Network** or operates externally (e.g., on **Soneium**, **Ethereum**, **Polkadot**, or other parachains).
+This guide provides a complete overview of how to apply for **dApp Staking on Astar**, whether your project is deployed **natively on Astar Network** or operates externally (e.g., on **Soneium**, **Ethereum**, **Polkadot**, or other parachains).
 
 While all projects must meet baseline technical and governance requirements, **external dApps** must show **measurable contributions** to the Astar ecosystem, including:
 

@@ -33,7 +33,7 @@ Need help setting up your wallet on **Soneium**? Follow this [**wallet guide**](
 
 ### Option 1: Using **Stargate**
 
-[**Stargate**](https://stargate.finance/) is a fully composable cross-chain bridge protocol built on LayerZero that enables native asset transfers between different blockchain networks. It allows seamless transfers of ETH and stablecoins across chains.
+[**Stargate**](https://stargate.finance/) is a fully composable cross-chain bridge protocol built on LayerZero that enables native asset transfers between different blockchain networks. It supports native transfers of ETH and stablecoins across chains.
 
 <Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/ethereum-to-soneium/stargate-x-soneium.jpeg').default} width="100%" />
 
@@ -54,7 +54,7 @@ Need help setting up your wallet on **Soneium**? Follow this [**wallet guide**](
 
 ### Option 2: Using **Rhino.fi**
 
-[**Rhino.fi**](https://app.rhino.fi/) is a powerful cross-rollup bridge that supports many assets and many L2s. It offers a seamless bridging experience with quick and secure transactions.
+[**Rhino.fi**](https://app.rhino.fi/) is a powerful cross-rollup bridge that supports many assets and many L2s. It offers a straightforward bridging experience with quick and secure transactions.
 
 <Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/ethereum-to-soneium/rhino-x-soneium.jpeg').default} width="100%" />
 
@@ -75,7 +75,7 @@ Need help setting up your wallet on **Soneium**? Follow this [**wallet guide**](
 
 ### Option 3: Using **Superbridge**
 
-[**Superbridge**](https://superbridge.app/) is our most recommended option for bridging ETH and Superchain assets into Soneium. It's designed from the ground up for native bridging within the Superchain ecosystem.
+[**Superbridge**](https://superbridge.app/) is the recommended option for bridging ETH and Superchain assets into Soneium. It's designed from the ground up for native bridging within the Superchain ecosystem.
 
 <Figure caption="" src={require('/docs/use/how-to-guides/soneium/transfer-tokens/images/ethereum-to-soneium/superbridge-x-soneium.png').default} width="100%" />
 

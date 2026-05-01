@@ -17,7 +17,7 @@ A: Yes. With the maximum inflation ceiling reduced to 5.5% and the emission deca
 
 ### Q: Why was the maximum inflation ceiling reduced from 7% to 5.5%?
 
-A: The maximum inflation ceiling is the figure from which token emission per block is derived for every allocation in the system. Lowering it from 7% to 5.5% — a 21.4% reduction — reduces total yearly maximum emission from ~603.6M to ~474.2M ASTR, removing **~129.3M ASTR per year** from maximum emission capacity.
+A: The maximum inflation ceiling is the figure from which token emission per block is derived for every allocation in the system. Lowering it from 7% to 5.5% (a 21.4% reduction) reduces total yearly maximum emission from ~603.6M to ~474.2M ASTR, removing **~129.3M ASTR per year** from maximum emission capacity.
 
 | Allocation | Share at 7% | At 7% (ASTR/yr) | Share at 5.5% | At 5.5% (ASTR/yr) | Delta |
 | --- | --- | --- | --- | --- | --- |
@@ -51,7 +51,7 @@ When `r = 4 × 10⁻⁸`, the cumulative emission limit converges to `E₀ / r`,
 
 :::info Decay formula
 
-`E(n) = E₀ × (1 − 4×10⁻⁸)ⁿ` — Total future emissions: `lim C(n) = E₀ / r`
+`E(n) = E₀ × (1 − 4×10⁻⁸)ⁿ` | Total future emissions: `lim C(n) = E₀ / r`
 
 At 50% ideal staking ratio with `E₀ = 90.22 ASTR/block`, this converges to the 10B ASTR ceiling.
 

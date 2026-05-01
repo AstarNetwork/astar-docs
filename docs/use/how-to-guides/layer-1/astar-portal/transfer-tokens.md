@@ -61,7 +61,7 @@ Copy the address;
 
 - Use an Astar Substrate account to send tokens to exchanges that support Astar Network;
 - Use an Astar EVM account to send tokens to exchanges that support Astar EVM;
-- DO NOT attempt to send from EVM to the exchange Substrate deposit address as this might result in the lost of funds.
+- DO NOT attempt to send from EVM to the exchange Substrate deposit address as this might result in the loss of funds.
 
 :::
 
@@ -167,7 +167,7 @@ xcAssets (XCM tokens that are compatible with EVM networks) are non-transferrabl
 
 As a Polkadot parachain, Astar Network enables the transfer of assets between Polkadot and other parachains within its ecosystem. Likewise, assets, including the ASTR token, can be moved from Astar Network to Polkadot and other parachains.
 
-For seamless transfers, we suggest using Astar Portal's cross-chain transfer function.
+For cross-chain transfers, use the Astar Portal's cross-chain transfer function.
 
 Before starting a transfer, there are a few key things you'll need to know.
 
