@@ -55,6 +55,12 @@ Before applying, ensure your project meets the **latest Astar dApp Staking requi
 
 You will need a **native Astar wallet** (not Ledger or EVM-only) with some ASTR for gas fees.
 
+:::tip
+
+Don't have an Astar wallet yet? Follow → [**this guide**](/docs/use/get-started/index.md) to set one up on Astar Network.
+
+:::
+
 **Supported wallets**:
 
 <details>
@@ -244,7 +250,7 @@ Click on **Register Now** and fill in the form with all your project details:
 
 - Name of your dApp or project;
 - Logo (Recommended size 512x512 px);
-- Contract addres *(automatically filled)*;
+- Contract address *(automatically filled)*;
 - Project URL;
 - At least 4 images of your project (Recommended a images with size 16:9 within 1 MB);
 - Builders information (person contributing to the project);

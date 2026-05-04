@@ -53,7 +53,7 @@ Fill in the following fields:
 
 1. **Name** — your project's display name
 2. **Project URL** — a link to your website or product
-3. **Contact address** — pre-filled with your registered smart contract address; do not change this unless instructed
+3. **Contract address** — pre-filled with your registered smart contract address; do not change this unless instructed
 4. **Description** — a full description of your project (supports Markdown; use the **Preview** tab to review)
 5. **Project logo** — upload a logo image
 
@@ -120,7 +120,7 @@ Click **Claim your rewards** and sign the transaction. All pending rewards acros
 
 :::info Reward accrual
 
-dApp rewards are only earned while your project is in an active tier. A project must hold the required staking threshold (0.93% of total issuance for Tier 2, 0.35% for Tier 3) during the Build & Earn period to generate claimable dApp rewards.
+dApp rewards are only earned while your project is in an active tier. A project must hold the required staking threshold (0.93% of total issuance for Tier 2, 0.35% for Tier 3) during the Build&Earn period to generate claimable dApp rewards.
 
 :::
 
