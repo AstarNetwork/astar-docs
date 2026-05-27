@@ -6,7 +6,7 @@ title: Connecting SubWallet to Astar
 
 import Figure from '/src/components/figure'
 
-SubWallet is a comprehensive non-custodial wallet solution for Substrate & Ethereum ecosystems. Built on top of Polkadot.js, SubWallet focuses on improving UX & UI. We envision a crypto wallet as a web3 multiverse gateway through which users can enjoy multi-chain services with utmost ease and absolute security. 
+SubWallet is a non-custodial wallet for Substrate & Ethereum ecosystems, built on top of Polkadot.js.
 
 This guide will show you how to manage your accounts, your tokens, stake your tokens in-app, and connect to the Astar Portal using SubWallet!
 

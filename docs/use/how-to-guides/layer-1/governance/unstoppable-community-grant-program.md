@@ -10,7 +10,7 @@ The ACC Strategic Staking Program (SSP) is the framework through which the Astar
 
 The program operates through two lanes: Lane A for reactive, condition-triggered interventions and Lane B for proactive, performance-based quarterly allocations. All positions are conditional, time-bound, and subject to onchain verification.
 
-The total Community Treasury holds approximately **125M ASTR**. The program caps combined Lane A and Lane B exposure at **80M ASTR** (~64% of treasury), keeping a liquid reserve of ~45.5M ASTR available for non-staking uses and Lane A buffers.
+The program caps combined Lane A and Lane B exposure at **80M ASTR**, keeping a liquid reserve for non-staking uses and Lane A buffers.
 
 ## Lane A: Reactive Staking
 
@@ -90,20 +90,6 @@ Projects that pass Stage 1 are ranked by weighted KPI score as described above. 
 - Lane A always takes precedence over Lane B; Lane B positions are dynamically adjusted if Lane A requires redeployment
 
 All allocations are executed as onchain motions by the ACC using Community Treasury funds. Positions can be tracked on the [Community Treasury account](https://astar.subscan.io/account/YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix).
-
-## First operation: April 2026
-
-The program's inaugural operation deployed **122M ASTR** across five projects:
-
-| Project | Allocation | Rationale |
-|---------|-----------|-----------|
-| Dwellir | 30M ASTR | Core node infrastructure |
-| Aradia | 31M ASTR | NFT marketplace, sustained development |
-| Lucky | 24M ASTR | Wasm presence, active builder |
-| Onchain Bridges | 30M ASTR | Cross-chain infrastructure and Soneium connectivity |
-| Sake Finance | 7M ASTR | Pioneer DeFi deployment on Soneium |
-
-Verified onchain: Community Council Motion #145, Subscan extrinsic `13039421-2`.
 
 ## Relationship to UCG
 
