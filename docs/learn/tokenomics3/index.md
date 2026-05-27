@@ -56,5 +56,5 @@ ASTR is the economic and governance token for Astar Network. Tokenomics 3.0 intr
 
 - Reduced emission ceiling, limiting new supply growth
 - Emission decay converging supply toward a long-term target
-- Concentrated dApp rewards driving competitive staking behavior
-- Governance control over all parameters through onchain referenda
+- Per-era dApp rewards concentrated on a capped active set of 16 dApps
+- Tokenomics parameters governed through onchain referenda

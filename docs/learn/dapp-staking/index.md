@@ -17,7 +17,7 @@ The mechanism is simple: developers earn rewards while building their projects a
 
 ## Benefits of dApp Staking on Astar and Shiden Network
 
-For web3 to flourish, there needs to be a symbiotic relationship between dApp stakers, dApp developers, and dApp users. On Astar and Shiden, dApp staking is the mechanism that enables this mutually beneficial relationship to occur.
+dApp Staking aligns incentives between three groups on Astar and Shiden: dApp developers, stakers, and users.
 
 - **Developer Compensation:** Unlike traditional approaches where dApp developers need to rely on grant programs, token issuance, and fundraising efforts to generate income, dApp staking on Astar/Shiden provides developers with a basic income. As long as a dApp has been nominated, developers can receive a steady stream of rewards.
 
@@ -115,7 +115,7 @@ As an user or a dApp owner, you need to take the following parameters into consi
 
 For the full list of parameters, please check the [dApp staking parameters page](/docs/learn/dapp-staking/protocol-parameters.md) and [Tokenomics 2.0 page](/docs/learn/tokenomics2/Inflation/#parameters).
 
-Tokenomics 3.0 note:
+[Tokenomics 3.0](/docs/learn/tokenomics3/) note:
 - At most **16 dApps are reward-eligible per era** (across tiers).
 - Historical reward data and claim paths may reference up to **500** dApps for backward compatibility.
 

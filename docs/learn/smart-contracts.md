@@ -5,7 +5,7 @@ sidebar_position: 9
 
 ## Overview
 
-Astar Network supports smart contract deployment.  Developers can create and deploy smart contracts on Astar Network using a variety of programming languages, including Solidity, which is compatible with Ethereum smart contracts or ink!, a Rust-based smart contract language for Polkadot ecosystem. This compatibility ensures a seamless transition for developers from other blockchain ecosystems, fostering interoperability and encouraging the adoption of Astar Network. 
+Astar Network supports smart contract deployment in two environments: Solidity contracts running on the EVM, and ink! contracts (Rust-based) running on `pallet-contracts`.
 
 
 Astar Network is a Polkadot parachain. Block production is handled by collators; finality is inherited from the Polkadot Relay Chain's nominated proof-of-stake validators.

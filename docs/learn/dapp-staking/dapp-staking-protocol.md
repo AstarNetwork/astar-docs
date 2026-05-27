@@ -45,7 +45,7 @@ Projects participating in dApp staking are expected to market themselves to (re)
 Stakers must assess whether the project they want to stake on brings value to the ecosystem, and then `vote` for it (or _stake_ on it).
 Staking during the `Voting` subperiod is the normal way to (re)establish stake for the upcoming `Build&Earn` subperiod.
 
-Tokenomics 3.0 note: there are **no user-facing bonus rewards** associated with staking during `Voting`. `Voting` remains a coordination/selection phase, and rewards are only generated for eras in `Build&Earn`.
+[Tokenomics 3.0](/docs/learn/tokenomics3/) note: there are **no user-facing bonus rewards** associated with staking during `Voting`. `Voting` remains a coordination/selection phase, and rewards are only generated for eras in `Build&Earn`.
 
 `Voting` subperiod length is expressed in _standard_ era lengths, even though the entire voting subperiod is treated as a single _voting era_.
 E.g. if `Voting` subperiod lasts for **5 eras**, and each era lasts for **100 blocks**, total length of the `Voting` subperiod will be **500** blocks **BUT** it will consume only a single numeric era:
