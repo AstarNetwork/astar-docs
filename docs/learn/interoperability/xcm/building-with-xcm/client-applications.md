@@ -253,6 +253,6 @@ console.log(assetBalance);
 
 Now, you should be able to transfer the asset from the Relay Chain to the parachain, and check to see if it was successful by listing all the assets within the asset pallet that the current account holds.
 
-Please note that the gas fee will be deducted from the amount transferred, so it should be adjusted accordingly, based on the estimated gas fee. Please refer to the Gas Price API (<!-- TODO: replace with published link -->) if required, for specific use cases.
+Please note that the gas fee will be deducted from the amount transferred, so it should be adjusted accordingly, based on the estimated gas fee.
 
 You can find an entire project that integrates similar functionality in [this repository](https://github.com/AstarNetwork/astar-xcm-tools).

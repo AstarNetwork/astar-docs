@@ -5,7 +5,7 @@ title: Architecture
 # Overview
 Before building on Astar Network, it helps to understand both Polkadot and Ethereum, since Astar Network connects to both.
 
-Some highlights on the Polkadot parachain side are dApp Staking, ink! smart contracts, cross-chain messaging (XCM), and forkless upgradability. Astar Network supports full EVM compatibility, enabling Solidity developers to deploy contracts without modification.
+Some highlights on the Polkadot parachain side are dApp Staking, ink! smart contracts, cross-chain messaging (XCM), and forkless upgradability. Astar Network is EVM-compatible, enabling Solidity developers to deploy contracts without modification.
 
 For now, let's go over some basics that apply to all blockchains whether they are sovereign layer 1 networks, or rely on another blockchain such as the Polkadot Relay Chain for shared security and interoperability. 
 

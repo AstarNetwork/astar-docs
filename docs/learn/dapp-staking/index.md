@@ -5,7 +5,7 @@ title: dApp Staking Overview
 
 ## What is dApp Staking
 
-dApp Staking is Astar’s unique mechanism to financially incentivise developers who build decentralized applications (dApps). By engaging in dApp staking, developers can receive a basic income, which allows them to continue building and enhancing their dApps. Moreover, it allows to build a strong relationship between developers, stakers and users of dApps, where everyone is rewarded.
+dApp Staking is Astar’s mechanism to financially incentivise developers who build decentralized applications (dApps). By engaging in dApp staking, developers can receive a basic income, which allows them to continue building and enhancing their dApps. Moreover, it allows to build a strong relationship between developers, stakers and users of dApps, where everyone is rewarded.
 
 dApp Staking is a mechanism that provides developers with a direct income stream from block inflation proportional to the community stake their dApp attracts.
 
@@ -43,9 +43,9 @@ Please refer to [this section](/docs/use/how-to-guides/layer-1/dapp-staking/for-
 
 For great dApps to be built, developers need to build them. For developers to build great dApps, they need financial incentives.
 
-Ultimately, the most precious human resource in the web3 ecosystem are developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure on public blockchains.
+Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure on public blockchains.
 
-With dApp staking, developers can **earn a basic income** while building dApps on Astar or Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the greater the benefits for the whole ecosystem.
+With dApp staking, developers can **earn a basic income** while building dApps on Astar or Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on the ecosystem, the greater the benefits for all participants.
 
 That is why Astar considers it essential to provide developers with financial motivation and to ensure they are able to build and earn simultaneously, focusing on development without additional hustle.
 

@@ -32,17 +32,13 @@ It replaced Tokenomics 2.0 with three principal changes:
 
 ## Governance
 
-Tokenomics 3.0 was enacted through two separate onchain referenda, both passed with 100% approval:
-
-**Referendum #50** updated inflation parameters: reduced the maximum ceiling to 5.5%, activated emission decay, and reallocated the 13.8% bonus pool into base and adjustable staker rewards.
-
-**Referendum #51** deployed the runtime upgrade implementing the dApp Staking revamp: 16-slot cap, yearly staking cycle, rank-based reward distribution, and fixed percentage tier thresholds.
+Tokenomics 3.0 was activated in March 2026 through two onchain governance referenda. The full records are available on [Astar Subsquare](https://astar.subsquare.io/).
 
 ## Core Components
 
 ### Inflation
 
-ASTR emission follows a decaying curve per block. At each block, a small fraction less is minted than the previous block, causing total supply to converge asymptotically toward approximately 10 billion ASTR. Actual inflation sits at approximately 3% under current staking participation levels, well below the 5.5% ceiling, because the adjustable staker component is only minted proportional to participation.
+ASTR emission follows a decaying curve per block. At each block, a small fraction less is minted than the previous block, causing total supply to converge asymptotically toward approximately 10 billion ASTR. Actual inflation stays below the 5.5% ceiling because the adjustable staker component is only minted proportional to participation.
 
 See [Inflation](/docs/learn/tokenomics3/inflation) for full parameter details and formulas.
 
@@ -56,7 +52,7 @@ See [dApp Staking Parameters](/docs/learn/dapp-staking/protocol-parameters) for 
 
 ### ASTR Token Role
 
-ASTR serves as the economic and governance token for Astar Network. Under Tokenomics 3.0, its value alignment is reinforced by:
+ASTR is the economic and governance token for Astar Network. Tokenomics 3.0 introduced the following structural changes:
 
 - Reduced emission ceiling, limiting new supply growth
 - Emission decay converging supply toward a long-term target

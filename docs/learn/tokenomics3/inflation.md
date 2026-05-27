@@ -47,8 +47,6 @@ $$adjustable\_emission = 63\% \times \min\left(\frac{total\_staked}{total\_issua
 
 If 25% of ASTR is staked (half the ideal rate), 50% of the adjustable pool is minted. The remainder is not minted, keeping actual inflation below the 5.5% ceiling.
 
-Under current staking participation levels, actual ASTR inflation is approximately **3%**.
-
 ## dApp Reward Lazy Minting
 
 When a tier has fewer dApps than its slot allocation, the unused portion of that tier's reward share is not minted. This reduces effective inflation when fewer than 16 dApps qualify for active tiers.
@@ -69,6 +67,6 @@ When a tier has fewer dApps than its slot allocation, the unused portion of that
 
 ## Comparison with Tokenomics 2.0
 
-Tokenomics 2.0 used a 7% maximum inflation ceiling with no emission decay and no long-term supply target. The 13.8% bonus allocation rewarded stakers for participating during the voting subperiod of each cycle, creating timing-dependent behaviour with no direct ecosystem benefit.
+Tokenomics 2.0 used a 7% maximum inflation ceiling with no emission decay and no long-term supply target. The 13.8% bonus allocation rewarded stakers for participating during the voting subperiod of each cycle, creating timing-dependent behaviour that favoured early-cycle stakers.
 
 Tokenomics 3.0 eliminates bonus rewards entirely and redirects the allocation into base and adjustable staker pools, providing more predictable returns that scale with participation rather than timing.

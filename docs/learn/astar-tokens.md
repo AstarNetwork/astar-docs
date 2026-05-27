@@ -30,7 +30,7 @@ Astar Token is the utility token for Astar Network that has 3 primary functions.
 
 ### dApp Staking
 
-Astar Network's core team has developed a unique concept called dApp Staking, which is exclusively available on Astar within the Polkadot ecosystem. The goal of Astar Network is to establish itself as the primary hub for decentralized applications (dApps) on Polkadot. Hence, we prepared incentives for dApp developers who choose to build their smart contracts on Astar Network.
+Astar Network's core team has developed dApp Staking, a staking mechanism native to the Astar ecosystem within Polkadot. The goal of Astar Network is to establish itself as the primary hub for decentralized applications (dApps) on Polkadot. Hence, we prepared incentives for dApp developers who choose to build their smart contracts on Astar Network.
 
 dApp Staking is a simple but effective mechanism. Astar Network allows ASTR holders to show their support for their preferred dApps by staking Astar tokens. Each era, a portion of block inflation is distributed to stakers proportional to their staked amount. Additionally, dApp developers can receive rewards based on the amount staked on their applications. This allows developers to earn a basic income stream while building on Astar Network.
 
