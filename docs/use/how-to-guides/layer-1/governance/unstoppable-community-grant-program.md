@@ -91,6 +91,10 @@ Projects that pass Stage 1 are ranked by weighted KPI score as described above. 
 
 All allocations are executed as onchain motions by the ACC using Community Treasury funds. Positions can be tracked on the [Community Treasury account](https://astar.subscan.io/account/YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix).
 
+:::note Parameter source
+All thresholds and caps on this page (floor triggers, position limits, combined exposure cap, KPI weights) were defined in the [SSP governance proposal](https://forum.astar.network/t/acc-strategic-staking-program/9439) approved by the Community Council. When the ACC updates any parameter, the forum record is the authoritative source.
+:::
+
 ## Relationship to UCG
 
 The UCG program provided early-stage staking subsidies to newly registered dApps. The SSP replaces it with objective, performance-based criteria. Projects that previously received UCG support may apply under the SSP eligibility framework if they meet Stage 1 filters and qualify through KPI scoring.

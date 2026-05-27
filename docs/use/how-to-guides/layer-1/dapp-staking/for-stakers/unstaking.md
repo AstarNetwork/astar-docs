@@ -53,7 +53,7 @@ After unstaking, the **Unlocking** panel appears below **My Staking** on the Ass
 
 - **Available to withdraw**: Tokens whose unlocking period has ended. Click **Withdraw** and sign the transaction to make them transferable.
 - **Re-lock**: Tokens still undergoing the unlocking period. Click **Re-lock** to cancel the unlock and return them to the locked state for use in dApp Staking.
-- **Chunk list**: Each row represents one unlocking request (e.g. *Chunk 1 — 30 SBY*) with a **Remaining days** counter showing how many Eras remain before withdrawal is possible.
+- **Chunk list**: Each row represents one unlocking request (e.g. *Chunk 1 - 30 SBY*) with a **Remaining days** counter showing how many Eras remain before withdrawal is possible.
 
 **What is a Chunk?**
 
