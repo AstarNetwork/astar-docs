@@ -5,7 +5,7 @@ title: Offchain Governance
 ---
 import Figure from '/src/components/figure'
 
-Astar offchain governance is hosted on [OpenSquare](https://astar.subsquare.io/). ASTR holders can create and vote on proposals covering protocol improvements, dApp Staking listings and delistings, treasury funding requests, and other ecosystem decisions.
+Astar offchain governance is hosted on [OpenSquare Voting](https://voting.opensquare.io/space/astar). ASTR holders can create and vote on proposals covering protocol improvements, dApp Staking listings and delistings, treasury funding requests, and other ecosystem decisions.
 
 Voting power is determined by ASTR balance at the time a proposal snapshot is taken, and includes:
 
@@ -18,13 +18,25 @@ ASTR tokens used in DeFi smart contracts or in dApp Staking on Astar EVM do not 
 **Key links:**
 
 - Astar Forum: https://forum.astar.network/
-- OpenSquare: https://astar.subsquare.io/
+- OpenSquare Voting: https://voting.opensquare.io/space/astar
 
 A governance proposal follows three phases:
 
 - **Discussion**: minimum 7 days on the Astar Forum
 - **Voting**: 7 days on OpenSquare
 - **Execution**: a few days to several weeks depending on complexity
+
+## Browse proposals
+
+Visit [voting.opensquare.io/space/astar](https://voting.opensquare.io/space/astar) to see all proposals. Use the tabs to filter by **Active**, **Pending**, or **Closed**.
+
+<Figure caption="OpenSquare Voting — Astar proposal list" src={require('/docs/use/img/offchain-governance-1.png').default} width="100%" />
+
+## Connect your wallet
+
+Click **Connect Wallet** in the top-right corner. Select **Astar** as the network, then choose your wallet (Polkadot.js, SubWallet, Talisman, PokaGate, or Nova).
+
+<Figure caption="Connect Wallet — network and wallet selection" src={require('/docs/use/img/offchain-governance-2.png').default} width="100%" />
 
 ## 1. Start a forum discussion
 
@@ -42,19 +54,50 @@ Examples of past proposals:
 - [Treasury Funding](https://forum.astar.network/t/incentives-grant-from-astar-treasury-bringing-bifrost-vdot-to-astar-for-the-dot-unlock/5262)
 - [Tokenomic update](https://forum.astar.network/t/astar-foundation-burning-proposal-of-5-of-astar-genesis-allocation/6923)
 
-## 2. Open a vote on OpenSquare
+## 2. Create a proposal on OpenSquare
 
-After the 7-day discussion period, create a governance proposal on [OpenSquare](https://astar.subsquare.io/) for a 7-day vote.
+After the 7-day discussion period, create a governance proposal on [OpenSquare](https://voting.opensquare.io/space/astar) for a 7-day vote.
 
-1. Go to [astar.subsquare.io](https://astar.subsquare.io/) and connect your Astar wallet (Native or EVM)
-2. Create a new proposal
-3. Include the link to your forum discussion in the proposal description
-4. Set the voting period to **7 days**
-5. Publish the proposal and share the link in your forum thread
+### 2.1 Open the proposal form
+
+On the Astar space page, click **+ New Proposal** in the top-right area.
+
+<Figure caption="Click '+ New Proposal' to open the creation form" src={require('/docs/use/img/offchain-governance-3.png').default} width="100%" />
+
+### 2.2 Fill in the title and description
+
+Enter a concise **Title** and write the full proposal content in the **Proposal** field. Include a link to your Astar Forum thread so voters can read the full discussion.
+
+<Figure caption="Proposal creation form — title, description, and choices" src={require('/docs/use/img/offchain-governance-4.png').default} width="100%" />
+
+The **Choices** section comes pre-filled with `Yes` and `No`. You can add more options with **+ Add choice** if your proposal requires it.
+
+### 2.3 Select a voting type
+
+In the **System** panel on the right, open the voting type dropdown and choose:
+
+- **Single choice voting** — each voter picks one option (most common)
+- **Multiple choice voting** — voters can select more than one option
+
+<Figure caption="Voting type dropdown — single choice or multiple choice" src={require('/docs/use/img/offchain-governance-5.png').default} width="100%" />
+
+### 2.4 Set the voting period and snapshot
+
+In the **Period** section, set the **Start** and **End** dates for the voting window. The recommended voting period is 7 days.
+
+The **Snapshot** field captures the Astar block number used to calculate voting power. Click the calendar icon to select the snapshot date — the corresponding block number will be filled in automatically.
+
+<Figure caption="Period and snapshot date selection" src={require('/docs/use/img/offchain-governance-6.png').default} width="100%" />
+
+### 2.5 Publish the proposal
+
+Review all fields, then click **Publish**. Your wallet will sign the transaction. Once published, share the OpenSquare link in your forum thread so the community can vote.
+
+<Figure caption="Completed form — click Publish to submit the proposal" src={require('/docs/use/img/offchain-governance-7.png').default} width="100%" />
 
 ## 3. Voting
 
-ASTR holders vote on the proposal through [OpenSquare](https://astar.subsquare.io/) during the 7-day voting period. Voting power is calculated from the snapshot taken at the moment the proposal is published.
+ASTR holders vote on the proposal through [OpenSquare](https://voting.opensquare.io/space/astar) during the 7-day voting period. Voting power is calculated from the snapshot taken at the moment the proposal is published.
 
 ## 4. Enactment
 
