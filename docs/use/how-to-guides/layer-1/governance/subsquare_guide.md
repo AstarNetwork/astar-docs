@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 
 ## 1. Introduction
 
-Astar onchain Governance is a decentralized mechanism where ASTR token holders can propose, discuss, and vote on important changes and initiatives within the **Astar Collective**. This onchain governance system empowers stakeholders to directly influence key network decisions, including protocol improvements, runtime updates, treasury funding requests, and the management of dApp Staking applications.
+Astar onchain Governance is a decentralized mechanism where ASTR token holders can propose, discuss, and vote on important changes and initiatives within the **Astar Collective**. This onchain governance system lets stakeholders directly influence key network decisions, including protocol improvements, runtime updates, treasury funding requests, and the management of dApp Staking applications.
 
 The governance system ensures that decisions are made collectively and transparently by the community, reflecting the interests of the network's stakeholders. Proposals may cover a wide range of topics that affect the network's development, security, and long-term sustainability. To participate in Astar onchain governance, users have two primary interfaces available: [**Subsquare**](https://astar.subsquare.io/) and the traditional [**Polkadot.js**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/) interface. Subsquare provides a user-friendly interface designed for broader community participation, while Polkadot.js offers a more technical approach for advanced users.
 
@@ -22,7 +22,7 @@ If you want to learn more about Polkadot.js, check out this [**Polkadot Official
 :::
 ## 2. Subsquare for Onchain Governance
 
-[**Subsquare**](https://astar.subsquare.io/) serves as the primary governance platform for Astar Network, providing a comprehensive and user-friendly interface that makes onchain governance participation accessible to all community members regardless of their technical expertise. The platform represents the cornerstone of Astar's democratic decision-making process, offering a sophisticated yet intuitive environment where ASTR token holders can actively shape the network's future.
+[**Subsquare**](https://astar.subsquare.io/) is the primary governance platform for Astar Network. It lets ASTR token holders view proposals, participate in discussions, cast votes, and track governance decisions from submission to execution.
 
 Through **Subsquare**, you can:
 
@@ -333,7 +333,7 @@ The Community Council is entrusted with managing key ecosystem functions, includ
 
 * **Community Treasury Management:** Overseeing the allocation of funds to support ecosystem growth.
 * **dApp Staking Oversight:** Evaluating applications, listing and delisting dApps, and setting operational guidelines.
-* **Unstoppable Community Grant (UCG) Program:** Reviewing and approving grant proposals aligned with Astar’s vision.
+* **ACC Strategic Staking Program (SSP):** Managing strategic ASTR staking allocations from the Community Treasury aligned with Astar’s ecosystem goals.
 * **Ecosystem Agent Tips:** Assessing and authorizing agent compensation requests.
 * **Governance Participation:** Acting as stewards of decentralized governance processes.
 
@@ -344,7 +344,7 @@ The Council also holds specific onchain permissions to perform actions such as:
 * Registering/Unregistering dApps in the dApp Staking Protocol
     * Registration requires a 2/3 majority
     * Unregistration requires a 4/5 majority
-* Managing dApp Staking on behalf of the Community Treasury (UCG)
+* Managing dApp Staking on behalf of the Community Treasury (SSP)
     * Requires a 2/3 majority
 * Approving or Rejecting Treasury Spending Proposals
     * Requires a 2/3 majority
@@ -415,9 +415,9 @@ The process to `Reject` a proposal is exactly the same, simply selecting `Reject
 :::
 <Figure caption="Create a Motion - Reject Proposal" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_7.png').default } width="100%" />
 
-### 3.2.2. Staking from the Community Treasury (UCG)
+### 3.2.2. Staking from the Community Treasury (SSP)
 
-One of the main responsibilities of the Community Council is to stake in dApps that are part of the **Unstoppable Community Grant** (UCG) program. Conversely, the Council is also responsible for unstaking from dApps that have completed their cycle or failed to deliver the expected performance.
+One of the main responsibilities of the Community Council is to stake in dApps under the [**ACC Strategic Staking Program**](/docs/use/how-to-guides/layer-1/governance/unstoppable-community-grant-program) (SSP). Conversely, the Council is also responsible for unstaking from dApps that have completed their cycle or failed to deliver the expected performance.
 
 With that in mind, let’s walk through the **Staking/Unstaking** process the Community Council must follow.
 

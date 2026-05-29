@@ -18,7 +18,6 @@ Follow our simple guides to set them up based on your needs, whether you're usin
     - Browser extension wallets:
         - [Polkadot\{.js\}](/docs/use/get-started/astar-substrate-wallet/wallet/polkadot.js/install-polkadot-js.md)
         - [Ledger](/docs/use/get-started/astar-substrate-wallet/wallet/ledger/index.md)
-        - [Metamask Snap](/docs/use/get-started/astar-substrate-wallet/wallet/metamask-snap/index.md)
         - [Subwallet](/docs/use/get-started/astar-substrate-wallet/wallet/subwallet/index.md)
         - [Talisman](/docs/use/get-started/astar-substrate-wallet/wallet/talisman/index.md)
         - [Fearless](/docs/use/get-started/astar-substrate-wallet/wallet/fearless/index.md)

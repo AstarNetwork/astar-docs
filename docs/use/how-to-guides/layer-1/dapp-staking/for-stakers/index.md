@@ -6,7 +6,7 @@ import Figure from "/src/components/figure"
 
 Do you love to stake? Or do you want to support your favorite project on Astar Network or Shiden Network? 
 
-Discover [dApp Staking](/docs/learn/dapp-staking/index.md), a unique mechanism that allows communities to support their favorite teams by staking ASTR or SDN with them. When staking ASTR or SDN on a dApp, users not only support the development of innovative apps but also receive staking rewards from inflation.
+Discover [dApp Staking](/docs/learn/dapp-staking/index.md), the mechanism that lets communities stake ASTR or SDN on their favorite dApps. Stakers earn rewards from inflation while supporting the teams building on the network.
 
 You can educate yourself more by reading the technical documentation about [dApp Staking Technical Overview](/docs/learn/dapp-staking/dapp-staking-protocol.md).
 

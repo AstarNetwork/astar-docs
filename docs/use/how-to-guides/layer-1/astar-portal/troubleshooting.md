@@ -27,7 +27,7 @@ This section will guide you to troubleshoot and solve most issues when connectin
 <Figure src={require('/docs/use/how-to-guides/layer-1/astar-portal/img/polkadot_js_2.png').default } width="60%" />
 
 ## Getting Errors Or Unable To Execute Certain Functions;
-Some of you may be unable to execute certain funtions. Please try these steps.
+Some of you may be unable to execute certain functions. Please try these steps.
 1. Update metadata (if required).
 2. Clear cache, restart browser and connect wallet to the portal again.
 3. On the top right corner, switch to a different endpoint.
@@ -50,11 +50,11 @@ Some of you may be unable to execute certain funtions. Please try these steps.
 
 :::note
 
-In some cases, this problem may be due to a synchronization error between the portal and the chain, so you need to change the portal's RPC endpoint to resolve the issue. See the [next point](/use/how-to-guides/layer-1/astar-portal/troubleshooting.md#no-reponse-received-from-rpc-endpoint-in-60s).
+In some cases, this problem may be due to a synchronization error between the portal and the chain, so you need to change the portal's RPC endpoint to resolve the issue. See the [next point](/use/how-to-guides/layer-1/astar-portal/troubleshooting.md#no-response-received-from-rpc-endpoint-in-60s).
 
 :::
 
-## "No reponse received from RPC endpoint in 60s."
+## "No response received from RPC endpoint in 60s."
 
 <Figure src={require('/docs/use/how-to-guides/layer-1/astar-portal/img/Endpoint_error.png').default } width="35%" /> 
 

@@ -57,7 +57,7 @@ A: The Burndrop Passport is a non-transferable SBT (Soulbound Token) minted on A
 
 ### Q: Does the Passport offer benefits in 2026?
 
-A: The Passport does not carry financial value, however, it may grant benefits to holders in future Astar-related initiatives.
+A: The Passport does not carry financial value. It may grant early access or eligibility in future Astar governance programs, grants, or ecosystem initiatives.
 
 ### Q: Which networks are supported?
 
@@ -115,7 +115,7 @@ A: Through the Astar forum, a feedback form linked from the dashboard, and quest
 
 ### Q: What does "success" look like for the PoC?
 
-A: Success is defined by clarity of insights, quality of feedback, observable user behavior, technical validation and community understanding — and not participation volume.
+A: Success is defined by clarity of insights, quality of feedback, observable user behavior, technical validation and community understanding, not participation volume.
 
 ### Q: Are there legal or tax implications?
 

@@ -6,7 +6,7 @@ title: Astar dApp Staking
 
 ## What is dApp Staking
 
-dApp staking on Astar and Shiden Network introduces a novel approach, empowering individuals to nominate their ASTR or SDN tokens to support dApps building on the network.
+dApp Staking on Astar and Shiden Network lets individuals nominate their ASTR or SDN tokens to support dApps building on the network.
 
 For every block produced on the network, a segment of inflation is specifically allocated to dApp staking. These rewards are then divided between the dApp developers and stakers involved, offering benefits to both developers and stakers.
 

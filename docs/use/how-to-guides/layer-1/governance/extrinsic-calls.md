@@ -138,10 +138,10 @@ An **era** is the base time unit used by the dApp Staking protocol, roughly equi
 
 | Page | Eras Covered |
 |------|-------------|
-| Page 1 | 1 — 16 |
-| Page 2 | 17 — 32 |
-| Page 3 | 33 — 48 |
-| Page N | (N−1)×16+1 — N×16 |
+| Page 1 | 1 to 16 |
+| Page 2 | 17 to 32 |
+| Page 3 | 33 to 48 |
+| Page N | (N−1)×16+1 to N×16 |
 
 Each `dappStaking.claimStakerRewardsFor` call can claim **up to 16 eras**, but only within a single page. If the pending era range **crosses a page boundary**, multiple calls are required even if fewer than 16 eras are pending in total.
 
@@ -191,14 +191,14 @@ Before submitting any treasury operation, verify the current claim status using 
 2. Locate the `staked.era` field, this is the last era for which rewards were claimed for that account/contract pair.
 3. If `currentEra > staked.era`, there are unclaimed rewards pending.
 
-<Figure caption="Cheching last claimed era" src={require('/docs/use/img/extrinsic-calls/acc-extrinsic-calls-1.png').default } width="100%" />
+<Figure caption="Checking last claimed era" src={require('/docs/use/img/extrinsic-calls/acc-extrinsic-calls-1.png').default } width="100%" />
 
 **Step C: Confirm after claiming:**
 
 1. Re-check `stakerInfo(account, contract)` to confirm `staked.era` has been updated to the current era.
 2. On [Astar Subscan](https://astar.subscan.io/), review the extrinsic events and look for a `StakerRewardsClaimed` event confirming the eras covered.
 
-<Figure caption="Cheching after claimed eras" src={require('/docs/use/img/extrinsic-calls/acc-extrinsic-calls-4.png').default } width="100%" />
+<Figure caption="Checking after claimed eras" src={require('/docs/use/img/extrinsic-calls/acc-extrinsic-calls-4.png').default } width="100%" />
 
 :::tip Recommended Workflow Before Any Treasury Operation
 
@@ -301,7 +301,7 @@ The script outputs:
 
 :::tip Adjusting the Era Scan Range
 
-By default, the script scans the last **50 eras** (~50 days). You can increase `PAST_ERAS` to cover a longer period — for example, setting it to **100** will scan the last 100 eras (~100 days).
+By default, the script scans the last **50 eras** (~50 days). You can increase `PAST_ERAS` to cover a longer period, for example setting it to **100** will scan the last 100 eras (~100 days).
 
 :::
 
@@ -559,8 +559,8 @@ The SubSquare path provides a guided interface for submitting treasury staking c
 
 #### 2.4. Annual Voting Period Re-Staking
 
-1. Claim all Staker Rewards — follow [Section II.II.2.1](#21-staker-rewards).
-2. Claim all dApp Owner Rewards — follow [Section II.I.1.3](#13-dapp-owner-rewards) using the Polkadot.js script.
+1. Claim all Staker Rewards, follow [Section II.II.2.1](#21-staker-rewards).
+2. Claim all dApp Owner Rewards, follow [Section II.I.1.3](#13-dapp-owner-rewards) using the Polkadot.js script.
 3. Navigate to [SubSquare Community Council → Motions](https://astar.subsquare.io/community-council/motions) and click **+ New Proposal**.
 4. Select **"Community Proxy call"** from the Quick Start options.
 5. Set the **threshold** to 2/3 of the current council size.

@@ -5,13 +5,11 @@ position: 2
 
 Welcome to the **User Guides and Tutorials** section.
 
-Here, you'll find comprehensive guides to help you effortlessly navigate and utilize both Astar Layer 1 and Astar Layer 2 functionalities.
+Here you'll find step-by-step guides for using Astar Network and Soneium.
 
-**[Astar Layer 1](/docs/use/how-to-guides/layer-1/index.md)**: Discover how to effectively use the Astar Portal, manage ASTR and XCM transfers, and participate in dApp Staking. Our step-by-step guides will help you get started and maximize Astar's Layer 1 features.
+**[Astar Layer 1](/docs/use/how-to-guides/layer-1/index.md)**: Use the Astar Portal, manage ASTR and XCM transfers, and participate in dApp Staking.
 
-**[Soneium](/docs/use/how-to-guides/soneium/index.md)**: Unleash the power of Soneium. Our guides cover network setup, asset bridging, and dApp usage. Whether you're a beginner or an expert, these resources will help you seamlessly navigate on Soneium.
-
-Dive into the guides to enhance your Astar experience and fully leverage the platform's robust capabilities.
+**[Soneium](/docs/use/how-to-guides/soneium/index.md)**: Bridge assets, set up your wallet, and interact with dApps on Soneium.
 
 ### Pages of interest:
 

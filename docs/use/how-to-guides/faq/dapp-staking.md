@@ -21,7 +21,7 @@ A: With 72 projects previously sharing the reward pool, allocations were spread 
 
 A: Projects must first be approved to join the dApp Staking program through governance, either via a referendum or an Astar Community Council (ACC) motion. Once approved and listed, projects must secure the minimum staking threshold through community staking to enter an active reward tier and begin earning dApp rewards.
 
-The thresholds are 30 million ASTR for Tier 3 and 80 million ASTR for Tier 2.
+Tier thresholds are defined as fixed percentages of total ASTR issuance: **0.93% of total issuance for Tier 2** and **0.35% of total issuance for Tier 3**. Based on total issuance at the time of the revamp (~8.6B ASTR), these correspond to approximately **~80M ASTR** and **~30M ASTR** respectively. The absolute amounts adjust automatically as total issuance changes.
 
 ### Q: Who reviews projects for continued eligibility?
 
@@ -31,11 +31,11 @@ The staking mechanism also enforces eligibility automatically. Projects that fal
 
 ### Q: What happens if a project loses enough staking support to fall below the minimum threshold?
 
-A: If a project's total staked ASTR falls below the required tier threshold — 30M for Tier 3 or 80M for Tier 2 — it stops receiving dApp rewards until staking support recovers.
+A: If a project's total staked ASTR falls below the required tier threshold (0.35% of total issuance, ~30M ASTR, for Tier 3 or 0.93%, ~80M ASTR, for Tier 2) it stops receiving dApp rewards until staking support recovers.
 
 Stakers who have staked on that project continue to earn staker rewards unaffected. Any reduction in rewards applies to the project allocation, not to individual stakers.
 
-### Q: If my project does not reach the minimum staking threshold (30M ASTR), will I still earn rewards as a staker?
+### Q: If my project does not reach the minimum staking threshold (~30M ASTR for Tier 3), will I still earn rewards as a staker?
 
 A: Yes. Staker rewards are not contingent on whether the project qualifies for a tier. Your returns are based on your own staked ASTR relative to total staked supply.
 
@@ -47,13 +47,13 @@ A: No. The 16-slot limit applies only to dApp rewards. Staker rewards are calcul
 
 ### Q: What are the two active tiers and how are they structured?
 
-A: Tier 2 requires 80 million ASTR staked and receives the larger share of the dApp reward pool. Tier 3 requires 30 million ASTR staked and receives a smaller but still meaningful allocation.
+A: Tier 2 requires 0.93% of total ASTR issuance staked (~80M ASTR) and receives 70% of the dApp reward pool across 6 slots. Tier 3 requires 0.35% of total ASTR issuance staked (~30M ASTR) and receives 30% across 10 slots. The absolute ASTR amounts adjust automatically as total issuance changes.
 
 Only these two tiers are active and distribute dApp rewards. The previous four-tier structure has been consolidated to reduce complexity and improve transparency.
 
 :::info
 
-Tier 1 is retained in the backend for operational purposes but is not part of the community-facing reward structure.
+Tier 1 and Tier 4 are structural placeholders in the protocol with 0 slots and 0% reward share. They are not part of the active reward structure.
 
 :::
 
@@ -107,7 +107,7 @@ The removal applies only to new reward accrual after the revamp activation date.
 
 ### Q: Now that bonus rewards have been removed, how many moveStake actions do I have per year?
 
-A: The previous *2 safe moves per cycle* rule existed solely to protect bonus rewards — exceeding the limit would forfeit your bonus. Since bonus rewards have been removed, that cap no longer applies. Stakers can now use **moveStake as many times as they want** throughout the year without any penalty.
+A: The previous *2 safe moves per cycle* rule existed solely to protect bonus rewards, as exceeding the limit would forfeit your bonus. Since bonus rewards have been removed, that cap no longer applies. Stakers can now use **moveStake as many times as they want** throughout the year without any penalty.
 
 The only remaining consideration is practical: each **moveStake** during **Build & Earn** triggers an unstake → stake sequence, so the moved amount earns no staking rewards for that specific era. Moves during the **Voting** subperiod carry no such cost, since no staking rewards are generated during Voting regardless.
 
@@ -121,7 +121,7 @@ The standard next-era activation rule still applies, meaning moved stake becomes
 
 A: The yearly cycle consists of a 1-day voting period followed by a 364-day Build & Earn period.
 
-At the start of each new cycle, stakers must restake their tokens — stakes do not carry over automatically from the previous year. Stakers can restake at any point during the cycle, either during the voting period or at any time during the Build & Earn period.
+At the start of each new cycle, stakers must restake their tokens, as stakes do not carry over automatically from the previous year. Stakers can restake at any point during the cycle, either during the voting period or at any time during the Build & Earn period.
 
 Once staked, rewards are earned continuously for the remainder of the cycle without needing to act at specific intervals. Rewards are claimable on an ongoing basis and the cycle resets annually.
 
@@ -147,7 +147,7 @@ If you use a liquid staking product such as Bifrost or Astake, check with your p
 
 A: The 16 eligible projects were not newly selected. They are the projects that remained after the Astar Community Council (ACC) conducted a large-scale cleanup of the previous 72-project roster. Following months of continuous monitoring, 56 projects were delisted, reducing the pool to those that could credibly meet the standards required under the limited-slot model.
 
-The criteria applied during that review — as defined in the dApp Staking Code of Conduct and the updated Entry Requirements and Removal Criteria — targeted projects that demonstrated one or more of the following over an extended period:
+The criteria applied during that review, as defined in the dApp Staking Code of Conduct and the updated Entry Requirements and Removal Criteria, targeted projects that demonstrated one or more of the following over an extended period:
 
 - Prolonged inactivity or no visible development progress
 - No measurable onchain contribution or ecosystem impact
@@ -163,7 +163,7 @@ Projects that remain in the roster continue to be monitored by the ACC. Further 
 
 A: Yes. Falling below the threshold suspends dApp reward eligibility for that era but does not remove the project from the protocol registry.
 
-If community staking later exceeds the required threshold (30M ASTR for Tier 3, 80M ASTR for Tier 2), the project automatically resumes earning dApp rewards from the following era. No additional governance action is required.
+If community staking later exceeds the required threshold (0.35% of total issuance, ~30M ASTR for Tier 3; 0.93%, ~80M ASTR for Tier 2), the project automatically resumes earning dApp rewards from the following era. No additional governance action is required.
 
 This design keeps the active reward set meritocratic and responsive to ongoing community support rather than permanently locked by an initial selection.
 

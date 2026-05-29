@@ -12,14 +12,14 @@ In this tutorial, you'll learn how to manipulate proxy accounts using the [Polka
 
 ### Overview
 
-Pallet Proxy enables accounts to grant specific permissions to other accounts, empowering them to make calls on their behalf, thereby safeguarding the security of the underlying accounts.
+Pallet Proxy enables accounts to grant specific permissions to other accounts, allowing them to make calls on their behalf while keeping the underlying account secure.
 On this page, you will find a detailed overview of the various proxy types, extrinsics, general definitions, and features associated with the proxy pallet. Additionally, there are tutorials available to help you understand and utilize the proxy functionality effectively.
 
 ### Proxy Types
 ---
-1. **Any** - This proxy type allow delegate account to make any call that are supported by proxy pallet. This is highest level of priveledge so should always use that with caution.
+1. **Any** - This proxy type allow delegate account to make any call that are supported by proxy pallet. This is the highest level of privilege and should always be used with caution.
 
-2. **NonTransfer** - This proxy type allow delegate account to make any call supported by proxy pallet expect for the asset transfer funtionalities. This can come handy when you want to keep your funds secure in cold storage and want to delegate all the other functionalities to a proxy account.
+2. **NonTransfer** - This proxy type allows the delegate account to make any call supported by the proxy pallet except for asset transfer functionalities. This can come handy when you want to keep your funds secure in cold storage and want to delegate all the other functionalities to a proxy account.
 To see complete list of functionality, checkout the source code in Astar repo.
 
 3. **Balances** - This proxy type gives control of handling accounts and balances to the delegate account. Complete list of calls can be found [here](https://docs.rs/pallet-balances/latest/pallet_balances/pallet/enum.Call.html).
@@ -71,7 +71,7 @@ The proxy pallet provides the following extrinsics (functions):
 
 ### Why Proxy Deposits ?
 ---
-To create proxies within the network, it is necessary to provide deposits in the native currency (like ASTR or SDN). The deposit is required because adding a proxy requires some storage space on-chain, which must be replicated across every peer in the network. Due to the costly nature of this, these functions could open up the network to a Denial-of-Service attack.
+To create proxies within the network, it is necessary to provide deposits in the native currency (like ASTR or SDN). The deposit is required because adding a proxy requires some storage space onchain, which must be replicated across every peer in the network. Due to the costly nature of this, these functions could open up the network to a Denial-of-Service attack.
 
 When creating a proxy, a bond is deducted from your free balance and transferred to your reserved balance. This mechanism helps maintain the integrity and stability of the proxy system while providing assurance that the bond can be returned when the proxy is deactivated or removed.
     

@@ -4,7 +4,7 @@ import Figure from "/src/components/figure"
 
 ## Overview
 
-Discover [dApp Staking](/docs/learn/dapp-staking/index.md), a unique mechanism that allows communities to support their favorite teams by staking ASTR or SDN with them. When staking ASTR or SDN on a dApp, users not only support the development of innovative apps but also receive staking rewards from inflation.
+Discover [dApp Staking](/docs/learn/dapp-staking/index.md), the mechanism that lets communities stake ASTR or SDN on their favorite dApps. Stakers earn rewards from inflation while supporting the teams building on the network.
 
 You can educate yourself more by reading the technical documentation about [dApp Staking Technical Overview](/docs/learn/dapp-staking/dapp-staking-protocol.md).
 
@@ -58,6 +58,29 @@ You have to claim your rewards to receive them. We recommend that you claim your
 If there are more dApps eligible for a tier than there is capacity, the dApps with the higher score get the advantage. dApps which missed out on a higher tier get priority for entry into the next lower tier (if there still is any).
 
 In the case a dApp doesn't satisfy the entry threshold for any tier, even though there is still capacity, the dApp will simply be left out of tiers and won't earn any reward.
+
+### Minimum Stake Required to Earn Rewards
+
+Only **two tiers are active** and distribute dApp rewards. Tier 1 and Tier 4 are structural placeholders with 0 slots and 0% reward share.
+
+Tier entry thresholds are **fixed percentages of total token issuance** and adjust automatically as issuance changes. The formula is:
+
+```
+threshold = required_percentage × total_issuance
+```
+
+The table below shows the two active tiers, their thresholds, and the approximate token amounts per network at the time of writing.
+
+| Tier | Threshold | Slots | Reward share | Astar | Shiden | Shibuya |
+|------|-----------|-------|--------------|-------|--------|---------|
+| Tier 2 | 0.93% of total issuance | 6 | 70% of dApp pool | ~80M ASTR | ~651K SDN | ~2.6M SBY |
+| Tier 3 | 0.35% of total issuance | 10 | 30% of dApp pool | ~30M ASTR | ~245K SDN | ~977K SBY |
+
+> Approximate amounts are based on total issuance at the time of writing: ~8.6B ASTR · ~70M SDN · ~279M SBY. Live thresholds are always visible on the [Astar Portal](https://portal.astar.network).
+
+**The minimum stake to earn any dApp rewards is Tier 3.** If the total stake on your dApp falls below the Tier 3 threshold, your dApp is excluded from the active set for that era and earns no dApp rewards until staking support recovers. Stakers on your dApp continue to earn staker rewards unaffected.
+
+To maximize rewards, aim for **Tier 2**: it carries 6 of the 16 available slots and captures 70% of the total dApp reward pool per era.
 
 :::warning
 

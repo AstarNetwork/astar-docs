@@ -6,21 +6,17 @@ title: Interact with Soneium
 
 ## 1. What is Soneium
 
-[**Soneium**](https://soneium.org/) is a public blockchain ecosystem developed by [**Sony Block Solutions Labs**](https://sonyblocksolutionslabs.com/en/), designed to transcend internet boundaries and bring innovative ideas to the mainstream.
+[**Soneium**](https://soneium.org/) is a general-purpose Ethereum Layer 2 blockchain co-founded by [**Sony Group**](https://www.sony.com/en/) and [**Startale**](https://startale.com/en). It is built on the OP Stack and targets consumer applications across entertainment, gaming, finance, and NFTs.
 
-As a joint venture between [**Sony Group**](https://www.sony.com/en/) and [**Startale**](https://startale.com/en), Soneium leverages Sony's global reach and Startale's blockchain expertise to create a versatile and scalable platform that empowers developers, creators, and communities across various sectors.
-
-This Superchain aims to evoke emotion, empower creativity, and make blockchain more accessible and practical for global users, offering innovative applications in entertainment, gaming, finance, and beyond. Soneium simplifies blockchain experiences, driving mass adoption and unlocking unlimited potential for users worldwide.
-
-For a more detailed explanation of [**Soneium**](https://soneium.org/), refer to the comprehensive presentation in the [**Soneium Documentation**](https://docs.soneium.org/).
+For full technical documentation, refer to the [**Soneium Documentation**](https://docs.soneium.org/).
 
 ## 2. Relationship with Astar Network
 
-With the launch of the Soneium mainnet, Astar Network extends its reach into the Ethereum Layer-2 space. This integration empowers **ASTR holders** to actively engage with a growing ecosystem of decentralized applications (**dApps**).
+Soneium and Astar Network are connected through ASTR and shared infrastructure. ASTR holders can bridge tokens to Soneium and use them across the dApps deployed there.
 
-- **Astar Network**: A Polkadot-native chain now entering Ethereum via Soneium.
-- **Soneium**: A Layer-2 blockchain by Sony Block Solutions Labs, focused on user-friendly Web3 apps.
-- **ASTR Token**: Astar’s native token now powers key utilities across Soneium, from DeFi to gaming.
+- **Astar Network**: A Polkadot parachain providing governance, security, and economic alignment for the Astar Collective.
+- **Soneium**: An Ethereum Layer 2 blockchain co-founded by Sony Group and Startale, where ASTR serves as a key asset.
+- **ASTR Token**: Usable across Soneium for DeFi, gaming, NFTs, and staking.
 
 ## 3. ASTR utility on Soneium
 
@@ -46,7 +42,7 @@ Bridging ASTR to Soneium unlocks:
 - NFT marketplaces
 - Token-based rewards
 
-> ASTR is the gateway to Soneium’s thriving Layer-2 economy.
+> ASTR unlocks access to dApps, DeFi protocols, and NFT platforms deployed on Soneium.
 
 ## 5. Learn more
 
