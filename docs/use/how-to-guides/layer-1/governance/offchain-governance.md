@@ -30,13 +30,13 @@ A governance proposal follows three phases:
 
 Visit [voting.opensquare.io/space/astar](https://voting.opensquare.io/space/astar) to see all proposals. Use the tabs to filter by **Active**, **Pending**, or **Closed**.
 
-<Figure caption="OpenSquare Voting — Astar proposal list" src={require('/docs/use/img/offchain-governance-1.png').default} width="100%" />
+<Figure caption="OpenSquare Voting: Astar proposal list" src={require('/docs/use/img/offchain-governance-1.png').default} width="100%" />
 
 ## Connect your wallet
 
-Click **Connect Wallet** in the top-right corner. Select **Astar** as the network, then choose your wallet (Polkadot.js, SubWallet, Talisman, PokaGate, or Nova).
+Click **Connect Wallet** in the top-right corner. Select **Astar** as the network, then choose your wallet (Polkadot.js, SubWallet, Talisman, PolkaGate, or Nova).
 
-<Figure caption="Connect Wallet — network and wallet selection" src={require('/docs/use/img/offchain-governance-2.png').default} width="100%" />
+<Figure caption="Connect Wallet: network and wallet selection" src={require('/docs/use/img/offchain-governance-2.png').default} width="100%" />
 
 ## 1. Start a forum discussion
 
@@ -68,7 +68,7 @@ On the Astar space page, click **+ New Proposal** in the top-right area.
 
 Enter a concise **Title** and write the full proposal content in the **Proposal** field. Include a link to your Astar Forum thread so voters can read the full discussion.
 
-<Figure caption="Proposal creation form — title, description, and choices" src={require('/docs/use/img/offchain-governance-4.png').default} width="100%" />
+<Figure caption="Proposal creation form: title, description, and choices" src={require('/docs/use/img/offchain-governance-4.png').default} width="100%" />
 
 The **Choices** section comes pre-filled with `Yes` and `No`. You can add more options with **+ Add choice** if your proposal requires it.
 
@@ -76,16 +76,16 @@ The **Choices** section comes pre-filled with `Yes` and `No`. You can add more o
 
 In the **System** panel on the right, open the voting type dropdown and choose:
 
-- **Single choice voting** — each voter picks one option (most common)
-- **Multiple choice voting** — voters can select more than one option
+- **Single choice voting**: each voter picks one option (most common)
+- **Multiple choice voting**: voters can select more than one option
 
-<Figure caption="Voting type dropdown — single choice or multiple choice" src={require('/docs/use/img/offchain-governance-5.png').default} width="100%" />
+<Figure caption="Voting type dropdown: single choice or multiple choice" src={require('/docs/use/img/offchain-governance-5.png').default} width="100%" />
 
 ### 2.4 Set the voting period and snapshot
 
 In the **Period** section, set the **Start** and **End** dates for the voting window. The recommended voting period is 7 days.
 
-The **Snapshot** field captures the Astar block number used to calculate voting power. Click the calendar icon to select the snapshot date — the corresponding block number will be filled in automatically.
+The **Snapshot** field captures the Astar block number used to calculate voting power. Click the calendar icon to select the snapshot date; the corresponding block number will be filled in automatically.
 
 <Figure caption="Period and snapshot date selection" src={require('/docs/use/img/offchain-governance-6.png').default} width="100%" />
 
@@ -93,7 +93,7 @@ The **Snapshot** field captures the Astar block number used to calculate voting 
 
 Review all fields, then click **Publish**. Your wallet will sign the transaction. Once published, share the OpenSquare link in your forum thread so the community can vote.
 
-<Figure caption="Completed form — click Publish to submit the proposal" src={require('/docs/use/img/offchain-governance-7.png').default} width="100%" />
+<Figure caption="Completed form: click Publish to submit the proposal" src={require('/docs/use/img/offchain-governance-7.png').default} width="100%" />
 
 ## 3. Voting
 
