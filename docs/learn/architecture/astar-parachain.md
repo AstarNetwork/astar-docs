@@ -6,9 +6,9 @@ sidebar_position: 1
 # Overview
 If you are already building on Polkadot you will not need to go over the sections covering Substrate and how to create a Runtime, but it will be helpful for you to understand the environment, terminology and how to leverage Polkadot's highly interoperable environment.
 
-Polkadot is a multi-chain environment which enables specialized blockchains (called Parachains) to communicate with each other in a secure, trustless environment.
+Polkadot is a multi-chain environment which enables specialized blockchains (called Parachains) to communicate with each other in a secure, permissionless environment.
 
-Astar is a parachain connected to the Polkadot Relay chain, specialized for:
+Astar Network is a parachain connected to the Polkadot Relay chain, specialized for:
 * Executing all types of smart contracts.
 * Providing a hybrid EVM + Wasm environment with interoperability.
 * Incentivizing ecosystem innovation and providing basic income for dApp developers.
@@ -52,7 +52,7 @@ Parachains construct and propose blocks to validators on the Relay Chain, where 
 Based on Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
 However, the majority of parachains today are built using [Substrate](https://substrate.io/) because Substrate-based chains are easy to integrate into Polkadot or Kusama to become a parachain. Essentially, Substrate is the SDK which can be used to build parachains and Polkadot is the means of securing the chains and allowing them to communicate with each other.
 
-Astar Network is built with Substrate and inherints many Substrate features, such as Accounts.
+Astar Network is built with Substrate and inherits many Substrate features, such as Accounts.
 
 At a high level, a Substrate node provides a layered environment with two main elements:
 1. An outer node that handles network activity such as peer discovery, managing transaction requests, reaching consensus with peers, and responding to RPC calls.

@@ -10,7 +10,7 @@ Astar & Shiden runtimes are based on Substrate, and both networks incorporate `p
 
 To avoid unnecessary complexity, and writing boilerplate code, the most appropriate method of building will involve the use of an eDSL specifically targeting `pallet-contracts`, such as [ink!] (based on Rust), or [ask!] (based on AssemblyScript), or possibly others as the ecosystem grows.
 
-After compilation, a Wasm blob can then be deployed and stored on-chain.
+After compilation, a Wasm blob can then be deployed and stored onchain.
 
 ### Execution Engine
 
@@ -18,17 +18,17 @@ Pallet-contracts uses [wasmi](https://github.com/paritytech/wasmi) as a Wasm int
 
 ### Two-step Deployment of Contracts
 
-The contract code (Wasm blob), and contract address and storage are decoupled from one another other, so require two steps to deploy a new contract on-chain:
+The contract code (Wasm blob), and contract address and storage are decoupled from one another other, so require two steps to deploy a new contract onchain:
 
-1. First, upload the Wasm contract on-chain (every contract Wasm code has a `code_hash` as an identifier).
+1. First, upload the Wasm contract onchain (every contract Wasm code has a `code_hash` as an identifier).
 2. Second, instantiate the contract - it will create an address and storage for that contract.
 3. Anyone can instantiate a contract based on its `code_hash`.
 
 There are several benefits of decoupling the contract code from the address/storage:
 
-- To save space on-chain. Since a contract can have several constructors and instantiations, a redeployment will create a new instance based on the same underlying code. Think about standardized tokens, like [PSP22][PSP22] & [PSP34][PSP34], that will have one `code_hash` & `blob` living on-chain, and as many instantiations as are needed, rather than having to upload code with each new instantiation (for example, on Ethereum).
+- To save space onchain. Since a contract can have several constructors and instantiations, a redeployment will create a new instance based on the same underlying code. Think about standardized tokens, like [PSP22][PSP22] & [PSP34][PSP34], that will have one `code_hash` & `blob` living onchain, and as many instantiations as are needed, rather than having to upload code with each new instantiation (for example, on Ethereum).
 - To instantiate a new contract using code within an existing smart contract (see the delegator example), `code_hash` is all that is needed.
-- Some standard contracts such as ([PSP22][PSP22] and [PSP34][PSP34]) will only be uploaded on-chain once, preventing users from having to pay gas costs for uploading new code.
+- Some standard contracts such as ([PSP22][PSP22] and [PSP34][PSP34]) will only be uploaded onchain once, preventing users from having to pay gas costs for uploading new code.
 - Update contract code for an address: replace the contract code at the specified address with new code (see [set_code_hash][set_code_hash]). Storage and balances will be preserved.
 
 ### For More Information About `pallet-contracts`

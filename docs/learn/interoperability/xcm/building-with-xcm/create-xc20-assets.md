@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-XC20 assets, created by the [Moonbeam](https://moonbeam.network/blog/introducing-xc-20s-the-new-standard-for-cross-chain-tokens-on-dotsama/) team, maintains compatibility between the EVM and Substrate framework that powers Polkadot, via precompiles — a set of built-in smart contracts made to look like ERC20s. Calling functions on an XC20 will invoke underlying Substrate functionality, which may be instructions for transferring tokens to another chain, or to send them to another local address. This compatibility layer connects the world of EVM and smart contracts to advanced Substrate-based interoperability scenarios.
+XC20 assets, created by the [Moonbeam](https://moonbeam.network/blog/introducing-xc-20s-the-new-standard-for-cross-chain-tokens-on-dotsama/) team, maintains compatibility between the EVM and Substrate framework that powers Polkadot, via precompiles, a set of built-in smart contracts made to look like ERC20s. Calling functions on an XC20 will invoke underlying Substrate functionality, which may be instructions for transferring tokens to another chain, or to send them to another local address. This compatibility layer connects the world of EVM and smart contracts to advanced Substrate-based interoperability scenarios.
 
 ## Create an XC20 Asset
 

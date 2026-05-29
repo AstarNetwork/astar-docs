@@ -3,6 +3,8 @@ sidebar_position: 1
 title: Overview
 ---
 
+Astar Network uses onchain governance to manage protocol parameters, treasury allocation, and dApp Staking eligibility. Decisions are made by ASTR token holders through referenda, supported by elected councils and a technical committee.
+
 ## Status
 
 The solution is live on both **Shibuya** and **Astar** networks.
@@ -21,7 +23,7 @@ The **Main Council** and the **Technical Committee** will be used the same as in
 
 A novelty will be the **Community Council** which will manage certain actions related to the _community treasury_. This council will be able to approve or reject community treasury spending requests, and will also be able to select which dApps to stake on using the community treasury funds. Additionally, they will have the privilege to fast track dApp registration into the dApp staking system.
 
-Community treasury is an independent treasury account (no ties to main on-chain treasury) which gets primarily funded through the dApp staking rewards. The community council must manage the treasury wisely to maintain profitability while also supporting projects and ambassadors.
+Community treasury is an independent treasury account (no ties to main onchain treasury) which gets primarily funded through the dApp staking rewards. The community council must manage the treasury wisely to maintain profitability while also supporting projects and ambassadors.
 
 Conviction voting is also utilized, essentially being the same as covered in the official Polkadot network Gov v1 docs, with the only difference being in parameters.
 
@@ -36,7 +38,7 @@ Users can steer the direction of the network while earning rewards.
 
 To avoid duplicating the [official Polkadot Gov v1 documentation](https://wiki.polkadot.network/docs/learn/learn-governance), here is a quick overview of the governance system in `Astar`.
 
-* Before a proposal can be made, a _preimage_ of the call must be submitted on-chain. This is essentially the proposal logic the submitter wishes to execute (e.g., upgrade the runtime, transfer funds).
+* Before a proposal can be made, a _preimage_ of the call must be submitted onchain. This is essentially the proposal logic the submitter wishes to execute (e.g., upgrade the runtime, transfer funds).
 
 * Public proposals can be made by any native token holder, and can be endorsed by other token holders. More than one proposal can exist at the same time.
 * External proposals can be made by the `Main Council`. Only one external proposal can exist at a time.
@@ -45,7 +47,7 @@ To avoid duplicating the [official Polkadot Gov v1 documentation](https://wiki.p
   * In case no eligible proposal exists for the given round's track preference, the other track will be used instead if a proposal exists.
 
 * Once a proposal is upgraded into a referendum, the token holders can vote on it during the `Voting Period`. In order for the referendum to pass, a certain quorum must be achieved before the `Voting Period` ends.
-* If the referendum passes, the proposal will be executed on-chain after the `Enactment Period` has passed. This is a _delay execution_ mechanism, allowing the token holders to prepare for the changes.
+* If the referendum passes, the proposal will be executed onchain after the `Enactment Period` has passed. This is a _delay execution_ mechanism, allowing the token holders to prepare for the changes.
 * Conviction voting allows the token holder to amplify their vote by _locking_ their tokens for a certain period of time. The longer the lock period, the more _weight_ the vote has. E.g. voting with **1000 tokens** with conviction factor **3** will be equivalent to voting with **3000 tokens** but the tokens will be locked for a greater period of time compared to voting with conviction factor **1**.
 
 * In case the voter's vote corresponds to the _winning_ side, their tokens will be _locked_ for a certain period of time. Otherwise the tokens will be _unlocked_ immediately. Tokens never leave the voter's account, they just cannot be transferred or used to e.g. pay transaction fees.
@@ -135,7 +137,7 @@ These parameters are related to `pallet-democracy` functionality, which is the _
 The `Launch Period` is the time window during which public proposals are endorsed by the token holders or external proposals are made by the `Main Council`.
 Depending on the _round_, either the most endorsed public proposal or the external proposal will be upgraded into a referendum.
 The `Voting Period` is the time window during which the token holders can vote on the referendum.
-In case the referendum passes (quorum achieved during the `Voting Period`), the `Enactment Period` is the _delay_ before the proposal is actually executed on-chain.
+In case the referendum passes (quorum achieved during the `Voting Period`), the `Enactment Period` is the _delay_ before the proposal is actually executed onchain.
 
 The `Technical Committee` can decide to fast-track external proposals (e.g. in case of an emergency situation). The regular _fast-track_ approach has a limit on the minimum voting period, while the _instant fast-track_ approach allows the committee to set the voting period to an arbitrarily short duration.
 
@@ -221,7 +223,7 @@ Motions have a duration (sort of a voting period), and if they do not get the re
 In case the quorum is reached, the motion is considered _passed_.
 
 A collective can have 0 or more members, up to a predefined limit.
-To check the current number of members, it is best to refer to the on-chain data, e.g. the `polkadot-js app` or the dedicated governance UI.
+To check the current number of members, it is best to refer to the onchain data, e.g. the `polkadot-js app` or the dedicated governance UI.
 
 | Parameter Name                          | Shibuya                  | Astar                    |
 | --------------------------------------- | ------------------------ | ------------------------ |

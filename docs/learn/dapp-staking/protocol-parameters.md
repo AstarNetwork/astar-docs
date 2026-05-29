@@ -23,8 +23,8 @@ The larger this parameter is, the higher the deviation from the max inflation ra
 
 Tokenomics 3.0 introduces a tighter active bound for reward processing:
 
-- **Active rewarded dApps (per era): 16** — at most 16 dApps are reward-eligible per era across tiers.
-- **Legacy compatibility bound: 500** — historical reward-era structures and claim paths may reference up to 500 dApps for backward compatibility.
+- **Active rewarded dApps (per era): 16.** At most 16 dApps are reward-eligible per era across tiers.
+- **Legacy compatibility bound: 500.** Historical reward-era structures and claim paths may reference up to 500 dApps for backward compatibility.
 
 This separation exists so the protocol can keep compatibility with older stored reward structures while enforcing a much smaller active set going forward.
 
@@ -102,7 +102,7 @@ Tier thresholds are defined as **fixed percentages** of the total issuance. As t
 | Reward Distribution                                | [0%, 70%, 30%, 0%]            | [0%, 70%, 30%, 0%]          | [0%, 70%, 30%, 0%]                 |
 | Slot Portions                                      | [0%, 37.5%, 62.5%, 0%]        | [0%, 37.5%, 62.5%, 0%]      | [0%, 37.5%, 62.5%, 0%]             |
 | Tier Rank Multipliers (bips; rank10 vs rank0)      | [0, 24_000, 46_700, 0]        | [0, 24_000, 46_700, 0]      | [0, 24_000, 46_700, 0]             |
-| Tier 1 Threshold (% of total issuance)             | 2.32%                         | 2.32%                       | 2.32%                              |
+| Tier 1 Threshold (% of total issuance)             | 2.32% (inactive, 0 slots)    | 2.32% (inactive, 0 slots)  | 2.32% (inactive, 0 slots)         |
 | Tier 2 Threshold (% of total issuance)             | 0.93%                         | 0.93%                       | 0.93%                              |
 | Tier 3 Threshold (% of total issuance)             | 0.35%                         | 0.35%                       | 0.35%                              |
 | Tier 4 Threshold (% of total issuance)             | 0% (unreachable)              | 0% (unreachable)            | 0% (unreachable)                   |

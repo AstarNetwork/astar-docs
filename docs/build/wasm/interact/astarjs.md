@@ -56,7 +56,7 @@ main();
 
 ### Initialise ContractPromise Class
 
-The `ContractPromise` interface allows us to interact with a deployed contract. In the previous Blueprint example this instance was created via `createContract`. In general use, we can also create an instance via `new`, i.e. when we are attaching to an existing contract on-chain:
+The `ContractPromise` interface allows us to interact with a deployed contract. In the previous Blueprint example this instance was created via `createContract`. In general use, we can also create an instance via `new`, i.e. when we are attaching to an existing contract onchain:
 
 ```js
 import { Abi, ContractPromise } from "@polkadot/api-contract";

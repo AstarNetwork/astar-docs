@@ -3,23 +3,21 @@ sidebar_position: 1
 title: dApp Staking Overview
 ---
 
-*At Astar, we're driven by the mission to transform the internet into a freely owned space by the people, where everyone has inviolable control over their data and assets. This commitment to a user-governed internet lies at the heart of the Web3 vision that inspires us.*
-
-dApp Staking is a crucial accelerator in realizing the Web3 vision, as it lays the foundation for the development of exceptional dApps for users and fuels the drive towards making Web3 accessible to all.
-
 ## What is dApp Staking
 
-dApp Staking is Astar’s unique mechanism to financially incentivise developers who build decentralized applications (dApps). By engaging in dApp staking, developers can receive a basic income, which allows them to continue building and enhancing their dApps. Moreover, it allows to build a strong relationship between developers, stakers and users of dApps, where everyone is rewarded.
+dApp Staking is Astar’s mechanism to financially incentivise developers who build decentralized applications (dApps). By engaging in dApp staking, developers can receive a basic income, which allows them to continue building and enhancing their dApps. Moreover, it allows to build a strong relationship between developers, stakers and users of dApps, where everyone is rewarded.
 
-dApp staking on the Astar/Shiden Network operates similarly to staking on validators. However, in new paradigm, individuals known as dApp stakers have the ability to stake their Astar or Shiden tokens on specific dApps they wish to support.
+dApp Staking is a mechanism that provides developers with a direct income stream from block inflation proportional to the community stake their dApp attracts.
+
+dApp staking on the Astar/Shiden Network operates similarly to staking on validators. In dApp Staking, individuals known as dApp stakers can stake their ASTR or SDN tokens on specific dApps they want to support.
 
 At every block on the network, a portion of the inflation is allocated to dApp staking. This reward is then distributed between the operators (developers) of the dApps and the stakers.
 
-The mechanism is simple: developers earn rewards while building their great projects and attracting supporters, while stakers earn by backing their favorite dApps.
+The mechanism is simple: developers earn rewards while building their projects and attracting supporters, while stakers earn by backing their favorite dApps.
 
 ## Benefits of dApp Staking on Astar and Shiden Network
 
-For Web3 to flourish, there needs to be a symbiotic relationship between dApp stakers, dApp developers, and dApp users. On Astar and Shiden, dApp staking is the mechanism that enables this mutually beneficial relationship to occur.
+dApp Staking aligns incentives between three groups on Astar and Shiden: dApp developers, stakers, and users.
 
 - **Developer Compensation:** Unlike traditional approaches where dApp developers need to rely on grant programs, token issuance, and fundraising efforts to generate income, dApp staking on Astar/Shiden provides developers with a basic income. As long as a dApp has been nominated, developers can receive a steady stream of rewards.
 
@@ -45,9 +43,9 @@ Please refer to [this section](/docs/use/how-to-guides/layer-1/dapp-staking/for-
 
 For great dApps to be built, developers need to build them. For developers to build great dApps, they need financial incentives.
 
-Ultimately, the most precious human resource in the Web3 ecosystem are developers. Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure on public blockchains.
+Before dApp staking, there were little to no financial incentives for developers to make dApps or to build infrastructure on public blockchains.
 
-With dApp staking, developers can **earn a basic income** while building dApps on Astar or Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on our ecosystem, the greater the benefits for the whole ecosystem.
+With dApp staking, developers can **earn a basic income** while building dApps on Astar or Shiden. Having financial incentives entices more developers to build and improve their dApps. The more developers build on the ecosystem, the greater the benefits for all participants.
 
 That is why Astar considers it essential to provide developers with financial motivation and to ensure they are able to build and earn simultaneously, focusing on development without additional hustle.
 
@@ -61,9 +59,7 @@ Please refer to [this section](/docs/use/how-to-guides/layer-1/dapp-staking/for-
 
 dApp staking plays an essential role in improving the quality of the ecosystem, as it facilitates the growth and improvement of dApps. This gives developers the opportunity to generate revenue while building high-quality dApps.
 
-The presence of more high-quality dApps not only attracts and retains more users, but also initiates a network effect. This phenomenon encourages ecosystem expansion and increases the intrinsic value of the network in the long term.
-
-In short, the importance of DApp staking lies in its contribution to the ongoing improvement and greater utility of the ecosystem. The multiplication of high-quality dApps, combined with a growing number of users, results in a network effect that increases the overall value of the ecosystem in the long term.
+The presence of more high-quality dApps not only attracts and retains more users, but also initiates a network effect that increases the number of active users, transactions, and staking rewards distributed per era.
 
 ### Understand the terminology and parameters of dApp Staking
 
@@ -119,7 +115,7 @@ As an user or a dApp owner, you need to take the following parameters into consi
 
 For the full list of parameters, please check the [dApp staking parameters page](/docs/learn/dapp-staking/protocol-parameters.md) and [Tokenomics 2.0 page](/docs/learn/tokenomics2/Inflation/#parameters).
 
-Tokenomics 3.0 note:
+[Tokenomics 3.0](/docs/learn/tokenomics3/) note:
 - At most **16 dApps are reward-eligible per era** (across tiers).
 - Historical reward data and claim paths may reference up to **500** dApps for backward compatibility.
 

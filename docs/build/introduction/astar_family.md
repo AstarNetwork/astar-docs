@@ -26,26 +26,17 @@ The Shibuya native token symbol is SBY.
 
 To obtain test tokens from the faucet, please visit the Astar Portal and connect to Shibuya. If for any reason the faucet is empty, please contact the Astar team on Discord.
 
-### zKyoto (Sepolia) (Deprecated)
-
-zKyoto was connected to the Ethereum Sepolia testnet and Polygon AggLayer. Testing ground for dApps deployed on the Astar zkEVM. This testnet has now been transitioned to [Soneium Minato](https://docs.soneium.org/).
-
 ## Mainnets
 
-Astar Collective, with the ASTR token, supports three mainnets:
+Astar Collective, with the ASTR token, supports two mainnets:
 
-1. Astar Network (Parachain) 
-2. Astar zkEVM (soon to be deprecated)
-3. Soneium
+1. Astar Network (Parachain)
+2. Soneium
 
 ### Astar Network (Parachain)
 
 Astar parachain is connected to Polkadot Relay chain supporting WASM & EVM smart contract deployments.
 The Astar native token symbol is ASTR.
 
-### Astar zkEVM (Deprecated)
-
-Astar zkEVM was an Ethereum Layer 2 network, powered by Polygon CDK. Technically referred to as Validium, combining zk rollup technology with modular data availability. Next phase for Astar zkEVM is the transition to [Soneium](https://docs.soneium.org/).
-
 ### Soneium
-Soneium is a next-generation blockchain ecosystem designed to invoke emotion and empower creativity. It was founded by Sony Group Corporation, a global technology leader, and Startale, a Web3 innovator. Soneium stands as a versatile, general-purpose blockchain ready to serve diverse needs across all verticals and support users globally. Astar and it's token ASTR will play a crucial role in the ecosystem as driven asset.
+Soneium is a general-purpose Layer 2 blockchain co-founded by Sony Group Corporation and Startale. ASTR serves as a key asset within the Soneium ecosystem.

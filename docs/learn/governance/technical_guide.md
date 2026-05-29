@@ -85,7 +85,7 @@ The _pallet-collective-proxy_ is a special pallet that allows calls to be made o
 * `Democracy->removeVote` - removes the vote from the referendum, releasing the funds if no locks are applicable anymore
 * `Democracy->unlock` - remove the expired **ASTR** locks
 
-* `Treasury->proposeSpend` - proposes the spending of the main on-chain treasury funds (requires a deposit)
+* `Treasury->proposeSpend` - proposes the spending of the main onchain treasury funds (requires a deposit)
 * `CommunityTreasury->proposeSpend` - proposes the spending of the community treasury funds (requires a deposit)
 
 ### Emergency Situations
@@ -165,7 +165,7 @@ This is the definition of the call that we’d like to see become a referendum, 
 
 For this particular example, the preimage hash is: `0xfb7f2d6ab9c04e75969988166cf09365eb9c8d698345dc9853a31618d9802fb9` and length of the preimage is `55 bytes`.
 
-Click on the `Submit preimage`, and now the call has been stored on-chain. As such, it can be referred to from the `Democracy` pallet which we’ll cover in the following chapters. Once the call has been executed, it can be observed under the stored preimages.
+Click on the `Submit preimage`, and now the call has been stored onchain. As such, it can be referred to from the `Democracy` pallet which we’ll cover in the following chapters. Once the call has been executed, it can be observed under the stored preimages.
 
 <Figure caption="Governance Preimage - 3" src={require('/docs/learn/governance/img/01_Preimage/03_governance_preimage.png').default } width="100%" />
 
@@ -232,7 +232,7 @@ After the vote has been cast, the UI will update number of votes, turnout, etc.
 User can also observe two timers:
 
 * `remaining` - how long until the voting period ends
-* `activate` - how long until the call is enacted on-chain, in case it passes
+* `activate` - how long until the call is enacted onchain, in case it passes
 
 <Figure caption="Public proposal - 8" src={require('/docs/learn/governance/img/02_Public_proposal/09_public_proposal.png').default } width="100%" />
 
@@ -296,7 +296,7 @@ However, successful proposal can be observed in the `Network`'s tab block explor
 
 #### External Proposal With Simple Majority Voting Scheme
 
-The first step is to repeat the step of creating an preimage. Before the external proposal can be registered, preimage of the call hash (in other words, the call itself) needs to be stored on chain.
+The first step is to repeat the step of creating an preimage. Before the external proposal can be registered, preimage of the call hash (in other words, the call itself) needs to be stored onchain.
 
 Then, user should select `Governance -> Council` in the polkadot-js apps.
 
@@ -384,9 +384,9 @@ Now make sure to vote `aye` with at least 4 distinct `Council` members, and `clo
 
 <Figure caption="Referendum Emergency Cancel - 4" src={require('/docs/learn/governance/img/08_Council_emergency_cancel/04_emergency_cancel.png').default } width="100%" />
 
-#### Approve/Reject On-chain Treasury Spending Proposal
+#### Approve/Reject Onchain Treasury Spending Proposal
 
-First step is to make an on-chain treasury spending proposal as described in one of the _token holder_ chapters.
+First step is to make an onchain treasury spending proposal as described in one of the _token holder_ chapters.
 This is the treasury spending proposal for this example:
 
 <Figure caption="Main Council Treasury - 1" src={require('/docs/learn/governance/img/09_Council_treasury_approval/01_council_treasury_approval.png').default } width="100%" />
@@ -651,7 +651,7 @@ Once the call is closed with approval, we can observe that dApp staking actions 
 
 For the first step, user should follow the guide for creating a community treasury spending proposal described in the _token holder_ guide.
 
-Once the proposal has been created, community council can either approve it or reject it. For the sake of this example, we will reject it so it differs from the on-chain treasury spending proposal approval example.
+Once the proposal has been created, community council can either approve it or reject it. For the sake of this example, we will reject it so it differs from the onchain treasury spending proposal approval example.
 
 Example of the community treasury spending proposal. Note that this is done on the `communityTreasury` pallet.
 

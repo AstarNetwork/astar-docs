@@ -27,11 +27,10 @@ To obtain test tokens from the faucet, please visit the Astar Portal and connect
 
 ## Mainnets
 
-Astar Collective, with the ASTR token, supports three mainnets:
+Astar Collective, with the ASTR token, supports two mainnets:
 
-1. Astar Network (Parachain) 
-2. Astar zkEVM (deprecated)
-3. Soneium
+1. Astar Network (Parachain)
+2. Soneium
 
 ### Astar Network (Parachain)
 
@@ -39,4 +38,4 @@ Astar parachain is connected to Polkadot Relay chain supporting WASM & EVM smart
 The Astar native token symbol is ASTR.
 
 ### Soneium
-Soneium is a next-generation blockchain ecosystem designed to invoke emotion and empower creativity. It was founded by Sony Group Corporation, a global technology leader, and Startale, a Web3 innovator. Soneium stands as a versatile, general-purpose blockchain ready to serve diverse needs across all verticals and support users globally. Astar and it's token ASTR will play a crucial role in the ecosystem as driven asset.
+Soneium is a general-purpose Layer 2 blockchain co-founded by Sony Group Corporation and Startale. ASTR serves as a key asset within the Soneium ecosystem.

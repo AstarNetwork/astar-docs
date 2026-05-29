@@ -65,7 +65,7 @@ The proxy pallet provides the following extrinsics (functions):
 
 **Why Proxy Deposits ?**
 ---
-To create proxies within the network, it is necessary to provide deposits in the native currency (like ASTR or SDN). The deposit is required because adding a proxy requires some storage space on-chain, which must be replicated across every peer in the network. Due to the costly nature of this, these functions could open up the network to a Denial-of-Service attack.
+To create proxies within the network, it is necessary to provide deposits in the native currency (like ASTR or SDN). The deposit is required because adding a proxy requires some storage space onchain, which must be replicated across every peer in the network. Due to the costly nature of this, these functions could open up the network to a Denial-of-Service attack.
 
 When creating a proxy, a bond is deducted from your free balance and transferred to your reserved balance. This mechanism helps maintain the integrity and stability of the proxy system while providing assurance that the bond can be returned when the proxy is deactivated or removed.
     

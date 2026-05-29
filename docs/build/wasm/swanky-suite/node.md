@@ -95,7 +95,7 @@ To print errors and contract debug output to the console log, supply `-lerror,ru
 ./target/release/swanky-node -lerror,runtime::contracts=debug
 ```
 
-Important: Debug output is only printed for RPC calls or off-chain tests ‒ not for transactions.
+Important: Debug output is only printed for RPC calls or offchain tests ‒ not for transactions.
 
 See the ink! [FAQ](https://ink.substrate.io/faq/#how-do-i-print-something-to-the-console-from-the-runtime) for more details: How do I print something to the console from the runtime?.
 

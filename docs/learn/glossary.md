@@ -30,7 +30,7 @@ sidebar_position: 5
 
  ### Data Availability
 
-Often abbreviated to DA, Data Availability refers to a component of modular blockchains that handles off-chain storage of ephemeral-type data that is referenced rarely, though for which availability needs to be guaranteed for historical reference and security purposes. Data Availability systems are highly specialized to provide resilient data storage for sovereign rollups and layer 1 networks. 
+Often abbreviated to DA, Data Availability refers to a component of modular blockchains that handles offchain storage of ephemeral-type data that is referenced rarely, though for which availability needs to be guaranteed for historical reference and security purposes. Data Availability systems are highly specialized to provide resilient data storage for sovereign rollups and layer 1 networks. 
 
  ### EVM
  Short for Ethereum Virtual Machine.  A software environment that executes smart contracts on the Ethereum compatible blockchain networks.
@@ -60,7 +60,7 @@ Often abbreviated to DA, Data Availability refers to a component of modular bloc
  Short for "main network": the fully functional production chain that runs its own network.
 
  ### Modular Blockchain
-A concept of layer 2 scaling. Modular blockchain systems move two or more of the four key blockchain functions off-chain to highly specialized workers dedicated solely to providing specific blockchain functions such as transaction execution or data storage.
+A concept of layer 2 scaling. Modular blockchain systems move two or more of the four key blockchain functions offchain to highly specialized workers dedicated solely to providing specific blockchain functions such as transaction execution or data storage.
 
  ### Monolithic Blockchain
  Like an all-in-one printer/fax/scanner/copier machine, all blockchains are tasked with providing multiple functions: Consensus, Execution, Data Storage, and Settlement, which can be imagined as a vertical, monolithic stack.
@@ -69,7 +69,7 @@ A concept of layer 2 scaling. Modular blockchain systems move two or more of the
  A device connected to a blockchain network that stores a copy of the blockchain ledger and participates in validating transactions and maintaining the network's security and integrity.
 
  ### Optimiums
- A concept related to layer 2 scaling. Optimiums combine an off-chain execution environment based on Optimistic rollups with a Data Availability layer, effectively moving three of the four key blockchain functions off-chain, freeing up the need for expensive resources on layer 1, leaving it to perform final settlement, only.
+ A concept related to layer 2 scaling. Optimiums combine an offchain execution environment based on Optimistic rollups with a Data Availability layer, effectively moving three of the four key blockchain functions offchain, freeing up the need for expensive resources on layer 1, leaving it to perform final settlement, only.
 
  ### Pallet
  A Substrate runtime module.
@@ -84,7 +84,7 @@ A concept of layer 2 scaling. Modular blockchain systems move two or more of the
  A node that relays messages between different chains in Polkadot.
 
  ### Rollup
- A layer 2 scaling solution that moves the smart contract execution environment either to cryptographically (zero-knowledge-based) or optimistically secured off-chain networks with independent means of consensus. Rollups bundle multiple transactions into one to increase throughput and reduce fees on the underlying layer 1 network.
+ A layer 2 scaling solution that moves the smart contract execution environment either to cryptographically (zero-knowledge-based) or optimistically secured offchain networks with independent means of consensus. Rollups bundle multiple transactions into one to increase throughput and reduce fees on the underlying layer 1 network.
 
  ### Sharding
  Partition of a blockchain network that allows for parallel processing of transactions to increase scalability and network capacity.
@@ -114,7 +114,7 @@ A concept of layer 2 scaling. Modular blockchain systems move two or more of the
  Short for "test network": an experimental network where testing and development takes place. Networks are often executed on a testnet before they are deployed to a mainnet.
 
  ### Validium
- A concept related to layer 2 scaling. Validiums combine an off-chain execution environment based on zero-knowledge validity proofs with a Data Availability layer, effectively moving three of the four key blockchain functions over to highly specialized workers, freeing up the need for expensive resources on layer 1, leaving it to perform final settlement, only.
+ A concept related to layer 2 scaling. Validiums combine an offchain execution environment based on zero-knowledge validity proofs with a Data Availability layer, effectively moving three of the four key blockchain functions over to highly specialized workers, freeing up the need for expensive resources on layer 1, leaving it to perform final settlement, only.
 
  ### Vesting
  A mechanism where a certain amount of tokens is released to the owner gradually over a period of time, often used for incentivizing long-term commitments and discouraging short-term speculation.

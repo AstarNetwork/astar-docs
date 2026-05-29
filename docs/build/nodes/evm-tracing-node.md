@@ -50,7 +50,7 @@ cp astar-runtime-52-substitute-tracing.wasm /var/lib/astar/wasm
 chown -hR astar /var/lib/astar/wasm
 ```
 
-When wasm blob located correctly the node launch string should be addicted by `--wasm-runtime-overrides=/var/lib/astar/wasm` flag. Then service should be restarted, if all go well then node will catch up tracing runtime and substitute on-chain version by it.
+When wasm blob located correctly the node launch string should be addicted by `--wasm-runtime-overrides=/var/lib/astar/wasm` flag. Then service should be restarted, if all go well then node will catch up tracing runtime and substitute onchain version by it.
 
 :::important
 
