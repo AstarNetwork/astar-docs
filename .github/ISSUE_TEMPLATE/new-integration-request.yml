@@ -1,0 +1,104 @@
+name: New Integration or Tooling Request
+description: Request the inclusion of a new project, tool, or integration in the Astar documentation
+title: "[Integration Request] "
+labels: ["integration request", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest in being documented in the Astar docs.
+        Please complete all fields accurately. Incomplete requests or projects that do not meet the eligibility criteria will be closed without review.
+        Before submitting, confirm your project is live on **Astar EVM mainnet**.
+
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      description: The official name of your project or tool
+      placeholder: e.g. CometSwap
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Select the category that best describes your project
+      options:
+        - Bridge
+        - DEX / AMM
+        - Lending / Borrowing
+        - Wallet
+        - Oracle
+        - NFT Marketplace
+        - Infrastructure / RPC
+        - Developer Tooling
+        - Analytics
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: deployment-url
+    attributes:
+      label: Live Deployment URL
+      description: The URL of your live, Astar EVM mainnet-deployed application
+      placeholder: https://yourproject.app
+    validations:
+      required: true
+
+  - type: input
+    id: official-website
+    attributes:
+      label: Official Website
+      placeholder: https://yourproject.com
+    validations:
+      required: true
+
+  - type: input
+    id: github-repo
+    attributes:
+      label: GitHub Repository (if open source)
+      placeholder: https://github.com/yourorg/yourrepo
+
+  - type: input
+    id: docs-section
+    attributes:
+      label: Proposed Documentation Section
+      description: Which section of the docs should your project appear in?
+      placeholder: e.g. docs/use/integrations or docs/build/tooling
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Project Description
+      description: A concise, factual description of what your project does and how it relates to the Astar ecosystem. Maximum 300 words. No marketing language.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-include
+    attributes:
+      label: Why should this be included?
+      description: Explain the value this documentation provides to Astar EVM developers or users
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Eligibility Checklist
+      description: All items must be confirmed before your request will be reviewed
+      options:
+        - label: My project is live on Astar EVM mainnet (not testnet only)
+          required: true
+        - label: My project is actively maintained
+          required: true
+        - label: This documentation does not already exist in these docs
+          required: true
+        - label: I am authorized to represent this project
+          required: true
+        - label: I have read the CONTRIBUTING.md guidelines
+          required: true

@@ -205,6 +205,52 @@ git push origin main
 
 </details>
 
+## Partner and Tooling Contributions
+
+If you represent a project, protocol, or developer tool deployed on **Astar EVM** and want it documented here, follow the process below. Direct PRs without a prior approved issue will be closed.
+
+<details>
+<summary><b>How to Request Inclusion</b></summary>
+
+### Step 1: Check Eligibility
+
+Your project must meet all of the following before opening a request:
+
+* **Live on Astar EVM mainnet** (testnet-only projects are not accepted)
+* **Actively maintained** (recent activity required)
+* **Not already documented** in these docs
+* **Technical and factual** content only (no marketing copy, prices, or APY figures)
+* **You are authorized** to submit documentation on behalf of the project
+
+### Step 2: Open an Integration Request Issue
+
+Go to the [Issues tab](https://github.com/AstarNetwork/astar-docs/issues/new/choose) and select **New Integration or Tooling Request**. You will be asked to provide:
+
+* Project name and category
+* Live deployment URL on Astar EVM
+* Official website and GitHub repository (if open source)
+* The section of the docs where your content belongs
+* A factual description of what the project does and why it belongs here
+
+The documentation team will review your request within **5 business days** and respond with one of the following outcomes:
+
+* **Approved** — you are invited to open a PR with the documentation
+* **Needs more information** — the team will ask for clarification
+* **Declined** — the request does not meet the criteria; a reason will be given
+
+### Step 3: Open a Pull Request
+
+Once your issue is approved, open a PR from a fork of this repository. Your PR must:
+
+* Reference the approved issue number
+* Follow the file structure and style described in [CONTRIBUTING.md](CONTRIBUTING.md)
+* Pass the automated CI build (`yarn build`)
+* Use the PR checklist template
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the complete documentation standards, writing style guide, and review process.
+
+</details>
+
 ## Working with Images
 
 Please import and use the `<Figure/>` tag instead of `![image]` as this enables smoother translation of docs to other languages (automatic reference to original images, no need to copy images to translated subfolders) and automatically applies some styling such as line breaks.
