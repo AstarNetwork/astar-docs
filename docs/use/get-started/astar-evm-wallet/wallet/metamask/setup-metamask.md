@@ -5,8 +5,6 @@ title: Setup Astar Network in Metamask
 ---
 
 import Figure from '/src/components/figure'
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';   
 
 In this tutorial, you'll learn how to add Astar Network to your Metamask wallet extension.
 
@@ -29,7 +27,7 @@ Alternatively, you can configure it manually by entering the information below i
 
 <br></br>
 
-<TabItem value="astar" label="Astar Network" default>
+**Astar Network**
 
 |   | Public endpoint Astar |
 | --- | --- |
@@ -41,5 +39,3 @@ Alternatively, you can configure it manually by entering the information below i
 | Chain ID | 592 |
 | Currency symbol | ASTR |
 | Block Explorer URL | https://astar.blockscout.com/ |
-
-</TabItem>
