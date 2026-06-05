@@ -207,7 +207,7 @@ git push origin main
 
 ## Partner and Tooling Contributions
 
-If you represent a project, protocol, or developer tool deployed on **Astar EVM** and want it documented here, follow the process below. Direct PRs without a prior approved issue will be closed.
+If you represent a project, protocol, or developer tool deployed on **Astar Network** and want it documented here, follow the process below. Direct PRs without a prior approved issue will be closed.
 
 <details>
 <summary><b>How to Request Inclusion</b></summary>
@@ -216,7 +216,7 @@ If you represent a project, protocol, or developer tool deployed on **Astar EVM*
 
 Your project must meet all of the following before opening a request:
 
-* **Live on Astar EVM mainnet** (testnet-only projects are not accepted)
+* **Live on Astar Network mainnet** (testnet-only projects are not accepted)
 * **Actively maintained** (recent activity required)
 * **Not already documented** in these docs
 * **Technical and factual** content only (no marketing copy, prices, or APY figures)
@@ -227,7 +227,7 @@ Your project must meet all of the following before opening a request:
 Go to the [Issues tab](https://github.com/AstarNetwork/astar-docs/issues/new/choose) and select **New Integration or Tooling Request**. You will be asked to provide:
 
 * Project name and category
-* Live deployment URL on Astar EVM
+* Live deployment or service URL on Astar Network
 * Official website and GitHub repository (if open source)
 * The section of the docs where your content belongs
 * A factual description of what the project does and why it belongs here
@@ -244,7 +244,7 @@ Once your issue is approved, open a PR from a fork of this repository. Your PR m
 
 * Reference the approved issue number
 * Follow the file structure and style described in [CONTRIBUTING.md](CONTRIBUTING.md)
-* Pass the automated CI build (`yarn build`)
+* Pass a local build check (`yarn build`); a maintainer will verify this before merging
 * Use the PR checklist template
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the complete documentation standards, writing style guide, and review process.

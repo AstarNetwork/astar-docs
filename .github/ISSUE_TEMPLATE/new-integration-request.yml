@@ -8,7 +8,7 @@ body:
       value: |
         Thank you for your interest in being documented in the Astar docs.
         Please complete all fields accurately. Incomplete requests or projects that do not meet the eligibility criteria will be closed without review.
-        Before submitting, confirm your project is live on **Astar EVM mainnet**.
+        Before submitting, confirm your project is live on **Astar Network mainnet**.
 
   - type: input
     id: project-name
@@ -42,7 +42,7 @@ body:
     id: deployment-url
     attributes:
       label: Live Deployment URL
-      description: The URL of your live, Astar EVM mainnet-deployed application
+      description: The URL of your live Astar Network mainnet deployment or service
       placeholder: https://yourproject.app
     validations:
       required: true
@@ -82,7 +82,7 @@ body:
     id: why-include
     attributes:
       label: Why should this be included?
-      description: Explain the value this documentation provides to Astar EVM developers or users
+      description: Explain the value this documentation provides to Astar Network developers or users
     validations:
       required: true
 
@@ -92,7 +92,7 @@ body:
       label: Eligibility Checklist
       description: All items must be confirmed before your request will be reviewed
       options:
-        - label: My project is live on Astar EVM mainnet (not testnet only)
+        - label: My project is live on Astar Network mainnet (not testnet only)
           required: true
         - label: My project is actively maintained
           required: true

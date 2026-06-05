@@ -25,6 +25,6 @@ Closes #<!-- issue number, required for new integrations -->
 
 ## For New Integration PRs Only
 
-- [ ] The project is live on Astar EVM mainnet
+- [ ] The project is live on Astar Network mainnet
 - [ ] An approved integration request issue exists (Issue #___)
 - [ ] Page structure follows the existing format for this category

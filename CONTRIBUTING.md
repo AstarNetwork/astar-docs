@@ -22,7 +22,7 @@ This section is specifically for teams or individuals who want to get a project,
 
 Before opening a request, your project must meet all of the following:
 
-- **Live on mainnet.** Your project must be deployed and functional on Astar EVM. Testnet-only projects are not accepted.
+- **Live on mainnet.** Your project must be deployed and functional on Astar Network. Testnet-only projects are not accepted.
 - **Actively maintained.** The project must show recent activity. Abandoned or deprecated projects will not be added and existing ones may be removed.
 - **Not a duplicate.** The documentation you are proposing must not already exist or substantially overlap with existing content.
 - **Factual and technical.** The documentation must describe how to use or integrate the product. Marketing copy, price information, and investment language are not accepted.
@@ -34,10 +34,10 @@ New integration documentation follows a proposal-first workflow. A PR submitted 
 
 #### Stage 1: Open an Integration Request Issue
 
-Use the [New Integration Request](.github/ISSUE_TEMPLATE/new-integration-request.yml) issue template. You will be asked to provide:
+Use the [New Integration Request](https://github.com/AstarNetwork/astar-docs/issues/new/choose) issue template. You will be asked to provide:
 
 - Project name and category
-- Live deployment URL on Astar EVM
+- Live deployment or service URL on Astar Network
 - Official website and GitHub repository (if open source)
 - The section of the docs where your content belongs
 - A factual description of what the project does
@@ -54,12 +54,12 @@ Once your issue is approved, open a PR that:
 
 - References the approved issue number in the description
 - Follows the file structure and style guide described below
-- Passes the automated CI build (`yarn build`)
+- Passes a local build check (`yarn build`); a maintainer will verify the build passes before merging
 - Uses the PR template checklist
 
 ### What Happens After Your PR Is Submitted
 
-1. **Automated checks** run first: the build must pass and links must resolve
+1. **Build and link checks**: a maintainer will verify the build passes and links resolve
 2. **Content review** by the documentation team checks accuracy, tone, and structure
 3. **One approval** is required from a team member before merge
 4. Once merged, the content appears on [docs.astar.network](https://docs.astar.network) within minutes
@@ -83,7 +83,7 @@ If you are unsure where your content belongs, ask in the linked issue before cre
 
 Every new page should include:
 
-1. **Frontmatter** with at minimum `sidebar_position` and a `title`
+1. **Frontmatter** with at minimum `sidebar_position`; a `title` field is recommended but not required
 2. **Overview paragraph** explaining what the page covers and who it is for
 3. **Prerequisites** (if applicable) listing what the reader needs before starting
 4. **Step-by-step content** using numbered lists for sequential actions
@@ -130,7 +130,7 @@ const example = "always add the language"
 
 ## Updating Existing Documentation
 
-To report or correct outdated, incorrect, or incomplete content, open a [Content Update Request](.github/ISSUE_TEMPLATE/content-update-request.yml) issue. Include:
+To report or correct outdated, incorrect, or incomplete content, open a [Content Update Request](https://github.com/AstarNetwork/astar-docs/issues/new/choose) issue. Include:
 
 - The URL or file path of the page in question
 - The current content that needs changing
@@ -150,4 +150,4 @@ If you have not received a response within these timeframes, feel free to leave 
 
 ## Questions
 
-For questions about the contribution process, reach out via the [Astar Discord](https://discord.com/invite/astarnetwork) in the `#documentation` channel, or open a GitHub Discussion.
+For questions about the contribution process, reach out via the [Astar Discord](https://discord.gg/astarnetwork) in the `#documentation` channel, or open a GitHub Discussion.
