@@ -15,6 +15,7 @@
     "@babel/plugin-transform-modules-systemjs": "^7.29.4",
     "serialize-javascript": "^7.0.5",
     "mdast-util-to-hast": "^13.2.1",
+    "brace-expansion@^1.1.7": "^1.1.13",
     "brace-expansion@^2.0.1": "^2.0.3",
     "minimatch@^9.0.4": "^9.0.7",
     "picomatch@^2.0.4": "^2.3.2",
