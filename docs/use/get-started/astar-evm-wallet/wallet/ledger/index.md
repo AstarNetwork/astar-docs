@@ -5,8 +5,6 @@ title: Interact with Ledger on Astar EVM using MetaMask
 ---
 
 import Figure from '/src/components/figure'
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 ## Introduction
 
@@ -38,18 +36,18 @@ If you already have this, feel free to skip this part.
 1. In the MetaMask menu, navigate to `Settings` → `Networks`, and click **Add a network**;
 2. Enter following details:
 
-<TabItem value="astar" label="Astar Network" default>
-    |   | Public endpoint Astar |
-    | --- | --- |
-    | Network name | Astar Network |
-    | New RPC URL | Astar Team: https://evm.astar.network |
-    |         | BlastAPI: https://astar.public.blastapi.io |
-    |         | Dwellir: https://astar-rpc.n.dwellir.com |
-    |         | OnFinality: https://astar.api.onfinality.io/public |
-    | Chain ID | 592 |
-    | Currency symbol | ASTR |
-    | Block Explorer URL | https://astar.blockscout.com/ |
-</TabItem>
+**Astar Network**
+
+| | Public endpoint Astar |
+| --- | --- |
+| Network name | Astar Network |
+| New RPC URL | Astar Team: https://evm.astar.network |
+|         | BlastAPI: https://astar.public.blastapi.io |
+|         | Dwellir: https://astar-rpc.n.dwellir.com |
+|         | OnFinality: https://astar.api.onfinality.io/public |
+| Chain ID | 592 |
+| Currency symbol | ASTR |
+| Block Explorer URL | https://astar.blockscout.com/ |
 <br></br>
 
 3. Close the `Settings` menu and, from the drop-down menu, select the network you wish to interact with.

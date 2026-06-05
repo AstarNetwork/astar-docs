@@ -4,8 +4,6 @@ sidebar_label: CometSwap
 title: Buying ASTR on a DEX using CometSwap
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import Figure from '/src/components/figure'
 
 
@@ -21,7 +19,7 @@ Go Metamask extension -> Settings -> Network -> Add Network
 
 <br></br>
 
-<TabItem value="astar" label="Astar Network" default>
+**Astar Network**
 
 |   | Public endpoint Astar |
 | --- | --- |
@@ -33,8 +31,6 @@ Go Metamask extension -> Settings -> Network -> Add Network
 | Chain ID | 592 |
 | Currency symbol | ASTR |
 | Block Explorer URL | https://astar.blockscout.com/ |
-
-</TabItem>
 
 ## Bridge Ethereum Assets To Astar Network
 
