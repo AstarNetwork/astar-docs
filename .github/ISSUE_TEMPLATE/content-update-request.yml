@@ -1,0 +1,42 @@
+name: Content Update Request
+description: Report incorrect, outdated, or incomplete content in the Astar documentation
+title: "[Content Update] "
+labels: ["content update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to flag content that is wrong, outdated, or missing important information.
+        For small fixes like typos or broken links, you may open a pull request directly without an issue.
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL or File Path
+      description: Link to the documentation page or the file path in the repository
+      placeholder: https://docs.astar.network/docs/... or docs/path/to/file.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: Copy the text or describe the section that needs updating
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Proposed Change
+      description: Describe what the correct or updated information should be
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source or Reference
+      description: Link to an official source confirming the correct information (strongly recommended)
+      placeholder: https://official-docs-or-announcement-link
