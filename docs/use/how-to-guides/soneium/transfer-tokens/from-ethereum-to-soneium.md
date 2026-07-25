@@ -23,7 +23,7 @@ Before you begin, ensure you have:
 - **ETH** for gas fees on the source chain.
 - Tokens in your wallet on **Ethereum** or another supported **L2** (Arbitrum, Base, OP Mainnet, etc.).
 
-:::info Wallet Setup
+:::info[Wallet Setup]
 
 Need help setting up your wallet on **Soneium**? Follow this [**wallet guide**](https://docs.soneium.org/docs/users/wallets) from Soneiun's documentation.
 
@@ -95,12 +95,12 @@ Need help setting up your wallet on **Soneium**? Follow this [**wallet guide**](
 5. Choose token (e.g., ETH)
 6. Approve and confirm the transaction
 
-:::info Final tip
+:::info[Final tip]
 
 Whether you’re moving funds to explore Soneium dApps or participate in a campaign, these tools will help you move assets safely and efficiently into the Soneium ecosystem. 
 
 :::
-:::tip Astar support
+:::tip[Astar support]
 
 Feel free to ask your questions in our [**official Astar Discord**](https://discord.com/invite/AstarNetwork).
 

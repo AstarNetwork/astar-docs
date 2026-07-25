@@ -15,12 +15,12 @@ In this guide, you’ll learn how to transfer **ASTR** tokens from **Astar Netwo
 - A wallet that supports the **EVM** format (we’ll use Zerion)
 - ASTR tokens in your Substrate wallet on Astar L1
 
-:::info Wallet Setup
+:::info[Wallet Setup]
 
 To set up your wallet on Astar Network, follow → [**this guide**](/docs/use/get-started/index.md), and use → [**this one**](https://docs.soneium.org/docs/users/wallets) for Soneium.
 
 :::
-:::tip Get ASTR tokens
+:::tip[Get ASTR tokens]
 
 To acquire ASTR tokens through a DEX or CEX, follow [**this guides**](/docs/use/how-to-guides/layer-1/get-astr-token/index.md) in our documentation.
 
@@ -90,7 +90,7 @@ Go to the **wallet** button and click it.
 
 Choose the wallet you use, in this case, it will be **Zerion**, so we’ll click on **Metamask** to open the modal and connect it.
 
-:::info Metamask Mode
+:::info[Metamask Mode]
 
 Zerion uses a mode called Metamask mode, where every request made to Metamask is handled by Zerion first. That’s why we click on Metamask, as the Zerion logo doesn’t appear directly.
 
@@ -110,7 +110,7 @@ Go to the **Bridge to Soneium** section by clicking the button.
 
 Once you’re on the bridge page, you’ll see that the transaction is set to go from **Astar EVM** to **Soneium**. Enter the amount you want to send, approve the transaction by clicking the **Approve** button, and finally, initiate the bridge.
 
-:::info Fee costs
+:::info[Fee costs]
 
 Pay close attention to the bridge fee and the time the transaction usually takes.
 

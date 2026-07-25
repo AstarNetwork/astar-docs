@@ -91,7 +91,7 @@ Projects that pass Stage 1 are ranked by weighted KPI score as described above. 
 
 All allocations are executed as onchain motions by the ACC using Community Treasury funds. Positions can be tracked on the [Community Treasury account](https://astar.subscan.io/account/YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix).
 
-:::note Parameter source
+:::note[Parameter source]
 All thresholds and caps on this page (floor triggers, position limits, combined exposure cap, KPI weights) were defined in the [SSP governance proposal](https://forum.astar.network/t/acc-strategic-staking-program/9439) approved by the Community Council. When the ACC updates any parameter, the forum record is the authoritative source.
 :::
 

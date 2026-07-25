@@ -17,12 +17,12 @@ To complete this tutorial, you’ll need:
 - The **Soneium network** added to your wallet so you can view your funds
 - **ASTR** tokens on the Soneium network in your wallet
 
-:::info Wallet Setup
+:::info[Wallet Setup]
 
 To configure your wallet with the Soneium network, follow [**this guide**](https://docs.soneium.org/docs/users/wallets) from the official docs.
 
 :::
-:::tip Get ASTR tokens
+:::tip[Get ASTR tokens]
 
 If you want to acquire ASTR tokens on the Soneium using your local currency, use [**Alchemy Pay**](https://ramp.alchemypay.org/#/index).
 
@@ -38,7 +38,7 @@ This guide assumes you already:
 
 We’ll now walk through the full transfer process step by step.
 
-:::caution Disclaimer
+:::caution[Disclaimer]
 
 Astake is independent projects and is **not affiliated with or operated by Astar Foundation**. Users are strongly advised to **conduct their own research** and contact the respective project teams for more information **before interacting with these dApps**. The Astar Foundation **disclaims all responsibility** for any issues, losses, or risks that may arise from the use of third-party projects.
 
@@ -60,7 +60,7 @@ Astake is independent projects and is **not affiliated with or operated by Astar
 
 - **Secure, DeFi-Ready & Easy to Use:** Audited by PeckShield and designed with user experience in mind, Astake provides a secure and intuitive interface. wstASTR is supported by DeFi protocols like Sake, Kyo, and SoneX to unlock extra yield.
 
-:::tip Astake docs
+:::tip[Astake docs]
 
 If you want to learn more about Astake, explore their official documentation [**here**](https://astakes-organization.gitbook.io/doc).
 

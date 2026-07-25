@@ -24,7 +24,7 @@ B. A browser extension on [**Chrome**](https://chromewebstore.google.com/detail/
 
 In this tutorial we will walk you through the mobile account creation process and the browser extension.
 
-:::info Import an account
+:::info[Import an account]
 
 You can also import an account using a [**passphrase (mnenomic)**](https://wiki.fearlesswallet.io/accounts/walkthrough/exporting-and-importing-a-wallet-using-a-passphrase) or [**JSON file**](https://wiki.fearlesswallet.io/accounts/walkthrough/exporting-and-importing-a-wallet-using-a-json-file).
 
@@ -40,7 +40,7 @@ If you're creating a new wallet, you'll be prompted to choose a name for your wa
 Right after that, you'll need to confirm your mnemonic passphrase by clicking on each word in the correct order:
 <Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-2.png').default} width="100%" />
 
-:::warning Attention
+:::warning[Attention]
 
 Write down this phrase and store it in a safe place, as it can be used to restore your wallet if you ever lose access to it. If you lose this phrase, you won't be able to recover your wallet. Don't share this phrase with anyone.
 

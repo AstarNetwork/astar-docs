@@ -49,7 +49,7 @@ A: The decay rate was calculated to achieve the target maximum supply of 10 bill
 
 When `r = 4 × 10⁻⁸`, the cumulative emission limit converges to `E₀ / r`, producing the 10 billion supply ceiling when added to current circulating supply.
 
-:::info Decay formula
+:::info[Decay formula]
 
 `E(n) = E₀ × (1 − 4×10⁻⁸)ⁿ` | Total future emissions: `lim C(n) = E₀ / r`
 
@@ -103,7 +103,7 @@ The theoretical maximum supply is 10 billion ASTR, representing the asymptotic c
 
 Significant burn events such as Burndrop reduce the effective maximum supply below the theoretical 10 billion ceiling. As a result, circulating supply and the theoretical cap will not converge exactly.
 
-:::info Live supply data
+:::info[Live supply data]
 
 Live supply data is available on the [Astar Network Explorer](https://astar.subscan.io). The 10B figure represents a mathematical ceiling. The effective maximum is lower due to ongoing burn activity.
 

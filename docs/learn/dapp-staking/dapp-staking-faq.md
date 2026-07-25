@@ -8,7 +8,7 @@ import Figure from "/src/components/figure"
 
 ## General Info About Migration From V2 to V3
 
-:::note Historical Reference
+:::note[Historical Reference]
 dApp Staking V3 has been live since February 2024. The Tokenomics 3.0 revamp was activated in March 2026. The following is preserved for historical context only.
 :::
 
@@ -126,7 +126,7 @@ However, we recommend that you claim all your rewards and stake on a new project
 
 ### Q: What About Unclaimed Rewards from dApp Staking V2?
 
-:::note Historical Reference
+:::note[Historical Reference]
 dApp Staking V3 has been live since February 2024. The Tokenomics 3.0 revamp was activated in March 2026. The following is preserved for historical context only.
 :::
 
@@ -147,7 +147,7 @@ Please refer to [this Astar Forum discussion](https://forum.astar.network/t/dapp
 
 ### Q: What should you do to prepare for dApp Staking V3 migration?
 
-:::note Historical Reference
+:::note[Historical Reference]
 dApp Staking V3 has been live since February 2024. The Tokenomics 3.0 revamp was activated in March 2026. The following is preserved for historical context only.
 :::
 
@@ -202,7 +202,7 @@ In the event that a dApp is unregistered from dApp Staking, all developer unclai
 
 ### Q: We are a dApp participating in dAppStaking V2, What do we need to do?
 
-:::note Historical Reference
+:::note[Historical Reference]
 dApp Staking V3 has been live since February 2024. The Tokenomics 3.0 revamp was activated in March 2026. The following is preserved for historical context only.
 :::
 

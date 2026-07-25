@@ -16,12 +16,12 @@ In this guide, you’ll learn how to get some **SBY** tokens from the **Astar Po
 - A wallet that supports the **EVM** format (we’ll use Zerion)
 - An existing Astar EVM account
 
-:::tip Wallet Setup
+:::tip[Wallet Setup]
 
 To set up your wallet on Astar Network, follow → [**this guide**](/docs/use/get-started/index.md).
 
 :::
-:::info Astar & Shiden
+:::info[Astar & Shiden]
 
 This guide will also work for ASTR and SDN assets on Astar and Shiden networks.
 
@@ -49,7 +49,7 @@ Click on **Select wallet**.
 
 Choose the wallet you use, in this case, it will be **Zerion**, so we’ll click on **Metamask** to open the modal and connect it.
 
-:::info Metamask Mode
+:::info[Metamask Mode]
 
 Zerion uses a mode called Metamask mode, where every request made to Metamask is handled by Zerion first. That’s why we click on Metamask, as the Zerion logo doesn’t appear directly.
 

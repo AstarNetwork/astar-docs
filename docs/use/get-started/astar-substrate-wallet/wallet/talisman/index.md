@@ -16,7 +16,7 @@ With the **Talisman browser extension**, you can securely store, send, and recei
 
 The extension is available on Chrome, Brave, Edge and Firefox. Download and install the Talisman extension from https://www.talisman.xyz.
 
-:::info Install tutorial
+:::info[Install tutorial]
 
 A download tutorial specific to your browser is also available → [**here**](https://docs.talisman.xyz/talisman/navigating-the-paraverse/account-management/download-the-extension).
 
@@ -151,7 +151,7 @@ You will be taken to [app.talisman.xyz/staking](http://app.talisman.xyz/staking)
 Enter the amount you’d like to stake (minimum staking amount is 500 Astr) and choose the dApp from the dropdown menu. Thereafter, click “Stake” after you’ve reviewed your transaction.
 <Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/talisman/images/image-36.png').default} width="100%" />
 
-:::info Unbonding period
+:::info[Unbonding period]
 
 Please note: there is an unbonding period aprox of 9 days on Astar.
 

@@ -152,7 +152,7 @@ Once we know the oldest period, we can use `PeriodEnd` storage map to find when 
 
 ### Bonus Rewards
 
-:::warning Attention
+:::warning[Attention]
 
 Tokenomics 3.0 has **no user-facing bonus rewards**, so indexers and UIs should not surface a "bonus pool", "bonus APR", or "vote-to-earn-bonus" guidance as a user benefit.
 
