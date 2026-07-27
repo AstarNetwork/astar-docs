@@ -16,7 +16,7 @@ In this guide, you'll learn how to stake **ASTR** on Astar Network (L1) using th
 - Minimum of **500 ASTR** required to stake
 - A small amount of extra ASTR for transaction fees
 
-:::info Wallet Setup
+:::info[Wallet Setup]
 
 Don't have an Astar wallet yet? Follow → [**this guide**](/docs/use/get-started/index.md) to set one up on Astar Network.
 
@@ -24,7 +24,7 @@ Don't have an Astar wallet yet? Follow → [**this guide**](/docs/use/get-starte
 
 ## II. Step-by-step Guide
 
-:::warning dApp Staking Parameters
+:::warning[dApp Staking Parameters]
 
 Before staking, make sure you understand all the parameters described [**here**](/docs/learn/dapp-staking/#parameters).
 
@@ -49,7 +49,7 @@ A **Connect Native Wallet** modal will appear listing all supported Substrate wa
 
 <Figure caption="Connect Native Wallet modal, Talisman detected" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-3.png').default} width="100%" />
 
-:::tip Other Substrate Wallets
+:::tip[Other Substrate Wallets]
 
 Polkadot.js, SubWallet, and OneKey are also supported. The steps are the same for all of them.
 
@@ -79,7 +79,7 @@ The **Stake** page shows you a summary panel with your available balance, curren
 
 You can start staking by clicking **Start Staking** in the top panel, or by clicking **Stake** next to any dApp in the rankings table. Use the **Search dapps** bar to quickly find a specific project.
 
-:::tip Project Research
+:::tip[Project Research]
 
 Click on any project card for more details, team profiles, community links, and resources. You can also check [**DeFiLlama**](https://defillama.com/) or our [**Forum**](https://forum.astar.network/) for additional context.
 
@@ -87,7 +87,7 @@ Click on any project card for more details, team profiles, community links, and 
 
 ### 2.6. Step 6: Select a dApp and Enter the Amount
 
-:::note Maximum Supported dApps
+:::note[Maximum Supported dApps]
 
 You can support up to **16 projects** simultaneously from a single address.
 
@@ -97,7 +97,7 @@ Click **Stake** next to the dApp you want to support. You'll be taken to its sta
 
 <Figure caption="Enter staking amount for your chosen dApp" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-8.png').default} width="100%" />
 
-:::info Available Balance
+:::info[Available Balance]
 
 **Your available balance** includes tokens locked in governance. Make sure to keep some ASTR free for transaction fees.
 
@@ -111,7 +111,7 @@ Once the transaction is confirmed, go back to **Assets** and click **My Staking*
 
 <Figure caption="My Staking dashboard showing your active stake" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/img/stake-astar/how-to-stake-9.png').default} width="100%" />
 
-:::info Token Unlock at Period End
+:::info[Token Unlock at Period End]
 
 At the end of each Period, tokens are automatically unstaked from all dApps. They remain **locked** on your account but must be **re-staked** for the new Period to keep earning rewards.
 
@@ -120,7 +120,7 @@ At the end of each Period, tokens are automatically unstaked from all dApps. The
 {/* Video temporarily hidden — recorded on old Portal version. Will be updated.
 ## Video Tutorial
 
-:::caution Outdated Video
+:::caution[Outdated Video]
 
 This video was recorded using an older version of the Astar Portal. An updated version will be available soon. For now, follow the written steps above.
 

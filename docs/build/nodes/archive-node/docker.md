@@ -182,4 +182,3 @@ Then start a new container by following the instructions under the [Start Docker
 ### Snapshot
 
 Please refer to [**snapshot page**](/docs/build/nodes/snapshots/).
-:::

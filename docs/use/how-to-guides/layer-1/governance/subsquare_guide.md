@@ -15,7 +15,7 @@ The governance system ensures that decisions are made collectively and transpare
 
 This guide will walk you through the process of participating in Astar onchain governance using the **Subsquare** platform. For those who prefer the technical approach, you can refer to the [**Astar Governance Technical Guide**](/docs/learn/governance/technical_guide.md). For a comprehensive understanding of Astar governance structure and processes, we encourage you to read the [**Astar Governance Overview**](/docs/learn/governance/index.md) in our documentation.
 
-:::info Polkadot.js
+:::info[Polkadot.js]
 
 If you want to learn more about Polkadot.js, check out this [**Polkadot Official guide**](https://wiki.polkadot.com/general/polkadotjs-ui/).
 
@@ -35,7 +35,7 @@ Through **Subsquare**, you can:
 The purpose of this guide is to demonstrate how to utilize the **Subsquare** platform for governance actions on **Astar Network**.
 Working assumption is that the reader has familiarized themselves with the governance model, and will refer back to the docs if needed. This will be a **practical guide** for users.
 
-:::info Astar Subsquare
+:::info[Astar Subsquare]
 
 Check out the Subsquare version for [**Astar here**](https://astar.subsquare.io/) and get familiar with the existing proposals.
 
@@ -88,7 +88,7 @@ As you can see on the screen, you can either create the preimage, which is the f
 
 For the sake of this example, we will create a preimage of a `remarkWithEvent` extrinsic call, containing **LGM!** as the _message_.
 
-:::info Hash and Lenght
+:::info[Hash and Lenght]
 
 Please take note of the *hash* and *length*; these will be important for later use.
 
@@ -97,7 +97,7 @@ Submit the message and wait for the transaction to be confirmed and finalized.
 
 <Figure caption="Create a preimage - Part 3" src={require('/docs/use/img/17_Subsquare_preimage/preimage_3.png').default } width="100%" />
 
-:::info Treasury Spending
+:::info[Treasury Spending]
 
 If your intention is to request treasury funds through a Public Proposal, there are a few steps you must take before creating the preimage:
 
@@ -110,7 +110,7 @@ That’s it! With this preimage, you’ll be able to create a Public Proposal an
 :::
 Once the preimage has been created, it will be displayed on the main `Preimage` page.
 
-:::tip Understanding preimage deposits
+:::tip[Understanding preimage deposits]
 
 In the Astar onchain governance, preimage deposits are token amounts reserved when submitting a proposal’s preimage (**the encoded call data**) to the chain. They help prevent spam and cover onchain storage costs, ensuring the proposal’s details remain accessible throughout the governance process. 
 
@@ -121,7 +121,7 @@ These deposits are not spent but temporarily locked. They are refunded once the 
 :::
 <Figure caption="Create a preimage - Part 4" src={require('/docs/use/img/17_Subsquare_preimage/preimage_4.png').default } width="100%" />
 
-:::info Unnote button
+:::info[Unnote button]
 
 Note that the newly created image has an `Unnote` button. This is because the current user is the creator of the preimage.
 
@@ -142,7 +142,7 @@ Click on the `New Proposal` button to create a new `Public Proposal`. Since a pr
 
 The hash of the preimage is required to create a new proposal. In this case, hash of the preimage created earlier is simply copied and pasted into the `Preimage` field and the lengh will be automatically filled out.
 
-:::info Locked Balance
+:::info[Locked Balance]
 
 The `Locked Balance` refers to the amount being _deposited_ **(not locked)** for the proposal. In case the proposal is canceled, the deposit will be slashed. In case the proposal is tabled, the deposit will be refunded.
 
@@ -167,7 +167,7 @@ Proposals can be edited by clicking on the `Edit` button. Title and description 
 
 Clicking the `Second` button to support the proposal, increase its chances of being tabled and upgraded to a referendum. The user has to _match_ the deposit of the proposal, which is displayed on the page. It is possible to second a proposal multiple times.
 
-:::info Seconds
+:::info[Seconds]
 
 Any user, including the proposer, may support their proposal as many times as they wish. These **seconds** will be released once the proposal is **tabled** (upgraded to a referendum).
 
@@ -184,7 +184,7 @@ Clicking on the `New Proposal` button will allow the creation of a new spending 
 
 User needs to pick the `payout amount` & the `beneficiary`. The `Proposal bond` refers to the amount that needs to be deposited in order to create the proposal. 
 
-:::info Approve or Rejected
+:::info[Approve or Rejected]
 
 If the proposal is rejected, the bond will be `slashed`. Otherwise, the bond will be `refunded`.
 
@@ -197,12 +197,12 @@ After submitting the proposal, it will be displayed on the treasury page. The pr
 
 **Track #3: Community Treasury**
 
-:::info Community Treasury
+:::info[Community Treasury]
 
 The third track for creating onchain proposals is using the Community Treasury, which allows you to request spending, include/exclude dApps from dApp Staking, and execute other actions. To do this, you can reuse the same steps mentioned above.
 
 :::
-:::tip Community Council
+:::tip[Community Council]
 
 All proposals requesting actions or expenditures from the Community Treasury will be reviewed, approved, or rejected by the Community Council. More details on this below.
 
@@ -240,7 +240,7 @@ Clicking on the `+ Delegate` button allows you to delegate votes to another acco
 
 The `Target` is the account to which the votes are being delegated to. The `Balance` is the amount of native currency we're delegating. This is the amount that will be _locked_.
 
-:::info Delegating Votes
+:::info[Delegating Votes]
 
 The action of delegating voting power **DOES NOT** transfer the ownership of the tokens. They are merely _locked_ for normal use, but remain in the ownership of the delegator.
 
@@ -297,7 +297,7 @@ In case a user changes their mind, the vote can be removed by clicking on the `R
 
 <Figure caption="Voting - Part 5" src={require('/docs/use/img/21_Subsquare_voting/voting_5.png').default } width="100%" />
 
-:::tip Example Case
+:::tip[Example Case]
 
 This is an example of an account that is voting but has some votes delegated to it. In this particular situation, the account has:
 
@@ -337,7 +337,7 @@ The Community Council is entrusted with managing key ecosystem functions, includ
 * **Ecosystem Agent Tips:** Assessing and authorizing agent compensation requests.
 * **Governance Participation:** Acting as stewards of decentralized governance processes.
 
-:::tip Community Council Actions
+:::tip[Community Council Actions]
 
 The Council also holds specific onchain permissions to perform actions such as:
 
@@ -352,7 +352,7 @@ The Council also holds specific onchain permissions to perform actions such as:
 
 Through these responsibilities, the Community Council plays a critical role in maintaining the integrity, transparency, and sustainability of the Astar ecosystem.
 
-:::info Community Council Information
+:::info[Community Council Information]
 
 If you'd like to get more involved with the Community Council, check out our [**Forum post**](https://forum.astar.network/t/introducing-the-community-council/7588).
 
@@ -382,7 +382,7 @@ For this example, we will select the first option from the Quick Start: `Approve
 
 The proposal Id (can be checked under the Community Treasury tab) is required to create a new motion. Selecting an Id will display the proposal name, which also links to the proposal details.
 
-:::warning Important
+:::warning[Important]
 
 Community council members should ensure they're proposing and voting on the correct proposal.
 
@@ -403,12 +403,12 @@ In this case, one of the council members votes `Aye`.
 
 <Figure caption="Community Treasury Voting - Part 3" src={require('/docs/use/img/22_Subsquare_comm_treasury/comm_treasury_6.png').default } width="100%" />
 
-:::tip Remove Vote
+:::tip[Remove Vote]
 
 If a Council member wishes to remove their vote, they may do so as long as the proposal has not yet been `Executed`. The vote can be changed as many times as desired.
 
 :::
-:::info Reject a Proposal
+:::info[Reject a Proposal]
 
 The process to `Reject` a proposal is exactly the same, simply selecting `Reject a treasury proposal` when creating the `motion` during the step 1.
 
@@ -448,7 +448,7 @@ For this particular case, the threshold is set to 2/3 of the council members and
 The next is the call builder. When utilizing the community treasury, the call needs to start with `collectiveProxy → executeCall`.
 After that, the dApp staking call needs to be built.
 
-:::tip Batch Calls
+:::tip[Batch Calls]
 
 It's possible, and encouraged, to use the _batch_ calls to simplify the voting process.
 
@@ -542,17 +542,17 @@ The mechanism operates by specifying exact pallet names and function combination
 
 Select the `txPause` pallet and choose the `pause` function. Enter the exact pallet name as the first parameter, ensuring proper capitalization. Enter the specific function name as the second parameter using correct snake_case formatting.
 
-:::warning Good to know
+:::warning[Good to know]
 
 This action can be executed directly by the **Main Council** or **Technical Committee** through the [**Polkadot.js interface**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/). However, it is not restricted to these bodies, an approved **governance referendum** can also authorize its execution.
 
 :::
-:::tip Example Case
+:::tip[Example Case]
 
 To pause balance transfers entirely, use `Balances` as the pallet name and `transfer_all` as the function name. To pause specific dApp staking claims, use `DappStaking` and `claim_unlocked` respectively.
 
 :::
-:::info Disable txPause
+:::info[Disable txPause]
 
 After the security threat is resolved and appropriate patches are implemented, create a new motion using the `txPause` pallet and `unpause` function with identical pallet and function name parameters to restore normal functionality.
 
@@ -567,19 +567,19 @@ Safe Mode initializes with a 12-hour active period and supports extension in 2-h
 
 Select the `safeMode` pallet and choose the `forceEnter` function. This extrinsic does not require additional parameters and will immediately activate comprehensive network protection upon successful vote completion.
 
-:::warning Good to know
+:::warning[Good to know]
 
 This action can be executed directly by the **Main Council** or **Technical Committee** through the [**Polkadot.js interface**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/). However, it is not restricted to these bodies, an approved **governance referendum** can also authorize its execution.
 
 :::
-:::tip Manage Duration Extensions
+:::tip[Manage Duration Extensions]
 
 If additional time is required, create extension motions using the `safeMode` pallet and `forceExtend` function, specifying 2-hour increment extensions as needed.
 
 Multiple extensions are permitted for complex security incidents requiring extended resolution periods, though each extension requires separate council approval.
 
 :::
-:::info Exit Safe Mode
+:::info[Exit Safe Mode]
 
 Once security threats are fully resolved and network safety is confirmed, create a final motion using the `safeMode` pallet and `forceExit` function.
 

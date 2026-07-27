@@ -1,6 +1,6 @@
 # MetaMask Snaps
 
-:::danger Astar Snap Deprecation
+:::danger[Astar Snap Deprecation]
 
 **Astar Snap** will soon be deprecated and permanently disabled. This means any assets stored within the Snap will no longer be accessible through it.
 
@@ -17,7 +17,7 @@ To **avoid losing access to your funds**, we strongly recommend that you **migra
 👾 If you need help, feel free to reach out via our [**Discord community**](https://discord.gg/astarnetwork).
 
 :::
-:::tip Migrate your funds
+:::tip[Migrate your funds]
 
 To ensure your assets remain safe and accessible, please follow these simple steps to transfer your funds out of Astar Snap:
 
@@ -28,7 +28,7 @@ To ensure your assets remain safe and accessible, please follow these simple ste
 ✅ Your funds will now be safe in your new wallet.
 
 :::
-:::info Update your Astar Snap
+:::info[Update your Astar Snap]
 
 If you're not using Astar Snap version `0.9.1`, please [**update it here**](https://snaps.metamask.io/snap/npm/astar-network/snap/) before transferring your assets.
 

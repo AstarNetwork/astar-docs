@@ -39,7 +39,7 @@ Click **Register now** to open the project information form.
 
 <Figure caption="Congrats banner with Register now button" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/img/developer-dashboard-1.png').default} width="100%" />
 
-:::info Not seeing the banner?
+:::info[Not seeing the banner?]
 
 Make sure you are connected with the **owner wallet** (the Substrate address that was used during the governance approval). The banner only appears for the registered owner address.
 
@@ -88,7 +88,7 @@ Navigate to **Stake** in the left sidebar. Your project should now appear in the
 
 <Figure caption="dApp rankings table with project listed" src={require('/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/img/developer-dashboard-5.png').default} width="100%" />
 
-:::tip Public page
+:::tip[Public page]
 
 Click your project name in the rankings to open the public page that stakers see. Use this to verify all details look correct before promoting your listing.
 
@@ -118,7 +118,7 @@ Scroll down in the rewards table to see all pending periods and the **Total** cl
 
 Click **Claim your rewards** and sign the transaction. All pending rewards across all listed periods are released in a single transaction.
 
-:::info Reward accrual
+:::info[Reward accrual]
 
 dApp rewards are only earned while your project is in an active tier. A project must hold the required staking threshold (0.93% of total issuance for Tier 2, 0.35% for Tier 3) during the Build&Earn period to generate claimable dApp rewards.
 

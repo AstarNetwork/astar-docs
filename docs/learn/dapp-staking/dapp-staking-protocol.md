@@ -204,7 +204,7 @@ Key details about moving stake:
 - If the destination contract is newly staked, the user's total staked contracts must not exceed the maximum allowed number of staked contracts (same as the staking operation).
 - The destination contract must not be unregistered, but moving stake away from an unregistered contract is allowed.
 
-:::note Legacy/internal compatibility
+:::note[Legacy/internal compatibility]
 
 Older pallet versions may still contain bonus-eligibility and "safe move" bookkeeping for backward compatibility. Tokenomics 3.0 has **no user-facing bonus rewards**, and UIs should not promote or surface bonus mechanics as a user benefit.
 

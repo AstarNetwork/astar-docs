@@ -3,7 +3,7 @@ sidebar_position: 12
 ---
 # Tokenomics 2.0
 
-:::note Historical Reference
+:::note[Historical Reference]
 Tokenomics 2.0 was superseded by [Tokenomics 3.0](/docs/learn/tokenomics3/) in March 2026. This page is kept as a historical reference.
 :::
 

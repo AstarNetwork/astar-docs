@@ -11,7 +11,7 @@ import Figure from "/src/components/figure"
 
 This document is the operational reference for **Community Council members** executing governance and treasury extrinsic calls on Astar Network. It covers five core areas: claiming Community Treasury rewards, executing Community Treasury staking operations, managing dApp Staking listings, and approving treasury spending proposals. Each section is structured around the two primary interfaces available for these operations: [**Polkadot.js Apps**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/) and [**SubSquare**](https://astar.subsquare.io/community-council/motions).
 
-:::info Who is this guide for?
+:::info[Who is this guide for?]
 
 This guide is intended to serve as the primary reference point for ACC members or any authorized member performing operations on behalf of the Community Treasury and its resources.
 
@@ -28,7 +28,7 @@ Understanding the distinction between the **Astar Community Council (ACC)** and 
 
 ### II. Pre-Operation Checklist: When to Claim Rewards First
 
-:::warning Critical Requirement
+:::warning[Critical Requirement]
 
 Before executing **any operation that involves moving or repositioning stake held by the Community Treasury**, including staking, unstaking, and moving stake, **all pending Staker Rewards must be claimed first**. Failure to do so will result in failed transactions.
 
@@ -71,7 +71,7 @@ The Polkadot.js path allows any funded account to claim rewards on behalf of the
 YQnbw3oWxBju7z5CRVoq1K6JzwDaj6DNePwdc2R2fG7jdix
 ```
 
-:::info Good to Know
+:::info[Good to Know]
 
 Anyone can claim staking rewards on behalf of another account. Each single extrinsic call claims up to **16 eras of rewards** (~16 days). When the pending reward period spans multiple era pages, batch calls are required. Refer to [Section II.I.1.2](#12-understanding-era-pagination) for guidance on calculating how many calls are needed.
 
@@ -122,7 +122,7 @@ utility.batch(calls)
 
 <Figure caption="Claiming more than 16 pending eras" src={require('/docs/use/img/extrinsic-calls/acc-extrinsic-calls-3.png').default } width="100%" />
 
-:::tip Number of Calls Required
+:::tip[Number of Calls Required]
 
 The number of `claimStakerRewardsFor` calls needed depends on how many **era page boundaries** have been crossed since the last successful claim. See [Section II.I.1.2](#12-understanding-era-pagination) for the formula and worked examples.
 
@@ -169,7 +169,7 @@ page(era) = floor((era − 1) / 16) + 1
 | Two pages | 24 | 15 | 2 | 2 |
 | Three pages | 50 | 30 | 3 | 3 |
 
-:::tip Tip
+:::tip[Tip]
 
 As a general safeguard: **always include one extra `claimStakerRewardsFor` call** in your batch to handle edge cases at page boundaries.
 
@@ -200,7 +200,7 @@ Before submitting any treasury operation, verify the current claim status using 
 
 <Figure caption="Checking after claimed eras" src={require('/docs/use/img/extrinsic-calls/acc-extrinsic-calls-4.png').default } width="100%" />
 
-:::tip Recommended Workflow Before Any Treasury Operation
+:::tip[Recommended Workflow Before Any Treasury Operation]
 
 Before executing `stake`, `unstake`, or `moveStake` on behalf of the Community Treasury, always follow this sequence:
 
@@ -232,7 +232,7 @@ The Community Treasury is registered as a dApp in dApp Staking and earns **dApp 
 0x101b453a02f961b4e3f0526ecd4c533c3a80d795
 ```
 
-:::info No Motion Required
+:::info[No Motion Required]
 
 dApp Owner Rewards can be claimed by **any funded account**, council membership is not required. The transaction only needs sufficient ASTR for gas fees.
 
@@ -299,7 +299,7 @@ The script outputs:
 
 <Figure caption="Execute the motion to claim dApp Owner Rewards" src={require('/docs/use/img/extrinsic-calls/acc-extrinsic-calls-6.png').default } width="100%" />
 
-:::tip Adjusting the Era Scan Range
+:::tip[Adjusting the Era Scan Range]
 
 By default, the script scans the last **50 eras** (~50 days). You can increase `PAST_ERAS` to cover a longer period, for example setting it to **100** will scan the last 100 eras (~100 days).
 
@@ -347,7 +347,7 @@ The SubSquare path executes reward claims as a Community Council motion, providi
 3. Once the AYE threshold is reached, you can close the motion and the call **executes automatically onchain**.
 4. **Save and share the transaction hash in the ACC Telegram group.**
 
-:::info Threshold Calculation
+:::info[Threshold Calculation]
 
 For the standard **2/3 majority** requirement:
 - 3-member council → threshold = **2**
@@ -357,7 +357,7 @@ Always verify the current council composition before setting the threshold for a
 
 :::
 
-:::warning Call Construction for Treasury Operations
+:::warning[Call Construction for Treasury Operations]
 
 When executing operations that involve Community Treasury funds through a council motion, the call must be routed through `collectiveProxy → executeCall` to act on behalf of the treasury. The **"Community Proxy call"** Quick Start on SubSquare handles this automatically, do not bypass it.
 
@@ -369,7 +369,7 @@ When executing operations that involve Community Treasury funds through a counci
 
 The ACC manages part of the Community Treasury's ASTR holdings through dApp Staking, staking on approved dApps to support the ecosystem while generating staking yield for the treasury. These are governance operations that the ACC can execute on behalf of the Community Treasury, and they include staking on newly approved dApps, unstaking when necessary, and moving stake between dApps when conditions change. During the **annual voting period**, the ACC must re-stake on all active positions to renew them for the new cycle.
 
-:::warning Reward Claiming Requirement for Treasury Staking Operations
+:::warning[Reward Claiming Requirement for Treasury Staking Operations]
 
 Before executing any staking, unstaking, or stake-moving operation, **all pending Staker Rewards must be claimed**. During the annual voting period re-staking, **both Staker Rewards and dApp Owner Rewards must be fully claimed** before any staking transaction is submitted.
 
@@ -441,7 +441,7 @@ communityCouncil.propose(
 
 Use `moveStake` when repositioning stake from one dApp to another. Reward claiming calls can be batched alongside `moveStake` for efficiency.
 
-:::warning Claim Before Moving Stake
+:::warning[Claim Before Moving Stake]
 
 All staker rewards must be claimed before executing `moveStake`. While claim calls can be included in the same batch, executing them separately is recommended:
 
@@ -503,12 +503,12 @@ communityCouncil.propose(
 )
 ```
 
-:::info Important Note
+:::info[Important Note]
 
 This section assumes that the Community Treasury has its tokens locked in dApp Staking. If not, you must first execute the `dAppStaking.lock` function.
 
 :::
-:::tip Batch All Re-Stakes Into a Single Motion
+:::tip[Batch All Re-Stakes Into a Single Motion]
 
 Submitting all re-staking operations in one batched council motion minimizes the number of votes required from council members and reduces coordination overhead during the voting period.
 
@@ -569,12 +569,12 @@ The SubSquare path provides a guided interface for submitting treasury staking c
 8. Click **Submit**.
 9. **Save and share the transaction hash in the ACC Telegram group.**
 
-:::info Important Note
+:::info[Important Note]
 
 This section assumes that the Community Treasury has its tokens locked in dApp Staking. If not, you must first execute the `dAppStaking.lock` function.
 
 :::
-:::tip Council Voting Period
+:::tip[Council Voting Period]
 
 Once a motion is submitted, all ACC members must vote **Aye** within the designated voting period for it to execute automatically onchain. Coordinate the timing of the re-staking motion to align with the council's availability during the voting window.
 
@@ -586,7 +586,7 @@ Once a motion is submitted, all ACC members must vote **Aye** within the designa
 
 The ACC holds the authority to register new dApps in the Astar dApp Staking program and unregister dApps that no longer meet program requirements. Both operations are executed through council motions and carry different voting threshold requirements.
 
-:::info No Reward Claiming Required
+:::info[No Reward Claiming Required]
 
 dApp Staking management operations, registering and unregistering dApps, do **not** interact with the Community Treasury's staking balance. **No reward claiming is required** before proceeding with any operation in this section.
 
@@ -601,7 +601,7 @@ dApp Staking management operations, registering and unregistering dApps, do **no
 
 #### 1.1. Register a dApp
 
-:::info No collectiveProxy Needed
+:::info[No collectiveProxy Needed]
 
 Unlike treasury staking operations, registering a dApp does **not** require routing through `collectiveProxy → executeCall`. The call directly proposes `dappStaking → register` on behalf of the council.
 
@@ -630,7 +630,7 @@ communityCouncil.propose(
 
 #### 1.2. Unregister a dApp
 
-:::warning Higher Threshold Required
+:::warning[Higher Threshold Required]
 
 Unregistering a dApp requires a **4/5 majority** (e.g., 5 out of 6 council members). Ensure the threshold is set correctly before submitting the motion.
 
@@ -677,7 +677,7 @@ communityCouncil.propose(
 
 #### 2.2. Unregister a dApp
 
-:::warning Higher Threshold Required
+:::warning[Higher Threshold Required]
 
 Set the threshold to **4/5** of the current council size (e.g., 5 for a 6-member council).
 
@@ -686,7 +686,7 @@ Set the threshold to **4/5** of the current council size (e.g., 5 for a 6-member
 1. Navigate to [SubSquare Community Council → Motions](https://astar.subsquare.io/community-council/motions) and click **+ New Proposal**.
 2. Select **"Community Proxy call"** from the Quick Start options.
 
-:::info Why Community Proxy Call?
+:::info[Why Community Proxy Call?]
 
 There is no dedicated Quick Start option for dApp unregistration. Use **"Community Proxy call"** and manually select `dappStaking → unregister` in the call builder.
 
@@ -704,7 +704,7 @@ There is no dedicated Quick Start option for dApp unregistration. Use **"Communi
 
 The ACC reviews and votes on spending proposals submitted to the Community Treasury. Each proposal is processed through a council motion to either approve or reject the requested expenditure. Once the required threshold of AYE votes is reached, the outcome executes automatically onchain.
 
-:::info No Reward Claiming Required
+:::info[No Reward Claiming Required]
 
 Approving or rejecting treasury spending proposals is an administrative council action that does not involve moving staking positions. **No reward claiming is required** before proceeding.
 
@@ -777,7 +777,7 @@ SubSquare provides dedicated Quick Start options for treasury proposal approval 
 4. Set the **threshold** to 2/3 of the current council size.
 5. Enter the **Proposal ID**. The proposal name will auto-populate for verification.
 
-:::warning Verify Before Submitting
+:::warning[Verify Before Submitting]
 
 Always confirm the proposal name and details match the intended proposal before submitting the motion. Submitting an approval for the wrong proposal ID cannot be easily undone.
 
@@ -803,7 +803,7 @@ Always confirm the proposal name and details match the intended proposal before 
 5. Click **Submit**.
 6. **Save and share the transaction hash in the ACC Telegram group.**
 
-:::info Proposer Deposit on Rejection
+:::info[Proposer Deposit on Rejection]
 
 When a treasury spending proposal is rejected, the proposer's bond deposit is **slashed**. Ensure the rejection decision has been discussed and agreed upon by the full council before submitting the motion.
 

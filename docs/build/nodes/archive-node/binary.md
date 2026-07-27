@@ -244,4 +244,3 @@ sudo systemctl start astar.service
 ### Snapshot
 
 Please refer to the [**snapshot page**](/docs/build/nodes/snapshots).
-:::
