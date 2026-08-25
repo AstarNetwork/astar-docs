@@ -5,10 +5,21 @@ sidebar_position: 4
 # Snapshots
 
 Generally speaking, using database snapshots is discouraged, it is a best practice to synchronize database from scratch.
-In some particular cases, it may be needed to use a parachain snapshot. Stakecraft is providing archive db snapshots for Astar and Shiden at [https://all4nodes.io/](https://all4nodes.io/).
+In some particular cases, it may be needed to use a parachain snapshot.
+
+:::warning[No snapshot provider is currently available]
+
+StakeCraft discontinued its Astar and Shiden archive snapshot service in August 2026, and no replacement provider has been appointed. Synchronize your node from scratch, or restore from a snapshot you produced yourself.
+
+:::
+
+## Restore from a snapshot
+
+If you maintain your own archive backups, or another operator you trust shares one with you, you can restore it into the node database directory. Replace `{SNAPSHOT_URL}` with the location of your archive.
+
 Note: these are archive snapshots only and they don't work on pruned node.
 
-## Stakecraft snapshots usage
+Stop your node before you replace its database.
 
 ```sh
 # remove your Astar database directory in case you already have one
@@ -20,12 +31,11 @@ mkdir -p {BASE_PATH}/chains/{CHAIN}/db/full
 # browse the directory
 cd {BASE_PATH}/chains/{CHAIN}/db/full
 
-# download latest snapshot
-wget -O - {STAKECRAFT_WEBSITE_SNAPSHOT} | tar xf -
+# download and extract the snapshot
+wget -O - {SNAPSHOT_URL} | tar xf -
 
 # pay attention to file ownership if needed
 chown -R astar:astar {BASE_PATH}/chains/{CHAIN}/db/full
-
 ```
 
 Note: `{BASE_PATH}` is the path specified for chain data in the node command

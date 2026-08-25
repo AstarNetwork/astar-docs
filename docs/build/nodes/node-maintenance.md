@@ -90,4 +90,4 @@ sudo systemctl start {NETWORK}.service
 
 ## Snapshot
 
-Please refer to **snapshot page**(/docs/build/nodes/snapshots).
+Please refer to the [**snapshot page**](/docs/build/nodes/snapshots).
