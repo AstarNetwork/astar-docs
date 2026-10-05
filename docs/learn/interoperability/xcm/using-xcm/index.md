@@ -1,6 +1,6 @@
 # XCM
 
-Astar Network stands as a flexible and highly interoperable decentralized application hub supporting WebAssembly and EVM smart contracts.
+Astar Network stands as a flexible and highly interoperable decentralized application hub supporting EVM smart contracts.
 Astar commonly utilize XCM to leverage assets from other parachains. Furthermore, XCM finds utility within smart contracts to build purely cross-chain dApps, deployed on the EVM.
 
 
