@@ -12,8 +12,7 @@ For every block produced on the network, a segment of inflation is specifically 
 
 Rewards for stakers and developers are generated during the **Build&Earn** phase of dApp staking; the **Voting** phase does not generate staking rewards (Tokenomics 3.0 has no user-facing bonus rewards).
 
-As a dApp gains popularity and attracts more stakers, the developers stand to receive a greater share of block rewards. Importantly, the dApp staking program is inclusive, accommodating projects utilizing EVM and Wasm technologies.
-
+As a dApp gains popularity and attracts more stakers, the developers stand to receive a greater share of block rewards.
 For a more detailed explanation of dApp Staking, refer to the comprehensive presentation in the [About Astar section](/docs/learn/dapp-staking/index.md).
 
 ### User & Developers guides

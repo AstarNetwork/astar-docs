@@ -2,14 +2,14 @@
 
 ## Overview
 
-Astar Substrate is a Multi-VM chain that consists of Astar EVM and Astar Native (Wasm) smart contract environments that are interoperable in nature. This allows developers to create impactful and innovative solutions for end users on top of Astar Substrate, however, it comes at the expense of what is considered good UX.
+Astar Substrate consists of a Native Substrate environment and Astar EVM that are interoperable in nature. This allows developers to create impactful and innovative solutions for end users on top of Astar Substrate, however, it comes at the expense of what is considered good UX.
 
 Astar EVM is powered by Frontier (a combination of pallets and client for emulating EVM networks) which enables Astar Substrate to run a highly ETH equivilent L1 chain on top of a Substrate-based chain. Since both EVM and Native Substrate chains have independent address and signature schemes that are distinct from one another, interoperability between them becomes a challenge.
 
 The Astar Substrate chain consists of:
 
 - Astar Substrate EVM: This is powered by [`frontier`](https://github.com/paritytech/frontier) and uses ETH address schemes where user address is `H160`
-- Astar Substrate Native (Wasm): The address scheme is `AccountId32` where user address is described in `SS58` format.
+- Astar Substrate Native: The address scheme is `AccountId32` where user address is described in `SS58` format.
 
 All the solutions that require performing actions on other VMs, i.e interoperability between VMs like `frontier`, require a deterministic way of converting their addresses to the other VM’s address scheme.
 
@@ -48,7 +48,7 @@ Problems associated with this,
 AU is designed to solve the core problems described above:
 
 - **No double mapping**: This has the most impact since without it we can’t go back on a generated address. For example, if we have a SS58 corresponding to H160, we can’t know which H160 it belonged to.
-- **Users can’t control the generated address:** This is more on UX side, since Astar is a Cross-VM, users are encouraged to engage with both EVM and native Wasm ecosystems equally, but managing two different accounts for two VMs that are not interchangeable with one another is bad UX, from user’s perspective.
+- **Users can’t control the generated address:** This is more on UX side, users are encouraged to engage with both EVM and native Substrate ecosystems equally, but managing two different accounts that are not interchangeable with one another is bad UX, from user’s perspective.
 
 Account Unification (AU) provides users the ability to bind their H160 and SS58 addresses together and create double mappings, which can then be used by low-level solutions that require address conversions, such as EVM (i.e `frontier`).
 

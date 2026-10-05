@@ -7,7 +7,7 @@ sidebar_position: 9
 A few important facts about the Astar ecosystem:
 
 - The majority of crowdloan participants used their Polkadot native addresses (ss58 format), and also make up the majority of dApp staking participants.
-- Although Astar has built a Wasm smart contract platform, most dApps still use the Ethereum Virtual Machine (EVM) and address format (H160), native to MetaMask accounts.
+- Most dApps use the Ethereum Virtual Machine (EVM) and address format (H160), native to MetaMask accounts.
 - DApp staking, which simultaneously provides a basic income for developers, and staking mechanism for users, is a system which both dApp developers and users benefit from.
 
 AstarBase aims to:

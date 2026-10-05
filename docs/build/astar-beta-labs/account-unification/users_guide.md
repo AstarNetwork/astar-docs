@@ -14,7 +14,7 @@ import guide06 from "./img/guide06.png"
 
 Creating a Unified account is simple, however, it's important to understand that this is still an emerging technology. We do not recommend attempting account unification until you are familiar with how it works.
 
-A Unified account provides a simplified experience for end-users of Astar Substrate-based networks. Since on Astar Substrate, native Wasm and the EVM use two different address formats, new users find it challenging to grasp how they function. While both Astar Native and Astar EVM accounts are *typically* required, with unified accounts, users don't have to worry about which wallet they are connected to.
+A Unified account provides a simplified experience for end-users of Astar Substrate-based networks. Since on Astar Substrate, the native side and the EVM use two different address formats, new users find it challenging to grasp how they function. While both Astar Native and Astar EVM accounts are *typically* required, with unified accounts, users don't have to worry about which wallet they are connected to.
 
 ## What is possible?
 

@@ -6,7 +6,7 @@ sidebar_position: 2
 
 An account on Astar Network consists of two parts - a private key and a public key. A public key is also known as an address of an account because it is accessible and known to the public - just like an e-mail address, for example. A private key is a key to access and manage your address. With that said, anybody can send tokens to your address, but only you can access them with your private key. Therefore, it is crucial to keep your private keys safe at all times. 
 
-Astar Network supports two virtual machines (Wasm VM and EVM) and therefore utilizes two account formats. 
+Astar Network utilizes two account formats: Substrate accounts and EVM accounts. 
 
 ## Substrate Accounts
 

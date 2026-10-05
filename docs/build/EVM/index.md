@@ -1,6 +1,6 @@
 # EVM Smart Contracts
 
-All Astar networks support EVM smart contracts except Swanky node.
+All Astar networks support EVM smart contracts.
 
 
 <br/>

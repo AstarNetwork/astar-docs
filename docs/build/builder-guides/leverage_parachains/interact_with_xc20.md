@@ -97,7 +97,7 @@ The owner of the XC20 asset has many high-level accesses. Thus, to ensure the se
 
 ### Send the asset to EVM
 
-Since Astar Network is building a multi-VM smart contract hub, we support both EVM and WASM with two different account systems, H160 and SS58 respectively.
+Astar Network supports two different account systems: H160 for the EVM and SS58 for Substrate-native accounts.
 
 In order to send the asset to an H160 address (address B) from the Substrate-native SS58 address (address A), we need to convert the H160 address to its mapped Substrate-native SS58 address (address B) and send the asset directly from address A to address B via [Polkadot.js](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/accounts).
 

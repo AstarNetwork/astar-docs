@@ -28,7 +28,7 @@ For example, user can download `polkadot` binary together with `astar-collator` 
 
 A quick reminder - `Shibuya` is a test network with no market value used by `Astar & Shiden` team to test features before deploying into production. It uses a custom **Rococo** based Relay Chain. `Shiden` is a production canary-type network connected to `Kusama`. These two parachains aren't aware of one another and do not communicate in live networks.
 
-However, using `zombienet`, users can setup a local test network where one parachain would be `Shibuya` and the other would be `Shiden` with **HRMP** channels opened between them. This is incredibly useful for testing & integration because it gives users the option for cross-chain communication between two smart-contract oriented parachains which support Wasm smart contracts, amongst many other features.
+However, using `zombienet`, users can setup a local test network where one parachain would be `Shibuya` and the other would be `Shiden` with **HRMP** channels opened between them. This is incredibly useful for testing & integration because it gives users the option for cross-chain communication between two smart-contract oriented parachains.
 
 The following instructions will explain how to setup & configure local _Shibuya - Shiden test network_.
 
@@ -50,7 +50,7 @@ For users who already know what they are doing, please check [this](https://gith
 
 7. After a minute or two, block production on both `Shibuya` and `Shiden` should start. This will usually happen after **Relay Chain** reaches block 11, which will trigger a new session. HRMP channels will automatically be configured between the parachains (check the configuration file).
 
-8. The test network is running and users can interract with Relay Chain and both parachains. It is now possible to deploy EVM and Wasm smart contracts, send XCM instructions and do everything else what is possible on live chains. In addition, users have direct access to `Alice` account, which has `sudo` privileges.
+8. The test network is running and users can interract with Relay Chain and both parachains. It is now possible to deploy EVM smart contracts, send XCM instructions and do everything else what is possible on live chains. In addition, users have direct access to `Alice` account, which has `sudo` privileges.
 
 > We will provide automated way of performing these setup actions in the future.
 

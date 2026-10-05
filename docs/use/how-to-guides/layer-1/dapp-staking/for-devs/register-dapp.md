@@ -176,7 +176,6 @@ You can either:
 - Use the provided `helloworld.sol` [template](https://github.com/AstarNetwork/builders-program/blob/main/hellowold.sol) (**for non-technical teams**)
 
 **Supported Networks**:
-- **Astar Native (WASM)**
 - **Astar EVM (Public Endpoints)**
 
 **Verification Tools**:
