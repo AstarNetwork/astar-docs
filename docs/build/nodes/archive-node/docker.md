@@ -145,7 +145,7 @@ docker logs -f -n 100 $(docker ps -aq --filter name="astar-container")
 
 ### Indexers and Oracles
 
-To access data from indexers (like Subsquid) or Oracles (like Chainlink), add the follwing debug flags to the node launch command, after the `astar-collator` line:
+To access data from indexers or Oracles (like Chainlink), add the follwing debug flags to the node launch command, after the `astar-collator` line:
 
 `--ethapi=debug`
 
