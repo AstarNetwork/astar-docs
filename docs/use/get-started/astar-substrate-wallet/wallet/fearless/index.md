@@ -104,7 +104,7 @@ That's it, you can use Fearless Wallet to manage your Astar Assets.
 
 ### 1. Managing your Astar Tokens
 
-You can use Fearless Wallet to manage your ASTR on Acala, Astar, Pendulum and SORA. From the main wallet interface, navigate to the Manage Assets button.
+You can use Fearless Wallet to manage your ASTR on Astar. From the main wallet interface, navigate to the Manage Assets button.
 <Figure caption="" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/fearless/images/fearless-image-14.png').default} width="40%" />
 
 Locate the ASTR token from the list and activate the networks you have assets on. 
