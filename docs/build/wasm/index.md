@@ -1,12 +1,9 @@
 # Wasm Smart Contracts
 
-The **Wasm** section covers the Wasm stack on Astar/Shiden, some more advanced topics, and contains a few tutorials to help you build and deploy Wasm smart contracts.
+:::info
+Wasm smart contracts have been wound down on Astar, Shiden and Shibuya in October 2026. Deploying or interacting with Wasm contracts is no longer supported.
+:::
 
-If you would like to start building right away, we encourage you to check out [**Swanky Suite**](./swanky-suite) - The all-in-one tool for Wasm smart contract developers within the Polkadot ecosystem.
+For background on the sunset, see the [forum announcement](https://forum.astar.network/t/wasm-smart-contract-sunset-on-astar-and-shiden/9516).
 
-<br/>
-
-import DocCardList from '@theme/DocCardList';
-import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
-
-<DocCardList items={useCurrentSidebarCategory().items}/>
+To build smart contracts on Astar, use the [EVM stack](/docs/build/EVM).

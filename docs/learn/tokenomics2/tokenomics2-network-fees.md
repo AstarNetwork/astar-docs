@@ -51,7 +51,7 @@ $$
 - $weight\_fee$ - is the fee related to the weight of the transaction.
 - $c$ - fee multiplier; if network utilization is above ideal, `c` factor will increase, forcing users to pay more. And vice-versa, when network congestion is low, fee multiplier will decrease.
 - $length\_fee$ - this is part of the fee related to the transaction length (number of bytes).
-- $rent\_fee$ - deposit fee for storing data onchain. Detailed explanation of rent fee calculation in case of Wasm transactions can be found under the [in the Build section](/docs/build/wasm/transaction-fees#storage-rent).
+- $rent\_fee$ - deposit fee for storing data onchain. See [Rent Fee](#rent-fee) below.
 - $tip$ - extra payment transaction submitter pays to ensure their transaction gets included faster into a block.
 
 Native fees are inherently dynamic using the fee multiplies `c` which is calculated in each block using the following formulas:
@@ -145,7 +145,6 @@ Some actions which incur _rent_ fee are:
 - creating a multisig call
 - creating an asset & metadata (**NOTE: see table below**)
 - creating a proxy, announcing proxy calls
-- interacting with WASM smart contracts
 
 
 For `pallet-assets` _asset_, creation price is higher than the regular price.

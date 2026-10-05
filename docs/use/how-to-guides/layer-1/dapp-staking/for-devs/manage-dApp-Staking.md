@@ -64,7 +64,7 @@ Scroll down to complete the remaining fields:
 6. **Images** — upload a banner image (recommended 16:9 ratio, under 1 MB)
 7. **Builders information** — add your team members
 8. **Communities** — add links to your community channels (Discord, Telegram, X, etc.)
-9. **Is your project on** — select **WASM+EVM**, **WASM**, or **EVM**
+9. **Is your project on** — select **EVM**
 10. **Choose main category** — select one: DeFi, NFT, Tooling, Utility, or Others
 11. **Tags** — select all relevant tags that describe your project
 

@@ -208,7 +208,7 @@ journalctl -fu astar-collator -n100
 
 ### Indexers and oracles
 
-To access data from indexers (e.g. Subsquid) or Oracles (e.g. Chainlink), you need to add the debug flags below to the node launch command, after the `astar-collator` line:
+To access data from indexers or Oracles (e.g. Chainlink), you need to add the debug flags below to the node launch command, after the `astar-collator` line:
 
 `--ethapi=debug`
 

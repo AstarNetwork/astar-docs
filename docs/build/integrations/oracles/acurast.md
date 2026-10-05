@@ -14,66 +14,20 @@ sidebar_position: 1
 
 Through Acurast developers can arbitrarly fetch data from public or permissioned APIs for the "Oracle" use case such as price feeds for DeFi platforms through a decentralized execution layer of off-chain workers. These [Processors](https://docs.acurast.com/acurast-processors), hosted by individuals, provide the resources of their Trusted Execution Environment that can be utilized to run computation yielding a verifiable output directly on chain. Developers can use the [Acurast Console](https://console.acurast.com/) to create new request and to get access to these interoperability resources.
 
-Acurast supports Astar's **WASM** and **EVM** environments. Contract Examples address can be found below:
+Acurast supports Astar's **EVM** environment.
 
-### Astar Destination Example
-
-WASM Smart Contract: b2o6ENagNWAxQT9f9yHFxfVMSpJA7kK6ouMhNN6veKXi3jw
-
-### Shiden Destination
-
-WASM Smart Contract: 0xDA7a001b254CD22e46d3eAB04d937489c93174C3
-
-## Obtain Data with Acurast on WASM and EVM
+## Obtain Data with Acurast on EVM
 
 ### How to Get Started
 
-1. Deploy one of the example contracts to WASM or EVM
+1. Deploy the example contract to EVM
 1. Define your script detailing where to fetch data, computation etc.
 1. Create a Job on the [Acurast Console](https://console.acurast.com/)
 1. Processors will fulfill verifiable outputs in your defined interval to your contract
 
-### WASM Example
-
-The following example shows simple WASM smart contracts implemented with [ink!](https://use.ink/).
-
-Keep in mind that you can do much more with Acurast and get access to all interoperability modules besides these examples.
-
-```rust
-#![cfg_attr(not(feature = "std"), no_std)]
-
-use ink;
-
-#[ink::contract]
-mod receiver {
-    #[ink(storage)]
-    pub struct Receiver {
-        price: u128,
-    }
-
-    impl Receiver {
-        #[ink(constructor)]
-        pub fn default() -> Self {
-            Self {
-                price: Default::default(),
-            }
-        }
-
-        #[ink(message)]
-        pub fn fulfill(&mut self, price: u128) {
-            self.price = price;
-        }
-
-        #[ink(message)]
-        pub fn get_price(&self) -> u128 {
-            self.price
-        }
-    }
-}
-
-```
-
 ### EVM Example
+
+Keep in mind that you can do much more with Acurast and get access to all interoperability modules besides this example.
 
 ```ts
 pragma solidity 0.8.10;
@@ -96,46 +50,6 @@ contract PriceFeed {
         price = new_price;
     }
 }
-```
-
-### Script
-
-This example script shows how a "Price Feeds" is fetched from Binance and pushed to a WASM smart contract. You can view and test the your script on the Acurast Console.
-
-```js
-const callIndex = "0x4606"; // the call index for the 'call' extrinsic.
-const destination = "b2o6ENagNWAxQT9f9yHFxfVMSpJA7kK6ouMhNN6veKXi3jw"; // contract address that will receive the 'fulfill' call.
-_STD_.chains.substrate.signer.setSigner("SECP256K1"); // the type of signer used for sign the extrinsic call
-httpGET(
-  "https://api.binance.com/api/v3/ticker/price?symbol=AAVEBUSD",
-  {},
-  (response, _certificate) => {
-    const price = JSON.parse(response)["price"] * 10 ** 18;
-    const payload = _STD_.chains.substrate.codec.encodeUnsignedNumber(
-      price,
-      128
-    );
-    _STD_.chains.substrate.contract.fulfill(
-      "https://rpc.astar.network",
-      callIndex,
-      destination,
-      payload,
-      {
-        refTime: "3951114240",
-        proofSize: "125952",
-      },
-      (opHash) => {
-        print("Succeeded: " + opHash);
-      },
-      (err) => {
-        print("Failed fulfill: " + err);
-      }
-    );
-  },
-  (err) => {
-    print("Failed get price: " + err);
-  }
-);
 ```
 
 ### Job Specification

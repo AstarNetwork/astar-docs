@@ -64,7 +64,7 @@ and you will receive some tokens in your MetaMask, on the destination network.
 
 When Tether USD on Astar comes through Statemint, it will be the native USDT token in the Astar ecosystem.
 
-ceUSDT on Astar is a wrapped version of Ethereum USDT, supported by Celer cBridge and liquidity network. Due to this, <strong>ceUSDT is not as versatile as native USDT.</strong> For example, native USDT registered as XC20 can be used for both Wasm and EVM projects in the Astar ecosystem, but bridged (ce)USDT cannot be used for Wasm projects.
+ceUSDT on Astar is a wrapped version of Ethereum USDT, supported by Celer cBridge and liquidity network. Due to this, <strong>ceUSDT is not as versatile as native USDT.</strong>
 
 ## Support
 

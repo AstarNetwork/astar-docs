@@ -20,37 +20,19 @@ Click the "New Project" button.
 
 <Figure src={require('/docs/build/EVM/chainide-for-astar-evm/img/chainIDE2.png').default} width="100%" />
 
-A pop-up window will appear. On the left side of the pop-up, select "Astar," and on the right side, choose the corresponding smart contract environment (EVM or WASM). Then, click to create a project using a template.
+A pop-up window will appear. On the left side of the pop-up, select "Astar," and on the right side, choose the EVM smart contract environment. Then, click to create a project using a template.
 
 <Figure src={require('/docs/build/EVM/chainide-for-astar-evm/img/chainIDE3.png').default} width="100%" />
 
 ### 2. Configure Wallet
 
-Astar IDE provides support for two smart contract environments: EVM and WASM. EVM is compatible with the Metamask wallet, while WASM supports four wallets: Polkadot Wallet, Sub Wallet, Math Wallet, and Talisman Wallet.
+The EVM environment is compatible with the Metamask wallet.
 
 #### 2.1 Wallets Supporting EVM
 
 ##### 2.1.1 Metamask (Recommended)
 
 > https://metamask.io/
-
-#### 2.2 Wallets Supporting WASM
-
-##### 2.2.1 Polkadot Wallet (Recommended)
-
-> https://polkadot.js.org/extension/
-
-##### 2.2.2 Sub Wallet
-
-> https://www.subwallet.app/
-
-##### 2.2.3 Math Wallet
-
-> https://mathwallet.org/
-
-##### 2.2.4 Talisman Wallet
-
-> https://www.talisman.xyz/
 
 ### 3. Acquiring test tokens
 

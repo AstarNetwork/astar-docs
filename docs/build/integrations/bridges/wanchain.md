@@ -63,7 +63,7 @@ USDT @ Wanchain:
 
 ## Native Tether USDT vs. xcUSDT on Astar
 
-Tether issues USDT, the blockchain industry’s biggest stablecoin by means of total market capitalization, on Polkadot’s “common good” generic asset parachain, Statemint. By leveraging XCM, Polkadot’s cross-consensus communication protocol, native Tether USDT can be transferred to parachains like Astar as “xcUSDT”. xcUSDT is more versatile than wrapped USDT and can be used for both Wasm and EVM projects in the Astar ecosystem.
+Tether issues USDT, the blockchain industry’s biggest stablecoin by means of total market capitalization, on Polkadot’s “common good” generic asset parachain, Statemint. By leveraging XCM, Polkadot’s cross-consensus communication protocol, native Tether USDT can be transferred to parachains like Astar as “xcUSDT”. xcUSDT is more versatile than wrapped USDT.
 
 ## How to bridge native Tether USDT from Ethereum to Astar EVM
 
