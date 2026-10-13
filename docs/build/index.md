@@ -2,7 +2,7 @@
 
 ## Why build on Astar?
 
-Astar is a interoperable smart contract platform providing native access to both the Polkadot and Ethereum blockchain ecosystems and supporting both Wasm and EVM environments on its Layer 2 scaling and Parachain-based networks.
+Astar is a interoperable smart contract platform providing native access to both the Polkadot and Ethereum blockchain ecosystems and supporting EVM environments on its Layer 2 scaling and Parachain-based networks.
 
 ## Astar Network Key Features:
 
@@ -18,9 +18,6 @@ Astar is a interoperable smart contract platform providing native access to both
 
 ## Build2Earn
 Astar network's innovative Build2Earn program allows developers to earn a basic income while they build out their products and communities. Users are able to support projects by staking on them, which adds to the passive income developers earn and forms the basis of an *unstoppable grant*. Build2Earn encourages projects to stand out and provide value directly to end-users. See the [dApp staking section](/docs/use/how-to-guides/layer-1/dapp-staking/) for more information.
-
-## Wasm smart contracts
-See the [Wasm chapter](/docs/build/wasm) for more information.
 
 ## EVM smart contracts
 Solidity developers feel right at home building on Astar in both the Polkadot and Ethereum ecosystems. See the [EVM](/docs/build/EVM) section for more information.

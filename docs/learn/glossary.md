@@ -10,9 +10,6 @@ sidebar_position: 5
  ### ASTR
  The native token of Astar. Used for dApp staking.
 
- ### Ask!
- An embedded domain-specific language (eDSL) for writing smart contracts based on AssemblyScript.
-
  ### Bridge 
  A mechanism that allows the transfer of assets or data between two different blockchain networks.
 
@@ -43,9 +40,6 @@ Often abbreviated to DA, Data Availability refers to a component of modular bloc
 
  ### HRMP
  Short for Horizontal Relay-routed Message Passing. A precursor to the complete XCMP implementation, that mimics the same interface and semantics of XCMP.  The plan is to retire HRMP once the implementation of XCMP is complete.
-
- ### Ink!
- An embedded domain-specific language (eDSL) for writing smart contracts based on Rust.
 
  ### Layer 1
   The underlying infrastructure of a blockchain network, which includes the block production mechanism, the data structure, and the rules for validating transactions.
@@ -106,9 +100,6 @@ A concept of layer 2 scaling. Modular blockchain systems move two or more of the
 
  ### Substrate 
  A modular framework for building blockchains. Astar is built with Substrate.
-
- ### Swanky Suite 
- A suite of tools for building Wasm smart contracts on Astar that simplify compilation, deployment and testing.
 
  ### Testnet 
  Short for "test network": an experimental network where testing and development takes place. Networks are often executed on a testnet before they are deployed to a mainnet.

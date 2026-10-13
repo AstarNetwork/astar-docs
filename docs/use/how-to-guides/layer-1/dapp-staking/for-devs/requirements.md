@@ -18,7 +18,7 @@ To qualify for the Astar dApp Staking program, your project must meet one or mor
 
 Your project must be:
 
-- Live and deployed on **Astar Network**: **Astar Native (WASM)** or **Astar EVM**.
+- Live and deployed on **Astar Network**: **Astar EVM**.
 - Functioning with an accessible product.
 - Providing clear value to the Astar ecosystem, such as:
   - Integration of the **ASTR token** (utility, payments, staking, etc.)
@@ -78,7 +78,7 @@ Projects deployed outside the Astar Network must demonstrate:
 To strengthen your application, ensure you:
 
 - Are listed on **[DefiLlama](https://defillama.com/)** (if contributing to TVL).
-- Have **verified smart contracts** on Astar Native, EVM, Soneium, Ethereum or Polkadot.
+- Have **verified smart contracts** on Astar EVM, Soneium, Ethereum or Polkadot.
 - Tag your GitHub repo with `#astar-network` and `#dAppStaking`.
 - (For infrastructure/tools) Submit a PR to [Astar Documentation](https://github.com/AstarNetwork/astar-docs) to be listed.
 
@@ -99,7 +99,7 @@ To strengthen your application, ensure you:
 Include in your forum post:
 
 - An **Astar Native developer wallet** (non-EVM, no Ledger) with enough ASTR for gas fees.
-- A **verified smart contract** on [Astar Native (WASM)](https://astar.subscan.io/) or [Astar EVM](https://astar.blockscout.com/).
+- A **verified smart contract** on [Astar EVM](https://astar.blockscout.com/).
 
 ### 3. Voting Options
 

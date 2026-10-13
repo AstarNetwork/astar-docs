@@ -17,13 +17,13 @@ Here you will find a list of ideas to implement in any of the smart contract env
 - Subscribe to Astar Newsletter.
 
 ## Ideas to build
-These ideas can be implemented as WASM or EVM smart contract. Main intention is for the ink! developers.
+These ideas can be implemented as EVM smart contracts.
 
 ### Pool Together 
-Explore this [project](https://app.pooltogether.com/) and build your own version in ink!
+Explore this [project](https://app.pooltogether.com/) and build your own version.
 
 ### Voting
-Use Ink! v4 with Swanky-node to develop a smart contract which allows people to vote The rules are:
+Develop a smart contract which allows people to vote The rules are:
 
 * Contract owner initializes a set of candidates (2-10). 
 * Lets anyone vote for the candidates.
@@ -31,7 +31,7 @@ Use Ink! v4 with Swanky-node to develop a smart contract which allows people to 
 * Displays the vote totals received by each candidate.
 
 ### Tamagotchi
-Use Ink! v4 with Swanky-node to create a virtual pet smart contract, allowing users to create, interact with, and trade virtual pets securely and transparently on the blockchain.
+Create a virtual pet smart contract, allowing users to create, interact with, and trade virtual pets securely and transparently on the blockchain.
 Create Tamagotchi: The smart contract should allow users to create a Tamagotchi object with attributes such as hunger, happiness, and energy levels.
 
 * Interact with Tamagotchi: Users should be able to interact with the Tamagotchi object by calling functions to modify its attributes, such as "feed", "play", and "rest".
@@ -41,7 +41,7 @@ Create Tamagotchi: The smart contract should allow users to create a Tamagotchi 
     
 ### Charity Raffle
 
-Use Ink! v4 from Swanky-node to develop a smart contract which allows people to enter a charity raffle. The rules are:
+Develop a smart contract which allows people to enter a charity raffle. The rules are:
 
 * A user can send in anywhere between 0.01 and 0.1 tokens.
 * A user can only play once.

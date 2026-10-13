@@ -20,7 +20,7 @@ It's easy to configure MetaMask to interact with the Astar/Shiden network family
 
 ## Transfer Native Tokens to MetaMask
 
-Since Astar Network has built a smart contract hub that supports both EVM and Wasm virtual machines, we need to support two different account types, H160 and SS58 respectively.
+Astar Network supports two different account types: H160 for the EVM and SS58 for Substrate-native accounts.
 
 In order to send an asset to an H160 account (address B) from a Substrate-native ss58 account (address A), we will need to convert the H160 account address to its mapped Substrate-native ss58 account address (address B), before we can send the asset directly from address A to address B using [Polkadot.js](https://polkadot.js.org/apps/).
 

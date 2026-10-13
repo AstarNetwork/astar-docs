@@ -409,11 +409,6 @@ const config: Config = {
             url: "https://docs.astar.network/docs/build/integrations/",
           },
           {
-            title: "WASM smart-contracts",
-            caption: "Build and deploy a smart contract using the WASM tech stack.",
-            url: "https://docs.astar.network/docs/build/wasm/",
-          },
-          {
             title: "EVM smart-contracts",
             caption: "Build and deploy a smart contract using the EVM tech stack.",
             url: "https://docs.astar.network/docs/build/EVM/",

@@ -8,8 +8,7 @@ Before you get started on your journey towards becoming an Astar network hacker,
 Polkadot is a multi-chain environment which enables specialized blockchains (called Parachains) to communicate with each other in a secure, trustless environment.
 
 Astar is a blockchain connected to Polkadot Relay chain, specialized for:
-* Executing all types of smart contracts.
-* Providing a hybrid EVM + Wasm environment with interoperability.
+* Executing EVM smart contracts.
 * Incentivizing ecosystem innovation and providing basic income for dApp developers.
 * Seamlessly aggregating features or assets from parachains in the ecosystem.
 
@@ -53,10 +52,7 @@ Applications that run on a blockchain, often referred to as decentralized applic
 A **smart contract** is a program that runs on a blockchain and executes transactions on behalf of users under specific conditions. Developers can write smart contracts to ensure that the outcomes of programmatically-executed transactions are recorded, and can't be tampered with. Yet, smart contracts operate in a sandboxed environment, where developers don't have access to underlying blockchain functionality, such as  consensus, storage, or transaction layers, and instead, abide by a chain's fixed rules and restrictions. Smart contract developers often accept these limitations as a tradeoff that shortens the development lifecycle, by avoiding having to make core design decisions.
 
 ## Where Do Smart Contracts Execute?
-The Polkadot runtime does not support smart contracts. Smart contracts require a Virtual Machine (VM) environment where contracts can be executed, and the most well-known and widely supported platform being the Ethereum Virtual Machine (EVM). Substrate FRAME contains modules that support Wasm smart contract execution, as well as EVM.
+The Polkadot runtime does not support smart contracts. Smart contracts require a Virtual Machine (VM) environment where contracts can be executed, and the most well-known and widely supported platform being the Ethereum Virtual Machine (EVM). Substrate FRAME contains modules that support EVM smart contract execution.
 
 ### Ethereum Virtual Machine (EVM)
 The Ethereum Virtual Machine (EVM) is a virtual computer with components that enable Ethereum network participants to store data and agree on the state of that data. On a Substrate-based blockchain, the core responsibilities of the EVM are implemented in the EVM pallet, that's responsible for executing Ethereum contract bytecode written in a high level language like Solidity. Astar EVM provides a fully Ethereum Virtual Machine compatible platform, which you can learn more about in the [EVM chapter](/docs/build/EVM).
-
-### Substrate Virtual Machine for Wasm Contracts
-Substrate also ships with a module for smart contracts, called `pallet-contracts`. If a parachain is developed on Substrate it can easily add smart contract functionality by including this pallet. Astar supports this Polkadot Native approach to smart contracts, and you can learn more in the [Wasm chapter](/docs/build/wasm).

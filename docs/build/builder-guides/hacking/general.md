@@ -12,7 +12,7 @@ Please read the linked chapter and try to answer questions. If you can't find th
 * Is Kusama a parachain?
 * Is Astar a parachain on the Polkadot Relay Chain?
 * Does Astar use Substrate pallets as building blocks?
-* What is the pallet/module name which enables execution of Wasm smart contracts in a Substrate node?
+* What is the pallet/module name which enables execution of EVM smart contracts in a Substrate node?
 
 
 ### Interact with the Node [Chapter](/docs/build/introduction/node_interact)

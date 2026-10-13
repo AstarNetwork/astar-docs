@@ -34,7 +34,7 @@ Astar Collective, with the ASTR token, supports two mainnets:
 
 ### Astar Network (Parachain)
 
-Astar parachain is connected to Polkadot Relay chain supporting WASM & EVM smart contract deployments.
+Astar parachain is connected to Polkadot Relay chain supporting EVM smart contract deployments.
 The Astar native token symbol is ASTR.
 
 ### Soneium
