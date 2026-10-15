@@ -1,49 +1,31 @@
 ---
 sidebar_position: 5
-sidebar_label: AstarPass
-title: Register or Unregister AstarPass
+sidebar_label: AstarPass (retired)
+title: AstarPass and ShidenPass (retired)
 ---
 
-*AstarPass is the mapping between your Astar Native Address and your Astar EVM address. Holding the AstarPass will allow different projects in the Astar Network to offer something extra for you.*
+:::info
+The AstarPass and ShidenPass websites have been retired. Astar Foundation stopped supporting them at the end of Q1 2024 (see the [forum announcement](https://forum.astar.network/t/important-update-sunsetting-astar-pass-and-introduction-of-account-unification/5860)), and the sites are no longer online. New registrations through the website are not possible.
+:::
 
-## Register AstarPass
+AstarPass was the mapping between an Astar Native (SS58) address and an Astar EVM (H160) address, stored in the [AstarBase](/docs/build/EVM/astarbase) smart contract. ShidenPass was the same thing on Shiden.
 
-This section will guide you on how to register AstarPass or ShidenPass.
+## What still works
 
-1. Before registering, ensure you have both Native and EVM wallets.
-2. The EVM wallet must contain at least 0.01 ASTR for AstarPass and 0.01 SDN for ShidenPass for gas fees.
-3. For AstarPass, register [here](https://astarpass.astar.network/#/register). For ShidenPass, register [here](https://shidenpass.astar.network/#/register).
-4. Connect both Native and EVM wallets as required.
-5. You will be prompted to sign the transaction on the EVM wallet.
-6. Once the transaction is complete, your registration status will be displayed on the screen.
+- The AstarBase contracts remain on-chain. Existing registrations are still readable, and dApps can still query them (`isRegistered()`, `checkStakerStatus()`, `addressMap()`). See the [AstarBase developer page](/docs/build/EVM/astarbase).
+- Registering and unregistering remain possible at the contract level, but there is no official user interface for it any more.
 
-![image](https://user-images.githubusercontent.com/37278708/218656434-f8043acb-fc81-46e9-a664-5f124d675680.png)
+## Unregister an existing AstarPass
 
+If you want to remove your registration, call `unRegister()` on the AstarBase contract from the EVM wallet you registered with. The call is payable: send the unregister fee with it.
 
-## Unregister AstarPass
+| Network | Contract | Fee |
+|---|---|---|
+| Astar | [`0x8E2fa5A4D4e4f0581B69aF2f8F2Ef2CF205aE8F0`](https://astar.blockscout.com/address/0x8E2fa5A4D4e4f0581B69aF2f8F2Ef2CF205aE8F0?tab=write_proxy) (Blockscout, "Write proxy" tab) | 500 ASTR plus gas |
+| Shiden | [`0x25257be737210F72DA4F51aCB66903A7520e59d6`](https://shiden.subscan.io/account/0x25257be737210F72DA4F51aCB66903A7520e59d6) | 1 SDN plus gas |
 
-Follow these steps to unregister AstarPass:
+1. Connect the EVM wallet you wish to unregister.
+2. Open `unRegister` and set the value sent with the call to the fee (500 ASTR on Astar, 1 SDN on Shiden).
+3. Sign the transaction. The fee is deducted from your wallet and the mapping is removed.
 
-1. Ensure you have 500 ASTR plus gas in your EVM wallet, as there is a fee of 500 ASTR.
-2. Unregister [here](https://blockscout.com/astar/address/0x8E2fa5A4D4e4f0581B69aF2f8F2Ef2CF205aE8F0/write-proxy#address-tabs).
-3. As shown in the screenshot, on Row 11, enter `500` and click `Write`.
-
-![image](https://user-images.githubusercontent.com/37278708/218657946-4e53e708-a68b-4571-ba24-4a935bb56086.png)
-
-4. You will be prompted to sign a transaction on Metamask. Make sure to use the wallet you wish to unregister.
-5. If needed, switch to the correct wallet and sign the transaction.
-6. Sign the transaction, and 500 ASTR will be deducted from your wallet.
-
-## Unregister ShidenPass
-
-Follow these steps to unregister ShidenPass:
-
-1. Ensure you have 1 SDN plus gas in your EVM wallet, as there is a fee of 1 SDN.
-2. Unregister [here](https://blockscout.com/shiden/address/0x25257be737210F72DA4F51aCB66903A7520e59d6/write-proxy#address-tabs).
-3. As shown in the screenshot, on Row 12, enter `1` and click `Write`.
-
-![image](https://user-images.githubusercontent.com/37278708/218659211-1d90fab0-89c2-4915-8ec4-aa5885b7fefd.png)
-
-4. You will be prompted to sign a transaction on Metamask. Make sure to use the wallet you wish to unregister.
-5. If needed, switch to the correct wallet and sign the transaction.
-6. Sign the transaction, and 1 SDN will be deducted from your wallet.
+Contract addresses for all networks are listed in the [AstarBase repository](https://github.com/AstarNetwork/astarbase/blob/main/contract/deployment-info.md).
