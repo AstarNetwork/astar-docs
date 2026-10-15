@@ -4,6 +4,10 @@ sidebar_position: 9
 
 # AstarBase
 
+:::info
+The AstarPass and ShidenPass registration websites were retired at the end of Q1 2024 ([forum announcement](https://forum.astar.network/t/important-update-sunsetting-astar-pass-and-introduction-of-account-unification/5860)). The AstarBase contracts stay on-chain: existing registrations remain readable and the functions below still work, but there is no official user interface for new registrations any more.
+:::
+
 A few important facts about the Astar ecosystem:
 
 - The majority of crowdloan participants used their Polkadot native addresses (ss58 format), and also make up the majority of dApp staking participants.
@@ -123,7 +127,7 @@ A new project coming to Astar ecosystem would like to attract users by issuing a
 
 ## Example Use Case: Rewards for Participants
 
-A project is using dApp staking as basic income, and would like to reward staking participants who are specifically staking on their dApp. Since those stakers use their native Astar address (s58),and the project is based on EVM, there is no way to issue EVM-based rewards. Astarbase, though, gives them the opportunity to do so, as long as they are registered for an AstarPass.
+A project is using dApp staking as basic income, and would like to reward staking participants who are specifically staking on their dApp. Since those stakers use their native Astar address (s58),and the project is based on EVM, there is no way to issue EVM-based rewards. Astarbase, though, gives them the opportunity to do so, as long as the stakers have an existing AstarPass registration in AstarBase.
 
 `if ASTARBASE.checkStakerStatusOnContract(address evmAddress, address stakingContract) > 0;`
 
