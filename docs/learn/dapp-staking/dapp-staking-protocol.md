@@ -92,7 +92,7 @@ To continue the previous example where era length is **100** blocks, let's assum
 
 Projects, or _dApps_, must be registered into protocol to participate.
 Only a privileged origin can perform dApp registration.
-At the moment of writing this, dApps & projects can request to be registered via Astar's forum.
+A project first applies on the Astar forum, then its registration must be approved onchain by governance, through a Community Council motion or a public referendum. See [Register a dApp](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/register-dapp) for the full process.
 
 Once the dApp has been registered, stakers can stake on it immediately, and it can earn rewards from the era in which it was registered.
 

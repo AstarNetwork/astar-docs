@@ -117,7 +117,6 @@ Create a dedicated directory for the **chain storage data**:
 sudo mkdir /var/lib/astar
 ```
 
-zeafr
 Before running a collator, you have to create a node identity key.
 
 <Tabs>

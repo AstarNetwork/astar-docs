@@ -12,7 +12,7 @@ This page is intended for developers & builders.
 
 Finding the right environment for testing XCM features, both standalone or with smart contracts, can be difficult since it requires at least two parachains with open HRMP channels and a Relay Chain. The parachains need to have the features we rely on in testing.
 
-At the moment, only production networks, like `Astar` or `Shiden`, have access to a great number of HRMP channels with various parachains. Testing in production isn't a good idea though and should be avoided. A possible alternative is to use `Rococo` as a Relay Chain and the connected parachains, if they are available. Not all projects deploy a testnet on Rococo.
+At the moment, only production networks, like `Astar` or `Shiden`, have access to a great number of HRMP channels with various parachains. Testing in production isn't a good idea though and should be avoided. A possible alternative is to use `Paseo` as a Relay Chain and the connected parachains, if they are available. Not all projects deploy a testnet on Paseo.
 
 ## Zombienet
 
@@ -26,7 +26,7 @@ For example, user can download `polkadot` binary together with `astar-collator` 
 
 ### Overview
 
-A quick reminder - `Shibuya` is a test network with no market value used by `Astar & Shiden` team to test features before deploying into production. It uses a custom **Rococo** based Relay Chain. `Shiden` is a production canary-type network connected to `Kusama`. These two parachains aren't aware of one another and do not communicate in live networks.
+A quick reminder - `Shibuya` is a test network with no market value used by `Astar & Shiden` team to test features before deploying into production. It runs as a parachain of the **Paseo** Relay Chain, a community-run Polkadot testnet. `Shiden` is a production canary-type network connected to `Kusama`. These two parachains aren't aware of one another and do not communicate in live networks.
 
 However, using `zombienet`, users can setup a local test network where one parachain would be `Shibuya` and the other would be `Shiden` with **HRMP** channels opened between them. This is incredibly useful for testing & integration because it gives users the option for cross-chain communication between two smart-contract oriented parachains.
 

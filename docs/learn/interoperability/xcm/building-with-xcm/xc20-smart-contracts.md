@@ -10,7 +10,7 @@ Here is an example staking contract we’ll be using for the demonstration (for 
 
 :::note
 XC20 address of relay chain token (KSM and DOT) is `0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF` (because `Id` `340,282,366,920,938,463,463,374,607,431,768,211,455` to hex is `FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`).     
-To use this address inside a solidity smart-contract, check sum of the address should be respected. Please use [toChecksumAddress](https://web3-tools.netlify.app/) converter that will convert your address.     
+To use this address inside a solidity smart-contract, check sum of the address should be respected. You can get the checksummed form with `ethers.getAddress()` from [ethers.js](https://docs.ethers.org/v6/api/address/#getAddress), or any EIP-55 checksum tool.     
 for example `0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF` will be converted to `0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF`
 :::
 

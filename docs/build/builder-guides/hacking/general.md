@@ -18,7 +18,7 @@ Please read the linked chapter and try to answer questions. If you can't find th
 ### Interact with the Node [Chapter](/docs/build/introduction/node_interact)
 Connect to Astar Network using Polkadot-JS UI,
 * How many blocks are produced by Astar Network so far?
-* What it the value set for the constant called `blocksPerEra` in the `dappsStaking` pallet?
+* How many blocks are there in a dApp Staking era? (Hint: use the `dappStakingApi.blocksPerEra` runtime call.)
 
 ### Accounts [Chapter](/docs/build/introduction/create_account)
 * Did you safely store key seed? How many seed words are used to create your key?

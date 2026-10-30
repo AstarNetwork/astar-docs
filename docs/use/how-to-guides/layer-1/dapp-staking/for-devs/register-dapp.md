@@ -179,8 +179,7 @@ You can either:
 - **Astar EVM (Public Endpoints)**
 
 **Verification Tools**:
-- [Subscan](https://astar.subscan.io/) (for Astar Native)
-- [Blockscout](https://blockscout.com/astar) (for Astar EVM)
+- [Blockscout](https://astar.blockscout.com/) (for Astar EVM)
 
 ---
 

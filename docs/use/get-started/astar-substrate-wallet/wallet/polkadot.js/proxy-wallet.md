@@ -30,7 +30,11 @@ To see complete list of functionality, checkout the source code in Astar repo.
 
 6. **CancelProxy** - This proxy type allows delegate account to  to reject and remove any announced proxy calls.
 
-7. **DappsStaking** - This proxy type allows delegate account to perform DappStaking related transactions such as register, unregister contracts, claim rewards etc.
+7. **DappStaking** - This proxy type allows delegate account to perform dApp Staking related transactions such as locking, staking, unstaking and claiming rewards.
+
+8. **StakerRewardClaim** - This proxy type only allows delegate account to claim staker rewards from dApp Staking.
+
+9. **Governance** - This proxy type allows delegate account to perform governance related transactions.
 
 
 ### Extrinsics
@@ -40,9 +44,9 @@ The proxy pallet provides the following extrinsics (functions):
 
 * **announce**(real, callHash) - used to record the announcement of a proxy transaction made by proxy accounts that have a delay requirement. This function emits an Announced event.
 
-* **anonymous**(proxyType, delay, index) - generates a new account with an inaccessible private key, making it inaccessible. The sender assumes the role of a proxy for this account, based on the specified type and delay. Caution: If the proxy is removed, the primary account will become inaccessible. This function emits an AnonymousCreated event.
+* **createPure**(proxyType, delay, index) - generates a new account with an inaccessible private key, making it inaccessible. The sender assumes the role of a proxy for this account, based on the specified type and delay. Caution: If the proxy is removed, the primary account will become inaccessible. This function emits a PureCreated event.
 
-* **killAnonymous**(spawner, proxyType, index, height, extIndex) - removes a previously spawned anonymous proxy.
+* **killPure**(spawner, proxyType, index, height, extIndex) - removes a previously spawned pure proxy.
 
 * **proxy**(real, forceProxyType, call) - performs a transaction as a proxy. This function emits a ProxyExecuted event.
 
@@ -133,7 +137,7 @@ Check out this [**video**](https://www.youtube.com/watch?v=3L7Vu2SX0PE) by Polka
 
 6. Select the **delegate** account for the proxy;
 
-7. In the proxyType drop-down list, you can choose **Any** to give full access to the proxy account, or select a specific `palette`, for example **Balances**, **dAppStaking**, etc. 
+7. In the proxyType drop-down list, you can choose **Any** to give full access to the proxy account, or select a specific `palette`, for example **Balances**, **DappStaking**, etc. 
 
 8. ***(Optional)*** Add a time delay: If desired, you may have the option to add a time delay to the transaction. This adds an extra layer of security by requiring the primary account to review the pending transaction before it is executed. Specify the desired number of blocks for the time delay;
 

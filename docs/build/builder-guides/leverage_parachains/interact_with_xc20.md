@@ -35,7 +35,7 @@ Currently, the best way to create XC20 asset is via [Polkadot.js](https://polkad
 
 - Please visit [Polkadot.js](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/explorer)
 - Go to `Network` → `Asset` → `Create`
-    - **Note**: please make sure to have at least 100 ASTR in the wallet when creating XC20 asset on Astar Network.
+    - **Note**: please make sure to have enough SBY in the wallet when creating the XC20 asset on Shibuya. Testnet SBY is available from the faucet. On Astar Network, the equivalent requirement is at least 100 ASTR.
 - Please set the following parameters for your asset
     - `creater account`: the account that will create this asset and set up the initial metadata.
     - `asset name`: the descriptive name for this asset, e.g. Cookbook Token.
@@ -142,7 +142,7 @@ In the following section, we will demonstrate how to interact with the Cookbook 
 💡 In order for an account to receive some of the **XC20** asset, it has to hold some native token. This can be bypassed if `isSufficient` is sufficient is set to `true`.
 :::
 
-The Solidity Interface of Mintable XC20 on Astar includes IERC20 and IERC20Plus interfaces, which are declared in [ERC20.sol](https://github.com/AstarNetwork/astar-frame/blob/polkadot-v0.9.33/precompiles/assets-erc20/ERC20.sol), and are as follows:
+The Solidity Interface of Mintable XC20 on Astar includes IERC20 and IERC20Plus interfaces, which are declared in [ERC20.sol](https://github.com/AstarNetwork/Astar/blob/master/precompiles/assets-erc20/ERC20.sol), and are as follows:
 
 ```solidity
 interface IERC20 {
@@ -236,4 +236,4 @@ Please feel free to join our [Discord](https://discord.gg/astarnetwork) for tech
 
 ## Reference
 
-- [ERC20.sol](https://github.com/AstarNetwork/astar-frame/blob/polkadot-v0.9.33/precompiles/assets-erc20/ERC20.sol)
+- [ERC20.sol](https://github.com/AstarNetwork/Astar/blob/master/precompiles/assets-erc20/ERC20.sol)

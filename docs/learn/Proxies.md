@@ -23,7 +23,11 @@ Currently this type is covering System, Identity, Multisig, Proxy, DappStaking, 
 
 6. **CancelProxy** - This proxy type allows delegate account to  to reject and remove any announced proxy calls.
 
-7. **DappsStaking** - This proxy type allows delegate account to perform DappStaking related transactions such as register, unregister contracts, claim rewards etc.
+7. **DappStaking** - This proxy type allows delegate account to perform dApp Staking related transactions such as locking, staking, unstaking and claiming rewards.
+
+8. **StakerRewardClaim** - This proxy type only allows delegate account to claim staker rewards from dApp Staking.
+
+9. **Governance** - This proxy type allows delegate account to perform governance related transactions.
 
 8. **Governance** - This proxy type allows delegate account to perform Governance related transactions such as voting on a proposal, reserve funds to create preimages, proposals or treasury requests, etc.
 
@@ -34,9 +38,9 @@ The proxy pallet provides the following extrinsics (functions):
 
 * **announce**(real, callHash) - used to record the announcement of a proxy transaction made by proxy accounts that have a delay requirement. This function emits an Announced event.
 
-* **anonymous**(proxyType, delay, index) - generates a new account with an inaccessible private key, making it inaccessible. The sender assumes the role of a proxy for this account, based on the specified type and delay. Caution: If the proxy is removed, the primary account will become inaccessible. This function emits an AnonymousCreated event.
+* **createPure**(proxyType, delay, index) - generates a new account with an inaccessible private key, making it inaccessible. The sender assumes the role of a proxy for this account, based on the specified type and delay. Caution: If the proxy is removed, the primary account will become inaccessible. This function emits a PureCreated event.
 
-* **killAnonymous**(spawner, proxyType, index, height, extIndex) - removes a previously spawned anonymous proxy.
+* **killPure**(spawner, proxyType, index, height, extIndex) - removes a previously spawned pure proxy.
 
 * **proxy**(real, forceProxyType, call) - performs a transaction as a proxy. This function emits a ProxyExecuted event.
 

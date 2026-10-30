@@ -80,7 +80,7 @@ After successful verification, you can view the link to the verified contract on
 
 ### 9. Astar EVM Sandbox
 
-If you prefer using the command line for development, you can open the Astar EVM Sandbox, which comes pre-loaded with [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Brownie](https://eth-brownie.readthedocs.io/en/stable/) [Ganache](https://trufflesuite.com/ganache/), [Git](https://git-scm.com/) and [Node.js V16](https://nodejs.org/en).
+If you prefer using the command line for development, you can open the Astar EVM Sandbox, which comes pre-loaded with [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Brownie](https://eth-brownie.readthedocs.io/en/stable/) [Ganache](https://trufflesuite.com/ganache/), [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en).
 
 <Figure src={require('/docs/build/EVM/chainide-for-astar-evm/img/chainIDE17.png').default} width="100%" />
 

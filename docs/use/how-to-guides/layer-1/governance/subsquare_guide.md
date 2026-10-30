@@ -441,7 +441,7 @@ This is more complex since it requires the Council to understand the basics of d
 
 The first thing to select is the threshold. This can be calculated by taking the expected vote threshold (e.g. 50% or 2/3 of the quorum) and comparing it to the total number of members in the council. 
 
-For this particular case, the threshold is set to 2/3 of the council members and we have 3 council members so we set it to 2.
+For this particular case, the threshold is set to 2/3 of the council members and the Community Council has 6 members, so we set it to 4.
 
 **Step 3: Call Builder**
 
@@ -479,7 +479,7 @@ For this example, we will select the third option from the Quick Start: `Registe
 
 The first thing to select is the threshold. This can be calculated by taking the expected vote threshold (e.g. 50% or 2/3 of the quorum) and comparing it to the total number of members in the council. 
 
-For this particular case, the threshold is set to 2/3 of the council members and we have 3 council members so we set it to 2.
+For this particular case, the threshold is set to 2/3 of the council members and the Community Council has 6 members, so we set it to 4.
 
 **Step 3: Use the dappStaking extrinsic**
 
