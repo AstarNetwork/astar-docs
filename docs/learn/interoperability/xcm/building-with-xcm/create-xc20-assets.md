@@ -85,7 +85,7 @@ The hex value that was already generated in the example is 7 characters long, so
 For this example, the full address is `0xFFFFFFFF00000000000000000000000001310dD5`.
 
 :::note
-To use this address inside a solidity smart-contract, check sum of the address should be respected. Please use [toChecksumAddress](https://web3-tools.netlify.app/) converter that will convert your address.     
+To use this address inside a solidity smart-contract, check sum of the address should be respected. You can get the checksummed form with `ethers.getAddress()` from [ethers.js](https://docs.ethers.org/v6/api/address/#getAddress), or any EIP-55 checksum tool.     
 for example `0xFFFFFFFF00000000000000000000000001310dD5` will be converted to `0xfFFfffFF00000000000000000000000001310dD5`
 :::
 

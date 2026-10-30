@@ -96,7 +96,7 @@ After creating your proposal, we will inform our community, and it is expected t
 
 ### Onboarding on Testnet
 
-The first step is for the parachain to onboard their testnet to the Rococo Relay Chain. Once that is done, you should inform us about your endpoint and parachain Id.
+The first step is for the parachain to onboard their testnet to the Paseo Relay Chain. Once that is done, you should inform us about your endpoint and parachain Id.
 
 - Exchange public endpoints.
 - Exchange parachain-Ids.
@@ -105,4 +105,4 @@ We will open channels, register assets and initiate test transfers.
 
 ### Opening an HRMP Channel
 
-After testing on Rococo, we will begin the process of opening the HRMP channel, and if necessary, will also initiate the process of adding the XCM asset.
+After testing on Paseo, we will begin the process of opening the HRMP channel, and if necessary, will also initiate the process of adding the XCM asset.

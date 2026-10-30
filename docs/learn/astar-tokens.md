@@ -4,7 +4,7 @@ sidebar_position: 3
 # Astar Token
 
 ## Overview
-The native token of Astar Network is Astar Token, with the ticker ASTR. The initial supply of ASTR was 7,000,000,000 units.  The current tokenomics model of the network is inflationary and the inflation is estimated to be ~665,000,000 yearly. 
+The native token of Astar Network is Astar Token, with the ticker ASTR. The initial supply of ASTR was 7,000,000,000 units.  Under the current model, [Tokenomics 3.0](/docs/learn/tokenomics3) (live since March 2026), yearly inflation is capped at 5.5% and emission decays every block, so total supply converges toward roughly 10 billion ASTR over the long term.
 ASTR token has 18 decimals. 
 At the genesis, ASTR were allocated as follows: 
 

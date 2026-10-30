@@ -93,10 +93,9 @@ function transfer_multiasset_with_fee(
 Transfer several tokens at once through XCM based on its address specifying fee
 
 ```solidity
-function transfer_multiasset_with_fee(
-    Multilocation memory asset,
-    uint256 amount,
-    uint256 fee,
+function transfer_multi_currencies(
+    Currency[] memory currencies,
+    uint32 feeItem,
     Multilocation memory destination,
     WeightV2 memory weight
 ) external returns (bool);

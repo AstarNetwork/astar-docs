@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 
 **Polkadot (DOT)** and **Polkadot Migration** are Ledger-integrated apps that allow users to use a Ledger device as an account and sign transactions for substrate accounts.
 
-- [Release Version `100.0.8` by Zondax](https://github.com/Zondax/ledger-polkadot/releases/tag/v100.0.8) 
+- [Latest release by Zondax](https://github.com/Zondax/ledger-polkadot/releases/latest) 
 
 **Ledger Live is not supported hence user will not be able to create Astar accounts with Ledger Live**.
 
@@ -44,7 +44,7 @@ At the time of this release, **XCM transfers** operations are **NOT SUPPORTED** 
 
 1. Open **My Ledger** in Ledger Live;
 2. Connect and unlock your Ledger device. If asked, allow `My Ledger` to access your device;
-3. Search for **Polkadot Migration** (Version `100.0.8`) in the app catalog;
+3. Search for **Polkadot Migration** (latest version) in the app catalog;
 4. Click Install. 
 
 <Figure src={require('/docs/use/get-started/astar-substrate-wallet/wallet/ledger/img/polkadot_migration_ledger.png').default} width="90%" />
@@ -132,7 +132,7 @@ The **Polkadot Migration** app will remain available for an extended period, but
 
 1. Open **My Ledger** in Ledger Live;
 2. Connect and unlock your Ledger device. If asked, allow `My Ledger` to access your device;
-3. Search for **Polkadot (DOT)** (Version `100.0.8`) in the app catalog;
+3. Search for **Polkadot (DOT)** (latest version) in the app catalog;
 4. Click Install. 
 
 <Figure src={require('/docs/use/get-started/astar-substrate-wallet/wallet/ledger/img/polkadot_ledger.png').default} width="90%" />

@@ -17,7 +17,7 @@ Regular _Substrate-style_ SS58 accounts can be used to participate in governance
 
 `Astar` reuses Polkadot’s so-called **v1** governance model due to its practicality. The core idea is to further decentralize the network, but not completely re-invent the wheel.
 
-Users are advised to refer to [the official docs](https://wiki.polkadot.network/docs/learn/learn-governance) to learn more about how _Gov v1_ works.
+Users are advised to refer to [the official docs](https://wiki.polkadot.com/learn/learn-polkadot-opengov/#governance-v1-vs-polkadot-opengov) to learn more about how _Gov v1_ works.
 
 The **Main Council** and the **Technical Committee** will be used the same as in the linked documentation.
 
@@ -36,7 +36,7 @@ Users can steer the direction of the network while earning rewards.
 
 ## Quick Overview
 
-To avoid duplicating the [official Polkadot Gov v1 documentation](https://wiki.polkadot.network/docs/learn/learn-governance), here is a quick overview of the governance system in `Astar`.
+To avoid duplicating the [official Polkadot Gov v1 documentation](https://wiki.polkadot.com/learn/learn-polkadot-opengov/#governance-v1-vs-polkadot-opengov), here is a quick overview of the governance system in `Astar`.
 
 * Before a proposal can be made, a _preimage_ of the call must be submitted onchain. This is essentially the proposal logic the submitter wishes to execute (e.g., upgrade the runtime, transfer funds).
 

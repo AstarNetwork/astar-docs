@@ -6,7 +6,7 @@ import Figure from '/src/components/figure'
 
 # Astar Safe (Gnosis Safe)
 
-Build on the Gnosis Safe infrastructure: take advantage of the most modular, flexible, and secure wallet and identity solution in Ethereum. Astar Safe is available on Astar, Shiden, Shibuya, and zKatana networks.
+Build on the Gnosis Safe infrastructure: take advantage of the most modular, flexible, and secure wallet and identity solution in Ethereum. Astar Safe is available on Astar, Shiden, and Shibuya networks.
 
 ## Create a Safe
 

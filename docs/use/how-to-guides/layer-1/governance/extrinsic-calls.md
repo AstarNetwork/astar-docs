@@ -9,7 +9,7 @@ import Figure from "/src/components/figure"
 
 ## I. Introduction
 
-This document is the operational reference for **Community Council members** executing governance and treasury extrinsic calls on Astar Network. It covers five core areas: claiming Community Treasury rewards, executing Community Treasury staking operations, managing dApp Staking listings, and approving treasury spending proposals. Each section is structured around the two primary interfaces available for these operations: [**Polkadot.js Apps**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/) and [**SubSquare**](https://astar.subsquare.io/community-council/motions).
+This document is the operational reference for **Community Council members** executing governance and treasury extrinsic calls on Astar Network. It covers four core areas: claiming Community Treasury rewards, executing Community Treasury staking operations, managing dApp Staking listings, and approving treasury spending proposals. Each section is structured around the two primary interfaces available for these operations: [**Polkadot.js Apps**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/) and [**SubSquare**](https://astar.subsquare.io/community-council/motions).
 
 :::info[Who is this guide for?]
 

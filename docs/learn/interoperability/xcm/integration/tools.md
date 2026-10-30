@@ -31,7 +31,7 @@ For calculating a sibling parachain's sovereign account address, use the followi
 5Eg2fntKDrAxhaGuB3idrxCFu3BveuyB1MooVPYuj2jaoSsw
 ```
 
-E.g. this will be the sovereign account address of Astar on Statemint.
+E.g. this will be the sovereign account address of Astar on Polkadot Asset Hub.
 Replace 2006 with the parachain Id you require.
 
 ## XC20 Address
