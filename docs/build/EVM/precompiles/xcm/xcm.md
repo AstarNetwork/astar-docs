@@ -241,7 +241,6 @@ XCM.Multilocation memory asset = XCM.Multilocation({
 
 #### Builder Guides
 
-Two builder guides on the subject of EVM XCM are available in the Builder section:
+A builder guide on the subject of EVM XCM is available in the Builder section:
 
-- [How to create and interact with a mintable XC20 asset via Solidity smart contract](../../../builder-guides/leverage_parachains/interact_with_xc20.md)   
-- [How to set up a Zombienet for XCM testing](../../../builder-guides/leverage_parachains/zombienet.md)  
+- [How to create and interact with a mintable XC20 asset via Solidity smart contract](../../../builder-guides/leverage_parachains/interact_with_xc20.md)     
