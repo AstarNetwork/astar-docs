@@ -4,16 +4,16 @@ sidebar_position: 0
 
 # Envio
 
-[Envio](https://envio.dev/?utm_source=astar&utm_medium=partner-docs) is a high-performance indexing framework that turns smart contract events into a queryable GraphQL API, with managed hosting on Envio Cloud.
+[Envio](https://envio.dev/?utm_source=astar&utm_medium=partner-docs) builds custom blockchain APIs and analytics. Astar developers can use HyperIndex to choose the contracts and events to track, write TypeScript handlers and query the result through a GraphQL API, then run it themselves or deploy to Envio Cloud.
 
-HyperIndex, Envio's indexing framework, natively supports indexing any EVM chain out of the box. That means you can index Astar's EVM environments today using RPC as the data source, with dedicated guides for Astar zkEVM and Astar zKyoto.
+HyperIndex works with Astar's EVM networks using RPC as the data source, with dedicated guides for Astar zkEVM and Astar zKyoto.
 
-## Why Envio?
+## Features
 
-- Native support for any EVM chain, including Astar, out of the box
+- Works with Astar's EVM networks over RPC
 - Real-time and historical data through a single GraphQL API
 - Automatic indexer generation from a contract address with `pnpx envio init`
-- TypeScript, JavaScript, or ReScript event handlers, with reorg support
+- TypeScript event handlers, with reorg support
 - Managed hosting on Envio Cloud, or self-host your own deployment
 
 ## Indexing Astar with Envio
@@ -39,7 +39,7 @@ chains:
           - event: Event # Specify event
 ```
 
-See the [RPC data source guide](https://docs.envio.dev/docs/HyperIndex/rpc-sync?utm_source=astar&utm_medium=partner-docs) and the [configuration guide](https://docs.envio.dev/docs/HyperIndex/configuration-file?utm_source=astar&utm_medium=partner-docs) for the full set of options. Want HyperSync speed for an Astar network? Request it on [Discord](https://discord.gg/envio).
+See the [RPC data source guide](https://docs.envio.dev/docs/HyperIndex/rpc-sync?utm_source=astar&utm_medium=partner-docs) and the [configuration guide](https://docs.envio.dev/docs/HyperIndex/configuration-file?utm_source=astar&utm_medium=partner-docs) for the full set of options. To request HyperSync for an Astar network, ask on [Discord](https://discord.gg/envio).
 
 ## Getting Started
 
@@ -48,6 +48,6 @@ See the [RPC data source guide](https://docs.envio.dev/docs/HyperIndex/rpc-sync?
 3. Run your indexer locally with Docker, or deploy it with a git-based workflow on [Envio Cloud](https://docs.envio.dev/docs/HyperIndex/hosted-service-deployment?utm_source=astar&utm_medium=partner-docs).
 4. Query your indexed data through the GraphQL API.
 
-Need help setting up your indexer? Reach out on [Discord](https://discord.gg/envio), where the team is always happy to help.
+For help setting up your indexer, reach out on [Discord](https://discord.gg/envio).
 
 [Website](https://envio.dev/?utm_source=astar&utm_medium=partner-docs) | [Docs](https://docs.envio.dev/?utm_source=astar&utm_medium=partner-docs) | [Supported Networks](https://docs.envio.dev/docs/HyperIndex/supported-networks?utm_source=astar&utm_medium=partner-docs) | [Discord](https://discord.gg/envio) | [X](https://twitter.com/envio_indexer) | [GitHub](https://github.com/enviodev)
