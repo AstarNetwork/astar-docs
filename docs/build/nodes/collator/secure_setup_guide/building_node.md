@@ -32,7 +32,7 @@ To build a collator node, you have 3 different options
 
 Building a node from source code is the most complicated path, but will also provide the best optimized node version for your server.
 
-Make sure your server is ready to build a collator. The instructions that follow do not go into details which you can find in official [Substrate Docs](https://docs.substrate.io/install/linux/)  
+Make sure your server is ready to build a collator. The instructions that follow do not go into details which you can find in official [Substrate Docs](https://docs.polkadot.com/develop/parachains/install-polkadot-sdk/#linux)  
 
 ```
 ## Prerequisites (Software required for compilation)

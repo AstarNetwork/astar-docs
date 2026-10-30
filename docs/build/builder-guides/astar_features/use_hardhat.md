@@ -157,7 +157,7 @@ Thats’s it! We see smart contract is successfully deployed.
 
 ![5](img/5.png)
 
-You can also confirm that the contract was deployed successfully by checking [Blackscout](https://blockscout.com/shibuya/).
+You can also confirm that the contract was deployed successfully by checking [Blockscout](https://shibuya.blockscout.com/).
 
 ![6](img/6.png)
 
@@ -166,4 +166,4 @@ Happy Hacking!
 ---
 ## Reference
 
-- Official Document for Hardhat: [https://hardhat.org/hardhat-runner/docs/getting-started#overview](https://hardhat.org/hardhat-runner/docs/getting-started#overview)
+- Official Document for Hardhat: [https://hardhat.org/docs/getting-started](https://hardhat.org/docs/getting-started)

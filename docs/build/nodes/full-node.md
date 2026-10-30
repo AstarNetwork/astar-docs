@@ -14,7 +14,7 @@ Running a full node on an Astar parachain allows you to connect to the network, 
 Different from archive node, a full node discards all finalized blocks older than configured number of blocks (256 blocks by default).
 A full node occupies less storage space than an archive node because of pruning.
 
-A full node may eventually be able to rebuild the entire chain with no additional information, and become an archive node, but at the time of writing, this is not implemented. If you need to query historical blocks past what you pruned, you need to purge your database and resync your node starting in archive mode. Alternatively you can use a backup or snapshot of a trusted source to avoid needing to sync from genesis with the network, and only need the blocks past that snapshot. (reference: https://wiki.polkadot.network/docs/maintain-sync#types-of-nodes)
+A full node may eventually be able to rebuild the entire chain with no additional information, and become an archive node, but at the time of writing, this is not implemented. If you need to query historical blocks past what you pruned, you need to purge your database and resync your node starting in archive mode. Alternatively you can use a backup or snapshot of a trusted source to avoid needing to sync from genesis with the network, and only need the blocks past that snapshot. (reference: https://docs.polkadot.com/infrastructure/running-a-node/setup-full-node/)
 
 If your node need to provide old historical blocks' data, please consider to use Archive node instead.
 

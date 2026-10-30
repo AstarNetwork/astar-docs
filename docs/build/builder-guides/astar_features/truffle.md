@@ -102,7 +102,7 @@ module.exports = {
 
   networks: {
     shibuya: {
-      provider: () => new HDWalletProvider(mnemonic, `https://shibuya.public.blastapi.io`),
+      provider: () => new HDWalletProvider(mnemonic, `https://evm.shibuya.astar.network`),
       network_id: 81,
       confirmations: 10,
       timeoutBlocks: 200,

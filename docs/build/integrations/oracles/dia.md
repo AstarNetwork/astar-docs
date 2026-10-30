@@ -26,7 +26,7 @@ sidebar_position: 3
 Call the `getValue(string memory key)` function on the oracle contract with the
 Query Symbol (e.g., "BTC/USD"). The function returns the asset price with 8 decimal precision and the timestamp of the last update. We'll use this address
 on Astar:
-[`0xd79357ebb0cd724e391f2b49a8De0E31688fEc75`](https://blockscout.com/astar/address/0xd79357ebb0cd724e391f2b49a8De0E31688fEc75/contracts)
+[`0xd79357ebb0cd724e391f2b49a8De0E31688fEc75`](https://astar.blockscout.com/address/0xd79357ebb0cd724e391f2b49a8De0E31688fEc75?tab=contract)
 
 ```solidity
 pragma solidity ^0.8.13;

@@ -113,7 +113,7 @@ You can choose **one of two paths** to approval:
 
 #### Option B: Public Referendum
 
-- Submit a **public proposal** on [Subsquare](https://app.subsquare.io).
+- Submit a **public proposal** on [Subsquare](https://astar.subsquare.io).
 - If passed, your project will be **whitelisted**.
 
 ### 4. Whitelisting & Registration

@@ -121,8 +121,8 @@ Editing a multisig account (e.g., adding signatories) creates a new multisig add
 ## References:
 ### PolkaSafe
 * [PolkaSafe Documentation](https://docs.polkasafe.xyz/)
-* [Introduction to Multisig Accounts](https://wiki.polkadot.network/docs/learn-account-multisig)
+* [Introduction to Multisig Accounts](https://wiki.polkadot.com/learn/learn-account-multisig/)
 * [Creating a pure proxy](https://docs.polkasafe.xyz/setup-polkasafe/creating-a-pure-proxy)
 ### Polkadot Wiki
-* [Multi-Signature Accounts](https://wiki.polkadot.network/docs/learn-account-multisig#introduction-to-multisig-accounts)
-* [Proxy Accounts](https://wiki.polkadot.network/docs/learn-proxies)
+* [Multi-Signature Accounts](https://wiki.polkadot.com/learn/learn-account-multisig/)
+* [Proxy Accounts](https://wiki.polkadot.com/learn/learn-proxies/)

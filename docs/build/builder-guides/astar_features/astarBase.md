@@ -400,4 +400,4 @@ That’s a wrap! Happy hacking!
 - Official Document for AstarBase:
    - [/docs/build/EVM/astarbase/](/docs/build/EVM/astarbase/)
 - Official Document for creating a React app:
-   - [https://reactjs.org/docs/create-a-new-react-app.html](https://reactjs.org/docs/create-a-new-react-app.html)
+   - [https://react.dev/learn/creating-a-react-app](https://react.dev/learn/creating-a-react-app)

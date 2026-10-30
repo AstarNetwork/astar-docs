@@ -205,7 +205,7 @@ The result will look something like the following:
 
 You can find the full endpoint documentation from [this link](https://paritytech.github.io/substrate-api-sidecar/dist/).
 
-For transaction signing for the `/transaction` endpoint, please refer to the Polkadot documentation regarding [transaction construction](https://wiki.polkadot.network/docs/build-transaction-construction).
+For transaction signing for the `/transaction` endpoint, please refer to the Polkadot documentation regarding [transaction construction](https://wiki.polkadot.com/learn/learn-transaction-construction/).
 
 ## Connecting to a Remote Node
 
@@ -249,7 +249,7 @@ SAS:
      ✅ FILTER_RPC: false
      ✅ STRIP_ANSI: false
   📦 SUBSTRATE:
-     ✅ URL: "wss://astar.public.blastapi.io"
+     ✅ URL: "wss://rpc.astar.network"
      ✅ TYPES_BUNDLE: undefined
      ✅ TYPES_CHAIN: undefined
      ✅ TYPES_SPEC: undefined
@@ -258,7 +258,7 @@ SAS:
      ✅ BIND_HOST: "127.0.0.1"
      ✅ PORT: 8080
 2023-01-03 17:57:35 info: Version: 14.2.2
-2023-01-03 17:57:36 info: Connected to chain Astar on the astar client at wss://astar.public.blastapi.io
+2023-01-03 17:57:36 info: Connected to chain Astar on the astar client at wss://rpc.astar.network
 2023-01-03 17:57:36 info: Listening on http://127.0.0.1:8080/
 2023-01-03 17:57:36 info: Check the root endpoint (http://127.0.0.1:8080/) to see the available endpoints for the current node
 ```

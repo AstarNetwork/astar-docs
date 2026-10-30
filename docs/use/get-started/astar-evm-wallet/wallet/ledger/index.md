@@ -42,7 +42,6 @@ If you already have this, feel free to skip this part.
 | --- | --- |
 | Network name | Astar Network |
 | New RPC URL | Astar Team: https://evm.astar.network |
-|         | BlastAPI: https://astar.public.blastapi.io |
 |         | Dwellir: https://astar-rpc.n.dwellir.com |
 |         | OnFinality: https://astar.api.onfinality.io/public |
 | Chain ID | 592 |

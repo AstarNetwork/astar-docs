@@ -188,7 +188,7 @@ To do this:
 #### Step 3 – Onboarding confirmation
 
 After approval:
-- Your collator will appear in the **Network → Collators** tab on the [Polkadot\{.js\} portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fastar.public.blastapi.io#/collators).  
+- Your collator will appear in the **Network → Collators** tab on the [Polkadot\{.js\} portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/collators).  
 - Block production will start automatically at the next session (`n + 1`).  
 - You can monitor your block authorship and performance directly from the **Network** dashboard or telemetry.
 

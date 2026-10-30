@@ -35,17 +35,13 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 | ParachainID | 2006 |
 | HTTPS | Astar Team: https://evm.astar.network |
 |         | Alchemy: Get started [here](https://www.alchemy.com/astar) |
-|         | BlastAPI: https://astar.public.blastapi.io |
 |         | Dwellir: https://astar-rpc.n.dwellir.com |
 |         | OnFinality: https://astar.api.onfinality.io/public |
-|         | RadiumBlock: https://astar.public.curie.radiumblock.co/http, get started [here](https://www.radiumblock.com) |
 |         | Automata 1RPC: https://1rpc.io/astr, get started [here](https://www.1rpc.io) |
 | Websocket | Astar Team: wss://rpc.astar.network |
 |           | Alchemy: Get started [here](https://www.alchemy.com/astar) |
-|           | BlastAPI: wss://astar.public.blastapi.io |
 |           | Dwellir: wss://astar-rpc.n.dwellir.com |
 |           | OnFinality: wss://astar.api.onfinality.io/public-ws |
-|           | RadiumBlock: wss://astar.public.curie.radiumblock.co/ws, get started [here](https://www.radiumblock.com) |
 |           | Automata 1RPC: wss://1rpc.io/astr, get started [here](https://www.1rpc.io) |
 | chainID | 592 |
 | Symbol | ASTR |
@@ -60,15 +56,9 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 | Parent chain | Kusama |
 | ParachainID | 2007 |
 | HTTPS | Astar Team: https://evm.shiden.astar.network |
-|         | BlastAPI: https://shiden.public.blastapi.io |
 |         | Dwellir: https://shiden-rpc.n.dwellir.com |
-|         | OnFinality: https://shiden.api.onfinality.io/public |
-|         | RadiumBlock: https://shiden.public.curie.radiumblock.co/http, get started [here](https://www.radiumblock.com) |
 | Websocket |  Astar Team: wss://rpc.shiden.astar.network |
-|           | BlastAPI: wss://shiden.public.blastapi.io |
 |           | Dwellir: wss://shiden-rpc.n.dwellir.com |
-|           | OnFinality: wss://shiden.api.onfinality.io/public-ws |
-|           | RadiumBlock: https://shiden.public.curie.radiumblock.co/ws, get started [here](https://www.radiumblock.com) |
 | chainID | 336 |
 | Symbol | SDN |
 
@@ -82,10 +72,8 @@ To meet the demands of a production dApp you can run an [archive node](/docs/bui
 | Parent chain | Paseo |
 | ParachainID | 2000 |
 | HTTPS | Astar Team: https://evm.shibuya.astar.network (only EVM/Ethereum RPC available) |
-|         | BlastAPI: https://shibuya.public.blastapi.io |
 |         | Dwellir: https://shibuya-rpc.n.dwellir.com |
 | Websocket | Astar Team: wss://rpc.shibuya.astar.network |
-|           | BlastAPI: wss://shibuya.public.blastapi.io |
 |           | Dwellir: wss://shibuya-rpc.n.dwellir.com |
 | chainID | 81 |
 | Symbol | SBY |
