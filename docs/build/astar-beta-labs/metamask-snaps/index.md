@@ -42,6 +42,4 @@ MetaMask Snaps allow users to add features and functionality to their MetaMask w
 Snap-based accounts are derived from the private key associated with your MetaMask account (your seed phrase), so funds cannot be lost even in the event support for a particular Snap is discontinued.
 :::
 
-Learn more about how to use the Astar MetaMask Snap [here.](https://docs.astar.network/docs/use/manage-wallets/wallet-providers/metamask-astar-snap/)
-
 Please note that this section is part of Astar Beta Labs and may contain incomplete or outdated information. For production-ready solutions, please refer to material outside the Astar Beta Labs section.

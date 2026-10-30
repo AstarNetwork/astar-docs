@@ -28,7 +28,7 @@ You can send back DOT/KSM to the Relay Chain using both EVM and native wallets. 
 
 ### Q: Why is the XCM button for DOT/KSM disabled when I connect my wallet on the Astar Portal?
 
-Ensure you have a non-zero balance of the native token as described in [this section](https://docs.astar.network/docs/learn/interoperability/xcm/using-xcm/xcm-transactions).
+Ensure you have a non-zero balance of the native token.
 
 ### Q: I transferred X tokens to another account, but the amount transferred and received by the target account is greater than X. What is going on?
 

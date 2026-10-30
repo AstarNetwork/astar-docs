@@ -25,7 +25,7 @@ For this tutorial, we will walk you through the process of creating a wallet usi
 
 ## Setup an account
 
-Once you have installed the extension, you'll have the option to **create**, **import** or **attach an account** ([Ledger](https://docs.subwallet.app/main/extension-user-guide/account-management/connect-ledger-device), [Keystone](https://docs.subwallet.app/main/extension-user-guide/account-management/connect-keystone-device), [Polkadot Vault](https://docs.subwallet.app/main/extension-user-guide/account-management/attach-a-polkadot-vault-previously-parity-signer-account) and [Watch-only account](https://docs.subwallet.app/main/extension-user-guide/account-management/attach-a-watch-only-account))
+Once you have installed the extension, you'll have the option to **create**, **import** or **attach an account** ([Ledger](https://docs.subwallet.app/main/extension-user-guide/cold-wallet-management/connect-ledger-devices), [Keystone](https://docs.subwallet.app/main/extension-user-guide/cold-wallet-management/connect-keystone-devices), [Polkadot Vault](https://docs.subwallet.app/main/extension-user-guide/cold-wallet-management/attach-polkadot-vault-prev.-parity-signer-accounts) and [Watch-only account](https://docs.subwallet.app/main/extension-user-guide/account-management/attach-a-watch-only-account))
 
 <Figure caption="Browser extension create screen" src={require('/docs/use/get-started/astar-substrate-wallet/wallet/subwallet/img/subwallet-1.png').default} width="100%" />
 

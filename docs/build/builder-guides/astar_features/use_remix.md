@@ -25,7 +25,7 @@ Remix is a powerful open-source toolset for developing, deploying, debugging, an
 ## Create a Solidity contract with Remix IDE
 
 - Visit [https://remix.ethereum.org/](https://remix.ethereum.org/) for online Remix IDE
-    - or install the Remix IDE Desktop from [https://github.com/ethereum/remix-**desktop**/releases](https://github.com/ethereum/remix-desktop/releases).
+    - or install the Remix IDE Desktop from [Remix Desktop releases](https://github.com/ethereum/remix-desktop/releases).
 - Create a new workspace by clicking the “+” beside “Workspace” and use the “Blank” template.
 
 ![Untitled](img-Remix-cookbook/Untitled.png)
@@ -88,11 +88,11 @@ Before smart contracts can be deployed, the Solidity code must be compiled to by
 ## Deploy the Solidity contract to Shibuya testnet
 
 - Before the deployment on the Shibuya testnet, which is the testnet of Astar Network and Shiden Network:
-    - Please ensure that you have added Shibuya Network to your MetaMask wallet with the following configuration [https://docs.astar.network/docs/environment/endpoints/](https://docs.astar.network/docs/environment/endpoints/).
+    - Please ensure that you have added Shibuya Network to your MetaMask wallet with the following configuration [Network RPC endpoints](/docs/build/environment/endpoints).
         - Network name: Shibuya Network
         - New RPC URL: [https://evm.shibuya.astar.network](https://evm.shibuya.astar.network/)
         - Chain ID: 81
-    - Please claim SBY testnet tokens from the Shibuya faucet following the guide here [https://docs.astar.network/docs/environment/faucet/](https://docs.astar.network/docs/environment/faucet/)
+    - Please claim SBY testnet tokens from the Shibuya faucet following the guide here [Faucet](/docs/build/environment/faucet)
 - Click the EVM icon on the left sidebar (the fourth icon) and visit the “DEPLOY & RUN TRANSACTIONS” page.
 - Switch the “ENVIRONMENT” to “Injected Provider - MetaMask” and ensure you have the right wallet address connected in MetaMask.
 
@@ -102,7 +102,7 @@ Before smart contracts can be deployed, the Solidity code must be compiled to by
 
 ![Untitled](img-Remix-cookbook/Untitled%205.png)
 
-- Now, your first Solidity contract on the Shibuya testnet is deployed! Please feel free to copy the deployed contract address from “Deployed Contracts” and view it in the block explorer. BlockScout for Shibuya: [https://blockscout.com/shibuya](https://blockscout.com/shibuya)
+- Now, your first Solidity contract on the Shibuya testnet is deployed! Please feel free to copy the deployed contract address from “Deployed Contracts” and view it in the block explorer. BlockScout for Shibuya: [https://shibuya.blockscout.com](https://shibuya.blockscout.com)
 
 ![Untitled](img-Remix-cookbook/Untitled%206.png)
 

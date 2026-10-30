@@ -173,8 +173,8 @@ The process of application and registration for dApps will not change.
 
 Please, find more information here:
 
-- Requirements: https://docs.astar.network/docs/use/dapp-staking/for-devs/requirements;
-- Registration: https://docs.astar.network/docs/use/dapp-staking/for-devs/register-dapp.
+- Requirements: [dApp Staking requirements](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/requirements);
+- Registration: [Register a dApp](/docs/use/how-to-guides/layer-1/dapp-staking/for-devs/register-dapp).
 
 ***❗ Once the dApp has been registered, stakers can stake on it immediately, and the dApp can earn rewards from the era in which it was registered.***
 

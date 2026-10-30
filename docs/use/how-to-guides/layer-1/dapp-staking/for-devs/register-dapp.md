@@ -222,7 +222,7 @@ Projects may also apply via **community vote**.
 
 **Steps:**
 
-1. Submit a **preimage** on [Astar Subsquare](https://app.subsquare.io).
+1. Submit a **preimage** on [Astar Subsquare](https://astar.subsquare.io).
 2. Create a **public proposal** referencing the preimage.
 3. Proposal becomes a **referendum** for voting.
 

@@ -107,7 +107,7 @@ The latest block number is 2404244
 ### Step 8
 
 You are now ready to start building on Astar with Alchemy!
-For more requests explore API endpoints [here](https://docs.alchemy.com/reference/astar-api-endpoints). 
+For more requests explore API endpoints [here](https://www.alchemy.com/docs/chains). 
 
 
 [Alchemy]: https://www.alchemy.com/

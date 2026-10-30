@@ -17,7 +17,7 @@ A blockchain is a decentralized ledger that records information in a sequence of
 
 In a blockchain network, individual computers—called nodes—communicate with each other to form a decentralized peer-to-peer (P2P) network. There is no central authority that controls the network and, typically, each node that participates in block production stores a copy of the blocks that make up the canonical chain.
 
-In most cases, users interact with a blockchain by submitting a request that might result in a change in state, for example, a request to change the owner of a file or to transfer funds from one account to another. These transactions requests are gossiped to other nodes on the network and assembled into a block by a block author. To ensure the security of the data on the chain and the ongoing progress of the chain, the nodes use some form of consensus to agree on the state of the data in each block and on the order of transactions executed. [Read more...](https://docs.substrate.io/fundamentals/blockchain-basics/)
+In most cases, users interact with a blockchain by submitting a request that might result in a change in state, for example, a request to change the owner of a file or to transfer funds from one account to another. These transactions requests are gossiped to other nodes on the network and assembled into a block by a block author. To ensure the security of the data on the chain and the ongoing progress of the chain, the nodes use some form of consensus to agree on the state of the data in each block and on the order of transactions executed. [Read more...](https://docs.polkadot.com/)
 
 ## What is Polkadot
 To get started, let's kick it off with two short videos that do a very good job at explaining some core concepts around Polkadot. First, watch Bill Laboon, Director of Education and Support at the Web3 Foundation, explain the basics of Polkadot.
@@ -35,16 +35,16 @@ Parachains construct and propose blocks to validators on the Relay Chain, where 
 
 ## Substrate
 Based on Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
-However, the majority of parachains today are built using [Substrate](https://substrate.io/) because Substrate-based chains are easy to integrate into Polkadot or Kusama to become a parachain. Essentially, Substrate is the SDK which can be used to build parachains and Polkadot is the means of securing the chains and allowing them to communicate with each other.
+However, the majority of parachains today are built using [Substrate](https://docs.polkadot.com/) because Substrate-based chains are easy to integrate into Polkadot or Kusama to become a parachain. Essentially, Substrate is the SDK which can be used to build parachains and Polkadot is the means of securing the chains and allowing them to communicate with each other.
 
 At a high level, a Substrate node provides a layered environment with two main elements:
 1. An outer node that handles network activity such as peer discovery, managing transaction requests, reaching consensus with peers, and responding to RPC calls.
 2. A runtime that contains all of the business logic for executing the state transition function of the blockchain.
-Read more about [Architecture](https://docs.substrate.io/fundamentals/architecture/).
+Read more about [Architecture](https://docs.polkadot.com/).
 
 ### FRAME
 FRAME is an acronym for Framework for Runtime Aggregation of Modularized Entities which encompasses a significant number of modules and support libraries that simplify runtime development. In Substrate, these modules (called pallets) offer customizable business logic for different use cases and features that you might want to include in your runtime. For example, there are pallets that provide a framework of business logic for staking, consensus, governance, and other common activities.
-Read more about [Runtime development](https://docs.substrate.io/fundamentals/runtime-development/)
+Read more about [Runtime development](https://docs.polkadot.com/)
 
 ## Applications Running on a Blockchain
 Applications that run on a blockchain, often referred to as decentralized applications or dApps, are typically web applications written using front-end frameworks, but powered by smart contracts on the backend, to affect the blockchain state.

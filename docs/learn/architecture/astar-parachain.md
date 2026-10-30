@@ -49,18 +49,18 @@ Parachains construct and propose blocks to validators on the Relay Chain, where 
 
 ## Substrate
 Based on Polkadot's design, as long as a chain's logic can compile to Wasm and adheres to the Relay Chain API, then it can connect to the Polkadot network as a parachain.
-However, the majority of parachains today are built using [Substrate](https://substrate.io/) because Substrate-based chains are easy to integrate into Polkadot or Kusama to become a parachain. Essentially, Substrate is the SDK which can be used to build parachains and Polkadot is the means of securing the chains and allowing them to communicate with each other.
+However, the majority of parachains today are built using [Substrate](https://docs.polkadot.com/) because Substrate-based chains are easy to integrate into Polkadot or Kusama to become a parachain. Essentially, Substrate is the SDK which can be used to build parachains and Polkadot is the means of securing the chains and allowing them to communicate with each other.
 
 Astar Network is built with Substrate and inherits many Substrate features, such as Accounts.
 
 At a high level, a Substrate node provides a layered environment with two main elements:
 1. An outer node that handles network activity such as peer discovery, managing transaction requests, reaching consensus with peers, and responding to RPC calls.
 2. A runtime that contains all of the business logic for executing the state transition function of the blockchain.
-Read more about [Architecture](https://docs.substrate.io/fundamentals/architecture/).
+Read more about [Architecture](https://docs.polkadot.com/).
 
 ### FRAME
 FRAME is an acronym for Framework for Runtime Aggregation of Modularized Entities which encompasses a significant number of modules and support libraries that simplify runtime development. In Substrate, these modules (called pallets) offer customizable business logic for different use cases and features that you might want to include in your runtime. For example, there are pallets that provide a framework of business logic for staking, consensus, governance, and other common activities.
-Read more about [Runtime development](https://docs.substrate.io/fundamentals/runtime-development/)
+Read more about [Runtime development](https://docs.polkadot.com/)
 
 
 ## Where Do Smart Contracts Execute?

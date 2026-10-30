@@ -26,7 +26,7 @@ This section describes Tokenomics 2.0 fee model calculation details.
 
 Native fees are applied to transactions native to Substrate. For example, balance transfer, using dApp staking, creating a multisig, voting on a referendum, etc.
 
-Fees are calculated using a [model](https://research.web3.foundation/Polkadot/overview/token-economics#adjustment-of-fees-over-time) commonly used by Polkadot and (probably) all parachains:
+Fees are calculated using a [model](https://research.parity.io/Polkadot/overview/token-economics#adjustment-of-fees-over-time) commonly used by Polkadot and (probably) all parachains:
 
 $$
 \begin{align}

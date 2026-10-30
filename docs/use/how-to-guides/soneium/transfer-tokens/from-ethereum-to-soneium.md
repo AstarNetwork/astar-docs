@@ -46,7 +46,7 @@ Need help setting up your wallet on **Soneium**? Follow this [**wallet guide**](
 
 #### How to Use
 
-1. Go to [**Stargate bridge**](https://stargate.finance/bridge)
+1. Go to [**Stargate bridge**](https://stargate.finance/)
 2. Select the token and **chain** (e.g., Ethereum, Arbitrum)
 3. Select **To** chain → **Soneium**
 4. Approve and **Confirm Transfer**

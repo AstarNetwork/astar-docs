@@ -111,10 +111,10 @@ Then refresh the Portal and connect your Astar ledger account.
 
 For more detailed information on the migration process for specific wallets, you can check the following guides:
 
-- **Talisman**: [Talisman migrate to the New Ledger Generic app](https://support.polkadot.network/support/solutions/articles/65000188075-talisman-migrate-to-the-new-ledger-generic-app)
+- **Talisman**: [Talisman migrate to the New Ledger Generic app](https://docs.talisman.xyz/talisman/start/importing-external-wallets/import-from-ledger)
     - *If you have an existing Astar Native Ledger account in your Talisman extension, you must first erase it in order to reimport it using the Polkadot Migration app.*
-- **SubWallet**: [Subwallet migrate to the New Ledger Generic app](https://support.polkadot.network/support/solutions/articles/65000188081-subwallet-migrate-to-the-new-ledger-generic-app)
-- **Nova Wallet**: [Nova wallet migrate to the New Ledger Generic app](https://support.polkadot.network/support/solutions/articles/65000188090-nova-wallet-migrate-to-the-new-ledger-generic-app)
+- **SubWallet**: [Subwallet migrate to the New Ledger Generic app](https://docs.subwallet.app/main/extension-user-guide/cold-wallet-management/connect-ledger-devices/connect-via-the-polkadot-migration-app)
+- **Nova Wallet**: [Nova wallet migrate to the New Ledger Generic app](https://wiki.polkadot.com/learn/how-to/ledger-migrate-generic-app/)
 
 ## Polkadot Generic (DOT) App
 
@@ -199,10 +199,10 @@ Then refresh the Portal and connect your Astar ledger account.
 
 For detailed instructions on creating new wallets with the **Polkadot Generic** app for specific wallet providers, please refer to the following guides:
 
-- **Talisman**: [Talisman migrate to the New Ledger Generic app](https://support.polkadot.network/support/solutions/articles/65000188075-talisman-migrate-to-the-new-ledger-generic-app)
+- **Talisman**: [Talisman migrate to the New Ledger Generic app](https://docs.talisman.xyz/talisman/start/importing-external-wallets/import-from-ledger)
     - *If you have an existing Astar Native Ledger account in your Talisman extension, you must first erase it in order to reimport it using the Polkadot Migration app.*
-- **SubWallet**: [Subwallet migrate to the New Ledger Generic app](https://support.polkadot.network/support/solutions/articles/65000188081-subwallet-migrate-to-the-new-ledger-generic-app)
-- **Nova Wallet**: [Nova wallet migrate to the New Ledger Generic app](https://support.polkadot.network/support/solutions/articles/65000188090-nova-wallet-migrate-to-the-new-ledger-generic-app)
+- **SubWallet**: [Subwallet migrate to the New Ledger Generic app](https://docs.subwallet.app/main/extension-user-guide/cold-wallet-management/connect-ledger-devices/connect-via-the-polkadot-migration-app)
+- **Nova Wallet**: [Nova wallet migrate to the New Ledger Generic app](https://wiki.polkadot.com/learn/how-to/ledger-migrate-generic-app/)
 
 For detailed information about dApp staking or how to stake on the EVM side of Astar Portal using a Ledger device, please refer to the [Astar official documentation](/docs/use/how-to-guides/layer-1/dapp-staking/for-stakers/) or [Ledger EVM staking guide](/docs/use/get-started/astar-evm-wallet/wallet/ledger/index.md)
 

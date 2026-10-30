@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ### Initialize Your Project
 
-If you're starting your Hardhat project from scratch, we recommend you read the [Hardhat Quick Start](https://hardhat.org/getting-started/#quick-start#overview) page.
+If you're starting your Hardhat project from scratch, we recommend you read the [Hardhat Quick Start](https://hardhat.org/docs/getting-started) page.
 
 ### Setting up Your Account
 
