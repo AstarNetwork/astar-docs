@@ -156,6 +156,6 @@ Now that you have loaded your Safe with DOT, you can send some from the Safe to 
 
 To directly interact with smart contracts from your Astar Safe account, please follow this guide:
 
-[Gnosis Safe: Contract Interactions](https://help.gnosis-safe.io/en/articles/3738081-contract-interactions)
+[Safe: Transaction Builder](https://help.safe.global/articles/4180673514-transaction-builder)
 
 [Astar Safe]: https://safe.astar.network/

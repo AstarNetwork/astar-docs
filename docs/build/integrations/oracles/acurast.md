@@ -54,7 +54,7 @@ contract PriceFeed {
 
 ### Job Specification
 
-1. Go to the [Acurast Console](https://console.acurast.com/) and log in with your [Talisman Wallet](https://www.talisman.xyz/wallet) or your [PolkadotJS Extension](https://polkadot.js.org/extension/).
+1. Go to the [Acurast Console](https://console.acurast.com/) and log in with your [Talisman Wallet](https://talisman.xyz/download/) or your [PolkadotJS Extension](https://polkadot.js.org/extension/).
 1. Go to "Create Job" and select your destination, the ecosystem you're building in.
 1. Select an existing template, adapt it or write your own code that fits your needs. Test your code with "Test Code".
 1. Select your own Processor or use public ones.

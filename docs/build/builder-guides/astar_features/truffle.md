@@ -155,4 +155,4 @@ If you have any questions, please feel free to ask us in our [official discord c
 
 ## Reference
 
-- [Official Document for Truffle](https://trufflesuite.com/docs/)
+- [Official Document for Truffle](https://archive.trufflesuite.com/docs/)

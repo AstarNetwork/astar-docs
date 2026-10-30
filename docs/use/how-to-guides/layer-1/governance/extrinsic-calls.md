@@ -717,7 +717,7 @@ The Polkadot.js path allows a council member to construct and submit the approva
 
 **Prerequisites:**
 - Active ACC member account with council membership
-- Proposal ID (visible on the [Community Treasury proposals page](https://astar.subsquare.io/treasury/community-treasury/proposals))
+- Proposal ID (visible on the [Community Treasury proposals page](https://astar.subsquare.io/community-treasury/proposals))
 - Access to [Polkadot.js Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.astar.network#/)
 
 #### 1.1. Approve a Spending Proposal
@@ -765,12 +765,12 @@ SubSquare provides dedicated Quick Start options for treasury proposal approval 
 
 **Prerequisites:**
 - Active ACC member account
-- Proposal ID (visible on the [Community Treasury proposals page](https://astar.subsquare.io/treasury/community-treasury/proposals))
+- Proposal ID (visible on the [Community Treasury proposals page](https://astar.subsquare.io/community-treasury/proposals))
 - Access to [SubSquare Community Council Motions](https://astar.subsquare.io/community-council/motions)
 
 #### 2.1. Approve a Spending Proposal
 
-1. Navigate to the [Community Treasury](https://astar.subsquare.io/treasury/community-treasury/proposals) tab on SubSquare and note the **Proposal ID**.
+1. Navigate to the [Community Treasury](https://astar.subsquare.io/community-treasury/proposals) tab on SubSquare and note the **Proposal ID**.
 2. Navigate to [Community Council → Motions](https://astar.subsquare.io/community-council/motions) and click **+ New Proposal**.
 3. Select **"Approve a treasury proposal"** from the Quick Start options.
 
@@ -846,4 +846,4 @@ X. **Treasury spending proposals do not require reward claiming.** Approving or 
 | No Staker Rewards appear available | Verify that the treasury has active stakes and that the era range covers the correct period. |
 | Unregistration motion fails to pass | Verify that 4/5 of council members have voted Aye, unregistration requires a higher threshold than other operations. |
 | Transaction hash not captured after execution | Search by account or block number on [Astar Subscan](https://astar.subscan.io/) to retrieve the hash retroactively. |
-| Proposal ID not found during treasury vote | Check the [Community Treasury proposals page](https://astar.subsquare.io/treasury/community-treasury/proposals) to confirm the correct ID before submitting the motion. |
+| Proposal ID not found during treasury vote | Check the [Community Treasury proposals page](https://astar.subsquare.io/community-treasury/proposals) to confirm the correct ID before submitting the motion. |
