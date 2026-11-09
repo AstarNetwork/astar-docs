@@ -76,33 +76,41 @@ journalctl -f -u shibuya-node -n100
 
 ### Session Keys
 
+:::important
+Since runtime `2600`, `session.setKeys` checks that the account submitting it owns the session keys. You need the [`v5.51.0`](https://github.com/AstarNetwork/Astar/releases/tag/v5.51.0) client or newer to generate the keys together with their ownership proof. Keys that are already registered stay valid, so this applies to new collators and to key rotations.
+:::
+
 #### Author session keys
 
-Run the following command to author session keys:
+Get the public key of your **collator account** in hex (32 bytes). It's shown as `Public key (hex)` by `subkey inspect <YOUR_SS58_ADDRESS>`, and on the account page of Subscan.
+
+Run the following command on the collator node, passing that public key as the owner:
 
 ```
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9944
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeysWithOwner", "params":["<COLLATOR_ACCOUNT_PUBLIC_KEY_HEX>"]}' http://localhost:9944
 ```
 
-The result will look like this (you just need to copy the key):
+The result contains the session keys and the proof that your account owns them. Copy both values:
 
 ```
-{"jsonrpc":"2.0","result":"0x600e6cea49bdeaab301e9e03215c0bcebab3cafa608fe3b8fb6b07a820386048","id":1}
+{"jsonrpc":"2.0","result":{"keys":"0x600e6cea49bdeaab301e9e03215c0bcebab3cafa608fe3b8fb6b07a820386048","proof":"0x..."},"id":1}
 ```
+
+:::caution
+`author_rotateKeys` (without owner) no longer works for registering keys: it returns no proof, so `setKeys` fails with `session.InvalidProof`.
+:::
 
 #### Set session keys
 
 Go to the Polkadot.js portal and connect to respective network (Astar, Shiden or Shibuya).
 
-Go to _**Developper > Extrinsic**_ and select your **collator account** and extrinsic type: _**session / setKeys**_
+Go to _**Developer > Extrinsics**_, select the **same collator account** you used as owner, and the extrinsic _**session / setKeys**_.
 
-Enter the **session keys** and set proof to `0x00`:
+Enter the `keys` value as **keys** and the `proof` value as **proof**, then submit the transaction.
 
-<center>
-<img src="https://i.imgur.com/fXfqGal.png" border="1"></img>
-</center>
-
-Submit the transaction.
+:::tip
+The proof is only valid for the account passed as owner. If `setKeys` fails with `session.InvalidProof`, check that you are signing with that account and that you copied the full `proof` value.
+:::
 
 ### Identity
 
@@ -163,7 +171,7 @@ All collator applications must now be reviewed and approved by governance before
 - **Node details** (hardware specs, hosting provider, uptime/monitoring setup)  
 - **Technical experience / background**  
 - **Motivation to join the Astar collator set**  
-- **Session key hash** (from `author_rotateKeys`)  
+- **Session keys** (the `keys` value from `author_rotateKeysWithOwner`)  
 - **Proof of bond** (3,200,000 ASTR reserved onchain)  
 - Any **additional details** that demonstrate reliability and contribution to the network  
 

@@ -39,18 +39,26 @@ EVM RPC calls are disabled by default, and require the `--enable-evm-rpc` flag t
 
 Tracing runtimes has additional debug API that makes possible deep (and slow) transaction debugging. For this reason it's not part of production runtimes. So, for using tracing features, runtime must be overrided by special `tracing` runtime.
 
-For example, if current rutime is `astar-52` then `astar-runtime-52-substitute-tracing.wasm` blob should be used for overriding and debug recent transactions. Tracing runtime is published in release assets as `evm-tracing-artifacts`, please check [latest release here](https://github.com/AstarNetwork/Astar/releases/latest). 
+Every `runtime-*` release publishes the tracing runtimes of Astar, Shiden and Shibuya in its assets as `evm-tracing-artifacts-<tag>.tar.gz` (see the [releases page](https://github.com/AstarNetwork/Astar/releases)). For example, `runtime-2600` contains `astar-2600_evm_tracing_runtime.compact.compressed.wasm`, which is used to trace the blocks produced while spec `2600` is live on Astar.
 
 For runtime override please create folder somewhere node can access it, by default it could be `/var/lib/astar/wasm`. And then copy overriding runtimes into this folder.
 This folder is cumulative, this means you can place all previous runtimes at the same place to be able to trace historical data.
 
 ```
-mkdir /var/lib/astar/wasm
-cp astar-runtime-52-substitute-tracing.wasm /var/lib/astar/wasm
+wget https://github.com/AstarNetwork/Astar/releases/download/runtime-2600/evm-tracing-artifacts-runtime-2600.tar.gz
+tar -xzf evm-tracing-artifacts-runtime-2600.tar.gz
+mkdir -p /var/lib/astar/wasm
+cp evm-tracing-artifacts/astar-2600_evm_tracing_runtime.compact.compressed.wasm /var/lib/astar/wasm/
 chown -hR astar /var/lib/astar/wasm
 ```
 
 When wasm blob located correctly the node launch string should be addicted by `--wasm-runtime-overrides=/var/lib/astar/wasm` flag. Then service should be restarted, if all go well then node will catch up tracing runtime and substitute onchain version by it.
+
+:::caution
+- Overrides are only read when the node starts. On each runtime release, add the new tracing runtime and restart the node **before** the runtime upgrade is enacted, otherwise `debug_*` and `trace_*` calls fail for new blocks until the next restart.
+- Only copy the tracing runtimes of the network the node runs (e.g. `astar-*` for Astar), and keep a single file per `spec_version`: duplicates are rejected.
+- After a restart, check tracing on a recent block that contains an EVM transaction.
+:::
 
 :::important
 

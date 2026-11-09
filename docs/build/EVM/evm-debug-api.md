@@ -42,7 +42,8 @@ The following RPC methods are available:
 There are some default values that you should be aware of:
 
 * The maximum number of trace entries a single request of `trace_filter` is allowed to return is `500`. A request exceeding this limit will return an error
-* Blocks processed by requests are temporarily stored in cache for `300` seconds, after which they are deleted.
+* A single `trace_filter` request can span at most `1024` blocks. Wider requests are rejected with an error
+* Traced blocks are kept in an in-memory cache of `100 MB`; the oldest entries are evicted when it is full
 
 To change the default values you can add CLI flags when spinning up your tracing node.
 
@@ -59,10 +60,17 @@ Spinning up a debug or tracing node is similar to running a full node. However, 
 * `--ethapi=debug` - optional flag that enables `debug_traceTransaction`
 * `--ethapi=trace` - optional flag that enables `trace_filter`
 * `--ethapi=txpool` - optional flag that enables `txpool_content`, `txpool_inspect`, `txpool_status`
-* `--wasm-runtime-overrides=<path/to/overrides>` - required flag for tracing that specifies the path where the local Wasm runtimes are stored
-* `--runtime-cache-size 64` - required flag that configures the number of different runtime versions preserved in the in-memory cache to 64
+* `--wasm-runtime-overrides=<path/to/overrides>` - required flag for tracing that specifies the path where the local Wasm runtimes are stored. Overrides are only loaded at startup, see [runtime overriding](/docs/build/nodes/evm-tracing-node#runtime-overriding)
+* `--runtime-cache-size 64` - recommended flag that configures the number of different runtime versions preserved in the in-memory cache to 64
+* `--ethapi-max-permits <uint>` - sets the number of concurrent tracing tasks, shared by the `debug` and `trace` modules. _The default is_ **10**
 * `--ethapi-trace-max-count <uint>` - sets the maximum number of trace entries to be returned by the node. _The default maximum number of trace entries a single request of trace_filter returns is_ **500**
-* `--ethapi-trace-cache-duration <uint>` - sets the duration (in seconds) after which the cache of `trace_filter`, for a given block, is discarded. _The default amount of time blocks are stored in the cache is **300** seconds_
+* `--ethapi-trace-cache-size <bytes>` - sets the size of the LRU cache that stores the block traces computed by `trace_filter`. _The default is_ **104857600** _(100 MB)_. It replaces the removed `--ethapi-trace-cache-duration` flag
+* `--trace-filter-max-block-range <uint>` - sets the maximum number of blocks a single `trace_filter` request may span. _The default is_ **1024**
+* `--tracing-raw-max-memory-usage <bytes>` - bounds the memory, stack and storage data a raw `debug_trace*` request can use. _The default is_ **20000000** _(20 MB)_
+
+:::caution
+`--ethapi-trace-cache-duration` was removed. A node started with it fails to start, so remove it from your service file before upgrading the client.
+:::
 
 :::info
 EVM tracing node installation manual available on [this page](/docs/build/nodes/evm-tracing-node).
